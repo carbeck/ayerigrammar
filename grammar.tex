@@ -1,0 +1,319 @@
+% arara: xelatex
+% arara: biber
+% arara: makeglossaries
+% arara: pythontex
+% arara: xelatex
+
+\documentclass[
+	a4paper, % 9"×12" (folio) = oldpaper
+	12pt,
+	openany,
+	twoside,
+	final,
+	oldfontcommands, % Compatibility with expex, which still uses \rm
+]{memoir}
+
+\author{Carsten Becker}
+\title{A Grammar of Ayeri: Documenting a Fictional Language}
+\date{\today}
+
+% Layout for title page, cf. titlepages package
+\newlength\drop
+\makeatletter
+\newcommand*{\titleS}{\begingroup% Scripts, T&H p 151
+\drop = 0.1\textheight
+\centering
+\vspace*{\drop}
+{\Huge A Grammar of Ayeri}\\[\baselineskip]
+{\Large\scshape Documenting a Fictional Language}\\[\baselineskip]
+{\large\itshape by Carsten Becker}\\[\baselineskip]
+\vfill
+\rule{0.4\textwidth}{0.4pt}\\[\baselineskip]
+{\large\itshape Benung. The Ayeri Language Resource}\par
+\vspace*{\drop}
+\endgroup}
+\makeatother
+
+% Layout for running page titles
+\nouppercaseheads
+
+% Layout for chapter headers
+\chapterstyle{southall}
+\renewcommand*{\chaptitlefont}{\huge\sffamily\raggedright}
+
+% Disemulate setspace
+% \DisemulatePackage{setspace}
+% \usepackage{setspace}
+% \onehalfspacing
+
+% Creative Commons icons
+\usepackage{ccicons}
+
+% Use Python
+\usepackage[gobble=auto]{pythontex}
+
+% Load fonts for XeTeX, including support for Unicode etc.
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+% Handle language and quotation marks
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=american]{english}
+\usepackage{csquotes} % Put quotations in \enquote{}!
+\SetBlockEnvironment{quotation}
+\renewcommand*{\mkccitation}[1]{ (#1)}
+
+% Date and time
+\usepackage[
+	useregional,
+	%style=mdyyyy,
+]{datetime2}
+
+% Extended formatting of lists
+\usepackage{enumitem}
+\newlist{glossdefs}{itemize}{1}
+\setlist[glossdefs]{nosep, leftmargin=3em, labelwidth=2.5em, align=left}
+\setlist[itemize]{noitemsep}
+
+% Make multiple columns available in single-column document
+\usepackage{multicol}
+
+% Make text colors and color names available
+\usepackage[xetex]{xcolor}
+
+% Set main fonts
+%\usepackage[config=mt-Junicode]{microtype}
+
+\newfontfamily{\Tagati}[
+	Renderer=Graphite,
+	Scale=1.1,
+	BoldFont={* Italic},
+	HyphenChar=·,
+]{Tagati Book G}
+
+\setmainfont{EB Garamond}[
+	Ligatures={TeX,NoContextual},
+	Numbers=Lowercase,
+	BoldFont={Garamond Premier Pro Semibold},
+]
+
+\setsansfont{Fira Sans}[
+	Ligatures=TeX,
+	Numbers=Lowercase,
+	Scale=MatchLowercase,
+	BoldFont={* SemiBold},
+]
+
+\setmonofont{Fira Mono}[
+	Ligatures=TeX,
+	Scale=MatchLowercase,
+]
+
+\newfontfamily{\OpenSansCond}[
+	Ligatures=TeX,
+	Numbers=Lowercase,
+	Scale=MatchUppercase,
+	BoldFont={Open Sans Condensed Bold},
+]{Open Sans Condensed Light}
+
+% Set fonts for section headers
+\setsecheadstyle{\sffamily\Large\raggedright}
+\setsubsecheadstyle{\sffamily\bfseries\normalsize\raggedright}
+
+% Nicer footnotes
+\usepackage[bottom,hang,norule]{footmisc}
+\setlength{\footnotesep}{0.75\baselineskip}
+
+% Load BibLaTeX (using Biber), configure citation styles
+\usepackage[
+	authordate-trad,
+	backend=biber,
+	safeinputenc,
+	natbib,
+]{biblatex-chicago}
+\addbibresource{bibliography.bib}
+
+% To make \textcite look like "Doe (2014: 213)"
+\renewcommand*{\postnotedelim}{\addcolon\addspace}
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+% Clickable links in footnotes, TOC, etc.
+\usepackage[
+	xetex,
+	bookmarks=true,
+	colorlinks=false,
+	linktoc=section,
+	hidelinks,
+	pdfusetitle,
+]{hyperref}
+
+% Formatting of URLs
+\usepackage{url}
+\def\UrlFont{\normalfont\itshape}
+
+% Ability to include graphics and dealing with footnotes in descriptions
+\usepackage{graphicx}
+\usepackage[font={small,sf},labelfont={small,sf},format=plain]{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\setlength{\columnsep}{2\baselineskip}
+
+% Things for tables
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{rotating}
+
+% Custom column types
+\newcolumntype{B}{>{\bfseries}X}
+\newcolumntype{I}{>{\itshape}X}
+
+% Formatting of table of glossing abbreviations from Leipzig package manual
+\usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
+\usepackage{glossary-inline}%
+
+\newglossarystyle{mysuper}{%
+	\glossarystyle{super}% based on super
+	\renewenvironment{theglossary}{%
+		\begin{glossdefs}%
+	}{%
+		\end{glossdefs}%
+	}%
+	\renewcommand*{\glossaryheader}{}%
+	\renewcommand*{\glsgroupheading}[1]{}%
+	\renewcommand*{\glossaryentryfield}[5]{%
+		\item[\glsentryitem{##1}\glstarget{##1}{##2}]
+		\makefirstuc{##3}\glspostdescription{}
+	}%
+	\renewcommand*{\glsgroupskip}{}%
+}%
+
+% Formatting of glosses
+\usepackage{expex}
+\usepackage{leipzig}
+
+\newleipzig{AgtT}{at}{agent topic}
+\newleipzig{PatT}{pt}{patient topic}
+\newleipzig{DatT}{datt}{dative topic}
+\newleipzig{GenT}{gent}{genitive topic}
+\newleipzig{LocT}{loct}{locative topic}
+\newleipzig{InsT}{inst}{instrumental topic}
+\newleipzig{CauT}{caut}{causative topic}
+\newleipzig{An}{an}{animate}
+\newleipzig{Inan}{inan}{inanimate}
+\newleipzig{Hab}{hab}{habitative}
+\newleipzig{Ayr}{ayr}{Ayeri}
+
+\newleipzig{Nn}{nn}{Noun}
+\newleipzig{Vb}{vb}{Verb}
+\newleipzig{Adj}{adj}{Adjective}
+
+\makeglossaries
+
+\newcommand{\AargI}{{\Aarg}.{\Inan}}
+\newcommand{\PargI}{{\Parg}.{\Inan}}
+\newcommand{\AgtTI}{{\AgtT}.{\Inan}}
+\newcommand{\PatTI}{{\AgtT}.{\Inan}}
+\newcommand{\TsgI}{{\Tsg}.{\Inan}}
+\newcommand{\TplI}{{\Tpl}.{\Inan}}
+
+% Smaller font in block quotes
+\usepackage{relsize}
+\AtBeginEnvironment{quote}{\noindent\smaller}
+\AtBeginEnvironment{quotation}{\smaller}
+
+% Macros
+\newcommand{\fw}[1]{\textit{#1}} % Foreign Word
+\newcommand{\tit}[1]{\textit{#1}} % Title of a work
+\newcommand{\q}[1]{\enquote{#1}} % Context-aware quotation
+\newcommand{\qq}[1]{\enquote*{#1}} % Explicit sublevel quotation
+\newcommand{\tsup}[1]{\textsuperscript{#1}} % Superscript
+\newcommand{\tsub}[1]{\textsubscript{#1}} % Subscript
+\newcommand{\markyellow}[1]{\colorbox{yellow}{#1}} % Yellow highlighter
+\newcommand{\ques}{\fakesuperscript{?}} % raised question mark
+\newcommand{\orth}[1]{⟨#1⟩}  % Orthography brackets
+\newcommand{\tc}[1]{\trailingcitation{#1}} % \trailingcitation aus expex in Beispielen
+\newcommand{\rc}[1]{\rightcomment{#1}} % \rightcomment aus expex in Beispielen
+
+\newcommand{\ayr}[1]{\smash{{\Tagati #1}}} % Plain Ayeri orthography
+\newcommand{\rayr}[2]{\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
+\newcommand{\tayr}[2]{#1 `#2'} % Romanization + *t*ranslation
+\newcommand{\xayr}[3]{\smash{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
+
+% blah
+\usepackage{lipsum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% HALF TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlingpage}
+\begin{center}
+{\Huge A Grammar of Ayeri}
+\end{center}
+\end{titlingpage}
+
+%% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlingpage}
+\titleS
+\clearpage
+\input{./chapters/colophon.tex}
+\end{titlingpage}
+
+%% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\chapter{Glossing Abbreviations}
+\begin{multicols}{2}
+\printglossary[style=mysuper,type=\leipzigtype]
+\end{multicols}
+\cleartorecto
+
+%% MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+\input{./chapters/preface.tex}
+\cleartorecto
+
+\input{./chapters/introduction.tex}
+\cleartorecto
+
+% \chapter{Blah}
+% \lipsum[1-2]
+% 
+% \section{Lorem}
+% \lipsum[3-4]
+% 
+% \subsection{Ipsum}
+% \lipsum[5-6]
+% 
+% \subsection{Dolor}
+% \lipsum[7-8]
+% 
+% \subsection{Sit Amet}
+% \lipsum[8-9]
+
+\cleartorecto
+
+%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography
+
+%% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

@@ -95,6 +95,8 @@ acs-*.bib
 
 # listings
 *.lol
+*.lzo
+*.lzs
 
 # makeidx
 *.idx
@@ -178,3 +180,6 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+# Other
+images/src/*
