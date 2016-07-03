@@ -1,7 +1,6 @@
 % arara: xelatex
 % arara: biber
 % arara: makeglossaries
-% arara: pythontex
 % arara: xelatex
 
 \documentclass[
@@ -50,7 +49,7 @@
 \usepackage{ccicons}
 
 % Use Python
-\usepackage[gobble=auto]{pythontex}
+% \usepackage[gobble=auto]{pythontex}
 
 % Load fonts for XeTeX, including support for Unicode etc.
 \usepackage{fontspec}
@@ -92,10 +91,15 @@
 	HyphenChar=·,
 ]{Tagati Book G}
 
-\setmainfont{EB Garamond}[
+% \setmainfont{EB Garamond}[
+% 	Ligatures={TeX,NoContextual},
+% 	Numbers=Lowercase,
+% 	BoldFont={Garamond Premier Pro Semibold},
+% ]
+
+\setmainfont{Junicode}[
 	Ligatures={TeX,NoContextual},
 	Numbers=Lowercase,
-	BoldFont={Garamond Premier Pro Semibold},
 ]
 
 \setsansfont{Fira Sans}[
@@ -159,6 +163,7 @@
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \setlength{\columnsep}{2\baselineskip}
+\usepackage{tikz}
 
 % Things for tables
 \usepackage{longtable}
@@ -169,6 +174,10 @@
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
 \newcolumntype{I}{>{\itshape}X}
+\newcolumntype{H}{>{\bfseries\footnotesize}X}
+
+% Table header font
+\newcommand{\tableheaderfont}{\rowfont{\bfseries\footnotesize}}
 
 % Formatting of table of glossing abbreviations from Leipzig package manual
 \usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
@@ -205,6 +214,10 @@
 \newleipzig{Inan}{inan}{inanimate}
 \newleipzig{Hab}{hab}{habitative}
 \newleipzig{Ayr}{ayr}{Ayeri}
+\newleipzig{NPst}{npst}{near past}
+\newleipzig{RPst}{rpst}{remote past}
+\newleipzig{NFut}{nfut}{near future}
+\newleipzig{RFut}{rfut}{remote future}
 
 \newleipzig{Nn}{nn}{Noun}
 \newleipzig{Vb}{vb}{Verb}
@@ -289,6 +302,9 @@
 \input{./chapters/introduction.tex}
 \cleartorecto
 
+\input{./chapters/phonology.tex}
+\cleartorecto
+
 % \chapter{Blah}
 % \lipsum[1-2]
 % 
@@ -303,8 +319,8 @@
 % 
 % \subsection{Sit Amet}
 % \lipsum[8-9]
-
-\cleartorecto
+% 
+% \cleartorecto
 
 %% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
