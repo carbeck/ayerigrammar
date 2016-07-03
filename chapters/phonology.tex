@@ -9,10 +9,10 @@ describe stress patterns.
 \subsection{Consonants}
 
 At 17 consonants -- /ʔ/ and /w/ only occur marginally --, Ayeri has a fairly 
-mid-sized inventory.
+mid-sized inventory. \autoref{tab:consonants} shows the full chart. The 
+affricates /tʃ/ and /dʒ/ are allophones of /tj, kj/ and /dj, gj/, respectively.
 
-\begin{table}[h]
-\label{tab:consonants}
+\begin{sidewaystable}
 \caption{Consonant inventory}
 \begin{tabu} to \textwidth {H[2l] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \toprule\tableheaderfont
@@ -28,33 +28,33 @@ mid-sized inventory.
 \midrule
 
 Plosives
-	& p    & b	% Bilabials
-	&      &  	% Labiodentals
-	& t    & d	% Alveolars
-	&      &  	% Palatals
-	& k    & ɡ	% Velars
-	& (ʔ)  &  	% Glottals
+	& p    & b         	% Bilabials
+	&      &           	% Labiodentals
+	& t    & d         	% Alveolars
+	&      &           	% Palatals
+	& k    & ɡ \orth{g}	% Velars
+	& (ʔ)  &           	% Glottals
 	\\
 
 \midrule
 
 Affricates
-	&    &  	% Bilabials
-	&    &  	% Labiodentals
-	& tʃ & dʒ	% Alveolars
-	&    &  	% Palatals
-	&    &  	% Glottals
+	&             &            	% Bilabials
+	&             &            	% Labiodentals
+	& tʃ \orth{c} & dʒ \orth{j}	% Alveolars
+	&             &            	% Palatals
+	&             &            	% Glottals
 	\\
 
 \midrule
 
 Nasals
-	&   & m % Bilabials
-	&   &  	% Labiodentals
-	&   & n	% Alveolars
-	&   &  	% Palatals
-	&   & ŋ	% Velars
-	&   &  	% Glottals
+	&   & m          	% Bilabials
+	&   &            	% Labiodentals
+	&   & n          	% Alveolars
+	&   &            	% Palatals
+	&   & ŋ \orth{ng}	% Velars
+	&   &            	% Glottals
 	\\
 
 \midrule
@@ -82,20 +82,18 @@ Taps/Flaps
 \midrule
 
 Approximants
-	&   & (w) 	% Bilabials
-	&   &     	% Labiodentals
-	&   & l   	% Alveolars
-	&   & j   	% Palatals
-	&   &     	% Velars
-	&   &     	% Glottals
+	&   & (w)       	% Bilabials
+	&   &           	% Labiodentals
+	&   & l         	% Alveolars
+	&   & j \orth{y}	% Palatals
+	&   &           	% Velars
+	&   &           	% Glottals
 	\\
 
 \bottomrule
 \end{tabu}
-\end{table}
-
-The affricates /tʃ/ and /dʒ/ are allophones of /tj, kj/ and /dj, gj/, 
-respectively.
+\label{tab:consonants}
+\end{sidewaystable}
 
 \subsection{Vowels}
 
@@ -179,7 +177,7 @@ This is to disambiguate it from the plain genitive-marked relative pronoun
 \ex\begingl
 	\gla tamanang ledanena nā sina koronvāng //
 	\glb taman-ang ledan-ena nā si-na koron-vāng //
-	\glc letter-\Aarg{} friend-\Gen{} \Fsg.\Gen{} \Rel{}.\Gen{} know=\Ssg{}.\Aarg{} //
+	\glc letter-\Aarg{} friend-\Gen{} \Fsg.\Gen{} \Rel{}-\Gen{} know=\Ssg{}.\Aarg{} //
 	\glft `the letter of my friend which you know' //
 \endgl\xe
 
@@ -187,11 +185,11 @@ This is to disambiguate it from the plain genitive-marked relative pronoun
 
 For the purpose of statistical analyis, only the following parts of speech have 
 been considered: nouns, adjectives, adverbs, pronouns, adpositions, 
-conjunctions, and numerals. Verbs have been notably ignored as verb stems do 
-not constitute independent words -- they are always inflected in some way, so 
+conjunctions, and numerals. Verbs have been notably ignored as verb stems alone 
+do not constitute independent words -- they are always inflected in some way, so 
 that they may end in consonants or consonant clusters that independent words 
 cannot end in. This also has repercussions for syllabification and stress, 
-which depends on the inflection of the verb stem:
+which depend on the inflection of the verb stem:
 
 \begin{table}[h]
 \label{ex:verbsyll}
