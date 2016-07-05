@@ -231,7 +231,9 @@ example:
 \endgl\xe
 
 This is to disambiguate it from the plain genitive-marked relative pronoun 
-\xayr{sin}{sina}{which.\Gen{}}:
+\xayr{sin}{sina}{which.\Gen{}}:\footnote{A variant which combines the 
+allomorphs of the relativizer and the genitive case marker in the opposite way 
+also exists: \rayr{s/}{s-} + \rayr{/En}{-ena} → \rayr{sen}{sena}.}
 
 \ex\begingl
 	\gla tamanang ledanena nā sina koronvāng //
@@ -269,8 +271,8 @@ and extends a previous analysis of the phonological makeup of dictionary entries
 \autocite{becker:frequency}. The previous study had its focus on gathering 
 frequency statistics for word generation, however, we want to know about words 
 generally here.} Borrowings have been deleted, if they could not reasonably be 
-words in Ayeri. Altogether, the corpus comprises 5,502 words, of which 3,050 
-are unique.
+words in Ayeri. Altogether, the corpus comprises 5,499 words; words may occur 
+more than once.
 
 Among the dictionary entries, verbs have notably been ignored, since verb stems 
 alone do not constitute independent words -- they are always inflected in some 
@@ -319,12 +321,14 @@ the words from translation texts were converted to IPA first. Fortunately, this
 is rather easy as Ayeri's romanization is very straightforward. Syllable breaks 
 have also been inserted semi-automatically.
 
+\subsection{Number of Syllables per Word}
+
 First, let us see how many syllables words commonly have (see 
-\ref{tab:syllength}). The higher the syllable count, the more likely it is for 
+\autoref{tab:syllength}). The higher the syllable count, the more likely it is for 
 them to be compounds or inflected words.
 
 \begin{table}[hp]\centering
-\caption[Relative frequency of words with different numbers of syllables]{Relative frequency of words with different numbers of syllables (n\,=\,5502)}
+\caption[Relative frequency of words with different numbers of syllables]{Relative frequency of words with different numbers of syllables (n\,=\,5499)}
 \begin{tabu} to .5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
 Segment
@@ -334,23 +338,23 @@ Segment
 \toprule
 
 2 syllables
-	& 2241
-	& 40.73\pct
+	& 2242
+	& 40.77\pct
 	\\
 	
 3 syllables
 	& 1360
-	& 24.72\pct
+	& 24.73\pct
 	\\
 	
 1 syllable
-	& 1199
-	& 21.79\pct
+	& 1196
+	& 21.75\pct
 	\\
 	
 4 syllables
-	& 588
-	& 10.69\pct
+	& 587
+	& 10.67\pct
 	\\
 	
 5 syllables
@@ -400,3 +404,129 @@ syllables per word:
 		\xayr{nsimyye\_aNF/henF}{nasimayajang-hen}{follow-\Agtz-\Pl{}-\Aarg{}=all}.
 \xe
 
+\autoref{tab:syltype} shows the frequencies of syllable types by position in a 
+word. It is important to note here that phonemes which consist of more than 
+segment -- affricates, diphthongs, and long vowels -- have been counted as only 
+one of C (consonant) or V (vowel). The next subsections will elaborate on which 
+sounds the Cs and Vs correspond to.
+
+\begin{table}[hp]\centering
+\caption[Relative frequency of syllable types per word]{Relative frequency of syllable types per word (n\,=\,5499)}
+\begin{tabu} to \textwidth{H X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c]}
+\tableheaderfont\toprule
+Type
+	& \multicolumn2{c}{Initial}
+	& \multicolumn2{c}{Medial}
+	& \multicolumn2{c}{Final}
+	& \multicolumn2{c}{Single}
+	\\
+	
+\toprule
+	
+CV
+	& 2903
+	& 67.54\pct
+	& 1972
+	& 71.97\pct
+	& 2108
+	& 49.05\pct
+	& 578
+	& 48.13\pct
+	\\
+	
+CCV
+	& 55
+	& 1.28\pct
+	& 25
+	& 0.91\pct
+	& 47
+	& 1.09\pct
+	& 32
+	& 2.66\pct
+	\\
+	
+CCCV
+	& 0
+	& 0.00\pct
+	& 0
+	& 0.00\pct
+	& 2
+	& 0.05\pct
+	& 0
+	& 0.00\pct
+	\\
+	
+CVC
+	& 754
+	& 17.54\pct
+	& 614
+	& 22.41\pct
+	& 1903
+	& 44.28\pct
+	& 298
+	& 24.81\pct
+	\\
+	
+CCVC
+	& 29
+	& 0.67\pct
+	& 10
+	& 0.36\pct
+	& 88
+	& 2.05\pct
+	& 9
+	& 0.75\pct
+	\\
+	
+CVCC
+	& 1
+	& 0.02\pct
+	& 0
+	& 0.00\pct
+	& 0
+	& 0.00\pct
+	& 0
+	& 0.00\pct
+	\\
+
+\midrule
+
+V
+	& 488
+	& 11.35\pct
+	& 95
+	& 3.47\pct
+	& 67
+	& 1.56\pct
+	& 2
+	& 0.17\pct
+	\\
+	
+VC
+	& 68
+	& 1.58\pct
+	& 24
+	& 0.88\pct
+	& 83
+	& 1.93\pct
+	& 282
+	& 23.48\pct
+	\\
+	
+\bottomrule
+	
+Total
+	& 4298
+	& 100.00\pct
+	& 2740
+	& 100.00\pct
+	& 4298
+	& 100.00\pct
+	& 1201
+	& 100.00\pct
+	\\
+
+\bottomrule
+\end{tabu}
+\label{tab:syltype}
+\end{table}
