@@ -315,8 +315,9 @@ Suffix
 \label{ex:verbsyll}
 \end{table}
 
-The statistics have been aggregated by \tit{\citetitle{strasser:freq}} 
-\autocite{strasser:freq}. For the purpose of gathering statistics on phonemes, 
+% The statistics have been aggregated by \tit{\citetitle{strasser:freq}} 
+% \autocite{strasser:freq}. 
+For the purpose of gathering statistics on phonemes, 
 the words from translation texts were converted to IPA first. Fortunately, this 
 is rather easy as Ayeri's romanization is very straightforward. Syllable breaks 
 have also been inserted semi-automatically.
@@ -338,33 +339,33 @@ Segment
 \toprule
 
 2 syllables
-	& 2242
-	& 40.77\pct
+	& 2277
+	& 41.41\pct
 	\\
 	
 3 syllables
-	& 1360
-	& 24.73\pct
+	& 1392
+	& 25.31\pct
 	\\
 	
 1 syllable
-	& 1196
-	& 21.75\pct
+	& 1201
+	& 21.84\pct
 	\\
 	
 4 syllables
-	& 587
-	& 10.67\pct
+	& 547
+	& 9.95\pct
 	\\
 	
 5 syllables
-	& 101
-	& 1.84\pct
+	& 74
+	& 1.35\pct
 	\\
 	
 6 syllables
-	& 13
-	& 0.24\pct
+	& 8
+	& 0.15\pct
 	\\
 	
 \bottomrule
@@ -405,20 +406,21 @@ syllables per word:
 \xe
 
 \autoref{tab:syltype} shows the frequencies of syllable types by position in a 
-word. It is important to note here that phonemes which consist of more than 
+word. It is important to note here that phonemes which consist of more than one 
 segment -- affricates, diphthongs, and long vowels -- have been counted as only 
-one of C (consonant) or V (vowel). The next subsections will elaborate on which 
-sounds the Cs and Vs correspond to.
+one of C (consonant) or V (vowel), respectively. The following subsections will 
+elaborate on which sounds the Cs and Vs correspond to.
 
-\begin{table}[hp]\centering
+\begin{sidewaystable}[hp]\centering
 \caption[Relative frequency of syllable types per word]{Relative frequency of syllable types per word (n\,=\,5499)}
-\begin{tabu} to \textwidth{H X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c]}
+\begin{tabu} to \textwidth{H X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c]}
 \tableheaderfont\toprule
 Type
 	& \multicolumn2{c}{Initial}
 	& \multicolumn2{c}{Medial}
 	& \multicolumn2{c}{Final}
 	& \multicolumn2{c}{Single}
+	& \multicolumn2{c}{Total}
 	\\
 	
 \toprule
@@ -432,6 +434,8 @@ CV
 	& 49.05\pct
 	& 578
 	& 48.13\pct
+	& 7561
+	& 60.31\pct
 	\\
 	
 CCV
@@ -443,17 +447,24 @@ CCV
 	& 1.09\pct
 	& 32
 	& 2.66\pct
+	& 159
+	& 1.27\pct
 	\\
 	
 CCCV
-	& 0
-	& 0.00\pct
-	& 0
-	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
 	& 2
 	& 0.05\pct
-	& 0
-	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
+	& 2
+	& 0.02\pct
 	\\
 	
 CVC
@@ -465,6 +476,8 @@ CVC
 	& 44.28\pct
 	& 298
 	& 24.81\pct
+	& 3569
+	& 28.47\pct
 	\\
 	
 CCVC
@@ -476,17 +489,24 @@ CCVC
 	& 2.05\pct
 	& 9
 	& 0.75\pct
+	& 136
+	& 1.08\pct
 	\\
 	
 CVCC
 	& 1
 	& 0.02\pct
-	& 0
-	& 0.00\pct
-	& 0
-	& 0.00\pct
-	& 0
-	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
+	& \multicolumn2{c}{—}
+% 	& 0
+% 	& 0.00\pct
+	& 1
+	& 0.01\pct
 	\\
 
 \midrule
@@ -500,6 +520,8 @@ V
 	& 1.56\pct
 	& 2
 	& 0.17\pct
+	& 652
+	& 5.20\pct
 	\\
 	
 VC
@@ -511,6 +533,8 @@ VC
 	& 1.93\pct
 	& 282
 	& 23.48\pct
+	& 457
+	& 3.65\pct
 	\\
 	
 \bottomrule
@@ -524,9 +548,53 @@ Total
 	& 100.00\pct
 	& 1201
 	& 100.00\pct
+	& 12537
+	& 100.00\pct
 	\\
 
 \bottomrule
 \end{tabu}
 \label{tab:syltype}
-\end{table}
+\end{sidewaystable}
+
+In all positions, CV is the most common syllable type, followed by CVC. With a 
+very big margin, V is the next most common syllable type, which is also most 
+common in initial syllables and least common in monosyllabic words. The cases 
+with only a few attestations are the following:
+
+\pex
+	\a Initial CVCC:\\
+		\rayr{silFvFnNF}{silvnang} /sɪlv.ˈnaŋ/ `see=\Fpl{}.\Aarg{}';
+		
+	\a Final CCCV:\\
+		\rayr{migFrFyo}{migryo} /ˈmi.ɡrjo/ `flourish-\Tsg{}.\N{}',\\
+		\rayr{subFrFyo}{subryo} /ˈsu.brjo/ `cease-\Tsg{}.\N{}';
+	
+	\a Single V:\\
+		\rayr{Aj}{ay} /aɪ/ `\Fsg{}.\Top{}'.
+\xe
+
+The medial and final VC cases may seem like an oddity, but they are mostly due 
+to the previous syllable ending in /ŋ/, with that syllable also containing a 
+lax vowel, which means that this syllable must be closed. An alternative 
+explanation would be to assume that /ŋ/ is ambisyllabic, or actually /n.ɡ 
+\textasciitilde{} ŋ.ɡ/, but realized as [ŋ]. The high number of single-syllable 
+VC is due to \xayr{ANF}{ang}{\AgtT}, which alone appears 255 times in the 
+sample (4.63\pct{} of all words, 21.23\pct{} of monosyllabic words, 90.43\pct{} 
+of monosyllabic VC words).
+
+\subsection{Phonemic Makeup of Initial Syllables}
+
+...
+
+\subsection{Phonemic Makeup of Initial Syllables}
+
+...
+
+\subsection{Phonemic Makeup of Final Syllables}
+
+...
+
+\subsection{Phonemic Makeup of Single Syllables}
+
+...
