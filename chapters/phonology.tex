@@ -24,12 +24,12 @@ describe stress patterns.
 \midrule
 
 Plosives
-	& p & b         	% Bilabials
-	&   &           	% Labiodentals
-	& t & d         	% Alveolars
-	&   &           	% Palatals
-	& k & ɡ \orth{g}	% Velars
-	&   &           	% Glottals
+	& p & b	% Bilabials
+	&   &  	% Labiodentals
+	& t & d	% Alveolars
+	&   &  	% Palatals
+	& k & g	% Velars
+	&   &  	% Glottals
 	\\
 
 \midrule
@@ -191,7 +191,7 @@ The lax vowels [ɪ ɛ ɔ ʊ] occur as allophones of their tense counterparts
 \pex
 	\a \rayr{miNF}{m\textbf{ing}} [mɪŋ] `can, be able',
 	\a \rayr{EnFy}{\textbf{en}ya} [ˈɛnja] `everyone',
-	\a \rayr{AgonF}{ag\textbf{on}} [ˈaɡɔn] `outer, foreign', and
+	\a \rayr{AgonF}{ag\textbf{on}} [ˈagɔn] `outer, foreign', and
 	\a \rayr{pkurF}{pak\textbf{ur}} [ˈpakʊr] `ill, sick'.
 \xe
 
@@ -405,13 +405,7 @@ syllables per word:
 		\xayr{nsimyye\_aNF/henF}{nasimayajang-hen}{follow-\Agtz-\Pl{}-\Aarg{}=all}.
 \xe
 
-\autoref{tab:syltype} shows the frequencies of syllable types by position in a 
-word. It is important to note here that phonemes which consist of more than one 
-segment -- affricates, diphthongs, and long vowels -- have been counted as only 
-one of C (consonant) or V (vowel), respectively. The following subsections will 
-elaborate on which sounds the Cs and Vs correspond to.
-
-\begin{sidewaystable}[hp]\centering
+\begin{sidewaystable}[pth]\centering
 \caption[Relative frequency of syllable types per word]{Relative frequency of syllable types per word (n\,=\,5500)}
 \begin{tabu} to \textwidth{H X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c] X[c] S[c]}
 \tableheaderfont\toprule
@@ -557,6 +551,12 @@ Total
 \label{tab:syltype}
 \end{sidewaystable}
 
+\autoref{tab:syltype} shows the frequencies of syllable types by position in a 
+word. It is important to note here that phonemes which consist of more than one 
+segment -- affricates, diphthongs, and long vowels -- have been counted as only 
+one of C (consonant) or V (vowel), respectively. The following subsections will 
+elaborate on which sounds the Cs and Vs correspond to.
+
 In all positions, CV is the most common syllable type, followed by CVC. With a 
 very big margin, V is the next most common syllable type, which is also most 
 common in initial syllables and least common in monosyllabic words. The cases 
@@ -567,7 +567,7 @@ with only a few attestations are the following:
 		\rayr{silFvFnNF}{silvnang} /sɪlv.ˈnaŋ/ `see=\Fpl{}.\Aarg{}';
 		
 	\a Final CCCV:\\
-		\rayr{migFrFyo}{migryo} /ˈmi.ɡrjo/ `flourish-\Tsg{}.\N{}',\\
+		\rayr{migFrFyo}{migryo} /ˈmi.grjo/ `flourish-\Tsg{}.\N{}',\\
 		\rayr{subFrFyo}{subryo} /ˈsu.brjo/ `cease-\Tsg{}.\N{}';
 	
 	\a Single V:\\
@@ -577,31 +577,15 @@ with only a few attestations are the following:
 The medial and final VC cases may seem like an oddity, but they are mostly due 
 to the previous syllable ending in /ŋ/, with that syllable also containing a 
 lax vowel, which means that this syllable must be closed. An alternative 
-explanation would be to assume that /ŋ/ is ambisyllabic, or actually /n.ɡ 
-\textasciitilde{} ŋ.ɡ/, but realized as [ŋ]. The high number of single-syllable 
+explanation would be to assume that /ŋ/ is ambisyllabic, or actually /n.g 
+\textasciitilde{} ŋ.g/, but realized as [ŋ]. The high number of single-syllable 
 VC is due to \xayr{ANF}{ang}{\AgtT}, which alone appears 255 times in the 
 sample (4.63\pct{} of all words, 21.23\pct{} of monosyllabic words, 90.43\pct{} 
 of monosyllabic VC words).
 
 \subsection{Phonemic Makeup of Initial Syllables}
 
-The statistics in the following sections have been gathered from the IPA 
-conversions mentioned above. The transcriptions have been divided into plain 
-text files: one containing all initial syllables of polysyllabic words, one 
-containing all medial syllables of polysyllabic words, one containing all final 
-syllables of polysyllabic words, and one containing monosyllabic words. Onsets,
-nuclei and codas have been matched by regular expressions:
-
-\begin{verbatim}
-C = (?:tʃ|dʒ|[ptkbdgmnŋvshrljw])
-V = (?:[aeɔʊ]ːɪ|[aeɔʊ]ɪ|aʊ|[ieaou]ː|[ieaouɪɛɔʊə])
-\end{verbatim}
-
-The command-line tools \texttt{grep}, \texttt{sort}, and \texttt{uniq}, were 
-used to aggregate all occurring variants for each syllable segment as well as 
-their absolute frequencies.
-
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of onsets in initial syllables]{Relative frequency of onsets in initial syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -766,9 +750,34 @@ bw
 \label{tab:initon}
 \end{table}
 
-...
+The statistics in the following sections have been gathered from the IPA 
+conversions mentioned above. The transcriptions have been divided into plain 
+text files: one containing all initial syllables of polysyllabic words, one 
+containing all medial syllables of polysyllabic words, one containing all final 
+syllables of polysyllabic words, and one containing monosyllabic words. Onsets,
+nuclei and codas have been matched by regular expressions; the command-line 
+tools \texttt{grep}, \texttt{sort}, and \texttt{uniq} were used to aggregate all 
+occurring variants for each syllable segment as well as their absolute 
+frequencies:\footnote{However, \texttt{sort} was unable to handle all IPA 
+characters, so \texttt{sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/'} had to be 
+used to compensate by transcribing everything into X-SAMPA and back.}
 
-\begin{table}[hp]\centering
+\ex
+	\texttt{C = (?:tʃ|dʒ|[ptkbdgmnŋvshrljw])\\
+	V = (?:[aeɔʊ]ːɪ|[aeɔʊ]ɪ|aʊ|[ieaou]ː|[ieaouɪɛɔʊə])}
+\xe
+
+As we have seen above (\autoref{tab:syltype}), CCV syllables only make up 
+1.28\pct{} of initial syllables, in so far it is no surprise that consonant 
+clusters all appear at the bottom of \autoref{tab:initon}. There also seem to 
+be combination patterns in that initial clusters exist for all plosives plus /r/, 
+and almost all bilabials plus /j/, with the exception of /bj/, however, /nj/ is 
+added to the group instead. Combinations with /w/ only occur for /b/, /r/, and 
+/s/, which do not share an obvious connection. Syllables without a consonant 
+filling the onset position are marked with \enquote*{Ø}; these numbers 
+correspond to the VC and VCC rows in \autoref{tab:syltype}.
+
+\begin{table}[pth]\centering
 \caption[Relative frequency of nuclei in initial syllables]{Relative frequency of nuclei in initial syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -940,7 +949,7 @@ aʊ
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of codas in initial syllables]{Relative frequency of codas in initial syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1020,7 +1029,7 @@ k
 
 \subsection{Phonemic Makeup of Medial Syllables}
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of onsets in medial syllables]{Relative frequency of onsets in medial syllables (n\,=\,2741)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1182,7 +1191,7 @@ bj
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of nuclei in medial syllables]{Relative frequency of nuclei in medial syllables (n\,=\,2741)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1349,7 +1358,7 @@ iː
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of codas in medial syllables]{Relative frequency of codas in medial syllables (n\,=\,2741)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1413,7 +1422,7 @@ t
 
 \subsection{Phonemic Makeup of Final Syllables}
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of onsets in final syllables]{Relative frequency of onsets in final syllables (n\,=\,4299)}
 \begin{tabu} to \textwidth{X X[c] X[c] X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1630,7 +1639,7 @@ kj
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of nuclei in final syllables]{Relative frequency of nuclei in final syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1805,7 +1814,7 @@ uː
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of codas in final syllables]{Relative frequency of codas in final syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -1869,7 +1878,7 @@ k
 
 \subsection{Phonemic Makeup of Single Syllables}
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of onsets in single syllables]{Relative frequency of onsets in single syllables (n\,=\,1201)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -2021,7 +2030,7 @@ br
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of nuclei in single syllables]{Relative frequency of nuclei in single syllables (n\,=\,1201)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
@@ -2166,7 +2175,7 @@ oː
 
 ...
 
-\begin{table}[hp]\centering
+\begin{table}[pth]\centering
 \caption[Relative frequency of codas in single syllables]{Relative frequency of codas in single syllables (n\,=\,1201)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
 \tableheaderfont\toprule
