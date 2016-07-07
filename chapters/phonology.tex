@@ -9,7 +9,7 @@ describe stress patterns.
 \subsection{Consonants}
 
 \begin{sidewaystable}[p]
-\caption{Consonant inventory}
+\caption[Consonant inventory]{Consonant inventory (divergent orthography in pointed brackets)}
 \begin{tabu} to \textwidth {H[2l] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \toprule\tableheaderfont
 	%
@@ -148,10 +148,10 @@ consonants do not geminate but are treated like a single consonant:
 
 \subsection{Vowels}
 
-Ayeri has a very basic five-vowel system, shown in \autoref{tab:vowels}.
+Ayeri has a very basic five-to-six-vowel system, shown in \autoref{tab:vowels}.
 
 \begin{table}[ht]\centering
-\caption{Vowel inventory}
+\caption[Vowel inventory]{Vowel inventory (divergent orthography in pointed brackets)}
 \begin{tabu} to .5\textwidth{H[1] X[2c] X[2c] X[2c]}
 \toprule\tableheaderfont
 
@@ -211,7 +211,7 @@ are lexicalized in a few words, for example:
 	\a \xayr{AreenF}{arēn}{anyway, however}, \xayr{leer}{lēra}{whore};
 	\a \xayr{laa}{lā}{tongue}, \xayr{yaaNF}{yāng}{he} (he.\Aarg{}); \label{ex:laa}
 	\a \xayr{noonF}{nōn}{wish}; and 
-	\a \xayr{bbuu}{babū}{barbarian}.
+	\a \xayr{bbuu\_anF}{babūan}{barbarian}.
 \xe
 
 \noindent Otherwise, long vowels result from two same vowels next to each other, 
@@ -275,11 +275,11 @@ and extends a previous analysis of the phonological makeup of dictionary entries
 \autocite{becker:frequency}. The previous study had its focus on gathering 
 frequency statistics for word generation, however, we want to know about words 
 generally here.} Borrowings have been deleted, if they could not reasonably be 
-words in Ayeri. Altogether, the corpus comprises 5,499 words; words may occur 
+words in Ayeri. Altogether, the corpus comprises 5,500 words; words may occur 
 more than once.
 
 Among the dictionary entries, verbs have notably been ignored, since verb stems 
-alone do not constitute independent words -- they are always inflected in some 
+alone do not constitute independent words---they are always inflected in some 
 way, so that they may end in consonants or consonant clusters that independent 
 words cannot end in. This also has repercussions on syllabification and stress, 
 which depend on the inflection of the verb stem:
@@ -557,7 +557,7 @@ Total
 
 \autoref{tab:syltype} shows the frequencies of syllable types by position in a 
 word. It is important to note here that phonemes which consist of more than one 
-segment -- affricates, diphthongs, and long vowels -- have been counted as only 
+segment---affricates, diphthongs, and long vowels---have been counted as only 
 one of C (consonant) or V (vowel), respectively. The following subsections will 
 elaborate on which sounds the Cs and Vs correspond to.
 
@@ -764,7 +764,7 @@ text files:
 \end{itemize}
 
 Onsets, nuclei and codas have been matched by regular expressions; the 
-command-line tools \texttt{grep}, \texttt{sort}, and \texttt{uniq} were used to 
+com\-mand line tools \texttt{grep}, \texttt{sort}, and \texttt{uniq} were used to 
 aggregate all occurring variants for each syllable segment as well as their 
 absolute frequencies:\footnote{However, \texttt{sort} was unable to handle all 
 IPA characters, so \texttt{sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/'} had to be used to 
@@ -968,7 +968,7 @@ presented as grouped. Long vowels and diphthongs find themselves below the
 
 As [eːɪ] only occurs due to allophony, it should not be counted as a phoneme for
 the purposes of this analysis. On the other hand, the same could be said for a 
-lot of cases of [aː] included here -- this caveat applies to all nouns derived
+lot of cases of [aː] included here---this caveat applies to all nouns derived
 from verbs ending in \textit{-a} with the very common nominalizing suffix 
 \rayr{/AnF}{-an}, as exemplified in (\ref{ex:longvwls}) above.
 
