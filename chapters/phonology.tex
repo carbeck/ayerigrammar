@@ -340,32 +340,32 @@ Segment
 
 2 syllables
 	& 2277
-	& 41.40\pct\\
+	& 41.40\pct
 	\\
 	
 3 syllables
 	& 1393
-	& 25.33\pct\\
+	& 25.33\pct
 	\\
 	
 1 syllable
 	& 1201
-	& 21.84\pct\\
+	& 21.84\pct
 	\\
 	
 4 syllables
 	& 547
-	& 9.95\pct\\
+	& 9.95\pct
 	\\
 	
 5 syllables
 	& 74
-	& 1.35\pct\\
+	& 1.35\pct
 	\\
 	
 6 syllables
 	& 8
-	& 0.15\pct\\
+	& 0.15\pct
 	\\
 	
 \bottomrule
@@ -427,129 +427,129 @@ Type
 	
 CV
 	& 2904
-	& 67.55\pct\\
+	& 67.55\pct
 	& 1975
-	& 72.05\pct\\
+	& 72.05\pct
 	& 2108
-	& 49.03\pct\\
+	& 49.03\pct
 	& 578
-	& 48.13\pct\\
+	& 48.13\pct
 	& 7565
-	& 60.33\pct\\
+	& 60.33\pct
 	\\
 	
 CCV
 	& 55
-	& 1.28\pct\\
+	& 1.28\pct
 	& 24
-	& 0.88\pct\\
+	& 0.88\pct
 	& 47
-	& 1.09\pct\\
+	& 1.09\pct
 	& 32
-	& 2.66\pct\\
+	& 2.66\pct
 	& 158
-	& 1.26\pct\\
+	& 1.26\pct
 	\\
 	
 CCCV
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& 2
-	& 0.05\pct\\
+	& 0.05\pct
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& 2
-	& 0.02\pct\\
+	& 0.02\pct
 	\\
 	
 CVC
 	& 754
-	& 17.54\pct\\
+	& 17.54\pct
 	& 613
-	& 22.36\pct\\
+	& 22.36\pct
 	& 1903
-	& 44.27\pct\\
+	& 44.27\pct
 	& 298
-	& 24.81\pct\\
+	& 24.81\pct
 	& 3568
-	& 28.45\pct\\
+	& 28.45\pct
 	\\
 	
 CCVC
 	& 29
-	& 0.67\pct\\
+	& 0.67\pct
 	& 10
-	& 0.36\pct\\
+	& 0.36\pct
 	& 88
-	& 2.05\pct\\
+	& 2.05\pct
 	& 9
-	& 0.75\pct\\
+	& 0.75\pct
 	& 136
-	& 1.08\pct\\
+	& 1.08\pct
 	\\
 	
 CVCC
 	& 1
-	& 0.02\pct\\
+	& 0.02\pct
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& \multicolumn2{c}{—}
 % 	& 0
-% 	& 0.00\pct\\
+% 	& 0.00\pct
 	& 1
-	& 0.01\pct\\
+	& 0.01\pct
 	\\
 
 \midrule
 
 V
 	& 488
-	& 11.35\pct\\
+	& 11.35\pct
 	& 95
-	& 3.47\pct\\
+	& 3.47\pct
 	& 67
-	& 1.56\pct\\
+	& 1.56\pct
 	& 2
-	& 0.17\pct\\
+	& 0.17\pct
 	& 652
-	& 5.20\pct\\
+	& 5.20\pct
 	\\
 	
 VC
 	& 68
-	& 1.58\pct\\
+	& 1.58\pct
 	& 24
-	& 0.88\pct\\
+	& 0.88\pct
 	& 84
-	& 1.95\pct\\
+	& 1.95\pct
 	& 282
-	& 23.48\pct\\
+	& 23.48\pct
 	& 458
-	& 3.65\pct\\
+	& 3.65\pct
 	\\
 	
 \bottomrule
 	
 Total
 	& 4299
-	& 100.00\pct\\
+	& 100.00\pct
 	& 2741
-	& 100.00\pct\\
+	& 100.00\pct
 	& 4299
-	& 100.00\pct\\
+	& 100.00\pct
 	& 1201
-	& 100.00\pct\\
+	& 100.00\pct
 	& 12540
-	& 100.00\pct\\
+	& 100.00\pct
 	\\
 
 \bottomrule
@@ -585,6 +585,22 @@ of monosyllabic VC words).
 
 \subsection{Phonemic Makeup of Initial Syllables}
 
+The statistics in the following sections have been gathered from the IPA 
+conversions mentioned above. The transcriptions have been divided into plain 
+text files: one containing all initial syllables of polysyllabic words, one 
+containing all medial syllables of polysyllabic words, one containing all final 
+syllables of polysyllabic words, and one containing monosyllabic words. Onsets,
+nuclei and codas have been matched by regular expressions:
+
+\begin{verbatim}
+C = (?:tʃ|dʒ|[ptkbdgmnŋvshrljw])
+V = (?:[aeɔʊ]ːɪ|[aeɔʊ]ɪ|aʊ|[ieaou]ː|[ieaouɪɛɔʊə])
+\end{verbatim}
+
+The command-line tools \texttt{grep}, \texttt{sort}, and \texttt{uniq}, were 
+used to aggregate all occurring variants for each syllable segment as well as 
+their absolute frequencies.
+
 \begin{table}[hp]\centering
 \caption[Relative frequency of onsets in initial syllables]{Relative frequency of onsets in initial syllables (n\,=\,4299)}
 \begin{tabu} to 0.5\textwidth{X X[c] X[c]}
@@ -596,38 +612,154 @@ Phoneme
 	
 \toprule
 
-Ø	&	556	&	12.93\pct\\
+Ø
+	& 556
+	& 12.93\pct
+	\\
+
 
 \midrule
 
-s	&	488	&	11.35\pct\\
-t	&	432	&	10.05\pct\\
-m	&	418	&	9.72\pct\\
-k	&	380	&	8.84\pct\\
-n	&	375	&	8.72\pct\\
-p	&	334	&	7.77\pct\\
-b	&	231	&	5.37\pct\\
-d	&	172	&	4.00\pct\\
-v	&	164	&	3.81\pct\\
-l	&	159	&	3.70\pct\\
-r	&	134	&	3.12\pct\\
-j	&	126	&	2.93\pct\\
-g	&	111	&	2.58\pct\\
-h	&	99	&	2.30\pct\\
-tʃ	&	30	&	0.70\pct\\
-pr	&	27	&	0.63\pct\\
-nj	&	27	&	0.63\pct\\
-kr	&	8	&	0.19\pct\\
-br	&	8	&	0.19\pct\\
-tr	&	6	&	0.14\pct\\
-dʒ	&	4	&	0.09\pct\\
-gr	&	3	&	0.07\pct\\
-w	&	2	&	0.05\pct\\
-sw	&	1	&	0.02\pct\\
-rw	&	1	&	0.02\pct\\
-pj	&	1	&	0.02\pct\\
-mj	&	1	&	0.02\pct\\
-bw	&	1	&	0.02\pct\\
+s
+	& 488
+	& 11.35\pct
+	\\
+
+t
+	& 432
+	& 10.05\pct
+	\\
+
+m
+	& 418
+	& 9.72\pct
+	\\
+
+k
+	& 380
+	& 8.84\pct
+	\\
+
+n
+	& 375
+	& 8.72\pct
+	\\
+
+p
+	& 334
+	& 7.77\pct
+	\\
+
+b
+	& 231
+	& 5.37\pct
+	\\
+
+d
+	& 172
+	& 4.00\pct
+	\\
+
+v
+	& 164
+	& 3.81\pct
+	\\
+
+l
+	& 159
+	& 3.70\pct
+	\\
+
+r
+	& 134
+	& 3.12\pct
+	\\
+
+j
+	& 126
+	& 2.93\pct
+	\\
+
+g
+	& 111
+	& 2.58\pct
+	\\
+
+h
+	& 99
+	& 2.30\pct
+	\\
+
+tʃ
+	& 30
+	& 0.70\pct
+	\\
+
+pr
+	& 27
+	& 0.63\pct
+	\\
+
+nj
+	& 27
+	& 0.63\pct
+	\\
+
+kr
+	& 8
+	& 0.19\pct
+	\\
+
+br
+	& 8
+	& 0.19\pct
+	\\
+
+tr
+	& 6
+	& 0.14\pct
+	\\
+
+dʒ
+	& 4
+	& 0.09\pct
+	\\
+
+gr
+	& 3
+	& 0.07\pct
+	\\
+
+w
+	& 2
+	& 0.05\pct
+	\\
+
+sw
+	& 1
+	& 0.02\pct
+	\\
+
+rw
+	& 1
+	& 0.02\pct
+	\\
+
+pj
+	& 1
+	& 0.02\pct
+	\\
+
+mj
+	& 1
+	& 0.02\pct
+	\\
+
+bw
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -647,63 +779,159 @@ Phoneme
 	
 \toprule
 
-a	&	1847	&	42.96\pct\\
+a
+	& 1847
+	& 42.96\pct
+	\\
+
 
 \midrule
 
-i	&	1011	&	23.52\pct\\
+i
+	& 1011
+	& 23.52\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-i	&	802	&	18.66\pct\\
+i
+	& 802
+	& 18.66\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɪ	&	209	&	4.86\pct\\
+ɪ
+	& 209
+	& 4.86\pct
+	\\
+
 
 \midrule
 
-e	&	705	&	16.40\pct\\
+e
+	& 705
+	& 16.40\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-e	&	520	&	12.10\pct\\
+e
+	& 520
+	& 12.10\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɛ	&	164	&	3.81\pct\\
+ɛ
+	& 164
+	& 3.81\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ə	&	21	&	0.49\pct\\
+ə
+	& 21
+	& 0.49\pct
+	\\
+
 
 \midrule
 
-u	&	260	&	6.05\pct\\
+u
+	& 260
+	& 6.05\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-u	&	227	&	5.28\pct\\
+u
+	& 227
+	& 5.28\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ʊ	&	33	&	0.77\pct\\
+ʊ
+	& 33
+	& 0.77\pct
+	\\
+
 
 \midrule
 
-o	&	227	&	5.28\pct\\
+o
+	& 227
+	& 5.28\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-o	&	188	&	4.37\pct\\
+o
+	& 188
+	& 4.37\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɔ	&	39	&	0.91\pct\\
+ɔ
+	& 39
+	& 0.91\pct
+	\\
+
 
 \midrule
 
-aː	&	109	&	2.54\pct\\
-aɪ	&	88	&	2.05\pct\\
-eɪ	&	40	&	0.93\pct\\
-eː	&	4	&	0.09\pct\\
-ɔɪ	&	3	&	0.07\pct\\
-ʊɪ	&	1	&	0.02\pct\\
-oː	&	1	&	0.02\pct\\
-iː	&	1	&	0.02\pct\\
-eːɪ	&	1	&	0.02\pct\\
-aʊ	&	1	&	0.02\pct\\
+aː
+	& 109
+	& 2.54\pct
+	\\
+
+aɪ
+	& 88
+	& 2.05\pct
+	\\
+
+eɪ
+	& 40
+	& 0.93\pct
+	\\
+
+eː
+	& 4
+	& 0.09\pct
+	\\
+
+ɔɪ
+	& 3
+	& 0.07\pct
+	\\
+
+ʊɪ
+	& 1
+	& 0.02\pct
+	\\
+
+oː
+	& 1
+	& 0.02\pct
+	\\
+
+iː
+	& 1
+	& 0.02\pct
+	\\
+
+eːɪ
+	& 1
+	& 0.02\pct
+	\\
+
+aʊ
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -723,20 +951,64 @@ Phoneme
 	
 \toprule
 
-Ø	&	3447	&	80.18\pct\\
+Ø
+	& 3447
+	& 80.18\pct
+	\\
+
 
 \midrule
 
-n	&	299	&	6.96\pct\\
-ŋ	&	236	&	5.49\pct\\
-r	&	129	&	3.00\pct\\
-l	&	89	&	2.07\pct\\
-m	&	74	&	1.72\pct\\
-s	&	20	&	0.47\pct\\
-h	&	2	&	0.05\pct\\
-t	&	1	&	0.02\pct\\
-lv	&	1	&	0.02\pct\\
-k	&	1	&	0.02\pct\\
+n
+	& 299
+	& 6.96\pct
+	\\
+
+ŋ
+	& 236
+	& 5.49\pct
+	\\
+
+r
+	& 129
+	& 3.00\pct
+	\\
+
+l
+	& 89
+	& 2.07\pct
+	\\
+
+m
+	& 74
+	& 1.72\pct
+	\\
+
+s
+	& 20
+	& 0.47\pct
+	\\
+
+h
+	& 2
+	& 0.05\pct
+	\\
+
+t
+	& 1
+	& 0.02\pct
+	\\
+
+lv
+	& 1
+	& 0.02\pct
+	\\
+
+k
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -759,37 +1031,149 @@ Phoneme
 	
 \toprule
 
-Ø	&	119	&	4.34\pct\\
+Ø
+	& 119
+	& 4.34\pct
+	\\
+
 
 \midrule
 
-r	&	343	&	12.51\pct\\
-n	&	260	&	9.49\pct\\
-j	&	233	&	8.50\pct\\
-t	&	222	&	8.10\pct\\
-d	&	213	&	7.77\pct\\
-k	&	189	&	6.90\pct\\
-s	&	170	&	6.20\pct\\
-m	&	169	&	6.17\pct\\
-l	&	149	&	5.44\pct\\
-v	&	148	&	5.40\pct\\
-h	&	147	&	5.36\pct\\
-p	&	119	&	4.34\pct\\
-g	&	92	&	3.36\pct\\
-b	&	89	&	3.25\pct\\
-tʃ	&	20	&	0.73\pct\\
-dʒ	&	15	&	0.55\pct\\
-tr	&	11	&	0.40\pct\\
-dr	&	8	&	0.29\pct\\
-pr	&	7	&	0.26\pct\\
-w	&	6	&	0.22\pct\\
-ŋ	&	4	&	0.15\pct\\
-sj	&	2	&	0.07\pct\\
-br	&	2	&	0.07\pct\\
-sw	&	1	&	0.04\pct\\
-kw	&	1	&	0.04\pct\\
-kj	&	1	&	0.04\pct\\
-bj	&	1	&	0.04\pct\\
+r
+	& 343
+	& 12.51\pct
+	\\
+
+n
+	& 260
+	& 9.49\pct
+	\\
+
+j
+	& 233
+	& 8.50\pct
+	\\
+
+t
+	& 222
+	& 8.10\pct
+	\\
+
+d
+	& 213
+	& 7.77\pct
+	\\
+
+k
+	& 189
+	& 6.90\pct
+	\\
+
+s
+	& 170
+	& 6.20\pct
+	\\
+
+m
+	& 169
+	& 6.17\pct
+	\\
+
+l
+	& 149
+	& 5.44\pct
+	\\
+
+v
+	& 148
+	& 5.40\pct
+	\\
+
+h
+	& 147
+	& 5.36\pct
+	\\
+
+p
+	& 119
+	& 4.34\pct
+	\\
+
+g
+	& 92
+	& 3.36\pct
+	\\
+
+b
+	& 89
+	& 3.25\pct
+	\\
+
+tʃ
+	& 20
+	& 0.73\pct
+	\\
+
+dʒ
+	& 15
+	& 0.55\pct
+	\\
+
+tr
+	& 11
+	& 0.40\pct
+	\\
+
+dr
+	& 8
+	& 0.29\pct
+	\\
+
+pr
+	& 7
+	& 0.26\pct
+	\\
+
+w
+	& 6
+	& 0.22\pct
+	\\
+
+ŋ
+	& 4
+	& 0.15\pct
+	\\
+
+sj
+	& 2
+	& 0.07\pct
+	\\
+
+br
+	& 2
+	& 0.07\pct
+	\\
+
+sw
+	& 1
+	& 0.04\pct
+	\\
+
+kw
+	& 1
+	& 0.04\pct
+	\\
+
+kj
+	& 1
+	& 0.04\pct
+	\\
+
+bj
+	& 1
+	& 0.04\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -809,62 +1193,154 @@ Phoneme
 	
 \toprule
 
-a	&	1480	&	53.99\pct\\
+a
+	& 1480
+	& 53.99\pct
+	\\
+
 
 \midrule
 
-i	&	480	&	17.51\pct\\
+i
+	& 480
+	& 17.51\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-i	&	387	&	14.12\pct\\
+i
+	& 387
+	& 14.12\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɪ	&	93	&	3.39\pct\\
+ɪ
+	& 93
+	& 3.39\pct
+	\\
+
 
 \midrule
 
-e	&	254	&	9.26\pct\\
+e
+	& 254
+	& 9.26\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-e	&	204	&	7.44\pct\\
+e
+	& 204
+	& 7.44\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɛ	&	48	&	1.75\pct\\
+ɛ
+	& 48
+	& 1.75\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ə	&	2	&	0.07\pct\\
+ə
+	& 2
+	& 0.07\pct
+	\\
+
 
 \midrule
 
-o	&	194	&	7.08\pct\\
+o
+	& 194
+	& 7.08\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-o	&	119	&	4.34\pct\\
+o
+	& 119
+	& 4.34\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɔ	&	75	&	2.74\pct\\
+ɔ
+	& 75
+	& 2.74\pct
+	\\
+
 
 \midrule
 
-u	&	120	&	4.38\pct\\
+u
+	& 120
+	& 4.38\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-u	&	102	&	3.72\pct\\
+u
+	& 102
+	& 3.72\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ʊ	&	18	&	0.66\pct\\
+ʊ
+	& 18
+	& 0.66\pct
+	\\
+
 
 \midrule
 
-aː	&	110	&	4.01\pct\\
-aɪ	&	51	&	1.86\pct\\
-ɔɪ	&	33	&	1.20\pct\\
-eɪ	&	5	&	0.18\pct\\
-eː	&	5	&	0.18\pct\\
-aʊ	&	5	&	0.18\pct\\
-ʊɪ	&	2	&	0.07\pct\\
-uː	&	1	&	0.04\pct\\
-iː	&	1	&	0.04\pct\\
+aː
+	& 110
+	& 4.01\pct
+	\\
+
+aɪ
+	& 51
+	& 1.86\pct
+	\\
+
+ɔɪ
+	& 33
+	& 1.20\pct
+	\\
+
+eɪ
+	& 5
+	& 0.18\pct
+	\\
+
+eː
+	& 5
+	& 0.18\pct
+	\\
+
+aʊ
+	& 5
+	& 0.18\pct
+	\\
+
+ʊɪ
+	& 2
+	& 0.07\pct
+	\\
+
+uː
+	& 1
+	& 0.04\pct
+	\\
+
+iː
+	& 1
+	& 0.04\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -884,17 +1360,49 @@ Phoneme
 	
 \toprule
 
-Ø	&	2094	&	76.40\pct\\
+Ø
+	& 2094
+	& 76.40\pct
+	\\
+
 
 \midrule
 
-n	&	313	&	11.42\pct\\
-ŋ	&	193	&	7.04\pct\\
-r	&	48	&	1.75\pct\\
-m	&	39	&	1.42\pct\\
-s	&	32	&	1.17\pct\\
-l	&	21	&	0.77\pct\\
-t	&	1	&	0.04\pct\\
+n
+	& 313
+	& 11.42\pct
+	\\
+
+ŋ
+	& 193
+	& 7.04\pct
+	\\
+
+r
+	& 48
+	& 1.75\pct
+	\\
+
+m
+	& 39
+	& 1.42\pct
+	\\
+
+s
+	& 32
+	& 1.17\pct
+	\\
+
+l
+	& 21
+	& 0.77\pct
+	\\
+
+t
+	& 1
+	& 0.04\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -919,33 +1427,201 @@ Phoneme
 	
 \toprule
 
-Ø	&	151	&	3.51\pct	&	hj	&	5	&	0.12\pct\\
+Ø
+	& 151
+	& 3.51\pct
+	& hj
+	& 5
+	& 0.12\pct
+	\\
+
 
 \cmidrule{1-3}
 
-j	&	1101	&	25.61\pct	&	bj	&	5	&	0.12\pct\\
-n	&	528	&	12.28\pct	&	tw	&	4	&	0.09\pct\\
-r	&	398	&	9.26\pct	&	sw	&	4	&	0.09\pct\\
-t	&	266	&	6.19\pct	&	sj	&	4	&	0.09\pct\\
-s	&	244	&	5.68\pct	&	ŋ	&	4	&	0.09\pct\\
-l	&	238	&	5.54\pct	&	kw	&	3	&	0.07\pct\\
-k	&	199	&	4.63\pct	&	kr	&	3	&	0.07\pct\\
-d	&	184	&	4.28\pct	&	br	&	3	&	0.07\pct\\
-m	&	154	&	3.58\pct	&	vr	&	2	&	0.05\pct\\
-v	&	142	&	3.30\pct	&	rw	&	2	&	0.05\pct\\
-h	&	128	&	2.98\pct	&	nw	&	2	&	0.05\pct\\
-p	&	115	&	2.68\pct	&	tv	&	1	&	0.02\pct\\
-g	&	103	&	2.40\pct	&	tʃv	&	1	&	0.02\pct\\
-dʒ	&	73	&	1.70\pct	&	tʃj	&	1	&	0.02\pct\\
-b	&	73	&	1.70\pct	&	rj	&	1	&	0.02\pct\\
-tʃ	&	52	&	1.21\pct	&	nj	&	1	&	0.02\pct\\
-vj	&	26	&	0.60\pct	&	mw	&	1	&	0.02\pct\\
-pj	&	22	&	0.51\pct	&	kt	&	1	&	0.02\pct\\
-dʒj	&	17	&	0.40\pct	&	gt	&	1	&	0.02\pct\\
-tr	&	10	&	0.23\pct	&	grj	&	1	&	0.02\pct\\
-w	&	9	&	0.21\pct	&	dv	&	1	&	0.02\pct\\
-pr	&	7	&	0.16\pct	&	dr	&	1	&	0.02\pct\\
-kj	&	6	&	0.14\pct	&	brj	&	1	&	0.02\pct\\
+j
+	& 1101
+	& 25.61\pct
+	& bj
+	& 5
+	& 0.12\pct
+	\\
+
+n
+	& 528
+	& 12.28\pct
+	& tw
+	& 4
+	& 0.09\pct
+	\\
+
+r
+	& 398
+	& 9.26\pct
+	& sw
+	& 4
+	& 0.09\pct
+	\\
+
+t
+	& 266
+	& 6.19\pct
+	& sj
+	& 4
+	& 0.09\pct
+	\\
+
+s
+	& 244
+	& 5.68\pct
+	& ŋ
+	& 4
+	& 0.09\pct
+	\\
+
+l
+	& 238
+	& 5.54\pct
+	& kw
+	& 3
+	& 0.07\pct
+	\\
+
+k
+	& 199
+	& 4.63\pct
+	& kr
+	& 3
+	& 0.07\pct
+	\\
+
+d
+	& 184
+	& 4.28\pct
+	& br
+	& 3
+	& 0.07\pct
+	\\
+
+m
+	& 154
+	& 3.58\pct
+	& vr
+	& 2
+	& 0.05\pct
+	\\
+
+v
+	& 142
+	& 3.30\pct
+	& rw
+	& 2
+	& 0.05\pct
+	\\
+
+h
+	& 128
+	& 2.98\pct
+	& nw
+	& 2
+	& 0.05\pct
+	\\
+
+p
+	& 115
+	& 2.68\pct
+	& tv
+	& 1
+	& 0.02\pct
+	\\
+
+g
+	& 103
+	& 2.40\pct
+	& tʃv
+	& 1
+	& 0.02\pct
+	\\
+
+dʒ
+	& 73
+	& 1.70\pct
+	& tʃj
+	& 1
+	& 0.02\pct
+	\\
+
+b
+	& 73
+	& 1.70\pct
+	& rj
+	& 1
+	& 0.02\pct
+	\\
+
+tʃ
+	& 52
+	& 1.21\pct
+	& nj
+	& 1
+	& 0.02\pct
+	\\
+
+vj
+	& 26
+	& 0.60\pct
+	& mw
+	& 1
+	& 0.02\pct
+	\\
+
+pj
+	& 22
+	& 0.51\pct
+	& kt
+	& 1
+	& 0.02\pct
+	\\
+
+dʒj
+	& 17
+	& 0.40\pct
+	& gt
+	& 1
+	& 0.02\pct
+	\\
+
+tr
+	& 10
+	& 0.23\pct
+	& grj
+	& 1
+	& 0.02\pct
+	\\
+
+w
+	& 9
+	& 0.21\pct
+	& dv
+	& 1
+	& 0.02\pct
+	\\
+
+pr
+	& 7
+	& 0.16\pct
+	& dr
+	& 1
+	& 0.02\pct
+	\\
+
+kj
+	& 6
+	& 0.14\pct
+	& brj
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -965,66 +1641,162 @@ Phoneme
 	
 \toprule
 
-a	&	2408	&	56.01\pct\\
-aː	&	316	&	7.35\pct\\
+a
+	& 2408
+	& 56.01\pct
+	\\
+
+aː
+	& 316
+	& 7.35\pct
+	\\
+
 
 \midrule
 
-o	&	411	&	9.56\pct\\
+o
+	& 411
+	& 9.56\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-o	&	298	&	6.93\pct\\
+o
+	& 298
+	& 6.93\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɔ	&	113	&	2.63\pct\\
+ɔ
+	& 113
+	& 2.63\pct
+	\\
+
 
 \midrule
 
-i	&	289	&	6.42\pct\\
+i
+	& 289
+	& 6.42\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɪ	&	147	&	3.42\pct\\
+ɪ
+	& 147
+	& 3.42\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-i	&	142	&	3.30\pct\\
+i
+	& 142
+	& 3.30\pct
+	\\
+
 
 \midrule
 
-aɪ	&	254	&	5.91\pct\\
+aɪ
+	& 254
+	& 5.91\pct
+	\\
+
 
 \midrule
 
-u	&	207	&	4.82\pct\\
+u
+	& 207
+	& 4.82\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-u	&	155	&	3.61\pct\\
+u
+	& 155
+	& 3.61\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ʊ	&	52	&	1.21\pct\\
+ʊ
+	& 52
+	& 1.21\pct
+	\\
+
 
 \midrule
 
-e	&	209	&	4.85\pct\\
+e
+	& 209
+	& 4.85\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɛ	&	127	&	2.95\pct\\
+ɛ
+	& 127
+	& 2.95\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ə	&	81	&	1.88\pct\\
+ə
+	& 81
+	& 1.88\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-e	&	1	&	0.02\pct\\
+e
+	& 1
+	& 0.02\pct
+	\\
+
 
 \midrule
 
-eɪ	&	103	&	2.40\pct\\
-ɔɪ	&	42	&	0.98\pct\\
-aːɪ	&	23	&	0.54\pct\\
-ʊɪ	&	14	&	0.33\pct\\
-aʊ	&	14	&	0.33\pct\\
-eː	&	5	&	0.12\pct\\
-iː	&	3	&	0.07\pct\\
-uː	&	1	&	0.02\pct\\
+eɪ
+	& 103
+	& 2.40\pct
+	\\
+
+ɔɪ
+	& 42
+	& 0.98\pct
+	\\
+
+aːɪ
+	& 23
+	& 0.54\pct
+	\\
+
+ʊɪ
+	& 14
+	& 0.33\pct
+	\\
+
+aʊ
+	& 14
+	& 0.33\pct
+	\\
+
+eː
+	& 5
+	& 0.12\pct
+	\\
+
+iː
+	& 3
+	& 0.07\pct
+	\\
+
+uː
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -1044,17 +1816,49 @@ Phoneme
 	
 \toprule
 
-Ø	&	2224	&	51.73\pct\\
+Ø
+	& 2224
+	& 51.73\pct
+	\\
+
 
 \midrule
 
-n	&	899	&	20.91\pct\\
-ŋ	&	651	&	15.14\pct\\
-s	&	244	&	5.68\pct\\
-m	&	225	&	5.23\pct\\
-l	&	34	&	0.79\pct\\
-r	&	21	&	0.49\pct\\
-k	&	1	&	0.02\pct\\
+n
+	& 899
+	& 20.91\pct
+	\\
+
+ŋ
+	& 651
+	& 15.14\pct
+	\\
+
+s
+	& 244
+	& 5.68\pct
+	\\
+
+m
+	& 225
+	& 5.23\pct
+	\\
+
+l
+	& 34
+	& 0.79\pct
+	\\
+
+r
+	& 21
+	& 0.49\pct
+	\\
+
+k
+	& 1
+	& 0.02\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -1076,35 +1880,139 @@ Phoneme
 	
 \toprule
 
-Ø	&	284	&	23.65\pct\\
+Ø
+	& 284
+	& 23.65\pct
+	\\
+
 
 \midrule
 
-n	&	231	&	19.23\pct\\
-s	&	147	&	12.24\pct\\
-j	&	144	&	11.99\pct\\
-k	&	51	&	4.25\pct\\
-v	&	48	&	4.00\pct\\
-m	&	46	&	3.83\pct\\
-l	&	44	&	3.66\pct\\
-t	&	41	&	3.41\pct\\
-d	&	33	&	2.75\pct\\
-r	&	26	&	2.16\pct\\
-h	&	23	&	1.92\pct\\
-mj	&	16	&	1.33\pct\\
-p	&	13	&	1.08\pct\\
-tʃ	&	9	&	0.75\pct\\
-g	&	9	&	0.75\pct\\
-nj	&	8	&	0.67\pct\\
-rw	&	7	&	0.58\pct\\
-b	&	7	&	0.58\pct\\
-pr	&	5	&	0.42\pct\\
-dʒ	&	3	&	0.25\pct\\
-tr	&	2	&	0.17\pct\\
-nw	&	1	&	0.08\pct\\
-ŋ	&	1	&	0.08\pct\\
-kr	&	1	&	0.08\pct\\
-br	&	1	&	0.08\pct\\
+n
+	& 231
+	& 19.23\pct
+	\\
+
+s
+	& 147
+	& 12.24\pct
+	\\
+
+j
+	& 144
+	& 11.99\pct
+	\\
+
+k
+	& 51
+	& 4.25\pct
+	\\
+
+v
+	& 48
+	& 4.00\pct
+	\\
+
+m
+	& 46
+	& 3.83\pct
+	\\
+
+l
+	& 44
+	& 3.66\pct
+	\\
+
+t
+	& 41
+	& 3.41\pct
+	\\
+
+d
+	& 33
+	& 2.75\pct
+	\\
+
+r
+	& 26
+	& 2.16\pct
+	\\
+
+h
+	& 23
+	& 1.92\pct
+	\\
+
+mj
+	& 16
+	& 1.33\pct
+	\\
+
+p
+	& 13
+	& 1.08\pct
+	\\
+
+tʃ
+	& 9
+	& 0.75\pct
+	\\
+
+g
+	& 9
+	& 0.75\pct
+	\\
+
+nj
+	& 8
+	& 0.67\pct
+	\\
+
+rw
+	& 7
+	& 0.58\pct
+	\\
+
+b
+	& 7
+	& 0.58\pct
+	\\
+
+pr
+	& 5
+	& 0.42\pct
+	\\
+
+dʒ
+	& 3
+	& 0.25\pct
+	\\
+
+tr
+	& 2
+	& 0.17\pct
+	\\
+
+nw
+	& 1
+	& 0.08\pct
+	\\
+
+ŋ
+	& 1
+	& 0.08\pct
+	\\
+
+kr
+	& 1
+	& 0.08\pct
+	\\
+
+br
+	& 1
+	& 0.08\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -1124,52 +2032,132 @@ Phoneme
 	
 \toprule
 
-a	&	568	&	47.29\pct\\
-aɪ	&	171	&	14.24\pct\\
-aː	&	140	&	11.66\pct\\
+a
+	& 568
+	& 47.29\pct
+	\\
+
+aɪ
+	& 171
+	& 14.24\pct
+	\\
+
+aː
+	& 140
+	& 11.66\pct
+	\\
+
 
 \midrule
 
-i	&	113	&	9.41\pct\\
+i
+	& 113
+	& 9.41\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-i	&	65	&	5.41\pct\\
+i
+	& 65
+	& 5.41\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɪ	&	48	&	4.00\pct\\
+ɪ
+	& 48
+	& 4.00\pct
+	\\
+
 
 \midrule
 
-e	&	104	&	8.66\pct\\
+e
+	& 104
+	& 8.66\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɛ	&	65	&	5.41\pct\\
+ɛ
+	& 65
+	& 5.41\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-e	&	34	&	2.83\pct\\
+e
+	& 34
+	& 2.83\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ə	&	5	&	0.42\pct\\
+ə
+	& 5
+	& 0.42\pct
+	\\
+
 
 \midrule
 
-o	&	45	&	3.75\pct\\
+o
+	& 45
+	& 3.75\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-ɔ	&	30	&	2.50\pct\\
+ɔ
+	& 30
+	& 2.50\pct
+	\\
+
 \rowfont{\scriptsize\itshape}
 \raggedleft
-o	&	15	&	1.25\pct\\
+o
+	& 15
+	& 1.25\pct
+	\\
+
 
 \midrule
 
-u	&	20	&	1.67\pct\\
-aːɪ	&	14	&	1.17\pct\\
-ɔɪ	&	10	&	0.83\pct\\
-iː	&	6	&	0.50\pct\\
-eɪ	&	5	&	0.42\pct\\
-ʊɪ	&	3	&	0.25\pct\\
-oː	&	2	&	0.17\pct\\
+u
+	& 20
+	& 1.67\pct
+	\\
+
+aːɪ
+	& 14
+	& 1.17\pct
+	\\
+
+ɔɪ
+	& 10
+	& 0.83\pct
+	\\
+
+iː
+	& 6
+	& 0.50\pct
+	\\
+
+eɪ
+	& 5
+	& 0.42\pct
+	\\
+
+ʊɪ
+	& 3
+	& 0.25\pct
+	\\
+
+oː
+	& 2
+	& 0.17\pct
+	\\
+
 
 \bottomrule
 \end{tabu}
@@ -1189,17 +2177,33 @@ Phoneme
 	
 \toprule
 
-Ø	&	612	&	50.96\pct\\
+Ø
+	& 612
+	& 50.96\pct\\
 
 \midrule
 
-ŋ	&	377	&	31.39\pct\\
-n	&	105	&	8.74\pct\\
-s	&	58	&	4.83\pct\\
-m	&	36	&	3.00\pct\\
-l	&	6	&	0.50\pct\\
-h	&	4	&	0.33\pct\\
-r	&	3	&	0.25\pct\\
+ŋ
+	& 377
+	& 31.39\pct\\
+n
+	& 105
+	& 8.74\pct\\
+s
+	& 58
+	& 4.83\pct\\
+m
+	& 36
+	& 3.00\pct\\
+l
+	& 6
+	& 0.50\pct\\
+h
+	& 4
+	& 0.33\pct\\
+r
+	& 3
+	& 0.25\pct\\
 
 \bottomrule
 \end{tabu}
