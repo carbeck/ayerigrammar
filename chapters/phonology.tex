@@ -753,21 +753,24 @@ bw
 \end{table}
 
 The statistics in the following sections have been gathered from the IPA 
-conversions mentioned above. The transcriptions have been divided into plain 
-text files:
+conversions of translated texts and dictionary entries mentioned above. The 
+transcribed words have been split into syllables and then the collected contents 
+of each position group were written into separate plain text files, one each for:
 
 \begin{itemize}
-	\item one containing all initial syllables of polysyllabic words,
-	\item one containing all medial syllables of polysyllabic words,
-	\item one containing all final syllables of polysyllabic words, and 
-	\item one containing all monosyllabic words.
+	\item all initial syllables of polysyllabic words,
+	\item all medial syllables of polysyllabic words,
+	\item all final syllables of polysyllabic words, and 
+	\item all monosyllabic words.
 \end{itemize}
 
-Onsets, nuclei and codas have been matched by regular expressions; the 
-com\-mand line tools \texttt{grep}, \texttt{sort}, and \texttt{uniq} were used to 
-aggregate all occurring variants for each syllable segment as well as their 
-absolute frequencies:\footnote{However, \texttt{sort} was unable to handle all 
-IPA characters, so \texttt{sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/'} had to be used to 
+Monosyllabic words are both initial and final syllables at the same time; they 
+have been counted separately for the purpose of this analysis. Onsets, nuclei 
+and codas have been matched by regular expressions; the com\-mand line tools 
+\texttt{grep}, \texttt{sort}, and \texttt{uniq} were used to aggregate all 
+occurring variants for each syllable segment as well as their absolute 
+frequencies:\footnote{However, \texttt{sort} was unable to handle all IPA 
+characters, so \texttt{sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/'} had to be used to 
 compensate by transcribing everything into X-SAMPA.}
 
 \ex
