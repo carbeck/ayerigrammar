@@ -64,7 +64,10 @@
 % Handle language and quotation marks
 \usepackage{polyglossia}
 \setdefaultlanguage[variant=american]{english}
-\usepackage{csquotes} % Put quotations in \enquote{}!
+\usepackage[
+	style=american,
+	english=american,
+]{csquotes} % Put quotations in \enquote{}!
 \SetBlockEnvironment{quotation}
 \renewcommand*{\mkccitation}[1]{ (#1)}
 
