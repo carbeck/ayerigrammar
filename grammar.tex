@@ -67,6 +67,7 @@
 \usepackage[
 	style=american,
 	english=american,
+	autopunct,
 ]{csquotes} % Put quotations in \enquote{}!
 \SetBlockEnvironment{quotation}
 \renewcommand*{\mkccitation}[1]{ (#1)}
@@ -178,6 +179,7 @@
 \usepackage{tabu}
 \usepackage{booktabs}
 \usepackage{rotating}
+\usepackage{multirow}
 
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
@@ -187,6 +189,7 @@
 
 % Table header font
 \newcommand{\tableheaderfont}{\rowfont{\bfseries\footnotesize}}
+\newcommand{\tablesubheaderfont}{\rowfont{\bfseries\tiny}}
 
 % Formatting of table of glossing abbreviations from Leipzig package manual
 \usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
