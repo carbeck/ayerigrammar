@@ -50,6 +50,9 @@
 % \usepackage{setspace}
 % \onehalfspacing
 
+% Calculation stuff
+\usepackage{calc}
+
 % Creative Commons icons
 \usepackage{ccicons}
 
@@ -268,13 +271,18 @@
 \newcommand{\ques}{\fakesuperscript{?}} % raised question mark
 \newcommand{\orth}[1]{⟨#1⟩}  % Orthography brackets
 \newcommand{\tc}[1]{\trailingcitation{#1}} % \trailingcitation from expex in examples
-\newcommand{\rc}[1]{\rightcomment{#1}} % \rightcomment from expex in examples
+\newcommand{\rc}[1]{\rightcomment{[#1]}} % \rightcomment from expex in examples
 \newcommand{\pct}{\scalebox{.85}{ \%}} % Percent sign with half space before it
 
 \newcommand{\ayr}[1]{\smash{{\Tagati #1}}} % Plain Ayeri orthography
 \newcommand{\rayr}[2]{\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
 \newcommand{\tayr}[2]{#1 `#2'} % Romanization + *t*ranslation
 \newcommand{\xayr}[3]{\smash{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
+
+\usepackage{suffix}
+\WithSuffix\newcommand{\ayr}*[1]{{\Tagati #1}} % Plain Ayeri orthography
+\WithSuffix\newcommand{\rayr}*[2]{{\Tagati #1} \emph{#2}} % Ayeri orthography + *r*omanization
+\WithSuffix\newcommand{\xayr}*[3]{{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
 
 % blah
 \usepackage{lipsum}
