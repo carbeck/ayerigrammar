@@ -60,7 +60,15 @@
 % \usepackage[gobble=auto]{pythontex}
 
 % Load fonts for XeTeX, including support for Unicode etc.
-\usepackage{fontspec}
+% Mathspec makes it possible to redefine *all* the fonts used for math stuff,
+% however, it contains a stupid bug in dependency checking, see
+% <http://tex.stackexchange.com/a/85700/60686>.
+\usepackage{mathspec}
+\makeatletter % undo the wrong changes made by mathspec
+\let\RequirePackage\original@RequirePackage
+\let\usepackage\RequirePackage
+\makeatother
+
 \usepackage{xunicode}
 \usepackage{xltxtra}
 
@@ -110,7 +118,7 @@
 % ]
 
 \setmainfont{Junicode}[
-	Ligatures={TeX,NoContextual},
+	Ligatures=TeX,
 	Numbers=Lowercase,
 ]
 
@@ -125,6 +133,11 @@
 	Ligatures=TeX,
 	Scale=MatchLowercase,
 ]
+
+\setmathsfont(Digits,Latin,Greek)[
+	Ligatures=TeX,
+	Numbers=Uppercase,
+]{Junicode}
 
 \newfontfamily{\OpenSansCond}[
 	Ligatures=TeX,

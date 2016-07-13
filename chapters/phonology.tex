@@ -2629,8 +2629,10 @@ followed by 387 pairs with plosives second (30.47\pct).
 \subsection{Stress}
 
 Ayeri uses dynamic stress, that is, stress is primarily based on differences in 
-the loudness of syllables. Stress is also assigned dynamically: it is not 
-lexical, as in English, but assigned based on the shape of syllables in words:
+the loudness of syllables. Which syllable is stressed depends on a mix of 
+position of a syllable in a word and the shape of a syllable. English, on the 
+other hand, possesses a system where a certain syllable in a word will stay 
+stressed even if prefixes or suffixes are added to a word:
 
 \ex
 	\rc{English}%
@@ -2640,23 +2642,26 @@ lexical, as in English, but assigned based on the shape of syllables in words:
 \xe
 
 In all cases, stress stays on the second syllable of \textit{establish}, 
-whether a prefix or a suffix is added. German may be an even more illustrative 
-example as it offers more ways to add affixes than English without the need to 
-recurse to loanwords:
+whether a prefix or a suffix is added. Thus, it is not possible to predict the 
+stressed syllable in a given word without knowing something about its 
+morphology---one cannot simply count $n$ syllables from the front or the 
+back and reach a valid conclusion. German may be an even more illustrative 
+example than English here, as it is still richer in morphology than English:
 
 \ex
 	\rc{German}%
-	reden /ˈreːdən/ `talk'\\
-	redete /ˈreːdətə/ `talked'\\
-	geredet /gəˈreːdət/ `talked.\Ptcp{}'\\
+	reden /ˈreːdən/ `talk' (talk-\Inf{})\\
+	redete /ˈreːdətə/ `talked' (talk-\Pst{}-1/3\Sg{})\\
+	geredet /gəˈreːdət/ `talked' (\Ptcp{}-talk-\Ptcp{})\\
 	überredete /ˌyːbərˈreːdətə/ `persuaded' (over.talk-\Pst{}-1/3\Sg{})
 \xe
 
-In all these words, stress stays on (the first syllable of) the word stem, as 
+In all these words, stress remains on (the first syllable of) the word stem, as 
 is typical of modern Germanic languages, no matter whether one or several 
-affixes are added. In Ayeri, on the other hand, stress moves around. To 
-demonstrate, the complete declension paradigm for \xayr{niv}{niva}{eye} will be 
-given here:
+affixes are added. The position of this syllable in a given inflected word is 
+effectively variable, though, so counting syllables is, again, no use. In Ayeri,
+complications are slightly different. To demonstrate, the complete declension 
+paradigm for \xayr{niv}{niva}{eye} will be given here:
 
 \begin{figure}[h]
 \caption{Declension paradigm for Ayeri \xayr{niv}{niva}{eye}}
@@ -2669,17 +2674,17 @@ given here:
 
 \midrule
 	
-% \Top{}
-% 	& niva
-% 	& `the eye'
-% 	& /ˈniva/
-% 	%
-% 	& nivaye
-% 	& `the eyes'
-% 	& /niˈvajə/
-% 	\\
-% 
-% \midrule
+\Top{}
+	& niva
+	& `the eye'
+	& /ˈniva/
+	%
+	& nivaye
+	& `the eyes'
+	& /niˈvajə/
+	\\
+
+\midrule
 
 \Aarg{}
 	& nivāng
@@ -2704,7 +2709,7 @@ given here:
 \Dat{}
 	& nivayam
 	& `to eye'
-	& /niˈvajam/
+	& /niˈvajam/\footnotemark
 	%
 	& nivajyam
 	& `to eyes'
@@ -2757,3 +2762,25 @@ given here:
 \end{tabu}
 \label{fig:nivadecl}
 \end{figure}
+
+\footnotetext{The stress pattern /ˌ1.2.ˈ3/ is possible as well, also in the 
+plural.}
+
+It may appear that in the table above, stress is always on the penultimate 
+syllable, which is indeed the case for most forms quoted there, but compare 
+the superficially unmarked form \rayr{nis}{nisa}, which is bisyllabic with 
+stress on the first (=\,penultimate) syllable, to the agent and patient singular 
+forms, \rayr{nivaaNF}{nivāng} and \rayr{nivaasF}{nivās}, respectively. These are 
+also bisyllabic, however, they are stressed on the second (=\,ultimate) syllable. 
+Similarly, compare the agent and patient plural forms to each other: the agent 
+plural form \rayr{nivye\_aNF}{nivajang} is trisyllabic and has its main stress 
+on the third (=\,ultimate) syllable, while the equally trisyllabic patient 
+plural form \rayr{nivye\_asF}{nivajas} is stressed on the second 
+(=\,penultimate) syllable again.
+
+It should have become clear that even though the basic form \rayr{nis}{nisa} 
+has first-syllable stress, /ni/ will not necessarily carry stress across the 
+whole paradigm, as it would be the case in English or German. It should also 
+have become clear that the basic algorithm to determine stressed syllables in 
+Ayeri is based on counting syllables from the right edge of a word, although 
+some complications need to be factored in.
