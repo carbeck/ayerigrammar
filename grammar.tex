@@ -1,6 +1,7 @@
 % arara: xelatex
 % arara: biber
 % arara: makeglossaries
+% arara: makeindex
 % arara: xelatex
 
 \documentclass[
@@ -104,13 +105,6 @@
 % Set main fonts
 \usepackage[config=mt-Junicode]{microtype}
 
-\newfontfamily{\Tagati}[
-	Renderer=Graphite,
-	Scale=0.9,
-	BoldFont={* Italic},
-	HyphenChar=·,
-]{Tagati Book G}
-
 % \setmainfont{EB Garamond}[
 % 	Ligatures={TeX,NoContextual},
 % 	Numbers=Lowercase,
@@ -145,6 +139,13 @@
 	Scale=MatchUppercase,
 	BoldFont={Open Sans Condensed Bold},
 ]{Open Sans Condensed Light}
+
+\newfontfamily{\Tagati}[
+	Renderer=Graphite,
+	Scale=0.9,
+	BoldFont={* Italic},
+	HyphenChar=·,
+]{Tagati Book G}
 
 % Set fonts for section headers
 \setsecheadstyle{\sffamily\Large\raggedright}
@@ -268,6 +269,10 @@
 \newcommand{\TplN}{{\Tpl}.{\N}}
 \newcommand{\TplI}{{\Tpl}.{\Inan}}
 
+% Keyword index
+\usepackage{makeidx}
+\makeindex
+
 % Smaller font in block quotes
 \usepackage{relsize}
 \AtBeginEnvironment{quote}{\noindent\smaller}
@@ -296,9 +301,6 @@
 \WithSuffix\newcommand{\ayr}*[1]{{\Tagati #1}} % Plain Ayeri orthography
 \WithSuffix\newcommand{\rayr}*[2]{{\Tagati #1} \emph{#2}} % Ayeri orthography + *r*omanization
 \WithSuffix\newcommand{\xayr}*[3]{{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
-
-% blah
-\usepackage{lipsum}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -349,23 +351,6 @@
 \input{./chapters/phonology.tex}
 \cleartorecto
 
-% \chapter{Blah}
-% \lipsum[1-2]
-% 
-% \section{Lorem}
-% \lipsum[3-4]
-% 
-% \subsection{Ipsum}
-% \lipsum[5-6]
-% 
-% \subsection{Dolor}
-% \lipsum[7-8]
-% 
-% \subsection{Sit Amet}
-% \lipsum[8-9]
-% 
-% \cleartorecto
-
 %% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \printbibliography
@@ -373,6 +358,11 @@
 %% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
+
+%% BACK MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+\printindex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
