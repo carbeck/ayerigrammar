@@ -2836,11 +2836,11 @@ more than two syllables. Metricization furthermore runs from right to left:
 In the case of (\ref{ex:4sylstress}), the stressed syllables of the first foot 
 bear secondary stress while those of the second foot bear primary stress. 
 Complications, then, come in the form of syllables ending in /ŋ/, containing a 
-long vowel, or containing a diphthong, or a combination of those features---%
+long vowel, or containing a diphthong, or a combination of those features.
 Ayeri does not have syllables that contain a diphthong and also end in /ŋ/, 
-however, as consonant codas after a diphthong are largely avoided.%
-\footnote{This would make diphthongs in /ɪ/ analyzable as /Vj/ sequences, 
-essentially.} Thus, we can make a feature matrix:
+though, since consonant codas after a diphthong are largely avoided.%
+\footnote{This would it possible to alternatively analyze diphthongs in /ɪ/ 
+as /Vj/ sequences, essentially.} Thus, we can make a feature matrix:
 
 \begin{figure}[h]\centering
 \caption{Types of heavy syllables}
@@ -2877,21 +2877,71 @@ thought of as filling a whole foot by themselves:
 \pex
 \a\begingl
 	\gla ×		|	–́		||	{} //
-	\glb \fw{pa}	-	\fw{dang}	{}	{`mind; heart, mood'} //
 	\glb \fw{ma}	-	\fw{tay}	{}	{`summer, wet season'} //
-	\glb \fw{bras}	-	\fw{yāng}	{}	{`he bathes' (bathe=\TsgM{}.\Aarg{})} //
+	\glb \fw{pa}	-	\fw{dang}	{}	{`mind; heart, mood'} //
 	\glb \fw{ka}	-	\fw{nāy}	{}	{`I marry' (marry=\Fsg{}.\Top{})} //
+	\glb \fw{bras}	-	\fw{yāng}	{}	{`he bathes' (bathe=\TsgM{}.\Aarg{})} //
 	\glb \fw{na}	-	\fw{rān}	{}	{`word; speech'} //
 \endgl
 
 \a\label{ex:firstheavy}\begingl
 	\gla –́		|	×		˄	||	{} //
-	\glb \fw{kan}	-	\fw{ka}		{}	{}	{`mind; heart, mood'} //
-	\glb \fw{key}	-	\fw{nam}	{}	{}	{`humans, people'} //
 	\glb \fw{kār}	-	\fw{yo}		{}	{}	{`strong'} //
+	\glb \fw{key}	-	\fw{nam}	{}	{}	{`humans, people'} //
+	\glb \fw{kan}	-	\fw{ka}		{}	{}	{`mind; heart, mood'} //
 \endgl
 \xe
 
 Unfortunately, there are no bisyllabic examples for the feature sets 
 [+\,long, \mbox{–\,diph,} +\,ŋ] and [+\,long, +\,diph, –\,ŋ] in the first 
 syllable. If there were, they would group with (\ref{ex:firstheavy}).
+
+So far, we have only looked at heavy syllables combined with regular ones. In 
+this case, another property of heavy syllables will become apparent: long 
+syllables outweigh those containing a diphthong or ending in /ŋ/. They are 
+essentially superheavy, which is why the cells in \autoref{fig:heavysyl} are 
+marked with two plus signs. The following example shows what happens when long 
+syllables are combined with other heavy syllables:
+
+\pex
+\a[]	[- long, + diph, - ŋ] + [+ long, + diph, - ŋ]\newline
+	[- long, + diph, - ŋ] + [+ long, - diph, + ŋ]\newline
+	[- long, + diph, - ŋ] + [+ long, - diph, - ŋ]
+
+\a[]	[- long, - diph, + ŋ] + [+ long, + diph, - ŋ]\newline
+	[- long, - diph, + ŋ] + [+ long, - diph, + ŋ]\newline
+	[- long, - diph, + ŋ] + [+ long, - diph, - ŋ]
+\xe
+
+Again, initial [+ long, + diph, - ŋ] and [+ long, - diph, + ŋ] don't exist:
+
+\pex
+\a[]	% [+ long, + diph, - ŋ] + [- long, + diph, + ŋ]\newline
+	% [+ long, - diph, + ŋ] + [- long, + diph, + ŋ]\newline
+	[+ long, - diph, - ŋ] + [- long, + diph, + ŋ]
+
+\a[]	% [+ long, + diph, - ŋ] + [- long, - diph, + ŋ]\newline
+	% [+ long, - diph, + ŋ] + [- long, - diph, + ŋ]\newline
+	[+ long, - diph, - ŋ] + [- long, - diph, + ŋ]
+\xe
+
+\pex
+\a[]	[- long, + diph, - ŋ] + [- long, - diph, + ŋ]
+\a[]	[- long, - diph, + ŋ] + [- long, + diph, - ŋ]
+\xe
+
+\pex
+\a[]	[+ long, + diph, - ŋ] + [+ long, - diph, + ŋ]\newline
+	[+ long, + diph, - ŋ] + [+ long, - diph, - ŋ]\newline
+	[+ long, - diph, + ŋ] + [+ long, + diph, - ŋ]\newline
+	[+ long, - diph, + ŋ] + [+ long, - diph, - ŋ]\newline
+	[+ long, - diph, - ŋ] + [+ long, + diph, - ŋ]\newline
+	[+ long, - diph, - ŋ] + [+ long, - diph, + ŋ]
+
+\a[]	[+ long, - diph, + ŋ] + [+ long, + diph, - ŋ]\newline
+	[+ long, - diph, - ŋ] + [+ long, + diph, - ŋ]\newline
+	[+ long, + diph, - ŋ] + [+ long, - diph, + ŋ]\newline
+	[+ long, - diph, - ŋ] + [+ long, - diph, + ŋ]\newline
+	[+ long, + diph, - ŋ] + [+ long, - diph, - ŋ]\newline
+	[+ long, - diph, + ŋ] + [+ long, - diph, - ŋ]
+\xe
