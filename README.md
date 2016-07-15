@@ -8,7 +8,7 @@ This is a renewed effort to revise and expand on what's currently on the web as 
 Compiling
 =========
 
-Compile with `xelatex`, `biber`, `makeindex' and `makeglossaries`.
+Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`.
 
 Licensing
 =========
