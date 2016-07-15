@@ -2790,11 +2790,13 @@ have become clear that the basic algorithm to determine stressed syllables in
 Ayeri is based on counting syllables from the right edge of a word, although 
 some complications need to be factored in.
 
+\subsubsection{Analysis of Stress Patterns in Disyllabic Words}
+
 The basic foot in Ayeri is a trochee, and it does not matter whether the 
 syllable is open or closed, or whether there are complex onsets or codas, or
 no onsets or codas:
 
-\pex
+\pex[everygla=\upshape]
 \a\begingl
 	\gla ×́		{}	×	||	{} //
 	\glb \fw{ha}	-	\fw{ri}	{}	{`pithy, striking'} //
@@ -2817,7 +2819,7 @@ no onsets or codas:
 That stress assignment is basically trochaic can be deduced from words with 
 more than two syllables. Metricization furthermore runs from right to left:
 
-\pex
+\pex[everygla=\upshape]
 \a\begingl
 	\gla ×		|	×́		{}	×		|| 	{} //
 	\glb \fw{ba}	-	\fw{ha}		-	\fw{lan}	{}	{`target, goal'} //
@@ -2874,7 +2876,7 @@ as /Vj/ sequences, essentially.} Thus, we can make a feature matrix:
 
 As the name suggests, heavy syllables always carry stress:
 
-\pex
+\pex[everygla=\upshape]
 \a\begingl
 	\gla ×		{}	×́		||	{} //
 	\glb \fw{ma}	-	\fw{tay}	{}	{`summer, wet season'} //
@@ -2908,7 +2910,7 @@ the elements from the \textsc{[+\,long]} line (\ref{ex:-l+d-ŋ}), and the
 possible combinations between \textsc{[–\,long, –\,diph, +\,ŋ]} and the 
 \textsc{[+\,long]} line (\ref{ex:-l-d+ŋ}).
 
-\pex\label{ex:lastheavy}
+\pex[everygla=\upshape]\label{ex:lastheavy}
 \a\label{ex:-l+d-ŋ}\begingl
 	\gla ×		{}	×́		||	{} //
 	\glb \fw{bay}	-	\fw{hāy}	{}	{`I govern' (govern=\Fsg{}.\Top{})} //
@@ -2932,7 +2934,7 @@ well as final \textsc{[–\,long, +\,diph, +\,ŋ]} do not occur, insofar there
 will only be one possible combination here---the reverse of 
 \xayr{lNF/vaa}{lang-vā}{in the most tiresome way} from (\ref{ex:-l-d+ŋ}) above:
 
-\ex
+\ex[everygla=\upshape]
 \begingl
 	% [+ long, + diph, - ŋ] + [- long, + diph, + ŋ]
 	% [+ long, - diph, + ŋ] + [- long, + diph, + ŋ]
@@ -2954,7 +2956,7 @@ will attract stress either way, as we have already seen in
 the \textsc{[±\,long]} lines against another feature combination of the same 
 line. As above, we will start with the \textsc{[–\,long]} line:
 
-\pex\label{-l-l}
+\pex[everygla=\upshape]\label{-l-l}
 \a\begingl
 	\gla ×		{}	×́		||	{} //
 	\glb \fw{bay}	-	\fw{tang}	{}	{`blood'} //
@@ -2971,7 +2973,7 @@ keep in mind again that initial \textsc{[+\,long, +\,diph, –\,ŋ]} and
 \textsc{[+\,long, –\,diph, +\,ŋ]} are not attested, so again, there will only 
 be one possible combination of two syllables with a long vowel:
 
-\ex\label{+l+l}
+\ex[everygla=\upshape]\label{+l+l}
 	% [+ long, + diph, - ŋ] + [+ long, - diph, + ŋ]
 	% [+ long, + diph, - ŋ] + [+ long, - diph, - ŋ]
 	%
@@ -2997,14 +2999,32 @@ combinatorical restrictions mentioned above apply again, of course:
 \endgl
 
 \a\begingl
-	\gla ×́		{}	×́		||	{} //
+	\gla ×̀		{}	×́		||	{} //
 	\glb \fw{bā}	-	\fw{mā}		{}	{`parents, mom-and-dad'} //
 \endgl
 \xe
 
 As demonstrated in (\ref{ex:lastheavy}), the last heavy syllable will receive 
-primary stress, except if two long syllables collide, in which case both are 
-stressed.
+primary stress, except if two long syllables collide, in which case the first 
+long syllable will receive secondary stress.
+
+\plainbreak{1}\phantomsection
+
+To summarize the above findings for bisyllabic words:
+
+\begin{enumerate}\label{2sylsumm}
+\item Ayeri assigns trochaic stress from the right edge of a word.
+\item Syllables ending in /ŋ/ or ones containing a diphthong are considered 
+	heavy. They will attract stress.
+\item Syllables containing a long vowel are considered superheavy and will 
+	override both light and heavy syllables in attracting stress, as long 
+	vowels cannot be unstressed.
+\item Primary stress is assigned to the last stressable syllable, or otherwise 
+	the last heavy syllable. In the rare case of two long/superheavy 
+	syllables, the first syllable will receive secondary stress.
+\end{enumerate}
+
+\subsubsection{Analysis of Stress Patterns in Trisyllabic Words}
 
 So far, we have only considered all the possible combinations of two heavy and 
 light syllables. Doing the same for all combinations of three and more syllables 
@@ -3019,9 +3039,9 @@ combinations. For this reason, I want to point out just a few cases, since the
 general rules sketched out above still apply. 
 
 First, let us look at \textsc{[+\,heavy, –\,long]} combined with 
-\textsc{[–\,heavy, –long]} in all positions. Finding words that fit the 
-associated iterations is not too much of a problem, especially in cases where 
-there is only one heavy syllable.
+\textsc{[–\,heavy, –long]} in all positions (\autoref{fig:3sylheavy}). Finding 
+words that fit the associated iterations is not too much of a problem, 
+especially in cases where there is only one heavy syllable.
 
 \begin{figure}[ht]
 \caption{Stress patterns for \textsc{[±\,heavy, –\,long]} in trisyllabic words}
@@ -3075,6 +3095,20 @@ there is only one heavy syllable.
 \end{tabu}
 \label{fig:3sylheavy}
 \end{figure}
+
+It becomes clear from \autoref{fig:3sylheavy} that the rules stated at the 
+end of the previous section (p.~\pageref{2sylsumm}) also hold in the case of 
+trisyllabic words whose syllables alternate short syllables based on the 
+\textsc{[±\,heavy]} feature: \rayr{prMtnFlej}{prantanley}, 
+\rayr{rlNFhj}{ralanghay}, \rayr{kjbunj}{kaybunay}, and 
+\rayr{pNFlj/kj}{panglay-kay} receive final-syllable stress since this is 
+their last heavy syllable. The first syllables of \rayr{tjkoMdmF}{taykondam} and 
+\rayr{mjkoNsF}{maykongas}, on the other hand, lose the secondary stress they 
+would normally be assigned as two stressed syllables after another are normally 
+avoided; the requirement of long syllables to not be unstressed does not come 
+into effect here. \rayr{tjkoMdmF}{taykondam} is also an example for the rule 
+that even if a syllable is not heavy, the last syllable that can be assigned 
+stress will receive primary stress.
 
 x	x	LONG
 po.ran.vaːŋ
