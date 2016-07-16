@@ -206,8 +206,8 @@
 \newcolumntype{S}{>{\footnotesize}X}
 
 % Table header font
-\newcommand{\tableheaderfont}{\rowfont{\bfseries\footnotesize}}
-\newcommand{\tablesubheaderfont}{\rowfont{\bfseries\tiny}}
+\newcommand{\tableheaderfont}{\rowfont{\upshape\bfseries\footnotesize}}
+\newcommand{\tablesubheaderfont}{\rowfont{\upshape\bfseries\tiny}}
 
 % Formatting of table of glossing abbreviations from Leipzig package manual
 \usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
@@ -295,11 +295,12 @@
 \newcommand{\rc}[1]{\rightcomment{[#1]}} % \rightcomment from expex in examples
 \newcommand{\pct}{\scalebox{.85}{ \%}} % Percent sign with half space before it
 \newcommand{\chk}{×} % Check mark
+\newcommand{\zwsp}{\mbox{​}} % Zero-width space (ZWSP)
 
-\newcommand{\ayr}[1]{\smash{{\Tagati #1}}} % Plain Ayeri orthography
-\newcommand{\rayr}[2]{\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
+\newcommand{\ayr}[1]{\zwsp\smash{{\Tagati #1}}} % Plain Ayeri orthography
+\newcommand{\rayr}[2]{\zwsp\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
 \newcommand{\tayr}[2]{#1 `#2'} % Romanization + *t*ranslation
-\newcommand{\xayr}[3]{\smash{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
+\newcommand{\xayr}[3]{\zwsp\smash{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
 
 \usepackage{suffix}
 \WithSuffix\newcommand{\ayr}*[1]{{\Tagati #1}} % Plain Ayeri orthography
