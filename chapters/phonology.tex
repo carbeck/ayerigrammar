@@ -2849,7 +2849,9 @@ long vowel, or containing a diphthong, or a combination of those features.
 Ayeri does not have syllables that contain a diphthong and also end in /ŋ/, 
 though, since consonant codas after a diphthong are largely avoided.%
 \footnote{It would thus be possible to alternatively analyze diphthongs in /ɪ/ 
-as /Vj/ sequences, essentially.} Thus, we can make a feature matrix:
+as /Vj/ sequences, essentially.} Since the presence or the absence of a certain 
+element that is suspected to have an effect on stress assignment is a yes–no
+decision, we can make a matrix of binary features:
 
 \begin{figure}[h]\centering
 \caption{Types of heavy syllables}
@@ -2881,7 +2883,12 @@ as /Vj/ sequences, essentially.} Thus, we can make a feature matrix:
 \label{fig:heavysyl}
 \end{figure}
 
-As the name suggests, heavy syllables always carry stress:
+The feature matrix above (\autoref{fig:heavysyl}) shows the various kind of 
+syllable types that we will now see have a manipulative effect on trochaic 
+stress assignment. These syllable types can be considered `heavy' in that they
+attract stress and thus modify the regular assignment of stress to every other 
+syllable from the right edge of a word. For the time being, we will only test 
+their effects on disyllabic words as the most common type.
 
 \pex[everygla=\upshape]
 \a\begingl
@@ -3017,18 +3024,24 @@ long syllable will receive secondary stress.
 
 \plainbreak{1}\phantomsection
 
-To summarize the above findings for disyllabic words:
+To summarize the above findings above:
 
 \begin{enumerate}\label{2sylsumm}
-\item Ayeri assigns trochaic stress from the right edge of a word.
+\item Ayeri assigns trochaic stress from the right edge of a word. A foot 
+	thus consists of two syllables, of which the first is stressed.
 \item Syllables ending in /ŋ/ or ones containing a diphthong are considered 
-	heavy. They will attract stress.
-\item Syllables containing a long vowel are considered superheavy and will 
-	override both light and heavy syllables in attracting stress, since long 
-	vowels cannot be unstressed.
+	heavy. They attract stress and take it away from a preceding stressed 
+	syllable if they can, though two stressed syllables after another in the 
+	same lexeme are avoided.
+\item Syllables containing a long vowel are considered superheavy and override 
+	both light and heavy syllables in attracting stress, since long vowels 
+	cannot be unstressed.
 \item Primary stress is assigned to the last stressable syllable, or otherwise 
 	the last heavy syllable. In the rare case of two long/superheavy 
-	syllables, the first syllable will receive secondary stress.
+	syllables, the first syllable receives secondary stress. This also 
+	happens when both syllables are next to each other.
+\item Secondary stress is also assigned to syllables that are eligible for word 
+	stress but which are not in the final foot.
 \end{enumerate}
 
 \subsubsection{Analysis of Stress Patterns in Trisyllabic Words}
