@@ -182,4 +182,4 @@ TSWLatexianTemp*
 *~[0-9]*
 
 # Other
-images/src/*
+images/src-hidden/*
