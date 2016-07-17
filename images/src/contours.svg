@@ -68,11 +68,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="107.9002"
-     inkscape:cy="41.387163"
+     inkscape:zoom="3.959798"
+     inkscape:cx="102.60671"
+     inkscape:cy="24.99312"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -294,12 +294,24 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Lists">
+     inkscape:label="List"
+     style="display:none">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99921268;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 0,8.8582669 70.818143,4.4291351 0.0928,-8.8582694 28.300057,13.2874034 0,-8.8582693 28.34646,13.2874033 14.17483,0 0,-8.858268 28.34646,13.287403 14.17323,0 0,-8.858269 28.34646,13.287403"
        id="path4191"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Complement clause">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99921268;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,8.8582659 99.212604,13.2874 106.29922,5.3149594 m 7.08661,7.9724416 99.21261,13.287403"
+       id="path4207"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>
