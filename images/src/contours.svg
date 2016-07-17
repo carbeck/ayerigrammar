@@ -68,21 +68,25 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="54.850126"
-     inkscape:cy="-1.5463154"
+     inkscape:zoom="5.6"
+     inkscape:cx="107.9002"
+     inkscape:cy="41.387163"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer4"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="997"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-page="false"
-     inkscape:snap-bbox="true">
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-grids="true"
+     inkscape:bbox-paths="false"
+     inkscape:snap-global="true"
+     inkscape:snap-intersection-paths="false">
     <sodipodi:guide
        position="0,17.716535"
        orientation="0,1"
@@ -131,6 +135,75 @@
        id="guide4670"
        inkscape:label=""
        inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="28.346458,0"
+       orientation="1,0"
+       id="guide4193"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="56.692916,0"
+       orientation="1,0"
+       id="guide4195"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="141.73229,0"
+       orientation="1,0"
+       id="guide4197"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="170.07875,0"
+       orientation="1,0"
+       id="guide4199"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="198.42521,0"
+       orientation="1,0"
+       id="guide4201"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid4207" />
+    <sodipodi:guide
+       position="70.866145,0"
+       orientation="1,0"
+       id="guide4209"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="155.90552,0"
+       orientation="1,0"
+       id="guide4211"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="42.519687,0"
+       orientation="1,0"
+       id="guide4213"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="33.661419,0"
+       orientation="0,1"
+       id="guide4185"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,22.145669"
+       orientation="0,1"
+       id="guide4187"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,13.287402"
+       orientation="0,1"
+       id="guide4189"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -140,7 +213,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
       </cc:Work>
@@ -166,7 +239,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1016.9291)"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.62500006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.62500006, 1.25000011;stroke-dashoffset:0;stroke-opacity:1"
        d="m -17.004355,1034.6456 c 246.607145,0 246.607145,0 246.607145,0 z"
@@ -209,12 +283,23 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Wh question"
-     style="display:inline">
+     style="display:none">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1"
-       d="M 0,17.716534 99.212604,13.287401 106.29922,-1.9073489e-6 113.38583,22.14567 l 99.21261,4.429134"
+       d="m 0,17.716534 99.212604,-4.429133 0,-13.2874029073489 L 113.38583,22.14567 l 99.21261,4.429134"
        id="path4672"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Lists">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99921268;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,8.8582669 70.818143,4.4291351 0.0928,-8.8582694 28.300057,13.2874034 0,-8.8582693 28.34646,13.2874033 14.17483,0 0,-8.858268 28.34646,13.287403 14.17323,0 0,-8.858269 28.34646,13.287403"
+       id="path4191"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccc" />
   </g>
 </svg>
