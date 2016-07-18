@@ -231,6 +231,18 @@
 
 % Formatting of glosses
 \usepackage{expex}
+\newcounter{fnexno}
+\setcounter{fnexno}{1}
+\definelingstyle{fnex}{
+	exno=\roman{fnexno}\stepcounter{fnexno},
+	everyex=\footnotesize,
+	numoffset=\footnotemargin,
+	exskip=0em,
+	belowpreambleskip=-0.5em,
+	interpartskip=-0.5em,
+	aboveglftskip=0em,
+}
+
 \usepackage{leipzig}
 
 \newleipzig{AgtT}{at}{agent topic}
