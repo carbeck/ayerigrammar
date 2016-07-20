@@ -2732,12 +2732,12 @@ followed by 387 pairs with plosives second (30.47\pct).
 \index{stress|(}
 
 Ayeri uses dynamic accent, that is, stress is based on differences in the 
-loudness of syllables, among others (for a discussion of terms, see 
-\citet{kager2007}, for instance). Which syllable is stressed depends on a mix of 
-which position in a word a syllable occupies and the phonemic shape of it. In 
-fact, English, which also has phonemic stress in pairs such as \fw{record} 
-/ˈrɛkərd/ (noun) and /riˈkɔrd/ (verb), does a similar thing (examples adapted 
-from \cite[552]{halle1998}):
+loudness of syllables, among others.\footnote{For a discussion of terms, see 
+\citet{kager2007}, for instance.} Which syllable is stressed depends on a mix 
+of which position in a word a syllable occupies and the phonemic shape of it. 
+In fact, English, which also has phonemic stress in pairs such as \fw{record} 
+/ˈrɛkərd/ (noun) and /riˈkɔrd/ (verb) that Ayeri lacks, does a similar thing 
+(examples adapted from \cite[552]{halle1998}):
 
 \ex
 	\rc{English}%
@@ -2749,11 +2749,15 @@ from \cite[552]{halle1998}):
 Stress does not stay at fixed intervals in these words and they even change 
 their sound structure a little, but there are a number of variables which can 
 nonetheless be formally described and applied here 
-\citep[564--565]{halle1998}.\footnote{Simplifying a lot, English essentially 
-tries to construct trochaic feet from the right edge of the word. If the last 
-syllable's vowel is not light, it is skipped and stress moves to the 
-antepenultimate syllable; this process is recursive for words with multiple 
-feet.} 
+\citep[564--565]{halle1998}.\footnote{\citet{halle1998} takes a 
+generativist approach rather than a more modern Optimality-Theory based one 
+like \citet{kager2007} does, who only deals with fixed-stress systems in this 
+introductory article, though \citeauthor{halle1998}'s article is still 
+informative. Simplifying a lot, English essentially tries to construct trochaic 
+feet from the right edge of the word. If the last syllable's vowel is not light, 
+it is skipped and stress moves to the antepenultimate syllable; this process is 
+recursive for words with multiple feet, although some suffixes introduce 
+irregularities in rule application.} 
 % German may be an even more illustrative example than English here, as it 
 % is still richer in morphology than English:
 % 
@@ -2917,13 +2921,13 @@ sections will try to describe these formally.
 
 \subsubsection{Analysis of Stress Patterns in Disyllabic Words}
 
-The basic foot in Ayeri is a trochee, and it does not matter whether the 
-syllable is open or closed, or whether there are complex onsets or codas, or
-no onsets or codas at all:\footnote{In the following, a syllable will be marked 
-by \orth{×} and receives an acute accent \orth{´} when carrying primary stress, 
-a grave accent \orth{\`{}} when carrying secondary stress, and no accent when 
-unstressed. Feet are marked by horizontal lines \orth{|}; the end of a word is 
-marked by two horizontal lines \orth{||}.\label{fn:scansion}}
+The basic foot in Ayeri is a trochee, and for the most part it does not matter 
+whether the syllable is open or closed, or whether there are complex onsets or 
+codas, or no onsets or codas at all:\footnote{In the following, a syllable will 
+be marked by \orth{×} and receives an acute accent \orth{´} when carrying 
+primary stress, a grave accent \orth{\`{}} when carrying secondary stress, and 
+no accent when unstressed. Feet are marked by horizontal lines \orth{|}; the end 
+of a word is marked by two horizontal lines \orth{||}.\label{fn:scansion}}
 
 \pex[everygla=\upshape]
 \a\begingl
@@ -2972,7 +2976,7 @@ Complications, then, come in the form of syllables ending in /ŋ/, containing a
 long vowel, or containing a diphthong, or a combination of those features.
 Ayeri does not have syllables that contain a \index{diphthongs}diphthong and 
 also end in /ŋ/, though, since consonant codas after a diphthong are largely 
-avoided.\footnote{It would thus be possible to alternatively analyze diphthongs 
+avoided.\footnote{It might thus be possible to alternatively analyze diphthongs 
 in /ɪ/ as /Vj/ sequences, essentially.} Since the presence or the absence of a 
 certain element that is suspected to have an effect on stress assignment is a 
 yes–no decision, we can make a matrix of binary features:
@@ -3008,20 +3012,26 @@ yes–no decision, we can make a matrix of binary features:
 \end{figure}
 
 \index{syllable!types}\index{syllable!heavy|(}
-The feature matrix above (\autoref{fig:heavysyl}) shows the various kind of 
+The feature matrix above (\autoref{fig:heavysyl}) shows the various kinds of 
 syllable types that we will now see have a manipulative effect on trochaic 
 stress assignment. These syllable types can be considered `heavy' in that they
 attract stress and thus modify the regular assignment of stress to every other 
 syllable from the right edge of a word. For the time being, we will only test 
-their effects on disyllabic words as the most common type.
+their effects on disyllabic words as the most common type. As will be shown in 
+the following example, heavy syllables in ultimate positions attract stress 
+while quasi-regular results are produced when they are in penultimate position 
+and the ultimate syllable is not heavy:
 
-\pex[everygla=\upshape]
-\a\begingl
+\pex[everygla=\upshape]\label{ex:firstlh}
+\a\label{ex:firstlight}\begingl
 	\gla ×		{}	×́		||	{} //
-	\glb \fw{ma}	-	\fw{tay}	{}	{`summer, wet season'} //
+	\glb \fw{ma}	-	\fw{tay}	{}
+		{`summer, wet season'} //
 	\glb \fw{pa}	-	\fw{dang}	{}	{`mind; heart, mood'} //
-	\glb \fw{ka}	-	\fw{nāy}	{}	{`I marry' (marry=\Fsg{}.\Top{})} //
-	\glb \fw{bras}	-	\fw{yāng}	{}	{`he bathes' (bathe=\TsgM{}.\Aarg{})} //
+	\glb \fw{ka}	-	\fw{nāy}	{}
+		{`I marry' (marry=\Fsg{}.\Top{})} //
+	\glb \fw{bras}	-	\fw{yāng}	{}
+		{`he bathes' (bathe=\TsgM{}.\Aarg{})} //
 	\glb \fw{na}	-	\fw{rān}	{}	{`word; speech'} //
 \endgl
 
@@ -3035,8 +3045,8 @@ their effects on disyllabic words as the most common type.
 
 Unfortunately, there are no disyllabic examples for the feature sets 
 \textsc{[+\,long, \mbox{–\,diph,} +\,ŋ]} and \textsc{[+\,long, +\,diph, –\,ŋ]} 
-in the first syllable. If there were, they would group with 
-(\ref{ex:firstheavy}).
+in the first syllable (syllables of the type /C(C)Vːŋ/ or /C(C)Vɪŋ/). 
+If there were, they would group with (\ref{ex:firstheavy}).
 
 So far, we have only looked at heavy syllables combined with regular/light ones. 
 In the following case, however, another property of heavy syllables will become 
@@ -3047,32 +3057,40 @@ following examples show what happens when heavy syllables are combined with
 other heavy syllables. Let us start by examining the various combinations 
 possible between \textsc{[–\,long, +\,diph, –\,ŋ]} and the elements from the 
 \textsc{[+\,long]} row (\ref{ex:-l+d-ŋ}), and the possible combinations between 
-\textsc{[–\,long, –\,diph, +\,ŋ]} and the \textsc{[+\,long]} row 
+\textsc{[–\,long, \mbox{–\,diph,} +\,ŋ]} and the \textsc{[+\,long]} row 
 (\ref{ex:-l-d+ŋ}).
 
 \pex[everygla=\upshape]\label{ex:lastheavy}
 \a\label{ex:-l+d-ŋ}\begingl
 	\gla ×		{}	×́		||	{} //
-	\glb \fw{bay}	-	\fw{hāy}	{}	{`I govern' (govern=\Fsg{}.\Top{})} //
-	\glb \fw{say}	-	\fw{lyang}	{}	{`I sail' (sail=\Fsg{}.\Aarg{})} //
+	\glb \fw{bay}	-	\fw{hāy}	{}
+		{`I govern' (govern=\Fsg{}.\Top{})} //
+	\glb \fw{say}	-	\fw{lyāng}	{}	{`he sails' 
+		(sail=\TsgM{}.\Aarg{})} //
 	\glb \fw{kay}	-	\fw{vān}	{}	{`container'} //
 \endgl
 
 \a\label{ex:-l-d+ŋ}\begingl
 	\gla ×		{}	×́		||	{} //
-	\glb \fw{kong}	-	\fw{āyn}	{}	{`we enter' (enter=\Fpl{}.\Top{})} //
-	\glb \fw{keng}	-	\fw{vāng}	{}	{`you notice' (notice=\Ssg{}.\Aarg{})} //
-	\glb \fw{lang}	-	\fw{-vā}	{}	{`in the most tiresome way' (tiresome=\Supl{})} //
+	\glb \fw{kong}	-	\fw{āyn}	{}
+		{`we enter' (enter=\Fpl{}.\Top{})} //
+	\glb \fw{keng}	-	\fw{vāng}	{}
+		{`you notice' (notice=\Ssg{}.\Aarg{})} //
+	\glb \fw{lang}	-	\fw{-vā}	{}
+		{`in the most tiresome way' (tiresome=\Supl{})} //
 \endgl
 \xe
 
 We can see here that these words have primary stress invariably on the last/% 
-heavy syllable. The question then is, however, what happens if we invert this 
-order. This is more problematic than it sounds, however, as initial 
+long syllable in spite of a heavy syllable preceding in the 
+examples in (\ref{ex:-l-d+ŋ}). The question then is, however, what happens if 
+we invert this order. This is more problematic than it sounds, however, as 
+initial 
 \textsc{[+\,long, +\,diph, –\,ŋ]} and \textsc{[+\,long, –\,diph, +\,ŋ]}, as 
 well as final \textsc{[–\,long, +\,diph, +\,ŋ]} do not occur, insofar there 
 will only be one possible combination here---the reverse pattern of 
-\xayr{lNF/vaa}{lang-vā}{in the most tiresome way} from (\ref{ex:-l-d+ŋ}) above:
+\xayr{lNF/vaa}{lang-vā}{in the most tiresome way} from (\ref{ex:-l-d+ŋ}) above, 
+also compare with (\ref{ex:firstlh}):
 
 \ex[everygla=\upshape]
 \begingl
@@ -3084,17 +3102,20 @@ will only be one possible combination here---the reverse pattern of
 	% [+ long, - diph, + ŋ] + [- long, - diph, + ŋ]
 	%
 	\gla ×́		{}	×		||	{} //
-	\glb \fw{cā}	-	\fw{nang}	{}	{`love' (love-\Aarg{})} //
+	\glb \fw{cā}	-	\fw{nang}	{}
+		{`love' (love-\Aarg{})} //
 \endgl
 \xe
 
 There is only one one pattern possible here, which is very little to make a 
 point, however, other words following this syllable pattern, like 
 \xayr{naareNF}{nāreng}{rather}, for example, behave in the same way. A long 
-syllable will attract stress either way, as we have already seen in 
-(\ref{ex:firstheavy}). Another question is what happens if we pit elements from 
-the \textsc{[±\,long]} rows against another feature combination of the same 
-row. As above, we will start with the \textsc{[–\,long]} row:
+syllable has precedence over other kinds of heavy syllables, so 
+\rayr{/nNF}{-nang} does not take away stress from \rayr{tYaa/}{cā-} as one 
+might expect from the examples in (\ref{ex:firstlight}). Another question is 
+what happens if we pit elements from the \textsc{[±\,long]} rows against another 
+feature combination of the same row. As above, we will start with the 
+\textsc{[–\,long]} row:
 
 \pex[everygla=\upshape]\label{-l-l}
 \a\begingl
@@ -3128,7 +3149,7 @@ be one possible combination of two syllables with a long vowel:
 
 Combining two long syllables with each other will result in both being stressed,
 which is otherwise avoided in Ayeri, as we will see later. Moreover, the 
-following patterns emerge when we combine each pattern with itself; the 
+following patterns emerge if we combine each pattern with itself; the 
 combinatorical restrictions mentioned above apply again, of course:
 
 \pex[everygla=\upshape]
@@ -3148,7 +3169,7 @@ As demonstrated in (\ref{ex:lastheavy}), the last heavy syllable will receive
 primary stress, except if two long syllables collide, in which case the first 
 long syllable will receive secondary stress.
 
-\plainbreak{1}\phantomsection
+\plainbreak{1}\needspace{3\baselineskip}\phantomsection
 
 To summarize the above findings:
 
@@ -3163,9 +3184,8 @@ To summarize the above findings:
 	cannot be unstressed.
 \item Primary stress is assigned to the last stressable syllable, or otherwise 
 	the last heavy syllable. In the rare case of two long/superheavy 
-	syllables, the first syllable receives secondary stress. This also 
-	happens when both syllables are next to each other.
-\item Secondary stress is also assigned to syllables that are eligible for word 
+	syllables after another, the first syllable receives secondary stress.
+\item Secondary stress is assigned to syllables that are eligible for word 
 	stress but which are not in the final foot.
 \end{enumerate}
 
@@ -3173,9 +3193,9 @@ To summarize the above findings:
 
 So far, we have only considered all the possible combinations of two heavy and 
 light syllables. Doing the same for all combinations of three and more syllables 
-would be possible, though the list of examples becomes even longer. Since 
-the feature pair \textsc{[±\,diph, ±\,ŋ]} behaves the same way throughout and 
-both constituents are in complementary distribution, we need not test 
+would be possible, though the list of examples were to become even longer. 
+Since the feature pair \textsc{[±\,diph, ±\,ŋ]} behaves the same way throughout 
+and both features are in complementary distribution, we need not test 
 iterations of them separately, but can subsume them under the label 
 \textsc{[±\,heavy]}. The parameters that need testing, then, are 
 \textsc{[±\,heavy]} in combination with \textsc{[±\,long]}. There are 4 
@@ -3191,22 +3211,22 @@ especially in cases where there is only one heavy syllable.
 
 \begin{figure}[ht]
 \caption{Stress patterns for \textsc{[±\,heavy, –\,long]} in trisyllabic words}
-\begin{tabu} to \linewidth {H[1] I[2] X[2] X[6]}
+\begin{tabu} to \linewidth {{>\scshape}H[1.5] I[2] X[2] X[5.5]}
 \toprule
 
-– – +
+–h –h +h
 	& prantanley
 	& × | × ×́ ||
 	& `question' (question-\PargI{})
 	\\
 	
-– + –
+–h +h –h
 	& sarayya
 	& × | ×́ × ||
 	& `(he) bows` (bow-\TsgM{})
 	\\
 	
-+ – –
++h –h –h
 	& taykondam
 	& × | ×́ × ||
 	& `break (n.)'
@@ -3214,19 +3234,19 @@ especially in cases where there is only one heavy syllable.
 	
 \midrule
 
-– + +
+–h +h +h
 	& ralanghay
 	& × | × ×́ ||
 	& `thumbnail'
 	\\
 
-+ – +
++h –h +h
 	& kaybunay
 	& ×̀ | × ×́ ||
 	& `by the way'
 	\\
 
-+ + –
++h +h –h
 	& maykongas
 	& × | ×́ × ||
 	& `harbor' (harbor-\Parg{})
@@ -3234,7 +3254,7 @@ especially in cases where there is only one heavy syllable.
 
 \midrule
 	
-+ + +
++h +h +h
 	& panglay-kay
 	& ×̀ | × ×́ ||
 	& `a few goddesses' (goddess=few)
@@ -3275,26 +3295,26 @@ vowel at the end of the verb stem if there is one.
 \xayr{maasaaj}{māsāy}{I traveled} (\Pst{}-travel=\Fsg{}.\Top{}) would then 
 become *\xayr{maaːssaaj}{*māsāsāy}{I used to travel} 
 (\Pst{}-travel-\Hab{}=\Fsg{}.\Top{}) instead of the actual form 
-\rayr{maassaaj}{māsasāy}.}
+\rayr{maassaaj}{māsasāy}; the verb stem is \xayr{As/}{asa-}{travel}.}
 
 \begin{figure}[ht]
 \caption{Stress patterns for \textsc{[±\,heavy, +\,long]} in trisyllabic words}
-\begin{tabu} to \linewidth {H[1] I[2] X[2] X[6]}
+\begin{tabu} to \linewidth {{>\scshape}H[1.5] I[2] X[2] X[5.5]}
 \toprule
 
-– – +
+–l –l +l
 	& peraysān
 	& × | × ×̋ ||
 	& `paste'
 	\\
 	
-– + –
+–l +l –l
 	& raypānya
 	& × | ×̋ × ||
 	& `at the stop' (stop-\Loc{})
 	\\
 	
-+ – –
++l –l –l
 	& nōneri
 	& ×̏ | ×́ × ||
 	& `deliberate, intentional'
@@ -3302,19 +3322,19 @@ become *\xayr{maaːssaaj}{*māsāsāy}{I used to travel}
 	
 \midrule
 
-– + +
+–l +l +l
 	& mə-cān-cān
 	& × | ×̏ ×̋ ||
 	& `whatever fling' (whatever=fling)
 	\\
 
-+ – +
++l –l +l
 	& sānisān
 	& ×̏ | × ×̋ ||
 	& `copula; clutch (n.)'
 	\\
 
-+ + –
++l +l –l
 	& lērāyon
 	& ×̏ | ×̋ × ||
 	& `manwhore'
@@ -3322,7 +3342,7 @@ become *\xayr{maaːssaaj}{*māsāsāy}{I used to travel}
 	
 \midrule
 	
-+ + +
++l +l +l
 	& ---
 	& ---
 	& ---
@@ -3384,11 +3404,11 @@ For purposes of surveying stress patterns, we will only deal with the kind in
 (\ref{ex:estcompound}), though it may be noted that when not being overtly 
 inflected, the second kind of compound will be treated as a word as well:
 \xayr{suMkorMkihsF}{sungkorankihas}{geography}. Another kind of indivisible 
-compound is one formed from reduplication, for instance, 
-\xayr{kusNF/kusNF}{kusang-kusang}{model}, from \xayr{kusNF}{kusang}{double}. 
-\autoref{fig:compounds} gives several examples along with their stress patterns.
-As a reference for the various rules in operation, consider the list above 
-(p.~\pageref{2sylsumm}).
+compound as in (\ref{ex:estcompound}) is one formed from reduplication, for 
+instance, \xayr{kusNF/kusNF}{kusang-kusang}{model}, from 
+\xayr{kusNF}{kusang}{double}. \autoref{fig:compounds} gives several examples 
+along with their stress patterns. As a reference for the various rules in 
+operation, consider the list above (p.~\pageref{2sylsumm}).
 
 \begin{sidewaysfigure}[p]
 \caption{Examples of stress patterns in compounds}
@@ -3507,34 +3527,37 @@ sapayyila
 \label{fig:compounds}
 \end{sidewaysfigure}
 
-The first word, \rayr{ApnF/ApnF}{apan-apan}, is not very noteworthy but I only 
-included it as a reference for regular stress assignment to light syllables. 
-The word decomposes into two feet, each of them has trochaic stress, which does 
-not change when reduplicated. Per rule, the first syllable of the word receives 
-secondary stress while the penultimate syllable bears primary stress. 
-\rayr{kusNF/kusNF}{kusang-kusang} is following the normal rules as well in that 
-a heavy syllable takes stress from a light one. This does not change in 
+The first word, \rayr{ApnF/ApnF}{apan-apan}, is not very noteworthy but I 
+included it nonetheless as a reference for regular stress assignment to light 
+syllables. The word decomposes into two feet, each of them has trochaic stress, 
+which does not change when reduplicated. Per rule, the first syllable of the 
+word receives secondary stress while the penultimate syllable bears primary 
+stress. \rayr{kusNF/kusNF}{kusang-kusang} is following the normal rules as well 
+in that a heavy syllable takes stress from a light one. This does not change in 
 reduplication.
 
-\rayr{depNFtYaati}{depangcāti}, is noteworthy since it follows the same stress 
-pattern as \rayr{ApnF/ApnF}{apan-apan} in spite of consisting of a foot with a 
-heavy second syllable and one with a superheavy first syllable. To avoid a hiat, 
-stress is not shifted to the heavy syllable (or shifted back to the first 
-syllable of the foot), since it is not strictly necessary for it to be stressed:
+\rayr{depNFtYaati}{depangcāti} is noteworthy since it follows the same stress 
+pattern as \rayr{ApnF/ApnF}{apan-apan} in spite of consisting of one foot with 
+a heavy second syllable (\rayr{depNF}{depang}) and another with a superheavy 
+first syllable (\rayr{tYaati}{cāti}). To avoid a clash, stress is not shifted to 
+the heavy syllable in \rayr{depNF}{depang}, since it is not strictly necessary 
+for it to be stressed:
 
 \ex
-	(×́ × → × ×́) + ×̋ × \quad → \quad *\,× ×̀ | ×̋ × \quad → \quad ×̀ × + ×̋ ×
+	(\fw{*dépang} → \fw{depáng}) + \fw{cā́ti} → 
+		$\left.\Big\{\right.$\parbox{4cm}{*\fw{depàng} + \fw{cā́ti} \\
+		\fw{dèpang} + \fw{cā́ti}}
 \xe
 
 In the case of \rayr{mliMkronF}{malingkaron} again the rule operates that 
-prohibits two stressed non-long syllable after another. Thus, even if the first 
-component \rayr{malinF}{maling} contains a heavy syllable, stress will not move 
-there. In \rayr{ltunFkem}{latunkema}, the syllable /tʊn/ is assimilated
-\index{allophony!of consonants} to [tʊŋ] before the /k/ onset of the next syllable. 
-For one, however, this does not make it heavy, and second, even if it did, 
-stress would stay on the first syllable of the word for the same reason as in 
-\rayr{mliMkronF}{malingkaron}. The same rule of stress hiatus avoidance 
-operates in \rayr{spjyil}{sapayyila}.
+prohibits two stressed non-long syllables after another. Thus, even if the 
+first component \rayr{malinF}{maling} contains a heavy syllable, stress will not 
+move there. In \rayr{ltunFkem}{latunkema}, the syllable /tʊn/ is assimilated
+\index{allophony!of consonants} to [tʊŋ] before the /k/ onset of the 
+next syllable. For one, however, this does not make it heavy, and second, even 
+if it did, stress would stay on the first syllable of the word for the same 
+reason as in \rayr{mliMkronF}{malingkaron}. The same rule of stress hiatus 
+avoidance operates in \rayr{spjyil}{sapayyila}.
 
 Besides the shortening of the second component of the compound, 
 \rayr{maavgneNF}{māvaganeng} retains the stress pattern of its constituents.
@@ -3554,10 +3577,9 @@ has so far been a rather neglected topic in my work on Ayeri. Even though I
 made a handful of recordings in the past, I have never considered intonation 
 much. Yet, of course, the spoken words in those recordings do not sound like 
 robot speech either, so there must be intonational patterns that I have been 
-subconsciously following.\footnote{Whenever this happens, the fallback is 
+subconsciously applying.\footnote{Whenever this happens, the fallback is 
 likely to be a mix of German and English, since those are the languages I am 
-most familiar with---the former being my native language, and the latter the 
-secondary language I studied formally for the longest time.}
+most familiar with.}
 
 Since intonation contours are notoriously difficult to display in print, I will 
 give very approximate graphs of pitch in the respective examples for each 
@@ -3628,9 +3650,10 @@ accent of each item.
 
 Complement clauses\index{complement clause} are characterized by the short 
 spike at the end of the preceding main clause followed by a short break which 
-together mark the beginning of a new syntactic unit, which is broadly similar 
-to list statements. Otherwise, statements with complement clauses as well bear 
-the overall downward-sloping contour of statements.
+together signal the beginning of a new syntactic unit within the context of 
+the current sentence, which is broadly similar to list statements. Otherwise, 
+statements with complement clauses as well bear the overall downward-sloping 
+contour of statements.
 
 \ex\begingl
 	\glpreamble \raisebox{-1.5em}{\includegraphics{images/contours-complement.pdf}} //
@@ -3668,9 +3691,10 @@ continuous upward slope if part of a question:
 
 Ayeri uses a kind of topic system\index{topic} for highlighting constituents in 
 a clause by morphosyntactic means, but this is still different from emphasis on 
-semantic grounds, for example when the speaker wants to highlight a difference 
-in the same syntactic position, as in the following example, which presents a 
-possible answer to the question posed in (\ref{ex:travelercoat}):
+semantic grounds, for example when the speaker wants to highlight a 
+semantic difference in the same syntactic position, as in the following example, 
+which presents a possible answer to the question posed in 
+(\ref{ex:travelercoat}):
 
 \ex\begingl
 	\glpreamble \raisebox{-1.5em}{\includegraphics{images/contours-contrast.pdf}} //
