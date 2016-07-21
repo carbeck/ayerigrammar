@@ -28,6 +28,7 @@ Currently working on:
 * Writing System
    1. Consonants
    2. Vowels
+   3. Diacritics
 
 Compiling
 =========

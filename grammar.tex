@@ -182,6 +182,25 @@
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
 
+% Things for tables
+% Needs to be loaded *before* hyperref if footnotes in tables are supposed to 
+% work
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{multirow}
+
+% Custom column types
+\newcolumntype{B}{>{\bfseries}X}
+\newcolumntype{I}{>{\itshape}X}
+\newcolumntype{H}{>{\bfseries\footnotesize}X}
+\newcolumntype{S}{>{\footnotesize}X}
+
+% Table header font
+\newcommand{\tableheaderfont}{\rowfont{\upshape\bfseries\footnotesize}}
+\newcommand{\tablesubheaderfont}{\rowfont{\upshape\bfseries\tiny}}
+
 % Clickable links in footnotes, TOC, etc.
 \usepackage[
 	xetex,
@@ -203,23 +222,6 @@
 \usepackage{wrapfig}
 \setlength{\columnsep}{2\baselineskip}
 \usepackage{tikz}
-
-% Things for tables
-\usepackage{longtable}
-\usepackage{tabu}
-\usepackage{booktabs}
-\usepackage{rotating}
-\usepackage{multirow}
-
-% Custom column types
-\newcolumntype{B}{>{\bfseries}X}
-\newcolumntype{I}{>{\itshape}X}
-\newcolumntype{H}{>{\bfseries\footnotesize}X}
-\newcolumntype{S}{>{\footnotesize}X}
-
-% Table header font
-\newcommand{\tableheaderfont}{\rowfont{\upshape\bfseries\footnotesize}}
-\newcommand{\tablesubheaderfont}{\rowfont{\upshape\bfseries\tiny}}
 
 % Formatting of table of glossing abbreviations from Leipzig package manual
 \usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}

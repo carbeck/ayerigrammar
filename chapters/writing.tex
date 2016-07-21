@@ -133,7 +133,7 @@ consonant in Tahano Hikamu if a vowel is following:
 \pex[lingstyle=thex]\begingl
 	\gla \ayr{p}	+	\ayr{NisF} //
 	\glb /pa/	{}	/ŋis/ //
-	\glft \rayr{pNisF}{pangis} /paŋ.ɪs/ `money'
+	\glft \rayr{pNisF}{pangis} /paŋ.ɪs/ `money' //
 \endgl\xe
 
 Tahano Hikamu knows a few ligatures. First of all, when two \ayr{n} \orth{na} 
@@ -315,6 +315,7 @@ respectively, again:
 \index{vowels|)}
 
 \section{Diacritics}
+\index{diacritics|(}
 
 We have already encountered two diacritics, one for lengthening the 
 primary vowel of a syllalbe and one for deleting the inherent vowel of a 
@@ -323,15 +324,16 @@ undergo non-trivial positioning and repositioning rules. As vowels are
 primarily superscripts, diacritics are primarily subscripts, so in the 
 following I will first describe subscript diacritics; then preposed diacritics, 
 which Ayeri also has a number of, both as graphemes in their own right and as 
-allographs of other subscript diacritics; and lastly, superscript diacritics. 
-\autoref{fig:thdiabot} shows the bottom-attaching diacritics.
+allographs of other subscript diacritics; and lastly, superscript diacritics.
 
-\begin{sidewaysfigure}{p}
+\subsection{Subscript Diacritics}
+
+\begin{sidewaysfigure}[p]
 \caption{Bottom-attaching diacritics of Tahano Hikamu}
-\begin{tabu} to \linewidth{{>\Tagati\huge}X[1] X[2] X[3] X[3]}
+\begin{tabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[16l] X[12l]}
 \toprule
 \tableheaderfont
-Grapheme
+
 	& Native name
 	& Function
 	& Example
@@ -339,7 +341,7 @@ Grapheme
 	
 \toprule
 
-\tablesubheaderfont\multicolumn4{c}{Large diacritics}\\
+\tablesubheaderfont\multicolumn{4}{c}{L~a~r~g~e~{ }~d~i~a~c~r~i~t~i~c~s}\\
 
 \midrule
 
@@ -348,37 +350,47 @@ Grapheme
 	& Lengthens the primary vowel of the syllable
 	& \rayr{p}{pa} → \rayr{paa}{pā}
 	\\
+
+\midrule
 	
 *Y
-	& \xayr{y ejr}{ya eyra}{low ya}
-	& Ya following another consonant, also across syllables. Marks 
-		palatalization of \rayr{t}{ta}, \rayr{d}{da}, \rayr{k}{ka}, and 
-		\rayr{g}{ga} in Ayeri.
-	& \rayr{Ar}{ara} → \rayr{ArY}{arya};\newline
-		\rayr{t}{ta} → \rayr{tY}{ca}
+	& \xayr{y Ejr}{ya eyra}{low ya}
+	& \orth{ya} following another consonant, also across syllables. Marks 
+		palatalization of \ayr{t}~\orth{ta}, \ayr{d}~\orth{da}, 
+		\ayr{k}~\orth{ka}, and \ayr{g}~\orth{ga} in Ayeri.
+	& \rayr{Ar}{ara} → \rayr{ArY}{arya}; \rayr{t}{ta} → \rayr{tY}{ca}
+	\\
+	
+\midrule
 	
 *J
 	& \xayr{riNy}{ringaya}{raiser}
-	& Palatalizes a consonant\footnotemark
+	& Palatalizes a consonant (not used in Ayeri)
 	& \rayr{t}{ta} → \ayr{tJ} /tʲa/, /tʃa/
 	\\
 	
+\midrule
+	
 *H
 	& \xayr{UlNy}{ulangaya}{breather}
-	& Aspiration or frication of consonant\footnotemark
-	& \rayr{t}{ta} → \ayr{tH} /tʰa/, /θa/
+	& Aspiration or frication of a consonant (not used in Ayeri)
+	& \rayr{t}{ta} → \ayr{tH} /tʰa/, {\addfontfeature{RawFeature=+mgrk}/θa/}
 	\\
 	
-*Q
-	& \xayr{rjpaay Ejr}{raypāya eyra}{low stopper}
-	& Glottal stop coda or glottalization of a consonant, 
-		depending on language/context\footnotemark
-	& \rayr{t}{ta} → \ayr{tQ} /taʔ/;\newline
-		\rayr{s}{sa} → \ayr{sQ} /s’a/
+\midrule
+	
+*\hspace{-.25em}ˀ
+	& \xayr{rjpaay Ejr}{raypāya eyra}{low~stopper}
+	& Allograph for glottal stop coda or glottalization of a 
+		consonant (consonant letters with ascenders; not used in Ayeri)
+	& \rayr{k}{ka} → \ayr{kQ} /kaʔ/; \rayr{d}{da} → \ayr{dQ} /d’a/
+	\\
 
 \midrule
 
-\tablesubheaderfont\multicolumn4{c}{Small diacritics}\\
+\tablesubheaderfont\multicolumn4{c}{S~m~a~l~l~{ }~d~i~a~c~r~i~t~i~c~s}\\
+
+\midrule
 
 *F
 	& \xayr{goMdy}{gondaya}{extinguisher}
@@ -387,6 +399,8 @@ Grapheme
 	& \rayr{pr}{para} → \rayr{pFr}{pra}, \rayr{prF}{par}
 	\\
 	
+\midrule
+	
 *M
 	& \xayr{vinaati}{vināti}{noser}
 	& Indicates a homorganic nasal or nasalizes the vowel, depending on 
@@ -394,30 +408,240 @@ Grapheme
 	& \rayr{pd}{pada} → \rayr{pMd}{panda} /panda/ or /pãda/
 	\\
 	
+\midrule
+	
 *F*
 	& \xayr{kusNisaati}{kusangisāti}{duplicator}
 	& Indicates a geminated or otherwise double consonant
 	& \rayr{pl}{pala} → \rayr{plFl}{palla}
 	\\
 
+\bottomrule
+\end{tabu}
+\label{fig:thdiabot}
+\end{sidewaysfigure}
+
+\autoref{fig:thdiabot} shows the bottom-attaching diacritics. The `large 
+diacritics' cause the secondary slot of consonants to move down below the 
+diacritic. `Small diacritics' can attach in this place as well as secondary 
+vowels, as does the homorganic nasal diacritic \ayr{*M} in this rather extreme 
+example:
+
+\pex[lingstyle=thex]\label{ex:caampuluy}\begingl
+	\gla \ayr{tYaan} $+$ \ayr{puluj} → \ayr{tYaaMpuluj} //
+	\glb {/tʃaːn/} {} {/puˈlʊɪ/} {} {/ˌtʃaːmpuˈlʊɪ/} //
+	\glft \xayr{tYaaMpuluj}{cāmpuluy}{heterosexual} //
+\endgl\xe
+
+\subsection{Prepended Diacritics}
+
+Example (\ref{ex:caampuluy}) leads us directly to the next class of 
+diacritics---ones that are prepended to the consonant letter, either because 
+they are simply placed there or because of allography. Let us first list those 
+diacritics that appear in front of consonants obligatorily 
+(\autoref{fig:thdiapreobl}).
+
+\begin{figure}[htp]
+\caption{Obligatorily prepended diacritics of Tahano Hikamu}
+\begin{tabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[16l] X[12l]}
+\toprule
+\tableheaderfont
+
+	& Native name
+	& Function
+	& Example
+	\\
+	
+\toprule
+
+*j
+	& \xayr{leMtMkusNF}{lentankusang}{double-sound}
+	& Marks a diphthong with /ɪ/
+	& \rayr{pe}{pe} → \rayr{pej}{pey}
+	\\
+	
 \midrule
+
+*\_:
+	& \xayr{tilmy}{tilamaya}{changer}
+	& Marks raised vowels (i.e. umlaut; not used in Ayeri)
+	& \rayr{po}{po} → \ayr{po\_:}~/pø/
+	\\
+	
+\midrule
+
+*R
+	& \xayr{hiymy}{hiyamaya}{roller}
+	& Marks retroflex consonants (not used in Ayeri)\footnotemark
+	& \rayr{t}{ta} → \ayr{tR}~/ʈa/
+	\\
 
 \bottomrule
 \end{tabu}
-\label{fig:thvowstop}
-\end{sidewaysfigure}
+\label{fig:thdiapreobl}
+\end{figure}
 
-\footnotetext{Not used in Ayeri.}
+\footnotetext{In a Tahano Hikamu orthography I devised for English once, 
+\ayr{*R} was used for /ɚ/, as in the \textsc{nurse} vowel in American English: 
+\rayr{nRsF}{nurse}.}
 
-The `large diacritics' in \autoref{fig:thvowstop} cause the secondary slot of 
-consonants to appear below them. `Small diacritics' can attach in this place as 
-well as secondary vowels, as does the homorganic nasal diacritic in this rather 
-extreme example:
+\begin{figure}[htp]
+\caption{Allographically prepended diacritics of Tahano Hikamu}
+\begin{tabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[16l] X[12l]}
+\toprule
+\tableheaderfont
 
-\pex[lingstyle=thex]\begingl
-	\gla \ayr{tYaan}	+ \ayr{pluY}	→ \ayr{tYaaMpuluj} //
-	\glb /tʃaːn/		{} /puˈlʊɪ/	→ /ˌtʃaːmpuˈlʊɪ/ //
-	\glft \xayr{tYaaMpuluj}{cāmpuluy}{heterosexual}
-\endgl\xe
+	& Native name
+	& Function
+	& Example
+	\\
+	
+\toprule
+
+ː*
+	& \xayr{tupsti mrinF}{tupasati marin}{anterior long-maker}
+	& Lengthens the primary vowel of the syllable
+	& \rayr{sY}{sya} → \rayr{sYaa}{syā},\newline
+		\rayr{n}{na} → \rayr{naa}{nā}
+	\\
+	
+\midrule
+
+ʲ*
+	& \xayr{y mrinF}{ya marin}{anterior ya}
+	& \orth{ya} following another consonant, also across syllables.
+	& \rayr{n}{na} → \rayr{nY}{nya}
+	\\
+	
+	
+	& \xayr{riNy mrinF}{ringaya marin}{anterior raiser}
+	& Also used as an allograph for the palatalization proper diacritic.
+	& \ayr{sH}~/sʰa/ → \ayr{sHY}~/sʰʲ/
+	\\
+	
+\midrule
+
+ʰ*
+	& \xayr{UlNy mrinF}{ulangaya marin}{anterior breather}
+	& (Pre-)Aspiration or frication of a consonant (not used in Ayeri)
+	& \rayr{N}{nga} → \ayr{NH} /ŋʰa/;\newline
+		\rayr{t}{ta} → \ayr{ʰt}~/ʰta/
+	\\
+
+\bottomrule
+\end{tabu}
+\label{fig:thdiapreallo}
+\end{figure}
+
+As \autoref{fig:thdiapreobl} shows, the only obligatorily prepended diacritic 
+that Ayeri uses is the one that marks diphthongs, \ayr{*j}.\index{diphthongs} 
+However, there are also a number of diacritics that are also obligatorily 
+prepended to consonants, but do so as context-sensitive allographs 
+(\autoref{fig:thdiapreallo}). The selection of the variant diacritics is not 
+random or up to the aesthetic eye of the writer, but it is governed by rules. 
+The prepended forms listed in \autoref{fig:thdiapreallo} are thus triggered 
+
+\begin{enumerate}
+\item when there is no stem or bowl for the regular subscript diacritic to 
+	attach to, which is the case for \ayr{n}~\orth{na}, \ayr{N}~\orth{nga}, 
+	\ayr{v}~\orth{va}, and \ayr{w}~\orth{wa}:
+	
+	\begin{multicols}{2}
+	\pex[lingstyle=thex,everyglb=\itshape]\label{ex:stemless}
+	\a\begingl
+		\gla \ayr{n} → \ayr{naa} //
+		\glb na {} nā //
+	\endgl
+	
+	\a\begingl
+		\gla \ayr{N} → \ayr{Naa} //
+		\glb nga {} ngā //
+	\endgl
+	
+	\a\begingl
+		\gla \ayr{v} → \ayr{vaa} //
+		\glb va {} vā //
+	\endgl
+	
+	\a\begingl
+		\gla \ayr{w} → \ayr{waa} //
+		\glb wa {} wā //
+	\endgl
+	
+	\xe
+	\end{multicols}
+
+\item when a large subscript diacritic would be added after another large 
+	subscript diacritic---this position can only be filled in once, so 
+	further large subscripts are prepended:
+	
+	\pex[lingstyle=thex,everygla=\normalsize,everyglb=\upshape\Large,
+		aboveglcskip=0.5em,numoffset=\leftmargin]\label{ex:stacking}
+	\begingl
+		\gla {} {$+$ \ayr{*H}} {} {$+$ \ayr{*Y}} {} {$+$ \ayr{*i}} {}
+			{$+$ \ayr{*aa}} {} //
+		\glb \ayr{t} → \ayr{tH} → \ayr{tHY} → \ayr{tHYi} → 
+			\ayr{tHYii} //
+		\glc /ta/ {} /tʰa/ {} /tʰja/ {} /tʰji/ {} /tʰjiː/ //
+	\endgl\xe
+	
+	When adding large diacritics to stemless consonants, they are prepended 
+	from the beginning, as we saw in (\ref{ex:stemless}), and just 
+	like in (\ref{ex:stacking}), this principle continues:
+	
+	\pex[lingstyle=thex,everygla=\normalsize,everyglb=\upshape\Large,
+		aboveglcskip=0.5em,numoffset=\leftmargin]
+	\begingl
+		\gla {} {$+$ \ayr{*Y}} {} {$+$ \ayr{*aa}} {} {$+$ \ayr{*j}} 
+			{} //
+		\glb \ayr{n} → \ayr{nY} → \ayr{nYaa} → \ayr{nYaaj} //
+		\glc /na/ {} /nja/ {} /njaː/ {} /njaːɪ/ //
+	\endgl\xe
+
+\item with consonants directly following na, to avoid a clash with its 
+	descender:
+	
+	\pex[lingstyle=thex,everyglb=\itshape,numoffset=\leftmargin]
+	\begingl
+		\gla \ayr{n} $+$ \ayr{paa} → \ayr{npaa} //
+		\glb na {} pā {} napā //
+	\endgl\xe
+	
+	An exception to this exception occurs, however, when the consonant is 
+	not directly following. In this case, no reordering happens, only 
+	\ayr{n}~\orth{na} may reduce its descender in size to accommodate the 
+	following prepended diacritic:
+	
+	\pex[lingstyle=thex,everyglb=\itshape,numoffset=\leftmargin]
+	\begingl
+		\gla \ayr{n} $+$ \ayr{pj} → \ayr{npj} //
+		\glb na {} pay {} napay //
+	\endgl\xe
+	
+\item in other cases where a clash of subscript diacritics needs to be avoided:
+
+	\pex[lingstyle=thex,everyglb=\itshape,numoffset=\leftmargin]
+	\begingl
+		\gla \ayr{di} $+$ \ayr{paa} → \ayr{diːp} //
+		\glb di {} pā {} dipā //
+	\endgl\xe
+	
+	Alternatively, the following solution is also permissible:
+	
+	\pex[lingstyle=thex,everyglb=\itshape,numoffset=\leftmargin]%
+	\begingl
+		\gla \ayr{di} $+$ \ayr{paa} → 
+		% Due to negligence when coding the Tahano Hikamu font, I did 
+		% not build in a way to manually put a diacritic on top of ⟨ka⟩ 
+		% and ⟨da⟩, thus I need to put it on the letter with LaTeX 
+		% commands, which is very clumsy. Past me: shame on you!
+		\ayr{d\hspace{-.3em}\raisebox{1.5ex}{\zwsp i}\hspace{.3em}%
+			paa} //
+		\glb di {} pā {} dipā //
+	\endgl\xe
+
+\end{enumerate}
+
+\index{diacritics|)}
 
 \index{Tahano Hikamu|)}
