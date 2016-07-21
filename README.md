@@ -3,7 +3,10 @@ A Grammar of Ayeri
 
 This is a renewed effort to revise and expand on what's currently on the web as the *Ayeri Grammar* ([PDF](https://dl.dropboxusercontent.com/u/8026017/Ayeri%20grammar/grammar.pdf)), started in July 2016. I hope that by transferring things to LaTeX, the whole process of editing will become more easy to handle than when I was trying to work with one big document in LibreOffice before.
 
-**WARNING**: This is work in progress! The Table of Contents currently encompasses the following topics:
+Table of Contents
+=================
+
+**WARNING**: This is work in progress! The table of contents currently encompasses the following topics:
 
 1. Phonology
    1. Phoneme Inventory
@@ -19,7 +22,10 @@ This is a renewed effort to revise and expand on what's currently on the web as 
    3. Notes on Prosody
       1. Stress
       2. Intonation
-2. Writing System
+
+Currently working on:
+
+* Writing System
    1. Consonants
    2. Vowels
 
