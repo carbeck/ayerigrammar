@@ -10,25 +10,12 @@ Table of Contents
 
 1. Phonology
    1. Phoneme Inventory
-      1. Consonants
-      2. Vowels
    2. Phonotactics
-      1. Number of Syllables per Word
-      2. Phonemic Makeup of Initial Syllables
-      3. Phonemic Makeup of Medial Syllables
-      4. Phonemic Makeup of Final Syllables
-      5. Phonemic Makeup of Single Syllables
-      6. Cross-Syllable Consonant Clusters
    3. Notes on Prosody
-      1. Stress
-      2. Intonation
 
 Currently working on:
 
 * Writing System
-   1. Consonants
-   2. Vowels
-   3. Diacritics
 
 Compiling
 =========
