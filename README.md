@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort to revise and expand on what's currently on the web as the *Ayeri Grammar* ([PDF](https://dl.dropboxusercontent.com/u/8026017/Ayeri%20grammar/grammar.pdf)), started in July 2016. I hope that by transferring things to LaTeX, the whole process of editing will become more easy to handle than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as bugs.
+This is a renewed effort to revise and expand on what's currently on the web as the *Ayeri Grammar* ([PDF](https://dl.dropboxusercontent.com/u/8026017/Ayeri%20grammar/grammar.pdf)), started in July 2016. I hope that by transferring things to LaTeX, the whole process of editing will become more easy to handle than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as Issues.
 
 Table of Contents
 =================

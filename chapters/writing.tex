@@ -380,8 +380,8 @@ allographs of other subscript diacritics; and lastly, superscript diacritics.
 	
 *\hspace{-.25em}ˀ
 	& \xayr{rjpaay Ejr}{raypāya eyra}{low~stopper}
-	& Allograph for glottal stop coda or glottalization of a 
-		consonant (consonant letters with ascenders; not used in Ayeri)
+	& Glottal stop coda or glottalization of a consonant (consonant letters 
+		with ascenders; not used in Ayeri)
 	& \rayr{k}{ka} → \ayr{kQ} /kaʔ/; \rayr{d}{da} → \ayr{dQ} /d’a/
 	\\
 
@@ -624,8 +624,11 @@ prepended forms listed in \autoref{fig:thdiapreallo} are thus triggered
 	
 	An exception to this exception occurs, however, when the consonant is 
 	not directly following. In this case, no reordering happens, only 
-	\ayr{n}~\orth{na} may reduce its descender in size to accommodate the 
-	following prepended diacritic:
+	\ayr{n}~\orth{na} \emph{may} reduce its descender in size to 
+	accommodate the following prepended diacritic:\footnote{The font I am 
+	using here is designed so that the reduced combination looks nicer, but 
+	if unreduced, \ayr{n}'s swash is not so long as to cross the descender 
+	of \ayr{*j} either.}
 	
 	\pex[lingstyle=thex,everyglb=\itshape,numoffset=\leftmargin]
 	\begingl
@@ -651,7 +654,7 @@ prepended forms listed in \autoref{fig:thdiapreallo} are thus triggered
 		% Due to negligence when coding the Tahano Hikamu font, I did 
 		% not build in a way to manually put a diacritic on top of ⟨ka⟩ 
 		% and ⟨da⟩, thus I need to put it on the letter with LaTeX 
-		% commands, which is very clumsy. Past me: shame on you!
+		% commands, which is very clumsy. Younger self: shame on you!
 		\ayr{d\hspace{-.3em}\raisebox{1.5ex}{\zwsp i}\hspace{.3em}%
 			paa} //
 		\glb /di/ {} /paː/ {} /dipaː/ //
@@ -677,7 +680,63 @@ prepended forms listed in \autoref{fig:thdiapreallo} are thus triggered
 
 \subsection{Superscript Diacritics}
 
-...
+Ayeri's normal position for diacritics is below consonants, but sometimes it is 
+nicer to put them on top, especially for the letter \ayr{n}~\orth{na} due to 
+its swash, as well as for \ayr{v}~\orth{va} since the space below its flag is 
+empty otherwise, thus not providing much of a visual connection. The only 
+diacritic that is normally attaching at the top of consonants is that for the 
+glottal stop---we have already encountered its subscript allograph earlier. 
+Since Ayeri's phoneme inventory does not possess a phonemic glottal stop or 
+glottalization, this diacritic is not used in Ayeri. The list of superscript 
+diacritics is given in \autoref{fig:thdiatop}.
+
+\begin{figure}[htp]
+\caption{Superscript diacritics of Tahano Hikamu}
+\begin{tabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[16l] X[12l]}
+\toprule
+\tableheaderfont
+
+	& Native name
+	& Function
+	& Example
+	\\
+	
+\toprule
+
+*_F
+	& \xayr{goMdy liNF}{gondaya ling}{upper extinguisher}
+	& Deletes inherent /a/ of consonant, e.g. in consonant clusters or 
+		closed syllables
+	& \rayr{vr}{vara} → \rayr{vFr}{vra}, \rayr{vrF}{var}
+	\\
+	
+\midrule
+
+*_M
+	\xayr{vinaati liNF}{vināti ling}{upper nasalizer}
+	& Indicates a homorganic nasal or nasalizes the vowel, depending on 
+		language/context
+	& \rayr{nd}{naka} → \rayr{nMk}{nanka} /naŋka/ or /nãka/
+	\\
+
+*̔
+	& \xayr{kusNisaati liNF}{kusangisāti ling}{upper duplicator}
+	& Indicates a geminated or otherwise double consonant
+	& \rayr{pn}{pana} → \rayr{pnFn}{panna}
+	\\
+	
+\midrule
+
+*Q
+	& \xayr{rjpaay}{raypāya}{stopper}
+	& Glottal stop coda or glottalization of a consonant (not used in Ayeri)
+	& \rayr{t}{ta} → \ayr{tQ} /taʔ/; \rayr{s}{sa} → \ayr{sQ} /s’a/
+	\\
+
+\bottomrule
+\end{tabu}
+\label{fig:thdiatop}
+\end{figure}
 
 \section{Numerals}
 
