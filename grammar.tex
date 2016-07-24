@@ -255,7 +255,7 @@
 	exskip=0em,
 	belowpreambleskip=-0.5em,
 	interpartskip=-0.5em,
-	aboveglftskip=0em,
+	aboveglftskip=-0.5em,
 }
 
 \definelingstyle{thex}{
@@ -284,10 +284,11 @@
 \newleipzig{Agtz}{agtz}{agentizer}
 \newleipzig{Comp}{comp}{comparative}
 \newleipzig{Supl}{supl}{superlative}
+\newleipzig{Dyn}{dyn}{dynamic}
 
-\newleipzig{Nn}{nn}{Noun}
-\newleipzig{Vb}{vb}{Verb}
-\newleipzig{Adj}{adj}{Adjective}
+\newleipzig{Nn}{nn}{noun}
+\newleipzig{Vb}{vb}{verb}
+\newleipzig{Adj}{adj}{adjective}
 
 \makeglossaries
 
@@ -330,6 +331,7 @@
 \newcommand{\chk}{×} % Check mark
 \newcommand{\zwsp}{\mbox{​}} % Zero-width space (ZWSP)
 \newcommand{\thafterdot}{̒{\rmfamily }}%{\raisebox{.25em}{\zwsp F}{\rmfamily }}
+\newcommand{\sic}{[{\itshape sic}]} % [sic]
 
 \newcommand{\ayr}[1]{\zwsp\smash{{\Tagati #1}}} % Plain Ayeri orthography
 \newcommand{\rayr}[2]{\zwsp\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
