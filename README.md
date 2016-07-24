@@ -12,10 +12,11 @@ Table of Contents
    1. Phoneme Inventory
    2. Phonotactics
    3. Notes on Prosody
+2. Writing System
 
 Currently working on:
 
-* Writing System
+* Morphological Typology
 
 Compiling
 =========
