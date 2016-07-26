@@ -6,7 +6,7 @@ This is a renewed effort to revise and expand on what's currently on the web as 
 Table of Contents
 =================
 
-**WARNING**: This is work in progress! The table of contents currently encompasses the following topics:
+**WARNING**: This is work heavily in progress! The table of contents encompasses the following topics so far:
 
 1. Phonology
    1. Phoneme Inventory
@@ -21,7 +21,13 @@ Currently working on:
 Compiling
 =========
 
-Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`.
+Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara`. A standard TeXLive 2015 installation should bring all package dependencies. Fonts used:
+
+* [Junicode](http://junicode.sourceforge.net/)
+* [Fira Sans](https://carrois.com/typefaces/FiraSans/)
+* [Tagati Book G](https://github.com/carbeck/tagatibookg)
+* [Free Serif](https://www.gnu.org/software/freefont/)
+* [Tuladha Jejeg](https://sites.google.com/site/jawaunicode/main-page)
 
 Licensing
 =========
