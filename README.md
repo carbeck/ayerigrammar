@@ -23,11 +23,13 @@ Compiling
 
 Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara`. A standard TeXLive 2015 installation should bring all package dependencies. Fonts used:
 
-* [Junicode](http://junicode.sourceforge.net/)
-* [Fira Sans](https://carrois.com/typefaces/FiraSans/)
-* [Tagati Book G](https://github.com/carbeck/tagatibookg)
-* [Free Serif](https://www.gnu.org/software/freefont/)
-* [Tuladha Jejeg](https://sites.google.com/site/jawaunicode/main-page)
+* Body text: [Junicode](http://junicode.sourceforge.net/)
+* Captions, Headings: [Fira Sans](https://carrois.com/typefaces/FiraSans/)
+* Examples: [Tagati Book G](https://github.com/carbeck/tagatibookg)
+* Other:
+  * [DejaVu Sans Mono](http://dejavu-fonts.org/)
+  * [Free Serif](https://www.gnu.org/software/freefont/)
+  * [Tuladha Jejeg](https://sites.google.com/site/jawaunicode/main-page)
 
 Licensing
 =========

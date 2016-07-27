@@ -145,12 +145,12 @@
 	Scale=MatchLowercase,
 ]{FreeSerif}
 
-\newfontfamily{\OpenSansCond}[
-	Ligatures=TeX,
-	Numbers=Lowercase,
-	Scale=MatchUppercase,
-	BoldFont={Open Sans Condensed Bold},
-]{Open Sans Condensed Light}
+% \newfontfamily{\OpenSansCond}[
+% 	Ligatures=TeX,
+% 	Numbers=Lowercase,
+% 	Scale=MatchUppercase,
+% 	BoldFont={Open Sans Condensed Bold},
+% ]{Open Sans Condensed Light}
 
 \newfontfamily{\Tagati}[
 	Renderer=Graphite,
@@ -189,7 +189,7 @@
 \usepackage{tabu}
 \usepackage{booktabs}
 \usepackage{rotating}
-\usepackage{multirow}
+% \usepackage{multirow}
 
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
@@ -223,7 +223,9 @@
 \setlength{\columnsep}{2\baselineskip}
 \usepackage{tikz}
 
-% Formatting of table of glossing abbreviations from Leipzig package manual
+% Formatting of table of glossing abbreviations inspired by the example from 
+% the leipzig package manual; here changed to use a user-defined list 
+% environment, 'glossdefs' (see above).
 \usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
 \usepackage{glossary-inline}%
 
