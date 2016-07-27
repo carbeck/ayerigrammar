@@ -83,7 +83,7 @@
 	style=american,
 	english=american,
 	autopunct,
-]{csquotes} % Put quotations in \enquote{}!
+]{csquotes} % Put quotations in \enquote{} or \textquote{}!
 \SetBlockEnvironment{quote}
 \renewcommand*{\mkccitation}[1]{ (#1)}
 
@@ -91,10 +91,7 @@
 \usepackage{fontawesome}
 
 % Date and time
-\usepackage[
-	useregional,
-	%style=mdyyyy,
-]{datetime2}
+\usepackage[useregional]{datetime2}
 
 % Extended formatting of lists
 \usepackage{enumitem}
@@ -182,14 +179,13 @@
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
 
-% Things for tables
-% Needs to be loaded *before* hyperref if footnotes in tables are supposed to 
-% work
+% Things for tables; needs to be loaded *before* hyperref if footnotes in tables 
+% are supposed to work (bug in tabu where they still don't?)
 \usepackage{longtable}
 \usepackage{tabu}
 \usepackage{booktabs}
 \usepackage{rotating}
-\usepackage{multirow}
+% \usepackage{multirow}
 
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
@@ -250,6 +246,7 @@
 \pretocmd{\chapter}{\excnt=1}{}{}
 \lingset{Everyex=\smaller}
 
+% Glosses in footnotes
 \newcounter{fnexno}
 \setcounter{fnexno}{1}
 \definelingstyle{fnex}{
@@ -262,6 +259,7 @@
 	aboveglftskip=-0.5em,
 }
 
+% Tahano Hikamu examples in the Writing System chapter
 \definelingstyle{thex}{
 	everygla=\upshape\Large,
 	glwordalign=center,
@@ -323,23 +321,20 @@
 \AtBeginEnvironment{quotation}{\smaller}
 
 % Macros
-\newcommand{\fw}[1]{\textit{#1}} % Foreign Word
-\newcommand{\tit}[1]{\textit{#1}} % Title of a work
-\newcommand{\q}[1]{\enquote{#1}} % Context-aware quotation
-\newcommand{\qq}[1]{\enquote*{#1}} % Explicit sublevel quotation
-\newcommand{\tsup}[1]{\fakesuperscript{#1}} % Superscript
-\newcommand{\tsub}[1]{\fakesubscript{#1}} % Subscript
-\newcommand{\markyellow}[1]{\colorbox{yellow}{#1}} % Yellow highlighter
-\newcommand{\ques}{\fakesuperscript{?}} % raised question mark
-\newcommand{\orth}[1]{⟨#1⟩}  % Orthography brackets
-\newcommand{\tc}[1]{\trailingcitation{#1}} % \trailingcitation from expex in examples
-\newcommand{\rc}[1]{\rightcomment{[#1]}} % \rightcomment from expex in examples
-\newcommand{\pct}{\scalebox{.85}{ \%}} % Percent sign with half space before it
 \newcommand{\chk}{×} % Check mark
-\newcommand{\til}{$\sim$} %{\textasciitilde{}} % Tilde shortcut
-\newcommand{\zwsp}{\mbox{​}} % Zero-width space (ZWSP)
-\newcommand{\thafterdot}{̒{\rmfamily }}%{\raisebox{.25em}{\zwsp F}{\rmfamily }}
+\newcommand{\fw}[1]{\textit{#1}} % Foreign Word
+\newcommand{\orth}[1]{⟨#1⟩}  % Orthography brackets
+\newcommand{\pct}{\scalebox{.85}{ \%}} % Percent sign with half space before it
+\newcommand{\ques}{\fakesuperscript{?}} % raised question mark
+\newcommand{\rc}[1]{\rightcomment{[#1]}} % \rightcomment from expex in examples
 \newcommand{\sic}{[{\itshape sic}]} % [sic]
+\newcommand{\tc}[1]{\trailingcitation{#1}} % \trailingcitation from expex in examples
+\newcommand{\thafterdot}{̒{\rmfamily }}%{\raisebox{.25em}{\zwsp F}{\rmfamily }}
+\newcommand{\til}{$\sim$} %{\textasciitilde{}} % Tilde shortcut
+\newcommand{\tit}[1]{\textit{#1}} % Title of a work
+\newcommand{\tsub}[1]{\fakesubscript{#1}} % Subscript
+\newcommand{\tsup}[1]{\fakesuperscript{#1}} % Superscript
+\newcommand{\zwsp}{\mbox{​}} % Zero-width space (ZWSP)
 
 \newcommand{\ayr}[1]{\zwsp\smash{{\Tagati #1}}} % Plain Ayeri orthography
 \newcommand{\rayr}[2]{\zwsp\smash{{\Tagati #1}} \emph{#2}} % Ayeri orthography + *r*omanization
