@@ -190,9 +190,9 @@ of both the progressive and the dynamic marker.} Consider also the following
 example in which \rayr{miNF}{ming} is inflected like a regular verb:
 
 \ex\begingl
-	\gla Da-mingya ang~Diyan. //
-	\glb Da-ming-ya ang~Diyan. //
-	\glc so=can-\TsgM{} \Aarg{}=Diyan //
+	\gla Da-mingya ang Diyan. //
+	\glb Da-ming-ya ang Diyan. //
+	\glc so=can-\TsgM{} \Aarg{} Diyan //
 	\glft `Diyan can (do it).' //
 \endgl\xe
 
@@ -213,9 +213,9 @@ and which subcategorize words rather than phrases
 past tense and three degrees of future tense, for example:
 
 \ex\begingl
-	\gla Ang səsarāyn ya~Makapetang. //
-	\glb Ang sə-sara-ayn.Ø ya=Makapetang //
-	\glc \AgtT{} \Fut{}-go=\Fpl{}.\Top{} \Loc{}=Makapetang //
+	\gla Ang səsarāyn ya Makapetang. //
+	\glb Ang sə-sara-ayn.Ø ya Makapetang //
+	\glc \AgtT{} \Fut{}-go=\Fpl{}.\Top{} \Loc{} Makapetang //
 	\glft `We will go to Makapetang.' //
 \endgl\xe
 
@@ -230,9 +230,9 @@ reflexive\index{pronouns!reflexive} marker \xayr{sitNF/}{sitang-}{self}:
 % \pex
 % \a\begingl
 \ex\begingl
-	\gla Da-mingya ang~Diyan. //
-	\glb Da-ming-ya ang~Diyan. //
-	\glc so=can-\TsgM{} \Aarg{}=Diyan //
+	\gla Da-mingya ang Diyan. //
+	\glb Da-ming-ya ang Diyan. //
+	\glc so=can-\TsgM{} \Aarg{} Diyan //
 	\glft `Diyan can (do it).' //
 \endgl
 % 
@@ -484,6 +484,7 @@ however, is not a productive derivation strategy.
 \subsection{Suprasegmental modification}
 \index{suprasegmental}
 
+\index{morphophonology!of relative pronouns}
 As written above (\autoref{doublerel}), the case agreement on a complex-marked 
 relative pronoun\index{pronouns!relative} can drop out under certain 
 circumstances and is replaced by compensatory stress on the secondary case 
@@ -833,7 +834,94 @@ position under normal circumstances, it has to lengthen to \rayr{naa}{nā}.
 
 
 \section{Marking strategies}
+\index{marking strategies}
+\index{dependent marking}
 
-…
+With regards to the dichotomy head--dependent marking, Ayeri is dependent 
+marking. This is exhibited, for instance, in the expression of possessive 
+relationships, where the dependent is marked for genitive 
+case\index{cases!genitive}:
+
+\begin{multicols}{2}
+\pex
+\a\label{ex:gennoun}\begingl
+	\glpreamble \begin{forest}
+	where n children=0{tier=word,font=\itshape}{}
+	[NP
+		[N° [{dema},name=head]]
+		[NP
+			[N' [{na Tuvo},name=dependent,roof]]
+		]
+	]
+	\node at (current bounding box.south) [below=0pt of head]
+		{\textsc{\tiny head}};
+	\node at (current bounding box.south) [below=0pt of dependent] 
+		{\textsc{\tiny dependent}};
+	\end{forest} //
+	\gla dema na Tuvo //
+	\glb dema na Tuvo //
+	\glc aunt \Gen{} Tuvo //
+	\glft `Tuvo's aunt' //
+\endgl
+
+\a\label{ex:genprn}\begingl
+	\glpreamble \begin{forest}
+	where n children=0{tier=word,font=\itshape}{}
+	[NP
+		[N'
+			[N°[{kasu},name=head]]
+			[NP 
+				[N' [{barieri},roof]]
+			]
+		]
+		[Det [{nā},name=dependent]]
+	]
+	\node at (current bounding box.south) [below=0pt of head]
+		{\textsc{\tiny head}};
+	\node at (current bounding box.south) [below=0pt of dependent] 
+		{\textsc{\tiny dependent}};
+	\end{forest} //
+	\gla kasu barieri nā //
+	\glb kasu bari-eri nā //
+	\glc basket meat-\Ins{} \Fsg{}.\Gen{} //
+	\glft `my basket of meat' //
+\endgl
+
+\xe
+\end{multicols}
+
+In (\ref{ex:gennoun}), \rayr{tuvo}{Tuvo} is grammatically in possession of her 
+\xayr{dem}{dema}{aunt}; the possessee forms the head of the phrase while it is 
+modified by the possessor, which receives the marking. In (\ref{ex:genprn}), 
+\xayr{ksu}{kasu}{basket} forms the head and thus also the possessee while 
+\xayr{naa}{nā}{my} serves as the possessor and thus as the dependent possessor; 
+the genitive case is, again, marked on the dependent. A further example of 
+dependent marking is that the locative case is marked on the prepositional 
+object while the preposition itself does not receive marking:
+
+\begin{multicols}{2}
+\ex\label{ex:loc}
+\begingl
+	\gla agonan minkayya //
+	\glb agonan minkay-ya //
+	\glc outside village-\Loc{} //
+	\glft `outside of the village' //
+\endgl
+\xe
+
+\smaller\begin{forest}
+where n children=0{tier=word,font=\itshape}{}
+[PP
+	[P° [{agonan},name=head]]
+	[NP
+		[N' [{minkayya},name=dependent,roof]]
+	]
+]
+\node at (current bounding box.south) [below=0pt of head]
+	{\textsc{\tiny head}};
+\node at (current bounding box.south) [below=0pt of dependent] 
+	{\textsc{\tiny dependent}};
+\end{forest}
+\end{multicols}
 
 \index{typology!of morphemes|)}
