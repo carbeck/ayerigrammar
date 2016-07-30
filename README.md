@@ -17,6 +17,8 @@ Table of Contents
 Currently working on:
 
 * Morphological Typology
+* Grammatical Categories
+  1. Nouns
 
 Compiling
 =========
