@@ -1,0 +1,156 @@
+% kate: word-wrap true;
+
+\chapter{Grammatical categories}
+
+While the previous chapter was about general mechanisms of marking in Ayeri, 
+this chapter will dive into the various parts of speech in order to define 
+their morphology with a closer look. I will begin with nouns as the main 
+carriers of meaning, then deal with other parts of speech that regularly 
+feature in the noun phrase---pronouns, adjectives, and adpositions. Following 
+this, there will be a discussion of verbs and adverbs before moving on to 
+conjunctions.
+
+\section{Nouns}
+\index{nouns|(}
+
+Nouns in Ayeri have \emph{gender} and \emph{number} as their inherent 
+grammatical properties. Besides common nouns, there are, of course, also proper 
+nouns (i.e. names) and deverbal nouns.
+
+\subsection{Gender}
+\index{gender|(}
+
+Grammatical gender in Ayeri consists of two tiers which are subdivided into 
+four classes based on a mixture of semantic and epistemic properties:
+
+\begin{figure}[h]
+\caption{Grammatical genders in Ayeri}\centering
+\begin{forest}
+where n children=0{tier=word}{}
+[grammatical gender
+	[animate
+		[masculine]
+		[feminine]
+		[neuter]
+	]
+	[inanimate]
+]
+\end{forest}
+\label{fig:gramgend}
+\end{figure}
+
+The animate gender refers, broadly speaking, to entities that are considered 
+alive or are closely associated with living entities, such as events, concepts, 
+or activities executed by living things. The `masculine' and `feminine' 
+subcategories are applied to humans, animals whose sex is known (for example on 
+behalf of breeding them or keeping them as pets), and gods---basically anything 
+that shows sexual dimorphism or is assumed to be an exponent of it as well as 
+nouns referring to such entities in a functional way, for instance, 
+\xayr{bdnF}{badan}{father} and \xayr{maav}{māva}{mother}. The remainder falls 
+into the `neuter' category---plants, for instance, body parts, or animals whose 
+sex is unknown. The `inanimate' category typically contains objects such as 
+tools or materials. And animals and plants change their category to inanimate 
+as well if they serve as food. There are exceptions to either group, where 
+elements appear in them for no obviously discernable reason. In order to 
+illustrate, here are a few examples for each category:
+
+\pex
+	\a Animate masculine:\\
+		\xayr{\larger bdnF}{badan}{father}, 
+		\xayr{\larger netu}{netu}{brother}, 
+		\xayr{\larger AguynF}{aguyan}{rooster}, 
+		\rayr{\larger AgYaanF}{Ajān}, 
+		\rayr{\larger ltunF}{Latun};
+		% FIXME: bull? stallion? dog?
+	
+	\a Animate feminine:\\
+		\xayr{\larger maav}{māva}{mother}, 
+		\xayr{\larger kin}{kina}{sister}, 
+		\xayr{\larger Aguvj}{aguvay}{hen}, 
+		\rayr{\larger mh}{Maha}, 
+		\rayr{\larger tFraanj}{Trānay};
+		% FIXME: cow? mare? bitch?
+	
+	\a Animate neuter:\\
+		\xayr{\larger AdNF}{adang}{palm tree},
+		\xayr{\larger bino}{bino}{color},
+		\xayr{\larger IkmF}{ikam}{deer},
+		\xayr{\larger kdaanF}{kadān}{harvest},
+		\xayr{\larger tYaanF}{cān}{love},
+		\xayr{\larger nN}{nanga}{house}, 
+		\xayr{\larger tMpu}{tampu}{luck},
+		\xayr{\larger yil}{yila}{foot};
+	
+	\a Inanimate:\\
+		\xayr{\larger AhlF}{ahal}{sand},
+		\xayr{\larger hem}{hema}{egg},
+		\xayr{\larger khnF}{kahan}{spear},
+		\xayr{\larger meluNF}{melung}{yogurt},
+		\xayr{\larger nusaanF}{nusān}{damage},
+		\xayr{\larger pyutaanF}{payutān}{mathematics}.
+\xe
+
+There are also a number of doublets like French \fw{le livre} `the book' and 
+\fw{la livre} `the pound', for instance, \ayr{bnnF} \fw{banan} (an.) `kindness, 
+charity' or \ayr{bino} \fw{bino} (an.) `color' on the one hand, and 
+\ayr{bnnF} \fw{banan} (inan.) `quality' or \ayr{bino} \emph{bino} (inan.) 
+`paint' on the other. Gender is reified by case marking as well as verb 
+agreement; it is not possible to read the gender of a noun from its phonological 
+makeup. The following example illustrates differences in case marking and 
+agreement:
+
+\pex\label{ex:gender1}
+\a\label{ex:gender1a}\begingl
+	\gla Ang konja badan hemaley. //
+	\glb Ang kond-ya badan-Ø hema-ley //
+	\glc \AgtT{} eat-\TsgM{} father-\Top{} egg-\PargI{} //
+	\glft `Father eats an egg.' //
+\endgl
+
+\a\label{ex:gender1b}\begingl
+	\gla *Eng konje badan hemās. //
+	\glb *Eng kond-ye badan-Ø hema-as //
+	\glc *\AgtTI{} eat-\TsgF{} father-\Top{} egg-\Parg{} //
+\endgl
+\xe
+
+\pex~\label{ex:gender2}
+\a\label{ex:gender2a}\begingl
+	\gla Sa tombara kahanreng burang. //
+	\glb Sa tomb-ara kahan-reng burang-Ø //
+	\glc \PatT{} kill-\TsgI{} spear-\AargI{} animal-\Parg{} //
+	\glft `The animal, the spear kills it.' //
+\endgl
+
+\a\label{ex:gender2b}\begingl
+	\gla *Le tombyo kahanang burang. //
+	\glb *Le tomb-yo kahan-ang burang-Ø //
+	\glc *\PatTI{} kill-\TsgN{} spear-\AargI{} animal-\Top{} //
+\endgl
+\xe
+
+In both example groups, (\ref{ex:gender1}) and (\ref{ex:gender2}), we first see 
+a grammatical sentence with its respective case marking on nouns and verb 
+agreement and then the same sentence with everything reversed to the opposite 
+tier. In (\ref{ex:gender1a}), the noun in the agent NP 
+\xayr{bdnF}{badan}{father} bears the features 
+\textsc{[+\,animate +\,masculine]}, which triggers the animate agent topic 
+agreement marker \rayr{ANF}{ang} on the verb, since the agent NP is also 
+topicalized, and the verb agrees with the person marker \rayr{/y}{-ya} 
+for third person singular masculine. The object of the sentence, 
+\xayr{hem}{hema}{egg}, on the other hand bears the feature 
+\textsc{[–\,animate]}, so it receives the inanimate patient case marker 
+\rayr{/lej}{-ley} rather than its animate counterpart \rayr{/AsF}{-as}. In 
+(\ref{ex:gender2a}), on the other hand, we have a \textsc{[–\,animate]} agent, 
+\xayr{khnF}{kahan}{spear}, so the verb agrees with the marker \rayr{/ar}{-ara} 
+for third person singular inanimate rather than its animate 
+neuter counterpart \rayr{/yo}{-yo}. That the agent of the clause is inanimate 
+is also shown in the NP's case marking: \rayr{khnF}{kahan} carries the marker 
+\rayr{/reNF}{-reng} which marks it as an inanimate agent. The object of the 
+sentence, \xayr{burNF}{burang}{animal}, is also the topic, hence the verb 
+agrees with the marker \rayr{s}{sa} for the feature \textsc{[+\,animate]} 
+rather than its inanimate counterpart \rayr{le}{le}.
+
+\index{gender|)}
+
+\index{nouns|)}
