@@ -851,8 +851,9 @@ position under normal circumstances, it has to lengthen to \rayr{naa}{nā}.
 \index{marking strategies}
 \index{dependent marking}
 
-With regards to the dichotomy head--dependent marking, Ayeri is very 
-thoroughly dependent marking. This is exhibited, for instance, in the expression 
+With regards to the dichotomy head--dependent marking, Ayeri is rather  
+thoroughly dependent marking, albeit with the exception of agreement 
+morphology on the verb. This is exhibited, for instance, in the expression 
 of possessive relationships, where the dependent is marked for genitive 
 case\index{cases!genitive}:
 
@@ -911,7 +912,8 @@ modified by the possessor, which receives the marking. In (\ref{ex:genprn}),
 \xayr{naa}{nā}{my} serves as the possessor and thus as the dependent possessor; 
 the genitive case is, again, marked on the dependent. A further example of 
 dependent marking is that the locative case is marked on the prepositional 
-object while the preposition itself does not receive marking:
+object while the preposition itself, as the head of the PP, does not receive 
+marking:
 
 \begin{multicols}{2}
 \ex\label{ex:loc}
@@ -939,8 +941,12 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 \end{multicols}
 
 The relativizer, likewise, may agree in case with the noun phrase in the matrix 
-clause which it modifies:
+clause to which it links the relative clause. This typically happens if the 
+relativizer, at the surface level of the sentence, cannot be immediately 
+adjacent to the NP which the relative clause modifies, for example, when an 
+adjective or a possessive pronoun is following the noun:
 
+%\begin{minipage}[t][11em][t]{\linewidth}
 \begin{multicols}{2}
 \ex
 \begingl
@@ -969,7 +975,98 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 	{\textsc{\tiny head}};
 \node at (current bounding box.south) [below=0pt of dependent] 
 	{\textsc{\tiny dependent}};
+%
+\coordinate [below=1em of head] (A);
+\coordinate [below=1.75em of head] (B);
+\coordinate [below=1.75em of dependent] (C);
+\coordinate [below=1em of dependent] (D);
+\draw [-latex] (A) -- (B) -- (C) -- (D);
+\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape case agreement};
 \end{forest}
 \end{multicols}
+%\end{minipage}
+
+The only instance of head-marking there is in Ayeri is person-marking on the 
+verb, which may happen either by way of pronominal clitics or by person 
+agreement if the NP following the verb (agent or patient) is not pronominal, 
+thus:
+
+\begin{multicols}{2}
+\ex\begingl
+	\gla Mal\textbf{ya} ang Amān. //
+	\glb Mal\textbf{-ya} ang Amān //
+	\glc sing\textbf{-\TsgM{}} \Aarg{} Amān //
+	\glft `Amān sings.' //
+\endgl\xe
+
+\smaller\begin{forest}
+where n children=0{tier=word,edge=dotted,font=\itshape}{}
+[{Malya}, for tree={calign=first}
+	[{Mal\textbf{ya}}, name=head]
+	[{ang Amān}, for tree={calign=first}
+		[{ang Amān}, name=dependent]
+	]
+]
+\node at (current bounding box.south) [below=0pt of head]
+	{\textsc{\tiny head}};
+\node at (current bounding box.south) [below=0pt of dependent] 
+	{\textsc{\tiny dependent}};
+%
+\coordinate [below=1em of dependent] (A);
+\coordinate [below=1.75em of dependent] (B);
+\coordinate [below=1.75em of head] (C);
+\coordinate [below=1em of head] (D);
+\draw [-latex] (A) -- (B) -- (C) -- (D);
+\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape person agreement};
+\end{forest}
+
+\end{multicols}
+
+Sentences containing more than one NP also have topic marking on the verb, so 
+that the verb agrees with one of the NPs in topicality. This may be the NP it 
+has person agreement with or any other NP. The topicalized NP as a dependent 
+of the verb is, in turn, zero-marked, so that the marking relationship for 
+topics is bilateral and thus mixed:
+
+\begin{multicols}{2}
+\ex[glspace=0.4em]\begingl
+	\gla \textbf{Sa} manya ang Ajān \textbf{{}} \textbf{Pila}. //
+	\glb \textbf{Sa} man-ya ang Amān \textbf{Ø} \textbf{Pila} //
+	\glc \textbf{\PatT{}} greet-\TsgM{} \Aarg{} Ajān \textbf{\Top{}} 
+		\textbf{Pila} //
+	\glft `Pila, Ajān greets her.' //
+\endgl\xe
+
+\smaller\begin{forest}
+where n children=0{tier=word,edge=dotted,font=\itshape}{}
+[{Sa manya}, for tree={calign=first}
+	[{\textbf{Sa} manya}, name=head]
+	[{ang Ajān}, for tree={calign=first}
+		[{ang Ajān}]
+	]
+	[{Pila}, for tree={calign=first}
+		[{\textbf{Ø Pila}}, name=dependent]
+	]
+]
+\node at (current bounding box.south) [below=0em of head]
+	{\textsc{\tiny head}};
+\node at (current bounding box.south) [below=0em of dependent] 
+	{\textsc{\tiny dependent}};
+%
+\coordinate [below=1em of dependent] (A);
+\coordinate [below=1.75em of dependent] (B);
+\coordinate [below=1.75em of head] (C);
+\coordinate [below=1em of head] (D);
+\draw [-latex] (A) -- (B) -- (C) -- (D);
+\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape topic agreement};
+\end{forest}
+
+\end{multicols}
+
+In this example, the verb exhibits canonic agreement with the agent, 
+\rayr{AgYaanF}{Ajān}, in person and number. It is additionally marked for 
+a patient topic, \rayr{pil}{Pila}, and thus serves as an agreement topic for 
+two different controller NPs. The agreement relation is of a different kind
+for each of the two NPs, however.
 
 \index{typology!of morphemes|)}
