@@ -367,8 +367,11 @@ diacritics; and then, lastly, superscript diacritics.
 
 \subsection{Subscript diacritics}
 
-\begin{sidewaysfigure}[p]
-\caption{Bottom-attaching diacritics}
+%\begin{sidewaysfigure}[p]
+\afterpage{%
+\clearpage%
+\begin{landscape}\centering
+\captionof{figure}{Bottom-attaching diacritics}
 \begin{tabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[16l] X[12l]}
 \toprule
 \tableheaderfont
@@ -459,7 +462,10 @@ diacritics; and then, lastly, superscript diacritics.
 \bottomrule
 \end{tabu}
 \label{fig:thdiabot}
-\end{sidewaysfigure}
+\end{landscape}
+\clearpage%
+}
+%\end{sidewaysfigure}
 
 \autoref{fig:thdiabot} shows the bottom-attaching diacritics. The `large 
 diacritics' cause the secondary slot of consonants to move down below the 

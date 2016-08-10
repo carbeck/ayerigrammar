@@ -15,8 +15,12 @@ stress patterns and intonation will close the chapter.
 \label{subsec:consonants}
 
 \index{consonants|(}%
-\begin{sidewaysfigure}[p]
-\caption[Consonant inventory]{Consonant inventory (divergent orthography in pointed brackets)}
+% \begin{sidewaysfigure}[p]
+\afterpage{%
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{landscape}\centering
+\captionof{figure}[Consonant inventory]{Consonant inventory (divergent 
+orthography in pointed brackets)}
 \begin{tabu} to \linewidth {H[2l] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \toprule\tableheaderfont
 	%
@@ -96,7 +100,10 @@ Approximants
 \bottomrule
 \end{tabu}
 \label{fig:consonants}
-\end{sidewaysfigure}
+\end{landscape}
+\clearpage
+}
+%\end{sidewaysfigure}
 
 At 17 consonants, Ayeri has a \textquote{moderately small} inventory, according 
 to \citet{wals1}. \autoref{fig:consonants} shows the full chart of consonant 
@@ -551,9 +558,12 @@ examples for each number of syllables per word:
 		followers} (follow-\Agtz-\Pl{}-\Aarg{}=all).
 \xe
 
-\begin{sidewaystable}[pth]\centering
-\caption[Frequency of syllable types per word]{Frequency of syllable types per 
-word (n\,=\,5500)}
+%\begin{sidewaystable}[pth]\centering
+\afterpage{%
+\clearpage% Flush earlier floats (otherwise order might not be correct)
+\begin{landscape}\centering
+\captionof{table}[Frequency of syllable types per word]{Frequency of syllable 
+types per word (n\,=\,5500)}
 \begin{tabu} to \linewidth{H X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \tableheaderfont\toprule
 Type
@@ -696,7 +706,10 @@ Total
 \bottomrule
 \end{tabu}
 \label{tab:syltype}
-\end{sidewaystable}
+%\end{sidewaystable}
+\end{landscape}
+\clearpage% Flush page
+}
 
 \autoref{tab:syltype} shows the frequencies of syllable 
 types\index{syllable!types} by position in a word. It is important to note here 
@@ -3435,8 +3448,11 @@ instance, \xayr{kusNF/kusNF}{kusang-kusang}{model}, from
 along with their stress patterns. As a reference for the various rules in 
 operation, consider the list above (p.~\pageref{2sylsumm}).
 
-\begin{sidewaysfigure}[p]
-\caption{Examples of stress patterns in compounds}
+%\begin{sidewaysfigure}[p]
+\afterpage{%
+\clearpage%
+\begin{landscape}\centering
+\captionof{figure}{Examples of stress patterns in compounds}
 \begin{tabu} to \linewidth {I[2] X X[2] I X X I X X}
 \tableheaderfont\toprule
 Word
@@ -3550,7 +3566,10 @@ sapayyila
 \bottomrule
 \end{tabu}
 \label{fig:compounds}
-\end{sidewaysfigure}
+\end{landscape}
+\clearpage%
+}
+%\end{sidewaysfigure}
 
 The first word, \rayr{ApnF/ApnF}{apan-apan}, is not very noteworthy but I 
 included it nonetheless as a reference for regular stress assignment to light 

@@ -184,9 +184,13 @@
 \usepackage{longtable}
 \usepackage{tabu}
 \usepackage{booktabs}
-\usepackage{rotating}
-% \usepackage{pdflscape} % alternative to rotating; rotates pages on screen
+% \usepackage{rotating}
 % \usepackage{multirow}
+
+% Dealing with page-size tables in landscape format
+% http://tex.stackexchange.com/a/19021/60686, and hat tip to Git user Zoqaeski:
+\usepackage{pdflscape} % alternative to rotating; rotates pages on screen
+\usepackage{afterpage} % put things after the page they're defined on
 
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
