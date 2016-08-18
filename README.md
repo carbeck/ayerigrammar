@@ -13,12 +13,14 @@ Table of Contents
    2. Phonotactics
    3. Notes on Prosody
 2. Writing System
+3. Morphological Typology
 
 Currently working on:
 
-* Morphological Typology
 * Grammatical Categories
   1. Nouns
+
+The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong.
 
 Compiling
 =========
