@@ -572,11 +572,11 @@ one), for instance:
 	\glft `My ears hurt.' //
 \endgl
 
-\a\begingl
+\a\label{ex:gensubj}\begingl
 	\gla Na nupareng tang nā men. //
 	\glb Na nupa=reng tang-Ø nā men //
 	\glc \GenT{} hurt=\TsgI{}.\Aarg{} ears-\Top{} \Fsg{}.\Gen{} one //
-	\glft `One of my ears, it hurts.' //
+	\glft `Of my ears, it hurts one.' //
 \endgl
 \xe
 
@@ -833,14 +833,14 @@ patient. Animate patients are marked by \rayr{/AsF}{-as}, inanimate ones by
 
 \pex~
 \a\begingl
-	\gla Ang rimaye {} Briha \textbf{kunangley} //
+	\gla Ang rimaye {} Briha \textbf{kunangley}. //
 	\glb Ang rima-ye Ø Briha \textbf{kunang-ley} //
 	\glc \AgtT{} close-\TsgF{} \Top{} Briha \textbf{door-\PargI{}} //
 	\glft `Briha closes a/the door.' //
 \endgl
 
 \a\begingl
-	\gla \textbf{Le} rimaye ang Briha \textbf{kunang} //
+	\gla \textbf{Le} rimaye ang Briha \textbf{kunang}. //
 	\glb \textbf{Le} rima-ye ang Briha \textbf{kunang-Ø} //
 	\glc \textbf{\PatTI{}} close-\TsgF{} \Aarg{} Briha 
 		\textbf{door-\Top{}} //
@@ -878,14 +878,24 @@ direction of action:
 This example shows that the case of the NP will not change, however, the 
 verb will: it now agrees with the next argument in line, the patient NP. It will 
 not do so, however, if the order of arguments is just scrambled, as 
-exemplified by the following example. This is to say that the verb does not 
+exemplified by (\ref{ex:verbscram}). This is to say that the verb does not 
 simply agree with whichever NP follows it, even if it can be assumed that verb 
 agreement in Ayeri developed along similar lines in-world, which will become 
-especially apparent in the discussion of pronouns. 
+especially apparent in the discussion of pronouns.\footnote{Mismatches in 
+agreement in connection to scrambling such as exemplified by 
+(\ref{ex:scramfalse}) are to be expected, however, since the brain can only 
+handle so much information between the controller and the target of an 
+agreement relationship. \citet{corbett2006}, notes that with regards to 
+agreement in NP conjuncts, \textcquote[62]{corbett2006}{distant agreement is 
+rare, and that agreement with the nearest noun phrase or agreement with all 
+(resolution) is much more common}. If there were an extensive corpus of 
+texts written by Ayeri speakers, it might be interesting to gather statistics 
+on the number of words between target and controller in relation to the 
+prevalence of agreement mismatches.}
 
 \tikzstyle{every picture}+=[remember picture]
-\pex[aboveglftskip=2em]
-\a\begingl
+\pex[aboveglftskip=2em]\label{ex:verbscram}
+\a\label{ex:scramcorr}\begingl
 	\gla Sa manye {} Taryan ang Briha. //
 	\glb Sa man-ye Ø Taryan ang Briha //
 	\glc \PatT{} greet\tikz\node[na](target){-\TsgF{}}; \Top{} Taryan 
@@ -894,11 +904,12 @@ especially apparent in the discussion of pronouns.
 		or: `Taryan, Briha greets him.' //
 \endgl
 
-\a\begingl
+\a\label{ex:scramfalse}\begingl
 	\gla *Sa manya {} Taryan ang Briha. //
 	\glb Sa man-ya Ø Taryan ang Briha //
-	\glc \PatT{} greet-\TsgM{} \Top{} Taryan \Aarg{} Briha //
-\xe
+	\glc \PatT{} greet\tikz\node[na](target2){-\TsgM{}}; \Top{} 
+		\tikz\node[na](controller2){Taryan}; \Aarg{} Briha //
+\endgl\xe
 \begin{tikzpicture}[overlay]
 	\coordinate [below=.25em of controller] (A);
 	\coordinate [below=1em of controller] (B);
@@ -907,11 +918,19 @@ especially apparent in the discussion of pronouns.
 	\draw [-latex] (A) -- (B) -- (C) -- (D);
 	\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape person 
 		agreement};
+	
+	\coordinate [below=.25em of controller2] (A);
+	\coordinate [below=1em of controller2] (B);
+	\coordinate [below=1em of target2] (C);
+	\coordinate [below=.25em of target2] (D);
+	\draw [-latex, dotted] (A) -- (B) -- (C) -- (D);
+	\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape *person 
+		agreement};
 \end{tikzpicture}
-%
-Besides being the default case for objects, the patient case is also assigned 
-to predicative nominals, by analogy with transitive sentences and in spite of 
-the likening nature of the construction:
+
+Besides being the default case for direct objects, the patient case is also 
+assigned to predicative nominals, by analogy with transitive sentences and in 
+spite of the likening nature of the construction:
 
 \ex\begingl
 	\gla Ang Yan \textbf{nimpayās} ban. //
@@ -984,7 +1003,7 @@ theme which is passed on:
 
 As mentioned above, the dative can also take on an allative meaning insofar as 
 it marks the target of a motion, as displayed in (\ref{ex:datloc}). As an 
-extention of this purpose, the adpositional object may as well appear in the 
+extention of this means, the adpositional object may as well appear in the 
 dative, since Ayeri cannot distinguish, for instance, `up' from `to the top of' 
 with just the preposition, in this case \xayr{liNF}{ling}{on top of}. With the 
 adpositional object in the locative case (see below), the phrase in 
@@ -1025,14 +1044,14 @@ the genitive case.
 
 \pex
 \a\begingl
-	\gla Pakur ledanang \textbf{netuna} nā //
+	\gla Pakur ledanang \textbf{netuna} nā. //
 	\glb Pakur ledan-ang \textbf{netu-na} nā //
 	\glc sick friend-\Aarg{} \textbf{brother-\Gen{}} \Fsg{}.\Gen{} //
 	\glft `My brother's friend is sick.' //
 \endgl
 
 \a\begingl
-	\gla Kopo dilengyereng \textbf{ajānena} //
+	\gla Kopo dilengyereng \textbf{ajānena}. //
 	\glb Kopo dileng-ye-reng \textbf{ajān-ena} //
 	\glc difficult rule-\Pl{}-\AargI{} \textbf{game-\Gen{}} //
 	\glft `The rules of the game are difficult.' //
@@ -1057,7 +1076,7 @@ the genitive case.
 \xe
 
 Futhermore, Ayeri does not make a distinction between alienable and inalienable 
-possession, so that typically inalienable entities such as body parts, 
+possession, so that typically inalienable things such as body parts, 
 relatives and family members, or personal items and tools are all treated 
 as described above. Consider the following example for illustration:
 
@@ -1112,21 +1131,21 @@ referents in the locative.
 
 \pex\label{ex:locplain}
 \a\label{ex:locnedra}\begingl
-	\gla Ang nedraya paray \textbf{hinya} //
+	\gla Ang nedraya paray \textbf{hinya}. //
 	\glb Ang nedra-ya paray-Ø \textbf{hin-ya} //
 	\glc \AgtT{} sit-\TsgM{} cat-\Top{} \textbf{box-\Loc{}} //
 	\glft `The cat sits in the box.' //
 \endgl
 
 \a\label{ex:locnara}\begingl
-	\gla Ang naraya {} Ajān \textbf{ya} \textbf{Kaman} //
+	\gla Ang naraya {} Ajān \textbf{ya} \textbf{Kaman}. //
 	\glb Ang nara-ya Ø Ajān \textbf{ya} \textbf{Kaman} //
 	\glc \AgtT{} speak-\TsgM{} \Top{} Ajān \textbf{\Loc{}} \textbf{Kaman} //
 	\glft `Ajān speaks to Kaman.' //
 \endgl
 
 \a\label{ex:locmit}\begingl
-	\gla \textbf{Ya} mica ang Kaman \textbf{{}} \textbf{Visamhinang} //
+	\gla \textbf{Ya} mica ang Kaman \textbf{{}} \textbf{Visamhinang}. //
 	\glb \textbf{Ya} mit-ya ang Kaman \textbf{Ø} \textbf{Visamhinang} //
 	\glc \textbf{\LocT{}} live-\TsgM{} \Aarg{} Kaman \textbf{\Top{}} 
 		\textbf{Visamhinang} //
@@ -1173,18 +1192,18 @@ The causative marks the cause or causer of an action, the instigator or the
 reason on behalf of which an agent is acting. It is thus similar to the agent 
 case, though it does not replace it in Ayeri; verbs do not exhibit person 
 agreement with causers even though their action logically supersedes or precedes 
-that of the agent in the embedded event. \citeauthor{dixon2000} writes that a 
+that of the agent in the embedded event. \citet{dixon2000} writes that a 
 \textcquote[30]{dixon2000}{causer refers to someone or something (which can be 
 an event or state) that initiates or controls the activity. This is the defining 
 property of the syntactic--semantic function A (transitive subject)}. According 
 to \citet[176]{comrie1989}, the causee---the agent of the event controlled by 
-the causer---normally takes the highest place in hierarchy of syntactic 
+the causer---normally takes the highest place in the hierarchy of syntactic 
 constituents that is not already filled, in this case, by the causer. This 
 observation, however, is complicated by Ayeri's more or less semantics-based 
-case marking as well as topicalization. In the following, I will simply give 
-examples of nominal marking for cause as before; a discussion of the 
-morphosyntax of Ayeri's morphological causative constructions will be deferred 
-to the section on valency-increasing operations.
+case marking as well as topicalization. In the following, I will give examples 
+of nominal marking for cause as before; a discussion of the morphosyntax of 
+Ayeri's morphological causative constructions will be deferred to the section on 
+valency-increasing operations.
 
 Causers or causes are marked by \rayr{/Is}{-isa} for common nouns; names and 
 verbal topic agreement use the marker \rayr{saa}{sā}. As stated above, verbs do 
@@ -1233,7 +1252,7 @@ This can be a tool as well as an animate being by whose help the action is
 brought about. The instrumental thus, in effect, marks secondary agents; verbs, 
 however, never show person agreement with instrumental NPs. Common nouns are 
 marked by \rayr{/ri}{-ri} when ending in a vowel and with \rayr{/Eri}{-eri} 
-when ending in a consonant; names and verbal topic agreement receive marking by 
+when ending in a consonant; names and verbal topic agreement are marked by 
 \rayr{ri}{ri}. With nouns ending in \fw{-e}, as well as the plural marker 
 \rayr{/ye}{-ye}, there is variation regarding whether \rayr{/ri}{-ri} or 
 \rayr{/Eri}{-eri} is used, so that in the case of the plural marker both 
@@ -1297,7 +1316,7 @@ in it. Note, however, that this comitative use of the instrumental is different
 from mere accompaniment. Thus, it is not possible to say
 
 \ex\label{ex:wrongcomit}\begingl
-	\gla *Ang sahaya {} Ajān \textbf{ri} \textbf{Pila} //
+	\gla *Ang sahaya {} Ajān \textbf{ri} \textbf{Pila}. //
 	\glb Ang saha-ya Ø Ajān \textbf{ri} \textbf{Pila} //
 	\glc \AgtT{} come-\TsgM{} \Top{} Ajān \textbf{\Ins{}} \textbf{Pila} //
 \endgl\xe
@@ -1310,7 +1329,7 @@ along, beside} has to be used; the prepositional object appears in the locative
 case:
 
 \ex\begingl
-	\gla Ang sahaya {} Ajān \textbf{kayvo} \textbf{ya} \textbf{Pila} //
+	\gla Ang sahaya {} Ajān \textbf{kayvo} \textbf{ya} \textbf{Pila}. //
 	\glb Ang saha-ya Ø Ajān \textbf{kayvo} \textbf{ya} \textbf{Pila} //
 	\glc \AgtT{} come-\TsgM{} \Top{} Ajān \textbf{with} \textbf{\Loc{}} 
 		\textbf{Pila} //
@@ -1438,15 +1457,15 @@ if topicalized, since the topic marker is \fw{-Ø}:
 \index{prefixes!on nouns|(}
 
 All of the nominal morphology we have so far dealt with in this section was 
-suffixing. As mentioned in the previous section 
-already (p.~\pageref{nounprefixes}), however, there are also a number of 
-prefixes that can be applied to nouns. I have just given two examples of the 
-prefix \xayr{ku/}{ku-}{like, as though} above, but \rayr{ku/}{ku-} can 
-apply not only to nouns themselves. In fact, it rather attaches to whole NPs, 
-which makes it a clitic\index{clitics} according to \citet[117]{klavans1985}, 
-and a special clitic in \citeauthor{zwicky1977}'s terminology, since no 
-corresponding full form exists in its place, comparable to the English 
-possessive clitic \fw{'s}, for instance \parencites[3, 
+suffixing. As mentioned in the previous section already 
+(p.~\pageref{nounprefixes}), however, there are also a number of prefixes that 
+can be applied to nouns. I have just given two examples of the prefix 
+\xayr{ku/}{ku-}{like, as though} above, but \rayr{ku/}{ku-} applies not only to 
+nouns themselves. In fact, it rather attaches to whole NPs, which makes it a 
+clitic\index{clitics} according to \citet[117]{klavans1985}, and a special 
+clitic in \citeauthor{zwicky1977}'s terminology, since no corresponding full 
+form exists in its place, comparable to the English possessive clitic \fw{'s}, 
+for instance \parencites[3, 
 13]{zwicky1977}[295]{zwicky1985}[510]{zwickypullum1983}. To cite from the Ayeri 
 translation of Kafka's short story \enquote{Eine kaiserliche Botschaft} again:
 
@@ -1459,10 +1478,10 @@ translation of Kafka's short story \enquote{Eine kaiserliche Botschaft} again:
 \endgl\xe
 
 In this example, we can see \rayr{ku/}{ku-} attaching to a properly inflected 
-NP adjunct. It is case-marked for agent since it can be understood to refer to 
-the verb \xayr{sjliNF/}{sayling-}{progress} in the main clause, insofar 
+NP adjunct. The NP is case-marked for agent since it can be understood to refer 
+to the verb \xayr{sjliNF/}{sayling-}{progress} in the main clause, insofar 
 \xayr{rnYaaNF pluNF}{ranyāng palung}{nobody else} can replace 
-\xayr{/yaaNF}{-yāng}{he}.
+\xayr{/yaaNF}{-yāng}{he} in the main clause.
 
 Besides \rayr{ku/}{ku-}, there are also the demonstrative prefixes 
 \xayr{d/}{da-}{such}, \xayr{Ed/}{eda-}{this}, and \xayr{Ad/}{ada-}{that}, which 
@@ -1499,7 +1518,7 @@ form exists.
 Moreover, there is a prefix \rayr{me/}{mə-} in complementary distribution with 
 the demonstrative prefixes, which adds a meaning along the lines of `just any', 
 `whatsoever', `some' to the noun. Note that this prefix is distinct from the 
-morpheme indicating an inspecific quantity.
+morpheme indicating an inspecific quantity, \xayr{/ArilF}{-aril}{some}.
 
 \pex
 \a\begingl
@@ -1539,22 +1558,22 @@ larger sample of grammars surveyed, that compounds for the largest part
 correlate with the constituent order of the language, both regarding the order 
 of verb and object and that of noun and genitive \citep[129--133]{gaeta2008}. 
 Mismatches in headedness occur, but appear to constitute the minority of cases 
-and may often be explained through historical changes in syntax; he constitutes 
+and may often be explained through historical changes in syntax; he discerns  
 for one that \textcquote[135]{gaeta2008}{morphology is not autonomous from 
 syntax}, and that secondly, \textcquote[135]{gaeta2008}{[s]yntax seems to be 
-the motor of change, which may be then reflected in compounds}, and lexical 
-conservativism causes atavisms to linger on, reflecting the syntax of earlier 
-stages of the language \citep[138--139]{gaeta2008}.
+the motor of change, which may be then reflected in compounds}, and that 
+thirdly, lexical conservativism causes atavisms to linger on, reflecting the 
+syntax of earlier stages of the language \citep[138--139]{gaeta2008}.
 
 \index{typology!of compounds}
-For the purpose of gaining at least a little insight into which compounds 
-Ayeri allows---besides endocentric compounds---I conducted a small 
+For the purpose of gaining at least a little insight into which types of 
+compounds Ayeri allows---besides endocentric compounds---I conducted a small 
 (non-exhaustive) survey based on 130 compounds from the Ayeri dictionary 
 \citep[Dictionary]{benung}; \autoref{tab:comptyp} shows the various compound 
 classes and the number of words for each. `Harmonic' and `disharmonic', 
-respectively, refer to the order of elements, which is `harmonic' if following 
-the normal constituent order of the language and `disharmonic' if it is at odds 
-with it \citep{gaeta2008}.
+respectively, refer to the order of elements; the order is `harmonic' 
+if it is following the normal constituent order of the language and 
+`disharmonic' if it is at odds with it \citep{gaeta2008}.
 
 \begin{table}[ht]
 \caption[Compounds in the Ayeri dictionary]{Compounds in the Ayeri dictionary 
@@ -1654,7 +1673,7 @@ each type.
 
 It needs to be noted that unlike Germanic languages, Ayeri does not allow 
 compounds of arbitrary length to be strung together, like in the following 
-comical but no less real example from (former) German legislation
+ridiculous but no less real example from (former) German legislation 
 \parencite[see, for instance,][]{sz:rindfleisch}:
 
 \ex\begingl\rc{German}%
@@ -1680,7 +1699,7 @@ results in a noun.
 To start with the largest group, endocentric/\fw{tatpuruṣa} compounds, the bulk 
 of these compounds combines two nouns, one of which is the head which is 
 modified by a dependent noun. As Ayeri exhibits a rather strict head-first word 
-order, it comes as no surprise, according to \citet{gaeta2008} that most of 
+order, it comes as no surprise, according to \citet{gaeta2008}, that most of 
 these compounds follow this order strictly: the second noun modifies the first, 
 which is opposite of how English, for instance, typically 
 operates:
@@ -1708,7 +1727,7 @@ the modifier and the head are various: a grape is a berry \emph{used} to
 make wine from \parencite[compare][702]{bauer2001}; vertigo is the fear 
 \emph{of} height; a mustache is a beard \fw{located} over the lips 
 \parencite[702]{bauer2001}; and a sunblind is a screen \fw{against} the 
-sun.%
+sun.
 % \footnote{Further examples include:
 % \xayr{AvnMdirunF}{avanandirun}{square root}, lit. `base-square'; 
 % \xayr{bidmihnye}{bidamihanaye}{xylophone}, lit. `block-wood-\Pl{}';
@@ -1807,8 +1826,8 @@ nominalization of \xayr{pdilF/}{padil-}{attract}, or in
 \rayr{niNMpinmF}{ningampinam}, where \xayr{niNnF}{ningan}{story} is derived 
 from the verb \xayr{niNF/}{ning-}{tell}. However, since Ayeri is head-first and 
 possessive phrases are dependent marking, genitive or other case marking would 
-be expected on the second element, not the first. Case marking on a compound 
-does not inflect just the modifier, but the whole NP:
+be expected on the second element, not the first. Case marking on a compound, 
+however, does not inflect just the modifier, but the whole NP:
 
 \ex\begingl
 	\gla Ang ningya sipikanena koyabahisena. //
@@ -1818,11 +1837,12 @@ does not inflect just the modifier, but the whole NP:
 \endgl\xe
 
 \rayr{koybhisen}{koyabahisena} in this example is not to be interpreted as 
-`book of day(s)' but as `of a journal'. Inflection between the parts of a 
+`book of day(s)' but as `of a day-book'. Inflection between the parts of a 
 compound can happen nonetheless, though. In compounds which are formed ad 
 hoc or which are otherwise transparent in their composition, inflection often 
-is deferred to the noun head instead of the edge of the compound as a whole; 
-the modifier is treated as an adjunct in this case:
+is deferred to the noun head noun instead of the edge of the compound as a 
+whole; the modifier is treated as an adjunct in this case, and stays 
+uninflected:
 
 \ex\label{ex:nouncompdiv}\begingl
 	\gla Sa trayeng tipin ralanyeri mapang yena. //
@@ -1836,7 +1856,7 @@ Besides noun modifiers, there are also compounds where the modifier is an
 adjective. In classical Sanskrit terminology, this type is called 
 \fw{karmadhāraya} \citep[698--699]{bauer2001}.\footnote{\citeauthor{bauer2001} 
 also mentions that appositional compounds like \fw{maid-servant}, \fw{woman 
-doctor} and \fw{fighter-bomber} are counted under this category 
+doctor} and \fw{fighter-bomber} are counted in this category 
 \citep[699]{bauer2001}. Ayeri, however, does not possess such formations in 
 particular.} Examples in Ayeri include:%
 % \footnote{Further examples include: 
@@ -1872,26 +1892,26 @@ hence it is not comparable, for example:
 
 \pex
 \a\begingl
-	\gla *kardangiray-eng \quad{} *kardangiray-vā //
-	\glb *kardang-iray=eng \quad{} *kardang-iray=vā //
-	\glc *school-high=\Comp{} \quad{} *school-high=\Supl{} //
-	%\glft `*higher-school', `*highest-school' //
+	\gla *kardangiray-eng \quad{} kardangiray-vā //
+	\glb kardang-iray=eng \quad{} kardang-iray=vā //
+	\glc school-high=\Comp{} \quad{} school-high=\Supl{} //
+	\glft `*higher-school' {} `*highest-school' //
 \endgl
 
 \a\begingl
 	\gla *marashati-eng \quad{} *marashati-vā //
-	\glb *maras-hati=eng \quad{} *maras-hati=vā //
-	\glc *phrase-pithy=\Comp{} \quad{} *phrase-pithy=\Supl{} //
-	%\glft `*pithier-phrase', `*pithiest-phrase' //
+	\glb maras-hati=eng \quad{} maras-hati=vā //
+	\glc phrase-pithy=\Comp{} \quad{} phrase-pithy=\Supl{} //
+	\glft `*pithier-phrase' {} `*pithiest-phrase' //
 \endgl
 
 \xe
 
-In fact, it is possible to form the expressions \rayr{krFdNirj vaa}{kardangiray 
-vā} and \rayr{mrsFhti vaa}{marashati vā}, but they mean `most universities' and 
-`most witticisms', respectively; \xayr{/ENF}{-eng}{rather} as a quantifier does 
-not combine with nouns. Since the meaning composed from noun--adjective 
-compounds is often idiomatic, they also cannot be divided as shown above in 
+In fact, it is possible to form \rayr{krFdNirj vaa}{kardangiray vā} and 
+\rayr{mrsFhti vaa}{marashati vā}, but they mean `most universities' and `most 
+witticisms', respectively; \xayr{/ENF}{-eng}{rather} as a quantifier does not 
+combine with nouns. Since the meaning composed from noun--adjective compounds is 
+often idiomatic, they also cannot be divided as shown above in 
 (\ref{ex:nouncompdiv}), since a \xayr{krFdNirj}{kardangiray}{university} is not 
 a \xayr{krFdNF}{kardang}{school} which is \xayr{Irj}{iray}{high} in the literal 
 sense, but a school of the highest tier. \rayr{krFdNen Irj}{kardangena iray} 
@@ -1969,16 +1989,16 @@ only a few of these, I will give all of them in the following example:
 		+ \ques{}\,\xayr{\larger sitNnF}{sitangan}{self}
 \xe
 
-Given the discussion of \rayr{sitNF}{sitang} above, a word among the examples 
-above that is not too clear is \rayr{tonisjtNF}{tonisaytang} which appears to 
+Given the discussion of \rayr{sitNF}{sitang} above, one word among the examples 
+above that is not too clear is \rayr{tonisjtNF}{tonisaytang}, which appears to 
 contain a deviant form of either \rayr{sitNF}{sitang} or 
 \rayr{sitNnF}{sitangan}, which is preceded by the adjective 
 \xayr{tonis}{tonisa}{assured, ascertained}.
 
 All of the previously mentioned compounds involving nominal elements formed 
-nouns, however, there are also a few compounds which are denominal in the 
-sample. This process is not productive, however, and interestingly, only 
-noun–adjective combinations appear in this group:
+nouns, though, there are also a few denominal compounds in the sample. This 
+process is not productive, however, and interestingly, only noun–adjective 
+combinations appear in this group:
 
 \pex
 	\a \xayr{\larger mirMpluj}{mirampaluy}{otherwise} \\
@@ -2017,8 +2037,8 @@ compounds in Ayeri.
 \subsubsection{Synthetic compounds}
 \index{compounds!synthetic|(}
 
-According to \citet{bauer2001}, (semi-)synthetic compounds, verbal(-nexus) 
-compounds are compounds that have \textcquote[701]{bauer2001}{been variously 
+According to \citet{bauer2001}, (semi-)synthetic compounds, or verbal(-nexus) 
+compounds, are compounds that have \textcquote[701]{bauer2001}{been variously 
 defined as being based on word-groups or syntactic constructions 
 \citep[2]{botha1984}, or as compounds whose head elements are derived from 
 verbs \citep[3607]{lieber1994}}. Examples of this type in English would include 
@@ -2026,8 +2046,9 @@ verbs \citep[3607]{lieber1994}}. Examples of this type in English would include
 that synthetic compounds have been mainly discussed with regards to Germanic 
 languages, but that according to \citet[3608]{lieber1994}, the phenomenon is 
 much more widespread. Ayeri possesses compounds like this as well, and the 
-regular case again follows the constituent order of verbs and nouns: Ayeri is a 
-VO language, and thus the verb as the head of the compound is usually found on 
+regular case again follows the constituent order, here that of verbs and nouns: 
+Ayeri is a VO language, and thus the verb as the head of the compound is usually 
+found on 
 the left side with its nominal modifier following it 
 \citep[129--133]{gaeta2008}:
 
@@ -2070,13 +2091,13 @@ whether actor or undergoer, are following.%
 % }
 
 Just as with endocentric compounds, there are a number of seeming exceptions to 
-the verb-first order of synthetic compounds as well. These are just 
-as far and few between, and whether they should all be counted as noun–verb 
-combinations is also questionable as they appear to be all formed with 
-nominalized verbs. The verbal element may thus be only indirectly verbal for 
-the purposes of compounding. If interpreted as noun--noun combinations, the 
-nominal first element would reasonably form the head again for some of the 
-below example words.
+the verb-first order of synthetic compounds as well. These are just as far and 
+few between, however, and whether they should all be counted as noun–verb 
+combinations is also questionable as they appear to all be formed with 
+nominalized verbs. The verbal element may thus be only indirectly verbal for the 
+purposes of compounding. If interpreted as noun--noun combinations, the nominal 
+first element would reasonably form the head again for some of the below example 
+words.
 
 \pex\label{ex:compvbrev}
 	\a \xayr{\larger mripuMtymF}{maripuntayam}{spread} \\
@@ -2100,7 +2121,7 @@ below example words.
 \rayr{mripuMtymF}{maripuntayam} is special in that it contains the dative 
 suffix \rayr{/ymF}{-yam} which is lexicalized as part of the word: something 
 made or intended for spreading on a surface. A few more such verbal derivations 
-can be found as well, though not compounds, among others:
+can be found, though not compounds, among others:
 
 \pex
 	\a \makebox[10.5em][l]{\xayr{\larger gFrenYmF}{grenyam}{extremity}}
@@ -2131,8 +2152,8 @@ dictionary, and not a very productive one. \citet{bauer2001} defines this class
 as having \textcquote[699]{bauer2001}{two or more words in a coordinate 
 relationship, such that the entity denoted is the totality of the entities 
 denoted by each of the elements}. He cautions that they are very easy to 
-confuse with appositional (\fw{karmadhāraya}) compounds in that both types of 
-compound allow inserting an \fw{and} between both elements. The following 
+confuse with appositional (also \fw{karmadhāraya}) compounds in that both types 
+of compound allow inserting an \fw{and} between both elements. The following 
 nominal coordinative compounds are included in the dictionary sample:
 
 \pex
@@ -2172,7 +2193,7 @@ though the component parts are not nouns:
 \xe
 
 The sample also includes the following two words, however, which are neither 
-made up from nouns nor do they form a noun in combination. Instead, they are 
+made up from nouns, nor do they form a noun in combination. Instead, they are 
 technically verbs combining to form directional adverbs and have been 
 exceptionally included here for completeness:
 
@@ -2236,8 +2257,8 @@ address, but is in a \fw{pars pro toto} relationship to it.
 
 The following words from my sample were either undeterminable as to their 
 composition due to parts of the word not being clear regarding one of their 
-constituent parts, either because I tweaked the constituent so much as to be 
-not readily recognizable anymore, or because I forgot to make an entry in the 
+constituent parts, either because I tweaked the constituent so much as to not 
+be readily recognizable anymore, or because I forgot to make an entry in the 
 dictionary, or even deleted or changed that. The words in question are the 
 following:
 
@@ -2265,22 +2286,22 @@ following:
 
 For all of the components represented by a question mark, there is no 
 corresponding dictionary entry. At least in \rayr{bjtNimnF}{baytangiman}, the 
-*\,\rayr{ImnF}{*iman} part looks as though it could be a noun due to the 
-\rayr{/AnF}{-an} nominalizer suffix. *\,\rayr{terj}{*teray} in 
+*\rayr{ImnF}{*iman} part looks as though it could be a noun due to the 
+\rayr{/AnF}{-an} nominalizer suffix. *\rayr{terj}{*teray} in 
 \rayr{terjmino}{teraymino} might also be an adjective supposed to mean `sad' 
 (which would make it an adjectival coordinative compound), although the 
 dictionary entry for that is \rayr{gidj}{giday}. Even though parts of all 
 these words are unclear, they all seem to follow the correct syntactic order, 
 judging by those parts that are identifiable. And even in the case of 
 \rayr{vetjsno}{vetaysano}, which is missing the first part, it can be 
-reasonably assumed that the identifiable part, *\,\rayr{sno}{*sano}, is the 
-modifier, and *\,\rayr{vetj}{vetay} may have once been intended to mean `money' 
+reasonably assumed that the identifiable part, *\rayr{sno}{*sano}, is the 
+modifier, and *\rayr{vetj}{vetay} may have once been intended to mean `money' 
 or `fee' or something along these lines.
 
 With the exception of \rayr{niNMbkrF}{ningambakar}, all of the mystery words 
 were entered into the dictionary in 2006. Digging through old archives and 
-translations, I could determine at least that *\,\rayr{bkrF}{*bakar} was once 
-intended to mean `lie', and *\,\rayr{terj}{*teray} was indeed meant to 
+translations, I could determine at least that *\rayr{bkrF}{*bakar} was once 
+intended to mean `lie', and *\rayr{terj}{*teray} was indeed meant to 
 mean `sad'.
 
 \index{compounds|)}
@@ -2292,13 +2313,14 @@ mean `sad'.
 reduplication serves an iconic function, 
 \textcquote[561]{wiltshiremarantz2000}{with the repetition of phonological 
 material indicating a repetition or intensity in the semantics}, so with 
-regards to nouns mainly to indicate plurality of various kinds. However, they 
-find that in fact, reduplication serves all kinds of functions, also ones 
-without iconic meanings, and mention Agta, an Austronesian language of the 
-Philippines, which uses reduplication to form diminutives 
+regards to nouns it mainly serves to indicate plurality of various kinds. 
+However, they find that in fact, reduplication serves all kinds of functions, 
+also ones without iconic meanings, and mention Agta, an Austronesian language of 
+the Philippines, which uses reduplication to form diminutives 
 \citep[6--9]{healey1960}. As we have seen in \autoref{subsec:reduplication} 
-above, so does Ayeri, which means that there is real-world evidence for this use 
-of reduplication. Examples for diminutive reduplication in Ayeri include:
+above, so does Ayeri, and it is justified in doing so since there is 
+real-world evidence for this use of reduplication. Examples for diminutive 
+reduplication in Ayeri include:
 
 \pex
 	\a \makebox[7em][l]{\xayr{\larger limu}{limu}{shirt}}
@@ -2328,7 +2350,7 @@ following examples:
 \xe
 
 There are also at least two documented cases where the reduplicated root is not 
-a noun, but the reduplication itself results in a noun:
+a noun, but the reduplication results in a noun:
 
 \pex
 	\a \makebox[10.5em][l]{\xayr{\larger kusNF}{kusang}{double (adj.)}}
@@ -2350,12 +2372,12 @@ are derived:
 
 In this example, the reduplicated noun \rayr{venej/venej}{veney-veney} is 
 marked as an agent in that the agent suffix \rayr{/ANF}{-ang} is appended to 
-the noun as a unit after reduplicating the noun stem. In other words, the 
+the noun as a unit \emph{after} reduplicating the noun stem. In other words, the 
 following formation in which the root is reduplicated along with its declension 
 suffix is ungrammatical for the purpose of forming a diminutive:
 
 \ex
-	*\,\rayr{\larger veneyNF/veneyNF}{*veneyang-veneyang}
+	*\rayr{\larger veneyNF/veneyNF}{*veneyang-veneyang}
 \xe
 
 Likewise, the reduplicated form is not treated in the way an endocentric 
@@ -2363,13 +2385,14 @@ compound would be, so case and plural marking cannot be appended to the first
 element:
 
 \ex
-	*\,\rayr{\larger veneyNF veney}{*veneyang veney}
+	*\rayr{\larger veneyNF venej}{*veneyang veney}
 \xe
 
 While ordinary nouns undergo full reduplication to form a diminutive, in 
 compounds, only the head is reduplicated, unless the compound is strongly 
-lexicalized or has an idiomatic meaning going beyond its components. The 
-following example shows the simple case of a transparent endocentric compound:
+lexicalized or has an idiomatic meaning going beyond that of its components. 
+The following example shows the simple case of a transparent endocentric 
+compound:
 
 \ex\begingl
 	\gla Ya yomayo mehir-mehirang seygo veno kay pang nanga nana. //
@@ -2398,7 +2421,7 @@ some reduplicated non-nominal roots like \xayr{kusNF}{kusang}{double} or
 \xayr{veh/}{veha-}{build} may form nouns. However, Ayeri also has some 
 dedicated morphology to derive nouns from other parts of speech. The most common 
 and highly productive way to derive a noun, is the suffix \rayr{/AnF}{-an}. 
-The examples in (\ref{ex:vb-nn}) list some derivations from verbs, and 
+The examples in (\ref{ex:vb-nn}) illustrate some derivations from verbs, and 
 (\ref{ex:adj-nn}) shows derivations from adjectives to nouns. As 
 \xayr{kuhnF}{kuhan}{oar} shows, the nominalization may have an idiomatic 
 meaning.
@@ -2426,10 +2449,9 @@ meaning.
 \xe
 
 Occasionally, it may even happen that a noun is derived from a noun with a 
-related, but sometimes more basic meaning, with the nominalizer 
-\rayr{/AnF}{-an}. This process, however, is not productive, so compared with 
-deverbalization and deadjectivization, examples of this derivation strategy are 
-few.
+related but sometimes more basic meaning using the nominalizer \rayr{/AnF}{-an}. 
+This process, however, is not productive, so compared to deverbalization and 
+deadjectivization, examples of this derivation strategy are few.
 
 \pex\label{ex:nn-nn}
 	\a \makebox[8em][l]{\xayr{\larger AgYmF}{ajam}{toy}}
@@ -2473,7 +2495,7 @@ epenthetic /a/ may be introduced to break up consonant clusters that would
 otherwise be either difficult to pronounce or violating phonotactics. When the 
 stem of the word the agentive suffix is attached to ends in a consonant or 
 /Ca/, it is also often found fused with the root, sometimes with the first /a/ 
-of \fw{-Caya} lengthening, see (\ref{ex:mayairregular}). Specifically feminine 
+of \fw{-Caya} lengthened, see (\ref{ex:mayairregular}). Specifically feminine 
 agentive nouns can be derived with the related suffix \rayr{/vy}{-vaya}; two 
 examples are given in (\ref{ex:vaya}).
 
@@ -2604,10 +2626,9 @@ modified by a possessive pronoun, \xayr{yon}{yona}{of it}. And finally, in
 \xayr{/kj}{-kay}{few}.
 
 Similar to the English example in (\ref{ex:gerundeng}), Ayeri can also derive 
-nouns from the participle of a verb to derive a noun that describes the action 
-as such---a gerund. For an example, I will again draw on my Ayeri translation 
-of Kafka's short story \enquote{Eine kaiserliche Botschaft} \citep[2, 
-14]{becker:kafka:imperial}:
+nouns from the participle of a verb describing the action as such---a gerund. 
+For an example, I will again draw on the Ayeri translation of Kafka's short 
+story \enquote{Eine kaiserliche Botschaft} \citep[2, 14]{becker:kafka:imperial}:
 
 \ex\label{ex:kafkagerund}\begingl
 	\gla … nay ang pətangongva ankyu \textbf{haruyamanas} nanang megayena 
@@ -2621,7 +2642,7 @@ of Kafka's short story \enquote{Eine kaiserliche Botschaft} \citep[2,
 		very soon.' //
 \endgl\xe
 
-Conveniently, this annotated translation again comments on the grammatical 
+The annotations to this translation contain a comment on the grammatical 
 rules which operate in this passage, more specifically also on the gerund 
 derivation \xayr{hruymnF}{haruyaman}{beating}:
 
@@ -2637,9 +2658,9 @@ We can read from this description that the participle marker in Ayeri has
 possibly been grammaticalized from the dative case marker, or that it is at 
 least synchronically homonymous. In order for case marking to operate, this 
 formation has to be nominalized, which is done the usual way by appending 
-\rayr{/AnF}{-an}, thus giving the suffix cluster \rayr{/ymnF}{-yaman} for the 
+\rayr{/AnF}{-an}, thus yielding the suffix cluster \rayr{/ymnF}{-yaman} for the 
 derivation of verbs as gerunds. If the gerund is marked for dative case, the 
-suffix cluster *\,\rayr{/ymnFymF}{*-yamanyam} basically undergoes haplology to 
+suffix cluster *\rayr{/ymnFymF}{*-yamanyam} basically undergoes haplology to 
 a simple nominalized form with the suffix cluster \rayr{/AnFymF}{-anyam}:
 
 \ex\begingl
@@ -2650,13 +2671,13 @@ a simple nominalized form with the suffix cluster \rayr{/AnFymF}{-anyam}:
 		beat-\Ptcp{}-\Nmlz{}-\Dat{} {} beat-\Nmlz{}-\Dat{} //
 \endgl\xe
 
-The comment on the translation also makes a little not on the gerund being 
+The comment on the translation also makes a little note on the gerund being 
 possible because the word is not topicalized. This is based on an old rule that 
 gerunds cannot be topicalized unless nominalized first, however, usage has 
 since changed so that earlier, \rayr{hruymF}{haruyam} would have constituted 
 the gerund form, while even by the time of translating the short story, it had 
 changed to \rayr{hruymnF}{haruyaman}. Thus, it is no surprise to see the 
-following example, from my partial translation of Saint-Exupéry's story 
+following example, from the partial translation of Saint-Exupéry's story 
 \enquote{Le petit prince} \citep[3, 13]{benung:petitprince}:
 
 \ex\label{ex:exuperygerund}\begingl
@@ -2682,9 +2703,9 @@ should not be possible. As said before, though, usage has changed.
 A rule we can gather from the above example from Saint-Exupéry is that gerunds 
 are treated as animate nouns. Since they are impersonal, they trigger neuter 
 agreement on verbs. They can also be the objects of sentences. The passage in 
-(\ref{ex:kafkagerund}) furthermore that gerunds can be modified by adjectives. 
-The following example shows a gerund used as an agent---basically a subject---as 
-well \citep{benung:scientificmethod}:
+(\ref{ex:kafkagerund}) furthermore illustrates that gerunds can be modified by 
+The following example shows a gerund used as an agent---basically a 
+subject---as well \citep{benung:scientificmethod}:
 
 \ex\label{ex:scimethgerund}\begingl
 	\gla \textbf{Dilayamanang} kalamena bahalanas ayonena … //
@@ -2709,7 +2730,7 @@ however, gerunds in Ayeri cannot be pluralized:
 
 It is possible, however, to quantify gerunds insofar as the quantifier does not 
 imply countable quantities of the action. Moreover, it is possible for gerunds 
-to be modified by possessors.
+to be modified by possessors. The following to sentences exemplify this use:
 
 \ex\begingl
 	\gla Ang lugayan \textbf{delacamanas-ikan} kayanya pang. //
@@ -2729,5 +2750,18 @@ to be modified by possessors.
 
 \index{gerund|)}
 \index{nominalization|)}
-
 \index{nouns|)}
+
+\section{Pronouns}
+\index{pronouns|(}
+
+...
+
+\subsection{Personal pronouns}
+\index{pronouns!personal|(}
+
+...
+
+\index{pronouns!personal|)}
+
+\index{pronouns|)}

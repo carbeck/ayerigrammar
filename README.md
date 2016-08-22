@@ -14,11 +14,15 @@ Table of Contents
    3. Notes on Prosody
 2. Writing System
 3. Morphological Typology
+4. Grammatical Categories
+   1. Nouns
 
 Currently working on:
 
 * Grammatical Categories
-  1. Nouns
+  2. Pronouns
+
+  
 
 The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong.
 
