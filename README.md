@@ -8,13 +8,13 @@ Table of Contents
 
 **WARNING**: This is work heavily in progress! The table of contents encompasses the following topics so far:
 
-1. Phonology
+1. Phonology `chapters/phonology.tex`
    1. Phoneme Inventory
    2. Phonotactics
    3. Notes on Prosody
-2. Writing System
-3. Morphological Typology
-4. Grammatical Categories
+2. Writing System `chapters\writing.tex`
+3. Morphological Typology `chapters\morphtyp.tex`
+4. Grammatical Categories `chapters\gramcat.tex`
    1. Nouns
 
 Currently working on:
@@ -22,9 +22,7 @@ Currently working on:
 * Grammatical Categories
   2. Pronouns
 
-  
-
-The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong.
+The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
 
 Compiling
 =========
