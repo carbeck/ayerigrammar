@@ -12,9 +12,9 @@ Table of Contents
    1. Phoneme Inventory
    2. Phonotactics
    3. Notes on Prosody
-2. Writing System `chapters\writing.tex`
-3. Morphological Typology `chapters\morphtyp.tex`
-4. Grammatical Categories `chapters\gramcat.tex`
+2. Writing System `chapters/writing.tex`
+3. Morphological Typology `chapters/morphtyp.tex`
+4. Grammatical Categories `chapters/gramcat.tex`
    1. Nouns
 
 Currently working on:
