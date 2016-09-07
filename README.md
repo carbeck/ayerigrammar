@@ -21,6 +21,7 @@ Currently working on:
 
 * Grammatical Categories
   2. Pronouns
+  3. Adjectives
 
 The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
 
