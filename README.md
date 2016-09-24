@@ -24,7 +24,7 @@ Currently working on:
   3. Adjectives
   4. Adpositions
 
-The sections not currently worked on have been proofread once by myself (I am not a native English speaker). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
+The sections not currently worked on have been proofread once by myself (I am not a native English speaker; corrections are welcome). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
 
 Compiling
 =========
@@ -42,6 +42,6 @@ Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara
 Licensing
 =========
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/) Carsten Becker, 2016.
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
