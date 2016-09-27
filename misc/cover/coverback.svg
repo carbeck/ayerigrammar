@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="384.56955"
-     inkscape:cy="302.97251"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="267.80109"
+     inkscape:cy="188.23869"
      inkscape:document-units="cm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -122,7 +122,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2679,40 +2679,52 @@
          x="-738"
          y="1159.3622" /></text>
     <g
-       id="g8965"
-       transform="translate(116.55264,-32.736913)">
+       id="g3775"
+       transform="translate(0,13.312448)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text3682-3"
+         y="816.0354"
+         x="224.46834"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';text-align:start;letter-spacing:-0.33000001px;word-spacing:11.65999985px;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff"
+           id="tspan3686-7"
+           y="816.0354"
+           x="224.46834"
+           sodipodi:role="line">Benung. The Ayeri Language Resource</tspan></text>
       <text
          sodipodi:linespacing="125%"
          id="text3672"
-         y="875.36218"
-         x="109.33319"
+         y="842.62524"
+         x="225.88583"
          style="font-style:normal;font-weight:normal;font-size:17.5px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:-0.33000001px;word-spacing:11.65999985px;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff"
-           y="875.36218"
-           x="109.33319"
+           y="842.62524"
+           x="225.88583"
            id="tspan3674"
            sodipodi:role="line"></tspan><tspan
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff"
            id="tspan3678"
-           y="897.23718"
-           x="109.33319"
+           y="864.50024"
+           x="225.88583"
            sodipodi:role="line"></tspan></text>
       <text
          xml:space="preserve"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';text-align:start;letter-spacing:-0.33000001px;word-spacing:11.65999985px;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="138.88231"
-         y="875.36218"
+         x="255.43495"
+         y="842.62524"
          id="text3682"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3684"
-           x="138.88231"
-           y="875.36218"
+           x="255.43495"
+           y="842.62524"
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff">https://benung.nfshost.com</tspan><tspan
            sodipodi:role="line"
-           x="138.88231"
-           y="897.23718"
+           x="255.43495"
+           y="864.50024"
            id="tspan3686"
            style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Italic';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff">https://github.com/carbeck/ayerigrammar/</tspan></text>
     </g>
