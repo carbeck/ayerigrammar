@@ -25,7 +25,7 @@ Currently working on:
   4. Adpositions
   5. Verbs
 
-The sections not currently worked on have been proofread once by myself (I am not a native English speaker; corrections are welcome). They should already provide useful information, but I will still make slight changes every now and then if I notice something to be wrong. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
+The sections not currently worked on have been proofread once by myself (I am not a native English speaker; corrections are welcome). They should already provide useful information, but I will still make changes every now and then if I notice something to be wrong or information to be missing. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
 
 Compiling
 =========
