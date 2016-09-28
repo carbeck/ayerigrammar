@@ -1,0 +1,75 @@
+Only:
+
+* nouns
+* adjectives
+* adverbs
+* pronouns
+* adpositions
+* conjunctions
+* numerals
+
+Not:
+
+* prefixes
+* suffixes
+
+C = (?:tʃ|dʒ|[ptkbdgmnŋvshrljw])
+V = (?:[aeɔʊ]ːɪ|[aeɔʊ]ɪ|aʊ|[ieaou]ː|[ieaouɪɛɔʊə])
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/'
+
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' initials.txt | grep -o -P '^(?:tS|dZ|[ptkbdgmnNvshrljw])+' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # initial onsets
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' initials.txt | grep -o -P '(?:[aeOU]:I|[aeOU]I|aU|[ieaou]:|[ieaouIEOU@]+)' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # initial nuclei
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' initials.txt | grep -o -P '(?:tS|dZ|[ptkbdgmnNvshrljw])+$' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # initial codas
+
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' medials.txt | grep -o -P '^(?:tS|dZ|[ptkbdgmnNvshrljw])+' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # medial onsets
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' medials.txt | grep -o -P '(?:[aeOU]:I|[aeOU]I|aU|[ieaou]:|[ieaouIEOU@]+)' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # medial nuclei
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' medials.txt | grep -o -P '(?:tS|dZ|[ptkbdgmnNvshrljw])+$' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # medial codas
+
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' finals.txt | grep -o -P '^(?:tS|dZ|[ptkbdgmnNvshrljw])+' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # final onsets
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' finals.txt | grep -o -P '(?:[aeOU]:I|[aeOU]I|aU|[ieaou]:|[ieaouIEOU@]+)' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # final nuclei
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' finals.txt | grep -o -P '(?:tS|dZ|[ptkbdgmnNvshrljw])+$' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # final codas
+
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' singles.txt | grep -o -P '^(?:tS|dZ|[ptkbdgmnNvshrljw])+' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # single onsets
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' singles.txt | grep -o -P '(?:[aeOU]:I|[aeOU]I|aU|[ieaou]:|[ieaouIEOU@]+)' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # single nuclei
+sed 'y/ɛɪɔʊəːʃʒŋ/EIOU@:SZN/' singles.txt | grep -o -P '(?:tS|dZ|[ptkbdgmnNvshrljw])+$' | sort | uniq -c | sed -r 's/^\s+//' | sed -r 's/\s/\t/' | sort -g -r | sed 'y/EIOU@:SZN/ɛɪɔʊəːʃʒŋ/' | xclip -sel c -i # single codas
+
+tʃ
+dʒ
+p
+t
+k
+b
+d
+g
+m
+n
+ŋ
+v
+s
+h
+r
+l
+j
+w
+
+aːɪ
+aɪ
+eɪ
+ɔɪ
+ʊɪ
+aʊ
+iː
+eː
+aː
+oː
+uː
+i
+e
+a
+o
+u
+ɪ
+ɛ
+ɔ
+ʊ
+ə
