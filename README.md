@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort to revise and expand on what's currently on the web as the *Ayeri Grammar* ([PDF](https://dl.dropboxusercontent.com/u/8026017/Ayeri%20grammar/grammar.pdf)), started in July 2016. I hope that by transferring things to LaTeX, the whole process of editing will become more easy to handle than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as Issues.
+This is a renewed effort, started in July 2016, to revise and to expand on what is currently on [my Ayeri website](https://benung.nfshost.com) as _A Grammar of Ayeri_ ([PDF](https://dl.dropboxusercontent.com/u/8026017/Ayeri%20grammar/grammar.pdf)). This earlier attempt has been left in a very sorry and unfinished state for over 5 years now. I hope that by transferring things to LaTeX, the whole process of editing will become more easy to handle than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as such on the [repository page](https://github.com/carbeck/ayerigrammar).
 
 Table of Contents
 =================
@@ -16,16 +16,16 @@ Table of Contents
 3. Morphological Typology `chapters/morphtyp.tex`
 4. Grammatical Categories `chapters/gramcat.tex`
    1. Nouns
-   2. Pronouns
+   2. Pronoun
+   3. Adjectives
 
 Currently working on:
 
 * Grammatical Categories
-  3. Adjectives
   4. Adpositions
   5. Verbs
 
-The sections not currently worked on have been proofread once by myself (I am not a native English speaker; corrections are welcome). They should already provide useful information, but I will still make changes every now and then if I notice something to be wrong or information to be missing. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
+The sections not currently worked on have been proofread once by myself. Note that I am not a native English speaker; corrections are thus welcome. The proofread parts should already provide useful information, however, I will still make changes every now and then if I notice something to be wrong or information to be missing. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf). I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax---discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences---is missing so far, since my approach is to go from the smallest to the largest units.
 
 Compiling
 =========
