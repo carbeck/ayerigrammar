@@ -115,12 +115,6 @@
 % Set main fonts
 \usepackage[config=mt-Junicode]{microtype}
 
-% \setmainfont{EB Garamond}[
-% 	Ligatures={TeX,NoContextual},
-% 	Numbers=Lowercase,
-% 	BoldFont={Garamond Premier Pro Semibold},
-% ]
-
 \setmainfont{Junicode}[
 	Ligatures=TeX,
 	Numbers=Lowercase,
@@ -221,7 +215,8 @@
 
 % Formatting of URLs
 \usepackage{url}
-\def\UrlFont{\normalfont\itshape}
+\urlstyle{same}
+
 
 % Ability to include graphics and dealing with footnotes in descriptions
 \usepackage{graphicx}
