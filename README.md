@@ -16,7 +16,7 @@ Table of Contents
 3. Morphological Typology `chapters/morphtyp.tex`
 4. Grammatical Categories `chapters/gramcat.tex`
    1. Nouns
-   2. Pronoun
+   2. Pronouns
    3. Adjectives
    4. Adpositions
 
