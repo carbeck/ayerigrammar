@@ -208,6 +208,10 @@
 	pdfusetitle,
 ]{hyperref}
 
+% Write "section" instead of "subsection", "subsubsection" etc.
+\let\subsectionautorefname\sectionautorefname
+\let\subsubsectionautorefname\sectionautorefname
+
 % Formatting of URLs
 % \DeclareFieldFormat{url}{\href{#1}{\itshape #1}}
 % \def\UrlNoBreaks{\do\(\do\[\do\{\do\<\do\:}
