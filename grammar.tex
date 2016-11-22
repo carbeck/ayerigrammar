@@ -261,6 +261,15 @@
 \pretocmd{\chapter}{\excnt=1}{}{}
 \lingset{Everyex=\smaller}
 
+% Third-level enumeration for expex examples,
+% cf. http://tex.stackexchange.com/a/77941
+\def\beginsubsub{%
+\par
+\begingroup
+\advance\leftskip by 2em
+\def\b##1{\par\leavevmode\llap{\hbox to 2em{##1\hfil}}\ignorespaces}}
+\def\endsubsub{\par\endgroup}
+
 % Glosses in footnotes
 \newcounter{fnexno}
 \setcounter{fnexno}{1}
