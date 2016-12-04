@@ -187,6 +187,9 @@
 \usepackage{pdflscape} % alternative to rotating; rotates pages on screen
 \usepackage{afterpage} % put things after the page they're defined on
 
+% Appendices
+\usepackage{appendix}
+
 % Custom column types
 \newcolumntype{B}{>{\bfseries}X}
 \newcolumntype{I}{>{\itshape}X}
@@ -437,13 +440,17 @@
 \input{./chapters/gramcat.tex}
 \cleartorecto
 
-%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\printbibliography
-
 %% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendix
+\cleartorecto
+
+\input{./chapters/names.tex}
+\cleartorecto
+
+%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\printbibliography
 
 %% BACK MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
