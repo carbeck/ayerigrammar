@@ -173,6 +173,12 @@
 \DeclareFieldFormat{postnote}{#1}
 \DeclareFieldFormat{multipostnote}{#1}
 
+% Print "~f." and "~ff." for \psq and \psqq, respectively
+\DefineBibliographyStrings{english}{%
+	sequens = {f.},
+	sequentes = {ff.},
+}
+
 % Things for tables; needs to be loaded *before* hyperref if footnotes in tables 
 % are supposed to work (bug in tabu where they still don't?)
 \usepackage{longtable}
