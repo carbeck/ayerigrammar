@@ -1691,6 +1691,7 @@ almost only possesses compounds involving nouns, and the majority of these also
 results in a noun.
 
 \subsubsection{Endocentric compounds}
+\label{subsubsec:endocomp}
 \index{compounds!endocentric|(}
 
 To start with the largest group, endocentric/\fw{tatpuruṣa} compounds, the bulk 
@@ -1836,10 +1837,10 @@ however, does not inflect just the modifier, but the whole NP:
 \rayr{koybhisen}{koyabahisena} in this example is not to be interpreted as 
 `book of day(s)' but as `of a day-book'. Inflection between the parts of a 
 compound can happen nonetheless, though. In compounds which are formed ad 
-hoc or which are otherwise transparent in their composition, inflection often 
-is deferred to the noun head noun instead of the edge of the compound as a 
-whole; the modifier is treated as an adjunct in this case, and stays 
-uninflected:
+hoc or which are otherwise transparent in their composition (`loose' 
+compounds\label{loosecomp}), inflection often is deferred to the noun head 
+noun instead of the edge of the compound as a whole; the modifier is treated as 
+an adjunct in this case, and stays uninflected:
 
 \ex\label{ex:nouncompdiv}\begingl
 	\gla Sa trayeng tipin ralanyeri mapang yena. //
@@ -8874,7 +8875,8 @@ following each other, as exemplified in (\ref{ex:numsgldig}).
 \index{numerals!fractions|(}
 
 \begin{figure}[tp]\centering
-\caption{Simple fractions from ¹⁄₂ to ¹⁄\tsub{\elv}}
+\caption[Simple fractions from $\frac{1}{2}$ to $\frac{1}{\elv}$]{Simple 
+fractions from ¹⁄₂ to ¹⁄\tsub{\elv}}
 \begin{tabu} to .75\linewidth {X[1c] X[2c] X[1c] X[2c]}
 \toprule\tableheaderfont
 Numeral
@@ -8987,14 +8989,67 @@ office,' cf. \nocite{beyer1992} Beyer 1992: 117). When suffixed to ordinal
 numbers this suffix forms ordinals (e.g. \fw{gsum} `three,' \fw{gsum-pa} 
 `third'; \fw{bcu} `ten,' \fw{bcu-pa} `tenth').}
 
+\begin{figure}[tp]\centering
+\caption{Basic ordinal numerals}
+\begin{tabu} to .75\linewidth {X[c] X[c] X[c] X[c]}
+\toprule\tableheaderfont
+Numeral
+	& Word
+	& Numeral
+	& Word
+	\\
+\toprule
+
+0th
+	& \rayr{dYaanF}{jān}
+	& 6th
+	& \rayr{miynF}{miyan}
+	\\
+
+1st
+	& \rayr{mennF}{menan}
+	& 7th
+	& \rayr{ItnF}{itan}
+	\\
+	
+2nd
+	& \rayr{smnF}{saman}
+	& 8th
+	& \rayr{hennF}{henan}
+	\\
+	
+3rd
+	& \rayr{kynF}{kayan}
+	& 9th
+	& \rayr{veyaanF}{veyān}
+	\\
+
+4th
+	& \rayr{ynF}{yan}
+	& \ten{}th
+	& \rayr{mlnF}{malan}
+	\\
+
+5th
+	& \rayr{Irni}{iran}
+	& \elv{}th
+	& \rayr{tmnF}{taman}
+	\\
+
+\bottomrule
+\end{tabu}
+\label{fig:ordinals}
+\end{figure}
+
 Unfortunately, neither \citet{chungetal2014} nor \citet{beyer1992} say 
 whether Classical Tibetan treats these derived forms as nouns or as numerals, 
 or whether it makes that distinction at all. In Ayeri, however, ordinals are 
 firmly treated as noun-like nominal elements due to the derivational suffix 
 \rayr{/AnF}{-an} (compare \autoref{subsec:nominalization}). Since nominals are 
-the heads of NPs, this also means that the ordinal numeral forms the head of the 
-NP it occurs in, instead of modifying the entity being counted like an ordinal 
-numeral does. This is illustrated in (\ref{ex:ord}) below.
+the heads of NPs, this also means that the ordinal numeral forms the head of 
+the NP it occurs in, instead of modifying the entity being counted like an 
+ordinal numeral does. This is illustrated in (\ref{ex:ord}) below. The paradigm 
+for the ordinal numerals from 0 to \elv\ can be found in \autoref{fig:ordinals}.
 
 \pex\label{ex:ord}
 \a\label{ex:ordanaph}\begingl
@@ -9039,9 +9094,45 @@ treated as nominals, they can also be modified by both a relative clause, as
 given, the counted entity appears as a genitive attribute, which is illustrated 
 by (\ref{ex:ordgen}).
 
-So far, only single-digit ordinals were used ...
+So far, only single-digit ordinals have been used. In order to form higher 
+ordinals, the head unit word receives the nominalizer, otherwise the number 
+word as such is nominalized with the rest trailing as a modifier. Essentially, 
+an ordinal in the `teens'\footnote{More specifically, $a \times 12^1 + b$ with 
+$\{a,b \in \textbf{Z} \mid 0 < a,b < 12^1\}$.} behaves like a `tight' noun 
+compound, while ordinals involving unit words for powers of 12 higher than 1 
+behave as `loose' compounds (compare \autoref{subsubsec:endocomp}, 
+p.~\pageref{loosecomp}). 
 
-...
+\pex
+\a\label{ex:ordtightcomp}\begingl
+	\gla Adareng kaylan-miyanley bahisyena pericanena. //
+	\glb Ada-reng kaylan-miye-an-ley bahis-ye-na perican-ena //
+	\glc that-\AargI{} {$3 \times 12^1 + 6$-\Nmlz{}-\PargI{}} 
+		day-\Pl{}-\Gen{} year-\Gen{} //
+	\glft `It is the 36th (=\,42nd) day of the year.' //
+\endgl
+
+\a\label{ex:ordloosecomp}\begingl
+	\gla Adareng menanganley kaylan-miye bahisyena. //
+	\glb Ada-reng menang-an-ley kaylan-miye bahis-ye-na perican-ena //
+	\glc that-\AargI{} {$12^2$-\Nmlz{}-\PargI{}} {$3 \times 12^1 
+		+ 6$} day-\Pl{}-\Gen{} year-\Gen{} //
+	\glft `It is the 136th (=\,186th) day of the year.' //
+\endgl
+
+\xe
+
+In (\ref{ex:ordtightcomp}), the whole numeral \rayr{kjlnF/miye}{kaylan-miye} is 
+nominalized and inflected for case, yielding 
+\rayr{kjlnF/miynFlej}{kaylan-miyanley}. This is analogous for such nouns as 
+\xayr{betjniMpurF}{betaynimpur}{grape} (literally `wine-berry'), which inflects 
+as a single unit---a `tight' compound. In (\ref{ex:ordloosecomp}), on the other 
+hand, only the first unit word, \rayr{menNF}{menang} is nominalized and 
+inflected, yielding \rayr{menNnFlej}{menanganley}. This is analgous to 
+\xayr{rlmpNF}{ralamapang}{fingernail} which is transparently made up of 
+\xayr{rlnF}{ralan}{nail} and \xayr{mpNF}{mapang}{finger} and for which only the 
+first constituent inflects, for instance, \xayr{rlnYen mpNF}{ralanyeley 
+mapang}{of the fingernails} (nail-\Pl{}-\Gen{} finger)---a `loose' compound.
 
 \index{numerals!cardinal|)}
 
