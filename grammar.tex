@@ -16,8 +16,8 @@
 % % some examples are also problematic. Use option 'showtrims' in document class 
 % % declaration above to show trim marks for where to cut the stock paper.
 % \settrimmedsize{9in}{6in}{*}
-% \semiisopage[8]
-% \setlrmargins{.5in}{1in}{*}
+% \setulmarginsandblock{1in}{*}{*}
+% \setlrmarginsandblock{*}{0.75in}{0.75}
 % \checkandfixthelayout
 
 \author{Carsten Becker}
@@ -186,6 +186,7 @@
 \usepackage{booktabs}
 \usepackage{bigstrut}
 \usepackage{adjustbox}
+% \AtBeginEnvironment{tabu}{\smaller}
 % \usepackage{rotating}
 % \usepackage{multirow}
 
