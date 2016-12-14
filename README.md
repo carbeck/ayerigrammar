@@ -26,6 +26,7 @@ Currently working on:
 * Grammatical Categories
   6. Adverbs
   7. Numerals
+  8. Conjunctions
 
 The sections not currently worked on have been proofread once by myself. Note that I am not a native English speaker; corrections are thus welcome. The proofread parts should already provide useful information, however, I will still make changes every now and then if I notice something to be wrong or information to be missing. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf). I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is missing so far, since my approach is to go from the smallest to the largest units.
 
