@@ -248,6 +248,7 @@
 % Ability to draw tree diagrams
 \usepackage[linguistics]{forest}
 \usetikzlibrary{positioning}
+\usetikzlibrary{tikzmark}
 
 % Ability to draw AVMs
 % (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
@@ -416,18 +417,26 @@
 \WithSuffix\newcommand{\rayr}*[2]{{\Tagati #1} \emph{#2}} % Ayeri orthography + *r*omanization
 \WithSuffix\newcommand{\xayr}*[3]{{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
 
-% LFG annotation stuff
-% \newcommand{\downfeat}[2]{(↓~\textsc{#1})~=~\textsc{#2}}
-% \newcommand{\downs}[1]{(↓~\textsc{#1})}
-% \newcommand{\elem}[1]{↓~$$~(↑~\textsc{#1})}
-% \newcommand{\pass}[1]{(↑~\textsc{#1})~=~↓}
-% \newcommand{\uncertain}[1]{((x~↑)~\textsc{#1})~=~↑}
-% \newcommand{\updown}{↑~=~↓}
-% \newcommand{\upfeat}[2]{(↑~\textsc{#1})~=~\textsc{#2}}
-% \newcommand{\ups}[1]{(↑~\textsc{#1})}
-% \newcommand{\xbar}[1]{#1ʹ}
-% \newcommand{\xhead}[1]{#1⁰}
+% % LFG annotation stuff
+% \newcommand{\downfeat}[2]{(↓~\textsc{#1})~=~\textsc{#2}} % (↓X) = Y
+% \newcommand{\downs}[1]{(↓~\textsc{#1})} % (↓X)
+% \newcommand{\elem}[1]{↓~$\in$~(↑~\textsc{#1})} % ↓ ∊ (↑X) 
+% \newcommand{\pass}[1]{(↑~\textsc{#1})~=~↓} % (↑X) = ↓
+% \newcommand{\uncertain}[1]{((x~↑)~\textsc{#1})~=~↑} % (x↑) X = ↑
+% \newcommand{\updown}{↑~=~↓} % ↑ = ↓
+% \newcommand{\upfeat}[2]{(↑~\textsc{#1})~=~\textsc{#2}} % (↑X) = Y
+% \newcommand{\ups}[1]{(↑~\textsc{#1})} & (↑X)
+% \newcommand{\xbar}[1]{#1ʹ} % X'
+% \newcommand{\xhead}[1]{#1⁰} % X⁰
 % 
+% % A-structure rules: \astruct[1]{2}{3} > '2 <3> 1'
+% \newcommand{\astruct}[3][]{`\emph{#2}~⟨#3⟩%
+% 	\notblank{#1}{%
+% 		~#1'}{%
+% 		'}%
+% }
+% 
+% % Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
 % \newcommand{\anno}[2][\updown{}]{%
 % 	\mbox{%
 % 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
@@ -437,6 +446,7 @@
 % 	}
 % }
 % 
+% % Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
 % \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
 % 	\mbox{\enspace%
 % 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
