@@ -150,6 +150,9 @@
 	HyphenChar=·,
 ]{Tagati Book G}
 
+% Relative font sizes
+\usepackage{relsize}
+
 % Set fonts for section headers
 \setsecheadstyle{\sffamily\Large\raggedright}
 \setsubsecheadstyle{\sffamily\bfseries\normalsize\raggedright}
@@ -246,6 +249,12 @@
 \usepackage[linguistics]{forest}
 \usetikzlibrary{positioning}
 
+% Ability to draw AVMs
+% (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
+% \usepackage{avm}
+% \avmfont{\scshape\smaller}
+% \avmvalfont{\normalfont}
+
 % Formatting of table of glossing abbreviations inspired by the example from 
 % the leipzig package manual; here changed to use a user-defined list 
 % environment, 'glossdefs' (see above).
@@ -339,6 +348,20 @@
 \newleipzig{Sat}{sat}{satellite}
 \newleipzig{Vb}{vb}{verb}
 
+% \newleipzig{Anim}{anim}{animacy}
+% \newleipzig{Case}{case}{case}
+% \newleipzig{Comp}{comp}{complement}
+% \newleipzig{Gend}{gend}{gender}
+% \newleipzig{Num}{num}{number}
+% \newleipzig{Obj}{obj}{object}
+% \newleipzig{Sobj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
+% \newleipzig{Oblq}{obl}{oblique}
+% \newleipzig{Pers}{pers}{person}
+% \newleipzig{Pred}{pred}{predicate}
+% \newleipzig{Subj}{subj}{subject}
+% \newleipzig{Tense}{tense}{tense}
+% \newleipzig{Xcomp}{xcomp}{open complement}
+
 \makeglossaries
 
 \newcommand{\AargI}{{\Aarg}.{\Inan}}
@@ -355,12 +378,13 @@
 \newcommand{\TplN}{{\Tpl}.{\N}}
 \newcommand{\TplI}{{\Tpl}.{\Inan}}
 
+% \newcommand{\Obl}[1]{\Oblq\fakesubscript{\normalfont\itshape #1}
+
 % Keyword index
 \usepackage{makeidx}
 \makeindex
 
 % Smaller font in block quotes
-\usepackage{relsize}
 \AtBeginEnvironment{quote}{\noindent\smaller}
 \AtBeginEnvironment{quotation}{\smaller}
 
@@ -391,6 +415,36 @@
 \WithSuffix\newcommand{\ayr}*[1]{{\Tagati #1}} % Plain Ayeri orthography
 \WithSuffix\newcommand{\rayr}*[2]{{\Tagati #1} \emph{#2}} % Ayeri orthography + *r*omanization
 \WithSuffix\newcommand{\xayr}*[3]{{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
+
+% LFG annotation stuff
+% \newcommand{\downfeat}[2]{(↓~\textsc{#1})~=~\textsc{#2}}
+% \newcommand{\downs}[1]{(↓~\textsc{#1})}
+% \newcommand{\elem}[1]{↓~$$~(↑~\textsc{#1})}
+% \newcommand{\pass}[1]{(↑~\textsc{#1})~=~↓}
+% \newcommand{\uncertain}[1]{((x~↑)~\textsc{#1})~=~↑}
+% \newcommand{\updown}{↑~=~↓}
+% \newcommand{\upfeat}[2]{(↑~\textsc{#1})~=~\textsc{#2}}
+% \newcommand{\ups}[1]{(↑~\textsc{#1})}
+% \newcommand{\xbar}[1]{#1ʹ}
+% \newcommand{\xhead}[1]{#1⁰}
+% 
+% \newcommand{\anno}[2][\updown{}]{%
+% 	\mbox{%
+% 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
+% 		{\smaller\smaller #1}\\
+% 		#2
+% 	\end{minipage}%
+% 	}
+% }
+% 
+% \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
+% 	\mbox{\enspace%
+% 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
+% 		#2\\[-0.33\baselineskip]%
+% 		{\smaller\smaller #1}%
+% 	\end{minipage}\enspace%
+% 	}%
+% }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -448,6 +502,9 @@
 \cleartorecto
 
 \input{./chapters/gramcat.tex}
+\cleartorecto
+
+\input{./chapters/syntax.tex}
 \cleartorecto
 
 %% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
