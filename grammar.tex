@@ -250,11 +250,46 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{tikzmark}
 
+% % Definition copied from pgfsys-common-pdf-via-dvi.def
+% % Compare http://tex.stackexchange.com/q/229500 and comments!
+% % This is currently needed to make tikzmark compile with xelatex
+% \makeatletter
+% \def\pgfsys@hboxsynced#1{%
+%   {%
+%     \pgfsys@beginscope%
+%     \setbox\pgf@hbox=\hbox{%
+%       \hskip\pgf@pt@x%
+%       \raise\pgf@pt@y\hbox{%
+%         \pgf@pt@x=0pt%
+%         \pgf@pt@y=0pt%
+%         \special{pdf: content q}%
+%         \pgflowlevelsynccm% 
+%         \pgfsys@invoke{q -1 0 0 -1 0 0 cm}%
+%         \special{pdf: content -1 0 0 -1 0 0 cm q}% translate to original coordinate system
+%         \pgfsys@invoke{0 J [] 0 d}% reset line cap and dash
+%         \wd#1=0pt%
+%         \ht#1=0pt%
+%         \dp#1=0pt%
+%         \box#1%
+%         \pgfsys@invoke{n Q Q Q}%
+%       }%
+%       \hss%
+%     }%
+%     \wd\pgf@hbox=0pt%
+%     \ht\pgf@hbox=0pt%
+%     \dp\pgf@hbox=0pt%
+%     \pgfsys@hbox\pgf@hbox%
+%     \pgfsys@endscope%
+%   }%
+% }
+% \makeatother
+
 % Ability to draw AVMs
 % (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
 % \usepackage{avm}
-% \avmfont{\scshape\smaller}
+% \avmfont{\scshape}
 % \avmvalfont{\normalfont}
+% \AtBeginEnvironment{avm}{\smaller}
 
 % Formatting of table of glossing abbreviations inspired by the example from 
 % the leipzig package manual; here changed to use a user-defined list 
