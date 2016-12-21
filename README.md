@@ -20,11 +20,11 @@ Table of Contents
    3. Adjectives
    4. Adpositions
    5. Verbs
+   6. Adverbs
 
 Currently working on:
 
 * Grammatical Categories
-  6. Adverbs
   7. Numerals
   8. Conjunctions
 
