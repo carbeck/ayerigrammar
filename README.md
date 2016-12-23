@@ -6,7 +6,7 @@ This is a renewed effort, started in July 2016, to revise and to expand on what 
 Table of Contents
 =================
 
-**WARNING**: This is work heavily in progress! The table of contents encompasses the following topics so far:
+**WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently worked on. The table of contents encompasses the following topics so far:
 
 1. Phonology `chapters/phonology.tex`
    1. Phoneme Inventory
@@ -21,11 +21,11 @@ Table of Contents
    4. Adpositions
    5. Verbs
    6. Adverbs
+   7. Numerals
 
 Currently working on:
 
 * Grammatical Categories
-  7. Numerals
   8. Conjunctions
 
 The sections not currently worked on have been proofread once by myself. Note that I am not a native English speaker; corrections are thus welcome. The proofread parts should already provide useful information, however, I will still make changes every now and then if I notice something to be wrong or information to be missing. If you're brave, you can also [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf). I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is missing so far, since my approach is to go from the smallest to the largest units.
