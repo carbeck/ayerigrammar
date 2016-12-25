@@ -79,6 +79,7 @@
 \let\RequirePackage\original@RequirePackage
 \let\usepackage\RequirePackage
 \makeatother
+\usepackage{mathtools}
 
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -286,10 +287,10 @@
 % 
 % % Ability to draw AVMs
 % % (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
-% \usepackage{avm}
-% \avmfont{\scshape}
-% \avmvalfont{\normalfont}
-% \AtBeginEnvironment{avm}{\smaller}
+\usepackage{avm}
+\avmfont{\scshape}
+\avmvalfont{\normalfont}
+\AtBeginEnvironment{avm}{\smaller}
 
 % Formatting of table of glossing abbreviations inspired by the example from 
 % the leipzig package manual; here changed to use a user-defined list 
@@ -386,19 +387,20 @@
 
 \newleipzig{AF}{af}{argument function}
 \newleipzig{DF}{df}{discourse function}
+\newleipzig{Adjc}{adj}{adjunct}
 \newleipzig{Anim}{anim}{animacy}
 \newleipzig{Case}{case}{case}
 \newleipzig{Compl}{comp}{complement}
 \newleipzig{Gend}{gend}{gender}
 \newleipzig{Num}{num}{number}
 \newleipzig{Obj}{obj}{object}
-\newleipzig{Sobj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
+\newleipzig{SObj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
 \newleipzig{Oblique}{obl}{oblique}
 \newleipzig{Pers}{pers}{person}
-\newleipzig{Pred}{pred}{predicate}
+\newleipzig{Pred}{pred}{predicator}
 \newleipzig{Subj}{subj}{subject}
 \newleipzig{Tense}{tense}{tense}
-\newleipzig{Xcomp}{xcomp}{open complement}
+\newleipzig{XCompl}{xcomp}{open complement}
 
 \makeglossaries
 
@@ -417,6 +419,7 @@
 \newcommand{\TplI}{{\Tpl}.{\Inan}}
 
 \newcommand{\Oblq}[1]{\Oblique\fakesubscript{\normalfont\itshape #1}}
+\newcommand{\OblqT}{\Oblique\fakesubscript{\normalfont\itshape θ}}
 
 % Keyword index
 \usepackage{makeidx}

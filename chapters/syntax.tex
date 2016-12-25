@@ -12,7 +12,131 @@ will be assumed here that, even though Ayeri is basically VSO with predicate
 and predication not adjacent to each other, it is configurational in that there 
 is a VP which c-commands a number of other constituents as complements in 
 transitive sentences. For an overview of the theory and its 
-notational formalisms, see \citep{buttking2015}.
+notational formalisms, see \citet{buttking2015}.
+
+In principle, \lfg{} assumes that grammar operates on different structural 
+levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
+f(unctional) structure; other layers have been proposed by different 
+researchers for different purposes \citep[862--865]{buttking2015}. 
+\citet{bresnan2016} define three core design principles for \lfg{}:
+
+\begin{description}
+\item[Variability:] \textcquote[41]{bresnan2016}{The principle of variability 
+states that \emph{external structures vary across languages}. The formal model 
+of external structure in \lfg{} is the \emph{c-structure}, which stands for 
+\enquote{constituent structure} or \enquote{categorial structure}}. 
+C-structures are commonly represented by context-free phrase-structure rules; 
+constituency trees are based on an extended version of \xbar{X} theory 
+\citep[42]{bresnan2016}.
+
+\item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality 
+states that \emph{internal structures are largely invariant across languages}. 
+The formal model of internal structure in \lfg{} is the \emph{f-structure}, 
+which stands for \enquote{functional structure}}. The f-structure is depicted 
+as an argument-value matrix (\textsc{avm}) which maps the relations between 
+`subject' (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as 
+functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs are 
+also encoded with their a-structure indicated, that is, which arguments they 
+take is formally stated \citep[15]{bresnan2016}. The f-structure lists semantic 
+features associated with words, such as case (\Case{}), person (\Pers{}), 
+number (\Num{}), which are abstract features and as such need not 
+have morphological realization \citep[43]{bresnan2016}.
+
+\item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is 
+simply not the same in all languages [...] In \lfg{} the correspondence mapping 
+between internal and external structures does not preserve sameness of form. 
+Instead, \emph{it is designed to preserve inclusion relations between the 
+information expressed by the external structure and the content of the internal 
+structure}}. Passivization, for instance, is assumed to be lexically motivated 
+as an alternation in predicate structure, rather than an internal derivational 
+process \citep[23\psqq]{bresnan2016}.
+
+\end{description}
+
+To illustrate the different parallel structures in operation, 
+\citet[15]{bresnan2016} give the following illustration concerning which part of 
+the respective a- and c-structures corresponds (`links', `maps') to which part 
+of the f-structure:
+
+\ex\begin{tabular}[t]{l @{\quad} c}
+argument (a-)structure:
+& \astruct{\tikzmark{verb}verb}{\tikzmark{x}x, \tikzmark{y}y}\bigskip \\
+
+functional (f-)strucutre:
+& \tikzmark{fstruct}\begin{avm}
+\[
+	\quad subj \tikzmark{subj} & \[
+		{\enspace}\vdots{\enspace} \\
+	\]{\quad} \\
+	
+	\quad obj \tikzmark{obj} & \[
+		{\enspace}\vdots{\enspace} \\
+	\] \tikzmark{objval}{\quad} \\
+	\quad \tikzmark{pred} pred & \dots \tikzmark{predval} \\
+\]
+\end{avm}\bigskip\\
+
+constituent (c-)structure:
+& \begin{forest} baseline
+[\xbar{V}
+	[\subnode{V}{V}]
+	[NP \tikzmark{NP}
+		[\xbar{N} \tikzmark{Nbar}]
+	]
+]
+\end{forest}
+
+\end{tabular}\xe
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=1.5ex, yshift=-0.5ex]{pic cs:verb})
+	to [out=south, in=north west]
+	([yshift=1ex]{pic cs:pred});
+	
+\draw [-latex]
+	([xshift=0.5ex, yshift=-0.5ex]{pic cs:x})
+	to [out=south, in=north east]
+	([yshift=1ex]{pic cs:subj});
+	
+\draw [-latex]
+	([xshift=0.5ex, yshift=-0.75ex]{pic cs:y})
+	to [out=south, in=north east]
+	([yshift=1ex]{pic cs:obj});
+	
+\draw [-latex]
+	([yshift=0.5ex]{pic cs:V})
+	to [out=west, in=south west]
+	([yshift=-9ex]{pic cs:fstruct});
+	
+\draw [-latex]
+	([yshift=0.5ex]{pic cs:NP})
+	to [out=east, in=east]
+	([yshift=0.5ex]{pic cs:objval});
+	
+\draw [-latex]
+	([yshift=0.5ex]{pic cs:Nbar})
+	to [out=east, in=east]
+	([yshift=0.5ex]{pic cs:objval});
+\end{tikzpicture}
+
+Regarding the grammatical functions distinguished, \lfg{} assumes the following 
+functional hierarchy \citep[97]{bresnan2016}:
+
+\pex\label{ex:functions}
+\a Argument functions:\\
+	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{core} > 
+	\overbrace{\OblqT{} > \XCompl{}, \Compl{} > \Adjc{}}^{noncore}$
+\a Nonargument functions:\\
+	\Top{}, \Foc{}, \Adjc{}
+\xe
+
+The elements listed in (\ref{ex:functions}) will also appear in 
+phrase-structure rules and c-structure trees together with arrows. These arrows 
+symbolize an inheritance from the current level (↓) of the tree to the next 
+(↑), so for instance, `\pass{\Subj}' means that the information on the subject 
+of the next higher node is equal to the information subsumed by the current 
+node.
 
 \section{Determiner- and noun phrases}
 
@@ -21,15 +145,15 @@ notational formalisms, see \citep{buttking2015}.
 \ex\begin{minipage}[t]{.5\linewidth}
 DP → \anno*{D} \anno*{NP}\\
 \end{minipage}
-\begin{forest}
-[...
-	[\anno{\pass{\AF{}/\DF{}}}{DP}
-		[\anno{\updown}{D}]
-		[\anno{\updown}{NP}
-		]
-	]
-]
-\end{forest}
+% \begin{forest}
+% [...
+% 	[\anno{\pass{\AF{}/\DF{}}}{DP}
+% 		[\anno{\updown}{D}]
+% 		[\anno{\updown}{NP}
+% 		]
+% 	]
+% ]
+% \end{forest}
 \xe
 
 ...
@@ -37,20 +161,20 @@ DP → \anno*{D} \anno*{NP}\\
 \ex\begin{minipage}[t]{.5\linewidth}
 NP → (\anno*{\^P}) \anno*{N} (\anno*{AP*}) (\anno*{CP})
 \end{minipage}
-\begin{forest}
-[...
-	[\anno{\updown}{NP}
-		[\anno{\updown}{\^P}]
-		[\anno{\updown}{\xbar{N}}
-			[\anno{\updown}{N}]
-			[\anno{\updown}{\xbar{N}}
-				[\anno{\updown}{AP}]
-				[\anno{\updown}{CP}]
-			]
-		]
-	]
-]
-\end{forest}
+% \begin{forest}
+% [...
+% 	[\anno{\updown}{NP}
+% 		[\anno{\updown}{\^P}]
+% 		[\anno{\updown}{\xbar{N}}
+% 			[\anno{\updown}{N}]
+% 			[\anno{\updown}{\xbar{N}}
+% 				[\anno{\updown}{AP}]
+% 				[\anno{\updown}{CP}]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
 \xe
 
 ...
