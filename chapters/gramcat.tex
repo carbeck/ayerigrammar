@@ -894,13 +894,13 @@ texts written by Ayeri speakers, it might be interesting to gather statistics
 on the number of words between target and controller in relation to the 
 prevalence of agreement mismatches.}
 
-\tikzstyle{every picture}+=[remember picture]
+% \tikzstyle{every picture}+=[remember picture]
 \pex[aboveglftskip=2em]\label{ex:verbscram}
 \a\label{ex:scramcorr}\begingl
 	\gla Sa manye {} Taryan ang Briha. //
 	\glb Sa man-ye Ø Taryan ang Briha //
-	\glc \PatT{} greet\tikz\node[na](target){-\TsgF{}}; \Top{} Taryan 
-		\Aarg{} \tikz\node[na](controller){Briha}; //
+	\glc \PatT{} greet-\tikzmark{target}\TsgF{} \Top{} Taryan 
+		\Aarg{} \tikzmark{controller}Briha //
 	\glft `Taryan is greeted by Briha',\\
 		or: `Taryan, Briha greets him.' //
 \endgl
@@ -908,23 +908,23 @@ prevalence of agreement mismatches.}
 \a\label{ex:scramfalse}\ljudge* \begingl
 	\gla Sa manya {} Taryan ang Briha. //
 	\glb Sa man-ya Ø Taryan ang Briha //
-	\glc \PatT{} greet\tikz\node[na](target2){-\TsgM{}}; \Top{} 
-		\tikz\node[na](controller2){Taryan}; \Aarg{} Briha //
+	\glc \PatT{} greet-\tikzmark{target2}\TsgM{} \Top{} 
+		\tikzmark{controller2}Taryan \Aarg{} Briha //
 \endgl\xe
-\begin{tikzpicture}[overlay]
-	\coordinate [below=.25em of controller] (A);
-	\coordinate [below=1em of controller] (B);
-	\coordinate [below=1em of target] (C);
-	\coordinate [below=.25em of target] (D);
+\begin{tikzpicture}[remember picture, overlay]
+	\coordinate [below right=.25em and 1em   of {pic cs:controller}] (A);
+	\coordinate [below right=1em   and 1em   of {pic cs:controller}] (B);
+	\coordinate [below right=1em   and .75em of {pic cs:target}    ] (C);
+	\coordinate [below right=.25em and .75em of {pic cs:target}    ] (D);
 	\draw [-latex] (A) -- (B) -- (C) -- (D);
 	\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape person 
 		agreement};
 	
-	\coordinate [below=.25em of controller2] (A);
-	\coordinate [below=1em of controller2] (B);
-	\coordinate [below=1em of target2] (C);
-	\coordinate [below=.25em of target2] (D);
-	\draw [-latex, dotted] (A) -- (B) -- (C) -- (D);
+	\coordinate [below right=.25em and 1em   of {pic cs:controller2}] (A);
+	\coordinate [below right=1em   and 1em   of {pic cs:controller2}] (B);
+	\coordinate [below right=1em   and .75em of {pic cs:target2}    ] (C);
+	\coordinate [below right=.25em and .75em of {pic cs:target2}    ] (D);
+	\draw [-latex, dashed] (A) -- (B) -- (C) -- (D);
 	\node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape *person 
 		agreement};
 \end{tikzpicture}
