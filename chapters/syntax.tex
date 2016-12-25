@@ -4,11 +4,54 @@
 
 While the previous chapter dealt largely with the various parts of speech and 
 their various distributive and inflectional properties, the present chapter 
-will elaborate on how these words combine into syntactic phrases.
+will elaborate on how these words combine into syntactic phrases. Since Ayeri 
+is a verb-initial language, it is probably most comfortably analyzed in terms 
+of Lexical-Functional Grammar \citep{bresnan2016}, since \lfg{} does not 
+require complicated derivations behind the surface structure of sentences. It 
+will be assumed here that, even though Ayeri is basically VSO with predicate 
+and predication not adjacent to each other, it is configurational in that there 
+is a VP which c-commands a number of other constituents as complements in 
+transitive sentences. For an overview of the theory and its 
+notational formalisms, see \citep{buttking2015}.
+
+\section{Determiner- and noun phrases}
 
 ...
 
-\section{Noun- and determiner phrases}
+\ex\begin{minipage}[t]{.5\linewidth}
+DP → \anno*{D} \anno*{NP}\\
+\end{minipage}
+\begin{forest}
+[...
+	[\anno{\pass{\AF{}/\DF{}}}{DP}
+		[\anno{\updown}{D}]
+		[\anno{\updown}{NP}
+		]
+	]
+]
+\end{forest}
+\xe
+
+...
+
+\ex\begin{minipage}[t]{.5\linewidth}
+NP → (\anno*{\^P}) \anno*{N} (\anno*{AP*}) (\anno*{CP})
+\end{minipage}
+\begin{forest}
+[...
+	[\anno{\updown}{NP}
+		[\anno{\updown}{\^P}]
+		[\anno{\updown}{\xbar{N}}
+			[\anno{\updown}{N}]
+			[\anno{\updown}{\xbar{N}}
+				[\anno{\updown}{AP}]
+				[\anno{\updown}{CP}]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
 
 ...
 

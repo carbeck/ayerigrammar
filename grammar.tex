@@ -250,42 +250,42 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{tikzmark}
 
-% % Definition copied from pgfsys-common-pdf-via-dvi.def
-% % Compare http://tex.stackexchange.com/q/229500 and comments!
-% % This is currently needed to make tikzmark compile with xelatex
-% \makeatletter
-% \def\pgfsys@hboxsynced#1{%
-%   {%
-%     \pgfsys@beginscope%
-%     \setbox\pgf@hbox=\hbox{%
-%       \hskip\pgf@pt@x%
-%       \raise\pgf@pt@y\hbox{%
-%         \pgf@pt@x=0pt%
-%         \pgf@pt@y=0pt%
-%         \special{pdf: content q}%
-%         \pgflowlevelsynccm% 
-%         \pgfsys@invoke{q -1 0 0 -1 0 0 cm}%
-%         \special{pdf: content -1 0 0 -1 0 0 cm q}% translate to original coordinate system
-%         \pgfsys@invoke{0 J [] 0 d}% reset line cap and dash
-%         \wd#1=0pt%
-%         \ht#1=0pt%
-%         \dp#1=0pt%
-%         \box#1%
-%         \pgfsys@invoke{n Q Q Q}%
-%       }%
-%       \hss%
-%     }%
-%     \wd\pgf@hbox=0pt%
-%     \ht\pgf@hbox=0pt%
-%     \dp\pgf@hbox=0pt%
-%     \pgfsys@hbox\pgf@hbox%
-%     \pgfsys@endscope%
-%   }%
-% }
-% \makeatother
-
-% Ability to draw AVMs
-% (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
+% Definition copied from pgfsys-common-pdf-via-dvi.def
+% Compare http://tex.stackexchange.com/q/229500 and comments!
+% This is currently needed to make tikzmark compile with xelatex
+\makeatletter
+\def\pgfsys@hboxsynced#1{%
+  {%
+    \pgfsys@beginscope%
+    \setbox\pgf@hbox=\hbox{%
+      \hskip\pgf@pt@x%
+      \raise\pgf@pt@y\hbox{%
+        \pgf@pt@x=0pt%
+        \pgf@pt@y=0pt%
+        \special{pdf: content q}%
+        \pgflowlevelsynccm% 
+        \pgfsys@invoke{q -1 0 0 -1 0 0 cm}%
+        \special{pdf: content -1 0 0 -1 0 0 cm q}% translate to original coordinate system
+        \pgfsys@invoke{0 J [] 0 d}% reset line cap and dash
+        \wd#1=0pt%
+        \ht#1=0pt%
+        \dp#1=0pt%
+        \box#1%
+        \pgfsys@invoke{n Q Q Q}%
+      }%
+      \hss%
+    }%
+    \wd\pgf@hbox=0pt%
+    \ht\pgf@hbox=0pt%
+    \dp\pgf@hbox=0pt%
+    \pgfsys@hbox\pgf@hbox%
+    \pgfsys@endscope%
+  }%
+}
+\makeatother
+% 
+% % Ability to draw AVMs
+% % (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
 % \usepackage{avm}
 % \avmfont{\scshape}
 % \avmvalfont{\normalfont}
@@ -384,19 +384,21 @@
 \newleipzig{Sat}{sat}{satellite}
 \newleipzig{Vb}{vb}{verb}
 
-% \newleipzig{Anim}{anim}{animacy}
-% \newleipzig{Case}{case}{case}
-% \newleipzig{Comp}{comp}{complement}
-% \newleipzig{Gend}{gend}{gender}
-% \newleipzig{Num}{num}{number}
-% \newleipzig{Obj}{obj}{object}
-% \newleipzig{Sobj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
-% \newleipzig{Oblq}{obl}{oblique}
-% \newleipzig{Pers}{pers}{person}
-% \newleipzig{Pred}{pred}{predicate}
-% \newleipzig{Subj}{subj}{subject}
-% \newleipzig{Tense}{tense}{tense}
-% \newleipzig{Xcomp}{xcomp}{open complement}
+\newleipzig{AF}{af}{argument function}
+\newleipzig{DF}{df}{discourse function}
+\newleipzig{Anim}{anim}{animacy}
+\newleipzig{Case}{case}{case}
+\newleipzig{Compl}{comp}{complement}
+\newleipzig{Gend}{gend}{gender}
+\newleipzig{Num}{num}{number}
+\newleipzig{Obj}{obj}{object}
+\newleipzig{Sobj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
+\newleipzig{Oblique}{obl}{oblique}
+\newleipzig{Pers}{pers}{person}
+\newleipzig{Pred}{pred}{predicate}
+\newleipzig{Subj}{subj}{subject}
+\newleipzig{Tense}{tense}{tense}
+\newleipzig{Xcomp}{xcomp}{open complement}
 
 \makeglossaries
 
@@ -414,7 +416,7 @@
 \newcommand{\TplN}{{\Tpl}.{\N}}
 \newcommand{\TplI}{{\Tpl}.{\Inan}}
 
-% \newcommand{\Obl}[1]{\Oblq\fakesubscript{\normalfont\itshape #1}
+\newcommand{\Oblq}[1]{\Oblique\fakesubscript{\normalfont\itshape #1}}
 
 % Keyword index
 \usepackage{makeidx}
@@ -452,44 +454,45 @@
 \WithSuffix\newcommand{\rayr}*[2]{{\Tagati #1} \emph{#2}} % Ayeri orthography + *r*omanization
 \WithSuffix\newcommand{\xayr}*[3]{{\Tagati #1} \emph{#2} `#3'} % Ayeri orthography + romanization + translation
 
-% % LFG annotation stuff
-% \newcommand{\downfeat}[2]{(↓~\textsc{#1})~=~\textsc{#2}} % (↓X) = Y
-% \newcommand{\downs}[1]{(↓~\textsc{#1})} % (↓X)
-% \newcommand{\elem}[1]{↓~$\in$~(↑~\textsc{#1})} % ↓ ∊ (↑X) 
-% \newcommand{\pass}[1]{(↑~\textsc{#1})~=~↓} % (↑X) = ↓
-% \newcommand{\uncertain}[1]{((x~↑)~\textsc{#1})~=~↑} % (x↑) X = ↑
-% \newcommand{\updown}{↑~=~↓} % ↑ = ↓
-% \newcommand{\upfeat}[2]{(↑~\textsc{#1})~=~\textsc{#2}} % (↑X) = Y
-% \newcommand{\ups}[1]{(↑~\textsc{#1})} & (↑X)
-% \newcommand{\xbar}[1]{#1ʹ} % X'
-% \newcommand{\xhead}[1]{#1⁰} % X⁰
-% 
-% % A-structure rules: \astruct[1]{2}{3} > '2 <3> 1'
-% \newcommand{\astruct}[3][]{`\emph{#2}~⟨#3⟩%
-% 	\notblank{#1}{%
-% 		~#1'}{%
-% 		'}%
-% }
-% 
-% % Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
-% \newcommand{\anno}[2][\updown{}]{%
-% 	\mbox{%
-% 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
-% 		{\smaller\smaller #1}\\
-% 		#2
-% 	\end{minipage}%
-% 	}
-% }
-% 
-% % Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
-% \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
-% 	\mbox{\enspace%
-% 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
-% 		#2\\[-0.33\baselineskip]%
-% 		{\smaller\smaller #1}%
-% 	\end{minipage}\enspace%
-% 	}%
-% }
+% LFG annotation stuff
+\newcommand{\lfg}{\textsc{lfg}}
+\newcommand{\downfeat}[2]{(↓~\textsc{#1})~=~\textsc{#2}} % (↓X) = Y
+\newcommand{\downs}[1]{(↓~\textsc{#1})} % (↓X)
+\newcommand{\elem}[1]{↓~$\in$~(↑~\textsc{#1})} % ↓ ∊ (↑X) 
+\newcommand{\pass}[1]{(↑~\textsc{#1})~=~↓} % (↑X) = ↓
+\newcommand{\uncertain}[1]{((x~↑)~\textsc{#1})~=~↑} % (x↑) X = ↑
+\newcommand{\updown}{↑~=~↓} % ↑ = ↓
+\newcommand{\upfeat}[2]{(↑~\textsc{#1})~=~\textsc{#2}} % (↑X) = Y
+\newcommand{\ups}[1]{(↑~\textsc{#1})} % (↑X)
+\newcommand{\xbar}[1]{#1ʹ} % X'
+\newcommand{\xhead}[1]{#1⁰} % X⁰
+
+% A-structure rules: \astruct[1]{2}{3} > '2 <3> 1'
+\newcommand{\astruct}[3][]{`\emph{#2}~⟨#3⟩%
+	\notblank{#1}{%
+		~#1'}{%
+		'}%
+}
+
+% Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
+\newcommand{\anno}[2]{ % [\updown{}]{%
+	\mbox{%
+	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
+		{\smaller\smaller #1}\\
+		#2
+	\end{minipage}%
+	}
+}
+
+% Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
+\WithSuffix\newcommand{\anno}*[2][\updown{}]{%
+	\mbox{\enspace%
+	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
+		#2\\[-0.33\baselineskip]%
+		{\smaller\smaller #1}%
+	\end{minipage}\enspace%
+	}%
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -521,7 +524,7 @@
 \listoffigures
 \clearpage
 \listoftables
-\chapter{Glossing Abbreviations}
+\chapter{Abbreviations}
 \begin{multicols}{2}
 \printglossary[style=mysuper,type=\leipzigtype]
 \end{multicols}
