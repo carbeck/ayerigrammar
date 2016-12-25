@@ -36,10 +36,10 @@ which stands for \enquote{functional structure}}. The f-structure is depicted
 as an argument-value matrix (\textsc{avm}) which maps the relations between 
 `subject' (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as 
 functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs are 
-also encoded with their a-structure indicated, that is, which arguments they 
-take is formally stated \citep[15]{bresnan2016}. The f-structure lists semantic 
-features associated with words, such as case (\Case{}), person (\Pers{}), 
-number (\Num{}), which are abstract features and as such need not 
+also encoded with their \fw{a-structure} indicated. That is, which arguments 
+a verb takes is formally stated \citep[15]{bresnan2016}. The f-structure lists 
+semantic features associated with words, such as case (\Case{}), person 
+(\Pers{}), number (\Num{}), which are abstract features and as such need not 
 have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is 
@@ -47,9 +47,11 @@ simply not the same in all languages [...] In \lfg{} the correspondence mapping
 between internal and external structures does not preserve sameness of form. 
 Instead, \emph{it is designed to preserve inclusion relations between the 
 information expressed by the external structure and the content of the internal 
-structure}}. Passivization, for instance, is assumed to be lexically motivated 
-as an alternation in predicate structure, rather than an internal derivational 
-process \citep[23\psqq]{bresnan2016}.
+structure}}. Passivization, for instance, is assumed to be a lexically 
+motivated alternation in predicate structure (\Subj{} is blocked, so 
+the nominative is assigned to \Obj{}, and the original \Subj{} is expressed 
+by an \Adjc{}), rather than an internal derivational process 
+\citep[23\psqq]{bresnan2016}.
 
 \end{description}
 
@@ -124,10 +126,10 @@ Regarding the grammatical functions distinguished, \lfg{} assumes the following
 functional hierarchy \citep[97]{bresnan2016}:
 
 \pex\label{ex:functions}
-\a Argument functions:\\
+\a Grammatical functions (GFs):\\
 	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{core} > 
 	\overbrace{\OblqT{} > \XCompl{}, \Compl{} > \Adjc{}}^{noncore}$
-\a Nonargument functions:\\
+\a Nonargument/discoursive functions ($\overline{\mbox{AF}}$s/DFs):\\
 	\Top{}, \Foc{}, \Adjc{}
 \xe
 
@@ -143,7 +145,7 @@ node.
 ...
 
 \ex\begin{minipage}[t]{.5\linewidth}
-DP → \anno*{D} \anno*{NP}\\
+DP → \anno*{D} (\anno*{NP}) \\
 \end{minipage}
 % \begin{forest}
 % [...
@@ -159,7 +161,7 @@ DP → \anno*{D} \anno*{NP}\\
 ...
 
 \ex\begin{minipage}[t]{.5\linewidth}
-NP → (\anno*{\^P}) \anno*{N} (\anno*{AP*}) (\anno*{CP})
+NP → \anno*{N} (\anno*{AP*}) (\anno*{CP})
 \end{minipage}
 % \begin{forest}
 % [...
