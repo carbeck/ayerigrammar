@@ -6,51 +6,63 @@ While the previous chapter dealt largely with the various parts of speech and
 their various distributive and inflectional properties, the present chapter 
 will elaborate on how these words combine into syntactic phrases. Since Ayeri 
 is a verb-initial language, it is probably most comfortably analyzed in terms 
-of Lexical-Functional Grammar \citep{bresnan2016}, since \lfg{} does not 
-require complicated derivations behind the surface structure of sentences. It 
-will be assumed here that, even though Ayeri is basically VSO with predicate 
-and predication not adjacent to each other, it is configurational in that there 
-is a VP which c-commands a number of other constituents as complements in 
-transitive sentences.
+of Lexical-Functional Grammar \citep{bresnan2016}, since \Lfg{} does not 
+require complicated derivations behind the surface structure of 
+sentences.\footnote{Passivization, for instance, is assumed to be a lexically 
+motivated alternation in predicate structure (\Sbj{} is blocked, so the 
+nominative is assigned to \Obj{}, and the original \Sbj{} is expressed 
+by an \Adjc{}), rather than an internal derivational process 
+\citep[23\psqq]{bresnan2016}.} It will be assumed here that, even though Ayeri 
+is basically VSO with predicate and predication not adjacent to each other, it 
+is configurational in that there is a VP which c-commands a number of other 
+constituents as complements in transitive sentences.
 
-In principle, \lfg{} assumes that grammar operates on different structural 
+In principle, \Lfg{} assumes that grammar operates on different structural 
 levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
 f(unctional) structure; other layers have been proposed by different 
 researchers for different purposes \citep[862--865]{buttking2015}. 
-\citet{bresnan2016} define three core design principles for \lfg{}:
+\citet{bresnan2016} define three core design principles for \Lfg{}:
 
 \begin{description}
 \item[Variability:] \textcquote[41]{bresnan2016}{The principle of variability 
 states that \emph{external structures vary across languages}. The formal model 
-of external structure in \lfg{} is the \emph{c-structure}, which stands for 
+of external structure in \Lfg{} is the \emph{c-structure}, which stands for 
 \enquote{constituent structure} or \enquote{categorial structure}}. 
 C-structures are commonly represented by context-free phrase-structure rules; 
-constituency trees are based on an extended version of \xbar{X} theory 
-\citep[42]{bresnan2016}.
+constituency trees are based on an extended version of X-bar theory 
+\citep[42]{bresnan2016}.\footnote{The basic recursive rules of X-bar theory 
+are observed:
+\begin{enumerate}[nosep, leftmargin={2\footnotemargin}]
+\item \xbar{X} → \xhead{X}, YP
+\item XP → YP, \xbar{X}
+\end{enumerate}
+
+The principle of economy of expression furthermore dictates that trees be 
+pruned of empty nodes, and projection levels be omitted if they are not 
+branching \citep[119--128]{bresnan2016}.}
 
 \item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality 
 states that \emph{internal structures are largely invariant across languages}. 
-The formal model of internal structure in \lfg{} is the \emph{f-structure}, 
+The formal model of internal structure in \Lfg{} is the \emph{f-structure}, 
 which stands for \enquote{functional structure}}. The f-structure is depicted 
-as an argument-value matrix (\textsc{avm}) which maps the relations between 
+as an argument-value matrix (\Avm{}) which maps the relations between 
 `subject' (\Sbj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as 
-functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs are 
-also encoded with their \fw{a-structure} indicated. That is, which arguments 
-a verb takes is formally stated \citep[15]{bresnan2016}. The f-structure lists 
-semantic features associated with words, such as case (\Case{}), person 
-(\Pers{}), number (\Num{}), which are abstract features and as such need not 
-have morphological realization \citep[43]{bresnan2016}.
+functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs 
+are also presented with their \fw{a-structure} spelled out. That is, which 
+arguments a verb has relations to is formally stated \citep[15]{bresnan2016}. 
+The f-structure lists semantic features associated with words, such as case 
+(\Case{}), person (\Pers{}), number (\Num{}), which are abstract features and as 
+such need not have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is 
-simply not the same in all languages [...] In \lfg{} the correspondence mapping 
+simply not the same in all languages [...] In \Lfg{} the correspondence mapping 
 between internal and external structures does not preserve sameness of form. 
 Instead, \emph{it is designed to preserve inclusion relations between the 
 information expressed by the external structure and the content of the internal 
-structure}}. Passivization, for instance, is assumed to be a lexically 
-motivated alternation in predicate structure (\Sbj{} is blocked, so 
-the nominative is assigned to \Obj{}, and the original \Sbj{} is expressed 
-by an \Adjc{}), rather than an internal derivational process 
-\citep[23\psqq]{bresnan2016}.
+structure}}. Due to the principle of monorepresentation, 
+information distributed over different morphemes which logically 
+belongs to a single grammatical function is presented in the f-structure as 
+unified.
 
 \end{description}
 
@@ -122,7 +134,7 @@ constituent (c-)structure:
 	([yshift=0.5ex]{pic cs:objval});
 \end{tikzpicture}
 
-Regarding the grammatical functions distinguished, \lfg{} assumes the following 
+Regarding the grammatical functions distinguished, \Lfg{} assumes the following 
 functional hierarchy \citep[97]{bresnan2016}:
 
 \pex\label{ex:functions}
@@ -138,26 +150,27 @@ phrase-structure rules and c-structure trees together with arrows. These arrows
 symbolize inheritance of feature information from the current level (↓) of the 
 tree to the next (↑), so for instance, `\pass{\Sbj}' means that the information 
 subsumed by the current node (`down') is passed on as the subject function of 
-the next higher node (`up') in the tree. More information on notational 
-formalisms of \lfg{} can be found, for instance, in \citet{buttking2015}.
+the next higher node (`up') in the tree. Concise information on notational 
+formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
 
 \section{Determiner- and noun phrases}
 
-Noun phrases, and determiner phrases as their functional counterpart, fulfill 
-the functions of subject (\Sbj{}), object (\Obj{}), secondary object (\SObj{}), 
-as well as oblique location (\Oblq{loc}), and various adjuncts (\Adjc{}). 
-NPs/DPs can also constitute topics (\Top{}). Which DP/NP receives which 
-function is selected by the a-structure of the verb---this also has 
-repercussions on case- and topic marking.
+Noun phrases (NPs), and determiner phrases (DPs) as their functional 
+counterpart, fulfill the functions of subject (\Sbj{}), object (\Obj{}), 
+secondary object (\SObj{}), as well as oblique location (\Oblq{loc}), and 
+various adjuncts (\Adjc{}). DPs and NPs can also constitute topics (\Top{}). 
+Which DP or NP receives which function is selected by the a-structure of the 
+verb---this also has repercussions on case- and topic marking.
 
-Generally, DPs and NPs can be described with the phrase structure formulas 
+Generally, DPs and NPs can be described with the phrase-structure formulas 
 given in (\ref{ex:dpnpstruct}), which list the various parts that can occur in 
 them; parentheses indicate the optionality of a term, that is, the respective 
-element may occur but is not constitutive.
+element may occur but is not constitutive; an asterisk stands for `zero or 
+more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
 \a\label{ex:dpdef} DP → \anno*{D} (\anno*{NP})
-\a\label{ex:npdef} NP → \anno*{N} (\anno*{AP*}) (\anno*{CP*})
+\a\label{ex:npdef} NP → (\anno*{\^P}) \anno*{N} (\anno*{AP*}) (\anno*{CP*})
 \xe
 
 The functional heads of DPs are formed by determiners. Ayeri does not possess 
@@ -166,13 +179,14 @@ as clitic prefixes on nouns which can be analyzed to fulfill this function.
 These clitics are the demonstrative prefixes \xayr{Ed/}{eda-}{this}, 
 \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such (a)}, as well as the 
 inspecificity prefix \xayr{me/}{mə-}{some} (compare \autoref{subsec:nounpref}). 
-These prefixes can only be used with nouns, but not with pronouns, since 
-pronouns as well have the status of determiners. Pronouns, as pro-forms, are in 
-complementary distribution with NPs containing a noun. In order to capture the 
-fact that an NP is facultative with the demonstrative and inspecificity 
-prefixes while it must not occur with pronouns, `NP' appears in parentheses in 
-(\ref{ex:dpdef}), since it is not always present. We can furthermore define the 
-following lexicosemantic rules for determiners:
+These prefixes can only be used with nouns, but not with personal pronouns 
+(compare \autoref{subsec:perspro}), since personal pronouns as well have the 
+status of determiners. Pronouns, as pro-forms, are in complementary 
+distribution with NPs containing a noun. In order to capture the fact that an 
+NP is facultative with the demonstrative and inspecificity prefixes while it 
+must not occur with pronouns, `NP' appears in parentheses in (\ref{ex:dpdef}), 
+since it is not always present. We can define the following lexicosemantic 
+rules for determiners:
 
 \pex
 \a Demonstratives:\medskip
@@ -187,7 +201,7 @@ following lexicosemantic rules for determiners:
 % 			\ups{\Def} & = & $+$ \\
 % 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
-	\end{tabu}\medskip
+	\end{tabu}
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{Ad/}{ada-}
@@ -199,7 +213,7 @@ following lexicosemantic rules for determiners:
 % 			\ups{\Def} & = & $+$ \\
 % 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
-	\end{tabu} \medskip
+	\end{tabu}
 	
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{d/}{da-}
