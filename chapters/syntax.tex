@@ -11,8 +11,7 @@ require complicated derivations behind the surface structure of sentences. It
 will be assumed here that, even though Ayeri is basically VSO with predicate 
 and predication not adjacent to each other, it is configurational in that there 
 is a VP which c-commands a number of other constituents as complements in 
-transitive sentences. For an overview of the theory and its 
-notational formalisms, see \citet{buttking2015}.
+transitive sentences.
 
 In principle, \lfg{} assumes that grammar operates on different structural 
 levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
@@ -34,7 +33,7 @@ states that \emph{internal structures are largely invariant across languages}.
 The formal model of internal structure in \lfg{} is the \emph{f-structure}, 
 which stands for \enquote{functional structure}}. The f-structure is depicted 
 as an argument-value matrix (\textsc{avm}) which maps the relations between 
-`subject' (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as 
+`subject' (\Sbj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as 
 functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs are 
 also encoded with their \fw{a-structure} indicated. That is, which arguments 
 a verb takes is formally stated \citep[15]{bresnan2016}. The f-structure lists 
@@ -48,17 +47,18 @@ between internal and external structures does not preserve sameness of form.
 Instead, \emph{it is designed to preserve inclusion relations between the 
 information expressed by the external structure and the content of the internal 
 structure}}. Passivization, for instance, is assumed to be a lexically 
-motivated alternation in predicate structure (\Subj{} is blocked, so 
-the nominative is assigned to \Obj{}, and the original \Subj{} is expressed 
+motivated alternation in predicate structure (\Sbj{} is blocked, so 
+the nominative is assigned to \Obj{}, and the original \Sbj{} is expressed 
 by an \Adjc{}), rather than an internal derivational process 
 \citep[23\psqq]{bresnan2016}.
 
 \end{description}
 
 To illustrate the different parallel structures in operation, 
-\citet[15]{bresnan2016} give the following illustration concerning which part of 
-the respective a- and c-structures corresponds (`links', `maps') to which part 
-of the f-structure:
+\citet[15]{bresnan2016} give the following schema concerning which part 
+of the a- and c-structure respectively corresponds (`links', `maps') to which 
+part of the f-structure:\footnote{\citet{bresnan2016} use \textsc{`subj'} for 
+`subject'; for consistency with the above I will use `\Sbj{}' in the following.}
 
 \ex\begin{tabular}[t]{l @{\quad} c}
 argument (a-)structure:
@@ -67,7 +67,7 @@ argument (a-)structure:
 functional (f-)strucutre:
 & \tikzmark{fstruct}\begin{avm}
 \[
-	\quad subj \tikzmark{subj} & \[
+	\quad sbj \tikzmark{subj} & \[
 		{\enspace}\vdots{\enspace} \\
 	\]{\quad} \\
 	
@@ -87,9 +87,9 @@ constituent (c-)structure:
 	]
 ]
 \end{forest}
-
+%
 \end{tabular}\xe
-
+%
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
 	([xshift=1.5ex, yshift=-0.5ex]{pic cs:verb})
@@ -127,59 +127,118 @@ functional hierarchy \citep[97]{bresnan2016}:
 
 \pex\label{ex:functions}
 \a Grammatical functions (GFs):\\
-	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{core} > 
+	$\overbrace{\Sbj{} > \Obj{} > \SObj{}}^{core} > 
 	\overbrace{\OblqT{} > \XCompl{}, \Compl{} > \Adjc{}}^{noncore}$
-\a Nonargument/discoursive functions ($\overline{\mbox{AF}}$s/DFs):\\
+\a Nonargument/discourse functions ($\overline{\mbox{AF}}$s/DFs):\\
 	\Top{}, \Foc{}, \Adjc{}
 \xe
 
 The elements listed in (\ref{ex:functions}) will also appear in 
 phrase-structure rules and c-structure trees together with arrows. These arrows 
-symbolize an inheritance from the current level (↓) of the tree to the next 
-(↑), so for instance, `\pass{\Subj}' means that the information on the subject 
-of the next higher node is equal to the information subsumed by the current 
-node.
+symbolize inheritance of feature information from the current level (↓) of the 
+tree to the next (↑), so for instance, `\pass{\Sbj}' means that the information 
+subsumed by the current node (`down') is passed on as the subject function of 
+the next higher node (`up') in the tree. More information on notational 
+formalisms of \lfg{} can be found, for instance, in \citet{buttking2015}.
 
 \section{Determiner- and noun phrases}
 
-...
+Noun phrases, and determiner phrases as their functional counterpart, fulfill 
+the functions of subject (\Sbj{}), object (\Obj{}), secondary object (\SObj{}), 
+as well as oblique location (\Oblq{loc}), and various adjuncts (\Adjc{}). 
+NPs/DPs can also constitute topics (\Top{}). Which DP/NP receives which 
+function is selected by the a-structure of the verb---this also has 
+repercussions on case- and topic marking.
 
-\ex\begin{minipage}[t]{.5\linewidth}
-DP → \anno*{D} (\anno*{NP}) \\
-\end{minipage}
-% \begin{forest}
-% [...
-% 	[\anno{\pass{\AF{}/\DF{}}}{DP}
-% 		[\anno{\updown}{D}]
-% 		[\anno{\updown}{NP}
-% 		]
-% 	]
-% ]
-% \end{forest}
+Generally, DPs and NPs can be described with the phrase structure formulas 
+given in (\ref{ex:dpnpstruct}), which list the various parts that can occur in 
+them; parentheses indicate the optionality of a term, that is, the respective 
+element may occur but is not constitutive.
+
+\pex\label{ex:dpnpstruct}
+\a\label{ex:dpdef} DP → \anno*{D} (\anno*{NP})
+\a\label{ex:npdef} NP → \anno*{N} (\anno*{AP*}) (\anno*{CP*})
 \xe
 
-...
+The functional heads of DPs are formed by determiners. Ayeri does not possess 
+articles as such, though it does have a variety of morphemes which occur 
+as clitic prefixes on nouns which can be analyzed to fulfill this function. 
+These clitics are the demonstrative prefixes \xayr{Ed/}{eda-}{this}, 
+\xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such (a)}, as well as the 
+inspecificity prefix \xayr{me/}{mə-}{some} (compare \autoref{subsec:nounpref}). 
+These prefixes can only be used with nouns, but not with pronouns, since 
+pronouns as well have the status of determiners. Pronouns, as pro-forms, are in 
+complementary distribution with NPs containing a noun. In order to capture the 
+fact that an NP is facultative with the demonstrative and inspecificity 
+prefixes while it must not occur with pronouns, `NP' appears in parentheses in 
+(\ref{ex:dpdef}), since it is not always present. We can furthermore define the 
+following lexicosemantic rules for determiners:
 
-\ex\begin{minipage}[t]{.5\linewidth}
-NP → \anno*{N} (\anno*{AP*}) (\anno*{CP})
-\end{minipage}
-% \begin{forest}
-% [...
-% 	[\anno{\updown}{NP}
-% 		[\anno{\updown}{\^P}]
-% 		[\anno{\updown}{\xbar{N}}
-% 			[\anno{\updown}{N}]
-% 			[\anno{\updown}{\xbar{N}}
-% 				[\anno{\updown}{AP}]
-% 				[\anno{\updown}{CP}]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}
+\pex
+\a Demonstratives:\medskip
+
+	\begin{tabu} to \linewidth {X[10l] X[5l] X[85l]} \savetabu{lexsem}
+	\rayr{Ed/}{eda-}
+		& Dem
+		& \begin{tabular}[t]{l c l}
+			\ups{\Pred} & = & `this' \\
+% 			\ups{\Prox} & = & $+$ \\
+% 			\ups{\Dist} & = & $-$ \\
+% 			\ups{\Def} & = & $+$ \\
+% 			\ups{\Spec} & = & $+$ \\
+		\end{tabular}
+	\end{tabu}\medskip
+
+	\begin{tabu} {\usetabu{lexsem}}
+	\rayr{Ad/}{ada-}
+		& Dem
+		& \begin{tabular}[t]{l c l}
+			\ups{\Pred} & = & `that' \\
+% 			\ups{\Prox} & = & $-$ \\
+% 			\ups{\Dist} & = & $+$ \\
+% 			\ups{\Def} & = & $+$ \\
+% 			\ups{\Spec} & = & $+$ \\
+		\end{tabular}
+	\end{tabu} \medskip
+	
+	\begin{tabu} {\usetabu{lexsem}}
+	\rayr{d/}{da-}
+		& Dem
+		& \begin{tabular}[t]{l c l}
+			\ups{\Pred} & = & `such' \\
+% 			\ups{\Prox} & = & $+$ \\
+% 			\ups{\Dist} & = & $-$ \\
+% 			\ups{\Def} & = & $-$ \\
+% 			\ups{\Spec} & = & $+$ \\
+		\end{tabular}
+	\end{tabu}
+	
+\a Specifiers:\medskip
+
+	\begin{tabu} {\usetabu{lexsem}}
+	\rayr{me/}{mə-}
+		& Spec
+		& \begin{tabular}[t]{l c l}
+			\ups{\Spec} & = & $-$ \\
+		\end{tabular}
+	\end{tabu}
+	
+\a Personal pronouns:\medskip
+
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& Pr
+		& \begin{tabular}[t]{l c l}
+			\ups{\Pred} & = & `pro' \\
+			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+			\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \nul{}\} \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}
 \xe
-
-...
 
 % \section{Adjective phrases}
 %
