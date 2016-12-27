@@ -192,11 +192,11 @@ rules for determiners:
 \pex
 \a Demonstrative prefixes:\medskip
 
-	\begin{tabu} to \linewidth {X[10l] X[5l] X[85l]}
+	\begin{tabu} to \linewidth {X[15l] X[5l] X[80l]}
 	\savetabu{lexsem}
 	\rayr{Ed/}{eda-}
-		& Dem
-		& \begin{tabular}[t]{l c l}
+		& P
+		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `this' \\
 			\ups{\Pers} & \req{} & 3 \\
 % 			\ups{\Prox} & = & $+$ \\
@@ -208,8 +208,8 @@ rules for determiners:
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{Ad/}{ada-}
-		& Dem
-		& \begin{tabular}[t]{l c l}
+		& P
+		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `that' \\
 			\ups{\Pers} & \req{} & 3 \\
 % 			\ups{\Prox} & = & $-$ \\
@@ -221,8 +221,8 @@ rules for determiners:
 	
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{d/}{da-}
-		& Dem
-		& \begin{tabular}[t]{l c l}
+		& P
+		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `such' \\
 			\ups{\Pers} & \req{} & 3 \\
 % 			\ups{\Prox} & = & $+$ \\
@@ -236,8 +236,8 @@ rules for determiners:
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{me/}{mə-}
-		& Spec
-		& \begin{tabular}[t]{l c l}
+		& P
+		& \begin{tabular}[t]{l l l}
 			\ups{\Spec} & = & $-$ \\
 			\ups{\Pers} & \req{} & 3 \\
 		\end{tabular}
@@ -248,12 +248,12 @@ rules for determiners:
 	\begin{tabu} {\usetabu{lexsem}}
 	(various)
 		& N
-		& \begin{tabular}[t]{l c l}
+		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `pro' \\
 			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
 			\ups{\Refl} & = & $\pm$ \\
 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
-			\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \nul{}\} \\
+			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
@@ -265,7 +265,7 @@ rules for determiners:
 	\begin{tabu} {\usetabu{lexsem}}
 	(various)
 		& N
-		& \begin{tabular}[t]{l c l}
+		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `this/that/such' \\
 			\ups{\Pers} & = & 3 \\
 			\ups{\Anim} & = & $\pm$ \\
@@ -274,6 +274,21 @@ rules for determiners:
 		\end{tabular}
 	\end{tabu}
 \xe
+
+Demonstrative prefixes as well as the inspecificity prefix \rayr{me/}{mə-} 
+cannot be without an NP complement, which is what `\req{}' is supposed to 
+express in the feature specification: the demonstrative prefixes require that 
+an element which encodes a third-person referent to bind to exist.\footnote{A 
+simple `=' \emph{defines} a value; a subscript `c' indicates that the morpheme 
+\emph{requires} that this value be present. Thus `\req{}' expresses a 
+\fw{constraining} equation \citep[59--61]{bresnan2016}.} On the other hand, 
+personal and demonstrative pronouns inherently define information on person 
+(\Pers{}). Since there is a great number of both personal and demonstrative 
+pronouns, only the various values they can assume are indicated, without 
+ensuring that the combinations are actually possible (compare 
+\autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
+$(\{\M{}, \F{}, \N{}\} \cup \{\An{}\}) \lor \{\Inan{}\}$. Gender is also 
+not distinguished in all persons, but only in the third.
 
 % \section{Adjective phrases}
 %
