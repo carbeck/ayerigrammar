@@ -15,9 +15,10 @@
 % % Setup for 'U.S. trade paperback' (6x9 in). Tables are all formatted wrong and 
 % % some examples are also problematic. Use option 'showtrims' in document class 
 % % declaration above to show trim marks for where to cut the stock paper.
+% \setstocksize{9in}{6in}
 % \settrimmedsize{9in}{6in}{*}
 % \setulmarginsandblock{1in}{*}{*}
-% \setlrmarginsandblock{*}{0.75in}{0.75}
+% \setlrmarginsandblock{*}{0.75in}{1.0}
 % \checkandfixthelayout
 
 \author{Carsten Becker}
@@ -43,6 +44,11 @@
 
 % Layout for running page titles
 \nouppercaseheads
+% \copypagestyle{sfheaders}{headings}
+% \makeevenhead{sfheaders}{\sffamily\bfseries\thepage}{}{\sffamily\itshape\leftmark}
+% \makeoddhead{sfheaders}{\sffamily\itshape\rightmark}{}{\sffamily\bfseries\thepage}
+% \makeheadrule{headings}{\textwidth}{0.3pt}
+% \pagestyle{sfheaders}
 
 % Layout for chapter headers
 \chapterstyle{southall}
