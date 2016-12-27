@@ -182,6 +182,8 @@ more' occurrences of the respective element.
 \anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
 
+\subsection{Determiner phrases}
+
 The functional heads of DPs are formed by determiners. Ayeri does not possess 
 articles as such, though it does have a variety of morphemes which occur 
 as clitic prefixes on nouns which can be analyzed to fulfill this function. 
@@ -286,17 +288,20 @@ rules for determiners:
 Demonstrative prefixes as well as the inspecificity prefix \rayr{me/}{mə-} 
 cannot be without an NP complement, which is what `\req{}' is supposed to 
 express in the feature specification: the demonstrative prefixes require that 
-an element which encodes a third-person referent to bind to exist.\footnote{A 
-simple `=' \emph{defines} a value; a subscript `c' indicates that the morpheme 
-\emph{requires} that this value be present. Thus `\req{}' expresses a 
-\fw{constraining} equation \citep[59--61]{bresnan2016}.} On the other hand, 
-personal and demonstrative pronouns inherently define information on person 
-(\Pers{}). Since there is a great number of both personal and demonstrative 
-pronouns, only the various values they can assume are indicated, without 
-ensuring that the combinations are actually possible (compare 
-\autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
-\Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
-Gender is also not distinguished in all persons, but only in the third.
+an element which encodes a third-person referent to bind to exist; nouns are 
+assumed to encode third person by default.\footnote{A simple `=' \emph{defines} 
+a value; a subscript `c' indicates that the morpheme \emph{requires} that this 
+value be present. Thus `\req{}' expresses a \fw{constraining} equation 
+\citep[59--61]{bresnan2016}.} On the other hand, personal and demonstrative 
+pronouns inherently define information on person (\Pers{}). Since there is a 
+great number of both personal and demonstrative pronouns, only the various 
+values they can assume are indicated, without ensuring that the combinations are 
+actually possible (compare \autoref{subsec:perspro}). Personal pronouns, for 
+instance, only distinguish \Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which 
+are subgroups of \An{}. Gender is also not distinguished in all persons, but 
+only in the third.
+
+\subsection{Noun phrases}
 
 Regarding NPs proper, it is necessary to distinguish morphologically between 
 those containing common nouns and those containing proper nouns (that is,  
@@ -308,7 +313,50 @@ connected by \textsc{or}. In the second half, the case particle before names is
 indicated by `\^P' (`P-roof'), a non-projecting particle 
 \citep[116--117]{bresnan2016}. Nouns can also be modified by a number of 
 adjectives, as well as relative clauses (here indicated by `CP'), both of which 
-are typically following their heads.
+are typically following their heads. For nouns, the following general 
+lexicosemantic properties can be assumed:
+
+\pex
+\a Common nouns:\\
+
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}
+
+\a Proper nouns:\\
+
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& P
+		& \begin{tabular}[t]{l l l}
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}\medskip
+
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			\quad\downs{index \Pers} & = & 3 \\
+			\quad\downs{index \Num} & = & \{\Sg{}, \Pl{}\} \\
+			\quad\downs{index \Gend} & = & \{\M{}, \F{}, \N{}\} \\
+			\quad\downs{index \Anim} & = & $\pm$ \\
+		\end{tabular}
+	\end{tabu}
+
+\xe
 
 ...
 
