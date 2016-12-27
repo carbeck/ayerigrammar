@@ -51,7 +51,8 @@ functional abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs
 are also presented with their \fw{a-structure} spelled out. That is, which 
 arguments a verb has relations to is formally stated \citep[15]{bresnan2016}. 
 The f-structure lists semantic features associated with words, such as case 
-(\Case{}), person (\Pers{}), number (\Num{}), which are abstract features and as 
+(\Case{}), person (\Pers{}), number (\Num{}), which are abstract features and 
+as 
 such need not have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is 
@@ -191,7 +192,8 @@ rules for determiners:
 \pex
 \a Demonstrative prefixes:\medskip
 
-	\begin{tabu} to \linewidth {X[10l] X[5l] X[85l]} \savetabu{lexsem}
+	\begin{tabu} to \linewidth {X[10l] X[5l] X[85l]}
+	\savetabu{lexsem}
 	\rayr{Ed/}{eda-}
 		& Dem
 		& \begin{tabular}[t]{l c l}
@@ -245,12 +247,27 @@ rules for determiners:
 
 	\begin{tabu} {\usetabu{lexsem}}
 	(various)
-		& Pr
+		& N
 		& \begin{tabular}[t]{l c l}
 			\ups{\Pred} & = & `pro' \\
 			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+			\ups{\Refl} & = & $\pm$ \\
 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 			\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \nul{}\} \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}
+	
+\a Demonstrative pronouns:\medskip
+
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& N
+		& \begin{tabular}[t]{l c l}
+			\ups{\Pred} & = & `this/that/such' \\
+			\ups{\Pers} & = & 3 \\
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
