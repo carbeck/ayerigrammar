@@ -177,7 +177,8 @@ more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
 \a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP}) (\anno*{DP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{NP}) (\anno*{AP*}) 
+	(\anno*{CP})
 \a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{\itshape stem}} 
 \anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
@@ -307,20 +308,11 @@ ensuring that the combinations are actually possible (compare
 Gender is also not distinguished in all persons, but only in the third.
 
 The c-structure of a DP corresponding to the linear description in 
-(\ref{ex:dpdef}) is depicted in (\ref{ex:dfcstruct}); annotations about feature 
+(\ref{ex:dpdef}) is depicted in (\ref{ex:dpcstruct}); annotations about feature 
 inheritance for c-to-f-structure conversion have been added.
 
-\ex\label{ex:dfcstruct}
-\begin{forest}
-where n children=0{tier=word}{}
-[\anno{\pass{cf}}{DP}
-	[\anno{\updown}{\xbar{D}}
-		[\anno{\updown}{\xhead{D}}]
-		[\anno{\updown}{NP}]
-	]
-	[\anno{\updown}{DP}]
-]
-\end{forest}
+\ex\label{ex:dpcstruct}
+...
 \xe
 
 \subsection{Noun phrases}
