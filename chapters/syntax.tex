@@ -52,8 +52,7 @@ are also presented with their \fw{a-structure} spelled out. That is, which
 arguments a verb has relations to is formally stated \citep[15]{bresnan2016}. 
 The f-structure lists semantic features associated with words, such as case 
 (\Case{}), person (\Pers{}), number (\Num{}), which are abstract features and 
-as 
-such need not have morphological realization \citep[43]{bresnan2016}.
+as such need not have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is 
 simply not the same in all languages [...] In \Lfg{} the correspondence mapping 
@@ -135,15 +134,22 @@ constituent (c-)structure:
 	([yshift=0.5ex]{pic cs:objval});
 \end{tikzpicture}
 
-Regarding the grammatical functions distinguished, \Lfg{} assumes the following 
-functional hierarchy \citep[97]{bresnan2016}:
+Regarding the different functions distinguished, \Lfg{} assumes the following 
+hierarchies \citep[97, 100]{bresnan2016}:
 
 \pex\label{ex:functions}
-\a Grammatical functions (GFs):\\
-	$\overbrace{\Sbj{} > \Obj{} > \SObj{}}^{core} > 
-	\overbrace{\OblqT{} > \XCompl{}, \Compl{} > \Adjc{}}^{noncore}$
-\a Nonargument/discourse functions ($\overline{\mbox{AF}}$s/DFs):\\
-	\Top{}, \Foc{}, \Adjc{}
+\a\label{ex:gfs} Grammatical functions (GFs):\\
+	$\overbrace{\Sbj{} > \Obj{} > \SObj{}}^{\text{core}} > 
+	\overbrace{\OblqT{} > \XCompl{}, \Compl{} > \Adjc{}}^{\text{noncore}}$
+\a\label{ex:nonafs} (Non)argument functions (AFs/$\overline{\mbox{AF}}$s):\\
+	$\underbrace{\Top{}\: \Foc{}}_{\text{non-a-fns}}\; 
+	\overbrace{\Sbj{}\: \Obj{}\: \SObj{}\: \OblqT{}\: \XCompl{}\: 
+		\Compl{}}^{\text{a-fns}}\; 
+	\underbrace{\Adjc{}}_{\text{non-a-fns}}$
+\a\label{ex:dfs} Discourse functions (DFs):\\
+	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}_{\text{d-fns}}\;  
+	\underbrace{\Obj{}\: \SObj{}\: \OblqT{}\: \XCompl{}\: \Compl{}\: 
+		\Adjc{}}_{\text{non-d-fns}}$
 \xe
 
 The elements listed in (\ref{ex:functions}) will also appear in 
@@ -170,8 +176,10 @@ element may occur but is not constitutive; an asterisk stands for `zero or
 more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{D} (\anno*{NP})
-\a\label{ex:npdef} NP → (\anno*{\^P}) \anno*{N} (\anno*{AP*}) (\anno*{CP*})
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP})
+\a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{\itshape stem}} 
+\anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
 
 The functional heads of DPs are formed by determiners. Ayeri does not possess 
@@ -287,8 +295,22 @@ personal and demonstrative pronouns inherently define information on person
 pronouns, only the various values they can assume are indicated, without 
 ensuring that the combinations are actually possible (compare 
 \autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
-$(\{\M{}, \F{}, \N{}\} \cup \{\An{}\}) \lor \{\Inan{}\}$. Gender is also 
-not distinguished in all persons, but only in the third.
+\Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
+Gender is also not distinguished in all persons, but only in the third.
+
+Regarding NPs proper, it is necessary to distinguish morphologically between 
+those containing common nouns and those containing proper nouns (that is,  
+names), as we have seen in the previous chapter (compare \autoref{sec:nouns}): 
+common nouns indicate case by a suffix, while proper nouns receive case marking 
+by a particle preceding the noun. For this reason, the phrase-structure formula 
+in (\ref{ex:ndef}), defining nominal heads (\xhead{N}), has two halves 
+connected by \textsc{or}. In the second half, the case particle before names is 
+indicated by `\^P' (`P-roof'), a non-projecting particle 
+\citep[116--117]{bresnan2016}. Nouns can also be modified by a number of 
+adjectives, as well as relative clauses (here indicated by `CP'), both of which 
+are typically following their heads.
+
+...
 
 % \section{Adjective phrases}
 %
