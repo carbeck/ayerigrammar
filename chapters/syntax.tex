@@ -176,8 +176,9 @@ element may occur but is not constitutive; an asterisk stands for `zero or
 more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP})
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP}) (\anno*{DP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP}) 
+	(\anno*{NP})
 \a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{\itshape stem}} 
 \anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
@@ -195,9 +196,10 @@ These prefixes can only be used with nouns, but not with personal pronouns
 status of determiners. Pronouns, as pro-forms, are in complementary 
 distribution with NPs containing a noun. In order to capture the fact that an 
 NP is facultative with the demonstrative and inspecificity prefixes while it 
-must not occur with pronouns, `NP' appears in parentheses in (\ref{ex:dpdef}), 
-since it is not always present. We can define the following lexicosemantic 
-rules for determiners:
+must not occur with pronouns, `NP' appears in parentheses since it is not 
+always present. DPs can contain another DP as a specifier in the case of a 
+genitive attribute; possessive adjectives are also found in this place. We can 
+define the following lexicosemantic rules for determiners (\xhead{D}):
 
 \pex
 \a Demonstrative prefixes:\medskip
@@ -242,7 +244,7 @@ rules for determiners:
 		\end{tabular}
 	\end{tabu}
 	
-\a Specifiers:\medskip
+\a Inspecificity prefix:\medskip
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{me/}{mə-}
@@ -283,23 +285,42 @@ rules for determiners:
 				\Loc{}, \Ins{}, \Caus{}\} \\
 		\end{tabular}
 	\end{tabu}
+	
 \xe
 
 Demonstrative prefixes as well as the inspecificity prefix \rayr{me/}{mə-} 
 cannot be without an NP complement, which is what `\req{}' is supposed to 
 express in the feature specification: the demonstrative prefixes require that 
-an element which encodes a third-person referent to bind to exist; nouns are 
-assumed to encode third person by default.\footnote{A simple `=' \emph{defines} 
-a value; a subscript `c' indicates that the morpheme \emph{requires} that this 
-value be present. Thus `\req{}' expresses a \fw{constraining} equation 
-\citep[59--61]{bresnan2016}.} On the other hand, personal and demonstrative 
-pronouns inherently define information on person (\Pers{}). Since there is a 
-great number of both personal and demonstrative pronouns, only the various 
-values they can assume are indicated, without ensuring that the combinations are 
-actually possible (compare \autoref{subsec:perspro}). Personal pronouns, for 
-instance, only distinguish \Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which 
-are subgroups of \An{}. Gender is also not distinguished in all persons, but 
-only in the third.
+an element exist which encodes a third-person referent to bind to; nouns 
+are assumed to encode third person by default.\footnote{A simple `=' 
+\emph{defines} a value; a subscript `c' indicates that the morpheme 
+\emph{requires} that this value be present. Thus `\req{}' expresses a 
+\fw{constraining} equation \citep[59--61]{bresnan2016}.} On the other hand, 
+personal and demonstrative pronouns inherently define information on person 
+(\Pers{}). Since there is a great number of both personal and demonstrative 
+pronouns, only the various values they can assume are indicated, without 
+ensuring that the combinations are actually possible (compare 
+\autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
+\Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
+Gender is also not distinguished in all persons, but only in the third.
+
+The c-structure of a DP corresponding to the linear description in 
+(\ref{ex:dpdef}) is depicted in (\ref{ex:dfcstruct}); annotations about feature 
+inheritance for c-to-f-structure conversion have been added.
+
+\ex\label{ex:dfcstruct}
+\begin{forest}
+[\ldots
+	[\anno{\pass{gf/df}}{DP}
+		[\anno{\updown}{\xbar{D}}
+			[\anno{\updown}{\xhead{D}}]
+			[\anno{\updown}{NP}]
+		]
+		[\anno{\updown}{DP}]
+	]
+]
+\end{forest}
+\xe
 
 \subsection{Noun phrases}
 
@@ -320,10 +341,11 @@ lexicosemantic properties can be assumed:
 \a Common nouns:\\
 
 	\begin{tabu} {\usetabu{lexsem}}
-	(various)
+	...
 		& N
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
+			\ups{\Pers} & = & 3 \\
 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
 			\ups{\Anim} & = & $\pm$ \\
@@ -345,14 +367,14 @@ lexicosemantic properties can be assumed:
 	\end{tabu}\medskip
 
 	\begin{tabu} {\usetabu{lexsem}}
-	(various)
+	...
 		& N
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
-			\quad\downs{index \Pers} & = & 3 \\
-			\quad\downs{index \Num} & = & \{\Sg{}, \Pl{}\} \\
-			\quad\downs{index \Gend} & = & \{\M{}, \F{}, \N{}\} \\
-			\quad\downs{index \Anim} & = & $\pm$ \\
+			\ups{\Pers} & = & 3 \\
+			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
+			\ups{\Anim} & = & $\pm$ \\
 		\end{tabular}
 	\end{tabu}
 
