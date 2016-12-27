@@ -177,8 +177,7 @@ more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
 \a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP}) (\anno*{DP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP}) 
-	(\anno*{NP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{AP*}) (\anno*{CP})
 \a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{\itshape stem}} 
 \anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
@@ -214,7 +213,7 @@ define the following lexicosemantic rules for determiners (\xhead{D}):
 % 			\ups{\Prox} & = & $+$ \\
 % 			\ups{\Dist} & = & $-$ \\
 % 			\ups{\Def} & = & $+$ \\
-% 			\ups{\Spec} & = & $+$ \\
+			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}\medskip
 
@@ -227,7 +226,7 @@ define the following lexicosemantic rules for determiners (\xhead{D}):
 % 			\ups{\Prox} & = & $-$ \\
 % 			\ups{\Dist} & = & $+$ \\
 % 			\ups{\Def} & = & $+$ \\
-% 			\ups{\Spec} & = & $+$ \\
+			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}\medskip
 	
@@ -240,7 +239,7 @@ define the following lexicosemantic rules for determiners (\xhead{D}):
 % 			\ups{\Prox} & = & $+$ \\
 % 			\ups{\Dist} & = & $-$ \\
 % 			\ups{\Def} & = & $-$ \\
-% 			\ups{\Spec} & = & $+$ \\
+			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
 	
@@ -269,9 +268,11 @@ define the following lexicosemantic rules for determiners (\xhead{D}):
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
 	
+\needspace{3\baselineskip}
 \a Demonstrative pronouns:\medskip
 
 	\begin{tabu} {\usetabu{lexsem}}
@@ -283,6 +284,7 @@ define the following lexicosemantic rules for determiners (\xhead{D}):
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
 	
@@ -310,14 +312,13 @@ inheritance for c-to-f-structure conversion have been added.
 
 \ex\label{ex:dfcstruct}
 \begin{forest}
-[\ldots
-	[\anno{\pass{gf/df}}{DP}
-		[\anno{\updown}{\xbar{D}}
-			[\anno{\updown}{\xhead{D}}]
-			[\anno{\updown}{NP}]
-		]
-		[\anno{\updown}{DP}]
+where n children=0{tier=word}{}
+[\anno{\pass{cf}}{DP}
+	[\anno{\updown}{\xbar{D}}
+		[\anno{\updown}{\xhead{D}}]
+		[\anno{\updown}{NP}]
 	]
+	[\anno{\updown}{DP}]
 ]
 \end{forest}
 \xe
