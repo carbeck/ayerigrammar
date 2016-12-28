@@ -176,11 +176,10 @@ element may occur but is not constitutive; an asterisk stands for `zero or
 more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP}) (\anno*{DP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{NP}) (\anno*{AP*}) 
-	(\anno*{CP})
-\a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{\itshape stem}} 
-\anno*{\mbox{-N\tsub{\itshape infl}}} $\lor$ (\anno*{\^P}) \anno*{\xhead{N}}
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{XP*}) (\anno*{XP})
+\a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{stem}} \anno*{\mbox{-N\tsub{infl}}} 
+			\logor{} (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
 
 \subsection{Determiner phrases}
@@ -312,7 +311,14 @@ The c-structure of a DP corresponding to the linear description in
 inheritance for c-to-f-structure conversion have been added.
 
 \ex\label{ex:dpcstruct}
-...
+\begin{forest}
+[\anno{\pass{cf}}{DP}
+	[\anno{\updown}{\xbar{D}}
+		[\anno{\updown}{\xhead{D}}]
+		[$\left(\anno{\updown}{NP}\right)$]
+	]
+]
+\end{forest}
 \xe
 
 \subsection{Noun phrases}
@@ -371,6 +377,44 @@ lexicosemantic properties can be assumed:
 		\end{tabular}
 	\end{tabu}
 
+\xe
+
+...
+
+\ex\label{ex:npcstruct}\labels
+\begin{minipage}[t]{.5\linewidth}%
+\tl\quad Common nouns:\\
+
+\quad\begin{forest}
+[\anno{\pass{cf} \logor{} \updown}{NP}
+	[\anno{\updown}{\xbar{N}}
+		[\anno{\updown}{\xhead{N}}
+			[\anno{\updown}{N\tsub{stem}}]
+			[\anno{\updown}{\mbox{-N\tsub{infl}}}]
+		]
+		[$\left(\anno{\updown}{XP}\right)$]
+	]
+	[$\left(\anno{\updown}{XP}\right)$]
+]
+\end{forest}
+\end{minipage}
+%
+\begin{minipage}[t]{.5\linewidth}%
+\tl\quad Proper nouns:\\
+
+\quad\begin{forest}
+[\anno{\pass{cf} \logor{} \updown}{NP}
+	[\anno{\updown}{\xbar{N}}
+		[\anno{\updown}{\xhead{N}}
+			[\anno{\updown}{\^P}]
+			[\anno{\updown}{\xhead{N}}]
+		]
+		[$\left(\anno{\updown}{XP}\right)$]
+	]
+	[$\left(\anno{\updown}{XP}\right)$]
+]
+\end{forest}
+\end{minipage}
 \xe
 
 ...
