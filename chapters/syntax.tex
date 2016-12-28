@@ -33,7 +33,10 @@ constituency trees are based on an extended version of X-bar theory
 \citep[42]{bresnan2016}.\footnote{The basic recursive rules of X-bar theory 
 are observed:
 \begin{enumerate}[nosep, leftmargin={2\footnotemargin}]
-\item \xbar{X} → \xhead{X}, YP
+\item \begin{enumerate}
+	\item \xbar{X} → \xhead{X}, YP
+	\item \xbar{X} → \xbar{X}, YP
+\end{enumerate}\medskip
 \item XP → YP, \xbar{X}
 \end{enumerate}
 
@@ -177,7 +180,7 @@ more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
 \a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{XP*}) (\anno*{XP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*{XP}) (\anno*{XP})
 \a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{stem}} \anno*{\mbox{-N\tsub{infl}}} 
 			\logor{} (\anno*{\^P}) \anno*{\xhead{N}}
 \xe
@@ -196,9 +199,8 @@ status of determiners. Pronouns, as pro-forms, are in complementary
 distribution with NPs containing a noun. In order to capture the fact that an 
 NP is facultative with the demonstrative and inspecificity prefixes while it 
 must not occur with pronouns, `NP' appears in parentheses since it is not 
-always present. DPs can contain another DP as a specifier in the case of a 
-genitive attribute; possessive adjectives are also found in this place. We can 
-define the following lexicosemantic rules for determiners (\xhead{D}):
+always present. We can define the following lexicosemantic rules for 
+determiners (\xhead{D}):
 
 \pex
 \a Demonstrative prefixes:\medskip
