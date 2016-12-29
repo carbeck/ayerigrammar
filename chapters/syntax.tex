@@ -71,7 +71,7 @@ unified.
 \end{description}
 
 \begin{figure}[t]\centering
-\caption{F-structure mappings}
+\caption[F-structure mappings]{F-structure mappings \citep[15]{bresnan2016}}
 
 \begin{tabular}[t]{l @{\quad\quad} c}
 argument (a-)structure:
@@ -139,7 +139,7 @@ constituent (c-)structure:
 To illustrate the different parallel structures in operation, 
 \citet[15]{bresnan2016} give the schema in \autoref{fig:phimap} to demonstrate
 which part of the a- and c-structure respectively corresponds (`links', `maps') 
-to which part of the f-structure:\footnote{\citet{bresnan2016} use 
+to which part of the f-structure.\footnote{\citet{bresnan2016} use 
 \textsc{`subj'} for `subject'; for consistency with the above I will use 
 `\Sbj{}' in the following.} Regarding the different functions distinguished, 
 \Lfg{} assumes the following hierarchies \citep[97, 100]{bresnan2016}:
@@ -154,7 +154,7 @@ to which part of the f-structure:\footnote{\citet{bresnan2016} use
 		\Compl{}}^{\text{a-fns}}\; 
 	\underbrace{\Adjc{}}_{\text{non-a-fns}}$
 \a\label{ex:dfs} Discourse functions (DFs):\\
-	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}_{\text{d-fns}}\;  
+	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}^{\text{d-fns}}\;  
 	\underbrace{\Obj{}\: \SObj{}\: \OblqT{}\: \XCompl{}\: \Compl{}\: 
 		\Adjc{}}_{\text{non-d-fns}}$
 \xe
@@ -199,10 +199,10 @@ inheritance for c-to-f-structure conversion have been added.
 
 \ex\label{ex:dpcstruct}
 \begin{forest}
-[\anno{\pass{df} \logor{} \pass{gf}}{DP}
-	[\anno{\updown}{\xbar{D}}
-		[\anno{\updown}{\xhead{D}}]
-		[$\left(\anno{\updown}{NP}\right)$]
+[{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}]
+		[$\left(\anno{NP}\right)$]
 	]
 ]
 \end{forest}
@@ -354,15 +354,15 @@ diagrams.
 \tl\quad Common nouns:\\
 
 \quad\begin{forest}
-[\anno{\pass{df} \logor{} \pass{gf} \logor{} \updown}{NP}
-	[\anno{\updown}{\xbar{N}}
-		[\anno{\updown}{\xhead{N}}
-			[\anno{\updown}{N\tsub{stem}}]
-			[\anno{\updown}{\mbox{-N\tsub{infl}}}]
+[{\anno[\pass{df} \logor{} \pass{gf} \logor{} \updown]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[\anno{N\tsub{stem}}]
+			[\anno{\mbox{-N\tsub{infl}}}]
 		]
-		[$\left(\anno{\pass{\Adjc}}{XP}\right)$]
+		[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
 	]
-% 	[$\left(\anno{\pass{\Adjc}}{NP}\right)$]
+% 	[{$\left(\anno[\pass{\Adjc}]{NP}\right)$}]
 ]
 \end{forest}
 \end{minipage}
@@ -371,15 +371,15 @@ diagrams.
 \tl\quad Proper nouns:\\
 
 \quad\begin{forest}
-[\anno{\pass{df} \logor{} \pass{gf} \logor{} \updown}{NP}
-	[\anno{\updown}{\xbar{N}}
-		[\anno{\updown}{\xhead{N}}
-			[\anno{\updown}{\^P}]
-			[\anno{\updown}{\xhead{N}}]
+[{\anno[\pass{df} \logor{} \pass{gf} \logor{} \updown]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[\anno{\^P}]
+			[\anno{\xhead{N}}]
 		]
-		[$\left(\anno{\pass{\Adjc}}{XP}\right)$]
+		[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
 	]
-% 	[$\left(\anno{\pass{\Adjc}}{NP}\right)$]
+% 	[{$\left(\anno[\pass{\Adjc}]{NP}\right)$}]
 ]
 \end{forest}
 \end{minipage}
