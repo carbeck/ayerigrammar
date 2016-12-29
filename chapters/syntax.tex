@@ -225,7 +225,7 @@ rules for determiners (\xhead{D}):
 \pex
 \a Demonstrative prefixes:\medskip
 
-	\begin{tabu} to \linewidth {X[15l] X[5l] X[80l]}
+	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
 	\savetabu{lexsem}
 	\rayr{Ed/}{eda-}
 		& P
@@ -470,7 +470,7 @@ list the features relevant to the current discussion.}
 \ljudge*\begin{forest}
 [{%
 \xhead{N} \\
-\ups{\Anim} = ? \\
+\ups{\Anim} = \err{} \\
 \ups{\Case} = \Parg{}
 }
 	[\^P
@@ -500,6 +500,94 @@ the case particle, \rayr{le}{le}, signals that \xhead{N} is inanimate: the
 \Anim{} values of \^P and its \xhead{N} sister clash and cannot be conclusively 
 unified at the governing \xhead{N} node. The same principle of coherence is, of 
 course, also true for common nouns, which receive a case-marking suffix.
+
+As previously mentioned, nouns may be modified by a number of adjuncts of
+various phrase types: adjectives (AP), adnominal genitives (NP), other nominal 
+adjuncts (NP), and relative clauses (CP):
+
+\pex
+\a\begingl
+	\gla Ya manga nu-nunāran \textbf{baloyyereng} \textbf{tiru} venya 
+		satitay. //
+	\glb Ya manga nu\til{}nuna-aran baloy-ye-reng tiru ven-ya satitay //
+	\glc \LocT{} \Dyn{} \Iter{}\til{}fly-\TplI{} leaf-\Pl{}-\AargI{} dry 
+		air-\Loc{} dry.season-\Top{} //
+	\glft `In the dry season, the dry leaves are flying around in the 
+		air.' //\bigskip
+	
+	\begin{forest}
+	[{\anno[\pass{\Sbj}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[baloyyereng]
+			]
+			[{\anno[\pass{\Adjc}]{AP}}
+				[{tiru}, roof]
+			]
+		]
+	]
+	\end{forest}
+	\hfill
+	\larger\begin{avm}
+	\[
+		\Pred	& `...' \\
+		\Sbj	& \[
+			\Pred	& `leaf' \\
+			\Pers	& \Third \\
+			\Num	& \Pl \\
+			\Anim	& $-$ \\
+			\Case	& \Aarg \\
+			\Adjc	& \{\[
+				\Pred	& `dry' \\
+				\]\} \\
+			\] \\
+		...
+	\]
+	\end{avm}
+\endgl
+
+\a\begingl
+	\gla Le pegaya sinyāng \textbf{kasu} \textbf{bariri}? //
+	\glb Le pega-ya sinya-ang kasu-Ø bari-ri //
+	\glc \PargI{} steal-\TsgM{} who-\Aarg{} basket-\Top{} meat-\Ins{} //
+	\glft `The basket of meat, who stole it?' //\bigskip
+	
+	\begin{forest}
+	[{\anno[\elem{\Top}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[kasu]
+			]
+			[{\anno[\pass{\Adjc}]{NP}}
+				[{bariri}, roof]
+			]
+		]
+	]
+	\end{forest}
+	\hfill
+	\larger\begin{avm}
+	\[
+		\Pred	& `...' \\
+		\Top	& \[
+			\Pred	& `basket' \\
+			\Pers	& \Third \\
+			\Num	& \Sg \\
+			\Anim	& $-$ \\
+			\Case	& \Parg \\
+			\Adjc	& \{ \Oblq{ins} & \[
+					\Pred	& `meat' \\
+					\Pers	& \Third \\
+					\Anim	& $-$ \\
+					\Case	& \Ins \\
+					\] \\
+				\} \\
+			\] \\
+		...
+	\]
+	\end{avm}
+\endgl
+
+\xe
 
 % \section{Adjective phrases}
 %
