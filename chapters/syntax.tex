@@ -71,7 +71,7 @@ unified.
 \end{description}
 
 \begin{figure}[t]\centering
-\caption{Correspondences between different structural layers}
+\caption{F-structure mappings}
 
 \begin{tabular}[t]{l @{\quad\quad} c}
 argument (a-)structure:
@@ -385,8 +385,9 @@ diagrams.
 \end{minipage}
 \xe
 
-
-For nouns, the following general lexicosemantic properties can be assumed:
+In the following, I will again give a list of lexicosemantic specifications 
+which give an overview of the different semantic and morphological features 
+nouns provide (also compare \autoref{sec:nouns}):
 
 \needspace{3\baselineskip}
 \pex
@@ -412,7 +413,7 @@ For nouns, the following general lexicosemantic properties can be assumed:
 	(various)
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Anim} & \req{} & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
 		\end{tabular}
@@ -432,7 +433,73 @@ For nouns, the following general lexicosemantic properties can be assumed:
 
 \xe
 
-...
+Generally, both command and proper nouns provide information about person, 
+number, gender, and animacy. As mentioned above, proper nouns require a 
+particle to precede them which carries information on case. This particle 
+distinguishes animacy for \Aarg{} and \Parg{} and is thus required to be 
+consistent with the noun's animacy feature:\footnote{For clarity, I will only 
+list the features relevant to the current discussion.}
+
+\ex\labels%
+\begin{minipage}[t]{.5\linewidth}
+\tl\label{ex:animok}\quad %
+\begin{forest}
+[{%
+\xhead{N} \\
+\ups{\Anim} = $+$ \\
+\ups{\Case} = \Parg{}
+}
+	[\^P
+		[{%
+			sa \\
+			\ups{\Anim} \req{} $+$ \\
+			\ups{\Case} = \Parg{}
+		}]
+	]
+	[\xhead{N}
+		[{%
+			Ajān \\
+			\ups{\Anim} = $+$
+		}]
+	]
+]
+\end{forest}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\tl\label{ex:animclash}\quad %
+\ljudge*\begin{forest}
+[{%
+\xhead{N} \\
+\ups{\Anim} = ? \\
+\ups{\Case} = \Parg{}
+}
+	[\^P
+		[{%
+			le \\
+			\ups{\Anim} \req{} $-$ \\
+			\ups{\Case} = \Parg{}
+		}]
+	]
+	[\xhead{N}
+		[{%
+			Ajān \\
+			\ups{\Anim} = $+$
+		}]
+	]
+]
+\end{forest}
+\end{minipage}
+\xe
+
+Example (\ref{ex:animok}a) shows a well-formed construction: the proper noun, 
+\rayr{AgYaanF}{Ajān}, is animate, hence the case particle also needs to be 
+animate---the case particle, \rayr{s}{sa}, constrains the existence of an 
+animate complement in its domain. In contrast to this, example 
+(\ref{ex:animclash}b) is not well-formed in that the proper noun is animate but 
+the case particle, \rayr{le}{le}, signals that \xhead{N} is inanimate: the 
+\Anim{} values of \^P and its \xhead{N} sister clash and cannot be conclusively 
+unified at the governing \xhead{N} node. The same principle of coherence is, of 
+course, also true for common nouns, which receive a case-marking suffix.
 
 % \section{Adjective phrases}
 %
