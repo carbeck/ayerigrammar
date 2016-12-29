@@ -507,14 +507,16 @@ adjuncts (NP), and relative clauses (CP):
 
 \pex
 \a\begingl
+	\glpreamble With an adjective: //
 	\gla Ya manga nu-nunāran \textbf{baloyyereng} \textbf{tiru} venya 
 		satitay. //
 	\glb Ya manga nu\til{}nuna-aran baloy-ye-reng tiru ven-ya satitay //
-	\glc \LocT{} \Dyn{} \Iter{}\til{}fly-\TplI{} leaf-\Pl{}-\AargI{} dry 
+	\glc \LocT{} \Prog{} \Iter{}\til{}fly-\TplI{} leaf-\Pl{}-\AargI{} dry 
 		air-\Loc{} dry.season-\Top{} //
 	\glft `In the dry season, the dry leaves are flying around in the 
-		air.' //\bigskip
-	
+		air.' //
+\endgl
+
 	\begin{forest}
 	[{\anno[\pass{\Sbj}]{NP}}
 		[\anno{\xbar{N}}
@@ -528,12 +530,12 @@ adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\hfill
-	\larger\begin{avm}
+	{\larger\begin{avm}
 	\[
 		\Pred	& `...' \\
 		\Sbj	& \[
 			\Pred	& `leaf' \\
-			\Pers	& \Third \\
+% 			\Pers	& \Third \\
 			\Num	& \Pl \\
 			\Anim	& $-$ \\
 			\Case	& \Aarg \\
@@ -543,15 +545,58 @@ adjuncts (NP), and relative clauses (CP):
 			\] \\
 		...
 	\]
-	\end{avm}
-\endgl
+	\end{avm}}
 
 \a\begingl
+	\glpreamble With an adnominal genitive: //
+	\gla Adanyāng pacanas na Tuvo. //
+	\glb Adanya-ang pacan-as na Tuvo //
+	\glc that.one-\Aarg{} cousin-\Parg{} \Gen{} Tuvo //
+	\glft `That is Tuvo's cousin.' //
+\endgl
+
+	\begin{forest}
+	[{\anno[\pass{\XCompl}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[pacanas]
+			]
+			[{\anno[\pass{\Adjc}]{NP}}
+				[{na Tuvo}, roof]
+			]
+		]
+	]
+	\end{forest}
+	\hfill
+	{\larger\begin{avm}
+	\[
+% 		\Pred	& `...' \\
+		...
+		\XCompl	& \[
+			\Pred	& `cousin' \\
+% 			\Pers	& \Third \\
+			\Num	& \Sg \\
+			\Anim	& $+$ \\
+			\Case	& \Parg \\
+			\Adjc	& \{ \Oblq{gen} & \[
+					\Pred	& `Tuvo' \\
+% 					\Pers	& \Third \\
+% 					\Anim	& $+$ \\
+					\Case	& \Gen \\
+					\] \\
+				\} \\
+			\] \\
+	\]
+	\end{avm}}
+
+\a\begingl
+	\glpreamble With a noun adjunct: //
 	\gla Le pegaya sinyāng \textbf{kasu} \textbf{bariri}? //
 	\glb Le pega-ya sinya-ang kasu-Ø bari-ri //
 	\glc \PargI{} steal-\TsgM{} who-\Aarg{} basket-\Top{} meat-\Ins{} //
-	\glft `The basket of meat, who stole it?' //\bigskip
-	
+	\glft `The basket of meat, who stole it?' //
+\endgl
+
 	\begin{forest}
 	[{\anno[\elem{\Top}]{NP}}
 		[\anno{\xbar{N}}
@@ -565,27 +610,65 @@ adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\hfill
-	\larger\begin{avm}
+	{\larger\begin{avm}
 	\[
 		\Pred	& `...' \\
 		\Top	& \[
 			\Pred	& `basket' \\
-			\Pers	& \Third \\
+% 			\Pers	& \Third \\
 			\Num	& \Sg \\
 			\Anim	& $-$ \\
 			\Case	& \Parg \\
 			\Adjc	& \{ \Oblq{ins} & \[
 					\Pred	& `meat' \\
-					\Pers	& \Third \\
-					\Anim	& $-$ \\
+% 					\Pers	& \Third \\
+% 					\Anim	& $-$ \\
 					\Case	& \Ins \\
 					\] \\
 				\} \\
 			\] \\
 		...
 	\]
-	\end{avm}
+	\end{avm}}
+
+\a\begingl
+	\glpreamble With a relative clause: //
+	\gla Ang konja seygoley si tuvo nay sepra. //
+	\glb Ang kond=ya.Ø seygo-ley si tuvo nay sepra //
+	\glc \AgtT{} eat=\Fsg{}.\Top{} apple-\PargI{} \Rel{} red and crunchy //
+	\glft `I ate an apple which was red and crunchy.' //
 \endgl
+
+	\begin{forest}
+	[{\anno[\pass{\Obj}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[seygoley]
+			]
+			[{\anno[\pass{\Adjc}]{CP}}
+				[{si tuvo nay sepra}, roof]
+			]
+		]
+	]
+	\end{forest}
+	\hfill
+	{\larger\begin{avm}
+	$f_1$: \[
+		\Pred	& `...' \\
+		\Obj	& \[
+			\Pred	& `apple' \\
+% 			\Pers	& \Third \\
+			\Num	& \Sg \\
+			\Anim	& $-$ \\
+			\Case	& \Parg \\
+			\Adjc	& \{ \Compl & $f_2$: & \[ ...
+% 					\Pred	& `be red and crunchy' \\
+					\] \\
+				\} \\
+			\] \\
+		...
+	\]
+	\end{avm}}
 
 \xe
 
