@@ -491,23 +491,20 @@
 }
 
 % Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
-\newcommand{\anno}[2]{ % [\updown{}]{%
-	\mbox{%
+\newcommand{\anno}[2][\updown{}]{%
 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
 		{\smaller\smaller #1}\\
 		#2
 	\end{minipage}%
-	}
 }
 
 % Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
-	\mbox{\enspace%
+	\enspace%
 	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
 		#2\\[-0.33\baselineskip]%
 		{\smaller\smaller #1}%
 	\end{minipage}\enspace%
-	}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
