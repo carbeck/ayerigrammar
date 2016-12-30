@@ -170,6 +170,7 @@ the next higher node (`up') in the tree. Concise information on notational
 formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
 
 \section{Determiner- and noun phrases}
+\label{sec:dps-nps}
 
 Noun phrases (NPs), and determiner phrases (DPs) as their functional 
 counterpart, fulfill the functions of subject (\Sbj{}), object (\Obj{}), 
@@ -185,14 +186,12 @@ element may occur but is not constitutive; an asterisk stands for `zero or
 more' occurrences of the respective element.
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP}) 
-% 	(\anno*[\pass{\Adjc}]{NP})
-\a\label{ex:ndef} \xhead{N} → \anno*{N\tsub{stem}} \anno*{\mbox{-N\tsub{infl}}} 
-			\logor{} (\anno*{\^P}) \anno*{\xhead{N}}
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{XP})
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP})
 \xe
 
 \subsection{Determiner phrases}
+\label{subsec:dps}
 
 The functional heads of DPs are formed by determiners. The c-structure of a DP 
 corresponding to the linear description in (\ref{ex:dpdef}) is depicted in 
@@ -204,7 +203,7 @@ c-to-f-structure conversion have been added.
 [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
-		[$\left(\anno{NP}\right)$]
+		[$\left(\anno{XP}\right)$]
 	]
 ]
 \end{forest}
@@ -218,11 +217,13 @@ as well as the inspecificity prefix \xayr{me/}{mə-}{some} (compare
 \autoref{subsec:nounpref}). These prefixes can only be used with nouns, but not 
 with personal pronouns (compare \autoref{subsec:perspro}), since personal 
 pronouns as well have the status of determiners. Pronouns, as pro-forms, are in 
-complementary distribution with NPs containing a noun. In order to capture the 
-fact that an NP is facultative with the demonstrative and inspecificity 
-prefixes while it must not occur with pronouns, `NP' appears in parentheses 
-since it is not always present. We can define the following lexicosemantic 
-rules for determiners (\xhead{D}):
+complementary distribution with NPs containing a noun. Due to affix-order 
+considerations concerning the demonstrative prefixes, it also seems advisable 
+to analyze the case markers of proper nouns as determiners. In order to capture 
+the fact that an NP is facultative with the demonstrative and inspecificity 
+prefixes while it must not occur with pronouns, `XP' appears in parentheses 
+since a phrasal complement (DP, NP, AP) it is not always present. We can define 
+the following lexicosemantic rules for determiners (\xhead{D}):
 
 \pex
 \a Demonstrative prefixes:\medskip
@@ -314,12 +315,25 @@ rules for determiners (\xhead{D}):
 		\end{tabular}
 	\end{tabu}
 	
+\needspace{3\baselineskip}
+\a\label{ex:dlexsem-propn} Case markers of proper nouns:\medskip	
+	
+	\begin{tabu} {\usetabu{lexsem}}
+	(various)
+		& D
+		& \begin{tabular}[t]{l l l}
+			\ups{\Anim} & \req{} & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}\medskip
+	
 \xe
 
-Demonstrative prefixes as well as the inspecificity prefix \rayr{me/}{mə-} 
-cannot be without an NP complement, which is what `\req{}' is supposed to 
-express in the feature specification: the demonstrative prefixes require that 
-an element exist which encodes a third-person referent to bind to; nouns 
+Demonstrative prefixes, the inspecificity prefix \rayr{me/}{mə-}, as well as 
+proper-noun case markers cannot be without an NP complement, which is what 
+`\req{}' is supposed to express in the feature specification: the demonstrative 
+prefixes require that an element exist which encodes a third-person referent to 
 are assumed to encode third person by default.\footnote{A simple `=' 
 \emph{defines} a value; a subscript `c' indicates that the morpheme 
 \emph{requires} that this value be present. Thus `\req{}' expresses a 
@@ -338,18 +352,12 @@ Regarding NPs proper, it is necessary to distinguish morphologically between
 those containing common nouns and those containing proper nouns (that is,  
 names), as we have seen in the previous chapter (compare \autoref{sec:nouns}): 
 common nouns indicate case by a suffix, while proper nouns receive case marking 
-by a particle preceding the noun. For this reason, the phrase-structure formula 
-in (\ref{ex:ndef}), defining nominal heads (\xhead{N}), has two halves 
-connected by \textsc{or}. In the second half, the case particle before names is 
-indicated by `\^P' (`P-roof'), a non-projecting particle 
-\citep[116--117]{bresnan2016}. Nouns can also be modified by adjectives, 
-adjunct nouns, or relative clauses, which are typically following the noun. The 
-c-structure of NPs can be assumed to look like given in (\ref{ex:npcstruct}). 
-Since modifiers of \xhead{N} (\xhead{N}'s sister node) can consist of different 
-phrase types (AP, NP, CP), they are indicated generalized as `XP' in the 
-diagrams.
-% The NP sister node of \xbar{N} is reserved for genitive-NP attributes 
-% to \xhead{N}.
+by a particle preceding the noun (see \autoref{subsec:dps} and below). Nouns 
+can also be modified by adjectives, adjunct nouns, or relative clauses, which 
+are typically following the noun. The c-structure of NPs can be assumed to look 
+like given in (\ref{ex:npcstruct}). Since modifiers of \xhead{N} (\xhead{N}'s 
+sister node) can consist of different phrase types (AP, NP, CP), they are 
+indicated generalized as `XP' in the diagrams.
 
 \ex\label{ex:npcstruct}\labels
 \begin{minipage}[t]{.5\linewidth}%
@@ -364,7 +372,6 @@ diagrams.
 		]
 		[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
 	]
-% 	[{$\left(\anno[\pass{\Adjc}]{NP}\right)$}]
 ]
 \end{forest}
 \end{minipage}
@@ -372,16 +379,17 @@ diagrams.
 \begin{minipage}[t]{.5\linewidth}%
 \tl\quad Proper nouns:\\
 
-\quad\begin{forest}
-[{\anno[\pass{df} \logor{} \pass{gf} \logor{} \updown]{NP}}
-	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}
-			[\anno{\^P}]
-			[\anno{\xhead{N}}]
+\quad\begin{forest} shorter edges,
+[{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}]
+		[{\anno[\updown]{NP}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}]
+				[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
+			]
 		]
-		[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
 	]
-% 	[{$\left(\anno[\pass{\Adjc}]{NP}\right)$}]
 ]
 \end{forest}
 \end{minipage}
@@ -412,16 +420,6 @@ nouns provide (also compare \autoref{sec:nouns}):
 \a Proper nouns:\\
 
 	\begin{tabu} {\usetabu{lexsem}}
-	(various)
-		& P
-		& \begin{tabular}[t]{l l l}
-			\ups{\Anim} & \req{} & $\pm$ \\
-			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-				\Loc{}, \Ins{}, \Caus{}\} \\
-		\end{tabular}
-	\end{tabu}\medskip
-
-	\begin{tabu} {\usetabu{lexsem}}
 	...
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -435,10 +433,10 @@ nouns provide (also compare \autoref{sec:nouns}):
 
 \xe
 
-Generally, both command and proper nouns provide information about person, 
+Generally, both common and proper nouns provide information about person, 
 number, gender, and animacy. As mentioned above, proper nouns require a 
-particle to precede them which carries information on case. This particle 
-distinguishes animacy for \Aarg{} and \Parg{} and is thus required to be 
+particle to precede them which carries information on case. Case markers of 
+nouns distinguish animacy for \Aarg{} and \Parg{} and are thus required to be 
 consistent with the noun's animacy feature:\footnote{For clarity, I will only 
 list the features relevant to the current discussion.}
 
@@ -451,17 +449,17 @@ list the features relevant to the current discussion.}
 \ups{\Anim} = $+$ \\
 \ups{\Case} = \Parg{}
 }
-	[\^P
+	[N\tsub{stem}
 		[{%
-			sa \\
-			\ups{\Anim} \req{} $+$ \\
-			\ups{\Case} = \Parg{}
+			gan \\
+			\ups{\Anim} = $+$ \\
 		}]
 	]
-	[\xhead{N}
+	[-N\tsub{infl}
 		[{%
-			Ajān \\
-			\ups{\Anim} = $+$
+			-as \\
+			\ups{\Anim} = $+$ \\
+			\ups{\Case} = \Parg{} \\
 		}]
 	]
 ]
@@ -475,17 +473,17 @@ list the features relevant to the current discussion.}
 \ups{\Anim} = \err{} \\
 \ups{\Case} = \Parg{}
 }
-	[\^P
+	[N\tsub{stem}
 		[{%
-			le \\
-			\ups{\Anim} \req{} $-$ \\
-			\ups{\Case} = \Parg{}
+			gan \\
+			\ups{\Anim} = $+$ \\
 		}]
 	]
 	[\xhead{N}
 		[{%
-			Ajān \\
-			\ups{\Anim} = $+$
+			-ley \\
+			\ups{\Anim} = $-$ \\
+			\ups{\Case} = \Parg{} \\
 		}]
 	]
 ]
@@ -493,15 +491,16 @@ list the features relevant to the current discussion.}
 \end{minipage}
 \xe
 
-Example (\ref{ex:animok}a) shows a well-formed construction: the proper noun, 
-\rayr{AgYaanF}{Ajān}, is animate, hence the case particle also needs to be 
-animate---the case particle, \rayr{s}{sa}, constrains the existence of an 
-animate complement in its domain. In contrast to this, example 
-(\ref{ex:animclash}b) is not well-formed in that the proper noun is animate but 
-the case particle, \rayr{le}{le}, signals that \xhead{N} is inanimate: the 
-\Anim{} values of \^P and its \xhead{N} sister clash and cannot be conclusively 
-unified at the governing \xhead{N} node. The same principle of coherence is, of 
-course, also true for common nouns, which receive a case-marking suffix.
+Example (\ref{ex:animok}a) shows a well-formed construction: the noun, 
+\xayr{gnF}{gan}{child}, is animate, hence the case particle also needs to be 
+animate---the case particle must thus be \rayr{/As}{-as} to be coherent. In 
+contrast to this, example (\ref{ex:animclash}b) is not well-formed in that the 
+noun is animate but the case particle, \rayr{/lej}{-ley}, signals that 
+it is inanimate: the \Anim{} values of the noun stem and its suffix 
+clash and cannot be conclusively unified for \xhead{N} itself. The 
+same principle of coherence is, of course, also true for proper nouns, which 
+receive a case-marking particle. These are defined in (\ref{ex:dlexsem-propn}) 
+as demanding that a noun with the correct animacy value be within their scope.
 
 As previously mentioned, nouns may be modified by a number of adjuncts of
 various phrase types: adjectives (AP), adnominal genitives (NP), other nominal 
@@ -754,25 +753,27 @@ listener. The following example illustrates the unmarked order of modifiers:
 
 \xe
 
-An issue so far not accounted for is that due to the demonstrative prefixes 
-being clitics which lean on the next \xhead{N} they c-command, the order of the 
-case particle and the demonstrative prefix is inverted with proper nouns. 
-Compare these two examples:
+With common nouns, a determiner which requires a complement (like the 
+demonstrative prefixes, for instance) simply cliticizes to the next \xhead{N} 
+it commands, which is illustrated in (\ref{ex:det+comn}). If a proper noun is 
+involved, however, there need to be two \xhead{D} slots, one for the case 
+marker, and another for the demonstrative prefix, which (\ref{ex:det+propn}) 
+gives an example of.
 
 \begin{multicols}{2}
-\pex
+\pex\label{ex:det+comn}
 \a\begingl
-	\gla mehirang //
-	\glb mehir-ang //
-	\glc tree-\Aarg{} //
-	\glft `the/a tree' //
+	\gla ayonang //
+	\glb ayon-ang //
+	\glc man-\Aarg{} //
+	\glft `the/a man' //
 \endgl
 
 \a\begingl
-	\gla ada-mehirang //
-	\glb ada=mehir-ang //
-	\glc that=tree-\Aarg{} //
-	\glft `that tree' //
+	\gla adāyonang //
+	\glb ada=ayon-ang //
+	\glc that=man-\Aarg{} //
+	\glft `that man' //
 \endgl
 \xe
 
@@ -784,7 +785,7 @@ Compare these two examples:
 		]
 		[NP
 			[\xhead{N}
-				[mehirang]
+				[ayonang]
 			]
 		]
 	]
@@ -794,7 +795,7 @@ Compare these two examples:
 \end{multicols}
 
 \begin{multicols}{2}
-\pex~
+\pex~\label{ex:det+propn}
 \a\begingl
 	\gla ang Diyan //
 	\glb ang Diyan //
@@ -802,13 +803,7 @@ Compare these two examples:
 	\glft `Diyan' //
 \endgl
 
-\a\label{ex:diyanwrong}\ljudge*\begingl
-	\gla ada-ang Diyan //
-	\glb ada=ang Diyan //
-	\glc that=\Aarg{} Diyan //
-\endgl
-
-\a\label{ex:diyanright}\begingl
+\a\label{ex:case+det+propn}\begingl
 	\gla ang ada-Diyan //
 	\glb ang ada=Diyan //
 	\glc \Aarg{} that=Diyan //
@@ -816,23 +811,7 @@ Compare these two examples:
 \endgl
 \xe
 
-{\smaller*\begin{forest} shorter edges,
-[DP
-	[\xbar{D}
-		[\xhead{D}
-			[ada-]
-		]
-		[NP
-			[\xhead{N}
-				[ang Diyan]
-			]
-		]
-	]
-]
-\end{forest}
-}
-\quad
-{\smaller\ques{}\begin{forest} shorter edges,
+{\smaller\begin{forest} shorter edges,
 [DP
 	[\xbar{D}
 		[\xhead{D}
@@ -854,6 +833,8 @@ Compare these two examples:
 }
 
 \end{multicols}
+
+...
 
 % \section{Adjective phrases}
 %
