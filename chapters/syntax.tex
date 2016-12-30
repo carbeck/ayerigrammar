@@ -700,7 +700,7 @@ listener. The following example illustrates the unmarked order of modifiers:
 \endgl
 \medskip
 
-\begin{forest}
+\begin{forest} % shorter edges,
 [{\anno[\pass{\Sbj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
@@ -753,6 +753,107 @@ listener. The following example illustrates the unmarked order of modifiers:
 \end{avm}}
 
 \xe
+
+An issue so far not accounted for is that due to the demonstrative prefixes 
+being clitics which lean on the next \xhead{N} they c-command, the order of the 
+case particle and the demonstrative prefix is inverted with proper nouns. 
+Compare these two examples:
+
+\begin{multicols}{2}
+\pex
+\a\begingl
+	\gla mehirang //
+	\glb mehir-ang //
+	\glc tree-\Aarg{} //
+	\glft `the/a tree' //
+\endgl
+
+\a\begingl
+	\gla ada-mehirang //
+	\glb ada=mehir-ang //
+	\glc that=tree-\Aarg{} //
+	\glft `that tree' //
+\endgl
+\xe
+
+{\smaller\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[ada-]
+		]
+		[NP
+			[\xhead{N}
+				[mehirang]
+			]
+		]
+	]
+]
+\end{forest}
+}
+\end{multicols}
+
+\begin{multicols}{2}
+\pex~
+\a\begingl
+	\gla ang Diyan //
+	\glb ang Diyan //
+	\glc \Aarg{} Diyan //
+	\glft `Diyan' //
+\endgl
+
+\a\label{ex:diyanwrong}\ljudge*\begingl
+	\gla ada-ang Diyan //
+	\glb ada=ang Diyan //
+	\glc that=\Aarg{} Diyan //
+\endgl
+
+\a\label{ex:diyanright}\begingl
+	\gla ang ada-Diyan //
+	\glb ang ada=Diyan //
+	\glc \Aarg{} that=Diyan //
+	\glft `that Diyan' //
+\endgl
+\xe
+
+{\smaller*\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[ada-]
+		]
+		[NP
+			[\xhead{N}
+				[ang Diyan]
+			]
+		]
+	]
+]
+\end{forest}
+}
+\quad
+{\smaller\ques{}\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[ang]
+		]
+		[\xbar{D}
+			[\xhead{D}
+				[ada-]
+			]
+			[NP
+				[\xhead{N}
+					[Diyan]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+}
+
+\end{multicols}
 
 % \section{Adjective phrases}
 %
