@@ -226,7 +226,7 @@ since a phrasal complement (DP, NP, AP) it is not always present. We can define
 the following lexicosemantic rules for determiners (\xhead{D}):
 
 \pex
-\a\label{ex:dlexsem-dem} Demonstrative prefixes:\medskip
+\a\label{ex:dlexsem-dem}Demonstrative prefixes:\medskip
 
 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
 	\savetabu{lexsem}
@@ -316,12 +316,16 @@ the following lexicosemantic rules for determiners (\xhead{D}):
 	\end{tabu}
 	
 \needspace{3\baselineskip}
-\a\label{ex:dlexsem-propn} Case markers of proper nouns:\medskip	
+\a\label{ex:dlexsem-propn}Case markers of proper nouns:\medskip	
 	
 	\begin{tabu} {\usetabu{lexsem}}
 	(various)
 		& D
 		& \begin{tabular}[t]{l l l}
+% 			\ups{\Pers} & \req{} & \Third \\
+% A 3rd person must not be *required* if the topic particle is in fact a D head 
+% in Spec NP, since pronouns as well can serve as topics without being 3rd 
+% persons!
 			\ups{\Anim} & \req{} & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
@@ -534,7 +538,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	\hfill
 	{\larger\begin{avm}
 	\[
-		\Pred	& `...' \\
 		\Sbj	& \[
 			\Pred	& `leaf' \\
 % 			\Pers	& \Third \\
@@ -545,7 +548,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 				\Pred	& `dry' \\
 				\]\} \\
 			\] \\
-		...
 	\]
 	\end{avm}}
 
@@ -573,8 +575,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	\hfill
 	{\larger\begin{avm}
 	\[
-% 		\Pred	& `...' \\
-		... \\
 		\XCompl	& \[
 			\Pred	& `cousin' \\
 % 			\Pers	& \Third \\
@@ -616,7 +616,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	\hfill
 	{\larger\begin{avm}
 	\[
-		\Pred	& `...' \\
 		\Top	& \[
 			\Pred	& `basket' \\
 % 			\Pers	& \Third \\
@@ -631,7 +630,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 					\] \\
 				\} \\
 			\] \\
-		...
 	\]
 	\end{avm}}
 
@@ -659,8 +657,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	\end{forest}
 	\hfill
 	{\larger\begin{avm}
-	$f_1$: \[
-		\Pred	& `...' \\
+	\[
 		\Obj	& \[
 			\Pred	& `apple' \\
 % 			\Pers	& \Third \\
@@ -673,7 +670,6 @@ other nominal adjuncts (NP), and relative clauses (CP):
 					\] \\
 				\} \\
 			\] \\
-		...
 	\]
 	\end{avm}}
 
@@ -907,7 +903,7 @@ possessor) and the formal \Num{} feature.
 \begingl
 	\gla da-vana //
 	\glb da=vana //
-	\glc such=\Ssg{}.\Gen{} //
+	\glc such=\Second{}.\Gen{} //
 	\glft `yours' //
 \endgl\medskip
 
@@ -933,12 +929,13 @@ possessor) and the formal \Num{} feature.
 					[\xhead{D}
 						[{%
 						vana \\
-						\ups{\Pers{}} = 
+						\ups{\Pers} = 
 							\textbf{\Second} \\
-						\ups{\Case{}} = \Gen \\
-						\downs{\Index{} \Pers{}} =
+						\ups{\Case} = \Gen \\
+						\downs{\Index{} \Pers} =
 							\textbf{\Second} \\
-						\downs{\Index{} \Num{}} = \Sg \\
+						\downs{\Index{} \Num} = \Sg \\
+						\downs{\Index{} \Case} = \Gen \\
 						}]
 					]
 				]
@@ -967,6 +964,7 @@ possessor) and the formal \Num{} feature.
 				\ups{\Case{}} = \Gen \\
 				\downs{\Index{} \Pers{}} = \textbf{\Second} \\
 				\downs{\Index{} \Num{}} = \Sg \\
+				\downs{\Index{} \Case{}} = \Gen \\
 				}]
 			]
 		]
@@ -977,10 +975,56 @@ possessor) and the formal \Num{} feature.
 
 \xe
 
+The trees for \rayr{d/vn}{da-vana} in (\ref{ex:posspron}) illustrate one way to 
+analyze the nominalization of the possessive pronoun, which otherwise serves as 
+a modifier to a nominal head. This position, otherwise being associated 
+with third person, is empty in this case, though by changing the category of 
+the pronoun from DP to NP, the pronoun's outward encoding of second person is 
+overwritten with third person as necessaitated by the demonstative prefix. The 
+information about its second-person referent, however, is not lost, but 
+preserved in the \Index{} feature of the nominalized pronoun. Moreover, as 
+nominal forms, they can undergo case marking, so another mismatch between 
+internal and external feature encoding may happen in that the possessive 
+pronoun, itself being in genitive case, may syntactically be used in a 
+different grammatical function, thus marked additionally for another case. It 
+thus happens that \rayr{vn}{vana} in (\ref{ex:posspronpat}) is openly encoded 
+for patient case (\rayr{/lej}{-ley} marks inanimate patient case) while 
+lexically it is a genitive form---the patient form proper is 
+\xayr{vaasF}{vās}{you}, but as such it does not indicate possession and also 
+does not distinguish animacy, as this is distinguished in pronouns only in 
+third person.
+
+\begin{multicols}{2}
+\ex\label{ex:posspronpat}
+\begingl
+	\gla Pinyan, eryu da-vanaley. //
+	\glb Pinyan ery-u da=vana-ley //
+	\glc please use-\Imp{} such=\Second{}.\Gen{}-\PargI{} //
+	\glft `Please use yours.' //
+\endgl
+\xe
+
+\begin{avm}
+\[
+\Obj	& \[
+	\Pred	& `pro' \\
+	\Num	& \Third \\
+	\Anim	& $-$ \\
+	\Case	& \Parg \\
+	\Index	& \[
+		\Pers	& \Second \\
+		\Num	& \Sg \\
+		\Case	& \Gen \\
+		\]\\
+	\]\\
+\]
+\end{avm}
+\end{multicols}
+
 While it is possible to nominalize adjectives and possessive pronouns this way, 
 the process as described above only works for single words---including 
-quantifier suffixes, since these are clitic---but not for complex phrases. Thus, 
-for instance, the following examples are unacceptable:
+quantifier suffixes, since these are clitic---but not for complex phrases. 
+Thus, for instance, the following examples are unacceptable:
 
 ...
 
