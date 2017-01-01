@@ -226,7 +226,7 @@ since a phrasal complement (DP, NP, AP) it is not always present. We can define
 the following lexicosemantic rules for determiners (\xhead{D}):
 
 \pex
-\a Demonstrative prefixes:\medskip
+\a\label{ex:dlexsem-dem} Demonstrative prefixes:\medskip
 
 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
 	\savetabu{lexsem}
@@ -849,16 +849,43 @@ structure rule for DPs in (\ref{ex:dpdef}) contains a phrase with the general
 label `XP'. The trees charted in (\ref{ex:adjpron}) illustrate pronominalized
 adjectives and possessive pronouns. The latter is possible because, possessive 
 NPs as well as adjectives are handled as modifiers of \xhead{N}, as we have 
-seen above.
+seen above. A problem which comes up here is, however, that the demonstrative 
+prefixes prototypically take NPs as modifiers. Thus, it makes sense to assume 
+that adjectives and possessive pronouns are nominalized prior to liason with
+the demonstrative prefixes, to receive the required third-person feature. For 
+possessive pronouns, which may be of any person, this would mean that there is 
+a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person 
+possessor) and the formal \Num{} feature.
 
-\begin{multicols}{2}
 \pex\label{ex:adjpron}
-\a\begingl
+\a\begin{minipage}[t]{.25\linewidth}
+\begingl
 	\gla da-kivo //
 	\glb da=kivo //
 	\glc such=small //
 	\glft `the small one' //
-\endgl\medskip
+\endgl
+\end{minipage}
+\quad
+\begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[da-]
+		]
+		[NP
+			[AP
+				[\xhead{A}
+					[kivo]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+&
 
 \begin{forest} shorter edges,
 [DP
@@ -866,21 +893,59 @@ seen above.
 		[\xhead{D}
 			[da-]
 		]
-		[AP
-			[\xhead{A}
+		[NP
+			[\xhead{N}
 				[kivo]
 			]
 		]
 	]
 ]
 \end{forest}
+\end{tabular}
 
-\a\label{ex:posspron}\begingl
+\a\label{ex:posspron}
+\begingl
 	\gla da-vana //
 	\glb da=vana //
 	\glc such=\Ssg{}.\Gen{} //
 	\glft `yours' //
 \endgl\medskip
+
+\begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[da-]
+		]
+		[NP
+			[\xbar{N}
+				[\anno{\xhead{N}}
+					[{
+					Ø \\
+					\ups{\Pers{}} = \Third \\
+					}]
+				]
+				[{\anno[\elem{\Adjc}]{DP}}
+					[\xhead{D}
+						[{%
+						vana \\
+						\ups{\Pers{}} = 
+							\textbf{\Second} \\
+						\ups{\Case{}} = \Gen \\
+						\downs{\Index{} \Pers{}} =
+							\textbf{\Second} \\
+						\downs{\Index{} \Num{}} = \Sg \\
+						}]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+&
 
 \begin{forest} shorter edges,
 [DP
@@ -888,17 +953,23 @@ seen above.
 		[\xhead{D}
 			[da-]
 		]
-		[DP
-			[\xhead{D}
-				[{vana}]
+		[NP
+			[\anno{\xhead{N}}
+				[{%
+				vana \\
+				\ups{\Pers{}} = \textbf{\Third} \\
+				\ups{\Case{}} = \Gen \\
+				\downs{\Index{} \Pers{}} = \textbf{\Second} \\
+				\downs{\Index{} \Num{}} = \Sg \\
+				}]
 			]
 		]
 	]
 ]
 \end{forest}
+\end{tabular}
 
 \xe
-\end{multicols}
 
 While it is possible to pronominalize adjectives and possessive pronouns, this
 only works for single words---including quantifier suffixes, since these are
