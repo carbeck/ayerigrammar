@@ -182,11 +182,12 @@ verb---this also has repercussions on case- and topic marking.
 Generally, DPs and NPs can be described with the phrase-structure formulas 
 given in (\ref{ex:dpnpstruct}), which list the various parts that can occur in 
 them; parentheses indicate the optionality of a term, that is, the respective 
-element may occur but is not constitutive; an asterisk stands for `zero or 
-more' occurrences of the respective element.
+element may occur but is not constitutive.
+% ; an asterisk stands for `zero or 
+% more' occurrences of the respective element
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{XP})
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
 \a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP})
 \xe
 
@@ -196,14 +197,18 @@ more' occurrences of the respective element.
 The functional heads of DPs are formed by determiners. The c-structure of a DP 
 corresponding to the linear description in (\ref{ex:dpdef}) is depicted in 
 (\ref{ex:dpcstruct}); annotations about feature inheritance for 
-c-to-f-structure conversion have been added.
+c-to-f-structure conversion have been added. If the DP has a dependent phrase 
+providing lexical content, it is in the form of an NP, whose head forms a 
+lexical co-head of \xhead{D}. Hence, the NP in the diagram below is annotated 
+with \updown{} to signify that its features are inherited to DP 
+wholesale, rather than forming an adunct of DP.
 
 \ex\label{ex:dpcstruct}
 \begin{forest}
 [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
-		[$\left(\anno{XP}\right)$]
+		[$\left(\anno{NP}\right)$]
 	]
 ]
 \end{forest}
@@ -221,9 +226,9 @@ complementary distribution with NPs containing a noun. Due to affix-order
 considerations concerning the demonstrative prefixes, it also seems advisable 
 to analyze the case markers of proper nouns as determiners. In order to capture 
 the fact that an NP is facultative with the demonstrative and inspecificity 
-prefixes while it must not occur with pronouns, `XP' appears in parentheses 
-since a phrasal complement (DP, NP, AP) it is not always present. We can define 
-the following lexicosemantic rules for determiners (\xhead{D}):
+prefixes while it must not occur with pronouns, `NP' appears in parentheses 
+since a phrasal complement it is not always present. We can define the 
+following lexicosemantic rules for determiners (\xhead{D}):
 
 \pex
 \a\label{ex:dlexsem-dem}Demonstrative prefixes:\medskip
@@ -523,7 +528,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 \endgl
 \medskip
 
-	\begin{forest}
+	\begin{forest}, shorter edges
 	[{\anno[\pass{\Sbj}]{NP}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
@@ -535,7 +540,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 		]
 	]
 	\end{forest}
-	\hfill
+	\quad
 	{\larger\begin{avm}
 	\[
 		\Sbj	& \[
@@ -560,7 +565,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 \endgl
 \medskip
 
-	\begin{forest}
+	\begin{forest}, shorter edges
 	[{\anno[\pass{\XCompl}]{NP}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
@@ -572,7 +577,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 		]
 	]
 	\end{forest}
-	\hfill
+	\quad
 	{\larger\begin{avm}
 	\[
 		\XCompl	& \[
@@ -601,7 +606,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 \endgl
 \medskip
 
-	\begin{forest}
+	\begin{forest}, shorter edges
 	[{\anno[\elem{\Top}]{NP}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
@@ -613,7 +618,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 		]
 	]
 	\end{forest}
-	\hfill
+	\quad
 	{\larger\begin{avm}
 	\[
 		\Top	& \[
@@ -643,7 +648,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 \endgl
 \medskip
 
-	\begin{forest}
+	\begin{forest}, shorter edges
 	[{\anno[\pass{\Obj}]{NP}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
@@ -655,7 +660,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 		]
 	]
 	\end{forest}
-	\hfill
+	\quad
 	{\larger\begin{avm}
 	\[
 		\Obj	& \[
@@ -695,7 +700,7 @@ listener. The following example illustrates the unmarked order of modifiers:
 \endgl
 \medskip
 
-\begin{forest} % shorter edges,
+\begin{forest} shorter edges, %narrower nodes,
 [{\anno[\pass{\Sbj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
@@ -723,7 +728,7 @@ listener. The following example illustrates the unmarked order of modifiers:
 	]
 ]
 \end{forest}
-\hfill
+\quad
 {\larger\begin{avm}
 \[
 \Sbj	& \[
@@ -908,7 +913,7 @@ possessor) and the formal \Num{} feature.
 \endgl\medskip
 
 \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -947,7 +952,7 @@ possessor) and the formal \Num{} feature.
 
 &
 
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
