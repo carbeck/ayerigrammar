@@ -191,6 +191,57 @@ element may occur but is not constitutive.
 \a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP})
 \xe
 
+Since the constituent containing the various non-verbal elements in Ayeri is 
+likely exocentric and constituents may move around within it in a restricted 
+way, we have to assume that not constituent structure, but case marking 
+identifies the grammatical functions of the various arguments of verbs. Thus, 
+the following lexicocentric conditions operate \emph{canonically} on both DP 
+and NP as exponents of case:
+
+\ex\label{ex:dpnpcasemap}\labels
+\begin{tabular}[t]{@{} l @{\quad} l @{$\implies$} l}
+\tl\quad & \downs{\Case} = \Aarg	& \pass{\Sbj} \\
+\tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
+\tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
+						\pass{\Oblq{to}} \\
+\tl\quad & \downs{\Case} = \Gen		& \pass{\Oblq{gen}} \logor{} 
+						\pass{\Oblq{from}} \\
+\tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \\
+\tl\quad & \downs{\Case} = \Caus	& \pass{\Oblq{caus}} \\
+\tl\quad & \downs{\Case} = \Ins		& \pass{\Oblq{ins}} \logor{} 
+						\pass{\Adjc} \\
+\end{tabular}
+\xe
+
+The rules in (\ref{ex:dpnpcasemap}) determine the typical mappings between case 
+marking and grammatical functions, which are not always unambiguous. As 
+explained above (compare \autoref{subsec:case}), the dative case does not only 
+indicate that something is done to this referent or to their benefit, but it 
+may also indicate motion towards this referent. Likewise, the genitive case 
+does not only indicate possession, but also origin, and motion from this 
+referent. Nominal adjuncts to nouns which specify what the noun consists also 
+appear in the instrumental case, besides the instrumental being used to 
+indicate the means or the circumstance by which an action comes about. 
+Moreover, DPs or NPs may also lack case marking, which indicates that the 
+respective phrase is a part of the topic of the verb, which is what 
+(\ref{ex:topicrule}) describes:
+
+\ex\label{ex:topicrule}
+¬\,\downs{\Case} $\implies$ \elem{\Top}
+\xe
+
+Instead of case marking on the DP or NP, there is a marker in front of the verb 
+which provides information on the case and, if \AgtT{} or \PatT{}, also about 
+the animacy of the topicalized phrase. This means that grammatical information 
+about the topic of a phrase is spread over two discontinuous locations. This 
+issue does not pose a problem to an \Lfg{}-based analysis, however, since both 
+locations unify their information content in the f-structure feature [\Top{}]. 
+Since information located in multiple places is jointly feeding this feature, I 
+am using the annotation `\elem{\Top}' for each location rather than simple 
+`\pass{\Top}'. Note that only one NP among the arguments of a verb may be the 
+topic of the phrase, and a topic can only be marked if the verb is finite and 
+the number of arguments to the verb is greater than one.
+
 \subsection{Determiner phrases}
 \label{subsec:dps}
 
@@ -783,26 +834,9 @@ unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
 	\glc that=man-\Aarg{} //
 	\glft `that man' //
 \endgl
+
 \xe
 
-{\smaller\begin{forest} shorter edges,
-[DP
-	[\xbar{D}
-		[\xhead{D}
-			[ada-]
-		]
-		[NP
-			[\xhead{N}
-				[ayonang]
-			]
-		]
-	]
-]
-\end{forest}
-}
-\end{multicols}
-
-\begin{multicols}{2}
 \pex~\label{ex:det+propn}
 \a\begingl
 	\gla ang Diyan //
@@ -817,9 +851,37 @@ unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
 	\glc \Aarg{} that=Diyan //
 	\glft `that Diyan' //
 \endgl
+
 \xe
 
-{\smaller\begin{forest} shorter edges,
+\end{multicols}
+
+\begin{multicols}{2}
+\pex~
+\a \begin{minipage}[t]{\linewidth}
+C-structure for (\ref{ex:det+comn}):\medskip
+
+\quad {\begin{forest} shorter edges, baseline,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[ada-]
+		]
+		[NP
+			[\xhead{N}
+				[ayonang]
+			]
+		]
+	]
+]
+\end{forest}
+}
+\end{minipage}
+
+\a \begin{minipage}[t]{\linewidth}
+C-structure for (\ref{ex:det+propn}):\medskip
+
+\quad {\begin{forest} shorter edges, baseline,
 [DP
 	[\xbar{D}
 		[\xhead{D}
@@ -839,7 +901,8 @@ unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
 ]
 \end{forest}
 }
-
+\end{minipage}
+\xe
 \end{multicols}
 
 Furthermore, as mentioned before in \autoref{subsubsec:verbprefixes}, it is 
