@@ -40,9 +40,10 @@ are observed:
 \item XP → YP, \xbar{X}
 \end{enumerate}
 
-The principle of economy of expression furthermore dictates that trees be 
-pruned of empty nodes, and projection levels be omitted if they are not 
-branching \citep[119--128]{bresnan2016}.}
+The principle of economy of expression furthermore dictates that essentially, 
+trees be pruned of empty terminal nodes and non-branching preterminal nodes, 
+since these do not provide structurally or semantically relevant information 
+\citep[119--128]{bresnan2016}.}
 
 \item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality 
 states that \emph{internal structures are largely invariant across languages}. 
@@ -78,7 +79,7 @@ argument (a-)structure:
 & \astruct{\tikzmark{verb}verb}{\tikzmark{x}x, \tikzmark{y}y}\bigskip \\
 
 functional (f-)strucutre:
-& \tikzmark{fstruct}\begin{avm}
+& \tikzmark{fstruct}{\smaller\begin{avm}
 \[
 	\quad sbj \tikzmark{subj} & \[
 		{\enspace}\vdots{\enspace} \\
@@ -89,7 +90,7 @@ functional (f-)strucutre:
 	\] \tikzmark{objval}{\quad} \\
 	\quad \tikzmark{pred} pred & \dots \tikzmark{predval} \\
 \]
-\end{avm}\bigskip\\
+\end{avm}}\bigskip\\
 
 constituent (c-)structure:
 & \begin{forest} baseline
@@ -289,11 +290,11 @@ following morpholexic rules for determiners (\xhead{D}):
 	\rayr{Ed/}{eda-}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `this' \\
+% 			\ups{\Pred} & = & `this' \\
 			\ups{\Pers} & \req{} & 3 \\
-% 			\ups{\Prox} & = & $+$ \\
-% 			\ups{\Dist} & = & $-$ \\
-% 			\ups{\Def} & = & $+$ \\
+			\ups{\Prox} & = & $+$ \\
+			\ups{\Dist} & = & $-$ \\
+			\ups{\Def} & = & $+$ \\
 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}\medskip
@@ -302,11 +303,11 @@ following morpholexic rules for determiners (\xhead{D}):
 	\rayr{Ad/}{ada-}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `that' \\
+% 			\ups{\Pred} & = & `that' \\
 			\ups{\Pers} & \req{} & 3 \\
-% 			\ups{\Prox} & = & $-$ \\
-% 			\ups{\Dist} & = & $+$ \\
-% 			\ups{\Def} & = & $+$ \\
+			\ups{\Prox} & = & $-$ \\
+			\ups{\Dist} & = & $+$ \\
+			\ups{\Def} & = & $+$ \\
 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}\medskip
@@ -315,11 +316,9 @@ following morpholexic rules for determiners (\xhead{D}):
 	\rayr{d/}{da-}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `such' \\
+% 			\ups{\Pred} & = & `such' \\
 			\ups{\Pers} & \req{} & 3 \\
-% 			\ups{\Prox} & = & $+$ \\
-% 			\ups{\Dist} & = & $-$ \\
-% 			\ups{\Def} & = & $-$ \\
+			\ups{\Def} & = & $-$ \\
 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
@@ -331,6 +330,7 @@ following morpholexic rules for determiners (\xhead{D}):
 	\rayr{me/}{mə-}
 		& P
 		& \begin{tabular}[t]{l l l}
+			\ups{\Def} & = & $-$ \\
 			\ups{\Spec} & = & $-$ \\
 			\ups{\Pers} & \req{} & 3 \\
 		\end{tabular}
@@ -351,6 +351,7 @@ following morpholexic rules for determiners (\xhead{D}):
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Def} & = & $+$ \\
 			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
@@ -362,12 +363,15 @@ following morpholexic rules for determiners (\xhead{D}):
 	(various)
 		& N
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `this/that/such' \\
+			\ups{\Pred} & = & `pro' \\
 			\ups{\Pers} & = & 3 \\
+			\ups{\Prox} & = & $\pm$ \\
+			\ups{\Dist} & = & $\pm$ \\
+			\ups{\Def} & = & $\pm$ \\
+			\ups{\Spec} & = & $+$ \\
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
-			\ups{\Spec} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}
 	
@@ -572,11 +576,10 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	\glpreamble With an adjective: //
 	\gla Ya manga nu-nunāran \textbf{baloyyereng} \textbf{tiru} venya 
 		satitay. //
-	\glb Ya manga nu\til{}nuna-aran baloy-ye-reng tiru ven-ya satitay //
+	\glb Ya manga nu\til{}nuna-aran baloy-ye-reng tiru ven-ya satitay-Ø //
 	\glc \LocT{} \Prog{} \Iter{}\til{}fly-\TplI{} leaf-\Pl{}-\AargI{} dry 
-		air-\Loc{} dry.season-\Top{} //
-	\glft `In the dry season, the dry leaves are flying around in the 
-		air.' //
+		air-\Loc{} winter-\Top{} //
+	\glft `In winter, dry leaves are flying around in the air.' //
 \endgl
 \medskip
 
@@ -593,7 +596,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\quad
-	{\larger\begin{avm}
+	\begin{avm}
 	\[
 		\Sbj	& \[
 			\Pred	& `leaf' \\
@@ -606,7 +609,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 				\]\} \\
 			\] \\
 	\]
-	\end{avm}}
+	\end{avm}
 
 \a\begingl
 	\glpreamble With a genitive attribute: //
@@ -630,7 +633,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\quad
-	{\larger\begin{avm}
+	\begin{avm}
 	\[
 		\XCompl	& \[
 			\Pred	& `cousin' \\
@@ -647,7 +650,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 				\} \\
 			\] \\
 	\]
-	\end{avm}}
+	\end{avm}
 
 \a\begingl
 	\glpreamble With a noun adjunct: //
@@ -671,7 +674,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\quad
-	{\larger\begin{avm}
+	\begin{avm}
 	\[
 		\Top	& \[
 			\Pred	& `basket' \\
@@ -688,7 +691,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 				\} \\
 			\] \\
 	\]
-	\end{avm}}
+	\end{avm}
 
 \a\begingl
 	\glpreamble With a relative clause: //
@@ -713,7 +716,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 	]
 	\end{forest}
 	\quad
-	{\larger\begin{avm}
+	\begin{avm}
 	\[
 		\Obj	& \[
 			\Pred	& `apple' \\
@@ -728,7 +731,7 @@ other nominal adjuncts (NP), and relative clauses (CP):
 				\} \\
 			\] \\
 	\]
-	\end{avm}}
+	\end{avm}
 
 \xe
 
@@ -753,7 +756,8 @@ order of modifiers.
 \endgl
 \medskip
 
-\begin{forest} shorter edges, %narrower nodes,
+\begin{multicols}{2}
+\begin{forest} shorter edges, narrower nodes,
 [{\anno[\pass{\Sbj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
@@ -781,8 +785,8 @@ order of modifiers.
 	]
 ]
 \end{forest}
-\quad
-{\larger\begin{avm}
+
+\begin{avm}
 \[
 \Sbj	& \[
 	\Pred	& `uncle' \\
@@ -803,8 +807,8 @@ order of modifiers.
 		\} \\
 	\] \\
 \]
-\end{avm}}
-
+\end{avm}
+\end{multicols}
 \xe
 
 As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers 
@@ -940,17 +944,15 @@ a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person)
 and the formal \Num{} feature.
 
 \pex\label{ex:adjpron}
-\a\begin{minipage}[t]{.25\linewidth}
-\begingl
+\a\begingl
 	\gla da-kivo //
 	\glb da=kivo //
 	\glc such=small //
 	\glft `the small one' //
-\endgl
-\end{minipage}
-\quad
+\endgl\medskip
+
 \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-\begin{forest} shorter edges,
+{\smaller\begin{forest} shorter edges,
 [DP
 	[\xbar{D}
 		[\xhead{D}
@@ -965,11 +967,11 @@ and the formal \Num{} feature.
 		]
 	]
 ]
-\end{forest}
+\end{forest}}
 
 &
 
-\begin{forest} shorter edges,
+{\smaller\begin{forest} shorter edges,
 [DP
 	[\xbar{D}
 		[\xhead{D}
@@ -982,7 +984,7 @@ and the formal \Num{} feature.
 		]
 	]
 ]
-\end{forest}
+\end{forest}}
 \end{tabular}
 
 \a\label{ex:posspron}
@@ -994,7 +996,7 @@ and the formal \Num{} feature.
 \endgl\medskip
 
 \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-\begin{forest} shorter edges, narrower nodes,
+{\smaller\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1017,11 +1019,11 @@ and the formal \Num{} feature.
 						vana \\
 						\ups{\Pers} = 
 							\textbf{\Second} \\
-						\ups{\Case} = \Gen \\
+% 						\ups{\Case} = \Gen \\
 						\downs{\Index{} \Pers} =
 							\textbf{\Second} \\
 						\downs{\Index{} \Num} = \Sg \\
-						\downs{\Index{} \Case} = \Gen \\
+% 						\downs{\Index{} \Case} = \Gen \\
 						}]
 					]
 				]
@@ -1029,11 +1031,11 @@ and the formal \Num{} feature.
 		]
 	]
 ]
-\end{forest}
+\end{forest}}
 
 &
 
-\begin{forest} shorter edges, narrower nodes,
+{\smaller\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1047,16 +1049,16 @@ and the formal \Num{} feature.
 				[{%
 				vana \\
 				\ups{\Pers{}} = \textbf{\Third} \\
-				\ups{\Case{}} = \Gen \\
+% 				\ups{\Case{}} = \Gen \\
 				\downs{\Index{} \Pers{}} = \textbf{\Second} \\
 				\downs{\Index{} \Num{}} = \Sg \\
-				\downs{\Index{} \Case{}} = \Gen \\
+% 				\downs{\Index{} \Case{}} = \Gen \\
 				}]
 			]
 		]
 	]
 ]
-\end{forest}
+\end{forest}}
 \end{tabular}
 
 \xe
@@ -1088,13 +1090,14 @@ third person.
 	\glc please use-\Imp{} such=\Second{}.\Gen{}-\PargI{} //
 	\glft `Please use yours.' //
 \endgl
-\xe
 
 \begin{avm}
 \[
 \Obj	& \[
 	\Pred	& `pro' \\
 	\Num	& \Third \\
+	\Def	& $-$ \\
+	\Spec	& $+$ \\
 	\Anim	& $-$ \\
 	\Case	& \Parg \\
 	\Index	& \[
@@ -1105,6 +1108,7 @@ third person.
 	\]\\
 \]
 \end{avm}
+\xe
 \end{multicols}
 
 While it is possible to nominalize adjectives and possessive pronouns this way, 
@@ -1119,7 +1123,8 @@ Thus, for instance, the following examples are unacceptable:
 % \section{Adpositional phrases}
 %
 % \section{Verb phrases}
-% \citet[153--156]{bresnan2016} → pronouns to clitics to agreement
+% \citet[153--156, 165]{bresnan2016} → pronouns to clitics to agreement
+% \citet[157]{bresnan2016} → evidence criteria for IP
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
