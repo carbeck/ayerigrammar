@@ -170,7 +170,7 @@ subsumed by the current node (`down') is passed on as the subject function of
 the next higher node (`up') in the tree. Concise information on notational 
 formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
 
-\section{Determiner- and noun phrases}
+\section{Determiner phrases and noun phrases}
 \label{sec:dps-nps}
 
 Noun phrases (NPs), and determiner phrases (DPs) as their functional 
@@ -188,7 +188,7 @@ element may occur but is not constitutive.
 % more' occurrences of the respective element
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{NP})
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{XP})
 \a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP})
 \xe
 
@@ -250,17 +250,19 @@ The functional heads of DPs are formed by determiners. The c-structure of a DP
 corresponding to the linear description in (\ref{ex:dpdef}) is depicted in 
 (\ref{ex:dpcstruct}); annotations about feature inheritance for 
 c-to-f-structure conversion have been added. If the DP has a dependent phrase 
-providing lexical content, it is in the form of an NP, whose head forms a 
-lexical co-head of \xhead{D}. Hence, the NP in the diagram below is annotated 
-with \updown{} to signify that its features are inherited to DP 
-wholesale, rather than forming an adunct of DP.
+providing lexical content, it is in the form of an NP complement, whose head 
+forms a lexical co-head of \xhead{D}. This NP must be annotated with `\updown{}' 
+to signify that its features are inherited to DP wholesale. Alternatively, a DP 
+containing a pronoun may also be modified by an NP adjunct, a possessive NP, an 
+AP or a relative-clause CP, which all need to be annotated with `\pass{\Adj}', 
+since they are not complements.
 
 \ex\label{ex:dpcstruct}
 \begin{forest}
 [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
-		[$\left(\anno{NP}\right)$]
+		[{$\left(\anno[\updown{} \logor{} \pass{\Adj}]{XP}\right)$}]
 	]
 ]
 \end{forest}
@@ -288,7 +290,7 @@ following morpholexic rules for determiners (\xhead{D}):
 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
 	\savetabu{lexsem}
 	\rayr{Ed/}{eda-}
-		& P
+		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `this' \\
 			\ups{\Pers} & \req{} & 3 \\
@@ -301,7 +303,7 @@ following morpholexic rules for determiners (\xhead{D}):
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{Ad/}{ada-}
-		& P
+		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `that' \\
 			\ups{\Pers} & \req{} & 3 \\
@@ -314,7 +316,7 @@ following morpholexic rules for determiners (\xhead{D}):
 	
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{d/}{da-}
-		& P
+		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `such' \\
 			\ups{\Pers} & \req{} & 3 \\
@@ -328,7 +330,7 @@ following morpholexic rules for determiners (\xhead{D}):
 
 	\begin{tabu} {\usetabu{lexsem}}
 	\rayr{me/}{mə-}
-		& P
+		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Def} & = & $-$ \\
 			\ups{\Spec} & = & $-$ \\
@@ -418,11 +420,10 @@ names), as we have seen in the previous chapter (compare \autoref{sec:nouns}):
 common nouns indicate case by a suffix, while proper nouns receive case marking 
 by a particle preceding the noun (see \autoref{subsec:dps} and below). Nouns 
 can also be modified by adjectives, adverbs, adjunct nouns, or relative 
-clauses, 
-which are typically following the noun. The c-structure of NPs can be assumed 
-to look like given in (\ref{ex:npcstruct}). Since modifiers of \xhead{N} 
-(\xhead{N}'s sister node) can consist of different phrase types (AP, NP, DP, 
-CP), they are indicated generalized as `XP' in the diagrams.
+clauses, which are typically following the noun. The c-structure of NPs can be 
+assumed to look like given in (\ref{ex:npcstruct}). Since modifiers of 
+\xhead{N} (\xhead{N}'s sister node) can consist of different phrase types (AP, 
+NP, DP, CP), they are indicated generalized as `XP' in the diagrams.
 
 \ex\label{ex:npcstruct}\labels
 \begin{minipage}[t]{.5\linewidth}%
@@ -923,22 +924,17 @@ C-structure for (\ref{ex:det+propn}):\medskip
 
 Furthermore, as mentioned before in \autoref{subsubsec:verbprefixes}, it is 
 possible to abbreviate \xayr{dnY}{danya}{such one} + adjective as 
-\rayr{d/}{da-} + adjective. This affixing of the indefinite demonstrative
-essentially derives a complex anaphora.
-% Since \xhead{D} can thus be
-% modified not only by an NP but also by other types of phrases, the phrase 
-% structure rule for DPs in (\ref{ex:dpdef}) contains a phrase with the general 
-% label `XP'.
-The trees charted in (\ref{ex:adjpron}) illustrate pronominalized
-adjectives and possessive pronouns. The latter is possible because possessive 
-NPs as well as adjectives are handled as modifiers of \xhead{N}, as we have 
-seen above.
+\rayr{d/}{da-} + adjective. This affixing of the indefinite demonstrative 
+essentially derives a complex anaphora. The trees charted in (\ref{ex:adjpron}) 
+illustrate pronominalized adjectives and possessive pronouns. The latter is 
+possible because possessive NPs as well as adjectives are handled as modifiers 
+of \xhead{N}, as we have seen above.
 
 A problem which arises from this is that the demonstrative prefixes 
-prototypically take NPs as modifiers, while adjectives and possessive pronouns 
-form APs and DPs, respectively. It thus makes sense to assume 
+prototypically take NPs as complements, while adjectives and possessive 
+pronouns form APs and DPs, respectively. It thus makes sense to assume 
 that adjectives and possessive pronouns are nominalized prior to liason with a 
-demonstrative prefixe, to receive the required third-person feature. For 
+demonstrative prefix, to receive the required third-person feature. For 
 possessive pronouns, which may be of any person, this would mean that there is 
 a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person) 
 and the formal \Num{} feature.
@@ -947,7 +943,7 @@ and the formal \Num{} feature.
 \a\begingl
 	\gla da-kivo //
 	\glb da=kivo //
-	\glc such=small //
+	\glc one=small //
 	\glft `the small one' //
 \endgl\medskip
 
@@ -1011,6 +1007,7 @@ and the formal \Num{} feature.
 					[{
 					Ø \\
 					\ups{\Pers{}} = \Third \\
+					\ups{\Anim} = $-$ \\
 					}]
 				]
 				[{\anno[\pass{\Adjc}]{DP}}
@@ -1042,6 +1039,7 @@ and the formal \Num{} feature.
 			[{
 			da- \\
 			\ups{\Pers} \req{} 3 \\
+			\ups{\Anim} = $-$ \\
 			}]
 		]
 		[\anno{NP}
@@ -1068,26 +1066,30 @@ analyze the nominalization of the possessive pronoun, which otherwise serves as
 a modifier to a nominal head. This position, otherwise being associated 
 with third person, is empty in this case, though by changing the category of 
 the pronoun from DP to NP, the pronoun's outward encoding of second person is 
-overwritten with third person as necessaitated by the demonstative prefix. The 
+overwritten with third person as necessitated by the demonstative prefix. The 
 information about its second-person referent, however, is not lost, but 
-preserved in the \Index{} feature of the nominalized pronoun. Moreover, as 
-nominal forms, they can undergo case marking, so another mismatch between 
-internal and external feature encoding may happen in that the possessive 
-pronoun, itself being in genitive case, may syntactically be used in a 
-different grammatical function, thus marked additionally for another case. It 
-thus happens that \rayr{vn}{vana} in (\ref{ex:posspronpat}) is openly encoded 
-for patient case (\rayr{/lej}{-ley} marks inanimate patient case) while 
-lexically it is a genitive form---the patient form proper is 
-\xayr{vaasF}{vās}{you}, but as such it does not indicate possession and also 
-does not distinguish animacy, as this is distinguished in pronouns only in 
-third person.
+preserved in the \Index{} feature of the nominalized pronoun. Besides third
+person, the value of the \Anim{} feature of the dropped NP is also retained,
+since pronouns take their \Gend{} and \Anim{} features from the word they stand
+in for as a pro-form.
+
+This is relevant in that as nominal forms, complex anaphora as derived here can
+undergo case marking, so another mismatch between internal and external feature
+encoding may happen in that the possessive pronoun, itself being in genitive 
+case, may syntactically be used in a different grammatical function, thus 
+marked additionally for another case. It thus happens that \rayr{vn}{vana} in 
+(\ref{ex:posspronpat}) is openly encoded for patient case (\rayr{/lej}{-ley} 
+marks inanimate patient case) while lexically it is a genitive form---the 
+patient form proper is \xayr{vaasF}{vās}{you}, but as such it does not indicate 
+possession and also does not distinguish animacy, as this is distinguished in 
+pronouns only in third person.
 
 \begin{multicols}{2}
 \ex\label{ex:posspronpat}
 \begingl
 	\gla Pinyan, eryu da-vanaley. //
 	\glb Pinyan ery-u da=vana-ley //
-	\glc please use-\Imp{} such=\Second{}.\Gen{}-\PargI{} //
+	\glc please use-\Imp{} one=\Second{}.\Gen{}-\PargI{} //
 	\glft `Please use yours.' //
 \endgl
 
@@ -1104,6 +1106,7 @@ third person.
 		\Pers	& \Second \\
 		\Num	& \Sg \\
 		\Case	& \Gen \\
+		\Anim	& $-$ \\
 		\]\\
 	\]\\
 \]
@@ -1116,13 +1119,108 @@ the process as described above only works for single words---including
 quantifier suffixes, since these are clitic---but not for complex phrases. 
 Thus, for instance, the following examples are unacceptable:
 
+\pex
+\a\label{ex:suchadjp}\ljudge*\begingl
+	\gla Tahayang {\normalfont [\tsup{DP}} @ da- @ {\normalfont 
+		[\tsup{?NP/AP}} @ dano nay kema @ {\normalfont]]}. //
+	\glb Taha=yang {} da= {} dano nay kema {} //
+	\glc have=\Fsg{}.\Aarg{} {} one= {} green and striped {} //
+	\glft `I have a/the green-and-striped one.' //
+\endgl
+
+\a\label{ex:suchrelc}\ljudge*\begingl
+	\gla Vāng {\normalfont [\tsup{DP}} @ da- @ {\normalfont[\tsup{?NP/CP}} 
+		@ si ya silvasayang ren @ {\normalfont ]]}. //
+	\glb Vāng {} da= {} si ya silv-asa=yang ren-Ø {} //
+	\glc \Second.\Aarg{} {} one= {} \Rel{} \LocT{} 
+		see-\Hab{}=\Fsg{}.\Aarg{} market-\Top{} {} //
+	\glft `You are the who-I-always-see-at-the-market one.' //
+\endgl
+\xe
+
+Example (\ref{ex:suchadjp}) shows an AP consisting of two coordinated 
+adjectives which are supposed to be nominalized here. The DP would normally 
+have to be a patient, since \xayr{th/}{taha-}{have} requires two 
+arguments---a possessor and a possessee, which are conventionally mapped to 
+\Sbj{}/\Aarg{} and \Obj{}/\Parg{}, respectively. We have seen, however, that 
+Ayeri allows nominal phrases unmarked for case only under very special 
+circumstances. The question is, thus, whether a complex phrase can be 
+nominalized as a whole in the first place. The next questions are, then, where 
+the case marker should go:
+
+\begin{enumerate}[noitemsep]
+	\item only on the first head,
+	\item on each conjunct (would \rayr{d/}{da-} also need to be 
+		distributed, then?),
+	\item or, essentially, as a clitic at the very end?
+\end{enumerate}
+
+\noindent If marking went on each conjunct, this would coordinate two APs 
+instead of two \xhead{A}, however: `the green one and the striped one', which
+is not necessarily the same as `the green and striped one'. With the relative
+clause in (\ref{ex:suchrelc}) only suggestions 1 and 3 are possible, with an
+awkward result as well. The usual solution in either case is to remember that 
+\rayr{d/}{da-} + non-noun is an abbreviation for the full indefinite 
+demonstrative, which can be modified by the same types of adjuncts as a noun, 
+that is, also AP and CP:
+
+\pex
+\a\label{ex:danyaadjp}\begingl
+	\gla Le tahayang {\normalfont [\tsup{DP}} @ danya {\normalfont 
+		[\tsup{AP}} @ dano nay kema @ {\normalfont]]}. //
+	\glb Le taha=yang {} danya-Ø {} dano nay kema {} //
+	\glc \PatTI{} have=\Fsg{}.\Aarg{} {} one-\Top{} {} green and striped {} //
+	\glft `I have the green and striped one.' //
+\endgl
+
+\a\begingl
+	\gla Vāng {\normalfont [\tsup{DP}} @ danyās {\normalfont[\tsup{CP}} 
+		@ si ya silvasayang ren @ {\normalfont ]]}. //
+	\glb Vāng {} danya-as {} si ya silv-asa=yang ren-Ø {} //
+	\glc \Second.\Aarg{} {} one-\Parg{} {} \Rel{} \LocT{} 
+		see-\Hab{}=\Fsg{}.\Aarg{} market-\Top{} {} //
+	\glft `You are the one who I always see at the market.' //
+\endgl
+\xe
+
+Instead of the construction in (\ref{ex:danyaadjp}) it is also possible to
+pronominalize the first adjective and to include the second one in a relative 
+clause, or to turn the second adjective into a noun adjunct if there is an
+equivalent noun. Since \xayr{kem}{kema}{striped} is derived from the noun
+\xayr{kem}{kema}{stripe}, this strategy is possible here.
+
+\pex
+\a\begingl
+	\gla da-danoley si kema //
+	\glb da=dano-ley si kema //
+	\glb one=green-\PargI{} \Rel{} striped //
+	\glft `the green one which is striped' //
+\endgl
+
+\a\begingl
+	\gla da-danoley kemayeri //
+	\glb {} kema-ye-ri //
+	\glc {} stripe-\Pl{}-\Ins{} //
+	\glft `the green one with stripes' //
+\endgl
+
+\xe
+
+\section{Adjective phrases and adverbial phrases}
+
 ...
 
-% \section{Adjective phrases}
-%
+\subsection{Adjective phrases}
+
+...
+
+\subsection{Adverbial phrases}
+
+...
+
 % \section{Adpositional phrases}
 %
-% \section{Verb phrases}
+% \section{Inflectional phrases and verb phrases}
 % \citet[153--156, 165]{bresnan2016} → pronouns to clitics to agreement
 % \citet[157]{bresnan2016} → evidence criteria for IP
 % \citet[151\psqq]{dixon2012} → subjects
