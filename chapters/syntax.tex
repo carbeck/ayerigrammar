@@ -1065,26 +1065,26 @@ and the formal \Num{} feature.
 
 The trees for \rayr{d/vn}{da-vana} in (\ref{ex:posspron}) illustrate one way to 
 analyze the nominalization of the possessive pronoun, which otherwise serves as 
-a modifier to a nominal head. This position, otherwise being associated 
-with third person, is empty in this case, though by changing the category of 
-the pronoun from DP to NP, the pronoun's outward encoding of second person is 
-overwritten with third person as necessitated by the demonstative prefix. The 
-information about its second-person referent, however, is not lost, but 
-preserved in the \Index{} feature of the nominalized pronoun. Besides third
-person, the value of the \Anim{} feature of the dropped NP is also retained,
-since pronouns take their \Gend{} and \Anim{} features from the word they stand
-in for as a pro-form.
+a modifier to a nominal head. This position, associated with a third person,
+is empty in this case. By changing the category of the pronoun from DP to NP,
+the phrases head now has to reference two binding relations: a third-person one
+with its features ($i$) and a second-person one, also with its features ($j$). 
+Since the compound anaphora as such binds the third-person referent $i$, the
+person features of that referent prevail over the person features of the
+possessive pronoun, which is originally only an adjunct modifier. The
+information about the pronoun's second-person referent, however, is not lost, 
+but preserved through the \Index{} feature associated with $j$ as its reference.
+Formally, the anaphora takes its \Anim{} value from the noun $i$ which it stands
+in for---a third person referent would also inherit \Gend{} from the NP it binds.
 
-This is relevant in that as nominal forms, complex anaphora as derived here can
-undergo case marking, so another mismatch between internal and external feature
-encoding may happen in that the possessive pronoun, itself being in genitive 
-case, may syntactically be used in a different grammatical function, thus 
-marked additionally for another case. It thus happens that \rayr{vn}{vana} in 
-(\ref{ex:posspronpat}) is openly encoded for patient case (\rayr{/lej}{-ley} 
-marks inanimate patient case) while lexically it is a genitive form---the 
-patient form proper is \xayr{vaasF}{vās}{you}, but as such it does not indicate 
-possession and also does not distinguish animacy, as this is distinguished in 
-pronouns only in third person.
+Information on animacy is relevant in that as nominal forms, complex anaphora
+as derived here can undergo case marking; information on gender plays a role in
+verb agreement. As far as case marking is concerned, the \Case{} feature of
+\rayr{vn}{vana} as a possessive pronoun moves to the background; instead, 
+\rayr{d/vnlej}{da-vanaley} in (\ref{ex:posspronpat}) is marked for patient case 
+(\rayr{/lej}{-ley} marks inanimate patient case), since this is the role the 
+phrase \xayr{d/vn}{da-vana}{yours}, as a maximal projection, plays in relation
+to the verb, \xayr{ErFyF/}{ery-}{use}.
 
 \begin{multicols}{2}
 \ex\label{ex:posspronpat}
@@ -1104,11 +1104,15 @@ pronouns only in third person.
 	\Spec	& & $+$ \\
 	\Anim	& & $-$ \\
 	\Case	& & \Parg \\
-	\Index	& $i:$ & \[ \dots \] \\
+	\Index	& $i:$ & \[
+		\Pers{}	& \Third \\
+		\Anim{} & $-$ \\
+		\] \\
 	\Index	& $j:$ & \[
 		\Pers	& \Second \\
 		\Num	& \Sg \\
 		\Case	& \Gen \\
+		\Anim{} & $+$ \\
 		\]\\
 	\]\\
 \]
