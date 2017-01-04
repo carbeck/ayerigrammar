@@ -285,11 +285,11 @@ since a phrasal complement it is not always present. We can define the
 following morpholexic rules for determiners (\xhead{D}):
 
 \pex
-\a\label{ex:dlexsem-dem}Demonstrative prefixes:\medskip
+\a\label{ex:dmorphlex-dem}Demonstrative prefixes:\medskip
 
 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
-	\savetabu{lexsem}
-	\rayr{Ed/}{eda-}
+	\savetabu{morphlex}
+	\rayr{Ed/}{eda-} (`this')
 		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `this' \\
@@ -301,8 +301,8 @@ following morpholexic rules for determiners (\xhead{D}):
 		\end{tabular}
 	\end{tabu}\medskip
 
-	\begin{tabu} {\usetabu{lexsem}}
-	\rayr{Ad/}{ada-}
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{Ad/}{ada-} (`that')
 		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `that' \\
@@ -314,22 +314,22 @@ following morpholexic rules for determiners (\xhead{D}):
 		\end{tabular}
 	\end{tabu}\medskip
 	
-	\begin{tabu} {\usetabu{lexsem}}
-	\rayr{d/}{da-}
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{d/}{da-} (`such a')
 		& D
 		& \begin{tabular}[t]{l l l}
 % 			\ups{\Pred} & = & `such' \\
 			\ups{\Pers} & \req{} & 3 \\
 			\ups{\Def} & = & $-$ \\
-			\ups{\Spec} & = & $+$ \\
+			\ups{\Spec} & = & $-$ \\
 		\end{tabular}
 	\end{tabu}
 	
 \needspace{3\baselineskip}
 \a Inspecificity prefix:\medskip
 
-	\begin{tabu} {\usetabu{lexsem}}
-	\rayr{me/}{mə-}
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{me/}{mə-} (`whichever')
 		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Def} & = & $-$ \\
@@ -341,7 +341,7 @@ following morpholexic rules for determiners (\xhead{D}):
 \needspace{3\baselineskip}
 \a Personal pronouns:\medskip
 
-	\begin{tabu} {\usetabu{lexsem}}
+	\begin{tabu} {\usetabu{morphlex}}
 	(various)
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -361,7 +361,7 @@ following morpholexic rules for determiners (\xhead{D}):
 \needspace{3\baselineskip}
 \a Demonstrative pronouns:\medskip
 
-	\begin{tabu} {\usetabu{lexsem}}
+	\begin{tabu} {\usetabu{morphlex}}
 	(various)
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -378,9 +378,9 @@ following morpholexic rules for determiners (\xhead{D}):
 	\end{tabu}
 	
 \needspace{3\baselineskip}
-\a\label{ex:dlexsem-propn}Case markers of proper nouns:\medskip	
+\a\label{ex:dmorphlex-propn}Case markers of proper nouns:\medskip	
 	
-	\begin{tabu} {\usetabu{lexsem}}
+	\begin{tabu} {\usetabu{morphlex}}
 	(various)
 		& D
 		& \begin{tabular}[t]{l l l}
@@ -469,7 +469,7 @@ nouns provide (also compare \autoref{sec:nouns}):
 \pex
 \a Common nouns:\\
 
-	\begin{tabu} {\usetabu{lexsem}}
+	\begin{tabu} {\usetabu{morphlex}}
 	...
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -485,7 +485,7 @@ nouns provide (also compare \autoref{sec:nouns}):
 
 \a Proper nouns:\\
 
-	\begin{tabu} {\usetabu{lexsem}}
+	\begin{tabu} {\usetabu{morphlex}}
 	...
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -565,7 +565,7 @@ noun is animate but the case particle, \rayr{/lej}{-ley}, signals that
 it is inanimate: the \Anim{} values of the noun stem and its suffix 
 clash and cannot be conclusively unified for \xhead{N} itself. The 
 same principle of coherence is, of course, also true for proper nouns, which 
-receive a case-marking particle. These are defined in (\ref{ex:dlexsem-propn}) 
+receive a case-marking particle. These are defined in (\ref{ex:dmorphlex-propn}) 
 as demanding that a noun with the correct animacy value be within their scope.
 
 As previously mentioned, nouns may be modified by a number of adjuncts of
@@ -926,240 +926,204 @@ Furthermore, as mentioned before in \autoref{subsubsec:verbprefixes}, it is
 possible to abbreviate \xayr{dnY}{danya}{such one} + adjective as 
 \rayr{d/}{da-} + adjective. This affixing of the indefinite demonstrative 
 essentially derives a complex anaphora. The trees charted in (\ref{ex:adjpron}) 
-illustrate pronominalized adjectives and possessive pronouns. The latter is 
-possible because possessive NPs as well as adjectives are handled as modifiers 
-of \xhead{N}, as we have seen above.
+illustrate pronominalized adjectives and possessive pronouns.
 
-...
-
-% A problem which arises from this is that the demonstrative prefixes 
-% prototypically take NPs as complements, while adjectives and possessive 
-% pronouns form APs and DPs, respectively. It thus makes sense to assume 
-% that adjectives and possessive pronouns are nominalized prior to liason with a 
-% demonstrative prefix, to receive the required third-person feature. For 
-% possessive pronouns, which may be of any person, this would mean that there is 
-% a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person) 
-% and the formal \Num{} feature.
-
-\pex\label{ex:adjpron}
-\a\begingl
+\ex\label{ex:adjpron}\labels
+\parbox[t]{.5\linewidth}{
+\tl\quad\begingl
 	\gla da-kivo //
 	\glb da=kivo //
 	\glc one=small //
 	\glft `the small one' //
-\endgl\medskip
+\endgl}%\medskip
+%
+\begin{tabular}[t]{@{} l @{\quad=\quad} l}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[danya]
+		]
+		[AP
+			[\xhead{A}
+				[kivo]
+			]
+		]
+	]
+]
+\end{forest}
 
-...
+&
 
-% \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-% {\smaller\begin{forest} shorter edges,
-% [DP
-% 	[\xbar{D}
-% 		[\xhead{D}
-% 			[da-]
-% 		]
-% 		[NP
-% 			[AP
-% 				[\xhead{A}
-% 					[kivo]
-% 				]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[da-]
+		]
+		[AP
+			[\xhead{A}
+				[kivo]
+			]
+		]
+	]
+]
+\end{forest}
+\end{tabular}
 
-% &
-
-% {\smaller\begin{forest} shorter edges,
-% [DP
-% 	[\xbar{D}
-% 		[\xhead{D}
-% 			[da-]
-% 		]
-% 		[NP
-% 			[\xhead{N}
-% 				[kivo]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
-% \end{tabular}
-
-\a\label{ex:posspron}
+\parbox[t]{.5\linewidth}{
+\tl\quad\label{ex:posspron}
 \begingl
 	\gla da-vana //
 	\glb da=vana //
 	\glc such=\Second{}.\Gen{} //
 	\glft `yours' //
-\endgl\medskip
+\endgl}%\medskip
+%
+\begin{tabular}[t]{@{} l @{\quad=\quad} l}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[danya]
+		]
+		[DP
+			[\xhead{D}
+				[vana]
+			]
+		]
+	]
+]
+\end{forest}
 
-...
+&
 
-% {\smaller\begin{forest} shorter edges,
-% [DP
-% 	[\xbar{D}
-% 		[\xhead{D}
-% 			[da-]
-% 		]
-% 		[NP
-% 			[AP
-% 				[\xhead{A}
-% 					[vana]
-% 				]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
+\begin{forest} shorter edges,
+[DP
+	[\xbar{D}
+		[\xhead{D}
+			[da-]
+		]
+		[DP
+			[\xhead{D}
+				[vana]
+			]
+		]
+	]
+]
+\end{forest}
+\end{tabular}
+\xe
 
-% &
+\rayr{d/}{da-} in this case looks like the indefinite demonstrative prefix,
+defined in (\ref{ex:dmorphlex-dem}) above. However, \rayr{d/} in this case does
+not have a strictly deictic meaning, but an anaphoric one---together with the
+adjunct it forms a pronoun of sorts, though unlike \rayr{dnY}{danya} and like
+the indefinite demonstrative, it cannot stand alone, but needs another word to
+lean on as a clitic. Thus, we have to distinguish between the demonstrative
+prefix \rayr{d/}{da-} and the anaphoric prefix \rayr{d/}{da-}.
+\autoref{fig:da-s} compares their morpholexical features.
 
-% {\smaller\begin{forest} shorter edges,
-% [DP
-% 	[\xbar{D}
-% 		[\xhead{D}
-% 			[da-]
-% 		]
-% 		[NP
-% 			[\xhead{N}
-% 				[vana]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
-% \end{tabular}
+\begin{figure}[ht]\centering
+\caption{Comparison between two functions of \rayr{d/}{da-}}
+\begin{tabu} to \linewidth {X[1] X[12] X[1] X[12]}
+\toprule\tableheaderfont
+\multicolumn{2}{c}{Demonstrative \rayr{d/}{da-}}
+& \multicolumn{2}{c}{Anaphoric \rayr{d/}{da-}}
+\\
+\toprule
+D
+& \begin{tabular}[t]{l l l}
+	\ups{\Pers} & \req{} & 3 \\
+	\ups{\Def} & = & $-$ \\
+	\ups{\Spec} & = & $-$ \\
+\end{tabular}
 
-% \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-% {\smaller\begin{forest} shorter edges, narrower nodes,
-% [DP
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}
-% 			[{
-% 			da- \\
-% 			\ups{\Pers} \req{} 3 \\
-% 			}]
-% 		]
-% 		[\anno{NP}
-% 			[\anno{\xbar{N}}
-% 				[\anno{\xhead{N}}
-% 					[{
-% 					Ø\tsub{i} \\
-% 					\ups{\Pers{}} = \Third \\
-% 					\ups{\Anim} = $-$ \\
-% 					}]
-% 				]
-% 				[{\anno[\pass{\Adjc}]{DP}}
-% 					[\xhead{D}
-% 						[{%
-% 						vana\tsub{j} \\
-% 						\ups{\Pers} = 
-% 							\textbf{\Second} \\
-% % 						\ups{\Case} = \Gen \\
-% 						\downs{\Index{} \Pers} =
-% 							\textbf{\Second} \\
-% 						\downs{\Index{} \Num} = \Sg \\
-% 						\downs{\Index{} \Anim} = \textbf{$+$} \\
-% % 						\downs{\Index{} \Case} = \Gen \\
-% 						}]
-% 					]
-% 				]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
-% 
-% &
-% 
-% {\smaller\begin{forest} shorter edges, narrower nodes,
-% [DP
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}
-% 			[{
-% 			da- \\
-% 			\ups{\Pers} \req{} 3 \\
-% 			}]
-% 		]
-% 		[\anno{NP}
-% 			[\anno{\xhead{N}}
-% 				[{%
-% 				vana\tsub{i,j} \\
-% 				\ups{\Pers{}} = \textbf{\Third} \\
-% 				\ups{\Anim{}} = \textbf{$-$} \\
-% % 				\ups{\Case{}} = \Gen \\
-% 				\downs{\Index{} $j$ \Pers{}} = \textbf{\Second} \\
-% 				\downs{\Index{} $j$ \Num{}} = \Sg \\
-% 				\downs{\Index{} $j$ \Anim} = \textbf{$+$} \\
-% % 				\downs{\Index{} $j$ \Case{}} = \Gen \\
-% 				}]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}}
-% \end{tabular}
+&
+
+N
+& \begin{tabular}[t]{l l l}
+	\ups{\Pred} & = & `pro' \\
+	(\ups{\Pers} & = & 3) \\
+	(\ups{\Def} & = & $+$) \\
+	\quad\downs{\Index{} \Pers} & = & 3 \\
+	\quad\downs{\Index{} \Num} & = & $\{\Sg{}, \Pl\}$ \\
+	\quad\downs{\Index{} \Gend} & = & $\{\M{}, \F{}, \N{}\}$ \\
+	\quad\downs{\Index{} \Anim} & = & $\pm$ \\
+\end{tabular}
+\\
+
+\bottomrule
+
+\end{tabu}
+\label{fig:da-s}
+\end{figure}
+
+The most striking difference in features should be that anaphoric 
+\rayr{d/}{da-} lists a predicator which designates it as a pro-form, whereas
+demonstrative \rayr{d/}{da-} is, essentially, a functional morpheme only 
+without semantic content. As a pro-form, the anaphoric prefix is able to
+bind another NP, while demonstrative prefix cannot. Furthermore, the 
+demonstrative prefix requires the presence of a third-person term, while the
+anaphoric prefix defines one. Also, the definiteness and specificity values 
+differs in that the demonstrative prefix with its meaning `such a' refers to
+one, but no particular item of a set of alike items, while the anaphoric prefix 
+refers to a certain item, that is, the referent it binds.
+
+As shown in (\ref{ex:adjpron}), the host of the anaphoric \rayr{d/}{da-} clitic
+may be an adjective or a possessive pronoun. In contrast to NPs, which are
+complements of \xhead{D}, their maximal projections (AP and DP, respectively)
+are adjuncts and thus need to be annotated with `\pass{\Adj}' rather than 
+`\updown{}'. Complex anaphora with anaphoric \rayr{d/}{da-} may also receive
+case marking like any other nominal, whether DP or NP. The variable person
+features---\Num{}, \Gend{}, and \Anim{}---are inherited from the bound NP, so
+that the respective \Aarg{} and \Parg{} case markers are selected in accordance
+to the referred-to NP's \Anim{} feature. Verbs agree in number, gender, and
+animacy accordingly as well if relevant.
+
+\pex
+\a\begingl
+	\gla Le ming eryavāng {\normalfont [} @ limu nā @ 
+			{\normalfont ]\tsub{i}}. //
+	\glb Le ming ery=vāng {} limu-Ø nā {} //
+	\glc \PatTI{} can use=\Second{}.\Aarg{} {} shirt-\Top{} {} //
+	\glft `You can use my shirt.' //
+\endgl
+
+\a\begingl
+	\gla Da-nāreng\tsub{i} apitu. //
+	\glb Da=nā-reng apitu //
+	\glc one=\Fsg{}.\Gen{}-\AargI{} clean //
+	\glft `Mine is clean.' //
+\endgl
+\xe
+
+Note, however, that in predicative statements, if a possessive pronoun is in 
+predicative position, it can take \rayr{d/}{da-}, but it acts like a regular 
+adjective (without the possibility to undergo comparison). This means that in
+this exceptional case, there is no patient case marking, which would otherwise
+be required of predicative NP complements. This is the reason why in 
+\autoref{fig:da-s}, the \Pers{} and \Def{} values are in parenthesis---these 
+features are not encoded by adjectives.
+
+\pex
+\a\begingl
+	\gla Adanyāng nangās nā. //
+	\glb Adanya-ang nanga-as nā //
+	\glc that-\Aarg{} house-\Parg{} \Fsg{}.\Gen{} //
+	\glft `That is my house'. //
+\endgl
+
+\a\begingl
+	\gla Adanyāng da-nā. //
+	\glb Adanya-ang da=nā //
+	\glc that-\Aarg{} one=\Fsg{}.\Gen{} //
+	\glft `It is mine.' //
+\endgl
 
 \xe
 
-% The trees for \rayr{d/vn}{da-vana} in (\ref{ex:posspron}) illustrate one way to 
-% analyze the nominalization of the possessive pronoun, which otherwise serves as 
-% a modifier to a nominal head. This position, associated with a third person,
-% is empty in this case. By changing the category of the pronoun from DP to NP,
-% the phrases head now has to reference two binding relations: a third-person one
-% with its features ($i$) and a second-person one, also with its features ($j$). 
-% Since the compound anaphora as such binds the third-person referent $i$, the
-% person features of that referent prevail over the person features of the
-% possessive pronoun, which is originally only an adjunct modifier. The
-% information about the pronoun's second-person referent, however, is not lost, 
-% but preserved through the \Index{} feature associated with $j$ as its reference.
-% Formally, the anaphora takes its \Anim{} value from the noun $i$ which it stands
-% in for---a third person referent would also inherit \Gend{} from the NP it binds.
-
-% Information on animacy is relevant in that as nominal forms, complex anaphora
-% as derived here can undergo case marking; information on gender plays a role in
-% verb agreement. As far as case marking is concerned, the \Case{} feature of
-% \rayr{vn}{vana} as a possessive pronoun moves to the background; instead, 
-% \rayr{d/vnlej}{da-vanaley} in (\ref{ex:posspronpat}) is marked for patient case 
-% (\rayr{/lej}{-ley} marks inanimate patient case), since this is the role the 
-% phrase \xayr{d/vn}{da-vana}{yours}, as a maximal projection, plays in relation
-% to the verb, \xayr{ErFyF/}{ery-}{use}.
-
-% \begin{multicols}{2}
-% \ex\label{ex:posspronpat}
-% \begingl
-% 	\gla Pinyan, eryu da-vanaley. //
-% 	\glb Pinyan ery-u da=vana-ley //
-% 	\glc please use-\Imp{} one=\Second{}.\Gen{}-\PargI{} //
-% 	\glft `Please use yours.' //
-% \endgl
-
-% \begin{avm}
-% \[
-% \Obj	& \[
-% 	\Pred	& & `pro\tsub{i}' \\
-% 	\Num	& & \Third \\
-% 	\Def	& & $-$ \\
-% 	\Spec	& & $+$ \\
-% 	\Anim	& & $-$ \\
-% 	\Case	& & \Parg \\
-% 	\Index	& $i:$ & \[
-% 		\Pers{}	& \Third \\
-% 		\Anim{} & $-$ \\
-% 		\] \\
-% 	\Index	& $j:$ & \[
-% 		\Pers	& \Second \\
-% 		\Num	& \Sg \\
-% 		\Case	& \Gen \\
-% 		\Anim{} & $+$ \\
-% 		\]\\
-% 	\]\\
-% \]
-% \end{avm}
-% \xe
-% \end{multicols}
+% FIXME: Rephrase from here on
 
 While it is possible to derive complex anaphora from adjectives and possessive
 pronouns this way, the process as described above only works for single 
@@ -1169,14 +1133,14 @@ complex phrases. Thus, for instance, the following examples are unacceptable:
 \pex
 \a\label{ex:suchadjp}\ljudge*\begingl
 	\gla Tahayang {\normalfont [\tsup{DP}} @ da- @ {\normalfont 
-		[\tsup{?NP/AP}} @ dano nay kema @ {\normalfont]]}. //
+		[\tsup{AP}} @ dano nay kema @ {\normalfont]]}. //
 	\glb Taha=yang {} da= {} dano nay kema {} //
 	\glc have=\Fsg{}.\Aarg{} {} one= {} green and striped {} //
 	\glft `I have a/the green-and-striped one.' //
 \endgl
 
 \a\label{ex:suchrelc}\ljudge*\begingl
-	\gla Vāng {\normalfont [\tsup{DP}} @ da- @ {\normalfont[\tsup{?NP/CP}} 
+	\gla Vāng {\normalfont [\tsup{DP}} @ da- @ {\normalfont[\tsup{CP}} 
 		@ si ya silvasayang ren @ {\normalfont ]]}. //
 	\glb Vāng {} da= {} si ya silv-asa=yang ren-Ø {} //
 	\glc \Second.\Aarg{} {} one= {} \Rel{} \LocT{} 
