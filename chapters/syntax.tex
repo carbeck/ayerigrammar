@@ -1005,7 +1005,7 @@ and the formal \Num{} feature.
 			[\anno{\xbar{N}}
 				[\anno{\xhead{N}}
 					[{
-					Ø \\
+					Ø\tsub{i} \\
 					\ups{\Pers{}} = \Third \\
 					\ups{\Anim} = $-$ \\
 					}]
@@ -1013,13 +1013,14 @@ and the formal \Num{} feature.
 				[{\anno[\pass{\Adjc}]{DP}}
 					[\xhead{D}
 						[{%
-						vana \\
+						vana\tsub{j} \\
 						\ups{\Pers} = 
 							\textbf{\Second} \\
 % 						\ups{\Case} = \Gen \\
 						\downs{\Index{} \Pers} =
 							\textbf{\Second} \\
 						\downs{\Index{} \Num} = \Sg \\
+						\downs{\Index{} \Anim} = \textbf{$+$} \\
 % 						\downs{\Index{} \Case} = \Gen \\
 						}]
 					]
@@ -1039,18 +1040,19 @@ and the formal \Num{} feature.
 			[{
 			da- \\
 			\ups{\Pers} \req{} 3 \\
-			\ups{\Anim} = $-$ \\
 			}]
 		]
 		[\anno{NP}
 			[\anno{\xhead{N}}
 				[{%
-				vana \\
+				vana\tsub{i,j} \\
 				\ups{\Pers{}} = \textbf{\Third} \\
+				\ups{\Anim{}} = \textbf{$-$} \\
 % 				\ups{\Case{}} = \Gen \\
-				\downs{\Index{} \Pers{}} = \textbf{\Second} \\
-				\downs{\Index{} \Num{}} = \Sg \\
-% 				\downs{\Index{} \Case{}} = \Gen \\
+				\downs{\Index{} $j$ \Pers{}} = \textbf{\Second} \\
+				\downs{\Index{} $j$ \Num{}} = \Sg \\
+				\downs{\Index{} $j$ \Anim} = \textbf{$+$} \\
+% 				\downs{\Index{} $j$ \Case{}} = \Gen \\
 				}]
 			]
 		]
@@ -1096,17 +1098,17 @@ pronouns only in third person.
 \begin{avm}
 \[
 \Obj	& \[
-	\Pred	& `pro' \\
-	\Num	& \Third \\
-	\Def	& $-$ \\
-	\Spec	& $+$ \\
-	\Anim	& $-$ \\
-	\Case	& \Parg \\
-	\Index	& \[
+	\Pred	& & `pro\tsub{i}' \\
+	\Num	& & \Third \\
+	\Def	& & $-$ \\
+	\Spec	& & $+$ \\
+	\Anim	& & $-$ \\
+	\Case	& & \Parg \\
+	\Index	& $i:$ & \[ \dots \] \\
+	\Index	& $j:$ & \[
 		\Pers	& \Second \\
 		\Num	& \Sg \\
 		\Case	& \Gen \\
-		\Anim	& $-$ \\
 		\]\\
 	\]\\
 \]
