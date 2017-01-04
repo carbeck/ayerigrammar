@@ -930,14 +930,16 @@ illustrate pronominalized adjectives and possessive pronouns. The latter is
 possible because possessive NPs as well as adjectives are handled as modifiers 
 of \xhead{N}, as we have seen above.
 
-A problem which arises from this is that the demonstrative prefixes 
-prototypically take NPs as complements, while adjectives and possessive 
-pronouns form APs and DPs, respectively. It thus makes sense to assume 
-that adjectives and possessive pronouns are nominalized prior to liason with a 
-demonstrative prefix, to receive the required third-person feature. For 
-possessive pronouns, which may be of any person, this would mean that there is 
-a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person) 
-and the formal \Num{} feature.
+...
+
+% A problem which arises from this is that the demonstrative prefixes 
+% prototypically take NPs as complements, while adjectives and possessive 
+% pronouns form APs and DPs, respectively. It thus makes sense to assume 
+% that adjectives and possessive pronouns are nominalized prior to liason with a 
+% demonstrative prefix, to receive the required third-person feature. For 
+% possessive pronouns, which may be of any person, this would mean that there is 
+% a mismatch between [\Index{} \Num{}] (semantic reference to an $n$th person) 
+% and the formal \Num{} feature.
 
 \pex\label{ex:adjpron}
 \a\begingl
@@ -947,41 +949,43 @@ and the formal \Num{} feature.
 	\glft `the small one' //
 \endgl\medskip
 
-\begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-{\smaller\begin{forest} shorter edges,
-[DP
-	[\xbar{D}
-		[\xhead{D}
-			[da-]
-		]
-		[NP
-			[AP
-				[\xhead{A}
-					[kivo]
-				]
-			]
-		]
-	]
-]
-\end{forest}}
+...
 
-&
+% \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
+% {\smaller\begin{forest} shorter edges,
+% [DP
+% 	[\xbar{D}
+% 		[\xhead{D}
+% 			[da-]
+% 		]
+% 		[NP
+% 			[AP
+% 				[\xhead{A}
+% 					[kivo]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
 
-{\smaller\begin{forest} shorter edges,
-[DP
-	[\xbar{D}
-		[\xhead{D}
-			[da-]
-		]
-		[NP
-			[\xhead{N}
-				[kivo]
-			]
-		]
-	]
-]
-\end{forest}}
-\end{tabular}
+% &
+
+% {\smaller\begin{forest} shorter edges,
+% [DP
+% 	[\xbar{D}
+% 		[\xhead{D}
+% 			[da-]
+% 		]
+% 		[NP
+% 			[\xhead{N}
+% 				[kivo]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
+% \end{tabular}
 
 \a\label{ex:posspron}
 \begingl
@@ -991,139 +995,176 @@ and the formal \Num{} feature.
 	\glft `yours' //
 \endgl\medskip
 
-\begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
-{\smaller\begin{forest} shorter edges, narrower nodes,
-[DP
-	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}
-			[{
-			da- \\
-			\ups{\Pers} \req{} 3 \\
-			}]
-		]
-		[\anno{NP}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}
-					[{
-					Ø\tsub{i} \\
-					\ups{\Pers{}} = \Third \\
-					\ups{\Anim} = $-$ \\
-					}]
-				]
-				[{\anno[\pass{\Adjc}]{DP}}
-					[\xhead{D}
-						[{%
-						vana\tsub{j} \\
-						\ups{\Pers} = 
-							\textbf{\Second} \\
-% 						\ups{\Case} = \Gen \\
-						\downs{\Index{} \Pers} =
-							\textbf{\Second} \\
-						\downs{\Index{} \Num} = \Sg \\
-						\downs{\Index{} \Anim} = \textbf{$+$} \\
-% 						\downs{\Index{} \Case} = \Gen \\
-						}]
-					]
-				]
-			]
-		]
-	]
-]
-\end{forest}}
+...
 
-&
+% {\smaller\begin{forest} shorter edges,
+% [DP
+% 	[\xbar{D}
+% 		[\xhead{D}
+% 			[da-]
+% 		]
+% 		[NP
+% 			[AP
+% 				[\xhead{A}
+% 					[vana]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
 
-{\smaller\begin{forest} shorter edges, narrower nodes,
-[DP
-	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}
-			[{
-			da- \\
-			\ups{\Pers} \req{} 3 \\
-			}]
-		]
-		[\anno{NP}
-			[\anno{\xhead{N}}
-				[{%
-				vana\tsub{i,j} \\
-				\ups{\Pers{}} = \textbf{\Third} \\
-				\ups{\Anim{}} = \textbf{$-$} \\
-% 				\ups{\Case{}} = \Gen \\
-				\downs{\Index{} $j$ \Pers{}} = \textbf{\Second} \\
-				\downs{\Index{} $j$ \Num{}} = \Sg \\
-				\downs{\Index{} $j$ \Anim} = \textbf{$+$} \\
-% 				\downs{\Index{} $j$ \Case{}} = \Gen \\
-				}]
-			]
-		]
-	]
-]
-\end{forest}}
-\end{tabular}
+% &
+
+% {\smaller\begin{forest} shorter edges,
+% [DP
+% 	[\xbar{D}
+% 		[\xhead{D}
+% 			[da-]
+% 		]
+% 		[NP
+% 			[\xhead{N}
+% 				[vana]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
+% \end{tabular}
+
+% \begin{tabular}[t]{@{} l @{\quad{}→\quad{}} l}
+% {\smaller\begin{forest} shorter edges, narrower nodes,
+% [DP
+% 	[\anno{\xbar{D}}
+% 		[\anno{\xhead{D}}
+% 			[{
+% 			da- \\
+% 			\ups{\Pers} \req{} 3 \\
+% 			}]
+% 		]
+% 		[\anno{NP}
+% 			[\anno{\xbar{N}}
+% 				[\anno{\xhead{N}}
+% 					[{
+% 					Ø\tsub{i} \\
+% 					\ups{\Pers{}} = \Third \\
+% 					\ups{\Anim} = $-$ \\
+% 					}]
+% 				]
+% 				[{\anno[\pass{\Adjc}]{DP}}
+% 					[\xhead{D}
+% 						[{%
+% 						vana\tsub{j} \\
+% 						\ups{\Pers} = 
+% 							\textbf{\Second} \\
+% % 						\ups{\Case} = \Gen \\
+% 						\downs{\Index{} \Pers} =
+% 							\textbf{\Second} \\
+% 						\downs{\Index{} \Num} = \Sg \\
+% 						\downs{\Index{} \Anim} = \textbf{$+$} \\
+% % 						\downs{\Index{} \Case} = \Gen \\
+% 						}]
+% 					]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
+% 
+% &
+% 
+% {\smaller\begin{forest} shorter edges, narrower nodes,
+% [DP
+% 	[\anno{\xbar{D}}
+% 		[\anno{\xhead{D}}
+% 			[{
+% 			da- \\
+% 			\ups{\Pers} \req{} 3 \\
+% 			}]
+% 		]
+% 		[\anno{NP}
+% 			[\anno{\xhead{N}}
+% 				[{%
+% 				vana\tsub{i,j} \\
+% 				\ups{\Pers{}} = \textbf{\Third} \\
+% 				\ups{\Anim{}} = \textbf{$-$} \\
+% % 				\ups{\Case{}} = \Gen \\
+% 				\downs{\Index{} $j$ \Pers{}} = \textbf{\Second} \\
+% 				\downs{\Index{} $j$ \Num{}} = \Sg \\
+% 				\downs{\Index{} $j$ \Anim} = \textbf{$+$} \\
+% % 				\downs{\Index{} $j$ \Case{}} = \Gen \\
+% 				}]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}}
+% \end{tabular}
 
 \xe
 
-The trees for \rayr{d/vn}{da-vana} in (\ref{ex:posspron}) illustrate one way to 
-analyze the nominalization of the possessive pronoun, which otherwise serves as 
-a modifier to a nominal head. This position, associated with a third person,
-is empty in this case. By changing the category of the pronoun from DP to NP,
-the phrases head now has to reference two binding relations: a third-person one
-with its features ($i$) and a second-person one, also with its features ($j$). 
-Since the compound anaphora as such binds the third-person referent $i$, the
-person features of that referent prevail over the person features of the
-possessive pronoun, which is originally only an adjunct modifier. The
-information about the pronoun's second-person referent, however, is not lost, 
-but preserved through the \Index{} feature associated with $j$ as its reference.
-Formally, the anaphora takes its \Anim{} value from the noun $i$ which it stands
-in for---a third person referent would also inherit \Gend{} from the NP it binds.
+% The trees for \rayr{d/vn}{da-vana} in (\ref{ex:posspron}) illustrate one way to 
+% analyze the nominalization of the possessive pronoun, which otherwise serves as 
+% a modifier to a nominal head. This position, associated with a third person,
+% is empty in this case. By changing the category of the pronoun from DP to NP,
+% the phrases head now has to reference two binding relations: a third-person one
+% with its features ($i$) and a second-person one, also with its features ($j$). 
+% Since the compound anaphora as such binds the third-person referent $i$, the
+% person features of that referent prevail over the person features of the
+% possessive pronoun, which is originally only an adjunct modifier. The
+% information about the pronoun's second-person referent, however, is not lost, 
+% but preserved through the \Index{} feature associated with $j$ as its reference.
+% Formally, the anaphora takes its \Anim{} value from the noun $i$ which it stands
+% in for---a third person referent would also inherit \Gend{} from the NP it binds.
 
-Information on animacy is relevant in that as nominal forms, complex anaphora
-as derived here can undergo case marking; information on gender plays a role in
-verb agreement. As far as case marking is concerned, the \Case{} feature of
-\rayr{vn}{vana} as a possessive pronoun moves to the background; instead, 
-\rayr{d/vnlej}{da-vanaley} in (\ref{ex:posspronpat}) is marked for patient case 
-(\rayr{/lej}{-ley} marks inanimate patient case), since this is the role the 
-phrase \xayr{d/vn}{da-vana}{yours}, as a maximal projection, plays in relation
-to the verb, \xayr{ErFyF/}{ery-}{use}.
+% Information on animacy is relevant in that as nominal forms, complex anaphora
+% as derived here can undergo case marking; information on gender plays a role in
+% verb agreement. As far as case marking is concerned, the \Case{} feature of
+% \rayr{vn}{vana} as a possessive pronoun moves to the background; instead, 
+% \rayr{d/vnlej}{da-vanaley} in (\ref{ex:posspronpat}) is marked for patient case 
+% (\rayr{/lej}{-ley} marks inanimate patient case), since this is the role the 
+% phrase \xayr{d/vn}{da-vana}{yours}, as a maximal projection, plays in relation
+% to the verb, \xayr{ErFyF/}{ery-}{use}.
 
-\begin{multicols}{2}
-\ex\label{ex:posspronpat}
-\begingl
-	\gla Pinyan, eryu da-vanaley. //
-	\glb Pinyan ery-u da=vana-ley //
-	\glc please use-\Imp{} one=\Second{}.\Gen{}-\PargI{} //
-	\glft `Please use yours.' //
-\endgl
+% \begin{multicols}{2}
+% \ex\label{ex:posspronpat}
+% \begingl
+% 	\gla Pinyan, eryu da-vanaley. //
+% 	\glb Pinyan ery-u da=vana-ley //
+% 	\glc please use-\Imp{} one=\Second{}.\Gen{}-\PargI{} //
+% 	\glft `Please use yours.' //
+% \endgl
 
-\begin{avm}
-\[
-\Obj	& \[
-	\Pred	& & `pro\tsub{i}' \\
-	\Num	& & \Third \\
-	\Def	& & $-$ \\
-	\Spec	& & $+$ \\
-	\Anim	& & $-$ \\
-	\Case	& & \Parg \\
-	\Index	& $i:$ & \[
-		\Pers{}	& \Third \\
-		\Anim{} & $-$ \\
-		\] \\
-	\Index	& $j:$ & \[
-		\Pers	& \Second \\
-		\Num	& \Sg \\
-		\Case	& \Gen \\
-		\Anim{} & $+$ \\
-		\]\\
-	\]\\
-\]
-\end{avm}
-\xe
-\end{multicols}
+% \begin{avm}
+% \[
+% \Obj	& \[
+% 	\Pred	& & `pro\tsub{i}' \\
+% 	\Num	& & \Third \\
+% 	\Def	& & $-$ \\
+% 	\Spec	& & $+$ \\
+% 	\Anim	& & $-$ \\
+% 	\Case	& & \Parg \\
+% 	\Index	& $i:$ & \[
+% 		\Pers{}	& \Third \\
+% 		\Anim{} & $-$ \\
+% 		\] \\
+% 	\Index	& $j:$ & \[
+% 		\Pers	& \Second \\
+% 		\Num	& \Sg \\
+% 		\Case	& \Gen \\
+% 		\Anim{} & $+$ \\
+% 		\]\\
+% 	\]\\
+% \]
+% \end{avm}
+% \xe
+% \end{multicols}
 
-While it is possible to nominalize adjectives and possessive pronouns this way, 
-the process as described above only works for single words---including 
-quantifier suffixes, since these are clitic---but not for complex phrases. 
-Thus, for instance, the following examples are unacceptable:
+While it is possible to derive complex anaphora from adjectives and possessive
+pronouns this way, the process as described above only works for single 
+words---including quantifier suffixes, since these are clitic---but not for
+complex phrases. Thus, for instance, the following examples are unacceptable:
 
 \pex
 \a\label{ex:suchadjp}\ljudge*\begingl
