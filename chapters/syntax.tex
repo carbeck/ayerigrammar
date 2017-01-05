@@ -824,6 +824,7 @@ light of word order typology, we can formulate the following generalizations:
 \xe
 
 \subsection{Interactions between DP and NP}
+\label{subsec:dpnpinteract}
 
 With common nouns, a determiner which requires a complement (like the
 demonstrative prefixes, for instance) simply cliticizes to the next \xhead{N}
@@ -940,12 +941,12 @@ illustrate pronominalized adjectives and possessive pronouns.
 \begin{tabular}[t]{@{} l @{\quad=\quad} l}
 \begin{forest} shorter edges,
 [DP
-	[\xbar{D}
-		[\xhead{D}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}
 			[danya]
 		]
-		[AP
-			[\xhead{A}
+		[{\anno[\pass{\Adj}]{AP}}
+			[\anno{\xhead{A}}
 				[kivo]
 			]
 		]
@@ -957,12 +958,12 @@ illustrate pronominalized adjectives and possessive pronouns.
 
 \begin{forest} shorter edges,
 [DP
-	[\xbar{D}
-		[\xhead{D}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}
 			[da-]
 		]
-		[AP
-			[\xhead{A}
+		[{\anno[\pass{\Adj}]{AP}}
+			[\anno{\xhead{A}}
 				[kivo]
 			]
 		]
@@ -983,12 +984,12 @@ illustrate pronominalized adjectives and possessive pronouns.
 \begin{tabular}[t]{@{} l @{\quad=\quad} l}
 \begin{forest} shorter edges,
 [DP
-	[\xbar{D}
-		[\xhead{D}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}
 			[danya]
 		]
-		[DP
-			[\xhead{D}
+		[{\anno[\pass{\Adj}]{DP}}
+			[\anno{\xhead{D}}
 				[vana]
 			]
 		]
@@ -1000,12 +1001,12 @@ illustrate pronominalized adjectives and possessive pronouns.
 
 \begin{forest} shorter edges,
 [DP
-	[\xbar{D}
-		[\xhead{D}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}
 			[da-]
 		]
-		[DP
-			[\xhead{D}
+		[{\anno[\pass{\Adj}]{DP}}
+			[\anno{\xhead{D}}
 				[vana]
 			]
 		]
@@ -1061,8 +1062,8 @@ N
 
 The most striking difference in features should be that anaphoric 
 \rayr{d/}{da-} lists a predicator which designates it as a pro-form, whereas
-demonstrative \rayr{d/}{da-} is, essentially, a functional morpheme only 
-without semantic content. As a pro-form, the anaphoric prefix is able to
+demonstrative \rayr{d/}{da-} is, essentially, a functional morpheme only, 
+without lexical content. As a pro-form, the anaphoric prefix is able to
 bind another NP, while demonstrative prefix cannot. Furthermore, the 
 demonstrative prefix requires the presence of a third-person term, while the
 anaphoric prefix defines one. Also, the definiteness and specificity values 
@@ -1078,7 +1079,7 @@ are adjuncts and thus need to be annotated with `\pass{\Adj}' rather than
 case marking like any other nominal, whether DP or NP. The variable person
 features---\Num{}, \Gend{}, and \Anim{}---are inherited from the bound NP, so
 that the respective \Aarg{} and \Parg{} case markers are selected in accordance
-to the referred-to NP's \Anim{} feature. Verbs agree in number, gender, and
+with the referred-to NP's \Anim{} feature. Verbs agree in number, gender, and
 animacy accordingly as well if relevant.
 
 \pex
@@ -1096,39 +1097,48 @@ animacy accordingly as well if relevant.
 	\glc one=\Fsg{}.\Gen{}-\AargI{} clean //
 	\glft `Mine is clean.' //
 \endgl
+
 \xe
 
-Note, however, that in predicative statements, if a possessive pronoun is in 
-predicative position, it can take \rayr{d/}{da-}, but it acts like a regular 
-adjective (without the possibility to undergo comparison). This means that in
-this exceptional case, there is no patient case marking, which would otherwise
-be required of predicative NP complements. This is the reason why in 
-\autoref{fig:da-s}, the \Pers{} and \Def{} values are in parenthesis---these 
-features are not encoded by adjectives.
+Note, however, that in predicative statements, if a possessive pronoun is in the
+second position, it can take \rayr{d/}{da-}, but it acts similarly to an
+adjective. This means that in this exceptional case, there is no case marking
+for agent or patient, which would otherwise be required of NPs.\footnote{If
+this is actually an adjective, the \rayr{d/}{da-} prefix ought to be located in 
+the specifier position of the AP projected by the possessive pronoun/adjective.
+It would appear that possessive pronouns are a transitory category between 
+pronoun and adjective.} This is the reason why in \autoref{fig:da-s}, the 
+\Pers{} and \Def{} values are in parenthesis---these features are not encoded 
+by adjectives.
 
 \pex
 \a\begingl
-	\gla Adanyāng nangās nā. //
-	\glb Adanya-ang nanga-as nā //
-	\glc that-\Aarg{} house-\Parg{} \Fsg{}.\Gen{} //
+	\gla Adanyāng {\normalfont [\tsup{NP}} nangās nā {\normalfont ]\tsub{j}}. //
+	\glb Adanya-ang {} nanga-as nā {} //
+	\glc that-\Aarg{} {} house-\Parg{} \Fsg{}.\Gen{} {} //
 	\glft `That is my house'. //
 \endgl
 
 \a\begingl
-	\gla Adanyāng da-nā. //
+	\gla Adanyāng da-nā\tsub{j}. //
 	\glb Adanya-ang da=nā //
 	\glc that-\Aarg{} one=\Fsg{}.\Gen{} //
 	\glft `It is mine.' //
 \endgl
 
-\xe
+\a\begingl
+	\gla Apitu da-nā\tsub{i}. //
+	\glb Apitu da=nā //
+	\glc clean one=\Fsg{}.\Gen{} //
+	\glft `Mine is clean.' //
+\endgl
 
-% FIXME: Rephrase from here on
+\xe
 
 While it is possible to derive complex anaphora from adjectives and possessive
 pronouns this way, the process as described above only works for single 
-words---including quantifier suffixes, since these are clitic---but not for
-complex phrases. Thus, for instance, the following examples are unacceptable:
+words, but not for complex phrases. Thus, for instance, the following examples
+are unacceptable:
 
 \pex
 \a\label{ex:suchadjp}\ljudge*\begingl
@@ -1170,10 +1180,9 @@ the case marker should go:
 instead of two \xhead{A}, however: `the green one and the striped one', which
 is not necessarily the same as `the green and striped one'. With the relative
 clause in (\ref{ex:suchrelc}) only suggestions 1 and 3 are possible, with an
-awkward result as well. The usual solution in either case is to remember that 
-\rayr{d/}{da-} + non-noun is an abbreviation for the full indefinite 
-demonstrative, which can be modified by the same types of adjuncts as a noun, 
-that is, also AP and CP:
+awkward result as well. The solution in either case is to remember that 
+\rayr{d/}{da-} + non-noun is an abbreviation of the full indefinite 
+demonstrative, which basically behaves like a noun in terms of adjuncts:
 
 \pex
 \a\label{ex:danyaadjp}\begingl
@@ -1210,8 +1219,8 @@ equivalent noun. Since \xayr{kem}{kema}{striped} is derived from the noun
 
 \a\begingl
 	\gla da-danoley kemayeri //
-	\glb {} kema-ye-ri //
-	\glc {} stripe-\Pl{}-\Ins{} //
+	\glb da=dano-ley kema-ye-ri //
+	\glc one=green-\PargI{} stripe-\Pl{}-\Ins{} //
 	\glft `the green one with stripes' //
 \endgl
 
