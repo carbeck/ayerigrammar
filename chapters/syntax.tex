@@ -1025,7 +1025,7 @@ lean on as a clitic. Thus, we have to distinguish between the demonstrative
 prefix \rayr{d/}{da-} and the anaphoric prefix \rayr{d/}{da-}.
 \autoref{fig:da-s} compares their morpholexical features.
 
-\begin{figure}[ht]\centering
+\begin{figure}[t]\centering
 \caption{Comparison between two functions of \rayr{d/}{da-}}
 \begin{tabu} to \linewidth {X[1] X[12] X[1] X[12]}
 \toprule\tableheaderfont
@@ -1084,7 +1084,7 @@ animacy accordingly as well if relevant.
 
 \pex
 \a\begingl
-	\gla Le ming eryavāng {\normalfont [} @ limu nā @ 
+	\gla Le ming eryavāng {\normalfont [\tsup{NP}} @ limu nā @ 
 			{\normalfont ]\tsub{i}}. //
 	\glb Le ming ery=vāng {} limu-Ø nā {} //
 	\glc \PatTI{} can use=\Second{}.\Aarg{} {} shirt-\Top{} {} //
@@ -1103,17 +1103,13 @@ animacy accordingly as well if relevant.
 Note, however, that in predicative statements, if a possessive pronoun is in the
 second position, it can take \rayr{d/}{da-}, but it acts similarly to an
 adjective. This means that in this exceptional case, there is no case marking
-for agent or patient, which would otherwise be required of NPs.\footnote{If
-this is actually an adjective, the \rayr{d/}{da-} prefix ought to be located in 
-the specifier position of the AP projected by the possessive pronoun/adjective.
-It would appear that possessive pronouns are a transitory category between 
-pronoun and adjective.} This is the reason why in \autoref{fig:da-s}, the 
-\Pers{} and \Def{} values are in parenthesis---these features are not encoded 
-by adjectives.
+for agent or patient, which would otherwise be required of NPs. This is the 
+reason why in \autoref{fig:da-s}, the \Pers{} and \Def{} values are in parenthesis---these features are not encoded by adjectives.
 
 \pex
 \a\begingl
-	\gla Adanyāng {\normalfont [\tsup{NP}} nangās nā {\normalfont ]\tsub{j}}. //
+	\gla Adanyāng {\normalfont [\tsup{NP}} @ nangās nā @ 
+		{\normalfont ]\tsub{j}}. //
 	\glb Adanya-ang {} nanga-as nā {} //
 	\glc that-\Aarg{} {} house-\Parg{} \Fsg{}.\Gen{} {} //
 	\glft `That is my house'. //
@@ -1229,6 +1225,21 @@ equivalent noun. Since \xayr{kem}{kema}{striped} is derived from the noun
 \section{Adjective phrases and adverbial phrases}
 
 ...
+
+\ex
+AP → \xhead{A} (\anno*[\pass{\Adjc}]{AP})
+\xe
+
+\ex
+\begin{forest}
+[{\anno[\pass{\Adj} \logor{} \pass{\XCompl}]{AP}}
+	[\anno{\xbar{A}}
+		[\anno{\xhead{A}}]
+		[{$\left(\anno[\pass{\Adjc}]{AP}\right)$}]
+	]
+]
+\end{forest}
+\xe
 
 \subsection{Adjective phrases}
 
