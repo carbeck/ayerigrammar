@@ -239,7 +239,7 @@ which provides information on the case and, if \AgtT{} or \PatT{}, also about
 the animacy of the topicalized phrase. This means that grammatical information 
 about the topic of a phrase is spread over two discontinuous locations. This 
 issue does not pose a problem to an \Lfg{}-based analysis, however, since both 
-locations unify their information content in the f-structure feature [\Top{}]. 
+locations unify their information content in the f-structure feature \Top{}. 
 Since information located in multiple places is jointly feeding this feature, I 
 am using the annotation `\elem{\Top}' for each location rather than simple 
 `\pass{\Top}'. Note that only one NP among the arguments of a verb may be the 
@@ -1051,8 +1051,8 @@ N
 	(\ups{\Pers} & = & 3) \\
 	(\ups{\Def} & = & $+$) \\
 	\quad\downs{\Index{} \Pers} & = & 3 \\
-	\quad\downs{\Index{} \Num} & = & $\{\Sg{}, \Pl\}$ \\
-	\quad\downs{\Index{} \Gend} & = & $\{\M{}, \F{}, \N{}\}$ \\
+	\quad\downs{\Index{} \Num} & = & \{\Sg{}, \Pl\} \\
+	\quad\downs{\Index{} \Gend} & = & \{\M{}, \F{}, \N{}\} \\
 	\quad\downs{\Index{} \Anim} & = & $\pm$ \\
 \end{tabular}
 \\
@@ -1283,11 +1283,25 @@ the comparative suffixes construed as adverbial clitics meaning `rather' and
 \Pred{}, then. A more progressive and strictly lexicalist interpretation would
 treat these markers as inflections, however, so that adjectives and adverbs 
 would both additionally have to have a \textsc{compar} feature (compare 
-\cite[Feature Table]{pargram}) taking the values \Comp{} and \Supl{}. Both
-theories should be easily comprehensible, since clitics usually are
-grammaticalized as inflection. This makes sense, especially since the
-suffixes---even though still existing as separate lexical items---mainly serve
-a functional purpose here.
+\cite[Feature Table]{pargram}) taking the values \Comp{} and \Supl{}.\footnote{%
+In this context, \Compl{} is short for `comparative', not `complement'!} Both
+hypotheses should be easily comprehensible, since clitics usually are 
+grammaticalized as inflection. This makes sense, especially since the 
+suffixes---even though still existing as separate lexical items---mainly serve 
+a functional purpose here. The prototype of a table of morpholexic definitions 
+for \xhead{A} accordingly looks like this:
+
+\needspace{3\baselineskip}
+\ex \begin{tabu}[t] {\usetabu{morphlex}}
+	...
+		& A
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			\ups{\Compar} & = & \{\Comp{}, \Supl{}\} \\
+		\end{tabular}
+	\end{tabu}
+
+\xe
 
 As the following example shows, adjuncts and complements to \xhead{A} may be
 combined as well: \xayr{/IknF}{ikan}{very} freely modifies 
@@ -1348,22 +1362,49 @@ is an \XCompl{} rather than a \Compl{}.
 
 \xe
 
-% \subsection{Adjective phrases}
-
-% ...
-
-% \subsection{Adverbial phrases}
-
-% ...
-
 % \section{Adpositional phrases}
 %
+% \section{Complement phrases}
+%
 % \section{Inflectional phrases and verb phrases}
+%
+%     IP
+%   /    \
+% (DP)   I'
+%      /    \
+%    I'      S
+%   /  \    / \
+%  I° (AP) NP XP*
+% 
+% * Probably one has to distinguish clauses with IP from `small clauses' 
+% 	(cf. exposition to Kroeger 1991) with only S
+% * S is likely an exocentric category
+% 	→ support/tests for this
+% 	→ Kroeger 1991 should list some criteria in this respect
+% * Subject vs. Topic vs. Actor vs. Nominative in Ayeri, in relation to
+%   superficial (?) similarities with Austronesian alignment (Kroeger 1991,
+%   1993)
+% * Bresnan (2016) on extended head principle relevant w/r/t placement of 
+%   finite verb in I°?
+%   → are there any tests for whether there's a covert VP after all?
+% * Interesting problem: subject pronoun citics as a specifier of S?
+%   → Funny stuff happens when adverbs are present
+%   → Especially with patient-pronoun subjects (if that term is appropriate)
+% * Patient subjects, causative constructions, no secundative, avoidance (?) of 
+%   raising all need to be investigated with regards to proto-role mapping in 
+%   a-structure ([±r, ±o])
+% * Existential vs. predicative statements
+%   → also, object predicatives!
+%   → also, comparative verbs: kama-, eng-, va- and why they're weird
+% * Agreement with conjoined/disjoined NPs
+%   → due to the way verb agreement in general works, closest-conjunct agreement
+%     is the most likely strategy for gender mismatches; yet number resolution.
+%   → default gender for anaphoric reference to mixed-gender NPs (also animacy
+%     mismatches!)
+%
 % \citet[153--156, 165]{bresnan2016} → pronouns to clitics to agreement
 % \citet[157]{bresnan2016} → evidence criteria for IP
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
-%
-% \section{Complement phrases}
 %
