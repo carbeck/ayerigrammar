@@ -1224,22 +1224,60 @@ equivalent noun. Since \xayr{kem}{kema}{striped} is derived from the noun
 
 \section{Adjective phrases and adverbial phrases}
 
-...
+Adjectives describe properties of nouns; adverbs describe properties of actions,
+but may also provide additional information about place, time, manner,
+quantity, degree etc. more generally by not only modifying verbs, but also other
+parts of speech, or even whole clauses. The morphology of adjectives has been 
+elaborated in \autoref{sec:adjectives}; different uses of adverbs have been
+described in \autoref{sec:adverbs}. In this section, I will not deal with those
+adverbials consisting of an adpositional phrase, that is, ones which primarily
+provide information on time and place.
 
-\ex
-AP → \xhead{A} (\anno*[\pass{\Adjc}]{AP})
+Adjective phrases are headed by an adjective (\xhead{A}), which may either be
+modified by an adverb as an adjunct (\ref{ex:advadj}), or by a phrasal
+complement, for instance, an NP (\ref{ex:advcompl}):
+
+\pex
+\a\label{ex:advadj}\begingl
+	\gla viyu \textbf{cuyam} //
+	\glb viyu cuyam //
+	\glc proud indeed //
+	\glft `indeed proud' //
+\endgl
+
+\a\label{ex:advcompl}\begingl
+	\gla viyu \textbf{yaneri} \textbf{tan} //
+	\glb viyu yan-eri tan //
+	\glc proud son-\Ins{} \TplM{}.\Gen{} //
+	\glft `proud of their son' //
+\endgl
+
 \xe
 
-\ex
+The phrase structure of an AP thus can be generalized as shown in 
+(\ref{ex:apstruct}), which corresponds to the c-structure illustrated in 
+(\ref{ex:apcstruct}). I am assuming here that adjectives and adverbs share the 
+same structures, hence I will not distinguish between them formally.
+
+\ex\label{ex:apstruct}
+AP → \xhead{A} (\anno*[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP})
+\xe
+
+\ex~\label{ex:apcstruct}
 \begin{forest}
 [{\anno[\pass{\Adj} \logor{} \pass{\XCompl}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
-		[{$\left(\anno[\pass{\Adjc}]{AP}\right)$}]
+		[{$\left(\anno[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP}\right)$}]
 	]
 ]
 \end{forest}
 \xe
+
+Adjectives and adverbs in Ayeri do not inflect, and even the comparative
+suffixes can be construed reasonably as adverbial clitics meaning `rather' and
+`most'. Hence, the only f-structure feature both adjectives and adverbs have is
+\Pred{}.
 
 \subsection{Adjective phrases}
 
