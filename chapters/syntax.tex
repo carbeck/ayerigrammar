@@ -2,20 +2,21 @@
 
 \chapter{Phrase structures}
 
-While the previous chapter dealt largely with the various parts of speech and 
-their various distributive and inflectional properties, the present chapter 
-will elaborate on how these words combine into syntactic phrases. Since Ayeri 
-is a verb-initial language, it is probably most comfortably analyzed in terms 
-of Lexical-Functional Grammar \citep{bresnan2016}, since \Lfg{} does not 
-require complicated derivations behind the surface structure of 
-sentences.\footnote{Passivization, for instance, is assumed to be a lexically 
-motivated alternation in predicate structure (\Sbj{} is blocked, so the 
-nominative is assigned to \Obj{}, and the original \Sbj{} is expressed 
-by an \Adjc{}), rather than an internal derivational process 
-\citep[23\psqq]{bresnan2016}.} It will be assumed here that, even though Ayeri 
-is basically VSO with predicate and predication not adjacent to each other, it 
-is configurational in that there is a VP which c-commands a number of other 
-constituents as complements in transitive sentences.
+While the previous chapter dealt largely with the various parts of speech and
+their various distributive and inflectional properties, the present chapter
+will elaborate on how these words combine into syntactic phrases. Since Ayeri
+is a verb-initial language, it is probably most comfortably analyzed in terms
+of Lexical-Functional Grammar (\cite{bresnan1982}~ff.; more recently
+\cite{bresnan2016}), since \Lfg{} does not require complicated derivations 
+behind the surface structure of  sentences.\footnote{Passivization, for
+instance, is assumed to be a lexically  motivated alternation in predicate
+structure (\Sbj{} is blocked, so the  nominative is assigned to \Obj{}, and the
+original \Sbj{} is expressed  by an \Adjc{}), rather than an internal 
+derivational process \citep[23\psqq]{bresnan2016}.} It will be assumed here 
+that, even though Ayeri is basically VSO with predicate and predication not 
+adjacent to each other, it is configurational in that there is a VP which 
+c-commands a number of other constituents as complements in transitive 
+sentences.
 
 In principle, \Lfg{} assumes that grammar operates on different structural 
 levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
@@ -1274,18 +1275,81 @@ AP → \xhead{A} (\anno*[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP})
 \end{forest}
 \xe
 
-Adjectives and adverbs in Ayeri do not inflect, and even the comparative
-suffixes can be construed reasonably as adverbial clitics meaning `rather' and
-`most'. Hence, the only f-structure feature both adjectives and adverbs have is
-\Pred{}.
+Adjectives and adverbs in Ayeri can be interpreted as not inflecting, with even
+the comparative suffixes construed as adverbial clitics meaning `rather' and
+`most'. The only feature property of both adjectives and adverbs would be 
+\Pred{}, then. A more progressive and strictly lexicalist interpretation would
+treat these markers as inflections, however, so that adjectives and adverbs 
+would both additionally have to have a \textsc{compar} feature (compare 
+\cite[Feature Table]{pargram}) taking the values \Comp{} and \Supl{}. Both
+theories should be easily comprehensible, since clitics usually are
+grammaticalized as inflection. This makes sense, especially since the
+suffixes---even though still existing as separate lexical items---mainly serve
+a functional purpose here.
 
-\subsection{Adjective phrases}
+As the following example shows, adjuncts and complements to \xhead{A} may be
+combined as well: \xayr{/IknF}{ikan}{very} freely modifies 
+\xayr{viyu}{viyu}{proud}, and \xayr{kYuymF}{cuyam}{indeed, really}
+may be interpreted as being an adjunct to \xayr{/IknF}{-ikan}{very}. The NP
+\xayr{yneri tnF}{yaneri tan}{of their son} (literally, `by their son'), however,
+serves as a complement of \rayr{viyu}{viyu}, which is optionally transitive
+here.
 
-...
+\ex
+\begingl
+	\gla viyu-ikan cuyam yaneri tan //
+	\glb viyu=ikan cuyam yan-eri tan //
+	\glc proud=very indeed son-\Ins{} \TplM{}.\Gen{} //
+	\glft `indeed very proud of their son' //
+\endgl
 
-\subsection{Adverbial phrases}
+\begin{forest} shorter edges,
+[{\anno[\pass{\XCompl}]{AP}}
+	[\anno{\xbar{A}}
+		[\anno{\xhead{A}}
+			[viyu]
+		]
+		[\anno{\xbar{A}}
+			[{\anno[\pass{\Adjc}]{AP}}
+				[\anno{\xbar{A}}
+					[\anno{\xhead{A}}
+						[-ikan]
+					]
+					[{\anno[\pass{\Adjc}]{AP}}
+						[\anno{\xhead{A}}
+							[cuyam]
+						]
+					]
+				]
+			]
+			[\anno{\xbar{A}}
+				[{\anno[\pass{\XCompl}]{NP}}
+					[\anno{\xbar{N}}
+						[\anno{\xhead{N}}
+							[yaneri]
+						]
+						[{\anno[\pass{\Adjc}]{DP}}
+							[\anno{\xhead{D}}
+								[tan]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
 
-...
+\xe
+
+% \subsection{Adjective phrases}
+
+% ...
+
+% \subsection{Adverbial phrases}
+
+% ...
 
 % \section{Adpositional phrases}
 %
