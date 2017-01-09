@@ -34,11 +34,9 @@ constituency trees are based on an extended version of X-bar theory
 \citep[42]{bresnan2016}.\footnote{The basic recursive rules of X-bar theory 
 are observed:
 \begin{enumerate}[nosep, leftmargin={2\footnotemargin}]
-\item \begin{enumerate}
-	\item \xbar{X} → \xhead{X}, YP
-	\item \xbar{X} → \xbar{X}, YP
-\end{enumerate}\medskip
-\item XP → YP, \xbar{X}
+\item XP → YP, \xbar{X} (specifier rule)
+\item \xbar{X} → \xbar{X}, YP (adjunct rule)
+\item \xbar{X} → \xhead{X}, YP (complement rule)
 \end{enumerate}
 
 The principle of economy of expression furthermore dictates that essentially, 
@@ -761,30 +759,57 @@ order of modifiers.
 \medskip
 
 \begin{multicols}{2}
+% \begin{forest} shorter edges, narrower nodes,
+% [{\anno[\pass{\Sbj}]{NP}}
+% 	[\anno{\xbar{N}}
+% 		[\anno{\xhead{N}}
+% 			[diranang]
+% 		]
+% 		[\anno{\xbar{N}}
+% 			[{\anno[\elem{\Adj}]{AP}}
+% % 				[\anno{\xhead{A}}
+% 					[{caban}, roof]
+% % 				]
+% 			]
+% 			[\anno{\xbar{N}}
+% 				[{\anno[\elem{\Adj}]{DP}}
+% % 					[\anno{\xhead{D}}
+% 						[{nā}, roof]
+% % 					]
+% 				]
+% 				[\anno{\xbar{N}}
+% 					[{\anno[\elem{\Adj}]{CP}}
+% 						[{si ang mica ...}, roof]
+% 					]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+
 \begin{forest} shorter edges, narrower nodes,
 [{\anno[\pass{\Sbj}]{NP}}
 	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}
-			[diranang]
-		]
 		[\anno{\xbar{N}}
-			[{\anno[\elem{\Adj}]{AP}}
-% 				[\anno{\xhead{A}}
-					[{caban}, roof]
-% 				]
-			]
 			[\anno{\xbar{N}}
-				[{\anno[\elem{\Adj}]{DP}}
-% 					[\anno{\xhead{D}}
-						[{nā}, roof]
-% 					]
+				[\anno{\xhead{N}}
+					[diranang]
 				]
-				[\anno{\xbar{N}}
-					[{\anno[\elem{\Adj}]{CP}}
-						[{si ang mica ...}, roof]
+				[{\anno[\elem{\Adj}]{AP}}
+					[\anno{\xhead{A}}
+						[caban]
 					]
 				]
 			]
+			[{\anno[\elem{\Adj}]{DP}}
+				[\anno{\xhead{D}}
+					[nā]
+				]
+			]
+		]
+		[{\anno[\elem{\Adj}]{CP}}
+			[{si ang mica ...}, roof]
 		]
 	]
 ]
@@ -1324,36 +1349,72 @@ is an \XCompl{} rather than a \Compl{}.
 	\glft `indeed very proud of their son' //
 \endgl\medskip
 
+% \begin{forest} shorter edges,
+% [{\anno[\pass{\XCompl}]{AP}}
+% 	[\anno{\xbar{A}}
+% 		[\anno{\xhead{A}}
+% 			[viyu]
+% 		]
+% 		[\anno{\xbar{A}}
+% 			[{\anno[\pass{\Adjc}]{AP}}
+% 				[\anno{\xbar{A}}
+% 					[\anno{\xhead{A}}
+% 						[-ikan]
+% 					]
+% 					[{\anno[\pass{\Adjc}]{AP}}
+% 						[\anno{\xhead{A}}
+% 							[cuyam]
+% 						]
+% 					]
+% 				]
+% 			]
+% 			[\anno{\xbar{A}}
+% 				[{\anno[\pass{\XCompl}]{NP}}
+% 					[\anno{\xbar{N}}
+% 						[\anno{\xhead{N}}
+% 							[yaneri]
+% 						]
+% 						[{\anno[\pass{\Adjc}]{DP}}
+% 							[\anno{\xhead{D}}
+% 								[tan]
+% 							]
+% 						]
+% 					]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+
 \begin{forest} shorter edges,
 [{\anno[\pass{\XCompl}]{AP}}
 	[\anno{\xbar{A}}
-		[\anno{\xhead{A}}
-			[viyu]
-		]
 		[\anno{\xbar{A}}
-			[{\anno[\pass{\Adjc}]{AP}}
-				[\anno{\xbar{A}}
+			[\anno{\xbar{A}}
+				[\anno{\xhead{A}}
+					[viyu]
+				]
+				[{\anno[\pass{\Adjc}]{AP}}
 					[\anno{\xhead{A}}
 						[-ikan]
 					]
-					[{\anno[\pass{\Adjc}]{AP}}
-						[\anno{\xhead{A}}
-							[cuyam]
-						]
-					]
 				]
 			]
-			[\anno{\xbar{A}}
-				[{\anno[\pass{\XCompl}]{NP}}
-					[\anno{\xbar{N}}
-						[\anno{\xhead{N}}
-							[yaneri]
-						]
-						[{\anno[\pass{\Adjc}]{DP}}
-							[\anno{\xhead{D}}
-								[tan]
-							]
-						]
+			[{\anno[\pass{\Adjc}]{AP}}
+				[\anno{\xhead{A}}
+					[cuyam]
+				]
+			]
+		]
+		[{\anno[\pass{\XCompl}]{NP}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}
+					[yaneri]
+				]
+				[{\anno[\pass{\Adjc}]{DP}}
+					[\anno{\xhead{D}}
+						[tan]
 					]
 				]
 			]
@@ -1366,9 +1427,7 @@ is an \XCompl{} rather than a \Compl{}.
 
 % \section{Adpositional phrases}
 %
-% \section{Complement phrases}
-%
-% \section{Inflectional phrases and verb phrases}
+% \section{Inflectional, verb, and complementizer phrases}
 %
 % * Ayeri's unmarked word order is essentially VSO:
 %
