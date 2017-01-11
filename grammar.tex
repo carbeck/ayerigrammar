@@ -406,6 +406,7 @@
 \newleipzig{Case}{case}{case}
 \newleipzig{Compar}{compar}{comparison}
 \newleipzig{Compl}{comp}{complement}
+\newleipzig{Fin}{fin}{finiteness}
 \newleipzig{Gend}{gend}{gender}
 \newleipzig{Index}{index}{index}
 \newleipzig{Num}{num}{number}
@@ -502,19 +503,22 @@
 
 % Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
 \newcommand{\anno}[2][\updown{}]{%
-	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
-		{\smaller\smaller #1}\\
-		#2
-	\end{minipage}%
+	\text{%
+		\begin{tabu}[c]{>{\smaller\smaller}c}%
+			#1\\[0.125\baselineskip]%
+			\larger\larger #2
+		\end{tabu}%
+	}%
 }
 
 % Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
-	\enspace%
-	\begin{minipage}[c]{\widthof{\smaller\smaller #1}}\centering
-		#2\\[-0.33\baselineskip]%
-		{\smaller\smaller #1}%
-	\end{minipage}\enspace%
+	\text{%
+		\begin{tabu}[m]{>{\smaller\smaller}c}%
+			\larger\larger #2\\[-0.33\baselineskip]%
+			#1%
+		\end{tabu}%
+	}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

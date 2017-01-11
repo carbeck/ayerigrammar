@@ -1,5 +1,10 @@
 % kate: word-wrap true;
 
+% IMPORTANT NOTE: I've never dealt much with syntax before, at least not in a
+% way as formal as I'm trying to come to terms with it here. If there's anything
+% wrong with my analyses, it's because I don't know enough yet. Things may be
+% subject to change *especially* in this chapter.
+
 \chapter{Phrase structures}
 
 While the previous chapter dealt largely with the various parts of speech and
@@ -189,8 +194,15 @@ element may occur but is not constitutive.
 % more' occurrences of the respective element
 
 \pex\label{ex:dpnpstruct}
-\a\label{ex:dpdef} DP → \anno*{\xhead{D}} (\anno*{XP})
-\a\label{ex:npdef} NP → \anno*{\xhead{N}} (\anno*[\pass{\Adjc}]{XP})
+\a\label{ex:dpdef} DP → \anno*{\xhead{D}} $\left(\anno*[{%
+		\updown{}\\%
+	%	\logor{} \pass{\XCompl}\\% FIXME: NOT SURE ABOUT THESE *AT ALL*
+		\logor{} \pass{\Adj}%
+	}]{XP}\right)$
+\a\label{ex:npdef} NP → \anno*{\xhead{N}} $\left(\anno*[{%
+		\pass{\Adjc}\\
+	%	\logor{} \pass{\XCompl}%
+	}]{XP}\right)$
 \xe
 
 Since the constituent containing the various non-verbal elements in Ayeri is 
@@ -263,7 +275,11 @@ since they are not complements.
 [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
-		[{$\left(\anno[\updown{} \logor{} \pass{\Adj}]{XP}\right)$}]
+		[{$\left(\anno[{%
+		\updown{}\\%
+		%\logor{} \pass{\XCompl}\\%
+		\logor{} \pass{\Adj}%
+	}]{XP}\right)$}]
 	]
 ]
 \end{forest}
@@ -284,6 +300,9 @@ the fact that an NP is facultative with the demonstrative and inspecificity
 prefixes while it must not occur with pronouns, `NP' appears in parentheses 
 since a phrasal complement it is not always present. We can define the 
 following morpholexic rules for determiners (\xhead{D}):
+
+% FIXME: For some of these I'm not sure *at all* whether they're adjuncts or
+% whether they should better be classified as complements :O
 
 \pex
 \a\label{ex:dmorphlex-dem}Demonstrative prefixes:\medskip
@@ -377,6 +396,23 @@ following morpholexic rules for determiners (\xhead{D}):
 				\Loc{}, \Ins{}, \Caus{}\} \\
 		\end{tabular}
 	\end{tabu}
+
+\needspace{3\baselineskip}
+\a Indefinite pronouns:\medskip
+
+	\begin{tabu} {\usetabu{morphlex}}
+	(various)
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `pro' \\
+			\ups{\Pers} & = & 3 \\
+			\ups{\Def} & = & $-$ \\
+			\ups{\Spec} & = & $-$ \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}
 	
 \needspace{3\baselineskip}
 \a\label{ex:dmorphlex-propn}Case markers of proper nouns:\medskip	
@@ -431,13 +467,18 @@ NP, DP, CP), they are indicated generalized as `XP' in the diagrams.
 \tl\quad Common nouns:\\
 
 \quad\begin{forest}
-[{\anno[\pass{df} \logor{} \pass{gf} \logor{} \updown]{NP}}
+[{\anno[\pass{df} \logor{} \pass{gf} \logor{} \updown{}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
 			[\anno{N\tsub{stem}}]
 			[\anno{\mbox{N\tsub{infl}}}]
 		]
-		[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
+		[{$\left(\anno[{%
+			%	\pass{\XCompl}\\
+			%	\logor{} 
+				\pass{\Adjc}%
+			}]{XP}\right)$
+		}]
 	]
 ]
 \end{forest}
@@ -453,7 +494,12 @@ NP, DP, CP), they are indicated generalized as `XP' in the diagrams.
 		[{\anno[\updown]{NP}}
 			[\anno{\xbar{N}}
 				[\anno{\xhead{N}}]
-				[{$\left(\anno[\pass{\Adjc}]{XP}\right)$}]
+				[{$\left(\anno[{%
+					%	\pass{\XCompl}\\
+					%	\logor{}
+						\pass{\Adjc}%
+					}]{XP}\right)$
+				}]
 			]
 		]
 	]
@@ -571,9 +617,11 @@ as demanding that a noun with the correct animacy value be within their scope.
 
 As previously mentioned, nouns may be modified by a number of adjuncts of
 various phrase types: adjectives and adverbs (AP), genitive attributes (NP/DP), 
-other nominal adjuncts (NP), and relative clauses (CP):
+other nominal adjuncts (NP), relative clauses (CP), as well as infinite verbs 
+(VP):
 
 \pex
+
 \a\begingl
 	\glpreamble With an adjective: //
 	\gla Ya manga nu-nunāran \textbf{baloyyereng} \textbf{tiru} venya 
@@ -727,11 +775,50 @@ other nominal adjuncts (NP), and relative clauses (CP):
 			\Anim	& $-$ \\
 			\Case	& \Parg \\
 			\Adjc	& \{
-					\[
-						\Pred	& `be red ...' \\
-					\] \\
+						\Compl & \[
+							\Pred	& `be red ...' \\
+						\]
 				\} \\
 			\] \\
+	\]
+	\end{avm}
+
+\a\begingl
+	\glpreamble With an infinite verb: //
+	\gla Ang anlyan \textbf{kondanley} \textbf{vihyam}. //
+	\glb Ang anl=yan.Ø kondan-ley vih-yam //
+	\glc \AgtT{} bring=\TplM{}.\Top{} food-\PargI{} share-\Ptcp{} //
+	\glft `They brought food to share.' //
+\endgl
+\medskip
+
+	\begin{forest}, shorter edges
+	[{\anno[\pass{\Obj}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[kondanley]
+			]
+			[{\anno[\pass{\Adj}]{VP}}
+				[{vihyam}, roof]
+			]
+		]
+	]
+	\end{forest}
+	\quad
+	\begin{avm}
+	\[
+		\Obj	& \[
+			\Pred	& `food' \\
+% 			\Pers	& \Third \\
+			\Anim	& $-$ \\
+			\Case	& \PargI \\
+			\Adjc & \{
+				\XCompl	& \[
+					\Pred	& \astruct{share}{\dots} \\
+					\Fin	& $-$ \\
+				\]\\
+			\}\\
+		\]\\
 	\]
 	\end{avm}
 
@@ -1293,7 +1380,10 @@ The phrase structure of an AP thus can be generalized as shown in
 same structures, hence I will not distinguish between them formally.
 
 \ex\label{ex:apstruct}
-AP → \xhead{A} (\anno*[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP})
+AP → \xhead{A} $\left(\anno*[{%
+		\pass{\Adjc{}}\\
+		\logor{} \pass{\XCompl{}}%
+	}]{XP}\right)$
 \xe
 
 \ex~\label{ex:apcstruct}
@@ -1301,7 +1391,10 @@ AP → \xhead{A} (\anno*[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP})
 [{\anno[\pass{\Adj} \logor{} \pass{\XCompl}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
-		[{$\left(\anno[\pass{\Adjc{}} \logor{} \pass{\XCompl{}}]{XP}\right)$}]
+		[{$\left(\anno[{%
+				\pass{\Adjc{}}\\
+				\logor{} \pass{\XCompl{}}%
+			}]{XP}\right)$}]
 	]
 ]
 \end{forest}
@@ -1334,55 +1427,91 @@ table of morpholexic definitions for \xhead{A} accordingly looks like this:
 
 \xe
 
-As the following example shows, adjuncts and complements to \xhead{A} may be
-combined as well: \xayr{/IknF}{ikan}{very} freely modifies 
-\xayr{viyu}{viyu}{proud}, and \xayr{kYuymF}{cuyam}{indeed, really}
-may be interpreted as being an adjunct to \xayr{/IknF}{-ikan}{very}. The NP
-\xayr{yneri tnF}{yaneri tan}{of their son} (literally, `by their son'), however,
-serves as a complement of \rayr{viyu}{viyu}, which is optionally transitive
-here. From the structure of the AP we know that it cannot merely be an adjunct
-to an NP, but rather, that it must be a predicative AP, and as such a
-complement to a subject NP. Since the phrase does not contain a finite verb, it
-is an \XCompl{} rather than a \Compl{}.
+% As the following example shows, adjuncts and complements to \xhead{A} may be
+% combined as well: \xayr{/IknF}{ikan}{very} freely modifies 
+% \xayr{viyu}{viyu}{proud}, and \xayr{kYuymF}{cuyam}{indeed, really}
+% may be interpreted as being an adjunct to \xayr{/IknF}{-ikan}{very}. The NP
+% \xayr{yneri tnF}{yaneri tan}{of their son} (literally, `by their son'), however,
+% serves as a complement of \rayr{viyu}{viyu}, which is optionally transitive
+% here. From the structure of the AP we know that it cannot merely be an adjunct
+% to an NP, but rather, that it must be a predicative AP, and as such a
+% complement to a subject NP. Since the phrase does not contain a finite verb, it
+% is an \XCompl{} rather than a \Compl{}.
 
-\ex
-\begingl
-	\gla viyu-ikan cuyam yaneri tan //
-	\glb viyu=ikan cuyam yan-eri tan //
-	\glc proud=very indeed son-\Ins{} \TplM{}.\Gen{} //
-	\glft `indeed very proud of their son' //
-\endgl\medskip
+% \ex
+% \begingl
+% 	\gla viyu-ikan cuyam yaneri tan //
+% 	\glb viyu=ikan cuyam yan-eri tan //
+% 	\glc proud=very indeed son-\Ins{} \TplM{}.\Gen{} //
+% 	\glft `indeed very proud of their son' //
+% \endgl\medskip
+
+% % \begin{forest} shorter edges,
+% % [{\anno[\pass{\XCompl}]{AP}}
+% % 	[\anno{\xbar{A}}
+% % 		[\anno{\xhead{A}}
+% % 			[viyu]
+% % 		]
+% % 		[\anno{\xbar{A}}
+% % 			[{\anno[\pass{\Adjc}]{AP}}
+% % 				[\anno{\xbar{A}}
+% % 					[\anno{\xhead{A}}
+% % 						[-ikan]
+% % 					]
+% % 					[{\anno[\pass{\Adjc}]{AP}}
+% % 						[\anno{\xhead{A}}
+% % 							[cuyam]
+% % 						]
+% % 					]
+% % 				]
+% % 			]
+% % 			[\anno{\xbar{A}}
+% % 				[{\anno[\pass{\XCompl}]{NP}}
+% % 					[\anno{\xbar{N}}
+% % 						[\anno{\xhead{N}}
+% % 							[yaneri]
+% % 						]
+% % 						[{\anno[\pass{\Adjc}]{DP}}
+% % 							[\anno{\xhead{D}}
+% % 								[tan]
+% % 							]
+% % 						]
+% % 					]
+% % 				]
+% % 			]
+% % 		]
+% % 	]
+% % ]
+% % \end{forest}
 
 % \begin{forest} shorter edges,
 % [{\anno[\pass{\XCompl}]{AP}}
 % 	[\anno{\xbar{A}}
-% 		[\anno{\xhead{A}}
-% 			[viyu]
-% 		]
 % 		[\anno{\xbar{A}}
-% 			[{\anno[\pass{\Adjc}]{AP}}
-% 				[\anno{\xbar{A}}
+% 			[\anno{\xbar{A}}
+% 				[\anno{\xhead{A}}
+% 					[viyu]
+% 				]
+% 				[{\anno[\pass{\Adjc}]{AP}}
 % 					[\anno{\xhead{A}}
 % 						[-ikan]
 % 					]
-% 					[{\anno[\pass{\Adjc}]{AP}}
-% 						[\anno{\xhead{A}}
-% 							[cuyam]
-% 						]
-% 					]
 % 				]
 % 			]
-% 			[\anno{\xbar{A}}
-% 				[{\anno[\pass{\XCompl}]{NP}}
-% 					[\anno{\xbar{N}}
-% 						[\anno{\xhead{N}}
-% 							[yaneri]
-% 						]
-% 						[{\anno[\pass{\Adjc}]{DP}}
-% 							[\anno{\xhead{D}}
-% 								[tan]
-% 							]
-% 						]
+% 			[{\anno[\pass{\Adjc}]{AP}}
+% 				[\anno{\xhead{A}}
+% 					[cuyam]
+% 				]
+% 			]
+% 		]
+% 		[{\anno[\pass{\XCompl}]{NP}}
+% 			[\anno{\xbar{N}}
+% 				[\anno{\xhead{N}}
+% 					[yaneri]
+% 				]
+% 				[{\anno[\pass{\Adjc}]{DP}}
+% 					[\anno{\xhead{D}}
+% 						[tan]
 % 					]
 % 				]
 % 			]
@@ -1391,43 +1520,7 @@ is an \XCompl{} rather than a \Compl{}.
 % ]
 % \end{forest}
 
-\begin{forest} shorter edges,
-[{\anno[\pass{\XCompl}]{AP}}
-	[\anno{\xbar{A}}
-		[\anno{\xbar{A}}
-			[\anno{\xbar{A}}
-				[\anno{\xhead{A}}
-					[viyu]
-				]
-				[{\anno[\pass{\Adjc}]{AP}}
-					[\anno{\xhead{A}}
-						[-ikan]
-					]
-				]
-			]
-			[{\anno[\pass{\Adjc}]{AP}}
-				[\anno{\xhead{A}}
-					[cuyam]
-				]
-			]
-		]
-		[{\anno[\pass{\XCompl}]{NP}}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}
-					[yaneri]
-				]
-				[{\anno[\pass{\Adjc}]{DP}}
-					[\anno{\xhead{D}}
-						[tan]
-					]
-				]
-			]
-		]
-	]
-]
-\end{forest}
-
-\xe
+% \xe
 
 % \section{Adpositional phrases}
 %
