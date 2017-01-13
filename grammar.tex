@@ -111,7 +111,7 @@
 % Extended formatting of lists
 \usepackage{enumitem}
 \newlist{glossdefs}{itemize}{1}
-\setlist[glossdefs]{nosep, leftmargin=3em, labelwidth=2.5em, align=left}
+\setlist[glossdefs]{nosep, leftmargin=4em, labelwidth=3.5em, align=left}
 \setlist[itemize]{noitemsep}
 
 % Make multiple columns available in single-column document
@@ -501,21 +501,21 @@
 		'}%
 }
 
-% Feature annotation above (for use in trees); no value in [] prints ↑ = ↓
+% Feature annotation above (for use in TREES); no value in [] prints ↑ = ↓
 \newcommand{\anno}[2][\updown{}]{%
 	\text{%
 		\begin{tabu}[c]{>{\smaller\smaller}c}%
 			#1\\[0.125\baselineskip]%
-			\larger\larger #2
+			\larger #2
 		\end{tabu}%
 	}%
 }
 
-% Feature annotation below (for use in phrase-structure rules); no value in [] prints ↑ = ↓
+% Feature annotation below (for use in PHRASE-STRUCTURE RULES); no value in [] prints ↑ = ↓
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
 	\text{%
 		\begin{tabu}[m]{>{\smaller\smaller}c}%
-			\larger\larger #2\\[-0.33\baselineskip]%
+			\larger #2\\[-0.33\baselineskip]%
 			#1%
 		\end{tabu}%
 	}
