@@ -1416,7 +1416,7 @@ adverbials consisting of an adpositional phrase, that is, ones which primarily
 provide information on time and place.
 
 Adjective phrases are headed by an adjective (\xhead{A}), which may either be
-modified by an adverb (\ref{ex:adjadv}), or by an NP, for instance 
+modified by an adverb (\ref{ex:adjadv}), or by an NP complement, for instance 
 (\ref{ex:adjnp}):
 
 \pex
@@ -1443,8 +1443,8 @@ same structures, hence I will not distinguish between them formally.
 
 \ex\label{ex:apstruct}
 AP → \xhead{A} $\left(\anno*[{%
-		\pass{\Adjc{}}%\\
-		%\logor{} \pass{\XCompl{}}%
+		\pass{\Adjc{}}\\
+		\logor{} \pass{\OblqT}% FIXME: Not sure about this
 	}]{XP}\right)$
 \xe
 
@@ -1454,8 +1454,8 @@ AP → \xhead{A} $\left(\anno*[{%
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
-				\pass{\Adjc{}}%\\
-				%\logor{} \pass{\XCompl{}}%
+				\pass{\Adjc{}}\\
+				\logor{} \pass{\OblqT}% FIXME: Not sure about this
 			}]{XP}\right)$}]
 	]
 ]
