@@ -181,10 +181,10 @@ formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
 
 Noun phrases (NPs), and determiner phrases (DPs) as their functional 
 counterpart, fulfill the functions of subject (\Sbj{}), object (\Obj{}), 
-secondary object (\SObj{}), as well as oblique location (\Oblq{loc}), and 
-various adjuncts (\Adjc{}). DPs and NPs can also constitute topics (\Top{}). 
-Which DP or NP receives which function is selected by the a-structure of the 
-verb---this also has repercussions on case- and topic marking.
+secondary object (\SObj{}), as well as various oblique constituents (\OblqT;
+see (\ref{ex:dpnpcasemap}) below), and they can also form adjuncts (\Adjc{}).
+DPs and NPs can also constitute topics (\Top{}). Which DP or NP receives which function is selected by the a-structure of the verb---this also has 
+repercussions on case- and topic marking.
 
 Generally, DPs and NPs can be described with the phrase-structure formulas 
 given in (\ref{ex:dpnpstruct}), which list the various parts that can occur in 
@@ -617,12 +617,11 @@ as demanding that a noun with the correct animacy value be within their scope.
 
 As previously mentioned, nouns may be modified by elements of various phrase
 types: adjectives and adverbs (AP), genitive attributes (NP/DP), other nominal
-adjuncts (NP), relative clauses (CP)%
+adjuncts (NP), or relative clauses (CP)%
 %, as well as infinite verbs (VP)
 :
 
 \pex
-
 \a\begingl
 	\glpreamble With an adjective: //
 	\gla Ya manga nu-nunāran \textbf{baloyyereng} \textbf{tiru} venya 
@@ -1110,17 +1109,18 @@ possible to abbreviate \xayr{dnY}{danya}{such one} + adjective as
 essentially derives a complex anaphora. The trees charted in (\ref{ex:adjpron}) 
 illustrate pronominalized adjectives and possessive pronouns.
 
-\ex\label{ex:adjpron}\labels
-\parbox[t]{.5\linewidth}{
-\tl\quad\begingl
+\ex\label{ex:adjpron}\labels%
+\parbox[t]{.4\linewidth}{%
+\tl\quad\begingl%
 	\gla da-kivo //
 	\glb da=kivo //
 	\glc one=small //
 	\glft `the small one' //
-\endgl}%\medskip
+\endgl%
+}%\medskip
 %
 \begin{tabular}[t]{@{} l @{\quad=\quad} l}
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1137,7 +1137,7 @@ illustrate pronominalized adjectives and possessive pronouns.
 
 &
 
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1153,9 +1153,9 @@ illustrate pronominalized adjectives and possessive pronouns.
 \end{forest}
 \end{tabular}
 
-\parbox[t]{.5\linewidth}{
-\tl\quad\label{ex:posspron}
-\begingl
+\parbox[t]{.4\linewidth}{%
+\tl\quad\label{ex:posspron}%
+\begingl%
 	\gla da-vana //
 	\glb da=vana //
 	\glc such=\Second{}.\Gen{} //
@@ -1163,7 +1163,7 @@ illustrate pronominalized adjectives and possessive pronouns.
 \endgl}%\medskip
 %
 \begin{tabular}[t]{@{} l @{\quad=\quad} l}
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1180,7 +1180,7 @@ illustrate pronominalized adjectives and possessive pronouns.
 
 &
 
-\begin{forest} shorter edges,
+\begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1223,11 +1223,11 @@ D
 
 &
 
-N
+D
 & \begin{tabular}[t]{l l l}
 	\ups{\Pred} & = & `pro' \\
-	(\ups{\Pers} & = & 3) \\
-	(\ups{\Def} & = & $+$) \\
+	\ups{\Pers} & = & 3 \\
+	\ups{\Def} & = & $+$ \\
 	\quad\downs{\Index{} \Pers} & = & 3 \\
 	\quad\downs{\Index{} \Num} & = & \{\Sg{}, \Pl\} \\
 	\quad\downs{\Index{} \Gend} & = & \{\M{}, \F{}, \N{}\} \\
