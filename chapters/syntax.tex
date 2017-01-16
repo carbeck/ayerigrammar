@@ -896,8 +896,8 @@ information content after them, especially when it refers to a different head
 than all the things inside the relative clause. The following example 
 (\ref{ex:nounmodord}) illustrates the unmarked order of modifiers.
 
-\ex\label{ex:nounmodord}
-\begingl
+\pex\label{ex:nounmodord}
+\a\begingl
 	\gla diranang caban nā si ang mica ya Kārvisam //
 	\glb diranang caban nā si ang mit=ya.Ø ya Kārvisam //
 	\glc uncle-\Aarg{} favorite \Fsg{}.\Gen{} \Rel{} \AgtT{} 
@@ -906,7 +906,7 @@ than all the things inside the relative clause. The following example
 \endgl
 \medskip
 
-\begin{multicols}{2}
+% \begin{multicols}{2}
 % \begin{forest} shorter edges, narrower nodes,
 % [{\anno[\pass{\Sbj}]{NP}}
 % 	[\anno{\xbar{N}}
@@ -936,7 +936,7 @@ than all the things inside the relative clause. The following example
 % ]
 % \end{forest}
 
-\begin{forest} shorter edges, narrower nodes,
+\a\begin{forest} shorter edges, narrower nodes,
 [{\anno[\pass{\Sbj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
@@ -963,7 +963,7 @@ than all the things inside the relative clause. The following example
 ]
 \end{forest}
 
-\begin{avm}
+\a\begin{avm}
 \[
 \Sbj	& \[
 	\Pred	& `uncle' \\
@@ -972,12 +972,12 @@ than all the things inside the relative clause. The following example
 	\Adjc	& \{
 			\[
 				\Pred	& `favorite' \\
-			\], \\
+			\], %\\
 			\[
 				\Pers	& \First \\
 				\Num	& \Sg \\
 				\Case	& \Gen \\
-			\], \\
+			\], %\\
 			\[
 				\Pred	& `lives in ...' \\
 			\] \\
@@ -985,7 +985,7 @@ than all the things inside the relative clause. The following example
 	\] \\
 \]
 \end{avm}
-\end{multicols}
+% \end{multicols}
 \xe
 
 As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers 
@@ -1228,10 +1228,10 @@ D
 	\ups{\Pred} & = & `pro' \\
 	\ups{\Pers} & = & 3 \\
 	\ups{\Def} & = & $+$ \\
-	\quad\downs{\Index{} \Pers} & = & 3 \\
-	\quad\downs{\Index{} \Num} & = & \{\Sg{}, \Pl\} \\
-	\quad\downs{\Index{} \Gend} & = & \{\M{}, \F{}, \N{}\} \\
-	\quad\downs{\Index{} \Anim} & = & $\pm$ \\
+	\ups{\Index{} \Pers} & = & 3 \\
+	\ups{\Index{} \Num} & = & \{\Sg{}, \Pl\} \\
+	\ups{\Index{} \Gend} & = & \{\M{}, \F{}, \N{}\} \\
+	\ups{\Index{} \Anim} & = & $\pm$ \\
 \end{tabular}
 \\
 
@@ -1471,11 +1471,14 @@ would both additionally have to have a \textsc{compar} feature (compare
 \cite[Feature Table]{pargram}) taking the values \Comp{} and \Supl{}.\footnote{%
 In this context, \Comp{} is short for `comparative', not `complement'!} Both
 hypotheses should be easily comprehensible, since clitics usually are 
-grammaticalized as inflection. This makes sense, especially since the 
-suffixes---even though they are still existing as separate lexical
-items, for which reason I am glossing them as clitics rather than
-as inflection---mainly serve a functional purpose here. The prototype of a 
-table of morpholexic definitions for \xhead{A} accordingly looks like this:
+grammaticalized as inflection. That such a grammaticalization process is in
+progress here is possible, in that the comparison suffixes---even though they
+still exist as separate lexical items, for which reason I am glossing them as
+clitics rather than as inflection---mainly serve a functional purpose here.
+That is, they may be interpreted as being in the process of losing their 
+\Pred{} value in favor of becoming integrated into the language's grammar as
+functional morphemes. The prototype of a table of morpholexic definitions for 
+\xhead{A} accordingly looks like this:
 
 \needspace{3\baselineskip}
 \ex \begin{tabu}[t] {\usetabu{morphlex}}
