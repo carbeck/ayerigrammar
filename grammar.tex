@@ -242,7 +242,13 @@
 
 % Ability to include graphics and dealing with footnotes in descriptions
 \usepackage{graphicx}
-\usepackage[font={small,sf},labelfont={small,sf},format=plain]{caption}
+\usepackage[
+	font={small,sf},
+	labelfont={small,sf},
+	format=plain,
+	skip=.25\baselineskip
+]{caption}
+
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \setlength{\columnsep}{2\baselineskip}
