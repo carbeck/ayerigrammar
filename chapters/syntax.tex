@@ -183,7 +183,8 @@ Noun phrases (NPs), and determiner phrases (DPs) as their functional
 counterpart, fulfill the functions of subject (\Sbj{}), object (\Obj{}), 
 secondary object (\SObj{}), as well as various oblique constituents (\OblqT;
 see (\ref{ex:dpnpcasemap}) below), and they can also form adjuncts (\Adjc{}).
-DPs and NPs can also constitute topics (\Top{}). Which DP or NP receives which function is selected by the a-structure of the verb---this also has 
+DPs and NPs can also constitute topics (\Top{}). Which DP or NP receives which 
+function is selected by the a-structure of the verb---this also has 
 repercussions on case- and topic marking.
 
 Generally, DPs and NPs can be described with the phrase-structure formulas 
@@ -487,6 +488,7 @@ NP, DP, CP), they are indicated generalized as `XP' in the diagrams.
 \begin{minipage}[t]{.5\linewidth}%
 \tl\quad Proper nouns:\\
 
+% FIXME: Not sure if this is OK
 \quad\begin{forest} shorter edges,
 [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
 	[\anno{\xbar{D}}
@@ -898,10 +900,10 @@ than all the things inside the relative clause. The following example
 
 \pex\label{ex:nounmodord}
 \a\begingl
-	\gla diranang caban nā si ang mica ya Kārvisam //
-	\glb diranang caban nā si ang mit=ya.Ø ya Kārvisam //
+	\gla diranang caban nā si ang mica {ya Kārvisam} //
+	\glb diranang caban nā si ang mit=ya.Ø ya=Kārvisam //
 	\glc uncle-\Aarg{} favorite \Fsg{}.\Gen{} \Rel{} \AgtT{} 
-		live=\TsgM{}.\Top{} \Loc{} Kārvisam //
+		live=\TsgM{}.\Top{} \Loc{}=Kārvisam //
 	\glft `my favorite uncle who lives in Kārvisam' //
 \endgl
 \medskip
@@ -1012,7 +1014,8 @@ it commands, which is illustrated in (\ref{ex:det+comn}). If a proper noun is
 involved, however, there need to be two \xhead{D} slots, one for the case
 marker, and another for the demonstrative prefix, which (\ref{ex:det+propn})
 gives an example of: \xbar{D} is simply doubled to accommodate for another
-\xhead{D}. In both cases, the determiner prefix is unstressed and combines 
+\xhead{D}. % FIXME: If this is possible!?
+In both cases, the determiner prefix is unstressed and combines 
 phonetically with the NP modifier, as shown in (\ref{ex:det+comn}). If there is
 no coalescence of vowels, as in (\ref{ex:det+propn}), the prefix remains
 unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
@@ -1037,16 +1040,16 @@ unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
 
 \pex~\label{ex:det+propn}
 \a\begingl
-	\gla ang Diyan //
-	\glb ang Diyan //
-	\glc \Aarg{} Diyan //
+	\gla {ang Diyan} //
+	\glb ang=Diyan //
+	\glc \Aarg{}=Diyan //
 	\glft `Diyan' //
 \endgl
 
 \a\label{ex:case+det+propn}\begingl
-	\gla ang ada-Diyan //
-	\glb ang ada=Diyan //
-	\glc \Aarg{} that=Diyan //
+	\gla {ang ada-Diyan} //
+	\glb ang=ada=Diyan //
+	\glc \Aarg{}=that=Diyan //
 	\glft `that Diyan' //
 \endgl
 
@@ -1496,11 +1499,13 @@ functional morphemes. The prototype of a table of morpholexic definitions for
 %
 % \section{Inflectional, verb, and complementizer phrases}
 %
-% * Ayeri's unmarked word order is essentially VSO:
+% * Ayeri's unmarked word order is essentially VSO, maaaaaaaybe like this???
 %
-%      IP
+%   IP
+%     \
+%      I'
 %     /  \
-%   (DP)  I'
+%    D°   I'
 %        /  \
 %       I°   S
 %           / \
