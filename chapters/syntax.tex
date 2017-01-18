@@ -490,22 +490,23 @@ NP, DP, CP), they are indicated generalized as `XP' in the diagrams.
 
 % FIXME: Not sure if this is OK
 \quad\begin{forest} shorter edges,
-[{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
-	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}]
-		[{\anno[\updown]{NP}}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}]
-				[{$\left(\anno[{%
-					%	\pass{\XCompl}\\
-					%	\logor{}
-						\pass{\Adjc}%
-					}]{XP}\right)$
-				}]
-			]
-		]
-	]
-]
+% [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
+% 	[\anno{\xbar{D}}
+% 		[\anno{\xhead{D}}]
+% 		[{\anno[\updown]{NP}}
+% 			[\anno{\xbar{N}}
+% 				[\anno{\xhead{N}}]
+% 				[{$\left(\anno[{%
+% 					%	\pass{\XCompl}\\
+% 					%	\logor{}
+% 						\pass{\Adjc}%
+% 					}]{XP}\right)$
+% 				}]
+% 			]
+% 		]
+% 	]
+% ]
+[...]
 \end{forest}
 \end{minipage}
 \xe
@@ -1013,8 +1014,9 @@ demonstrative prefixes, for instance) simply cliticizes to the next \xhead{N}
 it commands, which is illustrated in (\ref{ex:det+comn}). If a proper noun is
 involved, however, there need to be two \xhead{D} slots, one for the case
 marker, and another for the demonstrative prefix, which (\ref{ex:det+propn})
-gives an example of: \xbar{D} is simply doubled to accommodate for another
-\xhead{D}. % FIXME: If this is possible!?
+gives an example of.
+%: \xbar{D} is simply doubled to accommodate for another \xhead{D}.
+% FIXME: If this is possible!?
 In both cases, the determiner prefix is unstressed and combines 
 phonetically with the NP modifier, as shown in (\ref{ex:det+comn}). If there is
 no coalescence of vowels, as in (\ref{ex:det+propn}), the prefix remains
@@ -1063,12 +1065,12 @@ unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
 C-structure for (\ref{ex:det+comn}):\medskip
 
 \quad {\begin{forest} shorter edges, baseline,
-[DP
-	[\xbar{D}
+[NP
+	[\xbar{N}
 		[\xhead{D}
 			[ada-]
 		]
-		[NP
+		[\xbar{N}
 			[\xhead{N}
 				[ayonang]
 			]
@@ -1083,23 +1085,24 @@ C-structure for (\ref{ex:det+comn}):\medskip
 C-structure for (\ref{ex:det+propn}):\medskip
 
 \quad {\begin{forest} shorter edges, baseline,
-[DP
-	[\xbar{D}
-		[\xhead{D}
-			[ang]
-		]
-		[\xbar{D}
-			[\xhead{D}
-				[ada-]
-			]
-			[NP
-				[\xhead{N}
-					[Diyan]
-				]
-			]
-		]
-	]
-]
+% [NP
+% 	[\xbar{N}
+% 		[\xhead{D}
+% 			[ang]
+% 		]
+% 		[\xbar{N}
+% 			[\xhead{D}
+% 				[ada-]
+% 			]
+% 			[\xbar{N}
+% 				[\xhead{N}
+% 					[Diyan]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+[...]
 \end{forest}
 }
 \end{minipage}
@@ -1122,7 +1125,7 @@ illustrate pronominalized adjectives and possessive pronouns.
 \endgl%
 }%\medskip
 %
-\begin{tabular}[t]{@{} l @{\quad=\quad} l}
+\begin{tabular}[t]{@{} l @{\quad→\quad} l}
 \begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
@@ -1141,18 +1144,19 @@ illustrate pronominalized adjectives and possessive pronouns.
 &
 
 \begin{forest} shorter edges, narrower nodes,
-[DP
-	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}
-			[da-]
-		]
-		[{\anno[\pass{\Adj}]{AP}}
-			[\anno{\xhead{A}}
-				[kivo]
-			]
-		]
-	]
-]
+% [AP
+% 	[\anno{\xbar{A}}
+% 		[\anno{\xhead{D}}
+% 			[da-]
+% 		]
+% 		[\anno{\xbar{A}}
+% 			[\anno{\xhead{A}}
+% 				[kivo]
+% 			]
+% 		]
+% 	]
+% ]
+[...]
 \end{forest}
 \end{tabular}
 
@@ -1165,7 +1169,7 @@ illustrate pronominalized adjectives and possessive pronouns.
 	\glft `yours' //
 \endgl}%\medskip
 %
-\begin{tabular}[t]{@{} l @{\quad=\quad} l}
+\begin{tabular}[t]{@{} l @{\quad→\quad} l}
 \begin{forest} shorter edges, narrower nodes,
 [DP
 	[\anno{\xbar{D}}
@@ -1184,18 +1188,19 @@ illustrate pronominalized adjectives and possessive pronouns.
 &
 
 \begin{forest} shorter edges, narrower nodes,
-[DP
-	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}
-			[da-]
-		]
-		[{\anno[\pass{\Adj}]{DP}}
-			[\anno{\xhead{D}}
-				[vana]
-			]
-		]
-	]
-]
+% [DP
+% 	[\anno{\xbar{D}}
+% 		[\anno{\xhead{D}}
+% 			[da-]
+% 		]
+% 		[{\anno{\xbar{D}}}
+% 			[\anno{\xhead{D}}
+% 				[vana]
+% 			]
+% 		]
+% 	]
+% ]
+[...]
 \end{forest}
 \end{tabular}
 \xe
