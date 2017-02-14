@@ -1,0 +1,930 @@
+\documentclass[12pt,paper=a4]{scrartcl}
+
+% Extended formatting of lists
+\usepackage{enumitem}
+\newlist{glossdefs}{itemize}{1}
+\setlist[glossdefs]{nosep, leftmargin=3em, labelwidth=2.5em, align=left}
+
+% Make multiple columns available in single-column document
+\usepackage{multicol}
+
+% Load font stuff for XeTeX
+\usepackage{xltxtra}
+\usepackage{fontspec}
+
+% Fonts
+\setmainfont{FreeSerif}[
+ Ligatures=TeX,
+]
+
+% Clickable links in footnotes, TOC, etc.
+\usepackage[
+    xetex,
+    hidelinks,
+]{hyperref}
+
+% Formatting of table of glossing abbreviations from Leipzig package manual
+\usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
+\usepackage{glossary-inline}%
+
+\newglossarystyle{mysuper}{%
+ \glossarystyle{super}% based on super
+ \renewenvironment{theglossary}{%
+ \begin{glossdefs}%
+ }{%
+ \end{glossdefs}%
+ }%
+ \renewcommand*{\glossaryheader}{}%
+ \renewcommand*{\glsgroupheading}[1]{}%
+ \renewcommand*{\glossaryentryfield}[5]{%
+ \item[\glsentryitem{##1}\glstarget{##1}{##2}]
+ \makefirstuc{##3}\glspostdescription{}
+ }%
+ \renewcommand*{\glsgroupskip}{}%
+}%
+
+% Formatting of glosses
+\usepackage{expex}
+\usepackage{leipzig}
+
+\newleipzig{AgtT}{at}{agent topic}
+\newleipzig{PatT}{pt}{patient topic}
+\newleipzig{DatT}{datt}{dative topic}
+\newleipzig{GenT}{gent}{genitive topic}
+\newleipzig{LocT}{loct}{locative topic}
+\newleipzig{InsT}{inst}{instrumental topic}
+\newleipzig{CauT}{caut}{causative topic}
+\newleipzig{An}{an}{animate}
+\newleipzig{Inan}{inan}{inanimate}
+\newleipzig{Hab}{hab}{habitative}
+\newleipzig{Ayr}{ayr}{Ayeri}
+\newleipzig{NPst}{npst}{near past}
+\newleipzig{RPst}{rpst}{remote past}
+\newleipzig{NFut}{nfut}{near future}
+\newleipzig{RFut}{rfut}{remote future}
+\newleipzig{Agtz}{agtz}{agentizer}
+\newleipzig{Dim}{dim}{diminutive}
+\newleipzig{Comp}{comp}{comparative}
+\newleipzig{Supl}{supl}{superlative}
+
+\newleipzig{Dyn}{dyn}{dynamic}
+\newleipzig{Hort}{hort}{hortative}
+\newleipzig{Iter}{iter}{iterative}
+\newleipzig{Aff}{aff}{affirmative}
+\newleipzig{Int}{int}{intensifier}
+
+\newleipzig{Adj}{adj}{adjective}
+\newleipzig{Adp}{adp}{adposition}
+\newleipzig{Lnk}{lnk}{linker}
+\newleipzig{Nn}{nn}{noun}
+\newleipzig{Post}{post}{postposition}
+\newleipzig{Prep}{prep}{preposition}
+\newleipzig{Sat}{sat}{satellite}
+\newleipzig{Vb}{vb}{verb}
+
+\newleipzig{AF}{af}{argument function}
+\newleipzig{DF}{df}{discourse function}
+\newleipzig{Adjc}{adj}{adjunct}
+\newleipzig{Anim}{anim}{animacy}
+\newleipzig{Case}{case}{case}
+\newleipzig{Compar}{compar}{comparison}
+\newleipzig{Compl}{comp}{complement}
+\newleipzig{Fin}{fin}{finiteness}
+\newleipzig{Gend}{gend}{gender}
+\newleipzig{Index}{index}{index}
+\newleipzig{Num}{num}{number}
+\newleipzig{Obj}{obj}{object}
+\newleipzig{SObj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
+\newleipzig{Oblique}{obl}{oblique}
+\newleipzig{Pers}{pers}{person}
+\newleipzig{Pred}{pred}{predicator}
+\newleipzig{Spec}{spec}{specificity}
+\newleipzig{Sbj}{subj}{subject}
+\newleipzig{Tense}{tense}{tense}
+\newleipzig{XCompl}{xcomp}{open complement}
+
+\makeglossaries
+
+\newcommand{\AargI}{{\Aarg}.{\Inan}}
+\newcommand{\PargI}{{\Parg}.{\Inan}}
+\newcommand{\AgtTI}{{\AgtT}.{\Inan}}
+\newcommand{\PatTI}{{\PatT}.{\Inan}}
+
+\newcommand{\TsgM}{{\Tsg}.{\M}}
+\newcommand{\TsgF}{{\Tsg}.{\F}}
+\newcommand{\TsgN}{{\Tsg}.{\N}}
+\newcommand{\TsgI}{{\Tsg}.{\Inan}}
+\newcommand{\TplM}{{\Tpl}.{\M}}
+\newcommand{\TplF}{{\Tpl}.{\F}}
+\newcommand{\TplN}{{\Tpl}.{\N}}
+\newcommand{\TplI}{{\Tpl}.{\Inan}}
+
+\newcommand{\Oblq}[1]{\Oblique\fakesubscript{\normalfont\itshape #1}}
+\newcommand{\OblqT}{\Oblique\fakesubscript{\normalfont\itshape θ}}
+
+% Ability to draw AVMs
+% (Requires avm.sty from http://nlp.stanford.edu/manning/tex/)
+\usepackage{avm}
+\avmfont{\scshape}
+\avmvalfont{\normalfont}
+
+\begin{document}
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās yam Pila. //
+\glb ang il-ya Ajān koya-as yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} \\Dat{}{} Pila //
+\glft `Ajān gives Pila a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa ilya Ajān ada-koya yam Pila.}\\
+	/sa ˈilja | aˈdʒaːn | adaˈkoja | jam ˈpila/ //
+
+\gla Sa ilya Ajān ada-koya yam Pila. //
+\glb sa il-ya Ajān ada-koya yam Pila //
+\glc \PatT{} give-\TsgM{} Ajān that-book \Dat{} Pila //
+\glft `That book, Ajān gives (it) to Pila.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās yam ada-Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs | jam‿adaˈpila/ //
+
+\gla Ang ilya Ajān koyās yam ada-Pila. //
+\glb ang il-ya Ajān koya-as yam ada-Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} \Dat{} that-Pila //
+\glft `Ajān gives that Pila a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān sa `Netuye Karamazov' yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | sa neˈtuje karaˈmazov | jam ˈpila/ //
+
+\gla Ang ilya Ajān sa `Netuye Karamazov' yam Pila. //
+\glb ang il-ya Ajān sa `Netu-ye Karamazov' yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān \Parg{} `Brother-\Pl{} Karamazov' \Dat{} Pila //
+\glft `Ajān gives Pila the “Brothers Karamazov”.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās yam Pila nay Latun.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs | jam ˈpila naɪ ˈlatun/ //
+
+\gla Ang ilya Ajān koyās yam Pila nay Latun. //
+\glb ang il-ya Ajān koya-as yam Pila nay Latun //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} \Dat{} Pila and Latun //
+\glft `Ajān gives Pila and Latun a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās yam Pila nay netuyam yena.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs | jam ˈpila naɪ neˈtujam ˈjena/ //
+
+\gla Ang ilya Ajān koyās yam Pila nay netuyam yena. //
+\glb ang il-ya Ajān koya-as yam Pila nay netu-yam yena //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} \Dat{} Pila and brother-\Dat{} her.\Gen{} //
+\glft `Ajān gives Pila and her brother a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilyan Ajān nay Diyan koyās yam Pila.}\\
+	/aŋ‿ˈiljan | aˈdʒaːn naɪ ˈdijan | koˈjaːs | jam ˈpila/ //
+
+\gla Ang ilyan Ajān nay Diyan koyās yam Pila. //
+\glb ang il-yan Ajān nay Diyan koya-as yam Pila //
+\glc \AgtT{} give-\TplM{} Ajān and Diyan book-\Parg{} \Dat{} Pila //
+\glft `Ajān and Diyan give Pila a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya edāyon nay ledan koyās yam Pila.}\\
+	/aŋ‿ˈilja | eˈdaːjon naɪ ˈledan | koˈjaːs | jam ˈpila/ //
+
+\gla Ang ilya edāyon nay ledan koyās yam Pila. //
+\glb ang il-ya eda-ayon nay ledan koya-as yam Pila //
+\glc \AgtT{} give-\TsgM{} this-man and friend book-\Parg{} \Dat{} Pila //
+\glft `This man and friend gives Pila a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilyan edāyon nay eda-ledan koyās yam Pila.}\\
+	/aŋ‿ˈiljan | eˈdaːjon naɪ edaˈledan | koˈjaːs | jam ˈpila/ //
+
+\gla Ang ilyan edāyon nay eda-ledan koyās yam Pila. //
+\glb ang il-yan eda-ayon nay eda-ledan koya-as yam Pila //
+\glc \AgtT{} give-\TplM{} this-man and this-friend book-\Parg{} \Dat{} Pila //
+\glft `This man and this friend give Pila a book.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās nay migrayas yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs naɪ miˈgrajas | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās nay migrayas yam Pila. //
+\glb ang il-ya Ajān koya-as nay migray-as yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} and flower-\Parg{} \Dat{} Pila //
+\glft `Ajān gives Pila a book and a pen.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās nay dadangley yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs naɪ dadaŋˈleɪ | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās nay dadangley yam Pila. //
+\glb ang il-ya Ajān koya-as nay dadang-ley yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{} and pen-\PargI{} \Dat{} Pila //
+\glft `Ajān gives Pila a book and a pen.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās-ikan yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˌjaːsˈikan | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās-ikan yam Pila. //
+\glb ang il-ya Ajān koya-as-ikan yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{}-many \Dat{} Pila //
+\glft `Ajān gives Pila many books.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyajas nay dadangley-ikan merambay yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjadʒas naɪ dadaŋˌleɪ‿ˈikan meramˈbaɪ | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyajas nay dadangley-ikan merambay yam Pila. //
+\glb ang il-ya Ajān koya-ye-as nay dadang-ley-ikan merambay yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Pl{}-\Parg{} and pen-\PargI{}-many useful \Dat{} Pila //
+\glft `Ajān gives Pila many useful books and pens.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyajas, nay(nay) dadangley-ikan merambay yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjadʒas | naɪ(ˈnaɪ) dadaŋˌleɪ‿ˈikan meramˈbaɪ | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyajas, nay(nay) dadangley-ikan merambay yam Pila. //
+\glb ang il-ya Ajān koya-ye-as nay(nay) dadang-ley-ikan merambay yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Pl{}-\Parg{} and(.also) pen-\PargI{}-many useful \Dat{} Pila //
+\glft `Ajān gives Pila books, and (also) many useful pens.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās-ikan nay dadangley merambay yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs‿ˈikan naɪ dadaŋˌleɪ meramˈbaɪ | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās-ikan nay dadangley merambay yam Pila. //
+\glb ang il-ya Ajān koya-as-ikan nay dadang-ley merambay yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{}-many and pen-\PargI{} useful \Dat{} Pila //
+\glft `Ajān gives Pila many books and a useful pen.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyās-ikan nay dadangyeley merambay yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjaːs‿ˈikan naɪ dadaŋˌjeleɪ meramˈbaɪ | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyās-ikan nay dadangyeley merambay yam Pila. //
+\glb ang il-ya Ajān koya-as-ikan nay dadang-ye-ley merambay yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Parg{}-many and pen-\Pl{}-\PargI{} useful \Dat{} Pila //
+\glft `Ajān gives Pila many books and useful pens.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang ilya Ajān koyajas nay dadangyeley merambay-ikan yam Pila.}\\
+	/aŋ‿ˈilja | aˈdʒaːn | koˈjadʒas naɪ daˌdaŋjeˈleɪ meramˌbaɪ‿ˈikan | jam ˈpila/ //
+
+\gla Ang ilya Ajān koyajas nay dadangyeley merambay-ikan yam Pila. //
+\glb ang il-ya Ajān koya-ye-as nay dadang-ye-ley merambay-ikan yam Pila //
+\glc \AgtT{} give-\TsgM{} Ajān book-\Pl{}-\Parg{} and pen-\Pl{}-\PargI{} useful-very \Dat{} Pila //
+\glft `Ajān gives Pila very useful books and pens.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Merambay sikan koyajang nay dadangyeley? — Da-ikan. (*Ikan.)}\\
+	/meramˈbaɪ ˈsikan | kojaˈdʒaŋ naɪ daˌdaŋjeˈleɪ/ — /daˈikan/ //
+
+\gla Merambay sikan koyajang nay dadangyeley? — Da-ikan. //
+\glb merambay sikan koya-ye-ang nay dadang-ye-ley {} da-ikan //
+\glc useful how.much book-\Pl{}-\Aarg{} and pen-\Pl{}-P.INAN {} so-very //
+\glft `How useful are the books and pens?' — `Very.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang misya ku-depangas.}\\
+	/aŋ ˈmisja | kudeˈpaŋas/ //
+
+\gla Ang misya ku-depangas. //
+\glb ang mis-ya ku-depang-as //
+\glc \AgtT{} act-\TsgM{} like-fool-\Parg{} //
+\glft `He acts like a fool.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa misyāng ku-depang.}\\
+	/sa misˈjaːŋ | kudeˈpaŋ/ //
+
+\gla Sa misya ku-depang. //
+\glb sa mis-ya ku-depang //
+\glc \PatT{} act-\TsgM{} like-fool //
+\glft `Like a fool he acts.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang misya ku-da-depangas.}\\
+	/aŋ ˈmisja | kudadeˈpaŋas/ //
+
+\gla Ang misya ku-da-depangas. //
+\glb ang mis-ya ku-da-depang-as //
+\glc \AgtT{} act-\TsgM{}.\Aarg{} like-such-fool-\Parg{} //
+\glft `He acts like such a fool.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang misya nay lentaya ku-depangas.}\\
+	/aŋ ˈmisja naɪ lenˈtaja | kudeˈpaŋas/ //
+
+\gla Ang misya nay lentaya ku-depangas. //
+\glb ang mis-ya nay lenta-ya ku-depang-as //
+\glc \AgtT{} act-\TsgM{} and sound-\TsgM{} like-fool-\Parg{} //
+\glft `He acts and sounds like a fool.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa misyāng nay lentayāng ku-depang.}\\
+	/sa misˈjaːng naɪ lentaˈjaːŋ | kudeˈpaŋ/ //
+
+\gla Sa misyāng nay lentayāng ku-depangas. //
+\glb sa mis-yāng nay lenta-yāng ku-depang-as //
+\glc \PatT{} act-\TsgM{}.\Aarg{} and sound-\TsgM{}.\Aarg{} like-fool-\Parg{} //
+\glft `Like a fool he acts and sounds.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang misya ku-depangas nay karayās.}\\
+	/aŋ ˈmisja | kudeˈpaŋas naɪ karaˈjaːs/ //
+
+\gla Ang misya ku-depangas nay karayās //
+\glb ang mis-ya ku-depang-as nay karaya-as //
+\glc \AgtT{} act-\TsgM{}.\Aarg{} like-fool-\Parg{} and coward-\Parg{} //
+\glft `He acts like a fool and coward.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang misya ku-da-depangas nay karayās.}\\
+	/aŋ ˈmisja | kudadeˈpaŋas naɪ karaˈjaːs/ //
+
+\gla Ang  misyāng ku-da-depangas nay karayās //
+\glb ang mis-yāng ku-da-depang-as nay karaya-as //
+\glc \AgtT{} act-\TsgM{}.\Aarg{} like-such-fool-\Parg{} and coward-\Parg{} //
+\glft `He acts like such a fool and coward.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang silvye ku-māvās yena.}\\
+	/aŋ ˈsilvje | kuˌmaːˈvaːs ˈjena/ //
+
+\gla Ang silvye ku-māvās yena. //
+\glb ang silv-ye ku-māva-as yena //
+\glc \AgtT{} look-\TsgF{} like-mother-\Parg{} \TsgF{}.\Gen{} //
+\glft `She looks like her mother.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang silvye Pada ku-māvās yena.}\\
+	/aŋ ˈsilvje | ˈpada | kuˌmaːˈvaːs ˈjena/ //
+
+\gla Ang silvye Pada ku-māvās yena. //
+\glb ang silv-ye Pada ku-māva-as yena //
+\glc \AgtT{} look-\TsgF{} Pada like-mother-\Parg{} \TsgF{}.\Gen{} //
+\glft `Pada looks like her mother.' //
+\endgl\xe
+
+\pex
+\textit{Ang haruya Pulan sa Linko.} \\
+	/aŋ haˈruja | ˈpulan | sa ˈliŋko/ \\
+
+\a\begingl
+\gla Ang haruya Pulan sa Linko. //
+\glb ang haru-ya Pulan sa Linko //
+\glc \AgtT{} beat-\TsgM{} Pulan \Parg{} Linko //
+\glft `Pulan beats Linko.' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Ang haruya ang Pulan sa Linko. //
+\glb ang haru-ya ang Pulan sa Linko //
+\glc \AgtT{} beat-\TsgM{} \Aarg{} Pulan \Parg{} Linko //
+\endgl
+\xe
+
+\ex\begingl
+\glpreamble \textit{Ang haruya Pulan yās.}\\
+	/aŋ haˈruja | ˈpulan | yās/ //
+
+\gla Ang haru-ya Pulan yās. //
+\glb ang haru-ya Pulan yās //
+\glc \AgtT{} beat-\TsgM{} Pulan \TsgM{}.\Parg{} //
+\glft `Pulan beats him.' //
+\endgl\xe
+
+\pex
+\textit{Ang haruya sa Linko.} \\
+	/aŋ haˈruja | sa ˈliŋko/ \\
+
+\a\begingl
+\gla Ang haruya sa Linko. //
+\glb ang haru-ya sa Linko //
+\glc \AgtT{} beat-\TsgM{} \Parg{} Linko //
+\glft `He beats Linko.' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Ang haruya yāng sa Linko. //
+\glb ang haru-ya yāng sa Linko //
+\glc \AgtT{} beat-\TsgM{} \TsgM{}.\Aarg{} \Parg{} Linko //
+\endgl
+\xe
+
+\ex\begingl
+\glpreamble \textit{Ang haruya yās.}\\
+	/aŋ haˈruja | ˈjās/ //
+
+\gla Ang haruya yās. //
+\glb ang haru-ya yās //
+\glc \AgtT{} beat-\TsgM{} \TsgM{}.\Parg{} //
+\glft `He beats him.' //
+\endgl\xe
+
+\pex
+\textit{Sa haruya ang Pulan Linko.} \\
+	/sa haˈruja | aŋ ˈpulan | ˈliŋko/ \\
+
+\a\begingl
+\gla Sa haruya ang Pulan Linko. //
+\glb sa haru-ya ang Pulan Linko //
+\glc \PatT{} beat-\TsgM{} \Aarg{} Pulan Linko //
+\glft `Linko, Pulan beats (him).' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Sa haruya ang Pulan sa Linko. //
+\glb sa haru-ya ang Pulan sa Linko //
+\glc \PatT{} beat-\TsgM{} \Aarg{} Pulan \Parg{} Linko //
+\endgl\xe
+
+\pex
+\textit{Sa haruya ang Pulan Sipra.} \\
+	/sa haˈruja | aŋ ˈpulan | ˈsipra/ \\
+
+\a\begingl
+\gla Sa haruya ang Pulan Sipra. //
+\glb sa haru-ya ang Pulan Sipra //
+\glc \PatT{} beat-\TsgM{} \Aarg{} Pulan Sipra //
+\glft `Sipra, Pulan beats (her).' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Sa haruye ang Pulan Sipra. //
+\glb sa haru-ya ang Pulan Sipra //
+\glc \PatT{} beat-\TsgF{} \Aarg{} Pulan Sipra //
+\endgl\xe
+
+\pex
+\textit{Sa haruya para ang Pulan ya.} \\
+	/sa haˈruja | ˈpara | aŋ ˈpulan | ja/ \\
+
+\a\begingl
+\gla Sa haruya para ang Pulan ya. //
+\glb sa haru-ya para ang Pulan ya //
+\glc \PatT{} beat-\TsgM{} quickly \Aarg{} Pulan \TsgM{} //
+\glft `It is him Pulan quickly beats.' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Sa haruya para ang Pulan yās. //
+\glb sa haru-ya para ang Pulan yās //
+\glc \PatT{} beat-\TsgM{} quickly \Aarg{} Pulan \TsgM{}.\Parg{} //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa haruya para ya ang Pulan.}\\
+	/sa haˈruja | ˈpara ja | aŋ ˈpulan/ //
+
+\gla Sa haruya para ya ang Pulan. //
+\glb sa haru-ya para ya ang Pulan //
+\glc \PatT{} beat-\TsgM{} quickly \TsgM{} \Aarg{} Pulan //
+\glft `It is him Pulan quickly beats.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa haruyāng ya.}\\
+	/sa haruˈjaːŋ ja/ //
+
+\gla Sa haruyāng ya. //
+\glb sa haru-yāng ya //
+\glc \PatT{} beat-\TsgM{}.\Aarg{} \TsgM{} //
+\glft `It is him that he beats.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Haruyās.}\\
+	/haruˈjaːs/ //
+
+\gla Haruyās. //
+\glb haru-yās //
+\glc beat-\TsgM{}.\Parg{} //
+\glft `He is (being) beaten.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang haruya Pulan sa Linko lundari.}\\
+	/aŋ haˈruja | ˈpulan | sa ˈliŋko | lunˈdari/ //
+
+\gla Ang haruya Pulan sa Linko lundari. //
+\glb ang haru-ya Pulan sa Linko lunda-ri //
+\glc \AgtT{} beat-\TsgM{} Pulan \Parg{} Linko shoe-\Ins{} //
+\glft `Pulan beats Linko with a shoe.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ri haruya ang Pulan sa Linko lunda.}\\
+	/ri haˈruja | aŋ ˈpulan | sa ˈliŋko | ˈlunda/ //
+
+\gla Ri haruya ang Pulan sa Linko lundari. //
+\glb ri haru-ya ang Pulan sa Linko lunda-ri //
+\glc \InsT{} beat-\TsgM{} \Aarg{} Pulan \Parg{} Linko shoe-\Ins{} //
+\glft `It is with a/the shoe that Pulan beats Linko.' //
+\endgl\xe
+
+
+\ex\begingl
+\glpreamble \textit{Ri haruya para ang Pulan sa Linko adanya.}\\
+	/ri haˈruja | para | aŋ ˈpulan | sa ˈliŋko | aˈdanja/ //
+
+\gla Ri haruya para ang Pulan sa Linko adanya. //
+\glb ri haru-ya para ang Pulan sa Linko adanya //
+\glc \InsT{} beat-\TsgM{} quickly \Aarg{} Pulan \Parg{} Linko that //
+\glft `It is with that that Pulan quickly beats Linko.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ri haruya para adanya ang Pulan sa Linko.}\\
+	/ri haˈruja | para | aˈdanja | aŋ ˈpulan | sa ˈliŋko | ˈara/ //
+
+\gla Ri haruya para adanya ang Pulan sa Linko. //
+\glb ri haru-ya para adanya ang Pulan sa Linko //
+\glc \InsT{} beat-\TsgM{} quickly that \Aarg{} Pulan \Parg{} Linko //
+\glft `It is with that that Pulan quickly beats Linko.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \judge?\textit{Ang sarāyn ay nay va kodanya.} \\
+	\textit{Ang sarāyn kodanya, yang nay vāng.} \\
+	/ja saraˈnaŋ | koˈdanja || ˈjaŋ naɪ ˈvaːŋ/ //
+
+\gla Ang sarāyn kodanya,  yang nay vāng. //
+\glb Ang sara-ayn kodan-ya yang nay vāng //
+\glc \AgtT{} go-\Fpl{} lake-LOC \Second{}.\Aarg{} and \Fsg{}.\Aarg{} //
+\glft `You and I are going to the lake.' / `We are going to the lake, you and I.' //
+\endgl
+
+\ex\begingl
+\glpreamble \judge?\textit{Ya sarāyn yang nay vāng kodan.} \\
+	\textit{Ya saranang kodan, yang nay vāng.} \\
+	/ja saraˈnaŋ | koˈdanja || ˈjaŋ naɪ ˈvaːŋ/ //
+
+\gla Ya saranang kodan, yang nay vāng. //
+\glb ya sara-nang kodan yang nay vāng //
+\glc LOCTOP go-\Fpl{}.\Aarg{} lake \Second{}.\Aarg{} and \Fsg{}.\Aarg{} //
+\glft `You and I are going to the lake.' / `We are going to the lake, you and I.' //
+\endgl
+
+\ex\begingl
+\glpreamble \textit{Ang koronay sitang-nyama guratanley.}\\
+	/aŋ koroˈnaɪ siˈtaŋˌnjama | guratanˈleɪ/ //
+
+\gla Ang koronay sitang-nyama guratanley. //
+\glb ang koron-ay sitang-nyama guratan-ley //
+\glc \AgtT{} know-\Fsg{} self-even answer-\Parg{} //
+\glft `Even I know the answer.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Le koronyang sitang-nyama guratan.}\\
+	/le koronˈjaŋ siˈtaŋˌnjama | guˈratan/ //
+
+\gla Le koronyang sitang-nyama guratan. //
+\glb le koron-yang sitang-nyama guratan //
+\glc \PatT{} know-\Fsg{}.\Aarg{} self-even answer //
+\glft `The answer, even I know (it).' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang kece nay dayungisaye māva yanjas yena.}\\
+	/aŋ ˈketʃe naɪ dajuŋiˈsaje | ˈmaːva | ˈjandʒas ˈjena/ //
+
+\gla Ang kece nay dayungisaye māva yanjas yena. //
+\glb ang ket-ye nay dayungisa-ye māva yan-ye-as yena //
+\glc \AgtT{} wash-\TsgF{} and dress-\TsgF{} mother boy-\Pl{}-\Parg{} \TsgF{}.\Gen{} //
+\glft `The mother washes and dresses her boys.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang kece nay dayungisaye tas.}\\
+	/aŋ ˈketʃe naɪ dajuŋiˈsaje tas/ //
+
+\gla Ang kece nay dayungisaye tas. //
+\glb ang ket-ye nay dayungisa-ye tas //
+\glc \AgtT{} wash-\TsgF{} and dress-\TsgF{} \TplM{}.\Parg{} //
+\glft `She washes and dresses them.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa keceng nay dayungisayeng yan.}\\
+	/sa keˈtʃeŋ naɪ dajuŋisaˈjeŋ jan/ //
+
+\gla Sa keceng nay dayungisayeng yan. //
+\glb sa ket-yeng nay dayungisa-yeng yan //
+\glc \PatT{} wash-\TsgF{} and dress-\TsgF{} \TplM{} //
+\glft `Them it is whom she washes and dresses.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sa ilyāng koyaye nay dadangye yeyam.} \\
+	/sa ilˈjaːŋ | koˈjaje naɪ daˈdaŋje | jeˈjam/ //
+
+\gla Sa ilyāng koyaye nay dadangye yeyam. //
+\glb sa il-yāng koya-ye nay dadang-ye yeyam //
+\glc \PatT{} give-\TsgM{} book-\Pl{} and pen-\Pl{} \TsgF{}.\Dat{} //
+\glc {}
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}\footnotemark{}
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & – \]\end{avm}}
+	//
+\glft `Books and pens he gives her.' //
+\endgl
+
+\footnotetext{I think that due to the way Ayeri deals with verb agreement, it makes more sense for it to have nearest-conjunct agreement with regards to gender/animacy than gender resolution.}
+
+\ex\begingl
+\glpreamble \textit{Ang sobisayan Mico nay Niva sungkoranas narān.} \\
+	/aŋ sobiˈsajan | ˈmitʃo naɪ ˈniva | sʊŋkoˈranas naˈra:n/ //
+
+\gla Ang sobisayan Mico nay Niva sungkoranas narān. //
+\glb ang sobisa-yan Mico nay Niva sungkoran-as narān //
+\glc \AgtT{} study-\TplM{} Mico and Niva science-\Parg{} language //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \F{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Mico and Niva study linguistics.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Ang sobisayan Niva nay Mico sungkoranas narān.} \\
+	/aŋ sobiˈsajan | ˈniva naɪ ˈmitʃo | sʊŋkoˈranas naˈra:n/ //
+
+\gla Ang sobisayan Niva nay Mico sungkoranas narān. //
+\glb ang sobisa-yan Niva nay Mico sungkoran-as narān //
+\glc \AgtT{} study-\TplM{} Niva and Mico science-\Parg{} language //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \F{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Niva and Mico study linguistics.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Toryan ang Yan nay veneyang yana.} \\
+	/ˈtorjan | aŋ ˈjan naɪ veneˈjang ˈjana/ //
+
+\gla Toryan ang Yan nay veneyang yana. //
+\glb tor-yan ang Yan nay veney-ang yana //
+\glc sleep-\TplM{} \Aarg{} Yan and dog-\Aarg{} \TsgM{}.\Aarg{} //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Yan and his dog are sleeping.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Toryon veneyang nay badanang.} \\
+	/ˈtorjon | veneˈjang naɪ badaˈnaŋ/ //
+
+\gla Toryon veneyang nay badanang. //
+\glb tor-yon veney-ang nay badan-ang //
+\glc sleep-\TplN{} dog-\Aarg{} and father-\Aarg{} //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `The dog and father are sleeping.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Toryon veneyang nay mavāng.} \\
+	/ˈtorjon | veneˈjang naɪ maˈvaːŋ/ //
+
+\gla Toryon veneyang nay mavāng. //
+\glb tor-yon veney-ang nay mava-ang //
+\glc sleep-\TplN{} dog-\Aarg{} and mother-\Aarg{} //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \F{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `The dog and mother are sleeping.' //
+\endgl\xe
+
+\ex
+	masculine + inanimate thing
+\xe
+
+\ex
+	feminine + inanimate thing
+\xe
+
+\ex
+	inanimate thing + masculine
+\xe
+
+\ex
+	inanimate thing + feminine
+\xe
+
+\ex\begingl
+\glpreamble \textit{Ang bitojon sungkoran-narān nay payutān atasas.} \\
+	/aŋ biˈtodʒon | sʊŋˌkoranaˈraːn naɪ pajuˈtaːn | aˈtasas/ //
+
+\gla Ang bitojon sungkoran-narān nay payutān atasas. //
+\glb ang bitog-yon sungkoran-narān nay payutān atas-as //
+\glc \AgtT{} tear.apart-\TplN{} science.language and mathematics brain-\Parg{} //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & – \\
+		\\
+		\Num{} & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Linguistics and math tear the brain apart.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Eng bitogaran payutān nay sungkoran-narān atasas.} \\
+	/eŋ bitoˈgaran | pajuˈtaːn naɪ sʊŋˌkoranaˈraːn | aˈtasas/ //
+
+\gla Eng bitogaran payutān nay sungkoran-narān atasas. //
+\glb eng bitog-aran payutān nay sungkoran-narān atas-as //
+\glc \AgtT{} tear.apart-\TplI{} mathematics and science.language brain-\Parg{} //
+\glc %
+	\mbox{\scriptsize \begin{avm}\[ \Anim{} & – \]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & – \\
+		\\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & – \\
+		\\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\scriptsize \begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Math and linguistics tear the brain apart.' //
+\endgl\xe
+
+\pagebreak
+
+\ex
+	Before dealing with reflexive actions, we need to establish the status of pre-verbal stuff like ming and manga and their scope in coordination.
+\xe
+
+\ex\begingl
+\glpreamble \textit{Sitang-keca ang Yan.}\\
+	/siˈtaŋ ˈketʃa | aŋ ˈjan/ //
+
+\gla Sitang-keca ang Yan. //
+\glb sitang-ket-ya ang Yan //
+\glc self-wash-\TsgM{} \Aarg{} Yan //
+\glft `Yan washes himself.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sitang-kecan ang Yan nay netuang yana.}\\
+	/siˈtaŋ ˈketʃan | aŋ ˈjan naɪ netuˈaŋ ˈjana/ //
+
+\gla Sitang-kecan ang Yan nay netuang yana. //
+\glb sitang-ket-yan ang Yan nay netu-ang yana //
+\glc self-wash-\TplM{} \Aarg{} Yan and brother-\Aarg{} \TsgM{}.\Gen{} //
+\glft `Yan and his brother wash themselves.' //
+\endgl\xe
+
+\ex\begingl
+\glpreamble \textit{Sitang-keca nay (sitang-?)dayungisaya ang Yan.}\\
+	/siˈtaŋ ˈketʃa naɪ dajuŋiˈsaja | aŋ ˈjan/ //
+
+\gla Sitang-keca nay dayungisaya ang Yan. //
+\glb sitang-ket-ya nay dayungisa-ya ang Yan //
+\glc self-wash-\TsgM{} and dress-\TsgM{} \Aarg{} Yan //
+\glft `Yan washes and dresses himself.' //
+\endgl\xe
+
+\pagebreak
+
+\begin{multicols}{2}
+\printglossary[style=mysuper,type=\leipzigtype]
+\end{multicols}
+
+\end{document}
