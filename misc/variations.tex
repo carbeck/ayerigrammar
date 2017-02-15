@@ -45,6 +45,9 @@
 
 % Formatting of glosses
 \usepackage{expex}
+\defineglwlevels{d}
+\lingset{everygld=\scriptsize}
+
 \usepackage{leipzig}
 
 \newleipzig{AgtT}{at}{agent topic}
@@ -651,22 +654,49 @@
 \endgl\xe
 
 \ex\begingl
-\glpreamble \textit{Sa ilyāng koyaye nay dadangye yeyam.} \\
+\glpreamble \textit{Sa ilyāng koyaye nay dadangye yeyam.}\footnotemark{} \\
 	/sa ilˈjaːŋ | koˈjaje naɪ daˈdaŋje | jeˈjam/ //
 
 \gla Sa ilyāng koyaye nay dadangye yeyam. //
 \glb sa il-yāng koya-ye nay dadang-ye yeyam //
 \glc \PatT{} give-\TsgM{} book-\Pl{} and pen-\Pl{} \TsgF{}.\Dat{} //
-\glc {}
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}\footnotemark{}
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
+\gld %
+	\mbox{\begin{avm}\[ \Anim{} & + \]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & – \]\end{avm}}
+	\mbox{\begin{avm}\[ \Anim{} & + \]\end{avm}}
+	{}
+	\mbox{\begin{avm}\[ \Anim{} & – \]\end{avm}}
 	//
 \glft `Books and pens he gives her.' //
 \endgl
 
-\footnotetext{I think that due to the way Ayeri deals with verb agreement, it makes more sense for it to have nearest-conjunct agreement with regards to gender/animacy than gender resolution.}
+\footnotetext{I think that due to the way Ayeri deals with verb agreement, it makes more sense for it overall to have nearest-conjunct agreement with regards to gender/animacy than gender resolution, though see below. Number always resolves, though.}
+
+% IDEA:
+%
+% M + F = M (N attested)
+% F + M = M (N attested)
+%
+% → people have gender-resolution to M
+% → resolution to N does occur
+%
+% M + N = M
+% N + M = N
+% F + N = M (F possible)
+% N + F = N
+%
+% → people mixed with animate things have nearest-conjunct resolution
+% → if F first, resolution to M (though nearest-conjunct resolution possible)
+%
+% M    + INAN = M
+% INAN + M    = INAN
+% F    + INAN = M (F possible)
+% INAN + F    = INAN
+% N    + INAN = N
+% INAN + N    = INAN
+%
+% → people mixed with inanimate things have nearest-conjunct resolution
+% → if F first, resolution to M (though nearest-conjunct resolution possible)
 
 \ex\begingl
 \glpreamble \textit{Ang sobisayan Mico nay Niva sungkoranas narān.} \\
@@ -675,20 +705,20 @@
 \gla Ang sobisayan Mico nay Niva sungkoranas narān. //
 \glb ang sobisa-yan Mico nay Niva sungkoran-as narān //
 \glc \AgtT{} study-\TplM{} Mico and Niva science-\Parg{} language //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \F{} \\
 		\Num{}  & \Sg{} \\
@@ -704,20 +734,20 @@
 \gla Ang sobisayan Niva nay Mico sungkoranas narān. //
 \glb ang sobisa-yan Niva nay Mico sungkoran-as narān //
 \glc \AgtT{} study-\TplM{} Niva and Mico science-\Parg{} language //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \F{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Sg{} \\
@@ -733,20 +763,20 @@
 \gla Toryan ang Yan nay veneyang yana. //
 \glb tor-yan ang Yan nay veney-ang yana //
 \glc sleep-\TplM{} \Aarg{} Yan and dog-\Aarg{} \TsgM{}.\Aarg{} //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Sg{} \\
@@ -762,19 +792,19 @@
 \gla Toryon veneyang nay badanang. //
 \glb tor-yon veney-ang nay badan-ang //
 \glc sleep-\TplN{} dog-\Aarg{} and father-\Aarg{} //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \M{} \\
 		\Num{}  & \Sg{} \\
@@ -784,25 +814,55 @@
 \endgl\xe
 
 \ex\begingl
+\glpreamble \textit{Toryan mavāng nay veneyang.}\footnotemark{} \\
+	/ˈtorjan | maˈvaːŋ naɪ veneˈjang/ //
+
+\gla Toryan mavāng nay veneyang. //
+\glb tor-yan mava-ang nay veney-ang //
+\glc sleep-\TplM{} mother-\Aarg{} and dog-\Aarg{} //
+\gld %
+	\mbox{\begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \M{} \\
+		\Num{}  & \Pl{} \\
+	\]\end{avm}}
+	\mbox{\begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \F{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	{}
+	\mbox{\begin{avm}\[
+		\Anim{} & + \\
+		\Gend{} & \N{} \\
+		\Num{}  & \Sg{} \\
+	\]\end{avm}}
+	//
+\glft `Mother and the dog are sleeping.' //
+\endgl\xe
+
+\footnotetext{Lack of gender resolution with regular nearest-conjunct agreement ought to be possible as well.}
+
+\ex\begingl
 \glpreamble \textit{Toryon veneyang nay mavāng.} \\
 	/ˈtorjon | veneˈjang naɪ maˈvaːŋ/ //
 
 \gla Toryon veneyang nay mavāng. //
 \glb tor-yon veney-ang nay mava-ang //
 \glc sleep-\TplN{} dog-\Aarg{} and mother-\Aarg{} //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \F{} \\
 		\Num{}  & \Sg{} \\
@@ -811,21 +871,135 @@
 \glft `The dog and mother are sleeping.' //
 \endgl\xe
 
-\ex
-	masculine + inanimate thing
-\xe
+\ex\begingl
+	\glpreamble \textit{Ang sarayan kadanya Api-Api nay ajam yana tadayen.} \\
+		/aŋ saˈrajan kaˈdanja | ˈapiˈapi naɪ ˈadʒam ˈjana | taˈdajen/ //
 
-\ex
-	feminine + inanimate thing
-\xe
+	\gla Ang sarayan kadanya Api-Api nay ajam yana tadayen. //
+	\glb ang sara-yan kadanya Api-Api nay ajam yana tadayen //
+	\glc \AgtT{} go-\TplM{} together Api-Api and toy \TsgM{}.\Gen{} everywhere //
+	\gld %
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+		\]\end{avm}}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \M{} \\
+			\Num{}  & \Pl{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \M{} \\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		//
+	\glft `Api-Api and his toy are going everywhere together.' //
+\endgl\xe
 
-\ex
-	inanimate thing + masculine
-\xe
+\ex\begingl
+	\glpreamble \textit{Eng sarāran kadanya ajam nay Api-Api tadayen.} \\
+		/ɛŋ saˈraːran kaˈdanja | ˈadʒam naɪ ˈapiˈapi | taˈdajen/ //
 
-\ex
-	inanimate thing + feminine
-\xe
+	\gla Eng sarāran kadanya ajam nay Api-Api tadayen. //
+	\glb Eng sara-aran kadanya ajam nay Api-Api tadayen //
+	\glc \AgtTI{} go-\TplI{} together toy and Api-Api everywhere //
+	\gld %
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+		\]\end{avm}}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Pl{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \M{} \\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		//
+	\glft `The toy and Api-Api are going everywhere together.' //
+\endgl\xe
+
+\ex\begingl
+	\glpreamble \textit{Ang sarayan kadanya Tavi-Tavi nay ajam yena tadayen.}\footnotemark{} \\
+		/aŋ saˈrajan kaˈdanja | ˈtaviˈtavi naɪ ˈadʒam ˈjena | taˈdajen/ //
+
+	\gla Ang sarayan kadanya Tavi-Tavi nay ajam yena tadayen. //
+	\glb ang sara-yan kadanya Tavi-Tavi nay ajam yena tadayen //
+	\glc \AgtT{} go-\TplM{} together Tavi-Tavi and toy \TsgF{}.\Gen{} everywhere //
+	\gld %
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+		\]\end{avm}}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \M{} \\
+			\Num{}  & \Pl{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \F{} \\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		//
+	\glft `Tavi-Tavi and her toy are going everywhere together.' //
+\endgl\xe
+
+\footnotetext{Lack of gender resolution with regular nearest-conjunct agreement ought to be possible as well.}
+
+\ex\begingl
+	\glpreamble \textit{Eng sarāran kadanya ajam nay Tavi-Tavi tadayen.} \\
+		/ɛŋ saˈraːran kaˈdanja | ˈadʒam naɪ ˈtaviˈtavi | taˈdajen/ //
+
+	\gla Eng sarāran kadanya ajam nay Tavi-Tavi tadayen. //
+	\glb Eng sara-aran kadanya ajam nay Tavi-Tavi tadayen //
+	\glc \AgtTI{} go-\TplI{} together toy and Tavi-Tavi everywhere //
+	\gld %
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+		\]\end{avm}}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Pl{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & – \\
+			\\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		{}
+		\mbox{\begin{avm}\[
+			\Anim{} & + \\
+			\Gend{} & \F{} \\
+			\Num{}  & \Sg{} \\
+		\]\end{avm}}
+		//
+	\glft `The toy and Tavi-Tavi are going everywhere together.' //
+\endgl\xe
 
 \ex\begingl
 \glpreamble \textit{Ang bitojon sungkoran-narān nay payutān atasas.} \\
@@ -834,20 +1008,20 @@
 \gla Ang bitojon sungkoran-narān nay payutān atasas. //
 \glb ang bitog-yon sungkoran-narān nay payutān atas-as //
 \glc \AgtT{} tear.apart-\TplN{} science.language and mathematics brain-\Parg{} //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & + \]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[ \Anim{} & + \]\end{avm}}
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & – \\
 		\\
 		\Num{} & \Sg{} \\
@@ -863,20 +1037,20 @@
 \gla Eng bitogaran payutān nay sungkoran-narān atasas. //
 \glb eng bitog-aran payutān nay sungkoran-narān atas-as //
 \glc \AgtT{} tear.apart-\TplI{} mathematics and science.language brain-\Parg{} //
-\glc %
-	\mbox{\scriptsize \begin{avm}\[ \Anim{} & – \]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+\gld %
+	\mbox{\begin{avm}\[ \Anim{} & – \]\end{avm}}
+	\mbox{\begin{avm}\[
 		\Anim{} & – \\
 		\\
 		\Num{}  & \Pl{} \\
 	\]\end{avm}}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & – \\
 		\\
 		\Num{}  & \Sg{} \\
 	\]\end{avm}}
 	{}
-	\mbox{\scriptsize \begin{avm}\[
+	\mbox{\begin{avm}\[
 		\Anim{} & + \\
 		\Gend{} & \N{} \\
 		\Num{}  & \Sg{} \\
