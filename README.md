@@ -25,7 +25,9 @@ Table of Contents
    8. Conjunctions
 
 Currently working on:
+* Figuring out what's actually a clitic and what's an affix of all the things I've called clitics so far.
 
+Stashed for the time being:
 * Phrase structures `chapters/syntax.tex`
   1. Determiner phrases and Noun phrases
   2. Adjective phrases and adverbial phrases
