@@ -48,6 +48,18 @@
 \defineglwlevels{d}
 \lingset{everygld=\scriptsize}
 
+% Make ExPex process footnotes correctly.
+% cf. http://tex.stackexchange.com/a/320271
+\makeatletter
+\def\makefootnotehacks#1{\begingroup
+\XKV@for@n{#1}\which{%
+\edef\temp{fnhack\which}%
+\advance\c@footnote by 1
+\expandafter\xdef\csname \temp\endcsname
+{\fakesuperscript{\the\c@footnote}}}\endgroup\ignorespaces}%
+\def\footnotehacktext{\advance\c@footnote by 1 \footnotetext}
+\makeatother
+
 \usepackage{leipzig}
 
 \newleipzig{AgtT}{at}{agent topic}
@@ -1734,7 +1746,125 @@
 \glft `Do they seem to or only pretend to speak Turayi?' //
 \endgl\xe
 
-\ex S-control/``equi'' verbs (e.g. try to do sth.) \xe
+\pex
+\a\begingl
+\glpreamble \textit{Linkaye lingyam ang Banvā.} \\
+	/liŋˈkaje ˈliŋjam | aŋ banˈvaː/ //
+
+\gla Linkaye lingyam ang Banvā. //
+\glb linka-ye ling-yam ang Banvā //
+\glc try-\TsgF{} climb.up-\Ptcp{} \Aarg{} Banvā //
+\glft `Banvā tries to climb up (on it).' //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkaye ang Banvā lingyam. //
+\glb linka-ye ang Banvā ling-yam //
+\glc try-\TsgF{} \Aarg{} Banvā climb.up-\Ptcp{} //
+\endgl
+
+\xe
+
+\makefootnotehacks{A}
+\pex
+\a\begingl
+\glpreamble \textit{Linkayeng lingyam.} \\
+	/liŋkaˈjeŋ ˈliŋjam/ //
+
+\gla Linkayeng lingyam. //
+\glb linka-yeng ling-yam //
+\glc try-\TsgF{}.\Aarg{} climb.up-\Ptcp{} //
+\glft `She tries to climb up (on it).' //
+\endgl
+
+\a\ljudge?\begingl
+\gla Linka {lingyeng.\fnhackA} //
+\glb linka ling-yeng //
+\glc try climb.up-\TsgF{}.\Aarg{} //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkaye lingyeng. //
+\glb linka-ye ling-yeng //
+\glc try-\TsgF{} climb.up-\TsgF{}.\Aarg{} //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkayam lingyeng //
+\glb linka-yam ling-yeng //
+\glc try-\Ptcp{} climb.up-\TsgF{}.\Aarg{} //
+\endgl
+
+\xe
+
+\footnotehacktext{\emph{Linka-} `try' is a reasonably common verb, so there is a certain likeliness for it to go the way of \emph{div-} `stay' and become a modal particle.}
+
+\makefootnotehacks{B}
+\pex
+\a\begingl
+\glpreamble \textit{Ang linkaye lingyam Banvā merengley.} \\
+	/aŋ liŋˈkaje ˈliŋjam | banˈvaː | mereŋˈleɪ/ //
+
+\gla Ang linkaye lingyam Banvā merengley. //
+\glb ang linka-ye ling-yam Banvā mereng-ley //
+\glc \AgtT{} try-\TsgF{} climb.up-\Ptcp{} Banvā wall-\PargI{} //
+\glft `Banvā tries to climb up a wall.' //
+\endgl
+
+\a\ljudge?\begingl
+\gla Linkaye ang Banvā lingyam {merengley.\fnhackB} //
+\glb linka-ye ang Banvā ling-yam mereng-ley //
+\glc try-\TsgF{} \Aarg{} Banvā climb.up-\Ptcp{} wall-\PargI{} //
+\endgl
+
+\a\ljudge*\begingl
+\gla Ang linkaye Banvā lingyam merengley. //
+\glb ang linka-ye Banvā ling-yam mereng-ley //
+\glc \AgtT{} try-\TsgF{} Banvā climb.up-\Ptcp{} wall-\PargI{} //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkaye ang lingyam Banvā merengley. //
+\glb linka-ye ang ling-yam Banvā mereng-ley //
+\glc try-\TsgF{} \AgtT{} climb.up-\Ptcp{} Banvā wall-\PargI{} //
+\endgl
+\xe
+
+\footnotehacktext{This pattern is attested, but it's a minority variant. As (\ref{ex:rightsideptcp}) shows, the subordinate verb's arguments can't be topicalized in this case.}
+
+\pex
+\a\begingl
+\glpreamble \textit{Le linkaye lingyam ang Banvā mereng.} \\
+	/le liŋˈkaje ˈliŋjam | aŋ banˈvaː | meˈreŋ/ //
+
+\gla Le linkaye lingyam ang Banvā mereng. //
+\glb le linka-ye ling-yam ang Banvā mereng //
+\glc \PatTI{} try-\TsgF{} climb.up-\Ptcp{} \Aarg{} Banvā wall //
+\glft `The wall, Banvā tries to climb (it) up.' //
+\endgl
+
+\a\label{ex:rightsideptcp}\ljudge*\begingl
+\gla Le linkaye ang Banvā lingyam mereng. //
+\glb le linka-ye ang Banvā ling-yam mereng //
+\glc \PatTI{} try-\TsgF{} \Aarg{} Banvā climb.up-\Ptcp{} wall //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkaye ang Banvā le lingyam mereng. //
+\glb linka-ye ang Banvā le ling-yam mereng //
+\glc try-\TsgF{} \Aarg{} Banvā \PatTI{} climb.up-\Ptcp{} wall //
+\endgl
+
+\a\ljudge*\begingl
+\gla Linkaye le lingyam ang Banvā mereng. //
+\glb linka-ye le ling-yam ang Banvā mereng //
+\glc try-\TsgF{} \PatTI{} climb.up-\Ptcp{} \Aarg{} Banvā wall //
+\endgl
+\xe
+
+\ex S-control with a ditransitive controlled verb (X tries to VERB Y the Z) \xe
+\ex S-control with reflexive verbs \xe
+
 \ex O-control verbs (e.g. ask s.o. to do sth.) \xe
 \ex ECM verbs (e.g. expect s.o. to do sth.) \xe
 
