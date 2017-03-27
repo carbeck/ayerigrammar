@@ -10,10 +10,10 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently worked on:
 
-* Figuring out what's actually a clitic and what's an affix of all the things I've called clitics so far. `misc/variations.tex` (source: [PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/variations.pdf))
+* Figuring out what's actually a clitic and what's an affix of all the things I've called clitics so far (source: `misc/variations.tex`, [PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/variations.pdf))
 
 Postponed for the time being:
-* Phrase structures `chapters/syntax.tex`
+* Phrase structures (source: `chapters/syntax.tex`)
   1. Determiner phrases and Noun phrases
   2. Adjective phrases and adverbial phrases
 
