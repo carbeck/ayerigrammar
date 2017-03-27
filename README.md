@@ -1,14 +1,16 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort, started in July 2016, to revise and to expand on what is currently on [my Ayeri website](https://ayeri.de) as _A Grammar of Ayeri_ ([PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). This earlier documentation attempt has been left in a very sorry and unfinished state for over 5 years now. I hope that by transferring things to LaTeX, the whole process of editing will be more easy to handle than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as such on the [repository page](https://github.com/carbeck/ayerigrammar).
+This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). This earlier documentation attempt had been left in a very sorry and unfinished state for over 5 years before returning to it. I hope that by transferring things to LaTeX, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as such on the [repository page](https://github.com/carbeck/ayerigrammar).
+
+Ayeri is a fictional language project I have been working on since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
 
 Currently working on
 ====================
 
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently worked on:
 
-* Figuring out what's actually a clitic and what's an affix of all the things I've called clitics so far. `misc/variations.tex` ([PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/variations.pdf))
+* Figuring out what's actually a clitic and what's an affix of all the things I've called clitics so far. `misc/variations.tex` (source: [PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/variations.pdf))
 
 Postponed for the time being:
 * Phrase structures `chapters/syntax.tex`
@@ -20,13 +22,13 @@ Table of Contents
 
 The table of contents encompasses the following topics so far:
 
-1. Phonology `chapters/phonology.tex`
+1. Phonology (source: `chapters/phonology.tex`)
    1. Phoneme Inventory
    2. Phonotactics
    3. Notes on Prosody
-2. Writing System `chapters/writing.tex`
-3. Morphological Typology `chapters/morphtyp.tex`
-4. Grammatical Categories `chapters/gramcat.tex`
+2. Writing System (source: `chapters/writing.tex`)
+3. Morphological Typology (source: `chapters/morphtyp.tex`)
+4. Grammatical Categories (source: `chapters/gramcat.tex`)
    1. Nouns
    2. Pronouns
    3. Adjectives
@@ -55,7 +57,5 @@ Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara
 
 Licensing
 =========
-
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
 Carsten Becker, 2016–17. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
