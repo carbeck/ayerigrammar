@@ -17,6 +17,15 @@
  Ligatures=TeX,
 ]
 
+\setsansfont{FreeSans}[
+ Ligatures=TeX,
+]
+
+% No break after section heading
+\usepackage{needspace}
+\usepackage{xpatch}
+\xpretocmd{\section}{\needspace{5\baselineskip}}{}{}
+
 % Clickable links in footnotes, TOC, etc.
 \usepackage[
     xetex,
@@ -2761,10 +2770,10 @@ Syntactic O of matrix verb is logical S of subordinate verb
 
 \pex
 \a\begingl
-\glpreamble \textit{Kivo-ikannama nangāng.} \\
+\glpreamble \textit{Kivo-ikan-nama nangāng.} \\
 	/ˈkivoikaˌnama naŋˈaːŋ/ //
 
-\gla Kivo-ikannama nangāng. //
+\gla Kivo-ikan-nama nangāng. //
 \glb kivo-ikan-nama nanga-ang //
 \glc small-very-just house-\Aarg{} //
 \glft `The house is just very small.' //
@@ -2775,8 +2784,43 @@ Syntactic O of matrix verb is logical S of subordinate verb
 \glb kivo-ikan nay nama nanga-ang //
 \glc small-very and just house-\Aarg{} //
 \endgl
-
 \xe
+
+\ex\begingl
+\glpreamble \textit{Kivo-ikan nay giro-ven-nama nangāng.} \\
+	/ˈkivoˌikan naɪ ˈgirovenˌnama naŋˈaːŋ/ //
+
+\gla Kivo-ikan nay giro-ven-nama nangāng. //
+\glb kivo-ikan nay giro-ven-nama nanga-ang //
+\glc small-very and cute-pretty-just house-\Aarg{} //
+\glft `The house is just very small and pretty cute.' //
+\endgl\xe
+
+\pex
+\a\begingl
+\glpreamble \textit{Kivo-ikan nay giro-ikan-nama nangāng.} \\
+	/ˈkivoˌikan naɪ ˈgiroikanˌnama naŋˈaːŋ/ //
+
+\gla Kivo-ikan nay giro-ikan-nama nangāng. //
+\glb kivo-ikan nay giro-ikan-nama nanga-ang //
+\glc small-very and cute-very-just house-\Aarg{} //
+\glft `The house is just very small and very cute.' //
+\endgl
+
+\a\ljudge?\begingl
+\gla Kivo nay giro-ikan-nama nangāng. //
+\glb kivo nay giro-ikan-nama nanga-ang //
+\glc small and cute-very-just house-\Aarg{} //
+\glft \textit{Intended:} `The house is just very small and cute.' //
+\endgl
+\xe
+
+\ex\begingl
+\gla Kivo naynay giro-ikan-nama nangāng. //
+\glb kivo nay\til{}nay giro-ikan-nama nanga-ang //
+\glc small and\til{}also cute-very-just house-\Aarg{} //
+\glft `The house is small and also just very cute.' //
+\endgl\xe
 
 \makefootnotehacks{C}
 \pex
@@ -2984,20 +3028,30 @@ Syntactic O of matrix verb is logical S of subordinate verb
 \glc \AgtT{} want-\Fsg{} one-red-\PargI{} and one-blue //
 \endgl
 
-\a\ljudge*\begingl
+\xe
+
+\pex
+\a\begingl
+\glpreamble \textit{Ang noay da-tuvoley nay lenoley.} \\
+	/aŋ ˈnwaɪ ˌtuvoˈleɪ naɪ ˌlenoˈleɪ/ //
+
 \gla Ang noay da-tuvoley nay lenoley. //
 \glb ang no-ay da-tuvo-ley nay leno-ley //
 \glc \AgtT{} want-\Fsg{} one-red-\PargI{} and blue-\Parg{} //
 \endgl
 
-\a\ljudge!\begingl
+\a\begingl
+\gla Ang noay danyaley si tuvo nay leno. //
+\glb ang no-ay danya-ley si tuvo nay leno //
+\glc \Aarg{} want-\Fsg{} such.one-\PargI{} \Rel{} red and blue //
+\glft `I want the red and blue one.' //
+\endgl
+
+\a\ljudge?\begingl
 \gla Ang noay da-tuvo nay lenoley. //
 \glb ang no-ay da-tuvo nay leno-ley //
 \glc \AgtT{} want-\Fsg{} one-red and blue-\Parg{} //
-\glft `I want the red and blue one.' \\
-	\textit{Intended:} `I want the red one and the blue one.' //
 \endgl
-
 \xe
 
 \section{Possessive pronouns with demonstrative da-}
@@ -3124,20 +3178,30 @@ Hence, \textit{da-kivoley yana} would be more licit.}
 \glc \AgtT{} want-\Fsg{} one-\TsgM{}.\Gen{}-\PargI{} and one-\Second{}.\Gen{} //
 \endgl
 
-\a\ljudge*\begingl
+\xe
+
+\pex
+\a\begingl
+\glpreamble \textit{Ang noay da-yanaley nay vanaley.} \\
+	/aŋ ˈnwaɪ daxˌjanaˈleɪ naɪ ˌvanaˈleɪ/ //
+
 \gla Ang noay da-yanaley nay vanaley. //
 \glb ang no-ay da-yana-ley nay vana-ley //
 \glc \AgtT{} want-\Fsg{} one-\TsgM{}.\Gen{}-\PargI{} and \Second{}.\Gen{}-\Parg{} //
+\glft `I want him-and-yours.' //
 \endgl
 
-\a\ljudge!\begingl
+\a\begingl
+\gla Ang noay danyaley si yana nay vana. //
+\glb ang no-ay danya-ley si yana nay vana //
+\glc \AgtT{} want-\Fsg{} such.one-\PargI{} \Rel{} \TsgM{}.\Gen{} and \Second{}.\Gen{} //
+\endgl
+
+\a\ljudge?\begingl
 \gla Ang noay da-yana nay vanaley. //
 \glb ang no-ay da-yana nay vana-ley //
 \glc \AgtT{} want-\Fsg{} one-\TsgM{}.\Gen{} and \Second{}.\Gen{}-\Parg{} //
-\glft `I want him and yours.' \\
-	\textit{Intended:} `I want (both) his and yours.' //
 \endgl
-
 \xe
 
 \section{Possessive pronouns}
@@ -3279,7 +3343,7 @@ Hence, \textit{da-kivoley yana} would be more licit.}
 
 \pex
 \a\begingl
-\glpreamble \textit{Ang Misan/lajāyang/yeng voy puti.} //
+\glpreamble \textit{Ang Misan/lajāyang/yeng voy puti.} \\
 	/aŋ ˈmisan//laˈdʒaːjaŋ/ˈjeŋ voɪ ˈputi/ //
 
 \gla Ang Misan @ / @ lajāyang @ / @ yeng voy puti //
@@ -3376,12 +3440,12 @@ Hence, \textit{da-kivoley yana} would be more licit.}
 \endgl\xe
 
 \ex\begingl
-\glpreamble \textit{Ang mingyo gumo babekalya kotaneri.} \\
-	/aŋ ˈmiŋjo ˈgumo babeˈkalja kotaˈneri/ //
+\glpreamble \textit{Ang mingyo gumo babekalya kotanley.} \\
+	/aŋ ˈmiŋjo ˈgumo babeˈkalja kotanˈleɪ/ //
 
-\gla Ang mingyo gumo babekalya kotaneri. //
-\glb ang ming-yo gumo babekal-ja kotan-eri //
-\glc \Aarg{} can-\TsgN{} work holiday-\Loc{} toil-\Ins{} //
+\gla Ang mingyo gumo babekalya kotanley. //
+\glb ang ming-yo gumo babekal-ja kotan-ley //
+\glc \Aarg{} can-\TsgN{} work holiday-\Loc{} toil-\PargI{} //
 \glft `Work on a holiday can be toil.' //
 \endgl\xe
 
@@ -3527,7 +3591,7 @@ Hence, \textit{da-kivoley yana} would be more licit.}
 \endgl
 \xe
 
-\pagebreak
+\vfill
 
 \begin{multicols}{2}
 \printglossary[style=mysuper,type=\leipzigtype]
