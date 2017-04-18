@@ -607,8 +607,115 @@ described above are always present, making a checklist and summing up the
 tally is only of limited value. The traits enumerated above are sufficient, 
 but not necessary, conditions. In the following, I want to elaborate on the 
 classification of various prefixes, suffixes, and particles as 
-clitics.\footnote{The following discussion contains passages from a blog 
-article on this topic, \citet{benung:clitics}.}
+clitics.\footnote{The following discussion incorporates most of the content of 
+a blog article I previously wrote on this topic, \citet{benung:clitics}. Since
+clitics sit at the junction of morphology and syntax, it will be necessary at
+times to deal with topics roughly which will be elaborated on later in more
+detail.}
+
+\subsubsection{Preposed particles and prefixes}
+
+I think what should be rather unproblematic with regards to analysis as clitics
+in Ayeri are the preverbal particles, that is, the topic marker, one or several
+modal particles, the progressive marker, and also the emphatic affirmative and
+negative discourse particles. All of these particles essentially have
+functional rather than lexical content, and are usually unstressed. They come
+in a cluster with a fixed order, and they appear in a position where no
+ordinary word material could go, since Ayeri is strictly verb-initial. In
+conjuncts it's also unnecessary to mark every verb with one or several of them:
+
+\pex
+\a\label{ex:clitics_1a}\begingl
+	\gla Ang kece nay dayungisaye māva yanjas yena. //
+	\glb ang ket-ye nay dayungisa-ye māva-Ø yan-ye-as yena //
+	\glc \AgtT{} wash-\TsgF{} and dress-\TsgF{} mother-\Top{} boy-\Pl{}-\Parg{}
+		\TsgF{}.\Gen{} //
+	\glft `The mother washes and dresses her boys.' //
+\endgl
+
+\a\label{ex:clitics_1b}\begingl
+	\gla Manga sahaya rangya nay nedraya ang Tikim. //
+	\glb manga saha-ya rang-ya nay nedra-ya ang Tikim //
+	\glc \Prog{} come-\TsgM{} home-\Loc{} and sit-\TsgM{} \Aarg{} Tikim //
+	\glft `Tikim is coming home and sitting down.' //
+\endgl
+
+\a\label{ex:clitics_1c}\begingl
+	\gla Ang mya ming sidegongya nay la-lataya ajamyeley. //
+	\glb ang mya ming sideg-ong=ya.Ø nay la\til{}lata=ya.Ø ajam-ye-ley //
+	\glc \AgtT{} be.supposed.to can repair-\Irr{}=\TsgM{}.\Top{} and
+		\Iter{}\til{}sell=\TsgM{}.\Top{} toy-\Pl{}-\PargI{} //
+	\glft `He should be able to repair and resell the toys.' //
+\endgl
+\xe
+
+In (\ref{ex:clitics_1a}), therefore, the agent-topic marker \rayr{ANF}{ang}
+only occurs before \xayr{ketYe}{kece}{(she) washes}, and the conjoined verb
+\xayr{dyuNisye}{dayungisaye}{(she) dresses} is also within its scope.
+Repeating the marker as well before the latter verb could either be considered
+ungrammatical because there is only one topic there---\xayr{maav}{māva}
+{mother}---or the sentence could be interpreted as having two conjoined clauses
+with different subjects: `She\tsub{1} washes and mother\tsub{2} dresses her
+boys.' The latter outcome has \rayr{maav}{māva} as the topic only of
+\rayr{dyuNisye}{dayungisaye}, while \rayr{ketYe}{kece}'s topic is the person
+marking on the verb---a pro-drop subject, essentially.\footnote{This claim is
+further investigated below, \autoref{REFERENCE_GOES_HERE}; also compare
+\autoref{subsec:persnumagr}.}
+
+In (\ref{ex:clitics_1b}), then, the progressive marker \rayr{mN}{manga}
+equally has scope over both verb conjuncts, \xayr{shy}{sahaya}{(he) comes}
+and \xayr{nedFry}{nedraya}{(he) sits} in what is presumably a case of
+extended/distributed exponence. This is to say that functionally contiguous
+information can sometimes be split over several words, so that the functional
+annotation of each verb in (\ref{ex:clitics_1b}) can be represented in the
+fashion of the (incomplete) f-structure matrix \parencites[see][]
+{bresnan2016}{buttking2015} shown in (\ref{ex:clitics_2}), which is an
+attempt to exemplarily describe the phrase \xayr{ANF mN sh/}{ang manga
+saha-}{is coming}. \rayr{mN}{manga} is treated there as being part of things
+the verb inflects for, that is, progressive aspect, in spite of appearing
+superficially as a function word. The topic marker \rayr{ANF}{ang} does not
+reflect a morphological property of the verb in the way the progressive marker
+does, but announces the case and---for agents and patients---the animacy value
+of the topicalized noun phrases (NPs), so the f-structure in
+(\ref{ex:clitics_2}) lists this information under the \Top{} relation.
+
+\ex\label{ex:clitics_2}
+\begin{avm}
+\[
+	\Pred{}	&	\astruct{come}{\ups{\Sbj{}}, \ups{\Oblq{loc}}} \\
+
+	\Asp{}	&	\Prog{} \\
+
+	\Top{}	&	\[
+					\Case{}	&	\Aarg{} \\
+					\Anim{}	&	$+$ \\
+					...		&	... \\
+				\] \\
+
+	...		&	... \\
+\]
+\end{avm}
+\xe
+
+Modal particles, exemplified in (\ref{ex:clitics_1c}), are probably slightly
+less typical as clitics since it seems feasible for them to be stressed for
+contrast. What is not possible, however, is to front either \xayr{mY}{mya}{be
+supposed to} or \xayr{miNF}{ming}{can}, and the verb itself also cannot precede
+the particles, which is demonstrated in (\ref{ex:clitics_3}). It is also not
+possible to coordinate any of the elements in the preverbal particle cluster
+with \xayr{nj}{nay}{and}, as shown in (\ref{ex:clitics_4}).
+
+\pex\label{ex:clitics_3}
+\a \ljudge{*} \textit{mya ang ming sidegongya}
+\a \ljudge{*} \textit{ming ang mya sidegongya}
+\a \ljudge{*} \textit{sidegongya ang mya ming}
+\xe
+
+\pex~\label{ex:clitics_4}
+\a \ljudge{*} \textit{ang \textbf{nay} mya ming sidegongya}
+\a \ljudge{*} \textit{ang mya \textbf{nay} ming sidegongya}
+\a \ljudge{*} \textit{ang mya ming \textbf{nay} sidegongya}
+\xe
 
 ...
 
