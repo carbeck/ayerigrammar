@@ -79,7 +79,7 @@
 % Load fonts for XeTeX, including support for Unicode etc.
 % Mathspec makes it possible to redefine *all* the fonts used for math stuff,
 % however, it contains a stupid bug in dependency checking, see
-% <http://tex.stackexchange.com/a/85700/60686>.
+% <http://tex.stackexchange.com/a/85700>.
 \usepackage{mathspec}
 \makeatletter % undo the wrong changes made by mathspec
 \let\RequirePackage\original@RequirePackage
@@ -204,7 +204,7 @@
 % \usepackage{multirow}
 
 % Dealing with page-size tables in landscape format
-% http://tex.stackexchange.com/a/19021/60686, and hat tip to Git user Zoqaeski:
+% http://tex.stackexchange.com/a/19021, and hat tip to Git user Zoqaeski:
 \usepackage{pdflscape} % alternative to rotating; rotates pages on screen
 \usepackage{afterpage} % put things after the page they're defined on
 
@@ -256,7 +256,7 @@
 \setlength{\columnsep}{2\baselineskip}
 \usepackage{tikz}
 
-% cf. http://tex.stackexchange.com/a/1912/60686
+% cf. http://tex.stackexchange.com/a/1912
 \tikzstyle{na} = [shape=rectangle,inner sep=0pt,text depth=0pt]
 \tikzstyle{haspanno} = [font=\tiny,below=.75em, align=center, text width=2.5em, fill=white, text=black]
 \tikzstyle{haspanno2} = [font=\tiny\sffamily\bfseries, align=left]
