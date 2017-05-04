@@ -43,7 +43,7 @@ I will tag a release (basically "first edition") only when everything is as comp
 Compiling
 =========
 
-Compile with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara`. A standard TeXLive 2015 installation should bring all package dependencies, with the notable exception of the `avm` package, which you may have to download from [Christopher Manning's website](http://nlp.stanford.edu/manning/tex/) and unzip somewhere in TeX's `PATH` (e.g. `~/texmf/tex/latex`). Fonts used:
+Compile `grammar.tex` with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara grammar` to do all the required steps automatically. A standard TeXLive 2015 installation should bring all package dependencies, with the notable exception of the `avm` package, which you may have to download from [Christopher Manning's website](http://nlp.stanford.edu/manning/tex/) and unzip somewhere in TeX's `PATH` (e.g. `~/texmf/tex/latex`). Fonts used:
 
 * Body text: [Junicode](http://junicode.sourceforge.net/)
 * Captions, Headings: [Fira Sans](https://carrois.com/typefaces/FiraSans/)
