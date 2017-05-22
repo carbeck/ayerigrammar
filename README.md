@@ -10,9 +10,6 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently worked on:
 
-* Round of proofreading and editing after writing on clitics, for consistency.
-
-Postponed for the time being:
 * Phrase structures (source: `chapters/syntax.tex`)
 
 Table of Contents
