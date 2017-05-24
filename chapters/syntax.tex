@@ -970,10 +970,33 @@ case. The same is also true of generic nouns:
 	\endgl
 \xe
 
-While it has been argued that Ayeri does not possess articles, it does possess 
+While it has been argued that Ayeri does not possess articles, it does possess
 a large variety of pronouns. These, as pro-elements, appear in complementary
 distribution with NPs. Since they encode morphosyntactic functions rather than
-semantic content, they are ideal candidates for heads of DP.
+semantic content, they are ideal candidates for heads of DP. If DPs in Ayeri
+only consist of pronouns, which replace NPs whole, they should not take any
+modifiers (with the notable exception of relative clauses, CP being another
+functional category), hence the phrase structure plan of DPs should look as
+illustrated in (\ref{ex:dpstruct}).
+
+\pex\label{ex:dpstruct}
+\a DP → \anno*{\xbar{D}}
+\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\pass{\Adjc}}]{CP}\right)$
+\xe
+
+\ex~\label{ex:dpcstruct}
+\begin{forest}
+[{\anno[\{\pass{df} | \pass{gf}\}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}]
+		[{$\left(\anno[{%
+				\pass{\Adjc}%
+			}]{CP}\right)$
+		}]
+	]
+]
+\end{forest}
+\xe
 
 \subsubsection{Personal pronouns}
 
