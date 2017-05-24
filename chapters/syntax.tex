@@ -549,7 +549,7 @@ f-structure matrices of the kind already shown in (\ref{ex:clitics_43}),
 
 \ex\label{ex:nounmorphlex}%
 \adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlex}}
+	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& N
 		& \begin{tabular}[t]{l l l}
@@ -573,7 +573,7 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 
 \ex\label{ex:deixisfeat}
 %\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlex}}
+	\begin{tabu} {\usetabu{morphlexnarrow}}
 	\hphantom{...}
 		& \hphantom{N}
 		& \begin{tabular}[t]{l l l}
@@ -971,13 +971,15 @@ case. The same is also true of generic nouns:
 \xe
 
 While it has been argued that Ayeri does not possess articles, it does possess
-a large variety of pronouns. These, as pro-elements, appear in complementary
+a large variety of pronouns. These, as pro-forms, appear in complementary
 distribution with NPs. Since they encode morphosyntactic functions rather than
 semantic content, they are ideal candidates for heads of DP. If DPs in Ayeri
 only consist of pronouns, which replace NPs whole, they should not take any
-modifiers (with the notable exception of relative clauses, CP being another
-functional category), hence the phrase structure plan of DPs should look as
-illustrated in (\ref{ex:dpstruct}).
+modifiers---with the notable exception of relative clauses, CP being another
+functional category. Thus, the phrase structure of DPs should look as
+illustrated in (\ref{ex:dpstruct}) and (\ref{ex:dpcstruct}). In both cases, the
+CP constituent is in brackets since it is optional, that is, it is an adjunct
+rather than a complement. The functional annotation identifies it as such.
 
 \pex\label{ex:dpstruct}
 \a DP → \anno*{\xbar{D}}
@@ -1000,6 +1002,35 @@ illustrated in (\ref{ex:dpstruct}).
 
 \subsubsection{Personal pronouns}
 
+The morpholexic specifications for personal pronouns are given in 
+(\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
+closed class of words; the chart of personal pronouns in Ayeri is given in
+\autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
+have lexical content for a predicator, but only `pro', that is, they express
+anaphoric reference. Pronouns distinguish, of course, all grammatical
+categories of nouns---number, gender and animacy, and case. In addition to
+this, there is person. The reflexive clitic \rayr{sitNF/}{sitang-} also adds
+reflexivity as a semantic feature.
+
+\ex\label{ex:perspromorphlex}
+\adjustbox{valign=t}{%
+\begin{tabu} {\usetabu{morphlexnarrow}}
+...
+	& N
+	& \begin{tabular}[t]{l l l}
+		\ups{\Pred} & = & `pro' \\
+		\ups{\Anim} & = & $\pm$ \\
+		\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
+			\Caus{}\} \\
+		\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
+		\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+		\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+		\ups{\Refl} & = & $\pm$ \\
+	\end{tabular}
+\end{tabu}%
+}
+\xe
+
 ...
 
 \subsubsection{Demonstrative pronouns}
@@ -1013,125 +1044,6 @@ illustrated in (\ref{ex:dpstruct}).
 \subsubsection{Reciprocal pronouns}
 
 ...
-
-% The functional heads of DPs are formed by determiners. The c-structure of a DP
-% corresponding to the linear description in (\ref{ex:dpdef}) is depicted in
-% (\ref{ex:dpcstruct}); annotations about feature inheritance for
-% c-to-f-structure conversion have been added. If the DP has a dependent phrase
-% providing lexical content, it is in the form of an NP complement, whose head
-% forms a lexical co-head of \xhead{D}. This NP must be annotated with
-% `\updown{}' to signify that its features are inherited to DP wholesale.
-% Alternatively, a DP containing a pronoun may also be modified by an NP adjunct,
-% a possessive NP, an AP or a relative-clause CP, which all need to be annotated
-% with `\pass{\Adj}', since they are not complements.
-
-% \ex\label{ex:dpcstruct}
-% \begin{forest}
-% [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}]
-% 		[{$\left(\anno[{%
-% 		\updown{}\\%
-% 		%\logor{} \pass{\XCompl}\\%
-% 		\logor{} \pass{\Adj}%
-% 	}]{XP}\right)$}]
-% 	]
-% ]
-% \end{forest}
-% \xe
-
-% Ayeri does not possess articles as such, though it does have a variety of
-% morphemes which occur as clitic prefixes on nouns which can be analyzed to
-% fulfill this function. These clitics are the demonstrative prefixes
-% \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such (a)},
-% as well as the inspecificity prefix \xayr{me/}{mə-}{some} (compare
-% \autoref{subsec:nounpref}). These prefixes can only be used with nouns, but not
-% with personal pronouns (compare \autoref{subsec:perspro}), since personal
-% pronouns as well have the status of determiners. Pronouns, as pro-forms, are in
-% complementary distribution with NPs containing a noun. Due to affix-order
-% considerations concerning the demonstrative prefixes, it also seems advisable
-% to analyze the case markers of proper nouns as determiners. In order to capture
-% the fact that an NP is facultative with the demonstrative and inspecificity
-% prefixes while it must not occur with pronouns, `NP' appears in parentheses
-% since a phrasal complement it is not always present. We can define the
-% following morpholexic rules for determiners (\xhead{D}):
-
-% % FIXME: For some of these I'm not sure *at all* whether they're adjuncts or
-% % whether they should better be classified as complements :O
-
-% \pex %
-% % \a\label{ex:dmorphlex-dem}Demonstrative prefixes:\medskip
-% % 
-% % 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
-% % 	\savetabu{morphlex}
-% % 	\rayr{Ed/}{eda-} (`this')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `this' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Prox} & = & $+$ \\
-% % 			\ups{\Dist} & = & $-$ \\
-% % 			\ups{\Def} & = & $+$ \\
-% % 			\ups{\Spec} & = & $+$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}\medskip
-% % 
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{Ad/}{ada-} (`that')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `that' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Prox} & = & $-$ \\
-% % 			\ups{\Dist} & = & $+$ \\
-% % 			\ups{\Def} & = & $+$ \\
-% % 			\ups{\Spec} & = & $+$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}\medskip
-% % 	
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{d/}{da-} \mbox{(`such a')}
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `such' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Def} & = & $-$ \\
-% % 			\ups{\Spec} & = & $-$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}
-% % 	
-% % \needspace{3\baselineskip}
-% % \a Inspecificity prefix:\medskip
-% % 
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{me/}{mə-} (`whichever')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % 			\ups{\Def} & = & $-$ \\
-% % 			\ups{\Spec} & = & $-$ \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 		\end{tabular}
-% % 	\end{tabu}
-% % 
-% % \needspace{3\baselineskip}
-% \a Personal pronouns:\medskip
-
-% 	\begin{tabu} {\usetabu{morphlex}}
-% 	(various)
-% 		& N
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `pro' \\
-% 			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-% 			\ups{\Refl} & = & $\pm$ \\
-% 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
-% 			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
-% 			\ups{\Anim} & = & $\pm$ \\
-% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% 				\Loc{}, \Ins{}, \Caus{}\} \\
-% 			\ups{\Def} & = & $+$ \\
-% 			\ups{\Spec} & = & $+$ \\
-% 		\end{tabular}
-% 	\end{tabu}
 	
 % \needspace{3\baselineskip}
 % \a Demonstrative pronouns:\medskip
@@ -1203,500 +1115,6 @@ illustrated in (\ref{ex:dpstruct}).
 % \autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
 % \Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
 % Gender is also not distinguished in all persons, but only in the third.
-
-% \subsection{Interactions between DP and NP}
-% \label{subsec:dpnpinteract}
-
-% With common nouns, a determiner which requires a complement (like the
-% demonstrative prefixes, for instance) simply cliticizes to the next \xhead{N}
-% it commands, which is illustrated in (\ref{ex:det+comn}). If a proper noun is
-% involved, however, there need to be two \xhead{D} slots, one for the case
-% marker, and another for the demonstrative prefix, which (\ref{ex:det+propn})
-% gives an example of.
-% %: \xbar{D} is simply doubled to accommodate for another \xhead{D}.
-% % FIXME: If this is possible!?
-% In both cases, the determiner prefix is unstressed and combines 
-% phonetically with the NP modifier, as shown in (\ref{ex:det+comn}). If there is
-% no coalescence of vowels, as in (\ref{ex:det+propn}), the prefix remains
-% unstressed: \rayr{Ad/YnF}{ada-Yan} [a.da.ˈjan].
-
-% \begin{multicols}{2}
-% \pex\label{ex:det+comn}
-% \a\begingl
-% 	\gla ayonang //
-% 	\glb ayon-ang //
-% 	\glc man-\Aarg{} //
-% 	\glft `the/a man' //
-% \endgl
-
-% \a\begingl
-% 	\gla adāyonang //
-% 	\glb ada=ayon-ang //
-% 	\glc that=man-\Aarg{} //
-% 	\glft `that man' //
-% \endgl
-
-% \xe
-
-% \pex~\label{ex:det+propn}
-% \a\begingl
-% 	\gla {ang Diyan} //
-% 	\glb ang=Diyan //
-% 	\glc \Aarg{}=Diyan //
-% 	\glft `Diyan' //
-% \endgl
-
-% \a\label{ex:case+det+propn}\begingl
-% 	\gla {ang ada-Diyan} //
-% 	\glb ang=ada=Diyan //
-% 	\glc \Aarg{}=that=Diyan //
-% 	\glft `that Diyan' //
-% \endgl
-
-% \xe
-
-% \end{multicols}
-
-% \begin{multicols}{2}
-% \pex~
-% \a \begin{minipage}[t]{\linewidth}
-% C-structure for (\ref{ex:det+comn}):\medskip
-
-% \quad {\begin{forest} shorter edges, baseline,
-% [NP
-% 	[\xbar{N}
-% 		[\xhead{D}
-% 			[ada-]
-% 		]
-% 		[\xbar{N}
-% 			[\xhead{N}
-% 				[ayonang]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}
-% }
-% \end{minipage}
-
-% \a \begin{minipage}[t]{\linewidth}
-% C-structure for (\ref{ex:det+propn}):\medskip
-
-% \quad {\begin{forest} shorter edges, baseline,
-% % [NP
-% % 	[\xbar{N}
-% % 		[\xhead{D}
-% % 			[ang]
-% % 		]
-% % 		[\xbar{N}
-% % 			[\xhead{D}
-% % 				[ada-]
-% % 			]
-% % 			[\xbar{N}
-% % 				[\xhead{N}
-% % 					[Diyan]
-% % 				]
-% % 			]
-% % 		]
-% % 	]
-% % ]
-% [...]
-% \end{forest}
-% }
-% \end{minipage}
-% \xe
-% \end{multicols}
-
-% Furthermore, as mentioned before in \autoref{subsubsec:verbprefixes}, it is 
-% possible to abbreviate \xayr{dnY}{danya}{such one} + adjective as 
-% \rayr{d/}{da-} + adjective. This affixing of the indefinite demonstrative 
-% essentially derives a complex anaphora. The trees charted in (\ref{ex:adjpron}) 
-% illustrate pronominalized adjectives and possessive pronouns.
-
-% \ex\label{ex:adjpron}\labels%
-% \parbox[t]{.4\linewidth}{%
-% \tl\quad\begingl%
-% 	\gla da-kivo //
-% 	\glb da=kivo //
-% 	\glc one=small //
-% 	\glft `the small one' //
-% \endgl%
-% }%\medskip
-% %
-% \begin{tabular}[t]{@{} l @{\quad→\quad} l}
-% \begin{forest} shorter edges, narrower nodes,
-% [DP
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}
-% 			[danya]
-% 		]
-% 		[{\anno[\pass{\Adj}]{AP}}
-% 			[\anno{\xhead{A}}
-% 				[kivo]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}
-
-% &
-
-% \begin{forest} shorter edges, narrower nodes,
-% % [AP
-% % 	[\anno{\xbar{A}}
-% % 		[\anno{\xhead{D}}
-% % 			[da-]
-% % 		]
-% % 		[\anno{\xbar{A}}
-% % 			[\anno{\xhead{A}}
-% % 				[kivo]
-% % 			]
-% % 		]
-% % 	]
-% % ]
-% [...]
-% \end{forest}
-% \end{tabular}
-
-% \parbox[t]{.4\linewidth}{%
-% \tl\quad\label{ex:posspron}%
-% \begingl%
-% 	\gla da-vana //
-% 	\glb da=vana //
-% 	\glc such=\Second{}.\Gen{} //
-% 	\glft `yours' //
-% \endgl}%\medskip
-% %
-% \begin{tabular}[t]{@{} l @{\quad→\quad} l}
-% \begin{forest} shorter edges, narrower nodes,
-% [DP
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}
-% 			[danya]
-% 		]
-% 		[{\anno[\pass{\Adj}]{DP}}
-% 			[\anno{\xhead{D}}
-% 				[vana]
-% 			]
-% 		]
-% 	]
-% ]
-% \end{forest}
-
-% &
-
-% \begin{forest} shorter edges, narrower nodes,
-% % [DP
-% % 	[\anno{\xbar{D}}
-% % 		[\anno{\xhead{D}}
-% % 			[da-]
-% % 		]
-% % 		[{\anno{\xbar{D}}}
-% % 			[\anno{\xhead{D}}
-% % 				[vana]
-% % 			]
-% % 		]
-% % 	]
-% % ]
-% [...]
-% \end{forest}
-% \end{tabular}
-% \xe
-
-% \rayr{d/}{da-} in this case looks like the indefinite demonstrative prefix,
-% defined in (\ref{ex:dmorphlex-dem}) above. However, \rayr{d/} in this case does
-% not have a strictly deictic meaning, but an anaphoric one---together with the
-% adjunct it forms a pronoun of sorts, though unlike \rayr{dnY}{danya} and like
-% the indefinite demonstrative, it cannot stand alone, but needs another word to
-% lean on as a clitic. Thus, we have to distinguish between the demonstrative
-% prefix \rayr{d/}{da-} and the anaphoric prefix \rayr{d/}{da-}.
-% \autoref{fig:da-s} compares their morpholexical features.
-
-% \begin{figure}[t]\centering
-% \caption{Comparison between two functions of \rayr{d/}{da-}}
-% \begin{tabu} to \linewidth {X[1] X[12] X[1] X[12]}
-% \toprule\tableheaderfont
-% \multicolumn{2}{c}{Demonstrative \rayr{d/}{da-}}
-% & \multicolumn{2}{c}{Anaphoric \rayr{d/}{da-}}
-% \\
-% \toprule
-% D
-% & \begin{tabular}[t]{l l l}
-% 	\ups{\Pers} & \req{} & 3 \\
-% 	\ups{\Def} & = & $-$ \\
-% 	\ups{\Spec} & = & $-$ \\
-% \end{tabular}
-
-% &
-
-% D
-% & \begin{tabular}[t]{l l l}
-% 	\ups{\Pred} & = & `pro' \\
-% 	\ups{\Pers} & = & 3 \\
-% 	\ups{\Def} & = & $+$ \\
-% 	\ups{\Index{} \Pers} & = & 3 \\
-% 	\ups{\Index{} \Num} & = & \{\Sg{}, \Pl\} \\
-% 	\ups{\Index{} \Gend} & = & \{\M{}, \F{}, \N{}\} \\
-% 	\ups{\Index{} \Anim} & = & $\pm$ \\
-% \end{tabular}
-% \\
-
-% \bottomrule
-
-% \end{tabu}
-% \label{fig:da-s}
-% \end{figure}
-
-% The most striking difference in features should be that anaphoric 
-% \rayr{d/}{da-} lists a predicator which designates it as a pro-form, whereas
-% demonstrative \rayr{d/}{da-} is, essentially, a functional morpheme only, 
-% without lexical content. As a pro-form, the anaphoric prefix is able to
-% bind another NP, while demonstrative prefix cannot. Furthermore, the 
-% demonstrative prefix requires the presence of a third-person term, while the
-% anaphoric prefix defines one. Also, the definiteness and specificity values 
-% differs in that the demonstrative prefix with its meaning `such a' refers to
-% one, but no particular item of a set of alike items, while the anaphoric prefix 
-% refers to a certain item, that is, the referent it binds.
-
-% As shown in (\ref{ex:adjpron}), the host of the anaphoric \rayr{d/}{da-} clitic
-% may be an adjective or a possessive pronoun. In contrast to NPs, which are
-% complements of \xhead{D}, their maximal projections (AP and DP, respectively)
-% are adjuncts and thus need to be annotated with `\pass{\Adj}' rather than 
-% `\updown{}'. Complex anaphora with anaphoric \rayr{d/}{da-} may also receive
-% case marking like any other nominal, whether DP or NP. The variable person
-% features---\Num{}, \Gend{}, and \Anim{}---are inherited from the bound NP, so
-% that the respective \Aarg{} and \Parg{} case markers are selected in accordance
-% with the referred-to NP's \Anim{} feature. Verbs agree in number, gender, and
-% animacy accordingly as well if relevant.
-
-% \pex
-% \a\begingl
-% 	\gla Le ming eryavāng {\normalfont [\tsup{NP}} @ limu nā @ 
-% 			{\normalfont ]\tsub{i}}. //
-% 	\glb Le ming ery=vāng {} limu-Ø nā {} //
-% 	\glc \PatTI{} can use=\Second{}.\Aarg{} {} shirt-\Top{} {} //
-% 	\glft `You can use my shirt.' //
-% \endgl
-
-% \a\begingl
-% 	\gla Da-nāreng\tsub{i} apitu. //
-% 	\glb Da=nā-reng apitu //
-% 	\glc one=\Fsg{}.\Gen{}-\AargI{} clean //
-% 	\glft `Mine is clean.' //
-% \endgl
-
-% \xe
-
-% Note, however, that in predicative statements, if a possessive pronoun is in the
-% second position, it can take \rayr{d/}{da-}, but it acts similarly to an
-% adjective. This means that in this exceptional case, there is no case marking
-% for agent or patient, which would otherwise be required of NPs. This is the 
-% reason why in \autoref{fig:da-s}, the \Pers{} and \Def{} values are in 
-% parenthesis---these features are not encoded by adjectives.
-
-% \pex
-% \a\begingl
-% 	\gla Adanyāng {\normalfont [\tsup{NP}} @ nangās nā @ 
-% 		{\normalfont ]\tsub{j}}. //
-% 	\glb Adanya-ang {} nanga-as nā {} //
-% 	\glc that-\Aarg{} {} house-\Parg{} \Fsg{}.\Gen{} {} //
-% 	\glft `That is my house'. //
-% \endgl
-
-% \a\begingl
-% 	\gla Adanyāng da-nā\tsub{j}. //
-% 	\glb Adanya-ang da=nā //
-% 	\glc that-\Aarg{} one=\Fsg{}.\Gen{} //
-% 	\glft `It is mine.' //
-% \endgl
-
-% \a\begingl
-% 	\gla Apitu da-nā\tsub{i}. //
-% 	\glb Apitu da=nā //
-% 	\glc clean one=\Fsg{}.\Gen{} //
-% 	\glft `Mine is clean.' //
-% \endgl
-
-% \xe
-
-% While it is possible to derive complex anaphora from adjectives and possessive
-% pronouns this way, the process as described above only works for single 
-% words, but not for complex phrases. Thus, for instance, the following examples
-% are unacceptable:
-
-% \pex
-% \a\label{ex:suchadjp}\ljudge*\begingl
-% 	\gla Tahayang {\normalfont [\tsup{DP}} @ da- @ {\normalfont 
-% 		[\tsup{AP}} @ dano nay kema @ {\normalfont]]}. //
-% 	\glb Taha=yang {} da= {} dano nay kema {} //
-% 	\glc have=\Fsg{}.\Aarg{} {} one= {} green and striped {} //
-% 	\glft `I have a/the green-and-striped one.' //
-% \endgl
-
-% \a\label{ex:suchrelc}\ljudge*\begingl
-% 	\gla Vāng {\normalfont [\tsup{DP}} @ da- @ {\normalfont[\tsup{CP}} 
-% 		@ si ya silvasayang ren @ {\normalfont ]]}. //
-% 	\glb Vāng {} da= {} si ya silv-asa=yang ren-Ø {} //
-% 	\glc \Second.\Aarg{} {} one= {} \Rel{} \LocT{} 
-% 		see-\Hab{}=\Fsg{}.\Aarg{} market-\Top{} {} //
-% 	\glft `You are the who-I-always-see-at-the-market one.' //
-% \endgl
-% \xe
-
-% Example (\ref{ex:suchadjp}) shows an AP consisting of two coordinated 
-% adjectives which are supposed to be nominalized here. The DP would normally 
-% have to be a patient, since \xayr{th/}{taha-}{have} requires two 
-% arguments---a possessor and a possessee, which are conventionally mapped to 
-% \Sbj{}/\Aarg{} and \Obj{}/\Parg{}, respectively. We have seen, however, that 
-% Ayeri allows nominal phrases unmarked for case only under very special 
-% circumstances. The question is, thus, whether a complex phrase can be 
-% nominalized as a whole in the first place. The next questions are, then, where 
-% the case marker should go:
-
-% \begin{enumerate}[noitemsep]
-% 	\item only on the first head,
-% 	\item on each conjunct (would \rayr{d/}{da-} also need to be 
-% 		distributed, then?),
-% 	\item or, essentially, as a clitic at the very end?
-% \end{enumerate}
-
-% \noindent If marking went on each conjunct, this would coordinate two APs 
-% instead of two \xhead{A}, however: `the green one and the striped one', which
-% is not necessarily the same as `the green and striped one'. With the relative
-% clause in (\ref{ex:suchrelc}) only suggestions 1 and 3 are possible, with an
-% awkward result as well. The solution in either case is to remember that 
-% \rayr{d/}{da-} + non-noun is an abbreviation of the full indefinite 
-% demonstrative, which basically behaves like a noun in terms of adjuncts:
-
-% \pex
-% \a\label{ex:danyaadjp}\begingl
-% 	\gla Le tahayang {\normalfont [\tsup{DP}} @ danya {\normalfont 
-% 		[\tsup{AP}} @ dano nay kema @ {\normalfont]]}. //
-% 	\glb Le taha=yang {} danya-Ø {} dano nay kema {} //
-% 	\glc \PatTI{} have=\Fsg{}.\Aarg{} {} one-\Top{} {} green and striped {} //
-% 	\glft `I have the green and striped one.' //
-% \endgl
-
-% \a\begingl
-% 	\gla Vāng {\normalfont [\tsup{DP}} @ danyās {\normalfont[\tsup{CP}} 
-% 		@ si ya silvasayang ren @ {\normalfont ]]}. //
-% 	\glb Vāng {} danya-as {} si ya silv-asa=yang ren-Ø {} //
-% 	\glc \Second.\Aarg{} {} one-\Parg{} {} \Rel{} \LocT{} 
-% 		see-\Hab{}=\Fsg{}.\Aarg{} market-\Top{} {} //
-% 	\glft `You are the one who I always see at the market.' //
-% \endgl
-% \xe
-
-% Instead of the construction in (\ref{ex:danyaadjp}) it is also possible to
-% pronominalize the first adjective and to include the second one in a relative 
-% clause, or to turn the second adjective into a noun adjunct if there is an
-% equivalent noun. Since \xayr{kem}{kema}{striped} is derived from the noun
-% \xayr{kem}{kema}{stripe}, this strategy is possible here.
-
-% \pex
-% \a\begingl
-% 	\gla da-danoley si kema //
-% 	\glb da=dano-ley si kema //
-% 	\glb one=green-\PargI{} \Rel{} striped //
-% 	\glft `the green one which is striped' //
-% \endgl
-
-% \a\begingl
-% 	\gla da-danoley kemayeri //
-% 	\glb da=dano-ley kema-ye-ri //
-% 	\glc one=green-\PargI{} stripe-\Pl{}-\Ins{} //
-% 	\glft `the green one with stripes' //
-% \endgl
-
-% \xe
-
-% \section{Adjective phrases and adverbial phrases}
-
-% Adjectives describe properties of nouns; adverbs describe properties of actions,
-% but may also provide additional information about place, time, manner,
-% quantity, degree etc. more generally by not only modifying verbs, but also other
-% parts of speech, or even whole clauses. The morphology of adjectives has been 
-% elaborated in \autoref{sec:adjectives}; different uses of adverbs have been
-% described in \autoref{sec:adverbs}. In this section, I will not deal with those
-% adverbials consisting of an adpositional phrase, that is, ones which primarily
-% provide information on time and place.
-
-% Adjective phrases are headed by an adjective (\xhead{A}), which may either be
-% modified by an adverb (\ref{ex:adjadv}), or by an NP complement, for instance 
-% (\ref{ex:adjnp}):
-
-% \pex
-% \a\label{ex:adjadv}\begingl
-% 	\gla viyu \textbf{cuyam} //
-% 	\glb viyu cuyam //
-% 	\glc proud indeed //
-% 	\glft `indeed proud' //
-% \endgl
-
-% \a\label{ex:adjnp}\begingl
-% 	\gla viyu \textbf{yaneri} \textbf{tan} //
-% 	\glb viyu yan-eri tan //
-% 	\glc proud son-\Ins{} \TplM{}.\Gen{} //
-% 	\glft `proud of their son' //
-% \endgl
-
-% \xe
-
-% The phrase structure of an AP thus can be generalized as shown in 
-% (\ref{ex:apstruct}), which corresponds to the c-structure illustrated in 
-% (\ref{ex:apcstruct}). I am assuming here that adjectives and adverbs share the 
-% same structures, hence I will not distinguish between them formally.
-
-% \ex\label{ex:apstruct}
-% AP → \xhead{A} $\left(\anno*[{%
-% 		\pass{\Adjc{}}\\
-% 		\logor{} \pass{\OblqT}% FIXME: Not sure about this
-% 	}]{XP}\right)$
-% \xe
-
-% \ex~\label{ex:apcstruct}
-% \begin{forest}
-% [{\anno[\pass{\Adjc} \logor{} \pass{\XCompl}]{AP}}
-% 	[\anno{\xbar{A}}
-% 		[\anno{\xhead{A}}]
-% 		[{$\left(\anno[{%
-% 				\pass{\Adjc{}}\\
-% 				\logor{} \pass{\OblqT}% FIXME: Not sure about this
-% 			}]{XP}\right)$}]
-% 	]
-% ]
-% \end{forest}
-% \xe
-
-% Adjectives and adverbs in Ayeri can be interpreted as not inflecting, with even
-% the comparative suffixes construed as adverbial clitics meaning `rather' and
-% `most'. The only feature property of both adjectives and adverbs would be 
-% \Pred{}, then. A more progressive and strictly lexicalist interpretation would
-% treat these markers as inflections, however, so that adjectives and adverbs 
-% would both additionally have to have a \textsc{compar} feature (compare 
-% \cite[Feature Table]{pargram}) taking the values \Comp{} and \Supl{}.\footnote{%
-% In this context, \Comp{} is short for `comparative', not `complement'!} Both
-% hypotheses should be easily comprehensible, since clitics usually are 
-% grammaticalized as inflection. That such a grammaticalization process is in
-% progress here is possible, in that the comparison suffixes---even though they
-% still exist as separate lexical items, for which reason I am glossing them as
-% clitics rather than as inflection---mainly serve a functional purpose here.
-% That is, they may be interpreted as being in the process of losing their 
-% \Pred{} value in favor of becoming integrated into the language's grammar as
-% functional morphemes. The prototype of a table of morpholexic definitions for 
-% \xhead{A} accordingly looks like this:
-
-% \needspace{3\baselineskip}
-% \ex \begin{tabu}[t] {\usetabu{morphlex}}
-% 	...
-% 		& A
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `...' \\
-% 			\ups{\Compar} & = & \{\Comp{}, \Supl{}\} \\
-% 		\end{tabular}
-% 	\end{tabu}
-
-% \xe
 
 % \section{Adpositional phrases}
 %
