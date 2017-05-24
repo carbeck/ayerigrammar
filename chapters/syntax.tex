@@ -238,6 +238,8 @@ the number of arguments to the verb is greater than one.
 
 \subsection{Noun phrases}
 
+\subsubsection{Constituent order within noun phrases}
+
 Nouns are one of the main parts of speech of Ayeri, and nouns can be modified
 by a number of other free elements, as we have seen previously---adjectives,
 possessive adjectives, as well as relative clauses and nominal adjuncts. These
@@ -707,14 +709,441 @@ particle:
 \xe
 
 Furthermore, example (\ref{ex:nounqadj}) already showed that nouns may be
-modified by quantifiers, also compare \autoref{subsec:quantifiers}. In these
-cases, plural marking is suppressed by the presence of the modifier which
-supplies the information by itself so that further morphological plural marking
-by the suffix \rayr{/ye}{-ye} on the noun stem itself is redundant, and as such
-limited to certain occasions (see \autoref{sec:numerals}, 
-p.~\pageref{hundreds}).
+modified by quantifiers, whether these are clitic suffixes
+(\autoref{subsec:quantifiers}) or numerals (\autoref{sec:numerals}). In these
+cases, plural marking on the noun is suppressed by the presence of the modifier
+which supplies the information by itself so that further morphological plural
+marking by the suffix \rayr{/ye}{-ye} on the noun stem itself would be
+redundant. As shown in \autoref{sec:numerals} (p.~\pageref{hundreds}), however,
+there are very limited occasions where a noun may be marked for plural in spite
+of the presence of a numeral, for instance:
 
-...
+\ex\begingl
+	\gla Ang bengyon keynamye menang kanānya {desay iray}. //
+	\glb ang beng-yon keynam-ye-Ø menang kanān-ya {desay iray} //
+	\glc \AgtT{} attend-\TplN{} people-\Pl{}-\Top{} hundred wedding-\Loc{} 
+		royal //
+	\glft `Hundreds of people attended the royal wedding.' //
+\endgl\xe
+
+Here, the noun \xayr{kejnmF}{keynam}{people} is marked additionally for plural
+by the nominal plural suffix \rayr{/ye}{-ye} in spite of being a \fw{plurale
+tantum} and in spite of the presence of the numeral \rayr{menNF}{menang}
+{hundred}. Without plural morphology, the meaning of \rayr{kejnmF menNF}{keynam
+menang} would be `a hundred people', not generic `hundreds'.
+
+\subsection{Determiner phrases}
+\label{subsec:dps}
+
+Determiner phrases (DPs) are the functional equivalent of NPs; determiners as
+their heads (\xhead{D}) are a closed class of function words such as pronouns
+\citep[102] {bresnan2016}. In English, for instance, articles are also counted
+among determiners \citep[208--211]{carnie2013}. Ayeri, however, probably does
+not possess articles as such. The preposed case markers of proper nouns bear
+superficial similarity to cased articles in German, and their presence or
+absence is morphosyntactically controlled by topicalization and thus also
+interacts with definiteness.
+
+\ex\labels
+\begin{tabular}[t]{@{} l l >{\itshape\bfseries}l @{~} >{\itshape}l l
+l}
+\tl\quad
+	& \multicolumn{4}{l}{German:}\medskip
+	\\
+
+	& \Nom
+	& der & Mann
+	& `the man'
+	\\
+
+	& \Acc
+	& den & Mann
+	& `the man'
+	\\
+
+	& \Dat
+	& dem & Mann
+	& `to the man'
+	\\
+
+	& \Gen
+	& des & Mannes
+	& `of the man'
+	\bigskip \\
+
+\tl\quad
+	& \multicolumn{4}{l}{Ayeri:}\medskip
+	\\
+
+	& \Aarg
+	& ang & Sān
+	& `Sān'
+	\\
+
+	& \Parg
+	& sa & Sān
+	& `Sān'
+	\\
+
+	& \Dat	
+	& yam & Sān
+	& `to Sān'
+	\\
+	
+	& \Gen
+	& na & Sān
+	& `Sān's'
+	\\
+	
+	& \Loc
+	& ya & Sān
+	& `at Sān'
+	\\
+	
+	& \Caus
+	& sā & Sān
+	& `due to Sān'
+	\\
+	
+	& \Ins
+	& ri & Sān
+	& `with/by Sān'
+	\\
+\end{tabular}
+\xe
+
+While in German an article and a demonstrative pronoun, or also a possessive
+pronoun cannot co-occur, this is not a problem in Ayeri. As argued in 
+\autoref{subsec:clitics}, both case markers and deictic/demonstrative prefixes
+in Ayeri are clitics; the similarity between possessive pronouns and adjectives
+has also been noted in \autoref{phsec:possadj} (p.~\pageref{phsec:possadj}).
+Furthermore, the preposed case markers of nouns are an exception compared to 
+the much more frequent occurrence of case-marking suffixes on generic nouns. It
+thus does not seem straightforward to analyze the case markers as heads of DPs.
+
+\pex\label{ex:germandetdist}
+	\a\rc{German}
+	\begingl
+		\gla der Mann //
+		\glb der Mann //
+		\glc \Def{}.\Nom{}.\Sg{}.\M{} man //
+		\glft `the man' //
+	\endgl
+
+	\a\begingl
+		\gla dieser Mann //
+		\glb dies-er Mann //
+		\glc this-\Nom{}.\Sg{}.\N{} man //
+		\glft `this man' //
+	\endgl
+
+	\a\begingl
+		\gla mein Mann //
+		\glb mein-Ø Mann //
+		\glc \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
+		\glft `my husband' //
+	\endgl
+
+	\a\ljudge*\begingl
+		\gla der diese Mann //
+		\glb der dies-e Mann //
+		\glc \Def{}.\Nom{}.\Sg{}.\M{} this-\Nom{}.\Sg{}.\N{} man //
+		\glft `the this man' //
+	\endgl
+
+	\a\ljudge*\begingl
+		\gla der meine Mann //
+		\glb der mein-e Mann //
+		\glc \Def{}.\Nom{}.\Sg{}.\M{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
+		\glft `the my husband' //
+	\endgl
+
+	\a\ljudge\mkd\label{ex:germandemposs}\begingl
+		\gla dieser mein Mann //
+		\glb dies-er mein-Ø Mann //
+		\glc this-\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
+		\glft `this man of mine' //
+	\endgl
+\xe
+
+The examples in (\ref{ex:germandetdist}) show that determining elements such as
+a definite article (\fw{der} `the'), a demonstrative pronoun (\fw{dieser}
+`this') and a possessive pronoun (\fw{mein} `my') are in complementary
+distribution for some combinations. The only exception to this is the
+combination of demonstrative and possessive in (\ref{ex:germandemposs}), which
+is grammatically marked, however. On this phenomenon of complementary
+distribution of determiners, which also holds true for English, \citet[208]
+{carnie2013} writes, \textquote{One thing to note about determiners is that
+they are typically heads. Normally, there can only be one of them in an NP,} at
+least in English (and German). \citet[9--22]{demske2001} elaborates on this
+point for German as well. Ayeri, however, seems to behave differently in
+treating case markers and demonstrative elements as clitics:
+
+\pex\label{ex:ayericasenoart}
+	\a
+	\begingl
+		\gla ang @ Sān //
+		\glb ang= Sān //
+		\glc \Aarg{}= Sān //
+		\glft `Sān' //
+	\endgl
+
+	\a\begingl
+		\gla ang @ eda- @ Sān //
+		\glb ang= eda= Sān //
+		\glc \Aarg{}= this= Sān //
+		\glft `this Sān' //
+	\endgl
+
+	\a\label{ex:naaadj}\begingl
+		\gla ang @ Sān nā //
+		\glb ang= Sān nā //
+		\glc \Aarg{}= Sān \Fsg{}.\Gen{} //
+		\glft `my Sān' //
+	\endgl
+
+	\a\ljudge\ques\begingl
+		\gla ang @ eda- @ Sān nā //
+		\glb ang= eda= Sān nā //
+		\glc \Aarg{}= this= Sān nā //
+		\glft `this Sān of mine' //
+	\endgl
+\xe
+
+In all cases listed in (\ref{ex:ayericasenoart}), the case marker is present
+and marks the NP simply for agent case, irrespective of other elements.
+Characteristically, neither the deictic prefixes, nor the possessive
+pronoun/adjective in Ayeri mark case, while they do in German. The case marker
+thus cannot be simply left out, because the information it provides is not
+redundant, strictly speaking. Where it \emph{is} left out, it marks the NP as
+topicalized and it is required, then, that the verb mark the topicalized NP's
+case. The same is also true of generic nouns:
+
+\pex
+	\a
+	\begingl
+		\gla veneyang //
+		\glb veney-ang //
+		\glc dog-\Aarg{} //
+		\glft `a/the dog' //
+	\endgl
+
+	\a\begingl
+		\gla eda- @ veneyang //
+		\glb eda= veney-ang //
+		\glc this= dog-\Aarg{} //
+		\glft `this dog' //
+	\endgl
+
+	\a\begingl
+		\gla veneyang nā //
+		\glb veney-ang nā //
+		\glc dog-\Aarg{} \Fsg{}.\Gen{} //
+		\glft `my dog' //
+	\endgl
+
+	\a\begingl
+		\gla eda- @ veneyang nā //
+		\glb eda= veney-ang nā //
+		\glc this= dog-\Aarg{} \Fsg{}.\Gen{} //
+		\glft `this dog of mine' //
+	\endgl
+\xe
+
+While it has been argued that Ayeri does not possess articles, it does possess 
+a large variety of pronouns. These, as pro-elements, appear in complementary
+distribution to NPs. Since they encode morphosyntactic functions rather than
+semantic content, they are ideal candidates for heads of DP.
+
+% The functional heads of DPs are formed by determiners. The c-structure of a DP
+% corresponding to the linear description in (\ref{ex:dpdef}) is depicted in
+% (\ref{ex:dpcstruct}); annotations about feature inheritance for
+% c-to-f-structure conversion have been added. If the DP has a dependent phrase
+% providing lexical content, it is in the form of an NP complement, whose head
+% forms a lexical co-head of \xhead{D}. This NP must be annotated with
+% `\updown{}' to signify that its features are inherited to DP wholesale.
+% Alternatively, a DP containing a pronoun may also be modified by an NP adjunct,
+% a possessive NP, an AP or a relative-clause CP, which all need to be annotated
+% with `\pass{\Adj}', since they are not complements.
+
+% \ex\label{ex:dpcstruct}
+% \begin{forest}
+% [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
+% 	[\anno{\xbar{D}}
+% 		[\anno{\xhead{D}}]
+% 		[{$\left(\anno[{%
+% 		\updown{}\\%
+% 		%\logor{} \pass{\XCompl}\\%
+% 		\logor{} \pass{\Adj}%
+% 	}]{XP}\right)$}]
+% 	]
+% ]
+% \end{forest}
+% \xe
+
+% Ayeri does not possess articles as such, though it does have a variety of
+% morphemes which occur as clitic prefixes on nouns which can be analyzed to
+% fulfill this function. These clitics are the demonstrative prefixes
+% \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such (a)},
+% as well as the inspecificity prefix \xayr{me/}{mə-}{some} (compare
+% \autoref{subsec:nounpref}). These prefixes can only be used with nouns, but not
+% with personal pronouns (compare \autoref{subsec:perspro}), since personal
+% pronouns as well have the status of determiners. Pronouns, as pro-forms, are in
+% complementary distribution with NPs containing a noun. Due to affix-order
+% considerations concerning the demonstrative prefixes, it also seems advisable
+% to analyze the case markers of proper nouns as determiners. In order to capture
+% the fact that an NP is facultative with the demonstrative and inspecificity
+% prefixes while it must not occur with pronouns, `NP' appears in parentheses
+% since a phrasal complement it is not always present. We can define the
+% following morpholexic rules for determiners (\xhead{D}):
+
+% % FIXME: For some of these I'm not sure *at all* whether they're adjuncts or
+% % whether they should better be classified as complements :O
+
+% \pex %
+% % \a\label{ex:dmorphlex-dem}Demonstrative prefixes:\medskip
+% % 
+% % 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
+% % 	\savetabu{morphlex}
+% % 	\rayr{Ed/}{eda-} (`this')
+% % 		& D
+% % 		& \begin{tabular}[t]{l l l}
+% % % 			\ups{\Pred} & = & `this' \\
+% % 			\ups{\Pers} & \req{} & 3 \\
+% % 			\ups{\Prox} & = & $+$ \\
+% % 			\ups{\Dist} & = & $-$ \\
+% % 			\ups{\Def} & = & $+$ \\
+% % 			\ups{\Spec} & = & $+$ \\
+% % 		\end{tabular}
+% % 	\end{tabu}\medskip
+% % 
+% % 	\begin{tabu} {\usetabu{morphlex}}
+% % 	\rayr{Ad/}{ada-} (`that')
+% % 		& D
+% % 		& \begin{tabular}[t]{l l l}
+% % % 			\ups{\Pred} & = & `that' \\
+% % 			\ups{\Pers} & \req{} & 3 \\
+% % 			\ups{\Prox} & = & $-$ \\
+% % 			\ups{\Dist} & = & $+$ \\
+% % 			\ups{\Def} & = & $+$ \\
+% % 			\ups{\Spec} & = & $+$ \\
+% % 		\end{tabular}
+% % 	\end{tabu}\medskip
+% % 	
+% % 	\begin{tabu} {\usetabu{morphlex}}
+% % 	\rayr{d/}{da-} \mbox{(`such a')}
+% % 		& D
+% % 		& \begin{tabular}[t]{l l l}
+% % % 			\ups{\Pred} & = & `such' \\
+% % 			\ups{\Pers} & \req{} & 3 \\
+% % 			\ups{\Def} & = & $-$ \\
+% % 			\ups{\Spec} & = & $-$ \\
+% % 		\end{tabular}
+% % 	\end{tabu}
+% % 	
+% % \needspace{3\baselineskip}
+% % \a Inspecificity prefix:\medskip
+% % 
+% % 	\begin{tabu} {\usetabu{morphlex}}
+% % 	\rayr{me/}{mə-} (`whichever')
+% % 		& D
+% % 		& \begin{tabular}[t]{l l l}
+% % 			\ups{\Def} & = & $-$ \\
+% % 			\ups{\Spec} & = & $-$ \\
+% % 			\ups{\Pers} & \req{} & 3 \\
+% % 		\end{tabular}
+% % 	\end{tabu}
+% % 
+% % \needspace{3\baselineskip}
+% \a Personal pronouns:\medskip
+
+% 	\begin{tabu} {\usetabu{morphlex}}
+% 	(various)
+% 		& N
+% 		& \begin{tabular}[t]{l l l}
+% 			\ups{\Pred} & = & `pro' \\
+% 			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+% 			\ups{\Refl} & = & $\pm$ \\
+% 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+% 			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
+% 			\ups{\Anim} & = & $\pm$ \\
+% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+% 				\Loc{}, \Ins{}, \Caus{}\} \\
+% 			\ups{\Def} & = & $+$ \\
+% 			\ups{\Spec} & = & $+$ \\
+% 		\end{tabular}
+% 	\end{tabu}
+	
+% \needspace{3\baselineskip}
+% \a Demonstrative pronouns:\medskip
+
+% 	\begin{tabu} {\usetabu{morphlex}}
+% 	(various)
+% 		& N
+% 		& \begin{tabular}[t]{l l l}
+% 			\ups{\Pred} & = & `pro' \\
+% 			\ups{\Pers} & = & 3 \\
+% 			\ups{\Prox} & = & $\pm$ \\
+% 			\ups{\Dist} & = & $\pm$ \\
+% 			\ups{\Def} & = & $\pm$ \\
+% 			\ups{\Spec} & = & $+$ \\
+% 			\ups{\Anim} & = & $\pm$ \\
+% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+% 				\Loc{}, \Ins{}, \Caus{}\} \\
+% 		\end{tabular}
+% 	\end{tabu}
+
+% \needspace{3\baselineskip}
+% \a Indefinite pronouns:\medskip
+
+% 	\begin{tabu} {\usetabu{morphlex}}
+% 	(various)
+% 		& N
+% 		& \begin{tabular}[t]{l l l}
+% 			\ups{\Pred} & = & `pro' \\
+% 			\ups{\Pers} & = & 3 \\
+% 			\ups{\Def} & = & $-$ \\
+% 			\ups{\Spec} & = & $-$ \\
+% 			\ups{\Anim} & = & $\pm$ \\
+% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+% 				\Loc{}, \Ins{}, \Caus{}\} \\
+% 		\end{tabular}
+% 	\end{tabu}
+	
+% % \needspace{3\baselineskip}
+% % \a\label{ex:dmorphlex-propn}Case markers of proper nouns:\medskip	
+	
+% % 	\begin{tabu} {\usetabu{morphlex}}
+% % 	(various)
+% % 		& D
+% % 		& \begin{tabular}[t]{l l l}
+% % % 			\ups{\Pers} & \req{} & \Third \\
+% % % A 3rd person must not be *required* if the topic particle is in fact a D head 
+% % % in Spec NP, since pronouns as well can serve as topics without being 3rd 
+% % % persons!
+% % 			\ups{\Anim} & \req{} & $\pm$ \\
+% % 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+% % 				\Loc{}, \Ins{}, \Caus{}\} \\
+% % 		\end{tabular}
+% % 	\end{tabu}\medskip
+	
+% \xe
+
+% Demonstrative prefixes, the inspecificity prefix \rayr{me/}{mə-}, as well as
+% proper-noun case markers cannot be without an NP complement, which is what
+% `\req{}' is supposed to express in the feature specification: the demonstrative
+% prefixes require that an element exist which encodes a third-person referent to
+% are assumed to encode third person by default.\footnote{A simple `='
+% \emph{defines} a value; a subscript `c' indicates that the morpheme
+% \emph{requires} that this value be present. Thus `\req{}' expresses a
+% \fw{constraining} equation \citep[59--61]{bresnan2016}.} On the other hand, 
+% personal and demonstrative pronouns inherently define information on person 
+% (\Pers{}). Since there is a great number of both personal and demonstrative 
+% pronouns, only the various values they can assume are indicated, without 
+% ensuring that the combinations are actually possible (compare 
+% \autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
+% \Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
+% Gender is also not distinguished in all persons, but only in the third.
 
 % \subsection{Interactions between DP and NP}
 % \label{subsec:dpnpinteract}
@@ -1121,199 +1550,6 @@ p.~\pageref{hundreds}).
 % \endgl
 
 % \xe
-
-% \subsection{Determiner phrases}
-% \label{subsec:dps}
-
-% The functional heads of DPs are formed by determiners. The c-structure of a DP
-% corresponding to the linear description in (\ref{ex:dpdef}) is depicted in
-% (\ref{ex:dpcstruct}); annotations about feature inheritance for
-% c-to-f-structure conversion have been added. If the DP has a dependent phrase
-% providing lexical content, it is in the form of an NP complement, whose head
-% forms a lexical co-head of \xhead{D}. This NP must be annotated with
-% `\updown{}' to signify that its features are inherited to DP wholesale.
-% Alternatively, a DP containing a pronoun may also be modified by an NP adjunct,
-% a possessive NP, an AP or a relative-clause CP, which all need to be annotated
-% with `\pass{\Adj}', since they are not complements.
-
-% \ex\label{ex:dpcstruct}
-% \begin{forest}
-% [{\anno[\pass{df} \logor{} \pass{gf}]{DP}}
-% 	[\anno{\xbar{D}}
-% 		[\anno{\xhead{D}}]
-% 		[{$\left(\anno[{%
-% 		\updown{}\\%
-% 		%\logor{} \pass{\XCompl}\\%
-% 		\logor{} \pass{\Adj}%
-% 	}]{XP}\right)$}]
-% 	]
-% ]
-% \end{forest}
-% \xe
-
-% Ayeri does not possess articles as such, though it does have a variety of
-% morphemes which occur as clitic prefixes on nouns which can be analyzed to
-% fulfill this function. These clitics are the demonstrative prefixes
-% \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such (a)},
-% as well as the inspecificity prefix \xayr{me/}{mə-}{some} (compare
-% \autoref{subsec:nounpref}). These prefixes can only be used with nouns, but not
-% with personal pronouns (compare \autoref{subsec:perspro}), since personal
-% pronouns as well have the status of determiners. Pronouns, as pro-forms, are in
-% complementary distribution with NPs containing a noun. Due to affix-order
-% considerations concerning the demonstrative prefixes, it also seems advisable
-% to analyze the case markers of proper nouns as determiners. In order to capture
-% the fact that an NP is facultative with the demonstrative and inspecificity
-% prefixes while it must not occur with pronouns, `NP' appears in parentheses
-% since a phrasal complement it is not always present. We can define the
-% following morpholexic rules for determiners (\xhead{D}):
-
-% % FIXME: For some of these I'm not sure *at all* whether they're adjuncts or
-% % whether they should better be classified as complements :O
-
-% \pex %
-% % \a\label{ex:dmorphlex-dem}Demonstrative prefixes:\medskip
-% % 
-% % 	\begin{tabu} to \linewidth {@{} X[15l] X[5l] X[80l]}
-% % 	\savetabu{morphlex}
-% % 	\rayr{Ed/}{eda-} (`this')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `this' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Prox} & = & $+$ \\
-% % 			\ups{\Dist} & = & $-$ \\
-% % 			\ups{\Def} & = & $+$ \\
-% % 			\ups{\Spec} & = & $+$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}\medskip
-% % 
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{Ad/}{ada-} (`that')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `that' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Prox} & = & $-$ \\
-% % 			\ups{\Dist} & = & $+$ \\
-% % 			\ups{\Def} & = & $+$ \\
-% % 			\ups{\Spec} & = & $+$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}\medskip
-% % 	
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{d/}{da-} \mbox{(`such a')}
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pred} & = & `such' \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 			\ups{\Def} & = & $-$ \\
-% % 			\ups{\Spec} & = & $-$ \\
-% % 		\end{tabular}
-% % 	\end{tabu}
-% % 	
-% % \needspace{3\baselineskip}
-% % \a Inspecificity prefix:\medskip
-% % 
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	\rayr{me/}{mə-} (`whichever')
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % 			\ups{\Def} & = & $-$ \\
-% % 			\ups{\Spec} & = & $-$ \\
-% % 			\ups{\Pers} & \req{} & 3 \\
-% % 		\end{tabular}
-% % 	\end{tabu}
-% % 
-% % \needspace{3\baselineskip}
-% \a Personal pronouns:\medskip
-
-% 	\begin{tabu} {\usetabu{morphlex}}
-% 	(various)
-% 		& N
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `pro' \\
-% 			\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-% 			\ups{\Refl} & = & $\pm$ \\
-% 			\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
-% 			\ups{\Gend} & = & \{\M{}, \F{}, \N{}\} \\
-% 			\ups{\Anim} & = & $\pm$ \\
-% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% 				\Loc{}, \Ins{}, \Caus{}\} \\
-% 			\ups{\Def} & = & $+$ \\
-% 			\ups{\Spec} & = & $+$ \\
-% 		\end{tabular}
-% 	\end{tabu}
-	
-% \needspace{3\baselineskip}
-% \a Demonstrative pronouns:\medskip
-
-% 	\begin{tabu} {\usetabu{morphlex}}
-% 	(various)
-% 		& N
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `pro' \\
-% 			\ups{\Pers} & = & 3 \\
-% 			\ups{\Prox} & = & $\pm$ \\
-% 			\ups{\Dist} & = & $\pm$ \\
-% 			\ups{\Def} & = & $\pm$ \\
-% 			\ups{\Spec} & = & $+$ \\
-% 			\ups{\Anim} & = & $\pm$ \\
-% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% 				\Loc{}, \Ins{}, \Caus{}\} \\
-% 		\end{tabular}
-% 	\end{tabu}
-
-% \needspace{3\baselineskip}
-% \a Indefinite pronouns:\medskip
-
-% 	\begin{tabu} {\usetabu{morphlex}}
-% 	(various)
-% 		& N
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `pro' \\
-% 			\ups{\Pers} & = & 3 \\
-% 			\ups{\Def} & = & $-$ \\
-% 			\ups{\Spec} & = & $-$ \\
-% 			\ups{\Anim} & = & $\pm$ \\
-% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% 				\Loc{}, \Ins{}, \Caus{}\} \\
-% 		\end{tabular}
-% 	\end{tabu}
-	
-% % \needspace{3\baselineskip}
-% % \a\label{ex:dmorphlex-propn}Case markers of proper nouns:\medskip	
-	
-% % 	\begin{tabu} {\usetabu{morphlex}}
-% % 	(various)
-% % 		& D
-% % 		& \begin{tabular}[t]{l l l}
-% % % 			\ups{\Pers} & \req{} & \Third \\
-% % % A 3rd person must not be *required* if the topic particle is in fact a D head 
-% % % in Spec NP, since pronouns as well can serve as topics without being 3rd 
-% % % persons!
-% % 			\ups{\Anim} & \req{} & $\pm$ \\
-% % 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% % 				\Loc{}, \Ins{}, \Caus{}\} \\
-% % 		\end{tabular}
-% % 	\end{tabu}\medskip
-	
-% \xe
-
-% Demonstrative prefixes, the inspecificity prefix \rayr{me/}{mə-}, as well as
-% proper-noun case markers cannot be without an NP complement, which is what
-% `\req{}' is supposed to express in the feature specification: the demonstrative
-% prefixes require that an element exist which encodes a third-person referent to
-% are assumed to encode third person by default.\footnote{A simple `='
-% \emph{defines} a value; a subscript `c' indicates that the morpheme
-% \emph{requires} that this value be present. Thus `\req{}' expresses a
-% \fw{constraining} equation \citep[59--61]{bresnan2016}.} On the other hand, 
-% personal and demonstrative pronouns inherently define information on person 
-% (\Pers{}). Since there is a great number of both personal and demonstrative 
-% pronouns, only the various values they can assume are indicated, without 
-% ensuring that the combinations are actually possible (compare 
-% \autoref{subsec:perspro}). Personal pronouns, for instance, only distinguish 
-% \Inan{} as set against $\{\M{}, \F{}, \N{}\}$, which are subgroups of \An{}. 
-% Gender is also not distinguished in all persons, but only in the third.
 
 % \section{Adjective phrases and adverbial phrases}
 
