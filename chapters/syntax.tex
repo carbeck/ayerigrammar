@@ -750,32 +750,6 @@ from that of articles in languages like English or German.
 \begin{tabular}[t]{@{} l l >{\itshape\bfseries}l @{~} >{\itshape}l l
 l}
 \tl\quad
-	& \multicolumn{4}{l}{German:}\medskip
-	\\
-
-	& \Nom
-	& der & Mann
-	& `the man'
-	\\
-
-	& \Acc
-	& den & Mann
-	& `the man'
-	\\
-
-	& \Dat
-	& dem & Mann
-	& `to the man'
-	\\
-
-	& \Gen
-	& des & Mannes
-	& `of the man'
-	\bigskip \\
-
-\tl\quad
-	& \multicolumn{4}{l}{Ayeri:}\medskip
-	\\
 
 	& \Aarg
 	& ang & Sān
@@ -810,6 +784,28 @@ l}
 	& \Ins
 	& ri & Sān
 	& `with/by Sān'
+	\medskip \\
+
+\rc{German}\tl\quad%
+
+	& \Nom
+	& der & Mann
+	& `the man'
+	\\
+
+	& \Acc
+	& den & Mann
+	& `the man'
+	\\
+
+	& \Dat
+	& dem & Mann
+	& `to the man'
+	\\
+
+	& \Gen
+	& des & Mannes
+	& `of the man'
 	\\
 \end{tabular}
 \xe
@@ -823,51 +819,59 @@ adjectives has also been noted in \autoref{phsec:possadj}
 are an exception compared to the much more frequent occurrence of case-marking
 suffixes on generic nouns. It thus does not seem straightforward to analyze the
 case markers as heads of DPs.
-% FIXME: ANY SIMILARITIES TO SUFFIXED ARTICLES IN ROMANIAN OR SOUTHERN SLAVIC
-% LANGUAGES?
 
 \pex\label{ex:germandetdist}
 	\a\rc{German}
 	\begingl
-		\gla der Mann //
-		\glb der Mann //
-		\glc \Def{}.\Nom{}.\Sg{}.\M{} man //
-		\glft `the man' //
+		\gla das Haus //
+		\glb das Haus //
+		\glc \Def{}.\Nom{}.\Sg{}.\N{} house //
+		\glft `the house' //
 	\endgl
 
 	\a\begingl
-		\gla dieser Mann //
-		\glb dies-er Mann //
-		\glc this-\Nom{}.\Sg{}.\N{} man //
-		\glft `this man' //
+		\gla dieses Haus //
+		\glb dies-es Haus //
+		\glc this-\Nom{}.\Sg{}.\N{}.\St{} Haus //
+		\glft `this house' //
 	\endgl
 
 	\a\begingl
-		\gla mein Mann //
-		\glb mein-Ø Mann //
-		\glc \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
-		\glft `my husband' //
+		\gla mein Haus //
+		\glb mein-Ø Haus //
+		\glc \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\St{} house //
+		\glft `my house' //
 	\endgl
 
 	\a\ljudge*\begingl
-		\gla der diese Mann //
-		\glb der dies-e Mann //
-		\glc \Def{}.\Nom{}.\Sg{}.\M{} this-\Nom{}.\Sg{}.\N{} man //
-		\glft `the this man' //
+		\gla das diese Haus //
+		\glb das dies-e Haus //
+		\glc \Def{}.\Nom{}.\Sg{}.\N{} this-\Nom{}.\Sg{}.\N{}.\Wk{} house //
+		\glft `the this house' //
 	\endgl
 
 	\a\ljudge*\begingl
-		\gla der meine Mann //
-		\glb der mein-e Mann //
-		\glc \Def{}.\Nom{}.\Sg{}.\M{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
-		\glft `the my husband' //
+		\gla das meine Haus //
+		\glb das mein-e Haus //
+		\glc \Def{}.\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} 
+			man //
+		\glft `the my house' //
 	\endgl
 
-	\a\ljudge\mkd\label{ex:germandemposs}\begingl
-		\gla dieser mein Mann //
-		\glb dies-er mein-Ø Mann //
-		\glc this-\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{} man //
-		\glft `this man of mine' //
+	\a\ljudge*\label{ex:germandemposswk}\begingl
+		\gla dieses meine Haus //
+		\glb dies-es mein-e Haus //
+		\glc this-\Nom{}.\Sg{}.\N{}.\St{} 
+			\Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} house //
+		\glft `this my house' //
+	\endgl
+
+	\a\ljudge\hash\label{ex:germandemposs}\begingl
+		\gla dieses mein Haus //
+		\glb dies-es mein-Ø Haus //
+		\glc this-\Nom{}.\Sg{}.\N{}.\St{} 
+			\Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\St{} house //
+		\glft `this house of mine' //
 	\endgl
 \xe
 
@@ -876,13 +880,24 @@ a definite article (\fw{der} `the'), a demonstrative pronoun (\fw{dieser}
 `this') and a possessive pronoun (\fw{mein} `my') are in complementary
 distribution for some combinations. The only exception to this is the
 combination of demonstrative and possessive in (\ref{ex:germandemposs}), which
-is grammatically marked, however. On this phenomenon of complementary
-distribution of determiners, which also holds true for English, \citet[208]
-{carnie2013} writes, \textquote{One thing to note about determiners is that
-they are typically heads. Normally, there can only be one of them in an NP,} at
-least in English (and German). \citet[9--22]{demske2001} elaborates on this
-point for German as well. Ayeri, however, seems to behave differently in
-treating case markers and demonstrative elements as clitics:
+is grammatically marked, however.\footnote{Example (\ref{ex:germandemposswk})
+differs from (\ref{ex:germandemposs}) in the declension paradigm of the
+adjective: (\ref{ex:germandemposswk}) uses the `weak' (\Wk) declension
+regularly, since a determiner with strong (\St) declension precedes.
+(\ref{ex:germandemposs}) appears to be an exception in permitting two
+determiners of the strong declension. \citet[160--161, 203--205]{demske2001}
+notes that, according to \citet{plank1992}, possessive pronouns may apparently
+still act as modifiers, not only determiners, under certain circumstances. In
+modern Standard German, this construction is strongly marked, however. It is
+probably a remnant of earlier stages of German where there was no such
+restriction on the co-ocurrence of demonstrative and possessive pronouns yet
+\citep[173]{demske2001}.} On this phenomenon of complementary distribution of
+determiners, which also holds true for English, \citet[208]{carnie2013} writes,
+\textquote{One thing to note about determiners is that they are typically
+heads. Normally, there can only be one of them in an NP,} at least in English
+(and German). \citet[9--22]{demske2001} elaborates on this point for German as
+well. Ayeri, however, seems to behave differently in treating case markers and
+demonstrative elements as clitics:
 
 \pex\label{ex:ayericasenoart}
 	\a
