@@ -1006,11 +1006,10 @@ The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
 closed class of words; the chart of personal pronouns in Ayeri is given in
 \autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
-have lexical content for a predicator, but only `pro', that is, they express
-anaphoric reference. Pronouns distinguish, of course, all grammatical
-categories of nouns---number, gender and animacy, and case. In addition to
-this, there is person. The reflexive clitic \rayr{sitNF/}{sitang-} also adds
-reflexivity as a semantic feature.
+have lexical content for a predicator, but only `pro'. Pronouns distinguish, of
+course, all grammatical categories of nouns---number, gender and animacy, and
+case. In addition to this, there is person. The reflexive clitic
+\rayr{sitNF/}{sitang-} also adds reflexivity as a semantic feature.
 
 \ex\label{ex:perspromorphlex}
 \adjustbox{valign=t}{%
@@ -1031,7 +1030,118 @@ reflexivity as a semantic feature.
 }
 \xe
 
-...
+Personal pronouns cannot be modified by adjectives and most other adjuncts
+nouns can be modified by, however, they may still be modified by relative
+clauses as well as clitic quantifiers. Modification by a quantifier clitic is
+only possible for personal pronouns when they are free morphemes, though;
+pronominal suffixes are exempt from this case, as described in
+\autoref{subsec:reflrec}. The examples in (\ref{ex:nonounmods}) show what is 
+not possible as compared to nouns.
+
+\pex\label{ex:nonounmods}
+\a\ljudge* %
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble pronoun + adjective: //
+		\gla yāng hiro //
+		\glb yāng hiro //
+		\glc \TsgM{}.\Aarg{} new //
+		\glft `new he' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} shorter edges,
+	[DP
+		[\anno{\xbar{D}}
+			[\anno{\xhead{D}}
+				[{yāng}]
+			]
+			[{\anno[\pass{\Adjc}]{AP}}
+				[{hiro}, roof]
+			]
+		]
+	]
+	\end{forest}
+
+\a\ljudge* %
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble pronoun + genitive attribute: //
+		\gla reng ayonena //
+		\glb reng ayon-ena //
+		\glc \TsgI{}.\Aarg{} man-\Gen{} //
+		\glft `the man's it' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} shorter edges,
+	[DP
+		[\anno{\xbar{D}}
+			[\anno{\xhead{D}}
+				[{reng}]
+			]
+			[{\anno[\pass{\Adjc}]{NP}}
+				[{ayonena}, roof]
+			]
+		]
+	]
+	\end{forest}
+
+\a\ljudge* %
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble pronoun + instrumental attribute: //
+		\gla nang bariri //
+		\glb nang bari-ri //
+		\glc \Fpl{}.\Aarg{} meat-\Ins{} //
+		\glft `we of meat' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} shorter edges,
+	[DP
+		[\anno{\xbar{D}}
+			[\anno{\xhead{D}}
+				[{nang}]
+			]
+			[{\anno[\pass{\Adjc}]{NP}}
+				[{bariri}, roof]
+			]
+		]
+	]
+	\end{forest}
+
+\xe
+
+As mentioned above, it is possible for pronouns to be modified by relative
+clauses, which is illustrated by (\ref{ex:pronounrelc}). In this example, the
+pronoun \xayr{yeNF}{yeng}{she} is modified by the relative clause \xayr{si
+mino}{si mino}{who is happy}.
+
+\ex\label{ex:pronounrelc} %
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble pronoun + relative clause: //
+		\gla yeng si mino //
+		\glb yeng si mino //
+		\glc \TsgF{}.\Aarg{} \Rel{} happy //
+		\glft `she who is happy' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} shorter edges,
+	[DP
+		[\anno{\xbar{D}}
+			[\anno{\xhead{D}}
+				[{yeng}]
+			]
+			[{\anno[\pass{\Adjc}]{CP}}
+				[{si mino}, roof]
+			]
+		]
+	]
+	\end{forest}
+\xe
 
 \subsubsection{Demonstrative pronouns}
 
