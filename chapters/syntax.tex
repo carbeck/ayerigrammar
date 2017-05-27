@@ -973,17 +973,17 @@ case. The same is also true of generic nouns:
 While it has been argued that Ayeri does not possess articles, it does possess
 a large variety of pronouns. These, as pro-forms, appear in complementary
 distribution with NPs. Since they encode morphosyntactic functions rather than
-semantic content, they are ideal candidates for heads of DP. If DPs in Ayeri
-only consist of pronouns, which replace NPs whole, they should not take any
-modifiers---with the notable exception of relative clauses, CP being another
-functional category. Thus, the phrase structure of DPs should look as
-illustrated in (\ref{ex:dpstruct}) and (\ref{ex:dpcstruct}). In both cases, the
-CP constituent is in brackets since it is optional, that is, it is an adjunct
-rather than a complement. The functional annotation identifies it as such.
+semantic content, they are ideal candidates for heads of DP. DPs can be
+modified by those phrases which can modify nouns as well: NPs, APs and CPs,
+collectively referred to as XP below. The phrase structure of DPs should thus
+look as illustrated in (\ref{ex:dpstruct}) and (\ref{ex:dpcstruct}). The XP
+constituent is in brackets in both cases since it is optional, that is, it is
+an adjunct rather than a complement. The functional annotation identifies it as
+such.
 
 \pex\label{ex:dpstruct}
 \a DP → \anno*{\xbar{D}}
-\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\pass{\Adjc}}]{CP}\right)$
+\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:dpcstruct}
@@ -993,7 +993,7 @@ rather than a complement. The functional annotation identifies it as such.
 		[\anno{\xhead{D}}]
 		[{$\left(\anno[{%
 				\pass{\Adjc}%
-			}]{CP}\right)$
+			}]{XP}\right)$
 		}]
 	]
 ]
@@ -1032,14 +1032,15 @@ a semantic feature.
 }
 \xe
 
-Personal pronouns cannot be modified by adjectives and most other adjuncts
-nouns can be modified by, however, they may still be modified by relative
-clauses as well as clitic quantifiers. Modification by a quantifier clitic is
-only possible for personal pronouns when they are free morphemes, though;
-modification of pronominal suffixes by quantifiers is not possible, as
-described in \autoref{subsec:reflrec}---a reflexive particle is needed here to
-attach the quantifier to. The examples in (\ref{ex:nonounmods})
-show what is not possible as compared to nouns.
+Personal pronouns, as an exception to the phrase-structure definition in (
+\ref{ex:dpstruct}), cannot be modified by adjectives and nominal adjuncts,
+however, they may still be modified by relative clauses as well as clitic
+quantifiers. Modification by a quantifier clitic is only possible for personal
+pronouns when they are free morphemes, though; modification of pronominal
+suffixes by quantifiers is not possible, as described in
+\autoref{subsec:reflrec}---a reflexive particle is needed here to attach the
+quantifier to. The examples in (\ref{ex:nonounmods}) show what is not possible
+as compared to nouns.
 
 \pex\label{ex:nonounmods}
 \a\ljudge* %
@@ -1052,19 +1053,19 @@ show what is not possible as compared to nouns.
 		\glft `new he' //
 	\endgl
 	\end{minipage}
-	~
-	\begin{forest} shorter edges,
-	[DP
-		[\anno{\xbar{D}}
-			[\anno{\xhead{D}}
-				[{yāng}]
-			]
-			[{\anno[\pass{\Adjc}]{AP}}
-				[{hiro}, roof]
-			]
-		]
-	]
-	\end{forest}
+	% ~
+	% \begin{forest} shorter edges,
+	% [DP
+	% 	[\anno{\xbar{D}}
+	% 		[\anno{\xhead{D}}
+	% 			[{yāng}]
+	% 		]
+	% 		[{\anno[\pass{\Adjc}]{AP}}
+	% 			[{hiro}, roof]
+	% 		]
+	% 	]
+	% ]
+	% \end{forest}
 
 \a\ljudge* %
 	\begin{minipage}[t]{.5\linewidth}
@@ -1076,19 +1077,19 @@ show what is not possible as compared to nouns.
 		\glft `the man's it' //
 	\endgl
 	\end{minipage}
-	~
-	\begin{forest} shorter edges,
-	[DP
-		[\anno{\xbar{D}}
-			[\anno{\xhead{D}}
-				[{reng}]
-			]
-			[{\anno[\pass{\Adjc}]{NP}}
-				[{ayonena}, roof]
-			]
-		]
-	]
-	\end{forest}
+	% ~
+	% \begin{forest} shorter edges,
+	% [DP
+	% 	[\anno{\xbar{D}}
+	% 		[\anno{\xhead{D}}
+	% 			[{reng}]
+	% 		]
+	% 		[{\anno[\pass{\Adjc}]{NP}}
+	% 			[{ayonena}, roof]
+	% 		]
+	% 	]
+	% ]
+	% \end{forest}
 
 \a\ljudge* %
 	\begin{minipage}[t]{.5\linewidth}
@@ -1100,19 +1101,19 @@ show what is not possible as compared to nouns.
 		\glft `we of meat' //
 	\endgl
 	\end{minipage}
-	~
-	\begin{forest} shorter edges,
-	[DP
-		[\anno{\xbar{D}}
-			[\anno{\xhead{D}}
-				[{nang}]
-			]
-			[{\anno[\pass{\Adjc}]{NP}}
-				[{bariri}, roof]
-			]
-		]
-	]
-	\end{forest}
+	% ~
+	% \begin{forest} shorter edges,
+	% [DP
+	% 	[\anno{\xbar{D}}
+	% 		[\anno{\xhead{D}}
+	% 			[{nang}]
+	% 		]
+	% 		[{\anno[\pass{\Adjc}]{NP}}
+	% 			[{bariri}, roof]
+	% 		]
+	% 	]
+	% ]
+	% \end{forest}
 
 \xe
 
@@ -1131,33 +1132,33 @@ mino}{si mino}{who is happy}.
 		\glft `she who is happy' //
 	\endgl
 	\end{minipage}
-	~
-	\begin{forest} shorter edges,
-	[DP
-		[\anno{\xbar{D}}
-			[\anno{\xhead{D}}
-				[{yeng}]
-			]
-			[{\anno[\pass{\Adjc}]{CP}}
-				[{si mino}, roof]
-			]
-		]
-	]
-	\end{forest}
+	% ~
+	% \begin{forest} shorter edges,
+	% [DP
+	% 	[\anno{\xbar{D}}
+	% 		[\anno{\xhead{D}}
+	% 			[{yeng}]
+	% 		]
+	% 		[{\anno[\pass{\Adjc}]{CP}}
+	% 			[{si mino}, roof]
+	% 		]
+	% 	]
+	% ]
+	% \end{forest}
 \xe
 
 \subsubsection{Demonstrative pronouns}
 
 The morphology of demonstrative pronouns was described in 
-\autoref{subsec:dempro}. Suffice it to say that demonstrative pronouns are
-similar to personal pronouns, except that they do not mark person (a third
-person reference is implied), but deixis more generally as location in space.
+\autoref{subsec:dempro}. In contrast to personal pronouns, demonstrative
+pronouns do not mark person; a third person reference is implied like with
+nouns, however. Instead, they mark deixis more generally as location in space.
 Notably, demonstrative pronouns also lack a number distinction. As previously
 discussed, Ayeri distinguishes proximal (\rayr{Ed/} {eda-}) and distal
 (\rayr{Ad/}{ada-}) as well as an indefinite `such' (\rayr{d/} {da-}), which is
-why (\ref{ex:dempromorphlex}) is listed with a
-\Deix {} feature encoding $this$, $that$, and $such$, rather than a binary
-\Prox{} or \Dist{} feature.
+why the feature definitions in (\ref{ex:dempromorphlex}) list a \Deix{} feature
+encoding $this$, $that$, and $such$, rather than a binary \Prox{} or \Dist{}
+feature.
 
 \ex\label{ex:dempromorphlex}
 \adjustbox{valign=t}{%
@@ -1176,10 +1177,15 @@ why (\ref{ex:dempromorphlex}) is listed with a
 }
 \xe
 
-Regarding their ability to be modified, demonstrative pronouns share the same
-distribution as personal pronouns: they may only be modified by relative
-clauses, but not by phrases projected by lexical heads such as adjectives or
-nouns.
+Regarding demonstratives pronouns' ability to be modifed, it is necessary to
+distinguish the proximal \rayr{Ed/}{eda-} and distal \rayr{Ad/}{ada-}series
+from the indefinite \rayr{d/}{da-}series.
+
+...
+
+Related to the ability of indefinite demonstrative pronouns to be modified by
+adjuncts is also the formation of complex demonstratives which incorporate an
+adjective, both generic and possessive.
 
 ...
 
