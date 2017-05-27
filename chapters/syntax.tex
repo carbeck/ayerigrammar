@@ -12,16 +12,16 @@ their various distributive and inflectional properties, the present chapter
 will elaborate on how these words combine into syntactic phrases. Since Ayeri
 is a verb-initial language, it is probably most comfortably analyzed in terms
 of Lexical-Functional Grammar (\cite{bresnan1982}~ff.; more recently
-\cite{bresnan2016}), since \Lfg{} does not require complicated derivations
-behind the surface structure of  sentences.\footnote{Passivization, for
-instance, is assumed to be a lexically  motivated alternation in predicate
-structure (\Sbj{} is blocked, so the  nominative is assigned to \Obj{}, and the
-original \Sbj{} is expressed  by an \Adjc{}), rather than an internal
-derivational process \citep[23\psqq]{bresnan2016}.} It will be assumed here
-that, even though Ayeri is basically VSO with predicate and predication not
-adjacent to each other, it is configurational in that there is a VP which
-c-commands a number of other constituents as complements in transitive
-sentences.
+\cite{bresnan2016}; \cite{dalrymple2001}), since \Lfg{} does not require
+complicated derivations behind the surface structure of
+sentences.\footnote{Passivization, for instance, is assumed to be a lexically
+motivated alternation in predicate structure (\Sbj{} is blocked, so the
+nominative is assigned to \Obj{}, and the original \Sbj{} is expressed  by an
+\Adjc{}), rather than an internal derivational process
+\citep[23\psqq]{bresnan2016}.} It will be assumed here that, even though Ayeri
+is basically VSO with predicate and predication not adjacent to each other, it
+is configurational in that there is a VP which c-commands a number of other
+constituents as complements in transitive sentences.
 
 In principle, \Lfg{} assumes that grammar operates on different structural 
 levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
@@ -854,7 +854,7 @@ case markers as heads of DPs.
 		\gla das meine Haus //
 		\glb das mein-e Haus //
 		\glc \Def{}.\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} 
-			man //
+			house //
 		\glft `the my house' //
 	\endgl
 
@@ -1006,10 +1006,12 @@ The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
 closed class of words; the chart of personal pronouns in Ayeri is given in
 \autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
-have lexical content for a predicator, but only `pro'. Pronouns distinguish, of
-course, all grammatical categories of nouns---number, gender and animacy, and
-case. In addition to this, there is person. The reflexive clitic
-\rayr{sitNF/}{sitang-} also adds reflexivity as a semantic feature.
+have lexical content for a predicator, but only `pro'. Pronouns distinguish all
+grammatical categories of nouns---number, gender and animacy, and case; they
+agree with their antecedents in number, gender, and animacy. In addition to
+these person features, pronouns of course also encode person as a deictic
+category. The reflexive clitic \rayr{sitNF/}{sitang-} also adds reflexivity as 
+a semantic feature.
 
 \ex\label{ex:perspromorphlex}
 \adjustbox{valign=t}{%
@@ -1034,9 +1036,10 @@ Personal pronouns cannot be modified by adjectives and most other adjuncts
 nouns can be modified by, however, they may still be modified by relative
 clauses as well as clitic quantifiers. Modification by a quantifier clitic is
 only possible for personal pronouns when they are free morphemes, though;
-pronominal suffixes are exempt from this case, as described in
-\autoref{subsec:reflrec}. The examples in (\ref{ex:nonounmods}) show what is 
-not possible as compared to nouns.
+modification of pronominal suffixes by quantifiers is not possible, as
+described in \autoref{subsec:reflrec}---a reflexive particle is needed here to
+attach the quantifier to. The examples in (\ref{ex:nonounmods})
+show what is not possible as compared to nouns.
 
 \pex\label{ex:nonounmods}
 \a\ljudge* %
@@ -1145,6 +1148,43 @@ mino}{si mino}{who is happy}.
 
 \subsubsection{Demonstrative pronouns}
 
+The morphology of demonstrative pronouns was described in 
+\autoref{subsec:dempro}. Suffice it to say that demonstrative pronouns are
+similar to personal pronouns, except that they do not mark person (a third
+person reference is implied), but deixis more generally as location in space.
+Notably, demonstrative pronouns also lack a number distinction. As previously
+discussed, Ayeri distinguishes proximal (\rayr{Ed/} {eda-}) and distal
+(\rayr{Ad/}{ada-}) as well as an indefinite `such' (\rayr{d/} {da-}), which is
+why (\ref{ex:dempromorphlex}) is listed with a
+\Deix {} feature encoding $this$, $that$, and $such$, rather than a binary
+\Prox{} or \Dist{} feature.
+
+\ex\label{ex:dempromorphlex}
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `pro' \\
+			\ups{\Deix} & = & \{$this$, $that$, $such$\} \\
+			\ups{\Pers} & = & 3 \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+
+Regarding their ability to be modified, demonstrative pronouns share the same
+distribution as personal pronouns: they may only be modified by relative
+clauses, but not by phrases projected by lexical heads such as adjectives or
+nouns.
+
+...
+
+\subsubsection{Interrogative pronouns}
+
 ...
 
 \subsubsection{Indefinite pronouns}
@@ -1157,22 +1197,6 @@ mino}{si mino}{who is happy}.
 	
 % \needspace{3\baselineskip}
 % \a Demonstrative pronouns:\medskip
-
-% 	\begin{tabu} {\usetabu{morphlex}}
-% 	(various)
-% 		& N
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `pro' \\
-% 			\ups{\Pers} & = & 3 \\
-% 			\ups{\Prox} & = & $\pm$ \\
-% 			\ups{\Dist} & = & $\pm$ \\
-% 			\ups{\Def} & = & $\pm$ \\
-% 			\ups{\Spec} & = & $+$ \\
-% 			\ups{\Anim} & = & $\pm$ \\
-% 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-% 				\Loc{}, \Ins{}, \Caus{}\} \\
-% 		\end{tabular}
-% 	\end{tabu}
 
 % \needspace{3\baselineskip}
 % \a Indefinite pronouns:\medskip
