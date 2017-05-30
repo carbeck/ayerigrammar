@@ -1403,9 +1403,9 @@ unincorporated adjective looks like.
 			\Anim	& $+$ \\
 			\Case	& \Parg \\
 			\Deix	& $such$ \\
-			\Adjc	& \[
+			\Adjc	& \{\[
 						\Pred	& `red' \\
-					\] \\
+					\]\} \\
 		\] \\
 \]	
 \end{avm}}
@@ -1484,11 +1484,11 @@ hypothesis about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
 \[\Obj & \[
 			\Pred	& `pro' \\
 			\Deix	& $such$ \\
-			\Adjc	& \[
+			\Adjc	& \{\[
 						\Pred	& `red' \\
 						\Anim	& $-$ \\
 						\Case	& \Parg \\
-					\] \\
+					\]\} \\
 		\] \\
 \]	
 \end{avm}}
@@ -1500,7 +1500,7 @@ One question is, whether the \Avm{} in this case should look like the one in
 (\ref{ex:danyaastuvoavm}), since now it is the adjective which carries the
 nominal inflections. Strictly speaking, the functional annotation for the
 case marker should appear along with the adjective's \Pred{} under the
-\Adjc{} relation (\ref{ex:daadjcaseavm}). Since \Lfg{} postulates that all
+\Adjc{} relation (\ref{ex:daadjcaseavm}b). Since \Lfg{} postulates that all
 semantic information is inherited upwards with an intersection operation
 applied at each node in a syntactic tree, DP will still contain all the
 relevant information in a consistent manner.
@@ -1509,8 +1509,8 @@ Another question is where in the tree \rayr{d/}{da-} should appear as a clitic.
 A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
 {da-tuvoley} as a single unit in terms of syntax. The problem with this is,
 however, that \rayr{d/}{da-} encodes \ups{\Pred} = `pro' and the adjective
-encodes \ups{\Pred} = `red'. Now, if they are both dominated by the same node
-(\xhead{A} in \ref{ex:daadjcase}), that node would have clashing values for
+encodes \ups{\Pred} = `red'. Now, if they were both dominated by the same node
+(\xhead{A} in (\ref{ex:daadjcase}a)), that node would have clashing values for
 \Pred{}. This in turn motivates the assumption that \rayr{d/}{da-} should be
 represented in the c-structure at a higher level than AP, that is, adjoined to
 \xbar{D}. Now it potentially violates lexical integrity, though. One has to
@@ -1524,7 +1524,9 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 								\normalfont{`pro'},\\
 								\normalfont{`red'}\\
 							\}\\
-				...
+				\Anim	& $-$ \\
+				\Case	& \Parg \\
+				\Deix	& $such$ \\
 			\]\\
 \]
 \end{avm}
@@ -1532,11 +1534,11 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 
 \noindent The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness
 condition, though: \textcquote[45]{bresnan2016}{Every attribute has a unique
-value}, that is, no attribute (like \Pred{}) may have more than one value
-assigned to it. Thus, in order not to violate this principle, the question is
-whether a list of \Pred{} attributes as values of an anonymous attribute within
-a function (like \Adjc{} lists, or whenever coordination is involved) would be
-acceptable:
+value}, that is, no attribute may have more than one value assigned to it, but
+we just did this for \Pred{} by assigning both `pro' and `red' to it. Thus, in
+order not to violate this principle, the question is whether a list of \Pred{}
+attributes as values of an anonymous attribute within a function (like \Adjc{}
+lists, or whenever coordination is involved) would be acceptable:
 
 \ex \ques\begin{avm}
 \[\Obj{}	& $f$:	& \[
