@@ -1370,14 +1370,16 @@ explain why the adjective forfeits its ability to undergo comparison:
 comparison is not a morphological operation available to nouns, and the
 comparison morphemes are still loose enough to not jointly undergo derivation
 to a noun together with the root adjective in the way it is possible, for
-example, in German to form the deadjectival nouns \fw{das Große} `what is good'
-(for instance, \fw{im Großen} `on a large scale') and \fw{das Größte} `the
-greatest thing' from the adjective \fw{groß} `big, great' and its superlative
-form \fw{größt-} `biggest, greatest'; the superlative suffix being \fw{-(e)st}.
-Both c- and f-structure should thus look different for the unincorporated and
-the incorporated adjective, respectively.
+example, in German to form the deadjectival nouns \fw{das Große} `what is
+big/great' (for instance, \fw{im Großen} `on a large scale') and \fw{das
+Größte} `the greatest thing' from the adjective \fw{groß} `big, large, great'
+and its superlative form \fw{größt-} `biggest, greatest'; the superlative
+suffix being \fw{-(e)st}. Both c- and f-structure should thus look different
+for the unincorporated and the incorporated adjective, respectively. Example
+(\ref{ex:danyaastuvo}) illustrates what the c- and f-structure for the
+unincorporated adjective looks like.
 
-\ex\labels %
+\ex\label{ex:danyaastuvo}\labels %
 \begin{tabular}[t]{@{} l @{\quad} l}
 \tl\quad\begin{forest} shorter edges,
 [{\anno[\pass{\Obj}]{DP}}
@@ -1411,38 +1413,91 @@ the incorporated adjective, respectively.
 \end{tabular}
 \xe
 
-\ex~\labels %
-\begin{tabular}[t]{@{} l @{\quad} l}
-\tl\quad\begin{forest} shorter edges,
-[{\anno[\pass{\Obj}]{NP}}
-	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}
-			[\anno{Cl}
+The difference between \rayr{d/}{da-} combined with a noun and the same
+combined with an adjective is, however, that with a noun, the meaning is `such
+a \textsc{noun}', while with an adjective the meaning is not `such an
+\textsc{adjective} one', but `the \textsc{adjective} one'. Thus, the
+deictic/anaphoric meaning remains, strictly speaking, which is manifest in the
+fact that the gender of the compound depends on that of the referred-to entity
+(\ref{ex:danoungender}). For cases where the noun and the adjective are
+homophones---like \xayr{tuvo} {tuvo}{red}---the correct interpretation is
+dependent on context.
+
+\pex\label{ex:danoungender}
+\a\begingl
+	\glpreamble \textsc{context:} an apple (\rayr{sejgo}{seygo}, \An{}): //
+	\gla ... da-tuvoas //
+	\glb {} da=tuvo-as //
+	\glc {} one=red-\Parg{}.\An{} //
+	\glft `... the red one' // 
+\endgl
+
+\a\begingl
+	\glpreamble \textsc{context:} a box (\rayr{hinF}{hin}, \Inan{}): //
+	\gla ... da-tuvoley //
+	\glb {} da=tuvo-ley //
+	\glc {} one=red-\PargI //
+	\glft `... the red one' // 
+\endgl
+\xe
+
+It is tempting to assume that the adjective has been moved into the place where
+its nominal referent would usually occur in, as in (\ref{ex:adjmove}). However,
+\Lfg{} has been designed specifically with the idea that there is no movement,
+so this is not a viable approach either if we want to stick to our theoretical
+framework.
+
+\ex\label{ex:adjmove} \begin{forest} shorter edges,
+[NP
+	[\xbar{N}
+		[\xhead{N}
+			[Cl
 				[da-]
 			]
-			[{\anno{\xhead{N}}}
-				[tuvoas]
+			[\xhead{N}
+				[...-ley, name=target]
 			]
+		]
+		[AP
+			[tuvo, roof, name=origin]
 		]
 	]
 ]
+\draw[-latex,min distance=1cm] (origin) to [out=south, in=south] (target);
 \end{forest}
-
-&
-
-\tl\quad \adjustbox{valign=t}{%
-\begin{avm}
-\[\Obj & \[
-			\Pred	& `red one' \\
-			\Anim	& $+$ \\
-			\Case	& \Parg \\
-			\Deix	& $such$ \\
-		\] \\
-\]
-\end{avm}}
-
-\end{tabular}
 \xe
+
+% \ex~\labels %
+% \begin{tabular}[t]{@{} l @{\quad} l}
+% \tl\quad\ques\begin{forest} shorter edges,
+% [{\anno[\pass{\Obj}]{NP}}
+% 	[\anno{\xbar{N}}
+% 		[\anno{\xhead{N}}
+% 			[\anno{Cl}
+% 				[da-]
+% 			]
+% 			[{\anno{\xhead{N}}}
+% 				[tuvoas]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+
+% &
+
+% \tl\quad \ques\adjustbox{valign=t}{%
+% \begin{avm}
+% \[\Obj & \[
+% 			\Pred	& `red one' \\
+% 			\Anim	& $+$ \\
+% 			\Case	& \Parg \\
+% 		\] \\
+% \]
+% \end{avm}}
+
+% \end{tabular}
+% \xe
 
 ...
 
