@@ -1454,7 +1454,7 @@ hypothesis about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
 %\begin{figure}[tp]
 \ex\labels
 \begin{tabular}[t]{@{} l @{\quad} l}
-\tl\quad\label{ex:daadjcase}%
+\tl\quad\label{ex:daadjcase}\ques%
 \begin{forest} shorter edges, narrower nodes,
 [{\anno[\pass{\Obj}]{DP}}
 	[\anno{\xbar{D}}
@@ -1479,7 +1479,7 @@ hypothesis about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
 
 &
 
-\tl\quad\label{ex:daadjcaseavm} \adjustbox{valign=t}{%
+\tl\quad\label{ex:daadjcaseavm} \ques\adjustbox{valign=t}{%
 \begin{avm}
 \[\Obj & \[
 			\Pred	& `pro' \\
@@ -1537,29 +1537,26 @@ condition, though: \textcquote[45]{bresnan2016}{Every attribute has a unique
 value}, that is, no attribute may have more than one value assigned to it, but
 we just did this for \Pred{} by assigning both `pro' and `red' to it. Thus, in
 order not to violate this principle, the question is whether a list of \Pred{}
-attributes as values of an anonymous attribute within a function (like \Adjc{}
-lists, or whenever coordination is involved) would be acceptable:
+attributes (like \Adjc{} lists, or whenever coordination is involved) would be
+acceptable:
 
 \ex \ques\begin{avm}
-\[\Obj{}	& $f$:	& \[
-				\{\avmspan{%
+\[\Obj{}	& \[\avmspan{%
+				\{
 					\[
 						\Pred	&	\normalfont{`pro'}\\
+						\Deix	&	$such$ \\
 					\],\\
 					\[
 						\Pred	&	\normalfont{`red'}\\
 					\]
-				}\}\\
-				...
+				\}}\\
+				\Anim	& $-$ \\
+				\Case	& \Parg \\
 			\]\\
 \]
 \end{avm}
 \xe
-
-\noindent Either way, \citet{bresnan2016} mention the problem of complex
-predicates---the authors admit that since \textcquote[346]{bresnan2016}{each
-\Pred{} is uniquely instantiated [...], two parts of the same \Pred{} cannot be
-unified in the formalism presented in this book}.
 
 ...
 
