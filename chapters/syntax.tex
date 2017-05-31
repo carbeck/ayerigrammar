@@ -1560,12 +1560,13 @@ acceptable:
 
 Another way to look at this problem is to analyze \rayr{d/tuvolej}{da-tuvoley}
 by means of inside-out functional uncertainty.\footnote{To come back to our
-analogy to \textsc{html} et al., inside-out functional uncertainty is
-essentially like walking the \textsc{dom} tree in jQuery with 
-\texttt{\$(this).parent($elem$).attr()}.} \citet[144]{dalrymple2001} gives an 
-example from Warlpiri (from \cite[136]{nordlinger1998}, attributed to
-\cite{simpson1991}) which contains a noun with double case marking, which may
-serve as a template to analogize from here:
+analogy with \textsc{html} et al., inside-out functional uncertainty is similar
+to traversing the \textsc{dom} tree upwards in jQuery with
+\texttt{\$(this).parent($selector$).attr($key$)}.} \citet[144] {dalrymple2001}
+gives an example from Warlpiri (from \cite[136]{nordlinger1998}, attributed to
+\cite{simpson1991}) which contains a noun with double case marking. This
+example may serve as a template for a solution to our question, since here as
+well one lexeme, \fw{pirli-ngka-rlu}, unites two instances of the same feature.
 
 \ex\label{ex:warldblcase}
 \begingl\rc{Warlpiri}
@@ -1612,8 +1613,8 @@ a superordinate f-structure containing an attribute \Oblq{loc} (we know from
 the \Loc{} case marking in $g$ that the value of the \Oblq{loc} feature is $g$
 itself) which has a \Case{} feature with the value \Erg{}. The fourth line
 states that again, a superordinate f-stucture must exist, and that the
-f-structure $f$ is the value of its \Subj{} feature, since \Erg{} case
-identifies the NP as the subject.
+f-structure containing the \Oblq{loc} attribute (that is, $f$) is the value of
+its \Subj{} feature, since \Erg{} case identifies the NP as the subject.
 
 So how can we transfer this to our composite demonstrative \xayr{d/tuvolej}
 {da-tuvoley}{a/the red one}? We know that there is a lexical base which is an
@@ -1662,14 +1663,15 @@ permits us, for one, not to violate lexical integrity as in
 (\ref{ex:datuvoleycstr}). Secondly, we do not have to assume that the adjective
 itself untypically inflects for case, at least not at a functional level. The
 case marker just happens to be stuck on it because it is the next best lexical
-base to attach it to, which is represented in the accompanying c-structure.
+base to attach it to, which is represented in the accompanying c-structure 
+(non-branching bar levels have been pruned).
 
 \ex\label{ex:datuvoleycstr}
 \begin{forest} shorter edges, narrower nodes,
 [{\anno[\pass{\Obj}]{DP}}
-	[\anno{\xbar{D}}
+%	[\anno{\xbar{D}}
 		[{\anno[\pass{\Adjc}]{AP}}
-			[\anno{\xbar{A}}
+%			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}, narrower nodes,
 					[\anno{Cl}
 						[da-]
@@ -1681,9 +1683,9 @@ base to attach it to, which is represented in the accompanying c-structure.
 						[-ley]
 					]
 				]
-			]
+%			]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
