@@ -1558,7 +1558,133 @@ acceptable:
 \end{avm}
 \xe
 
-...
+Another way to look at this problem is to analyze \rayr{d/tuvolej}{da-tuvoley}
+by means of inside-out functional uncertainty.\footnote{To come back to our
+analogy to \textsc{html} et al., inside-out functional uncertainty is
+essentially like walking the \textsc{dom} tree in jQuery with 
+\texttt{\$(this).parent($elem$).attr()}.} \citet[144]{dalrymple2001} gives an 
+example from Warlpiri (from \cite[136]{nordlinger1998}, attributed to
+\cite{simpson1991}) which contains a noun with double case marking, which may
+serve as a template to analogize from here:
+
+\ex\label{ex:warldblcase}
+\begingl\rc{Warlpiri}
+	\gla Japanangka-rlu luwa-rnu marlu pirli-ngka-rlu //
+	\glb Japanangka-\Erg{} shoot-\Pst{} kangaroo rock-\Loc{}-\Erg{} //
+	\glft `Japanangka shot the kangaroo on the rock.' //
+\endgl\xe
+
+She explains that the stacked case marking in \fw{pirli-ngka-rlu} `rock-\Loc
+{}-\Erg{}', according to \citet{nordlinger1998}, can be represented in
+f-structure in the following way:
+
+\pex
+\a\label{ex:warlavm} \begin{avm}
+\[
+	\Subj	&	$f$: \[
+					\Case		&	\Erg \\
+					\Oblq{loc}	&	$g$: \[
+												\Pred	&	`rock' \\
+												\Case	&	\Loc \\
+											\] \\
+				\] \\
+\]
+\end{avm}
+
+\a\label{ex:warllex} \adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\fw{pirli-ngka-rlu}
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `rock' \\
+			\ups{\Case} & = & \Loc \\
+			\uncertain{\Oblq{loc}}{\Case} & = & \Erg \\
+			(\Subj{} \Oblq{loc}~↑) \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+
+What the lexical annotations in (\ref{ex:warllex}) mean, according to \citet
+[145--146]{dalrymple2001}, is that there is a word with `rock' for its \Pred{},
+and which has \Loc{} for its \Case{} value. The third line states that there is
+a superordinate f-structure containing an attribute \Oblq{loc} (we know from
+the \Loc{} case marking in $g$ that the value of the \Oblq{loc} feature is $g$
+itself) which has a \Case{} feature with the value \Erg{}. The fourth line
+states that again, a superordinate f-stucture must exist, and that the
+f-structure $f$ is the value of its \Subj{} feature, since \Erg{} case
+identifies the NP as the subject.
+
+So how can we transfer this to our composite demonstrative \xayr{d/tuvolej}
+{da-tuvoley}{a/the red one}? We know that there is a lexical base which is an
+adjective \rayr{tuvo}{tuvo} which has `red' for \Pred{}. This is embedded as
+the \Adjc{} to a functional head with deictic features (formerly \rayr{dnYlej}
+{danyaley}, now reduced to a simple clitic \rayr{d/}{da-}). The whole compound
+is marked for \Parg{} case, which identifies it as an \Obj{}. Thus, I propose
+the f-structure and annotations in (\ref{ex:datuvoleyuncert}):
+
+\pex\label{ex:datuvoleyuncert}
+\a \begin{avm}
+\[
+	\Obj	&	$f$: \[
+					\Pred	&	`pro' \\
+					\Anim	&	$-$ \\
+					\Case	&	\Parg \\
+					\Deix	&	$such$ \\
+					\Adjc	&	$g$: \{\[
+									\Pred	& `red' \\
+								\]\} \\
+				\] \\
+\]
+\end{avm}
+
+\a \adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{d/tuvolej}{da-tuvoley}
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `red' \\
+			\uncertain{\Adjc{}}{\Pred} & = & `pro' \\
+			\uncertain{\Adjc{}}{\Deix} & = & $such$ \\
+			\uncertain{\Adjc{}}{\Case} & = & \Parg \\
+			(\Obj{} \Adjc{}~↑) \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+
+Essentially, we can generate the same f-structure as in
+(\ref{ex:ex:danyaastuvoavm}) above this way, since \rayr{d/tuvolej}{da-tuvoley}
+and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent in
+spite of their different morphology. The approach with functional uncertainty
+permits us, for one, not to violate lexical integrity as in
+(\ref{ex:daadjcase}a), so the c-structure should more correctly look like in
+(\ref{ex:datuvoleycstr}). Secondly, we do not have to assume this way that the
+adjective itself untypically inflects for case.
+
+\ex\label{ex:datuvoleycstr}
+\begin{forest} shorter edges, narrower nodes,
+[{\anno[\pass{\Obj}]{DP}}
+	[\anno{\xbar{D}}
+		[{\anno[\pass{\Adjc}]{AP}}
+			[\anno{\xbar{A}}
+				[\anno{\xhead{A}}, narrower nodes,
+					[\anno{Cl}
+						[da-]
+					]
+					[\anno{A\tsub{stem}}
+						[tuvo]
+					]
+					[\anno{A\tsub{infl}}
+						[-ley]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
 
 \subsubsection{Interrogative pronouns}
 
