@@ -128,12 +128,13 @@
 % by recompiling the ttf files against a more recent version of ttfautohint.
 % Many thanks to Peter Baker.
 
-\setmainfont{Junicode.ttf}[
+\setmainfont{Junicode_patched.ttf}[
 	Ligatures=TeX,
 	Numbers=Lowercase,
-	BoldFont={Junicode-Bold.ttf},
-	ItalicFont={Junicode-Italic.ttf},
-	BoldItalicFont={Junicode-BoldItalic.ttf},
+	Path=fonts/,
+	BoldFont={*-Bold},
+	ItalicFont={*-Italic},
+	BoldItalicFont={*-BoldItalic},
 ]
 
 \setsansfont{Fira Sans}[
