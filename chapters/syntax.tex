@@ -152,15 +152,16 @@ Regarding the different functions distinguished, \Lfg{}
 assumes the following hierarchies \citep[97, 100]{bresnan2016}:
 
 \pex\label{ex:functions}
-\a\label{ex:gfs} Grammatical functions (GFs):\\
+\a\label{ex:gfs} Grammatical functions (\GF{}s):\\
 	$\overbrace{\Sbj{} > \Obj{} > \SObj{}}^{\text{core}} > 
 	\overbrace{\Oblique{} > \XCompl{}, \Compl{} > \Adjc{}}^{\text{noncore}}$
-\a\label{ex:nonafs} (Non)argument functions (AFs/$\overline{\mbox{AF}}$s):\\
+\a\label{ex:nonafs} (Non)argument functions (\AF{}s/$\overline{\mbox{\AF{}}%
+}$s):\\
 	$\underbrace{\Top{}\: \Foc{}}_{\text{non-a-fns}}\; 
 	\overbrace{\Sbj{}\: \Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: 
 		\Compl{}}^{\text{a-fns}}\; 
 	\underbrace{\Adjc{}}_{\text{non-a-fns}}$
-\a\label{ex:dfs} Discourse functions (DFs):\\
+\a\label{ex:dfs} Discourse functions (\DF{}s):\\
 	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}^{\text{d-fns}}\;  
 	\underbrace{\Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: \Compl{}\: 
 		\Adjc{}}_{\text{non-d-fns}}$
@@ -280,7 +281,7 @@ complementizer phrases, CPs). This can be represented as a constituent-structure
 Here as well, we can see a nominal head on the left which may be modified by
 adjuncts of various types. The maximal projection of \xhead{N} (that is, NP) is
 annotated very generally for the function of the NP---basically, an NP can act
-as either a discourse function (DF) or a grammatical function (GF). 
+as either a discourse function (DF) or a grammatical function (\GF{}). 
 (\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is 
 no grammatical context given, NP is unmarked for function in these examples.
 
@@ -1750,6 +1751,212 @@ common' must be phrased using (generic) nouns (\ref{ex:hownoun}).
 		\textit{or:} `How common is it?' //
 \endgl
 \xe
+
+Logically, what the question word queries for is both the implied object of the
+question and also new information. That is, what it asks for is the sentence's
+focus. For English, \citet[406]{dalrymple2001} gives the following example:
+
+\needspace{3\baselineskip}
+\pex
+\a\label{ex:engqcstruct}%
+\fw{Who does David like?} \medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+
+\begin{forest}
+[CP \tikzmark{engqcstruct_CP}
+	[NP \tikzmark{engqcstruct_NP}
+		[N
+			[Who]
+		]
+	]
+	[\xbar{C}
+		[\xhead{C}
+			[does]
+		]
+		[IP
+			[NP
+				[\xhead{N}
+					[David]
+				]
+			]
+			[\xbar{I}
+				[VP
+					[\xhead{V}
+						[like]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\tikzmark{engqcstruct_f} \[
+	\Foc	&	\tikzmark{engqcstruct_g} \[
+					\Pred		&	`pro' \\
+					prontype	&	$wh$ \\
+				\] \tikzmark{engqcstruct_g2} \\
+	\Q		&	~\tikzmark{engqcstruct_q} \\
+	\Pred	&	~\astruct{like}{\Subj, \Obj} \\
+	\Subj	&	~\[
+					\Pred	&	`David' \\
+				\] \\
+	\Obj	&	~\tikzmark{engqcstruct_obj} \\
+\]
+\end{avm}
+
+\end{tabu}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:engqcstruct_CP})
+	to [out=east, in=west] ([yshift=0.5ex]{pic cs:engqcstruct_f});
+\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:engqcstruct_NP})
+	to [out=east, in=west] ([yshift=0.5ex]{pic cs:engqcstruct_g});
+
+\draw ([yshift=0.5ex]{pic cs:engqcstruct_g2})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:engqcstruct_q});
+\draw ([yshift=0.5ex]{pic cs:engqcstruct_g2})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:engqcstruct_obj});
+\end{tikzpicture}
+
+\a\label{ex:engqstruct}
+CP → $\left(\anno*[{\pass{\Foc} \\ %
+	\ups{\Foc} = \ups{\textsc{QFocusPath}} \\ %
+	\ups{\Q} = \ups{\Foc{} \textsc{WhPath}} \\ %
+	\ups{\Q{} \textsc{prontype}} \req{} $wh$ %
+	}]{XP}\right)$ $\left(\anno*{\xbar{C}}\right)$
+
+\xe
+
+The \Avm{} in (\ref{ex:engqcstruct}) indicates that information contained in
+\Foc{} (as a discourse function) is shared with both the question particle \Q{}
+and the \Obj{} of the clause. That is, \Q{} is replacing the \Obj{} as a
+pronoun, and as such, embodies the \Foc{} function with the respective
+properties. The phrase structure in (\ref{ex:engqstruct}), then, tries to give
+a formula as general as possible for all question words in English, hence we
+see XP instead of NP like in example (\ref{ex:engqcstruct}), which is an
+example of a specific sentence containing the interrogative pronoun \fw{who}.
+XP corresponds to any phrase type which can contain a question word, that is,
+NP, PP, AdvP, and AP \citep[407] {dalrymple2001}. The rather intricate
+annotation for XP is due to English's fronting of the question word, which
+necessitates definitions to retrieve the correct corresponding information
+further down the tree. The annotation basically says that XP is the focus of
+the clause and specifies that the corresponding information must be found in a
+location accessible to the \fw{wh}-word (that is, the
+\fw{wh}-word must c-command it), and there is a requirement that a
+\fw{wh}-word exist.
+
+Since Ayeri does not front interrogative pronouns like English does, the
+functional annotations of the phrase structure rule should look a whole lot
+easier. Yet, however, we still need to account for \Q{}, \Foc{} and its
+associated \GF{} sharing information. In order to give an example, let us have
+a look again at (\ref{ex:sinyapro}):
+
+\needspace{3\baselineskip}
+\ex\label{ex:ayrqcstruct}%
+\fw{Le tinkaya sinyāng kunang?} \medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+
+\begin{forest}
+[IP \tikzmark{ayrqcstruct_IP}
+%	[\xbar{I}
+		[\xhead{I}
+			[Cl
+				[Le]
+			]
+			[\xhead{I}
+				[tinkaya]
+			]
+		]
+%	]
+	[S
+		[NP \tikzmark{ayrqcstruct_NP}
+%			[\xbar{N}
+				[\xhead{N}
+					[sinyāng]
+				]
+%			]
+		]
+		[VP
+%			[\xbar{V}
+				[NP
+%					[\xbar{N}
+						[\xhead{N}
+							[kunang]
+						]
+%					]
+				]
+%			]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\tikzmark{ayrqcstruct_f} \[
+	\Top	&	~\[
+					\Pred	&	`door' \\
+					\Anim	&	$-$ \\
+					\Case	&	\Parg \\
+				\] \tikzmark{ayrqcstruct_Top} \\
+	\Foc	&	\tikzmark{ayrqcstruct_g} \[
+					\Pred		&	`pro' \\
+					prontype	&	$wh$ \\
+					\Anim		&	$+$ \\
+					\Case		&	\Aarg \\
+				\] \tikzmark{ayrqcstruct_Foc} \\
+	\Q		&	~\tikzmark{ayrqcstruct_q} \\
+	
+	\Pred	&	~\astruct{open}{\ups{\Subj}, \ups{\Obj}} \\
+	\Subj	&	~\tikzmark{ayrqcstruct_subj} \\
+	\Obj	&	~\tikzmark{ayrqcstruct_obj} \\
+\]
+\end{avm}
+
+\end{tabu}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:ayrqcstruct_IP})
+	to [out=east, in=west] ([yshift=0.5ex]{pic cs:ayrqcstruct_f});
+\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:ayrqcstruct_NP})
+	to [out=east, in=west] ([yshift=0.5ex]{pic cs:ayrqcstruct_g});
+
+\draw [dashed] ([yshift=0.5ex]{pic cs:ayrqcstruct_Top})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_obj});
+\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_q});
+\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
+\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
+	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
+\end{tikzpicture}
+\xe
+
+Example (\ref{ex:ayrqcstruct}) is an attempt to chart the c-strcuture and the
+accompanying \Avm{} for the sentence, \xayr{le tiMky sinFyaaNF kunNF?}{Le
+tinkaya sinyāng kunang?}{The door, who opened it?}. I assumed that Ayeri, being
+verb-initial, shares the structure of the Welsh examples given in
+\textcites[66]{dalrymple2001}[130--135]{bresnan2016}, where there is still
+assumed to be a VP, though with an empty head position, the verb instead
+appearing as the head of IP. Arrows between the c-structure tree and the \Avm{}
+are analogous to the ones in (\ref{ex:engqcstruct}) for easier orientation.
+
+In difference to the English example above, the interrogative pronoun is marked
+for case, and thus also encodes animacy for agents and patients. A full line
+connects the \Foc{} value to both the value of \Q{} and \Subj{} to indicate
+correspondences between \DF{}s and \GF{}s; the connection between \Foc{} and
+\Subj{} is also contrary to the English example above, since we are asking for
+the subject/agent in this case, not for the object/patient as in the previous
+example. (\ref{ex:ayrqcstruct}) also has a patient topic, which is indicated,
+though the line connecting \Top{} and its associated \Obj{} is dashed to
+indicate that it is there, though not relevant to our interest here.
 
 ...
 
