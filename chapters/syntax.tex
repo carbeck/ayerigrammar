@@ -2012,6 +2012,163 @@ join modifiers to \xbar{D}, like with personal pronouns:
 together with a generic noun, however. In these cases, \rayr{sinY}{sinya}
 occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 
+\pex
+\a\label{ex:sinyaadj1}\begingl
+	\gla Ang pengalye nyānas denisa sinya? //
+	\glb ang pengal=ye.Ø nyān-as denisa sinya //
+	\glc \AgtT{} meet=\TsgF{}.\Top{} person-\Parg{} famous which //
+	\glft `Which famous person did she meet?' //
+\endgl \medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+
+\begin{forest} shorter edges,
+[NP
+	[\xbar{N}
+		[\xbar{N}
+			[\xhead{N}
+				[nyānas]
+			]
+			[AP
+				[{denisa}, roof]
+			]
+		]
+		[DP
+			[{sinya}, roof]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\[
+	% \Top	&	\[
+	% 				\Pred	&	`pro' \\
+	% 				\Pers	&	\Third \\
+	% 				\Num	&	\Sg \\
+	% 				\Gend	&	\F \\
+	% 				\Anim	&	$+$ \\
+	% 				\Case	&	\Aarg \\
+	% 			\] \tikzmark{sinyaadj1_top} \\
+	\Foc	&	\[
+					\Pred	&	`person' \\
+					\Case	&	\Parg \\
+					\Anim	&	$+$ \\
+					\Num	&	\Sg \\
+					\Adjc	&	\{
+									\[
+										\Pred	&	`famous' \\
+									\], \\
+									\[
+										\Pred		&	`pro' \\
+										prontype	&	$wh$ \\
+									\] \tikzmark{sinyaadj1_wh} \\
+								\} \\
+				\] \tikzmark{sinyaadj1_foc} \\
+	\Q		&	\tikzmark{sinyaadj1_q} \\
+
+	% \Pred	&	\astruct{meet}{\ups{\Subj}, \ups{\Obj}} \\
+	% \Subj	&	\tikzmark{sinyaadj1_subj} \\
+	\Obj	&	\tikzmark{sinyaadj1_obj} \\
+\]
+\end{avm}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj1_wh})
+	-- ++(east:2em) |- ([yshift=1ex]{pic cs:sinyaadj1_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj1_foc})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:sinyaadj1_obj});
+\end{tikzpicture}
+
+\end{tabu}
+
+\a\begingl
+	\gla Ang sarava yanoya veno sinya? //
+	\glb ang sara=va.Ø yano-ya veno sinya //
+	\glc \AgtT{} go=\Second{}.\Top{} place-\Loc{} beautiful which //
+	\glft `Which beautiful place did you go to?' //
+\endgl \medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+
+\begin{forest} shorter edges,
+[PP
+	[NP
+		[\xbar{N}
+			[\xbar{N}
+				[\xhead{N}
+					[yanoya]
+				]
+				[AP
+					[{veno}, roof]
+				]
+			]
+			[DP
+				[{sinya}, roof]
+			]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\[
+	% \Top	&	\[
+	% 				\Pred	&	`pro' \\
+	% 				\Pers	&	\Second \\
+	% 				\Num	&	\Sg \\
+	% 				\Anim	&	$+$ \\
+	% 				\Case	&	\Aarg \\
+	% 			\] \tikzmark{sinyaadj2_top} \\
+	\Foc	&	\[
+					\Pred	&	`place' \\
+					\Case	&	\Loc \\
+					\Num	&	\Sg \\
+					\Adjc	&	\{
+									\[
+										\Pred	&	`beautiful' \\
+									\], \\
+									\[
+										\Pred		&	`pro' \\
+										prontype	&	$wh$ \\
+									\] \tikzmark{sinyaadj2_wh} \\
+								\} \\
+				\] \tikzmark{sinyaadj2_foc} \\
+	\Q		&	\tikzmark{sinyaadj2_q} \\
+
+	% \Pred	&	\astruct{go}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
+	% \Subj	&	\tikzmark{sinyaadj2_subj} \\
+	\Oblq{loc}	&	\tikzmark{sinyaadj2_oblloc} \\
+\]
+\end{avm}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj2_wh})
+	-- ++(east:2em) |- ([yshift=1ex]{pic cs:sinyaadj2_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj2_foc})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:sinyaadj2_oblloc});
+\end{tikzpicture}
+
+\end{tabu}
+
+\xe
+
+The interrogative pronoun asking for quantity, \xayr{siknF}{sikan}{how much,
+how many}, likewise acts like a nominal modifier, and only ever does---that is,
+unlike \rayr{sinY}{sinya} it does not have a double role. It may combine with
+any countable or quantifiable noun:
+
+\ex\begingl
+\gla Sahayan keynamang sikan? //
+\glb saha-yan keynam-ang sikan //
+\glc come-\TplM{} people-\Aarg{} how.many //
+\glft `How many people came?' //
+\endgl\xe
+
 ...
 
 \subsubsection{Indefinite pronouns}
