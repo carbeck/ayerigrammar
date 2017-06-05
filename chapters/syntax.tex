@@ -54,8 +54,8 @@ states that \emph{internal structures are largely invariant across languages}.
 The formal model of internal structure in \Lfg{} is the \emph{f-structure},
 which stands for \enquote{functional structure}}. The f-structure is depicted
 as an argument-value matrix (\Avm{}) which maps the relations between `subject'
-(\Sbj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc. as functional
-abstractions of NP, VP, V, etc. \citep[42]{bresnan2016}. Verbs are also
+(\Sbj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
+abstractions of NP, VP, V, etc.\ \citep[42]{bresnan2016}. Verbs are also
 presented with their \fw{a-structure} spelled out. That is, which arguments a
 verb has relations to is formally stated \citep[15]{bresnan2016}. The
 f-structure collates semantic features associated with heads of grammatical
@@ -539,7 +539,7 @@ More important to \Lfg{} than c-structure trees, however, are
 function-structure matrices which gather all information in a given utterance
 and gather potentially disparate information into semantically coherent units
 within the matrix.\footnote{Essentially, c-structure is similar to the tree
-hierarchy of paragraphs, images, tables etc. in an \textsc{html} file, while
+hierarchy of paragraphs, images, tables etc.\ in an \textsc{html} file, while
 f-structure describes semantic properties of elements in the tree similar to
 how \textsc{css} defines the layout properties of these elements.} In the
 following, I will thus give a list of morpholexic specifications which give an
@@ -1817,10 +1817,10 @@ focus. For English, \citet[406]{dalrymple2001} gives the following example:
 \draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:engqcstruct_NP})
 	to [out=east, in=west] ([yshift=0.5ex]{pic cs:engqcstruct_g});
 
-\draw ([yshift=0.5ex]{pic cs:engqcstruct_g2})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:engqcstruct_q});
-\draw ([yshift=0.5ex]{pic cs:engqcstruct_g2})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:engqcstruct_obj});
+\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:engqcstruct_g2})
+	-- ++(east:1em) |- ([yshift=0.5ex]{pic cs:engqcstruct_q});
+\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:engqcstruct_g2})
+	-- ++(east:1em) |- ([yshift=0.5ex]{pic cs:engqcstruct_obj});
 \end{tikzpicture}
 
 \a\label{ex:engqstruct}
@@ -1928,14 +1928,12 @@ a look again at (\ref{ex:sinyapro}):
 \draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:ayrqcstruct_DP})
 	to [out=east, in=west] ([yshift=0.5ex]{pic cs:ayrqcstruct_g});
 
-\draw [dashed] ([yshift=0.5ex]{pic cs:ayrqcstruct_Top})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_obj});
-\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_q});
-\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
-\draw ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
-	to [out=east, in=east] ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
+\draw [dashed, rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Top})
+	-- ++(east:5em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_obj});
+\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
+	-- ++(east:3em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_q});
+\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
+	-- ++(east:3em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
 \end{tikzpicture}
 \xe
 
@@ -1944,7 +1942,7 @@ accompanying \Avm{} for the sentence, \xayr{le tiMky sinFyaaNF kunNF?}{Le
 tinkaya sinyāng kunang?}{The door, who opened it?}. I assumed that Ayeri, being
 verb-initial, shares the structure of the Welsh examples given in
 \textcites[66]{dalrymple2001}[130--135]{bresnan2016}, where there is still
-assumed to be a VP, though with an empty head position, the verb instead
+assumed to be a VP, though with an empty head position and the verb instead
 appearing as the head of IP. Arrows between the c-structure tree and the \Avm{}
 are analogous to the ones in (\ref{ex:engqcstruct}) for easier orientation. I
 labeled the phrase containing the interrogative pronoun DP, however, for
@@ -1960,7 +1958,7 @@ between \Foc{} and \Subj{} is also contrary to the English example above, since
 we are asking for the subject/agent in this case, not for the object/patient as
 in the previous example. (\ref{ex:ayrqcstruct}) also has a patient topic, which
 is indicated, though the line connecting \Top{} and its associated \Obj{} is
-dashed to indicate that it is there, though not relevant to our interest here.
+dashed to indicate that it is there but not relevant to our interest here.
 
 ...
 
