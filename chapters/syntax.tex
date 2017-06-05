@@ -123,19 +123,19 @@ constituent (c-)structure:
 	([yshift=1ex]{pic cs:obj});
 	
 \draw [-latex]
-	([yshift=0.5ex]{pic cs:V})
+	([yshift=1ex]{pic cs:V})
 	to [out=west, in=south west]
 	([yshift=-10ex]{pic cs:fstruct});
 	
 \draw [-latex]
-	([yshift=0.5ex]{pic cs:NP})
+	([yshift=1ex]{pic cs:NP})
 	to [out=east, in=east]
-	([yshift=0.5ex]{pic cs:objval});
+	([yshift=1ex]{pic cs:objval});
 	
 \draw [-latex]
-	([yshift=0.5ex]{pic cs:Nbar})
+	([yshift=1ex]{pic cs:Nbar})
 	to [out=east, in=east]
-	([yshift=0.5ex]{pic cs:objval});
+	([yshift=1ex]{pic cs:objval});
 \end{tikzpicture}
 \label{fig:phimap}
 \end{figure}
@@ -1812,15 +1812,15 @@ focus. For English, \citet[406]{dalrymple2001} gives the following example:
 \end{tabu}
 
 \begin{tikzpicture}[remember picture, overlay]
-\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:engqcstruct_CP})
-	to [out=east, in=west] ([yshift=0.5ex]{pic cs:engqcstruct_f});
-\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:engqcstruct_NP})
-	to [out=east, in=west] ([yshift=0.5ex]{pic cs:engqcstruct_g});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:engqcstruct_CP})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engqcstruct_f});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:engqcstruct_NP})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engqcstruct_g});
 
-\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:engqcstruct_g2})
-	-- ++(east:1em) |- ([yshift=0.5ex]{pic cs:engqcstruct_q});
-\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:engqcstruct_g2})
-	-- ++(east:1em) |- ([yshift=0.5ex]{pic cs:engqcstruct_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engqcstruct_g2})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:engqcstruct_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engqcstruct_g2})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:engqcstruct_obj});
 \end{tikzpicture}
 
 \a\label{ex:engqstruct}
@@ -1908,9 +1908,9 @@ a look again at (\ref{ex:sinyapro}):
 				\] \tikzmark{ayrqcstruct_Top} \\
 	\Foc	&	\tikzmark{ayrqcstruct_g} \[
 					\Pred		&	`pro' \\
-					prontype	&	$wh$ \\
 					\Anim		&	$+$ \\
 					\Case		&	\Aarg \\
+					prontype	&	$wh$ \\
 				\] \tikzmark{ayrqcstruct_Foc} \\
 	\Q		&	~\tikzmark{ayrqcstruct_q} \\
 	
@@ -1923,17 +1923,17 @@ a look again at (\ref{ex:sinyapro}):
 \end{tabu}
 
 \begin{tikzpicture}[remember picture, overlay]
-\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:ayrqcstruct_IP})
-	to [out=east, in=west] ([yshift=0.5ex]{pic cs:ayrqcstruct_f});
-\draw [-latex, min distance=1cm] ([yshift=0.5ex]{pic cs:ayrqcstruct_DP})
-	to [out=east, in=west] ([yshift=0.5ex]{pic cs:ayrqcstruct_g});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:ayrqcstruct_IP})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ayrqcstruct_f});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:ayrqcstruct_DP})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ayrqcstruct_g});
 
-\draw [dashed, rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Top})
-	-- ++(east:5em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_obj});
-\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
-	-- ++(east:3em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_q});
-\draw [rounded corners=1ex] ([yshift=0.5ex]{pic cs:ayrqcstruct_Foc})
-	-- ++(east:3em) |- ([yshift=0.5ex]{pic cs:ayrqcstruct_subj});
+\draw [dashed, rounded corners=1ex] ([yshift=1ex]{pic cs:ayrqcstruct_Top})
+	-- ++(east:5em) |- ([yshift=1ex]{pic cs:ayrqcstruct_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ayrqcstruct_Foc})
+	-- ++(east:3em) |- ([yshift=1ex]{pic cs:ayrqcstruct_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ayrqcstruct_Foc})
+	-- ++(east:3em) |- ([yshift=1ex]{pic cs:ayrqcstruct_subj});
 \end{tikzpicture}
 \xe
 
@@ -1959,6 +1959,58 @@ we are asking for the subject/agent in this case, not for the object/patient as
 in the previous example. (\ref{ex:ayrqcstruct}) also has a patient topic, which
 is indicated, though the line connecting \Top{} and its associated \Obj{} is
 dashed to indicate that it is there but not relevant to our interest here.
+
+An exemplary feature set for an interrogative pronoun has already been spelled
+out for \rayr{sinYaaNF}{sinyāng} above. More generally, interrogative pronouns
+have the possible values spelled out in (\ref{ex:interpromorphlex}). That is,
+interrogative pronouns do not encode person and number, though at least 
+\rayr{sinY}{sinya} inflects for case and thus also encodes animacy for agents
+and patients. Other pronouns like \xayr{siynF}{siyan} {where} or
+\xayr{siknF}{sikan}{how many} are invariant, as described in
+\autoref{subsec:interpro}. Which morphological surface form is picked for \Q{}
+if case is not specified basically depends on the \GF{} it is linked to.
+
+\ex\label{ex:interpromorphlex}
+\adjustbox{valign=t}{%
+\begin{tabu} {\usetabu{morphlexnarrow}}
+...
+	& N
+	& \begin{tabular}[t]{l l l}
+		\ups{\Pred} & = & `pro' \\
+		(\ups{\Anim} & = & $\pm$) \\
+		(\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
+			\Caus{}\}) \\
+		\ups{\textsc{prontype}} & = & $wh$ \\
+	\end{tabular}
+\end{tabu}%
+}
+\xe
+
+Since question pronouns stay \fw{in situ}, it is not necessary to devise an
+outside-in functional uncertainty rule; the interrogative pronoun is already in
+the place the argument it stands in for would normally occupy. The
+interrogative pronoun as such wholly replaces an NP, so it is not possible to
+join modifiers to \xbar{D}, like with personal pronouns:
+
+\pex
+\a\ljudge*\begingl
+	\gla Ang pengalye sinyās denisa? //
+	\glb ang pengal=ye.Ø sinya-as denisa //
+	\glc \AgtT{} meet=\TsgF{}.\Top{} who-\Parg{} famous //
+	\glft `Whom famous did she meet?' //
+\endgl
+
+\a\ljudge*\begingl
+	\gla Ang sarava siyan veno? //
+	\glb ang sara=va.Ø siyan veno //
+	\glc \Aarg{} go=\Second{}.\Top{} where beautiful //
+	\glft `Where beautiful did you go?' //
+\endgl
+\xe
+
+\rayr{sinY}{sinya}'s other function as an adjective may come into play here
+together with a generic noun, however. In these cases, \rayr{sinY}{sinya}
+occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 
 ...
 
