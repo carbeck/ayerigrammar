@@ -212,6 +212,14 @@
 % \usepackage{rotating}
 % \usepackage{multirow}
 
+\tabulinesep = .5\itemsep
+
+\newenvironment{morphlex}{%
+	\tabulinesep = 0pt%
+}{%
+\ignorespacesafterend%
+}
+
 % Dealing with page-size tables in landscape format
 % http://tex.stackexchange.com/a/19021, and hat tip to Git user Zoqaeski:
 \usepackage{pdflscape} % alternative to rotating; rotates pages on screen
@@ -535,6 +543,7 @@
 % Feature annotation above (for use in TREES); no value in [] prints ↑ = ↓
 \newcommand{\anno}[2][\updown{}]{%
 	\text{%
+		\tabulinesep = 0pt
 		\begin{tabu}[c]{>{\smaller\smaller}c}%
 			#1\\[0.125\baselineskip]%
 			\larger #2
@@ -545,6 +554,7 @@
 % Feature annotation below (for use in PHRASE-STRUCTURE RULES); no value in [] prints ↑ = ↓
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
 	\text{%
+		\tabulinesep = 0pt
 		\begin{tabu}[m]{>{\smaller\smaller}c}%
 			\larger #2\\[-0.33\baselineskip]%
 			#1%
