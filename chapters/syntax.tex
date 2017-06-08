@@ -2120,7 +2120,9 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 				]
 			]
 			[DP
-				[{sinya}, roof]
+				[\xhead{D}
+					[sinya]
+				]
 			]
 		]
 	]
@@ -2186,18 +2188,79 @@ any countable or quantifiable noun:
 \subsubsection{Indefinite pronouns}
 
 Indefinite pronouns (\autoref{fig:indeftab}) cover a range of both syntactic
-phrases and semantic roles---they may substitute NPs, but also PPs, and may
-form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as various
-oblique arguments (\Oblq{poss}, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}). Those
-indefinite pronouns substituting \textsc{person} and \textsc{thing} decline
-while those encoding \textsc{place}, \textsc{time}, \textsc{manner}, and
-\textsc{reason} are invariant. Thus, \xayr{EnY}{enya}{everyone/\mbox{-thing}},
-\xayr{ArilinY}{arilinya}{somebody/\mbox{-thing}}, and \xayr{rnY}{ranya}
-{nobody/\mbox{-thing}} can be declined for all cases, while the groups around
-\xayr{ynenF}{yanen}{everywhere} and \xayr{tdyen} {tadayen}{everytime} always
-imply location (=~\Loc{}), the group around \xayr{AreenF}{arēn}{in every way}
-implies a manner (=~\Ins{}), and \xayr{yaarilF}{yāril}{for some reason} implies
-a reason (=~\Caus{}).
+phrases and semantic roles: they may substitute NPs, but also PPs; and they may
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
+various oblique arguments (\Oblq{poss}, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
+Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
+decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
+and \textsc{reason} are invariant. Thus, \xayr{EnY}{enya}{everyone/
+\mbox{-thing}}, \xayr{ArilinY}{arilinya}{somebody/\mbox{-thing}}, and
+\xayr{rnY}{ranya} {nobody/\mbox{-thing}} can be declined for all cases, while
+the groups around \xayr{ynenF}{yanen}{everywhere} and \xayr{tdyen}{tadayen}
+{everytime} always imply location (=~\Loc{}), the group around
+\xayr{AreenF}{arēn}{in every way} implies a manner (=~\Ins{}), and
+\xayr{yaarilF}{yāril}{for some reason} implies a reason (=~\Caus{}).
+
+Regarding the functional definition of indefinite pronouns, at least
+\citet{dalrymple2001} treats them as lexical items proper, that is, she does
+not transcribe them as [\Pred{} `pro'] with additional functional annotations
+from which the surface form arises, but simply like [\Pred{} `somebody']. Since
+indefinite pronouns are not composed in a systematic way, I will treat them as
+lexical items proper here as well; for an analysis that still highlights
+certain regularities, see \autoref{indefprocomp} (p.~\pageref{indefprocomp}).
+Example (\ref{ex:indefprostruct}) attempts to model the c- and f-structure of
+a sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
+{yanen}{everywhere}.
+
+\ex\label{ex:indefprostruct}
+\begingl
+	\gla Balangya yanen ang Amān. //
+	\glb balang-ya yanen ang Amān //
+	\glc search-\TsgM{} everywhere \Aarg{} Amān //
+	\glft `Amān searched everywhere.' //
+\endgl\medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+\begin{forest} narrower nodes, shorter edges,
+[IP
+	[\anno{\xhead{I}}
+		[Balangya]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Oblq{loc}}]{DP}}
+			[\anno{\xhead{D}}
+				[yanen]
+			]
+		]
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Amān}, roof]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\[
+	\Pred		&	\astruct{search}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
+
+	\Oblq{loc}	&	\[
+						\Pred	&	`everywhere' \\
+					\] \\
+
+	\Subj		&	\[
+						\Pred	&	`Amān' \\
+						\Anim	&	$+$ \\
+						\Case	&	\Aarg \\
+						\Gend	&	\M \\
+						\Num	&	\Sg \\
+						\Pers	&	\Third \\
+					\] \\
+\]
+\end{avm}
+\end{tabu}
+\xe
 
 ...
 
