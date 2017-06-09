@@ -11,6 +11,8 @@ Currently working on
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently worked on:
 
 * Phrase structures (source: `chapters/syntax.tex`)
+    1. Noun phrases
+    2. Determiner phrases
 
 Table of Contents
 =================
