@@ -6,6 +6,7 @@
 % may be subject to change *especially* in this chapter.
 
 \chapter{Phrase structures}
+\label{ch:phrasestruct}
 
 While the previous chapter dealt largely with the various parts of speech and
 their various distributive and inflectional properties, the present chapter
@@ -238,6 +239,7 @@ topic of the phrase, and a topic can only be marked if the verb is finite and
 the number of arguments to the verb is greater than one.
 
 \subsection{Noun phrases}
+\label{subsec:nps}
 
 \subsubsection{Constituent order within noun phrases}
 
@@ -1113,12 +1115,12 @@ The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
 closed class of words; the chart of personal pronouns in Ayeri is given in
 \autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
-have lexical content for a predicator, but only `pro'. Pronouns distinguish all
+have lexical content for a predicator, but only `$pro$'. Pronouns distinguish all
 grammatical categories of nouns---number, gender and animacy, and case; they
 agree with their antecedents in number, gender, and animacy. In addition to
 these person features, pronouns of course also encode person as a deictic
-category. The reflexive clitic \rayr{sitNF/}{sitang-} also adds reflexivity as 
-a semantic feature.
+category. The reflexive clitic \rayr{sitNF/}{sitang-} also redefines the
+personal pronoun as reflexive.
 
 \begin{morphlex}
 \ex\label{ex:perspromorphlex}
@@ -1127,14 +1129,14 @@ a semantic feature.
 ...
 	& N
 	& \begin{tabular}[t]{l l l}
-		\ups{\Pred} & = & `pro' \\
+		\ups{\Pred} & = & `$pro$' \\
 		\ups{\Anim} & = & $\pm$ \\
 		\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
 			\Caus{}\} \\
 		\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		\ups{\Refl} & = & $\pm$ \\
+		(\ups{prontype} & = & \Refl) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1276,7 +1278,7 @@ feature.
 	...
 		& N
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `pro' \\
+			\ups{\Pred} & = & `$pro$' \\
 			\ups{\Deix} & = & \{$this$, $that$, $such$\} \\
 			\ups{\Pers} & = & 3 \\
 			\ups{\Anim} & = & $\pm$ \\
@@ -1408,7 +1410,7 @@ unincorporated adjective looks like.
 \tl\quad\label{ex:danyaastuvoavm} \adjustbox{valign=t}{%
 \begin{avm}
 \[\Obj & \[
-			\Pred	& `pro' \\
+			\Pred	& `$pro$' \\
 			\Anim	& $+$ \\
 			\Case	& \Parg \\
 			\Deix	& $such$ \\
@@ -1491,7 +1493,7 @@ hypothesis about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
 \tl\quad\label{ex:daadjcaseavm} \ques\adjustbox{valign=t}{%
 \begin{avm}
 \[\Obj & \[
-			\Pred	& `pro' \\
+			\Pred	& `$pro$' \\
 			\Deix	& $such$ \\
 			\Adjc	& \{\[
 						\Pred	& `red' \\
@@ -1517,7 +1519,7 @@ relevant information in a consistent manner.
 Another question is where in the tree \rayr{d/}{da-} should appear as a clitic.
 A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
 {da-tuvoley} as a single unit in terms of syntax. The problem with this is,
-however, that \rayr{d/}{da-} encodes \ups{\Pred} = `pro' and the adjective
+however, that \rayr{d/}{da-} encodes \ups{\Pred} = `$pro$' and the adjective
 encodes \ups{\Pred} = `red'. Now, if they were both dominated by the same node
 (\xhead{A} in (\ref{ex:daadjcase}a)), that node would have clashing values for
 \Pred{}. This in turn motivates the assumption that \rayr{d/}{da-} should be
@@ -1530,7 +1532,7 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 \ex\label{ex:doublepred} *\begin{avm}
 \[\Obj{}	& \[
 				\Pred	&	\{
-								\normalfont{`pro'},\\
+								\normalfont{`$pro$'},\\
 								\normalfont{`red'}\\
 							\}\\
 				\Anim	& $-$ \\
@@ -1544,7 +1546,7 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 \noindent The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness
 condition, though: \textcquote[45]{bresnan2016}{Every attribute has a unique
 value}, that is, no attribute may have more than one value assigned to it, but
-we just did this for \Pred{} by assigning both `pro' and `red' to it. Thus, in
+we just did this for \Pred{} by assigning both `$pro$' and `red' to it. Thus, in
 order not to violate this principle, the question is whether a list of \Pred{}
 attributes (like \Adjc{} lists, or whenever coordination is involved) would be
 acceptable:
@@ -1553,7 +1555,7 @@ acceptable:
 \[\Obj{}	& \[\avmspan{%
 				\{
 					\[
-						\Pred	&	\normalfont{`pro'}\\
+						\Pred	&	\normalfont{`$pro$'}\\
 						\Deix	&	$such$ \\
 					\],\\
 					\[
@@ -1639,7 +1641,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}):
 \a \begin{avm}
 \[
 	\Obj	&	$f$: \[
-					\Pred	&	`pro' \\
+					\Pred	&	`$pro$' \\
 					\Anim	&	$-$ \\
 					\Case	&	\Parg \\
 					\Deix	&	$such$ \\
@@ -1657,7 +1659,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}):
 		& N
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `red' \\
-			\uncertain{\Adjc{}}{\Pred} & = & `pro' \\
+			\uncertain{\Adjc{}}{\Pred} & = & `$pro$' \\
 			\uncertain{\Adjc{}}{\Deix} & = & $such$ \\
 			\uncertain{\Adjc{}}{\Case} & = & \Parg \\
 			(\Obj{} \Adjc{}~↑) \\
@@ -1809,7 +1811,7 @@ focus. For English, \citet[406]{dalrymple2001} gives the following example:
 \begin{avm}
 \tikzmark{engqcstruct_f} \[
 	\Foc	&	\tikzmark{engqcstruct_g} \[
-					\Pred		&	`pro' \\
+					\Pred		&	`$pro$' \\
 					prontype	&	$wh$ \\
 				\] \tikzmark{engqcstruct_g2} \\
 	\Q		&	~\tikzmark{engqcstruct_q} \\
@@ -1919,7 +1921,7 @@ a look again at (\ref{ex:sinyapro}):
 					\Case	&	\Parg \\
 				\] \tikzmark{ayrqcstruct_Top} \\
 	\Foc	&	\tikzmark{ayrqcstruct_g} \[
-					\Pred		&	`pro' \\
+					\Pred		&	`$pro$' \\
 					\Anim		&	$+$ \\
 					\Case		&	\Aarg \\
 					prontype	&	$wh$ \\
@@ -1989,7 +1991,7 @@ if case is not specified basically depends on the \GF{} it is linked to.
 ...
 	& N
 	& \begin{tabular}[t]{l l l}
-		\ups{\Pred} & = & `pro' \\
+		\ups{\Pred} & = & `$pro$' \\
 		(\ups{\Anim} & = & $\pm$) \\
 		(\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
 			\Caus{}\}) \\
@@ -2061,7 +2063,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 \begin{avm}
 \[
 	% \Top	&	\[
-	% 				\Pred	&	`pro' \\
+	% 				\Pred	&	`$pro$' \\
 	% 				\Pers	&	\Third \\
 	% 				\Num	&	\Sg \\
 	% 				\Gend	&	\F \\
@@ -2078,7 +2080,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 										\Pred	&	`famous' \\
 									\], \\
 									\[
-										\Pred		&	`pro' \\
+										\Pred		&	`$pro$' \\
 										prontype	&	$wh$ \\
 									\] \tikzmark{sinyaadj1_wh} \\
 								\} \\
@@ -2136,7 +2138,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 \begin{avm}
 \[
 	% \Top	&	\[
-	% 				\Pred	&	`pro' \\
+	% 				\Pred	&	`$pro$' \\
 	% 				\Pers	&	\Second \\
 	% 				\Num	&	\Sg \\
 	% 				\Anim	&	$+$ \\
@@ -2151,7 +2153,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 										\Pred	&	`beautiful' \\
 									\], \\
 									\[
-										\Pred		&	`pro' \\
+										\Pred		&	`$pro$' \\
 										prontype	&	$wh$ \\
 									\] \tikzmark{sinyaadj2_wh} \\
 								\} \\
@@ -2205,7 +2207,7 @@ the groups around \xayr{ynenF}{yanen}{everywhere} and \xayr{tdyen}{tadayen}
 
 Regarding the functional definition of indefinite pronouns, at least
 \citet{dalrymple2001} treats them as lexical items proper, that is, she does
-not transcribe them as [\Pred{} `pro'] with additional functional annotations
+not transcribe them as [\Pred{} `$pro$'] with additional functional annotations
 from which the surface form arises, but simply like [\Pred{} `somebody']. Since
 indefinite pronouns are not composed in a systematic way, I will treat them as
 lexical items proper here as well. For a discussion of a few regularities that
@@ -2266,12 +2268,13 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 
 The annotation in example (\ref{ex:indefprostruct}) assumes that by its lexical
 meaning alone, \xayr{ynenF}{yanen}{everywhere} is identified as the locative
-adverbial stated the verb's a-structure. \rayr{ANF AmaanF}{ang Amān} itself
-does not mark \TsgM{}, but the \Subj{} relation gets this information through
-unison with the respective marking on the verb with which the subject NP proper
-coheres. The relevant information is implicitly contained in the NP's \Index{}
-feature \citep[186--192]{bresnan2016}, which is not shown in the example above.
-Example (\ref{ex:indefpromorphlex}) gives a generalized list of features which
+adverbial stated in the verb's a-structure (a possible \Obj{} has been
+dropped from the example). \rayr{ANF AmaanF}{ang Amān} itself does not mark
+\TsgM{}, but the \Subj{} relation gets this information through unison with the
+respective marking on the verb with which the subject NP proper coheres. The
+relevant information is implicitly contained in the NP's \Index{} feature
+\citep[186--192]{bresnan2016}, which is not shown in the example above. Example
+(\ref{ex:indefpromorphlex}) gives a generalized list of features which
 indefinite pronouns may encode.
 
 \begin{morphlex}
@@ -2303,8 +2306,8 @@ least formally:
 \a\ljudge*\begingl
 	\gla Ang vacye enyaley leno //
 	\glb ang vac=ye.Ø enya-ley leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} green //
-	\glft `She likes everything green.' //
+	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} blue //
+	\glft `She likes everything blue.' //
 \endgl
 
 \a\ljudge*\begingl
@@ -2326,8 +2329,8 @@ possible to use a generic noun instead of the indefinite pronoun, like
 \a\begingl
 	\gla Ang vacye enyaley si leno //
 	\glb ang vac=ye.Ø enya-ley si leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} \Rel{} green //
-	\glft `She likes everything that is green.' //
+	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} \Rel{} blue //
+	\glft `She likes everything that is blue.' //
 \endgl
 
 \a\begingl
@@ -2342,8 +2345,8 @@ possible to use a generic noun instead of the indefinite pronoun, like
 \a\begingl
 	\gla Ang vacye linyayeley leno //
 	\glb ang vac=ye.Ø linya-ye-ley leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} thing-\Pl{}-\PargI{} green //
-	\glft `She likes all green things.' //
+	\glc \AgtT{} like=\TsgF{}.\Top{} thing-\Pl{}-\PargI{} blue //
+	\glft `She likes all blue things.' //
 \endgl
 
 \a\begingl
@@ -2354,16 +2357,136 @@ possible to use a generic noun instead of the indefinite pronoun, like
 \endgl
 \xe
 
-\subsubsection{Reciprocal pronouns}
+\subsubsection{Reciprocal pronoun}
+
+The reciprocal pronoun \xayr{sitnY}{sitanya}{each other} refers to two
+antecedents, but morphologically it is very simple in that, again, it only
+declines for case, so number and gender do not have to be accounted for. Thus,
+no problems arise in finding the correct form for antecedents with differing
+person features. Example \ref{ex:recpromorphlex} shows the functional
+properties of the reciprocal pronoun.
+
+\begin{morphlex}
+\ex\label{ex:recpromorphlex}
+	\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{\larger sitnY}{sitanya}
+		& N
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `$pro$' \\
+			\ups{\Anim} & = & $\pm$ \\
+			\ups{\Case} & = & \{\Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
+				\Caus{}\} \\
+			\ups{prontype} & = & $recip$ \\
+		\end{tabular}
+	\end{tabu}%
+	}
+\xe
+\end{morphlex}
+
+It is notable that \rayr{sitnY}{sitanya} cannot appear in agent case, since
+`each other' basically expresses that each entity is acted on by the other in
+the same way. The reciprocal relationship is captured in the functional
+annotation by defining \textsc{prontype} as $recip$. Example 
+(\ref{ex:eachotheravm}) illustrates what the \Avm{} for a sentence with a
+reciprocal pronoun could look like.
+
+\ex\label{ex:eachotheravm}
+\begingl
+	\gla Ang silvyan Kan nay Maha sitanyās. //
+	\glb ang silv-yan Kan nay Maha sitanya-as //
+	\glc \AgtT{} see-\TplM{} Kan and Maha each.other-\Parg{} //
+	\glft `Kan and Maha see each other.' //
+\endgl\medskip
+
+\begin{avm}
+\[
+	\Pred	&	\astruct{see}{\ups{\Subj{}}, \ups{\Obj}} \\
+
+	\Top	&	\[
+					\Conj	&	$and$ \\
+					\Gend	&	\M \\
+					\Num	&	\Pl \\
+					\avmspan{
+						\{
+							\[
+								\Pred	&	`Kan' \\
+								\Anim	&	$+$ \\
+								\Case	&	\Aarg \\
+								\Pers	&	\Third \\
+							\],
+							\[
+								\Pred	&	`Maha' \\
+								\Anim	&	$+$ \\
+								\Case	&	\Aarg \\
+								\Pers	&	\Third \\
+							\] \\
+						\}
+					}
+				\] \tikzmark{eachother_top} \\
+
+	\Subj	&	\tikzmark{eachother_subj} \\
+
+	\Obj	&	\[
+					\Pred		&	`$pro$' \\
+					prontype	&	$recip$ \\
+				\]
+\]
+\end{avm}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:eachother_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:eachother_subj}););
+\end{tikzpicture}
+\xe
+
+In (\ref{ex:eachotheravm}), we have the case that the two coordinated subject
+NPs do not share the same features for \Gend{}, since \rayr{knF}{Kan} is a male
+name and \rayr{mh}{Maha} is a female name; the verb form \xayr{silFvFynF}
+{silvyan}{sees} resolves the conflicting values to \M{}. Furthermore, number is
+resolved to \Pl{} from two \Sg{} entities being combined. Resolution in verb
+agreement will be discussed in more detail in \autoref{sec:ips-vps}.
+
+\section{Adjective and adverb phrases}
+\label{sec:adjps-advps}
 
 ...
 
-% \section{Adjective phrases}
-%
+\subsection{Adjective phrases}
+\label{subsec:adjps}
+
+...
+
+\subsection{Adverb phrases}
+\label{subsec:advps}
+
+...
+
 % \section{Adpositional phrases}
-%
+% \label{sec:pps}
+
+% ...
+
 % \section{Inflectional and verb phrases}
-%
+% \label{sec:ips-vps}
+
+% ...
+
+% \subsection{Inflectional phrases}
+% \label{subsec:ips}
+
+% ...
+
+% \subsection{Verb phrases}
+% \label{subsec:vps}
+
+% ...
+
+% \subsection{Copulaic clauses}
+% \label{subsec:copcs}
+
+% ...
+
 % * Ayeri's unmarked word order is essentially VSO, maaaaaaaybe like this???
 %
 %   IP
@@ -2419,6 +2542,23 @@ possible to use a generic noun instead of the indefinite pronoun, like
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
-%
+
 % \section{Complementizer phrases}
-%
+% \label{sec:cps}
+
+% ...
+
+% \subsection{Relative clauses}
+% \label{subsec:relcs}
+
+% ...
+
+% \subsection{Conditional clauses}
+% \label{subsec:condcs}
+
+% ...
+
+% \subsection{Other types}
+% \label{subsec:cps_other}
+
+% ...
