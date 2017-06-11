@@ -1136,7 +1136,7 @@ personal pronoun as reflexive.
 		\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		(\ups{prontype} & = & \Refl) \\
+		(\ups{\Prontype} & = & \Refl) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1812,7 +1812,7 @@ focus. For English, \citet[406]{dalrymple2001} gives the following example:
 \tikzmark{engqcstruct_f} \[
 	\Foc	&	\tikzmark{engqcstruct_g} \[
 					\Pred		&	`$pro$' \\
-					prontype	&	$wh$ \\
+					\Prontype	&	$wh$ \\
 				\] \tikzmark{engqcstruct_g2} \\
 	\Q		&	~\tikzmark{engqcstruct_q} \\
 	\Pred	&	~\astruct{like}{\Subj, \Obj} \\
@@ -1841,7 +1841,7 @@ focus. For English, \citet[406]{dalrymple2001} gives the following example:
 CP → $\left(\anno*[{\pass{\Foc} \\ %
 	\ups{\Foc} = \ups{\textsc{QFocusPath}} \\ %
 	\ups{\Q} = \ups{\Foc{} \textsc{WhPath}} \\ %
-	\ups{\Q{} \textsc{prontype}} \req{} $wh$ %
+	\ups{\Q{} \Prontype{}} \req{} $wh$ %
 	}]{XP}\right)$ $\left(\anno*{\xbar{C}}\right)$
 
 \xe
@@ -1924,7 +1924,7 @@ a look again at (\ref{ex:sinyapro}):
 					\Pred		&	`$pro$' \\
 					\Anim		&	$+$ \\
 					\Case		&	\Aarg \\
-					prontype	&	$wh$ \\
+					\Prontype	&	$wh$ \\
 				\] \tikzmark{ayrqcstruct_Foc} \\
 	\Q		&	~\tikzmark{ayrqcstruct_q} \\
 	
@@ -1995,7 +1995,7 @@ if case is not specified basically depends on the \GF{} it is linked to.
 		(\ups{\Anim} & = & $\pm$) \\
 		(\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
 			\Caus{}\}) \\
-		\ups{\textsc{prontype}} & = & $wh$ \\
+		\ups{\Prontype} & = & $wh$ \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -2081,7 +2081,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 									\], \\
 									\[
 										\Pred		&	`$pro$' \\
-										prontype	&	$wh$ \\
+										\Prontype	&	$wh$ \\
 									\] \tikzmark{sinyaadj1_wh} \\
 								\} \\
 				\] \tikzmark{sinyaadj1_foc} \\
@@ -2154,7 +2154,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 									\], \\
 									\[
 										\Pred		&	`$pro$' \\
-										prontype	&	$wh$ \\
+										\Prontype	&	$wh$ \\
 									\] \tikzmark{sinyaadj2_wh} \\
 								\} \\
 				\] \tikzmark{sinyaadj2_foc} \\
@@ -2377,7 +2377,7 @@ properties of the reciprocal pronoun.
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
 				\Caus{}\} \\
-			\ups{prontype} & = & $recip$ \\
+			\ups{\Prontype} & = & $recip$ \\
 		\end{tabular}
 	\end{tabu}%
 	}
@@ -2387,7 +2387,7 @@ properties of the reciprocal pronoun.
 It is notable that \rayr{sitnY}{sitanya} cannot appear in agent case, since
 `each other' basically expresses that each entity is acted on by the other in
 the same way. The reciprocal relationship is captured in the functional
-annotation by defining \textsc{prontype} as $recip$. Example 
+annotation by defining \Prontype{} as $recip$. Example 
 (\ref{ex:eachotheravm}) illustrates what the \Avm{} for a sentence with a
 reciprocal pronoun could look like.
 
