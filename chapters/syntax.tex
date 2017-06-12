@@ -2461,13 +2461,17 @@ agreement will be discussed in more detail in \autoref{sec:ips-vps}.
 
 For nominal clitics, we have already seen how preposed case markers work; some
 nominal clitics are also described in \autoref{subsec:clitics} in a way to
-establish why they are clitics rather than affixes or words. For one, there is
-the series of deictic suffixes \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that},
-and \xayr{d/}{da-}{such}. In section \autoref{nounprefixes}
-(p.~\pageref{nounprefixes}), it was reasoned that to capture all three clitics,
-a feature \Deix{} with values $this$, $that$, and $such$ should be introduced
-in the place of \Prox{}, since [\Prox{} $\pm$] does not apply to
-\rayr{d/}{da-}:
+establish why they are clitics rather than affixes or words.
+
+\subsubsection{Demonstrative prefixes}
+\label{subsubsec:deixprocl}
+
+For one, there is the series of demonstrative prefixes---or rather, deictic
+proclitics: \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}
+{such}. In section \autoref{nounprefixes} (p.~\pageref{nounprefixes}), it was
+reasoned that to capture all three clitics, a feature \Deix{} with values
+$this$, $that$, and $such$ should be introduced in the place of \Prox{}, since
+[\Prox{} $\pm$] does not apply to \rayr{d/}{da-}:
 
 \pex\label{ex:deixavm}
 \a\label{ex:deixavmthis}\begin{minipage}[t]{.33\linewidth}
@@ -2529,6 +2533,27 @@ in the place of \Prox{}, since [\Prox{} $\pm$] does not apply to
 \end{avm}
 
 \xe
+
+The functional annotations of the deictic proclitics are thus, very
+straightforwardly, given in (\ref{ex:deixproclmorphlex}).
+
+\begin{morphlex}
+\ex\label{ex:deixproclmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			\ups{\Deix} & = & \{$this$, $that$, $such$\} \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+
+\end{morphlex}
+
+\subsubsection{Likeness prefix \fw{ku-}}
+\label{subsubsec:kuprocl}
 
 There is furthermore a clitic expressing likeness and resemblance, \xayr{ku/}
 {ku-}{like (a)}, which precedes common nouns, and which precedes proper nouns
@@ -2610,7 +2635,25 @@ Phonetically, however, the enclitic leans on the last word in the phrase. Regard
 {ang Apitu puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify
 that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 
-\ex\begingl
+\pex\label{ex:kureplacementtest}
+\a\label{ex:kureplacementtest1}\begingl
+	\gla ku-danyāng puti //
+	\glb ku=danya-ang puti //
+	\glc like=such.one-\Aarg{} diligent //
+	\glft `like the diligent one' //
+\endgl
+
+\a\label{ex:kureplacementtest2}\begingl
+	\gla ku-danyāng //
+	\glb ku=danya-ang //
+	\glc like=such.one-\Aarg{} //
+	\glft `like such one' //
+\endgl
+
+\xe
+
+\ex~\label{ex:postkucstruct}
+\begingl
 	\gla ang @ Apitu puti-ku //
 	\glb ang= Apitu puti=ku //
 	\glc \Aarg{}= Apitu diligent=like //
@@ -2629,7 +2672,7 @@ that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 				[Apitu]
 			]
 		]
-		[{\anno[\elem{\Adjc}]{AP}}
+		[{\anno[\elem{\Adjc}]{AP}}, narrower nodes
 			[\anno{\xhead{A}}
 				[\anno{\xhead{A}}
 					[puti]
@@ -2666,30 +2709,14 @@ that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 
 \xe
 
-\pex~\label{ex:kureplacementtest}
-\a\label{ex:kureplacementtest1}\begingl
-	\gla ku-danyāng puti //
-	\glb ku=danya-ang puti //
-	\glc like=such.one-\Aarg{} diligent //
-	\glft `like the diligent one' //
-\endgl
-
-\a\label{ex:kureplacementtest2}\begingl
-	\gla ku-danyāng //
-	\glb ku=danya-ang //
-	\glc like=such.one-\Aarg{} //
-	\glft `like such one' //
-\endgl
-
-\xe
-
 However, since \Lfg{} requires lexical integrity, we cannot simply state that
-the clitic should be adjoined to a bar level higher than the adjective. Thus,
-we need to invoke the inside-out functional uncertainty principle again, in
-that we require postposed \rayr{/ku}{-ku} to fill in not the AP's \Adjc{}, but
-that of the next higher \GF{} (or \DF{}, for that matter). Example
-(\ref{ex:postkuconst}) demonstrates how the positioning variants of
-\rayr{/ku}{-ku} differ in meaning and grammaticality.
+the clitic should be adjoined to a bar level higher than the adjective in
+(\ref{ex:postkucstruct}). Thus, we need to invoke the inside-out functional
+uncertainty principle again, in that we require postposed \rayr{/ku}{-ku} to
+fill in not the AP's \Adjc{}, but that of the next higher \GF{} (or \DF{}, for
+that matter). Example (\ref{ex:postkuconst}) demonstrates how the positioning
+variants of \rayr{ku/}{ku-} and \rayr{/ku}{-ku} differ in meaning and
+grammaticality.
 
 \pex\label{ex:postkuconst}
 \a\label{ex:postkuconst1}\begingl
@@ -2718,7 +2745,44 @@ that of the next higher \GF{} (or \DF{}, for that matter). Example
 In other words, \rayr{puti/ku}{puti-ku} and \rayr{ku/puti}{ku-puti} are also
 distinguished by the lack of postposed \rayr{/ku}{-ku}'s possibility to
 modify the adjective, since adjectives only take \rayr{ku/}{ku-} as a
-proclitic, but never as an enclitic.
+proclitic, but never as an enclitic. Regarding functional annotations---as
+already suggested by (\ref{ex:postkucstruct})---for the two kinds of \rayr{ku}
+{ku}, we can posit:
+
+\begin{morphlex}
+\pex\label{ex:kumorphlex}%
+\a\label{ex:prekumorphlex}\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	\rayr{\larger ku/}{ku-}
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			\ups{\Adjc{} \Pred{}} & = & `like' \\
+		\end{tabular}
+	\end{tabu}%
+}
+
+\a\label{ex:postkumorphlex}\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	\rayr{\larger /ku}{-ku}
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			(($x$~↑) \Adjc{} \Pred{}) & = & `like' \\
+			($x$ \Adjc{}~↑) \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+
+\end{morphlex}
+
+Proclitic \rayr{ku/}{ku-} in (\ref{ex:prekumorphlex}) has a straightforward
+definition: the phrase's \Adjc{} is filled with an instance of [\Pred{}
+`like']. As described above, enclitic \rayr{/ku}{-ku} in
+(\ref{ex:postkumorphlex}), on the other hand, requires a slightly more
+complicated definition, since it does not feed into the \Adjc{} list of the
+lexical head it is adjacent to, but into that of the phrase superordinate to
+the modifier it leans on phonetically. There thus has to be some phrase $x$
+which has an \Adjc{} attribute which we can fill in with [\Pred {} `like'].
 
 ...
 
