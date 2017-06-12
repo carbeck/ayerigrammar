@@ -2461,7 +2461,10 @@ agreement will be discussed in more detail in \autoref{sec:ips-vps}.
 
 For nominal clitics, we have already seen how preposed case markers work; some
 nominal clitics are also described in \autoref{subsec:clitics} in a way to
-establish why they are clitics rather than affixes or words.
+establish why they are clitics rather than affixes or words. In the following
+subsections, we will have a closer look at the morphosyntax of each group of
+clitics which can interact with nouns, with regards to nouns specifically for
+those clitics which can interact with more than this one part of speech.
 
 \subsubsection{Demonstrative prefixes}
 \label{subsubsec:deixprocl}
@@ -2662,7 +2665,7 @@ that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 
 \begin{tabu} to \linewidth [t] {@{} X X}
 \begin{forest} narrower nodes, shorter edges, italic leaves
-[NP
+[{\anno[\pass{\Subj}]{NP}}
 	[\anno{\xbar{N}}, narrower nodes
 		[\anno{\xhead{N}}
 			[\anno{Cl}
@@ -2677,7 +2680,7 @@ that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 				[\anno{\xhead{A}}
 					[puti]
 				]
-				[{\anno[↓~$\in$~((\GF~↑) \Adj{})]{Cl}}
+				[{\anno[↓~$\in$~((\Subj~↑) \Adj{})]{Cl}}
 					[-ku]
 				]
 			]
@@ -2709,14 +2712,17 @@ that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
 
 \xe
 
-However, since \Lfg{} requires lexical integrity, we cannot simply state that
-the clitic should be adjoined to a bar level higher than the adjective in
-(\ref{ex:postkucstruct}). Thus, we need to invoke the inside-out functional
-uncertainty principle again, in that we require postposed \rayr{/ku}{-ku} to
-fill in not the AP's \Adjc{}, but that of the next higher \GF{} (or \DF{}, for
-that matter). Example (\ref{ex:postkuconst}) demonstrates how the positioning
-variants of \rayr{ku/}{ku-} and \rayr{/ku}{-ku} differ in meaning and
-grammaticality.
+Regarding the examples in (\ref{ex:kureplacementtest}), we cannot simply state
+that the clitic should be adjoined to a bar level higher than the adjective in
+(\ref{ex:postkucstruct}) even though the replacement tests point into this
+direction, since \Lfg{} requires lexical integrity, and \rayr{ku/}{ku-} cannot
+stand on its own as an independent word. Thus, we need to invoke the inside-out
+functional uncertainty principle again to associate the information provided by
+\rayr{/ku}{-ku} with the right spot in our \Avm{}: postposed \rayr{/ku}{-ku}
+needs to feed not into the AP's \Adjc{} list, but into that of the
+superordinate \GF{} (or \DF{}, for that matter). Example (\ref{ex:postkuconst})
+furthermore demonstrates how the positioning variants of \rayr{ku/}{ku-} and
+\rayr{/ku}{-ku} differ in meaning and grammaticality.
 
 \pex\label{ex:postkuconst}
 \a\label{ex:postkuconst1}\begingl
@@ -2743,11 +2749,12 @@ grammaticality.
 \xe
 
 In other words, \rayr{puti/ku}{puti-ku} and \rayr{ku/puti}{ku-puti} are also
-distinguished by the lack of postposed \rayr{/ku}{-ku}'s possibility to
-modify the adjective, since adjectives only take \rayr{ku/}{ku-} as a
-proclitic, but never as an enclitic. Regarding functional annotations---as
-already suggested by (\ref{ex:postkucstruct})---for the two kinds of \rayr{ku}
-{ku}, we can posit:
+distinguished by the lack of postposed \rayr{/ku}{-ku}'s possibility to modify
+the adjective, since adjectives only take \rayr{ku/}{ku-} as a proclitic, but
+never as an enclitic. Thus, the functional difference is also reflected in a
+difference in the morphological distribution of the clitic. Regarding
+functional annotations---as already suggested by (\ref{ex:postkucstruct})---for
+the two kinds of \rayr{ku} {ku} we can posit:
 
 \begin{morphlex}
 \pex\label{ex:kumorphlex}%
@@ -2776,12 +2783,12 @@ already suggested by (\ref{ex:postkucstruct})---for the two kinds of \rayr{ku}
 \end{morphlex}
 
 Proclitic \rayr{ku/}{ku-} in (\ref{ex:prekumorphlex}) has a straightforward
-definition: the phrase's \Adjc{} is filled with an instance of [\Pred{}
+definition: the current phrase's \Adjc{} is filled with an instance of [\Pred{}
 `like']. As described above, enclitic \rayr{/ku}{-ku} in
 (\ref{ex:postkumorphlex}), on the other hand, requires a slightly more
 complicated definition, since it does not feed into the \Adjc{} list of the
 lexical head it is adjacent to, but into that of the phrase superordinate to
-the modifier it leans on phonetically. There thus has to be some phrase $x$
+the modifier it leans on phonetically. There thus is to be some phrase $x$
 which has an \Adjc{} attribute which we can fill in with [\Pred {} `like'].
 
 ...
