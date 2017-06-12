@@ -2459,9 +2459,267 @@ agreement will be discussed in more detail in \autoref{sec:ips-vps}.
 \subsection{Nominal clitics}
 \label{subsec:nomcl}
 
-For nominal clitics, we have already seen how preposed case markers work;
-some nominal clitics are also described in \autoref{subsec:clitics} in a way to
-establish why they are clitics rather than affixes or words. ...
+For nominal clitics, we have already seen how preposed case markers work; some
+nominal clitics are also described in \autoref{subsec:clitics} in a way to
+establish why they are clitics rather than affixes or words. For one, there is
+the series of deictic suffixes \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that},
+and \xayr{d/}{da-}{such}. In section \autoref{nounprefixes}
+(p.~\pageref{nounprefixes}), it was reasoned that to capture all three clitics,
+a feature \Deix{} with values $this$, $that$, and $such$ should be introduced
+in the place of \Prox{}, since [\Prox{} $\pm$] does not apply to
+\rayr{d/}{da-}:
+
+\pex\label{ex:deixavm}
+\a\label{ex:deixavmthis}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla eda-nangās //
+	\glb eda=nanga-as //
+	\glc this=house-\Parg{} //
+	\glft `this house' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Obj	&	\[
+					\Pred	&	`house' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Parg \\
+					\Deix	&	$this$ \\
+				\]
+\]
+\end{avm}
+
+\a\label{ex:deixavmthat}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla ada-veneyya //
+	\glb ada=veney-ya //
+	\glc that=dog-\Loc{} //
+	\glft `at that dog' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Oblq{loc}	&	\[
+					\Pred	&	`dog' \\
+					\Case	&	\Loc \\
+					\Deix	&	$that$ \\
+				\]
+\]
+\end{avm}
+
+\a\label{ex:deixavmsuch}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla da-mehirena //
+	\glb da=mehir-ena //
+	\glc such=tree-\Gen{} //
+	\glft `of such a tree' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Oblq{poss}	&	\[
+					\Pred	&	`tree' \\
+					\Case	&	\Gen \\
+					\Deix	&	$such$ \\
+				\]
+\]
+\end{avm}
+
+\xe
+
+There is furthermore a clitic expressing likeness and resemblance, \xayr{ku/}
+{ku-}{like (a)}, which precedes common nouns, and which precedes proper nouns
+if no overt case marker is present and follows them if there is. In all three
+cases, this might be conveniently interpreted as the noun having an adverbial
+modifier meaning `like'.
+
+\pex\label{ex:likeavm}
+\a\label{ex:likeavmcommon}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla ku-ayonang //
+	\glb ku=ayon-ang //
+	\glc like=man-\Aarg{} //
+	\glft `like a man' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Subj	&	\[
+					\Pred	&	`man' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Aarg \\
+					\Adjc	&	\{\[
+									\Pred	&	`like' \\
+								\]\} \\
+				\]
+\]
+\end{avm}
+
+\a\label{ex:likeavmpropernocase}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla ku-Kaman.Ø //
+	\glb ku=Kaman.Ø //
+	\glc like=Kaman.\Top{} //
+	\glft `like Kaman' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Top	&	\[
+					\Pred	&	`Kaman' \\
+					\Adjc	&	\{\[
+									\Pred	&	`like' \\
+								\]\} \\
+				\]
+\]
+\end{avm}
+
+\a\label{ex:likeavmpropercase}\begin{minipage}[t]{.33\linewidth}
+\begingl
+	\gla ang @ Apitu-ku //
+	\glb ang= Apitu=ku //
+	\glc \Aarg{}= Apitu=like //
+	\glft `like Apitu' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Subj	&	\[
+					\Pred	&	`Apitu' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Aarg \\
+					\Adjc	&	\{\[
+									\Pred	&	`like' \\
+								\]\} \\
+				\]
+\]
+\end{avm}
+
+\xe
+
+In cases like (\ref{ex:likeavmpropercase}), if there are adjectives following
+the noun, the clitic actually follows the whole NP like the \fw{'s}
+possessive clitic in English, at least from a logical point of view.
+Phonetically, however, the enclitic leans on the last word in the phrase. Regarding constituency, it is possible to replace all of \rayr{ANF Apitu puti}
+{ang Apitu puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify
+that by \rayr{ku/}{ku-}, as illustrated by (\ref{ex:kureplacementtest}).
+
+\ex\begingl
+	\gla ang @ Apitu puti-ku //
+	\glb ang= Apitu puti=ku //
+	\glc \Aarg{}= Apitu diligent=like //
+	\glft `like diligent Apitu' //
+\endgl\medskip
+
+\begin{tabu} to \linewidth [t] {@{} X X}
+\begin{forest} narrower nodes, shorter edges, italic leaves
+[NP
+	[\anno{\xbar{N}}, narrower nodes
+		[\anno{\xhead{N}}
+			[\anno{Cl}
+				[ang]
+			]
+			[\anno{\xhead{N}}
+				[Apitu]
+			]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[\anno{\xhead{A}}
+				[\anno{\xhead{A}}
+					[puti]
+				]
+				[\anno{Cl}
+					[-ku]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+&
+
+\begin{avm}
+\[
+	\Subj	&	\[
+					\Pred	&	`Apitu' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Aarg \\
+					\Adjc	&	\{
+									\[
+										\Pred	&	`diligent' \\
+									\], \\
+									\[
+										\Pred	&	`like' \\
+									\] \\
+								\} \\
+				\] \\
+\]
+\end{avm}
+\end{tabu}
+
+\xe
+
+\pex~\label{ex:kureplacementtest}
+\a\label{ex:kureplacementtest1}\begingl
+	\gla ku-danyāng puti //
+	\glb ku=danya-ang puti //
+	\glc like=such.one-\Aarg{} diligent //
+	\glft `like the diligent one' //
+\endgl
+
+\a\label{ex:kureplacementtest2}\begingl
+	\gla ku-danyāng //
+	\glb ku=danya-ang //
+	\glc like=such.one-\Aarg{} //
+	\glft `like such one' //
+\endgl
+
+\xe
+
+However, since \Lfg{} requires lexical integrity, we cannot simply state that
+the clitic should be adjoined to a bar level higher than the adjective. Thus,
+we need to invoke the inside-out functional uncertainty principle again, in
+that we require postposed \rayr{/ku}{-ku} to fill in not the AP's \Adjc{}, but
+its superseding NP's. Example (\ref{ex:postkuconst}) demonstrates how the
+positioning variants of \rayr{/ku}{-ku} differ in meaning and grammaticality.
+
+\pex\label{ex:postkuconst}
+\a\label{ex:postkuconst1}\begingl
+	\gla {\normalfont [} @ ang @ Apitu puti @ {\normalfont ]} @ -ku //
+	\glb {} ang= Apitu puti {} =ku //
+	\glc {} \Aarg{}= Apitu diligent {} =like //
+	\glft `like diligent Apitu' //
+\endgl
+
+\a\label{ex:postkuconst2}\begingl
+	\gla ang @ Apitu ku-puti //
+	\glb ang= Apitu ku=puti //
+	\glc \Aarg{}= Apitu like=diligent //
+	\glft `diligent-like Apitu' //
+\endgl
+
+\a\ljudge*\label{ex:postkuconst3}\begingl
+	\gla ang @ Apitu {\normalfont [}puti-ku{\normalfont ]} //
+	\glb ang= Apitu puti=ku //
+	\glc \Aarg{}= Apitu diligent=like //
+	\glft \textit{Expected:} `like diligent Apitu' //
+\endgl
+
+\xe
+
+In other words, \rayr{puti/ku}{puti-ku} and \rayr{ku/puti}{ku-puti} are also
+distinguished by the lack of postposed \rayr{/ku}{-ku}'s possibility to
+modify the adjective, since adjectives only take \rayr{ku/}{ku-} as a
+proclitic, but never as an enclitic.
+
+...
 
 \section{Adjective and adverb phrases}
 \label{sec:adjps-advps}
