@@ -2472,9 +2472,9 @@ those clitics which can interact with more than this one part of speech.
 For one, there is the series of demonstrative prefixes---or rather, deictic
 proclitics: \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}
 {such}. In section \autoref{nounprefixes} (p.~\pageref{nounprefixes}), it was
-reasoned that to capture all three clitics, a feature \Deix{} with values
-$this$, $that$, and $such$ should be introduced in the place of \Prox{}, since
-[\Prox{} $\pm$] does not apply to \rayr{d/}{da-}:
+reasoned that in Ayeri, to capture all three clitics, a feature \Deix{} with
+values $this$, $that$, and $such$ should be assumed in the place of \Prox{},
+since [\Prox{} $\pm$] does not apply to \rayr{d/}{da-}:
 
 \pex\label{ex:deixavm}
 \a\label{ex:deixavmthis}\begin{minipage}[t]{.33\linewidth}
@@ -2786,7 +2786,6 @@ the two kinds of \rayr{ku} {ku} we can posit:
 	\end{tabu}%
 }
 \xe
-
 \end{morphlex}
 
 Proclitic \rayr{ku/}{ku-} in (\ref{ex:prekumorphlex}) has a straightforward
@@ -2797,6 +2796,96 @@ complicated definition, since it does not feed into the \Adjc{} list of the
 lexical head it is adjacent to, but into that of the phrase superordinate to
 the modifier it leans on phonetically. There thus is to be some phrase $x$
 which has an \Adjc{} attribute which we can fill in with [\Pred {} `like'].
+
+\subsubsection{Inspecificity prefix \fw{mə-}}
+
+While demonstrative elements make NPs more specific in selecting a particular
+specimen out of a group of entities, the proclitic \rayr{me/}{mə-} does the
+opposite: it expresses that the speaker refers to any representative of a group
+entities, not a specific one:
+
+\ex\adjustbox{valign=t}{
+	\begin{tikzpicture}
+		\node (ellipse)	at (3,2)	{};
+		\node (this)	at (0,4)	{$this$};
+		\node (some)	at (6,0)	{$whichever$};
+
+		\node (fig_1)	at (2-0.25 , 3+0.00)	{\Large\faicon{tree}};
+		\node (fig_2)	at (4+0.25 , 3-0.25)	{\Large\faicon{tree}};
+		\node (fig_3)	at (2-0.25 , 1+0.00)	{\Large\faicon{tree}};
+		\node (fig_4)	at (4+0.00 , 1-0.25)	{\Large\faicon{tree}};
+		\node (fig_5)	at (3-0.00 , 2+0.00)	{\Large\faicon{tree}};
+
+		\draw (ellipse) ellipse [x radius=3, y radius=2];
+
+		\draw[-latex] (this) to [out=south, in=west] (fig_1);
+		\draw[-latex, dashed] (some) to [out=west, in=south] (fig_1);
+		\draw[-latex, dashed] (some) to [out=north, in=east] (fig_2);
+		\draw[-latex, dashed] (some) to [out=west, in=south] (fig_3);
+		\draw[-latex, dashed] (some) to [out=north, in=east] (fig_4);
+		\draw[-latex, dashed] (some) to [out=north, in=east] (fig_5);
+	\end{tikzpicture}
+	}
+\xe
+
+Thus, the functional definition for \rayr{me/}{mə-} should look as given in 
+(\ref{ex:memorphlex}): the NP it is added to is neither definite a definite nor
+specific reference, the speaker means just any representative of the kind the
+nominal head specifies.
+
+\begin{morphlex}
+\ex\label{ex:memorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	\rayr{\larger me/}{mə-}
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			\ups{\Def} & = & $-$ \\
+			\ups{specific} & = & $-$ \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+
+Since according to \citet[152]{lyons1999}, demonstratives are inherently
+definite---and their reference is specific, too---the deictic proclitics
+\xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such} are in
+complementary distribution with the inspecificity marker, as demonstrated by
+(\ref{ex:inspecdeix}): neither combination of \rayr{me/}{mə-} and \rayr{Ed/}
+{eda-} in (\ref{ex:inspecdeix}cd) results in a grammatical sentence because 
+\rayr{Ed/}{eda-} defines [\Def{}~$+$, \textsc{specific}~$+$] while \rayr{me/}
+{mə-} defines [\Def{}~$-$, \textsc{specific} $-$]. Attempting to assign
+opposing values to the same feature must fail.
+
+\pex\label{ex:inspecdeix}
+\a\label{ex:inspecdeix_1}\begingl
+	\gla Ang nakasyon nihanye eda-mehirya. //
+	\glb ang nakas-yon nihan-ye-Ø eda=mehir-ya //
+	\glc \AgtT{} grow-\TplN{} fruit-\Pl{}-\Top{} this=tree-\Loc{} //
+	\glft `Fruits are growing on this tree.' //
+\endgl
+
+\a\label{ex:inspecdeix_2}\begingl
+	\gla Ang nakasyon nihanye mə-mehirya. //
+	\glb ang nakas-yon nihan-ye-Ø mə=mehir-ya //
+	\glc \AgtT{} grow-\TplN{} fruit-\Pl{}-\Top{} whichever=tree-\Loc{} //
+	\glft `Fruits are growing on whichever tree.' //
+\endgl
+
+\a\ljudge*\label{ex:inspecdeix_3}\begingl
+	\gla Ang nakasyon nihanye mə-eda-mehirya. //
+	\glb ang nakas-yon nihan-ye-Ø mə=eda=mehir-ya //
+	\glc \AgtT{} grow-\TplN{} fruit-\Pl{}-\Top{} whichever=this=tree-\Loc{} //
+\endgl
+
+\a\ljudge*\label{ex:inspecdeix_4}\begingl
+	\gla Ang nakasyon nihanye eda-mə-mehirya. //
+	\glb ang nakas-yon nihan-ye-Ø eda=mə=mehir-ya //
+	\glc \AgtT{} grow-\TplN{} fruit-\Pl{}-\Top{} this=whichever=tree-\Loc{} //
+\endgl
+
+\xe
 
 ...
 
