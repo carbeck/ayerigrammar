@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). This earlier documentation attempt had been left in a very sorry and unfinished state for over 5 years before returning to it. I hope that by transferring things to LaTeX, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as such on the [repository page](https://github.com/carbeck/ayerigrammar).
+This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). This earlier documentation attempt had been left in a very sorry and unfinished state for over 5 years before returning to it. I hope that by transferring things to LaTeX, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big document in LibreOffice before. If you feel inclined to do so, you can report issues as such on the [repository page](https://github.com/carbeck/ayerigrammar).
 
 Ayeri is a fictional language project I have been working on since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
 
