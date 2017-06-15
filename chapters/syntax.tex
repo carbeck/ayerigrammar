@@ -607,7 +607,6 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 					\Adjc	&	\{
 									\[
 										\Pred	&	`all' \\
-										\Num	&	\Pl \\
 									\], \\
 									\[
 										\Pred	&	`happy' \\
@@ -2854,9 +2853,10 @@ definite---and their reference is specific, too---the deictic proclitics
 complementary distribution with the inspecificity marker, as demonstrated by
 (\ref{ex:inspecdeix}): neither combination of \rayr{me/}{mə-} and \rayr{Ed/}
 {eda-} in (\ref{ex:inspecdeix}cd) results in an ungrammatical sentence because 
-\rayr{Ed/}{eda-} defines [\Def{}~$+$, \textsc{specific}~$+$] while \rayr{me/}
-{mə-} defines [\Def{}~$-$, \textsc{specific} $-$]. Attempting to assign
-opposing values to the same feature must fail.
+\rayr{Ed/}{eda-} encodes [\Def{}~$+$, \textsc{specific}~$+$] while \rayr{me/}
+{mə-} encodes [\Def{}~$-$, \textsc{specific} $-$]. Attempting to assign
+opposing values to the same feature (\Def{} and \textsc{specific},
+respectively) must fail, since these cannot be united at the functional level.
 
 \pex\label{ex:inspecdeix}
 \a\label{ex:inspecdeix_1}\begingl
@@ -2887,7 +2887,63 @@ opposing values to the same feature must fail.
 
 \xe
 
-...
+\subsubsection{Quantifying clitics}
+
+As described in \autoref{clitics_quant} (p.~\pageref{clitics_quant}~ff.) and 
+\autoref{subsec:quantifiers}, Ayeri has a number of suffixed---that is,
+enclitic---quantifiers which can attach to inflected nouns. These, along with
+their non-clitic counterparts, are modifiers and are thus part of an NP's list
+of adjuncts, \Adjc{}, along with adjectives and nominal adjuncts. An example of
+this is given in (\ref{ex:nounquantavm}), using the clitic quantifier
+\xayr{/iknF}{-ikan}{much, many; very}. Since the quantifier already lexically
+expresses a multitude in this case, the noun does not carry redundant plural
+marking.
+
+\pex\label{ex:nounquantavm}
+\a\label{ex:nounquantavm_1}\begingl
+	\gla Sa tahayeng bisuay-ikan ban //
+	\glb sa taha=yeng bisuay.Ø=ikan ban //
+	\glc \PatT{} have=\TsgF{}.\Aarg{} idea.\Top{}=many good //
+	\glft `She has many good ideas.' //
+\endgl
+
+\a\label{ex:nounquantavm_2}
+\begin{avm}
+\[
+%	\Pred	&	\astruct{have}{\ups{\Subj}, \ups{\Obj}} \\
+	\Top	&	\[
+					\Pred	&	`idea' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Parg \\
+					\Adjc	&	\{
+									\[
+										\Pred	&	`many' \\
+									\], \\
+									\[
+										\Pred	&	`good' \\
+									\]
+								\}
+				\] \tikzmark{nounquantavm_top} \\
+
+	% \Subj	&	\[
+	% 				\Pred	&	`pro' \\
+	% 				\Anim	&	$+$ \\
+	% 				\Case	&	\Aarg \\
+	% 				\Gend	&	\F \\
+	% 				\Num	&	\Sg \\
+	% 				\Pers	&	\Third \\
+	% 			\] \\
+
+	\Obj	&	\tikzmark{nounquantavm_obj} \\
+\]
+\end{avm}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:nounquantavm_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:nounquantavm_obj}););
+\end{tikzpicture}
+
+\xe
 
 \section{Adjective and adverb phrases}
 \label{sec:adjps-advps}
