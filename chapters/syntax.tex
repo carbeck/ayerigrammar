@@ -3043,9 +3043,9 @@ pronouns and quantifying clitics are illustrated in (\ref{ex:proquant}).
 \endgl
 
 \a\label{ex:proquant_dempro}\begingl
-	\gla Kalam adanyana-kay //
-	\glb kalam adanya-na=kay //
-	\glc true that.one-\Gen{}=little //
+	\gla Kalam adanyana-ikoy //
+	\glb kalam adanya-na=ikoy //
+	\glc true that.one-\Gen{}=not.much //
 	\glft `Little about that is true.' //
 \endgl
 
@@ -3086,18 +3086,59 @@ pronouns and quantifying clitics are illustrated in (\ref{ex:proquant}).
 
 ...
 
-\section{Adjective and adverb phrases}
-\label{sec:adjps-advps}
+\section{Adjective phrases}
+\label{sec:adjps}
+
+As described in the previous section (\autoref{sec:nps-dps}), APs are usually
+found as adjuncts of NPs or DPs, where they describe properties of these
+nominal elements. Adjectives are likewise commonly found as open complements
+(\XCompl{}) in equative statements, which will be dealt with in
+\autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
+modifiers as well, though they are probably still better classified as DP
+heads, since they are phoric and thus functional. Possessive adjecties thus
+also do not share all the morphological properties of adjectives, for instance,
+they cannot be compared (see \autoref{phsec:possadj},
+p.~\pageref{phsec:possadj}).
 
 ...
 
-\subsection{Adjective phrases}
-\label{subsec:adjps}
+\pex\label{ex:adjpstruct}
+\a AP → \anno*{\xbar{A}}
+\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
+\xe
 
 ...
 
-\subsection{Adverb phrases}
-\label{subsec:advps}
+\ex\label{ex:adjpcstruct}\labels
+\begin{forest}
+[{\anno[\{\pass{\Adjc} | \pass{\XCompl}\}]{AP}}
+	[\anno{\xbar{A}}
+		[\anno{\xhead{A}}]
+		[{$\left(\anno[{%
+				\pass{\Adjc}%
+			}]{XP}\right)$%
+		}]
+	]
+]
+\end{forest}
+\xe
+
+...
+
+\begin{morphlex}
+\ex\label{ex:adjmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& A
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			(\ups{\Compar} & = & \{\Comp, \Supl\}) \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
 
 ...
 
@@ -3121,8 +3162,8 @@ pronouns and quantifying clitics are illustrated in (\ref{ex:proquant}).
 
 % ...
 
-% \subsection{Copulaic clauses}
-% \label{subsec:copcs}
+% \subsection{Equative statements}
+% \label{subsec:eqs}
 
 % ...
 
@@ -3181,6 +3222,11 @@ pronouns and quantifying clitics are illustrated in (\ref{ex:proquant}).
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
+
+% \section{Adverb phrases}
+% \label{sec:advps}
+
+% ...
 
 % \section{Complementizer phrases}
 % \label{sec:cps}
