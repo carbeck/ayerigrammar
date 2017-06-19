@@ -3084,7 +3084,7 @@ are illustrated in (\ref{ex:proquant}).
 
 \xe
 
-\subsubsection{Gender resolution in \Tpl{} personal pronouns}
+\subsubsection{Gender resolution in third-person plural personal pronouns}
 
 It may happen occasionally that a pronominal reference is to third persons of
 mixed genders. English has no problem here since it does not distinguish gender
@@ -3115,7 +3115,7 @@ which is in opposition to inanimate gender, compare (\ref{ex:gramgend}).
 
 \ex~\label{ex:gramgend}
 \begin{forest}
-[{[\Gend{}]}, shorter edges,
+[{[\Gend{}]}
 	[{[\Anim{} $+$]}
 		[\M]
 		[\F]
@@ -3128,7 +3128,65 @@ which is in opposition to inanimate gender, compare (\ref{ex:gramgend}).
 \end{forest}
 \xe
 
-...
+If the group referred to has already served as the controller of verb
+agreement, it is to be expected that this feature bundle is simply carried
+through the conversation. In either case, an animacy hierarchy operates in that
+animate referents outweigh inanimate ones. Mixed animate groups often default
+to masculine, though not in all cases. The rules which operate are the
+following:
+
+\begin{enumerate}
+\item If the conjuncts are of the same grammatical gender, use that. No
+gender resolution is necessary, since the person features of the conjuncts
+coincide.
+
+	\quad%
+	\begin{tabular}[t]{@{} c @{ $\cup$ } c @{ $\implies$ } c}
+	\M{} & \M{} & \M{} \\
+	\F{} & \F{} & \F{} \\
+	\N{} & \N{} & \N{} \\
+	\Inan{} & \Inan{} & \Inan{} \\
+	\end{tabular}
+
+\item If a conjunct referring to an animate referent is present, use the
+masculine form as the default for sexed entities; use neuter otherwise.
+Resolution to the animate entity's gender more generally is also possible.
+
+	\quad%
+	\begin{tabular}[t]{@{} c @{ $\cup$ } c @{ $\implies$ } c}
+	\M{} & \Inan{} & \M{} \\
+	\F{} & \Inan{} & \M{} $\lor$ \F{} \\
+	\N{} & \Inan{} & \N{} \\
+	\end{tabular}
+
+\item For resolution of only animate referents, again, use the masculine form
+as the default. Resolution to the non-asexual entity's gender (\M{} and \F{}
+versus \N{}) is possible here as well.
+
+	\quad%
+	\begin{tabular}[t]{@{} c @{ $\cup$ } c @{ $\implies$ } c}
+	\M{} & \F{} & \M{} \\
+	\M{} & \N{} & \M{} \\
+	\F{} & \N{} & \M{} $\lor$ \F{} \\
+	\end{tabular}
+
+\end{enumerate}
+
+It is possible that the preference for the masculine form as a default is in
+part motivated by phonology, since /a/ is by far the most common vowel in Ayeri
+in all positions (\autoref{sec:phonotactics}). Thus, it is also the least
+marked one, so that pronominal forms with /a/ are preferred over those with
+more marked vowels. \citet{corbett1983} makes an observation on Slovene,
+Polish, and, to a lesser extent, French that these languages, the first
+strategy in gender resolution is to resolve towards a semantically justified
+gender. If this fails, the second strategy is to resolve towards the form which
+least ambiguously marks plural. Both strategies are described as a general
+tendency in gender resolution \citep[205]{corbett1983}. Since there is almost
+no syncretism in Ayeri's third-person plural pronouns which would render
+certain forms ambiguous, the second strategy is
+moot.\footnote{\rayr{teNF}{teng} is used for both \TplF{}.\Aarg{} and
+\TplI{}.\Aarg{}; \rayr{tnF}{tan} is used for both
+\TplF{}.\Gen{} and \TplI{}.\Gen{}.}
 
 \section{Adjective phrases}
 \label{sec:adjps}
