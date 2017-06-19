@@ -12,6 +12,7 @@ Currently working on
 
 * Phrase structures (source: `chapters/syntax.tex`)
     1. Noun- and determiner phrases
+    2. Adjective phrases
 
 Table of Contents
 =================
