@@ -552,9 +552,9 @@
 \newcommand{\anno}[2][\updown{}]{%
 	\text{%
 		\tabulinesep = 0pt
-		\begin{tabu}[m]{>{\smaller\smaller}c}%
-			#1\\[0.125\baselineskip]%
-			\larger #2
+		\begin{tabu}[m]{c}%
+			\smaller\smaller #1\\[0.125\baselineskip]%
+			#2
 		\end{tabu}%
 	}%
 }
@@ -563,9 +563,9 @@
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
 	\text{%
 		\tabulinesep = 0pt
-		\begin{tabu}[m]{>{\smaller\smaller}c}%
-			\larger #2\\[-0.33\baselineskip]%
-			#1%
+		\begin{tabu}[m]{c}%
+			#2\\[-0.33\baselineskip]%
+			\smaller\smaller #1%
 		\end{tabu}%
 	}
 }
