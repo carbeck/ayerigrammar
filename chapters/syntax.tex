@@ -1110,14 +1110,14 @@ such.
 
 \subsubsection{Personal pronouns}
 
-The morpholexic specifications for personal pronouns are given in 
+The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
 closed class of words; the chart of personal pronouns in Ayeri is given in
 \autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
-have lexical content for a predicator, but only `$pro$'. Pronouns distinguish all
-grammatical categories of nouns---number, gender and animacy, and case; they
-agree with their antecedents in number, gender, and animacy. In addition to
-these person features, pronouns of course also encode person as a deictic
+have lexical content for a predicator, but only `$pro$'. Pronouns distinguish
+all grammatical categories of nouns---number, gender and animacy, and case;
+they agree with their antecedents in number, gender, and animacy. In addition
+to these person features, pronouns of course also encode person as a deictic
 category. The reflexive clitic \rayr{sitNF/}{sitang-} also redefines the
 personal pronoun as reflexive.
 
@@ -1546,10 +1546,10 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 \noindent The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness
 condition, though: \textcquote[45]{bresnan2016}{Every attribute has a unique
 value}, that is, no attribute may have more than one value assigned to it, but
-we just did this for \Pred{} by assigning both `$pro$' and `red' to it. Thus, in
-order not to violate this principle, the question is whether a list of \Pred{}
-attributes (like \Adjc{} lists, or whenever coordination is involved) would be
-acceptable:
+we just did this for \Pred{} by assigning both `$pro$' and `red' to it. Thus,
+in order not to violate this principle, the question is whether a list of
+\Pred{} attributes (like \Adjc{} lists, or whenever coordination is involved)
+would be acceptable:
 
 \ex \ques\begin{avm}
 \[\Obj{}	& \[\avmspan{%
@@ -2675,7 +2675,7 @@ there is a likelihood of semantic agreement creeping in, and that different
 constituents are differently affected by this, so that he arrives with the
 gradient described in (\ref{ex:agrhier})---the agreement hierarchy.
 
-\ex\label{ex:agrhier}
+\ex\label{ex:agrhier}%
 	Agreement hierarchy \citep[206\psqq]{corbett2006}:\medskip
 
 	attribute $>$ predicate $>$ relative pronoun $>$ personal pronoun
@@ -2718,9 +2718,10 @@ However, no statistics for Ayeri have been compiled on this issue to date, and
 least of all across a variety of literary genres and across different simulated
 historical stages of the language. Another difficulty in this regard is that
 all existing texts in Ayeri are translations from English or German, and
-conceived as more or less carefully crafted written texts. These issues would
-likely skew any statistics as compared to the written output of native
-speakers.
+conceived as more or less carefully crafted written texts. Any statistics on
+the effect of distance on semantic agreement (if it can at all be found) will
+thus likely be skewed as compared to the output of native speakers, both
+written and spoken.
 
 \subsection{Nominal clitics}
 \label{subsec:nomcl}
@@ -3354,27 +3355,24 @@ are illustrated in (\ref{ex:proquant}).
 \section{Adjective phrases}
 \label{sec:adjps}
 
-As described in the previous section (\autoref{sec:nps-dps}), APs are usually
-found as adjuncts of NPs or DPs, where they describe properties of these
-nominal elements. Adjectives are likewise commonly found as open complements
-(\XCompl{}) in equative statements, which will be dealt with in
-\autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
-modifiers as well, though they are probably still better classified as DP
-heads, since they are phoric and thus functional. Possessive adjecties thus
-also do not share all the morphological properties of adjectives, for instance,
-they cannot be compared (see \autoref{phsec:possadj},
-p.~\pageref{phsec:possadj}).
-
-...
+As described in the previous section, APs are usually found as adjuncts of NPs
+or DPs, where they describe properties of these nominal elements. Adjectives
+are likewise commonly found as open complements (\XCompl{}) in equative
+statements, which will be dealt with in \autoref{subsec:eqs}. Possessive
+pronouns can be used as adjective-like modifiers as well, though they are
+probably still better classified as DP heads, since they are functional
+morphemes. Possessive adjecties thus also do not share all the morphological
+properties of adjectives, for instance, they cannot be compared (see
+\autoref{phsec:possadj}, p.~\pageref{phsec:possadj}). The phrase-structure rule
+in (\ref{ex:adjpstruct}) and the c-structure tree in (\ref{ex:adjpcstruct})
+show how an AP is constructed.
 
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}}
 \a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
 \xe
 
-...
-
-\ex\label{ex:adjpcstruct}\labels
+\ex~\label{ex:adjpcstruct}\labels
 \begin{forest}
 [{\anno[\{\pass{\Adjc} | \pass{\XCompl}\}]{AP}}
 	[\anno{\xbar{A}}
@@ -3388,6 +3386,134 @@ p.~\pageref{phsec:possadj}).
 \end{forest}
 \xe
 
+Adjective phrases have an adjective as their lexical head. This head may be
+further modified by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the
+adjunction of multiple modifiers. Since modifiers follow their heads here as
+well, APs are also a right-branching constituent. Modifiers of adjectives are
+subsumed under the label XP here, which here stands for AdvP, NP, DP, and CP.
+An example of each modifying an adjective is given in (\ref{ex:adjmod}).
+
+\pex\label{ex:adjmod}
+\a\label{ex:adjmod_adv}%
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble adjective + AdvP: //
+		\gla Ang vacya {} Niyas bisuayas sadayo kalam yena. //
+		\glb ang vac-ya Ø Niyas bisuay-as sadayo kalam yena //
+		\glc \AgtT{} like-\TsgM{} \Top{} Niyas idea-\Parg{} crazy truly 
+			\TsgF{}.\Gen{} //
+		\glft `Niyas likes her truly crazy idea.' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\Obj}]{NP}}
+		[\anno{\xbar{N}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}
+					[bisuayas]
+				]
+				[{\anno[\elem{\Adjc}]{AP}}
+					[\anno{\xbar{A}}
+						[\anno{\xhead{A}}
+							[sadayo]
+						]
+						[{\anno[\pass{\Adjc}]{AdvP}}
+							[{kalam}, roof]
+						]
+					]
+				]
+			]
+			[{\anno[\elem{\Adjc}]{DP}}
+%				[\anno{\xbar{D}}
+					[\anno{\xhead{D}}
+						[yena]
+					]
+%				]
+			]
+		]
+	]
+	\end{forest}\medskip
+
+\a\label{ex:adjmod_np}%
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble adjective + NP: //
+		\gla Yang mino yanena nā. //
+		\glb yang mino yan-ena nā //
+		\glc \Fsg{}.\Aarg{} happy son-\Gen{} \Fsg{}.\Gen{} //
+		\glft `I am happy about my son.' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\XCompl}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[mino]
+			]
+			[{\anno[\pass{\XCompl}]{NP}}
+				[{yanena nā}, roof]
+			]
+		]
+	]
+	\end{forest}\medskip
+
+\a\label{ex:adjmod_dp}%
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble adjective + DP //
+		\gla Yang mino kalam yana. //
+		\glb yang mino kalam yana //
+		\glc \Fsg{}.\Aarg{} happy really \TsgM{}.\Gen{} //
+		\glft `I am really happy about you.' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\XCompl}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xbar{A}}
+				[\anno{\xhead{A}}
+					[mino]
+				]
+				[{\anno[\pass{\Adjc}]{AdvP}}
+					[{kalam}, roof]
+				]
+			]
+			[{\anno[\pass{\XCompl}]{DP}}
+				[{yana}, roof]
+			]
+		]
+	]
+	\end{forest}\medskip
+
+\a\label{ex:adjmod_cp}%
+	\begin{minipage}[t]{.5\linewidth}
+	\begingl
+		\glpreamble adjective + CP //
+		\gla Adareng ban, da-tangyang. //
+		\glb ada-reng ban da=tang=yang //
+		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
+		\glft `It is good that I hear this.' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\XCompl}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[ban]
+			]
+		]
+		[{\anno[\pass{\Compl}]{CP}}
+			[{da-tangyang}, roof]
+		]
+	]
+	\end{forest}\medskip
+
+\xe
+
 ...
 
 \begin{morphlex}
@@ -3399,6 +3525,7 @@ p.~\pageref{phsec:possadj}).
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
 			(\ups{\Compar} & = & \{\Comp, \Supl\}) \\
+			(\ups{\Neg} & = & $+$) \\
 		\end{tabular}
 	\end{tabu}%
 }
