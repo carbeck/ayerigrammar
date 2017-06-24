@@ -395,6 +395,21 @@
 	aboveglbskip=0.5em,
 }
 
+% Calculate remaining space in line for ex and pex,
+% cf. https://tex.stackexchange.com/a/376534
+\newlength{\remaining}
+\newcommand{\remainpex}{%
+   \setlength{\remaining}{\linewidth-\lingtextoffset-\linglabelwidth-
+      \lingnumoffset-\linglabeloffset-\widthof{\exnoprint}}%
+}
+\newcommand{\remainex}{%
+   \setlength{\remaining}{\linewidth-\lingnumoffset-
+      \lingtextoffset-\widthof{\exnoprint}}%
+}
+\pretocmd{\pex}{\remainpex}{}{}
+\pretocmd{\ex}{\remainex}{}{}
+
+% Glossing abbreviations
 \usepackage{leipzig}
 
 \newleipzig{AgtT}{at}{agent topic}

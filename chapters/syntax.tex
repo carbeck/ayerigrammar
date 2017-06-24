@@ -3361,7 +3361,7 @@ are likewise commonly found as open complements (\XCompl{}) in equative
 statements, which will be dealt with in \autoref{subsec:eqs}. Possessive
 pronouns can be used as adjective-like modifiers as well, though they are
 probably still better classified as DP heads, since they are functional
-morphemes. Possessive adjecties thus also do not share all the morphological
+morphemes. Possessive adjectives thus also do not share all the morphological
 properties of adjectives, for instance, they cannot be compared (see
 \autoref{phsec:possadj}, p.~\pageref{phsec:possadj}). The phrase-structure rule
 in (\ref{ex:adjpstruct}) and the c-structure tree in (\ref{ex:adjpcstruct})
@@ -3387,15 +3387,15 @@ show how an AP is constructed.
 \xe
 
 Adjective phrases have an adjective as their lexical head. This head may be
-further modified by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the
-adjunction of multiple modifiers. Since modifiers follow their heads here as
-well, APs are also a right-branching constituent. Modifiers of adjectives are
-subsumed under the label XP here, which here stands for AdvP, NP, DP, and CP.
-An example of each modifying an adjective is given in (\ref{ex:adjmod}).
+extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
+of multiple modifiers. Since modifiers follow their heads here as well, APs are
+also a right-branching constituent. Modifiers of adjectives are subsumed under
+the label XP here, which here stands for AdvP, NP, DP, and CP. An example of
+each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + AdvP: //
 		\gla Ang vacya {} Niyas bisuayas sadayo kalam yena. //
@@ -3403,9 +3403,28 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 		\glc \AgtT{} like-\TsgM{} \Top{} Niyas idea-\Parg{} crazy truly 
 			\TsgF{}.\Gen{} //
 		\glft `Niyas likes her truly crazy idea.' //
-	\endgl
+	\endgl~\\
+
+	{\smaller%
+	\begin{avm}
+	\[
+		\Obj	&	\[
+						\Pred	&	`idea' \\
+						\Anim	&	$+$ \\
+						\Case	&	\Parg \\
+						\Num	&	\Sg \\
+						\Adjc	&	\{\[
+										\Pred	&	`crazy` \\
+										\Adjc	&	\{\[
+														\Pred	&	`truly' \\
+													\]\} \\
+									\]\} \\
+					\] \\
+	\]
+	\end{avm}
+	}
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Obj}]{NP}}
 		[\anno{\xbar{N}}
@@ -3436,7 +3455,7 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}\medskip
 
 \a\label{ex:adjmod_np}%
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + NP: //
 		\gla Yang mino yanena nā. //
@@ -3445,7 +3464,7 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 		\glft `I am happy about my son.' //
 	\endgl
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\XCompl}]{AP}}
 		[\anno{\xbar{A}}
@@ -3460,16 +3479,16 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}\medskip
 
 \a\label{ex:adjmod_dp}%
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + DP //
-		\gla Yang mino kalam yana. //
-		\glb yang mino kalam yana //
-		\glc \Fsg{}.\Aarg{} happy really \TsgM{}.\Gen{} //
-		\glft `I am really happy about you.' //
+		\gla Yang mino kalam vayam. //
+		\glb yang mino kalam vayam //
+		\glc \Fsg{}.\Aarg{} happy really \TsgM{}.\Dat{} //
+		\glft `I am really happy for you.' //
 	\endgl
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\XCompl}]{AP}}
 		[\anno{\xbar{A}}
@@ -3482,23 +3501,24 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 				]
 			]
 			[{\anno[\pass{\XCompl}]{DP}}
-				[{yana}, roof]
+				[{vayam}, roof]
 			]
 		]
 	]
 	\end{forest}\medskip
 
 \a\label{ex:adjmod_cp}%
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + CP //
 		\gla Adareng ban, da-tangyang. //
 		\glb ada-reng ban da=tang=yang //
 		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
-		\glft `It is good that I hear this.' //
+		\glft `It is good to hear this.'\\
+			\textit{Literally:} `It is good I hear so.' //
 	\endgl
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\XCompl}]{AP}}
 		[\anno{\xbar{A}}
@@ -3514,7 +3534,32 @@ An example of each modifying an adjective is given in (\ref{ex:adjmod}).
 
 \xe
 
-...
+Example (\ref{ex:adjmod_adv}) gives the complete f- and c-structures for the
+object NP to show that \Adjc{} may be recursive: an adjective which serves as
+one of many modifiers to a noun can itself be modified by adverbs. Likewise, an
+adjective--adverb combination can be complemented by an NP, as shown in
+(\ref{ex:adjmod_dp}). Especially in (\ref{ex:adjmod_np}) and
+(\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
+complements where English would use prepositions. Thus, in
+(\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
+the genitive case: the NP complement expresses the source by which the
+experiencing subject becomes proud. Similarly, the recipient of the subject's
+happiness appears as an NP complement in the (ethical) dative in
+(\ref{ex:adjmod_dp}). Instrumental and causative NP complements instead of PPs
+may be found as well. Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg
+{}'s version of X-bar theory does not strictly distinguish between complements
+and adjuncts \citep[??]{bresnan2016}; the functional annotation provides
+information about whether a sister node to \xhead{X} is a complement or an
+adjunct instead.
+
+As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
+little, since there is no agreement morphology. However, it is possible for
+adjectives to be compared and to be negated by means of morphology. This is
+reflected in the functional annotations given in (\ref{ex:adjmorphlex}). The
+features \Compar{} and \Neg{} appear in brackets here, since they do not
+apply to every adjective: adjectives normally appear in the positive in both
+regards, comparison and polarity, and are morphologically unmarked in these
+cases.
 
 \begin{morphlex}
 \ex\label{ex:adjmorphlex}%
