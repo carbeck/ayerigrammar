@@ -329,7 +329,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{kegan}]
 			]
-			[{\anno[\pass{\Adjc}]{NP}}
+			[{\anno[\pass{\Oblq{poss}}]{NP}}
 				[{ayonena}, roof]
 			]
 		]
@@ -509,7 +509,7 @@ than all the things inside the relative clause. The following example
 					[{caban}, roof]
 				]
 			]
-			[{\anno[\elem{\Adj}]{AP}}
+			[{\anno[\pass{\Oblq{poss}}]{AP}}
 				[{nā}, roof]
 			]
 		]
@@ -1194,7 +1194,7 @@ as compared to nouns.
 	% 		[\anno{\xhead{D}}
 	% 			[{reng}]
 	% 		]
-	% 		[{\anno[\pass{\Adjc}]{NP}}
+	% 		[{\anno[\pass{\Oblq{poss}}]{NP}}
 	% 			[{ayonena}, roof]
 	% 		]
 	% 	]
@@ -3414,32 +3414,8 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\glft `Niyas likes her truly crazy idea.' //
 \endgl
 
-\begin{avm}
-\[
-	\Obj	&	\[
-					\Pred	&	`idea' \\
-					\Anim	&	$+$ \\
-					\Case	&	\Parg \\
-					\Num	&	\Sg \\
-					\Adjc	&	\{\[
-									\Pred	&	`crazy` \\
-									\Adjc	&	\{\[
-													\Pred	&	`truly' \\
-												\]\} \\
-								\],
-								\[
-									\Pred	&	`$pro$' \\
-									\Anim	&	$+$ \\
-									\Case	&	\Gen \\
-									\Gend	&	\F \\
-									\Num	&	\Sg \\
-									\Pers	&	\Third \\
-								\]\} \\
-				\] \\
-\]
-\end{avm}
-
-\begin{forest} shorter edges, italic leaves,
+\begin{minipage}[t]{.5\remaining}
+\begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\Obj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
@@ -3457,7 +3433,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 				]
 			]
 		]
-		[{\anno[\elem{\Adjc}]{DP}}
+		[{\anno[\pass{\Oblq{poss}}]{DP}}
 %			[\anno{\xbar{D}}
 				[\anno{\xhead{D}}
 					[yena]
@@ -3467,6 +3443,34 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	]
 ]
 \end{forest}
+\end{minipage}
+\hfill
+\scalebox{.8}{%
+\begin{avm}
+\[
+	\Obj	&	\[
+					\Pred		&	`idea' \\
+					\Anim		&	$+$ \\
+					\Case		&	\Parg \\
+					\Num		&	\Sg \\
+					\Oblq{poss}	&	\[
+										\Pred	&	`$pro$' \\
+										\Anim	&	$+$ \\
+										\Case	&	\Gen \\
+										\Gend	&	\F \\
+										\Num	&	\Sg \\
+										\Pers	&	\Third \\
+									\] \\
+					\Adjc		&	\{\[
+										\Pred	&	`crazy` \\
+										\Adjc	&	\{\[
+														\Pred	&	`truly' \\
+													\]\} \\
+									\]\} \\
+				\] \\
+\]
+\end{avm}%
+}
 
 \a\label{ex:adjmod_np}%
 	\begin{minipage}[t]{.5\remaining}
