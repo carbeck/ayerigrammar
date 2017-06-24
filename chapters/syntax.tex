@@ -289,7 +289,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 
 \pex\label{ex:nounmods}
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + adjective: //
 		\gla ningan hiro //
@@ -313,7 +313,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 	\end{forest}
 
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + genitive attribute: //
 		\gla kegan ayonena //
@@ -337,7 +337,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 	\end{forest}
 
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + instrumental attribute: //
 		\gla kasu bariri //
@@ -361,7 +361,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 	\end{forest}
 
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + relative clause: //
 		\gla nanga si incāng //
@@ -395,7 +395,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 
 \pex\label{ex:nouncltree}
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + deictic prefix: //
 		\gla eda- @ nanga //
@@ -417,7 +417,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 	\end{forest}
 
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble noun + quantifier: //
 		\gla nangās @ -ikan //
@@ -439,7 +439,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 	\end{forest}
 
 \a %
-	\begin{minipage}[t]{.5\linewidth}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble proper noun + case: //
 		\gla ang @ Diyan //
@@ -3352,8 +3352,18 @@ are illustrated in (\ref{ex:proquant}).
 
 \xe
 
-\section{Adjective phrases}
-\label{sec:adjps}
+\section{Adjective and adverb phrases}
+\label{sec:adjps-advps}
+
+Adjectives and adverbs in Ayeri are largely similar in that they can both be
+modified by adverbs like \fw{very}, and they both modify heads: adjectives
+modify nouns, adverbs modify everything else. \citet[51]{carnie2013} urges his
+readers to think about whether it is sensible to distinguish between the two
+categories, so let us focus in this section on structural similarities and
+dissimilarities between the two, as well as their distribution as morphemes.
+
+\subsection{Adjective phrases}
+\label{subsec:adjps}
 
 As described in the previous section, APs are usually found as adjuncts of NPs
 or DPs, where they describe properties of these nominal elements. Adjectives
@@ -3395,64 +3405,60 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
-	\begin{minipage}[t]{.5\remaining}
-	\begingl
-		\glpreamble adjective + AdvP: //
-		\gla Ang vacya {} Niyas bisuayas sadayo kalam yena. //
-		\glb ang vac-ya Ø Niyas bisuay-as sadayo kalam yena //
-		\glc \AgtT{} like-\TsgM{} \Top{} Niyas idea-\Parg{} crazy truly 
-			\TsgF{}.\Gen{} //
-		\glft `Niyas likes her truly crazy idea.' //
-	\endgl~\\
+\begingl
+	\glpreamble adjective + AdvP: //
+	\gla Ang vacya {} Niyas bisuayas sadayo kalam yena. //
+	\glb ang vac-ya Ø Niyas bisuay-as sadayo kalam yena //
+	\glc \AgtT{} like-\TsgM{} \Top{} Niyas idea-\Parg{} crazy truly 
+		\TsgF{}.\Gen{} //
+	\glft `Niyas likes her truly crazy idea.' //
+\endgl
 
-	{\smaller%
-	\begin{avm}
-	\[
-		\Obj	&	\[
-						\Pred	&	`idea' \\
-						\Anim	&	$+$ \\
-						\Case	&	\Parg \\
-						\Num	&	\Sg \\
-						\Adjc	&	\{\[
-										\Pred	&	`crazy` \\
-										\Adjc	&	\{\[
-														\Pred	&	`truly' \\
-													\]\} \\
-									\]\} \\
-					\] \\
-	\]
-	\end{avm}
-	}
-	\end{minipage}
-	~
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\Obj}]{NP}}
+\begin{avm}
+\[
+	\Obj	&	\[
+					\Pred	&	`idea' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Parg \\
+					\Num	&	\Sg \\
+					\Adjc	&	\{\[
+									\Pred	&	`crazy` \\
+									\Adjc	&	\{\[
+													\Pred	&	`truly' \\
+												\]\} \\
+								\]\} \\
+				\] \\
+\]
+\end{avm}
+
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Obj}]{NP}}
+	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}
-					[bisuayas]
-				]
-				[{\anno[\elem{\Adjc}]{AP}}
-					[\anno{\xbar{A}}
-						[\anno{\xhead{A}}
-							[sadayo]
-						]
-						[{\anno[\pass{\Adjc}]{AdvP}}
-							[{kalam}, roof]
-						]
-					]
-				]
+			[\anno{\xhead{N}}
+				[bisuayas]
 			]
-			[{\anno[\elem{\Adjc}]{DP}}
-%				[\anno{\xbar{D}}
-					[\anno{\xhead{D}}
-						[yena]
+			[{\anno[\elem{\Adjc}]{AP}}
+				[\anno{\xbar{A}}
+					[\anno{\xhead{A}}
+						[sadayo]
 					]
-%				]
+					[{\anno[\pass{\Adjc}]{AdvP}}
+						[{kalam}, roof]
+					]
+				]
 			]
 		]
+		[{\anno[\elem{\Adjc}]{DP}}
+%			[\anno{\xbar{D}}
+				[\anno{\xhead{D}}
+					[yena]
+				]
+%			]
+		]
 	]
-	\end{forest}\medskip
+]
+\end{forest}
 
 \a\label{ex:adjmod_np}%
 	\begin{minipage}[t]{.5\remaining}
@@ -3621,7 +3627,7 @@ their respective representation as an \Avm{} are given in (\ref{ex:adjmorph}).
 	\gla pasīsoy-eng //
 	\glb pasīsa-oy=eng //
 	\glc interesting-\Neg{}=\Comp{} //
-	\glft `less uninteresting' //
+	\glft `more uninteresting' //
 \endgl
 \end{minipage}
 ~
@@ -3646,7 +3652,7 @@ adjectives like any other adverbial modifiers, except that their surface form
 is clitic rather than free. Quantifying adverbs, both enclitic and free, thus
 also find themselves in \Adjc{}.
 
-\pex\label{ex:adjquant2}
+\pex\label{ex:adjquant3}
 \a
 \begin{minipage}[t]{.5\remaining}
 \begingl
@@ -3666,7 +3672,7 @@ also find themselves in \Adjc{}.
 \]
 \end{avm}
 
-\a
+\a\label{ex:adjadvconv}
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\gla valuy ipan. //
@@ -3685,6 +3691,81 @@ also find themselves in \Adjc{}.
 \]
 \end{avm}
 
+\xe
+
+\subsection{Adverb phrases}
+\label{subsec:advps}
+
+Adverbs, as (\ref{ex:adjadvconv}) shows, can easily be converted from
+adjectives. Thus, \xayr{IpnF}{ipan}{extreme}, which is normally an adjective,
+is used there in an adverbial way, meaning `extremely'. The word stays the
+same, however: \rayr{IpnF}{ipan}, without a derivative affix akin to English
+\fw{-ly} or French \fw{-ment}. Since adverbs and adjectives are largely similar
+in that they provide additional information about the nature or circumstance of
+a noun or another part of speech, \citet{carnie2013} poses the question whether
+adjectives and adverbs should be better analyzed as being part of the same
+category. He reasons that
+
+\blockcquote[51]{carnie2013}{Both Adj and Adv can be modified by the word
+\fw{very}, and they both have the same basic function in the grammar---to
+attribute properties to the items they modify. In fact, the only major
+distinction between them is syntactic: Adjectives appear inside NPs, while
+adverbs appear elsewhere.}
+
+Adjectives and adverbs are in complementary distribution, which, he writes,
+would normally be taken as evidence that these two things are of the same
+category indeed. The only reason \citet{carnie2013} adduces for keeping the two
+categories apart is \textquote{because they are familiar to most people}, and
+he prompts the reader to consider that uniting them in a supercategory A
+\textcquote[51]{carnie2013}{might provide a better analysis and might be better
+motivated scientifically}. As described in \autoref{sec:adverbs}, the only
+morphology attributive adverbs take in Ayeri is comparison morphology and
+negation. This is the same as adjectives, hence the functional specifications
+indeed look the same:
+
+\begin{morphlex}
+\ex\label{ex:advmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& Adv
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			(\ups{\Compar} & = & \{\Comp, \Supl\}) \\
+			(\ups{\Neg} & = & $+$) \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+
+If we look at the phrase structure (\ref{ex:advpstruct}) and the c-structure
+(\ref{ex:advpcstruct}) for adverbs, however, there is a slight difference in
+that adverbs cannot serve as \XCompl{} in equative statements; they also can
+only be modified by other adverbs, but not by NP, DP, or CP.\footnote{For
+adjectives, compare (\ref{ex:adjpstruct}), (\ref{ex:adjpcstruct}), and
+(\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.} On the other hand,
+adjectives are restricted to nominal contexts whereas adverbs may modify any
+other lexical category: verbs, adjectives, prepositions, as well as other
+adverbs.
+
+\pex\label{ex:advpstruct}
+\a AdvP → \anno*{\xbar{Adv}}
+\a \xbar{Adv} → \anno*{\xhead{Adv}} $\left(\anno*[{\pass{\Adjc}}]{AdvP}\right)$
+\xe
+
+\ex~\label{ex:advpcstruct}\labels
+\begin{forest}
+[{\anno[\pass{\Adjc}]{AdvP}}
+	[\anno{\xbar{Adv}}
+		[\anno{\xhead{Adv}}]
+		[{$\left(\anno[{%
+				\pass{\Adjc}%
+			}]{AdvP}\right)$%
+		}]
+	]
+]
+\end{forest}
 \xe
 
 ...
@@ -3769,11 +3850,6 @@ also find themselves in \Adjc{}.
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
-
-% \section{Adverb phrases}
-% \label{sec:advps}
-
-% ...
 
 % \section{Complementizer phrases}
 % \label{sec:cps}
