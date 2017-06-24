@@ -353,7 +353,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{kasu}]
 			]
-			[{\anno[\pass{\Adjc}]{NP}}
+			[{\anno[\pass{\Oblq{ins}}]{NP}}
 				[{bariri}, roof]
 			]
 		]
@@ -377,7 +377,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{nanga}]
 			]
-			[{\anno[\pass{\Adjc}]{CP}}
+			[{\anno[\pass{\Compl}]{CP}}
 				[{si incāng}, roof]
 			]
 		]
@@ -509,7 +509,7 @@ than all the things inside the relative clause. The following example
 					[{caban}, roof]
 				]
 			]
-			[{\anno[\pass{\Oblq{poss}}]{AP}}
+			[{\anno[\pass{\Oblq{poss}}]{DP}}
 				[{nā}, roof]
 			]
 		]
@@ -3373,9 +3373,11 @@ pronouns can be used as adjective-like modifiers as well, though they are
 probably still better classified as DP heads, since they are functional
 morphemes. Possessive adjectives thus also do not share all the morphological
 properties of adjectives, for instance, they cannot be compared (see
-\autoref{phsec:possadj}, p.~\pageref{phsec:possadj}). The phrase-structure rule
-in (\ref{ex:adjpstruct}) and the c-structure tree in (\ref{ex:adjpcstruct})
-show how an AP is constructed.
+\autoref{phsec:possadj}, p.~\pageref{phsec:possadj}), also they can only be
+instanced once. In other words, it is not possible to modify the same noun with
+multiple possessive morphemes, which means that they are not part of \Adjc{}.
+The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
+(\ref{ex:adjpcstruct}) show how an AP is constructed.
 
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}}
@@ -3405,72 +3407,39 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
-\begingl
-	\glpreamble adjective + AdvP: //
-	\gla Ang vacya {} Niyas bisuayas sadayo kalam yena. //
-	\glb ang vac-ya Ø Niyas bisuay-as sadayo kalam yena //
-	\glc \AgtT{} like-\TsgM{} \Top{} Niyas idea-\Parg{} crazy truly 
-		\TsgF{}.\Gen{} //
-	\glft `Niyas likes her truly crazy idea.' //
-\endgl
+	\begin{minipage}[t]{.5\remaining}%
+	\begingl
+		\glpreamble adjective + AdvP: //
+		\gla Adareng bisuayas sadayo kalam. //
+		\glb ada-reng bisuay-as sadayo kalam //
+		\glc that-\AargI{} idea-\Parg{} crazy truly //
+		\glft `That is a truly crazy idea.' //
+	\endgl~\\
 
-\begin{minipage}[t]{.5\remaining}
-\begin{forest} shorter edges, narrower nodes, italic leaves,
-[{\anno[\pass{\Obj}]{NP}}
-	[\anno{\xbar{N}}
-		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[bisuayas]
+	\begin{avm}
+	\[
+		\Adjc		&	\{\[
+							\Pred	&	`crazy` \\
+							\Adjc	&	\{\[
+											\Pred	&	`truly' \\
+										\]\} \\
+						\]\} \\
+	\]
+	\end{avm}
+	\end{minipage}
+	~
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\Adjc}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[sadayo]
 			]
-			[{\anno[\elem{\Adjc}]{AP}}
-				[\anno{\xbar{A}}
-					[\anno{\xhead{A}}
-						[sadayo]
-					]
-					[{\anno[\pass{\Adjc}]{AdvP}}
-						[{kalam}, roof]
-					]
-				]
+			[{\anno[\pass{\Adjc}]{AdvP}}
+				[{kalam}, roof]
 			]
-		]
-		[{\anno[\pass{\Oblq{poss}}]{DP}}
-%			[\anno{\xbar{D}}
-				[\anno{\xhead{D}}
-					[yena]
-				]
-%			]
 		]
 	]
-]
-\end{forest}
-\end{minipage}
-\hfill
-\scalebox{.8}{%
-\begin{avm}
-\[
-	\Obj	&	\[
-					\Pred		&	`idea' \\
-					\Anim		&	$+$ \\
-					\Case		&	\Parg \\
-					\Num		&	\Sg \\
-					\Oblq{poss}	&	\[
-										\Pred	&	`$pro$' \\
-										\Anim	&	$+$ \\
-										\Case	&	\Gen \\
-										\Gend	&	\F \\
-										\Num	&	\Sg \\
-										\Pers	&	\Third \\
-									\] \\
-					\Adjc		&	\{\[
-										\Pred	&	`crazy` \\
-										\Adjc	&	\{\[
-														\Pred	&	`truly' \\
-													\]\} \\
-									\]\} \\
-				\] \\
-\]
-\end{avm}%
-}
+	\end{forest}
 
 \a\label{ex:adjmod_np}%
 	\begin{minipage}[t]{.5\remaining}
@@ -3552,9 +3521,9 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 \xe
 
-Example (\ref{ex:adjmod_adv}) gives the complete f- and c-structures for the
-object NP to show that \Adjc{} may be recursive: an adjective which serves as
-one of many modifiers to a noun can itself be modified by adverbs. Likewise, an
+Example (\ref{ex:adjmod_adv}) gives the f- and c-structures for the adjective
+phrase to show that \Adjc{} may be recursive: an adjective which serves as one
+of many modifiers to a noun can itself be modified by adverbs. Likewise, an
 adjective--adverb combination can be complemented by an NP, as shown in
 (\ref{ex:adjmod_dp}). Especially in (\ref{ex:adjmod_np}) and
 (\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
