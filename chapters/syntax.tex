@@ -199,7 +199,7 @@ of case:
 \tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
 \tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
 										\pass{\Oblq{to}} \\
-\tl\quad & \downs{\Case} = \Gen		& \pass{\Oblq{poss}} \logor{} 
+\tl\quad & \downs{\Case} = \Gen		& \pass{\Possr} \logor{} 
 						\pass{\Oblq{from}} \\
 \tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \\
 \tl\quad & \downs{\Case} = \Caus	& \pass{\Oblq{caus}} \\
@@ -315,7 +315,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 \a %
 	\begin{minipage}[t]{.5\remaining}
 	\begingl
-		\glpreamble noun + genitive attribute: //
+		\glpreamble noun + possessor: //
 		\gla kegan ayonena //
 		\glb kegan ayon-ena //
 		\glc hat man-\Gen{} //
@@ -329,7 +329,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{kegan}]
 			]
-			[{\anno[\pass{\Oblq{poss}}]{NP}}
+			[{\anno[\pass{\Possr}]{NP}}
 				[{ayonena}, roof]
 			]
 		]
@@ -339,7 +339,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 \a %
 	\begin{minipage}[t]{.5\remaining}
 	\begingl
-		\glpreamble noun + instrumental attribute: //
+		\glpreamble noun + instrumental complement: //
 		\gla kasu bariri //
 		\glb kasu bari-ri //
 		\glc basket meat-\Ins{} //
@@ -505,15 +505,15 @@ than all the things inside the relative clause. The following example
 				[\anno{\xhead{N}}
 					[{diranang}]
 				]
-				[{\anno[\elem{\Adj}]{AP}}
+				[{\anno[\pass{\Adj}]{AP}}
 					[{caban}, roof]
 				]
 			]
-			[{\anno[\pass{\Oblq{poss}}]{DP}}
+			[{\anno[\pass{\Possr}]{DP}}
 				[{nā}, roof]
 			]
 		]
-		[{\anno[\elem{\Adj}]{CP}}
+		[{\anno[\pass{\Comp}]{CP}}
 			[{si ang mica ...}, roof]
 		]
 	]
@@ -1180,7 +1180,7 @@ as compared to nouns.
 \a\ljudge* %
 	\begin{minipage}[t]{.5\linewidth}
 	\begingl
-		\glpreamble pronoun + genitive attribute: //
+		\glpreamble pronoun + possessor: //
 		\gla reng ayonena //
 		\glb reng ayon-ena //
 		\glc \TsgI{}.\Aarg{} man-\Gen{} //
@@ -1194,7 +1194,7 @@ as compared to nouns.
 	% 		[\anno{\xhead{D}}
 	% 			[{reng}]
 	% 		]
-	% 		[{\anno[\pass{\Oblq{poss}}]{NP}}
+	% 		[{\anno[\pass{\Possr}]{NP}}
 	% 			[{ayonena}, roof]
 	% 		]
 	% 	]
@@ -1204,7 +1204,7 @@ as compared to nouns.
 \a\ljudge* %
 	\begin{minipage}[t]{.5\linewidth}
 	\begingl
-		\glpreamble pronoun + instrumental attribute: //
+		\glpreamble pronoun + instrumental complement: //
 		\gla nang bariri //
 		\glb nang bari-ri //
 		\glc \Fpl{}.\Aarg{} meat-\Ins{} //
@@ -2194,7 +2194,7 @@ any countable or quantifiable noun:
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs, but also PPs; and they may
 also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
-various oblique arguments (\Oblq{poss}, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
+various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
 decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
 and \textsc{reason} are invariant. Thus, \xayr{EnY}{enya}{everyone/
@@ -2794,7 +2794,7 @@ since [\Prox{} $\pm$] does not apply to \rayr{d/}{da-}:
 ~
 \begin{avm}
 \[
-	\Oblq{poss}	&	\[
+	\Possr	&	\[
 					\Pred	&	`tree' \\
 					\Case	&	\Gen \\
 					\Deix	&	$such$ \\
