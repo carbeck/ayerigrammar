@@ -198,13 +198,12 @@ of case:
 \tl\quad & \downs{\Case} = \Aarg	& \pass{\Sbj} \\
 \tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
 \tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
-										\pass{\Oblq{to}} \\
+	\pass{\Oblq{to}} \\
 \tl\quad & \downs{\Case} = \Gen		& \pass{\Possr} \logor{} 
-						\pass{\Oblq{from}} \\
+	\pass{\Oblq{about}} \logor{} \pass{\Oblq{from}} \\
 \tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \\
 \tl\quad & \downs{\Case} = \Caus	& \pass{\Oblq{caus}} \\
-\tl\quad & \downs{\Case} = \Ins		& \pass{\Oblq{ins}} \logor{} 
-										\pass{\Adjc} \\
+\tl\quad & \downs{\Case} = \Ins		& \pass{\Oblq{ins}} \\
 \end{tabular}
 \xe
 
@@ -3530,14 +3529,15 @@ adjective--adverb combination can be complemented by an NP, as shown in
 complements where English would use prepositions. Thus, in
 (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
 the genitive case: the NP complement expresses the source by which the
-experiencing subject becomes proud. Similarly, the recipient of the subject's
-happiness appears as an NP complement in the (ethical) dative in
-(\ref{ex:adjmod_dp}). Instrumental and causative NP complements instead of PPs
-may be found as well. Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg
-{}'s version of X-bar theory does not strictly distinguish between complements
-and adjuncts \citep[??]{bresnan2016}; the functional annotation provides
-information about whether a sister node to \xhead{X} is a complement or an
-adjunct instead.
+experiencing subject becomes proud. This, however, should not be conflated with
+a possessor, \Possr{}, but should be labeled separately as an oblique
+complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
+appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
+Instrumental and causative NP complements instead of PPs may be found as well.
+Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version of X-bar
+theory does not strictly distinguish between complements and adjuncts
+\citep[??]{bresnan2016}; the functional annotation provides information about
+whether a sister node to \xhead{X} is a complement or an adjunct instead.
 
 As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
 little, since there is no agreement morphology. However, it is possible for
