@@ -3497,11 +3497,24 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + PP //
-		\gla Yāng petau padangya yana. //
-		\glb yāng petau padang-ya yana //
-		\glc \TsgM{} stupid mind-\Loc{} \TsgM{}.\Gen{} //
-		\glft `He is stupid in his mind.' //
-	\endgl
+		\gla Yāng petau kong padangya yana. //
+		\glb yāng petau kong padang-ya yana //
+		\glc \TsgM{} stupid inside mind-\Loc{} \TsgM{}.\Gen{} //
+		\glft `He is stupid inside of his mind.' //
+	\endgl~\\
+
+	\begin{avm}
+	\[
+		\Pred		&	`stupid' \\
+		\Oblq{loc}	&	\[
+							\Case	&	\Loc \\
+							\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+							\Obj	&	\[
+											\Pred	&	`mind' \\
+										\] \\
+						\] \\
+	\]
+	\end{avm}
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
