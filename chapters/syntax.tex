@@ -3380,7 +3380,7 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}}
-\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
+\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:adjpcstruct}\labels
@@ -3389,7 +3389,7 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
-				\pass{\Adjc}%
+				\pass{\GF}%
 			}]{XP}\right)$%
 		}]
 	]
@@ -3418,11 +3418,11 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\begin{avm}
 	\[
 		\Adjc		&	\{\[
-							\Pred	&	`crazy` \\
-							\Adjc	&	\{\[
-											\Pred	&	`truly' \\
-										\]\} \\
-						\]\} \\
+			\Pred	&	`crazy` \\
+			\Adjc	&	\{\[
+				\Pred	&	`truly' \\
+			\]\} \\
+		\]\} \\
 	\]
 	\end{avm}
 	\end{minipage}
@@ -3475,7 +3475,7 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 			[\anno{\xhead{A}}
 				[mino]
 			]
-			[{\anno[\pass{\XCompl}]{NP}}
+			[{\anno[\pass{\Oblq{src}}]{NP}}
 				[{yanena nā}, roof]
 			]
 		]
@@ -3521,7 +3521,7 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 					[{kalam}, roof]
 				]
 			]
-			[{\anno[\pass{\XCompl}]{DP}}
+			[{\anno[\pass{\Oblq{goal}}]{DP}}
 				[{vayam}, roof]
 			]
 		]
@@ -3786,17 +3786,19 @@ category. In fact, the only reason \citet{carnie2013} adduces for keeping the
 two categories apart is \textquote{because they are familiar to most people},
 and he prompts the reader to consider that uniting them in a single
 supercategory \textcquote[51]{carnie2013}{might provide a better analysis and
-might be better motivated scientifically}. As described in
-\autoref{sec:adverbs}, the only morphology attributive adverbs take in Ayeri is
-comparison morphology and negation. This is the same as adjectives, hence the
-functional specifications indeed look the same:
+might be better motivated scientifically}. \citet[126]{bresnan2016} also
+classify both adjectives and adverbs as heads of AP with reference to
+\citet{emonds1976}. As described in \autoref{sec:adverbs}, the only morphology
+attributive adverbs take in Ayeri is comparison morphology and negation. This
+is the same as with adjectives indeed, hence the functional specifications
+appear equal:
 
 \begin{morphlex}
 \ex\label{ex:advmorphlex}%
 \adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
-		& Adv
+		& A
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
 			(\ups{\Compar} & = & \{\Comp, \Supl\}) \\
