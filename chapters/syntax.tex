@@ -3406,7 +3406,7 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
-	\begin{minipage}[t]{.5\remaining}%
+	\begin{minipage}[t]{.667\remaining}%
 	\begingl
 		\glpreamble adjective + AdvP: //
 		\gla Adareng bisuayas sadayo kalam. //
@@ -3441,14 +3441,32 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}
 
 \a\label{ex:adjmod_np}%
-	\begin{minipage}[t]{.5\remaining}
+	\begin{minipage}[t]{.667\remaining}
 	\begingl
 		\glpreamble adjective + NP: //
 		\gla Yang mino yanena nā. //
 		\glb yang mino yan-ena nā //
 		\glc \Fsg{}.\Aarg{} happy son-\Gen{} \Fsg{}.\Gen{} //
 		\glft `I am happy about my son.' //
-	\endgl
+	\endgl~\\
+
+	\begin{avm}
+	\[
+		\XCompl	&	\[
+			\Pred		&	`happy' \\
+			\Oblq{src}	&	\[
+				\Pred	&	`son' \\
+				\Case	&	\Gen \\
+				\Poss	&	\[
+					\Pred	&	`$pro$' \\
+					\Case	&	\Gen \\
+					\Num	&	\Sg \\
+					\Pers	&	\First \\
+				\] \\
+			\] \\
+		\] \\
+	\]
+	\end{avm}
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
@@ -3465,14 +3483,31 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}\medskip
 
 \a\label{ex:adjmod_dp}%
-	\begin{minipage}[t]{.5\remaining}
+	\begin{minipage}[t]{.667\remaining}
 	\begingl
 		\glpreamble adjective + DP //
 		\gla Yang mino kalam vayam. //
 		\glb yang mino kalam vayam //
-		\glc \Fsg{}.\Aarg{} happy really \TsgM{}.\Dat{} //
+		\glc \Fsg{}.\Aarg{} happy really \Second{}.\Dat{} //
 		\glft `I am really happy for you.' //
-	\endgl
+	\endgl~\\
+
+	\begin{avm}
+	\[
+		\XCompl	&	\[
+			\Pred	&	`happy' \\
+			\Adjc	&	\{\[
+				\Pred	&	`really' \\
+			\]\} \\
+			\Oblq{goal}	&	\[
+				\Pred	&	`$pro$' \\
+				\Case	&	\Dat \\
+				\Num	&	\Sg \\
+				\Pers	&	\Second \\
+			\] \\
+		\] \\
+	\]
+	\end{avm}
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
@@ -3493,8 +3528,8 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	]
 	\end{forest}\medskip
 
-\a\label{ex:adjmod_cp}%
-	\begin{minipage}[t]{.5\remaining}
+\a\label{ex:adjmod_pp}%
+	\begin{minipage}[t]{.667\remaining}
 	\begingl
 		\glpreamble adjective + PP //
 		\gla Yāng petau kong padangya yana. //
@@ -3505,14 +3540,16 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 	\begin{avm}
 	\[
-		\Pred		&	`stupid' \\
-		\Oblq{loc}	&	\[
-							\Case	&	\Loc \\
-							\Pred	&	\astruct{inside}{\ups{\Obj}} \\
-							\Obj	&	\[
-											\Pred	&	`mind' \\
-										\] \\
-						\] \\
+		\XCompl	&	\[
+			\Pred		&	`stupid' \\
+			\Oblq{loc}	&	\[
+				\Case	&	\Loc \\
+				\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+				\Obj	&	\[
+					\Pred	&	`mind' \\
+				\] \\
+			\] \\
+		\] \\
 	\]
 	\end{avm}
 	\end{minipage}
@@ -3531,7 +3568,7 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}\medskip
 
 \a\label{ex:adjmod_cp}%
-	\begin{minipage}[t]{.5\remaining}
+	\begin{minipage}[t]{.667\remaining}
 	\begingl
 		\glpreamble adjective + CP //
 		\gla Adareng ban, da-tangyang. //
@@ -3539,7 +3576,19 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
 		\glft `It is good to hear this.'\\
 			\textit{Literally:} `It is good I hear so.' //
-	\endgl
+	\endgl~\\
+
+	\begin{avm}
+	\[
+		\XCompl	&	\[
+			\Pred	&	`good' \\
+			\Compl	&	\[
+				\Pred	&	\astruct{hear}{\ups{\Subj}, \ups{\Obj}} \\
+				... \\
+			\] \\
+		\] \\
+	\]
+	\end{avm}
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
@@ -3573,8 +3622,9 @@ appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
 Instrumental and causative NP complements instead of PPs may be found as well.
 Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version of X-bar
 theory does not strictly distinguish between complements and adjuncts
-\citep[??]{bresnan2016}; the functional annotation provides information about
-whether a sister node to \xhead{X} is a complement or an adjunct instead.
+\citep[127, footnote 52]{bresnan2016}; the functional annotation provides
+information about whether a sister node to \xhead{X} is a complement or an
+adjunct instead.
 
 As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
 little, since there is no agreement morphology. However, it is possible for
