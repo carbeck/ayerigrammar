@@ -3380,7 +3380,8 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}}
-\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
+% \a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
+\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:adjpcstruct}\labels
@@ -3389,7 +3390,8 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
-				\pass{\GF}%
+%				\pass{\GF}%
+				\pass{\Adjc}%
 			}]{XP}\right)$%
 		}]
 	]
@@ -3400,16 +3402,17 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 Adjective phrases have an adjective as their lexical head. This head may be
 extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
 of multiple modifiers. Since modifiers follow their heads here as well, APs are
-also a right-branching constituent. Modifiers of adjectives are subsumed under
-the label XP here, which here stands for AdvP %, NP, DP, PP, 
-and CP. An example of each phrase type modifying an adjective is given in
-(\ref{ex:adjmod}).
+also a right-branching constituent. 
+% Modifiers of adjectives are subsumed under the label XP here, which here
+% stands for AdvP, NP, DP, PP, and CP. An example of each phrase type modifying
+% an adjective is given in (\ref{ex:adjmod}).
 
-\pex\label{ex:adjmod}
-\a\label{ex:adjmod_adv}%
+% \pex\label{ex:adjmod}
+% \a\label{ex:adjmod_adv}%
+\ex\label{ex:adjmod}\label{ex:adjmod_adv}%
 	\begin{minipage}[t]{.667\remaining}%
 	\begingl
-		\glpreamble adjective + AdvP adjunct: //
+%		\glpreamble adjective + AdvP adjunct: //
 		\gla Adareng bisuayas sadayo kalam. //
 		\glb ada-reng bisuay-as sadayo kalam //
 		\glc that-\AargI{} idea-\Parg{} crazy truly //
@@ -3568,42 +3571,42 @@ and CP. An example of each phrase type modifying an adjective is given in
 % 	]
 % 	\end{forest}\medskip<
 
-\a\label{ex:adjmod_cp}%
-	\begin{minipage}[t]{.667\remaining}
-	\begingl
-		\glpreamble adjective + CP complement //
-		\gla Adareng ban, da-tangyang. //
-		\glb ada-reng ban da=tang=yang //
-		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
-		\glft `It is good to hear this.'\\
-			\textit{Literally:} `It is good I hear so.' //
-	\endgl~\\
+% \a\label{ex:adjmod_cp}%
+% 	\begin{minipage}[t]{.667\remaining}
+% 	\begingl
+% 		\glpreamble adjective + CP complement //
+% 		\gla Adareng ban, da-tangyang. //
+% 		\glb ada-reng ban da=tang=yang //
+% 		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
+% 		\glft `It is good to hear this.'\\
+% 			\textit{Literally:} `It is good I hear so.' //
+% 	\endgl~\\
 
-	\begin{avm}
-	\[
-		\XCompl	&	\[
-			\Pred	&	\astruct{good}{\ups{\Compl}} \\
-			\Compl	&	\[
-				\Pred	&	\astruct{hear}{\ups{\Subj}, \ups{\Obj}} \\
-				... \\
-			\] \\
-		\] \\
-	\]
-	\end{avm}
-	\end{minipage}
-	~
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xhead{A}}
-				[ban]
-			]
-			[{\anno[\pass{\Compl}]{CP}}
-				[{da-tangyang}, roof]
-			]
-		]
-	]
-	\end{forest}\medskip
+% 	\begin{avm}
+% 	\[
+% 		\XCompl	&	\[
+% 			\Pred	&	\astruct{good}{\ups{\Compl}} \\
+% 			\Compl	&	\[
+% 				\Pred	&	\astruct{hear}{\ups{\Subj}, \ups{\Obj}} \\
+% 				... \\
+% 			\] \\
+% 		\] \\
+% 	\]
+% 	\end{avm}
+% 	\end{minipage}
+% 	~
+% 	\begin{forest} narrower nodes, shorter edges, italic leaves,
+% 	[{\anno[\pass{\XCompl}]{AP}}
+% 		[\anno{\xbar{A}}
+% 			[\anno{\xhead{A}}
+% 				[ban]
+% 			]
+% 			[{\anno[\pass{\Compl}]{CP}}
+% 				[{da-tangyang}, roof]
+% 			]
+% 		]
+% 	]
+% 	\end{forest}\medskip
 
 \xe
 
@@ -3621,19 +3624,18 @@ of many modifiers to a noun can itself be modified by adverbs.
 % complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
 % appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
 % Instrumental and causative NP complements instead of PPs may be found as
-% well.
-Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version of X-bar
-theory does not strictly distinguish between complements and adjuncts
-\citep[127, footnote 52]{bresnan2016}; the functional annotation provides
-information about whether a sister node to \xhead{X} is a complement or an
-adjunct instead.
-% How do we know that the extensions to the adjective in (\ref{ex:adjmod}) are
-% complements rather than adjuncts, though? \citet[181--182]{carnie2013}
-% suggests replacement of \xbar{X} with a pro-form, so we can try where nodes
-% can be snipped off the tree, basically. X-bar theory suggests that
-% complements and adjuncts are on different \xbar{X} branches---a complement is
-% a sister to the head whereas an adjunct is, so to speak, its niece:
-
+% well. Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version
+% of X-bar theory does not strictly distinguish between complements and
+% adjuncts \citep[127, footnote 52]{bresnan2016}; the functional annotation
+% provides information about whether a sister node to \xhead{X} is a complement
+% or an adjunct instead. How do we know that the extensions to the adjective in
+% (\ref{ex:adjmod}) are complements rather than adjuncts, though?
+% \citet[181--182]{carnie2013} suggests replacement of \xbar{X} with a
+% pro-form, so we can try where nodes can be snipped off the tree, basically.
+% X-bar theory suggests that complements and adjuncts are on different \xbar{X}
+% branches---a complement is a sister to the head whereas an adjunct is, so to
+% speak, its niece:
+% 
 % \ex\label{ex:xbartree}
 % \begin{forest}
 % [XP, for tree={s sep=2em, l sep=2em}
@@ -3664,7 +3666,7 @@ adjunct instead.
 % \draw [-latex] (adjunct_label) -- (adjunct);
 % \end{forest}
 % \xe
-
+% 
 % With regards to complements and adjuncts to NP, \citet{carnie2013} explains,
 % \textcquote[182]{carnie2013}{Since complements are sisters to X and not Xʹ,
 % they cannot stand next to the word \fw{one}. Adjuncts, by definition, can}.
@@ -3674,7 +3676,7 @@ adjunct instead.
 % in (\ref{ex:soreplacement}a) with \rayr{d/}{da-} in
 % (\ref{ex:soreplacement}b); the \xbar{A} in (\ref{ex:soreplacement}a) being
 % targeted is the sister to AdvP.
-
+% 
 % \ex\label{ex:soreplacement}\labels%
 % \begin{minipage}[t]{0.5\remaining}%
 % \tl\quad\begingl%
@@ -3683,7 +3685,7 @@ adjunct instead.
 % 	\glc idea-\Parg{} crazy truly //
 % 	\glft `a truly crazy idea' //
 % \endgl\\[1ex]
-
+% 
 % \tl\quad\begingl
 % 	\gla Da-kalam bisuayang. //
 % 	\glb da=kalam bisuay-ang //
@@ -3724,11 +3726,11 @@ adjunct instead.
 % \draw (marked) circle [radius=1em];
 % \end{forest}
 % \xe
-
+% 
 % If we check replacement by \rayr{d/}{da-} for the other examples in 
 % (\ref{ex:adjmod}), we will see that this is not possible, since the outcomes
 % produced are ungrammatical:
-
+% 
 % \pex
 % \a\ljudge*\begingl
 % 	\gla Yang da-yanena nā. //
@@ -3736,21 +3738,21 @@ adjunct instead.
 % 	\glc \Fsg{}.\Aarg{} so=son-\Gen{} \Fsg{}.\Gen{} //
 % 	\glft `I am so about my son.' //
 % \endgl
-
+% 
 % \a\ljudge*\begingl
 % 	\gla Yang da-kalam vayam. //
 % 	\glb yang da=kalam vayam //
 % 	\glc \Fsg{}.\Aarg{} so=really \Second{}.\Dat{} //
 % 	\glft `I am really so for you.' //
 % \endgl
-
+% 
 % \a\ljudge*\begingl
 % 	\gla Yāng da-kong padangya yana. //
 % 	\glb yāng da=kong padang-ya yana //
 % 	\glc \TsgM{} so=inside mind-\Loc{} \TsgM{}.\Gen{} //
 % 	\glft `He is so inside of his mind.' //
 % \endgl
-
+% 
 % \a\ljudge*\begingl
 % 	\gla Adareng da-da-tangyang. //
 % 	\glb ada-reng da=da=tang=yang //
@@ -3758,9 +3760,9 @@ adjunct instead.
 % 	\glft `It is so to hear this.' //
 % \endgl
 % \xe
-
+% 
 % ...
-
+% 
 As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
 little, since there is no agreement morphology. However, it is possible for
 adjectives to be compared and to be negated by means of morphology. This is
@@ -3947,12 +3949,12 @@ appear equal:
 If we look at the phrase structure (\ref{ex:advpstruct}) and the c-structure
 (\ref{ex:advpcstruct}) for adverbs, however, there is a slight difference in
 that adverbs cannot serve as \XCompl{} in equative statements; they also can
-only be modified by other adverbs, but not by NP, DP, or CP.\footnote{For
-adjectives, compare (\ref{ex:adjpstruct}), (\ref{ex:adjpcstruct}), and
-(\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.} On the other hand,
-adjectives are restricted to nominal contexts whereas adverbs may modify any
-other lexical category: verbs, adjectives, prepositions, as well as other
-adverbs.
+only be modified by other adverbs%, but not by NP, DP, or CP.
+.\footnote{For adjectives, compare (\ref{ex:adjpstruct}),
+(\ref{ex:adjpcstruct}), and (\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.}
+On the other hand, adjectives are restricted to nominal contexts whereas
+adverbs may modify any other lexical category: verbs, adjectives, prepositions,
+as well as other adverbs.
 
 \pex\label{ex:advpstruct}
 \a AdvP → \anno*{\xbar{Adv}}
