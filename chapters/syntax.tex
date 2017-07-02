@@ -3401,14 +3401,15 @@ Adjective phrases have an adjective as their lexical head. This head may be
 extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
 of multiple modifiers. Since modifiers follow their heads here as well, APs are
 also a right-branching constituent. Modifiers of adjectives are subsumed under
-the label XP here, which here stands for AdvP, NP, DP, PP, and CP. An example
-of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
+the label XP here, which here stands for AdvP %, NP, DP, PP, 
+and CP. An example of each phrase type modifying an adjective is given in
+(\ref{ex:adjmod}).
 
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
 	\begin{minipage}[t]{.667\remaining}%
 	\begingl
-		\glpreamble adjective + AdvP: //
+		\glpreamble adjective + AdvP adjunct: //
 		\gla Adareng bisuayas sadayo kalam. //
 		\glb ada-reng bisuay-as sadayo kalam //
 		\glc that-\AargI{} idea-\Parg{} crazy truly //
@@ -3440,137 +3441,137 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	]
 	\end{forest}
 
-\a\label{ex:adjmod_np}%
-	\begin{minipage}[t]{.667\remaining}
-	\begingl
-		\glpreamble adjective + NP: //
-		\gla Yang mino yanena nā. //
-		\glb yang mino yan-ena nā //
-		\glc \Fsg{}.\Aarg{} happy son-\Gen{} \Fsg{}.\Gen{} //
-		\glft `I am happy about my son.' //
-	\endgl~\\
+% \a\label{ex:adjmod_np}%
+% 	\begin{minipage}[t]{.667\remaining}
+% 	\begingl
+% 		\glpreamble adjective + NP complement: //
+% 		\gla Yang mino yanena nā. //
+% 		\glb yang mino yan-ena nā //
+% 		\glc \Fsg{}.\Aarg{} happy son-\Gen{} \Fsg{}.\Gen{} //
+% 		\glft `I am happy about my son.' //
+% 	\endgl~\\
 
-	\begin{avm}
-	\[
-		\XCompl	&	\[
-			\Pred		&	`happy' \\
-			\Oblq{src}	&	\[
-				\Pred	&	`son' \\
-				\Case	&	\Gen \\
-				\Poss	&	\[
-					\Pred	&	`$pro$' \\
-					\Case	&	\Gen \\
-					\Num	&	\Sg \\
-					\Pers	&	\First \\
-				\] \\
-			\] \\
-		\] \\
-	\]
-	\end{avm}
-	\end{minipage}
-	~
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xhead{A}}
-				[mino]
-			]
-			[{\anno[\pass{\Oblq{src}}]{NP}}
-				[{yanena nā}, roof]
-			]
-		]
-	]
-	\end{forest}\medskip
+% 	\begin{avm}
+% 	\[
+% 		\XCompl	&	\[
+% 			\Pred		&	\astruct{happy}{\ups{\Oblq{src}}} \\
+% 			\Oblq{src}	&	\[
+% 				\Pred	&	`son' \\
+% 				\Case	&	\Gen \\
+% 				\Poss	&	\[
+% 					\Pred	&	`$pro$' \\
+% 					\Case	&	\Gen \\
+% 					\Num	&	\Sg \\
+% 					\Pers	&	\First \\
+% 				\] \\
+% 			\] \\
+% 		\] \\
+% 	\]
+% 	\end{avm}
+% 	\end{minipage}
+% 	~
+% 	\begin{forest} narrower nodes, shorter edges, italic leaves,
+% 	[{\anno[\pass{\XCompl}]{AP}}
+% 		[\anno{\xbar{A}}
+% 			[\anno{\xhead{A}}
+% 				[mino]
+% 			]
+% 			[{\anno[\pass{\Oblq{src}}]{NP}}
+% 				[{yanena nā}, roof]
+% 			]
+% 		]
+% 	]
+% 	\end{forest}\medskip
 
-\a\label{ex:adjmod_dp}%
-	\begin{minipage}[t]{.667\remaining}
-	\begingl
-		\glpreamble adjective + DP //
-		\gla Yang mino kalam vayam. //
-		\glb yang mino kalam vayam //
-		\glc \Fsg{}.\Aarg{} happy really \Second{}.\Dat{} //
-		\glft `I am really happy for you.' //
-	\endgl~\\
+% \a\label{ex:adjmod_dp}%
+% 	\begin{minipage}[t]{.667\remaining}
+% 	\begingl
+% 		\glpreamble adjective + DP complement //
+% 		\gla Yang mino kalam vayam. //
+% 		\glb yang mino kalam vayam //
+% 		\glc \Fsg{}.\Aarg{} happy really \Second{}.\Dat{} //
+% 		\glft `I am really happy for you.' //
+% 	\endgl~\\
 
-	\begin{avm}
-	\[
-		\XCompl	&	\[
-			\Pred	&	`happy' \\
-			\Adjc	&	\{\[
-				\Pred	&	`really' \\
-			\]\} \\
-			\Oblq{goal}	&	\[
-				\Pred	&	`$pro$' \\
-				\Case	&	\Dat \\
-				\Num	&	\Sg \\
-				\Pers	&	\Second \\
-			\] \\
-		\] \\
-	\]
-	\end{avm}
-	\end{minipage}
-	~
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xbar{A}}
-				[\anno{\xhead{A}}
-					[mino]
-				]
-				[{\anno[\pass{\Adjc}]{AdvP}}
-					[{kalam}, roof]
-				]
-			]
-			[{\anno[\pass{\Oblq{goal}}]{DP}}
-				[{vayam}, roof]
-			]
-		]
-	]
-	\end{forest}\medskip
+% 	\begin{avm}
+% 	\[
+% 		\XCompl	&	\[
+% 			\Pred	&	\astruct{happy}{\ups{\Oblq{goal}}} \\
+% 			\Adjc	&	\{\[
+% 				\Pred	&	`really' \\
+% 			\]\} \\
+% 			\Oblq{goal}	&	\[
+% 				\Pred	&	`$pro$' \\
+% 				\Case	&	\Dat \\
+% 				\Num	&	\Sg \\
+% 				\Pers	&	\Second \\
+% 			\] \\
+% 		\] \\
+% 	\]
+% 	\end{avm}
+% 	\end{minipage}
+% 	~
+% 	\begin{forest} narrower nodes, shorter edges, italic leaves,
+% 	[{\anno[\pass{\XCompl}]{AP}}
+% 		[\anno{\xbar{A}}
+% 			[\anno{\xbar{A}}
+% 				[\anno{\xhead{A}}
+% 					[mino]
+% 				]
+% 				[{\anno[\pass{\Adjc}]{AdvP}}
+% 					[{kalam}, roof]
+% 				]
+% 			]
+% 			[{\anno[\pass{\Oblq{goal}}]{DP}}
+% 				[{vayam}, roof]
+% 			]
+% 		]
+% 	]
+% 	\end{forest}\medskip
 
-\a\label{ex:adjmod_pp}%
-	\begin{minipage}[t]{.667\remaining}
-	\begingl
-		\glpreamble adjective + PP //
-		\gla Yāng petau kong padangya yana. //
-		\glb yāng petau kong padang-ya yana //
-		\glc \TsgM{} stupid inside mind-\Loc{} \TsgM{}.\Gen{} //
-		\glft `He is stupid inside of his mind.' //
-	\endgl~\\
+% \a\label{ex:adjmod_pp}%
+% 	\begin{minipage}[t]{.667\remaining}
+% 	\begingl
+% 		\glpreamble adjective + PP complement //
+% 		\gla Yāng petau kong padangya yana. //
+% 		\glb yāng petau kong padang-ya yana //
+% 		\glc \TsgM{} stupid inside mind-\Loc{} \TsgM{}.\Gen{} //
+% 		\glft `He is stupid inside of his mind.' //
+% 	\endgl~\\
 
-	\begin{avm}
-	\[
-		\XCompl	&	\[
-			\Pred		&	`stupid' \\
-			\Oblq{loc}	&	\[
-				\Case	&	\Loc \\
-				\Pred	&	\astruct{inside}{\ups{\Obj}} \\
-				\Obj	&	\[
-					\Pred	&	`mind' \\
-				\] \\
-			\] \\
-		\] \\
-	\]
-	\end{avm}
-	\end{minipage}
-	~
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xhead{A}}
-				[petau]
-			]
-			[{\anno[\pass{\Oblq{loc}}]{PP}}
-				[{kong padangya}, roof]
-			]
-		]
-	]
-	\end{forest}\medskip
+% 	\begin{avm}
+% 	\[
+% 		\XCompl	&	\[
+% 			\Pred		&	\astruct{stupid}{\ups{\Oblq{loc}}} \\
+% 			\Oblq{loc}	&	\[
+% 				\Case	&	\Loc \\
+% 				\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+% 				\Obj	&	\[
+% 					\Pred	&	`mind' \\
+% 				\] \\
+% 			\] \\
+% 		\] \\
+% 	\]
+% 	\end{avm}
+% 	\end{minipage}
+% 	~
+% 	\begin{forest} narrower nodes, shorter edges, italic leaves,
+% 	[{\anno[\pass{\XCompl}]{AP}}
+% 		[\anno{\xbar{A}}
+% 			[\anno{\xhead{A}}
+% 				[petau]
+% 			]
+% 			[{\anno[\pass{\Oblq{loc}}]{PP}}
+% 				[{kong padangya}, roof]
+% 			]
+% 		]
+% 	]
+% 	\end{forest}\medskip<
 
 \a\label{ex:adjmod_cp}%
 	\begin{minipage}[t]{.667\remaining}
 	\begingl
-		\glpreamble adjective + CP //
+		\glpreamble adjective + CP complement //
 		\gla Adareng ban, da-tangyang. //
 		\glb ada-reng ban da=tang=yang //
 		\glc that-\TsgI{}.\Aarg{} good such=hear=\Fsg{}.\Aarg{} //
@@ -3581,7 +3582,7 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\begin{avm}
 	\[
 		\XCompl	&	\[
-			\Pred	&	`good' \\
+			\Pred	&	\astruct{good}{\ups{\Compl}} \\
 			\Compl	&	\[
 				\Pred	&	\astruct{hear}{\ups{\Subj}, \ups{\Obj}} \\
 				... \\
@@ -3608,23 +3609,157 @@ of each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 Example (\ref{ex:adjmod_adv}) gives the f- and c-structures for the adjective
 phrase to show that \Adjc{} may be recursive: an adjective which serves as one
-of many modifiers to a noun can itself be modified by adverbs. Likewise, an
-adjective--adverb combination can be complemented by an NP, as shown in
-(\ref{ex:adjmod_dp}). Especially in (\ref{ex:adjmod_np}) and
-(\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
-complements where English would use prepositions. Thus, in
-(\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
-the genitive case: the NP complement expresses the source by which the
-experiencing subject becomes proud. This, however, should not be conflated with
-a possessor, \Possr{}, but should be labeled separately as an oblique
-complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
-appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
-Instrumental and causative NP complements instead of PPs may be found as well.
+of many modifiers to a noun can itself be modified by adverbs.
+% Likewise, an adjective--adverb combination can be complemented by an NP, as
+% shown in (\ref{ex:adjmod_dp}). Especially in (\ref{ex:adjmod_np}) and
+% (\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
+% complements where English would use prepositions. Thus, in
+% (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement
+% in the genitive case: the NP complement expresses the source by which the
+% experiencing subject becomes proud. This, however, should not be conflated
+% with a possessor, \Possr{}, but should be labeled separately as an oblique
+% complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
+% appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
+% Instrumental and causative NP complements instead of PPs may be found as
+% well.
 Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version of X-bar
 theory does not strictly distinguish between complements and adjuncts
 \citep[127, footnote 52]{bresnan2016}; the functional annotation provides
 information about whether a sister node to \xhead{X} is a complement or an
 adjunct instead.
+% How do we know that the extensions to the adjective in (\ref{ex:adjmod}) are
+% complements rather than adjuncts, though? \citet[181--182]{carnie2013}
+% suggests replacement of \xbar{X} with a pro-form, so we can try where nodes
+% can be snipped off the tree, basically. X-bar theory suggests that
+% complements and adjuncts are on different \xbar{X} branches---a complement is
+% a sister to the head whereas an adjunct is, so to speak, its niece:
+
+% \ex\label{ex:xbartree}
+% \begin{forest}
+% [XP, for tree={s sep=2em, l sep=2em}
+% 	[W, name=spec]
+% 	[\xbar{X}
+% 		[\xbar{X}
+% 			[\xhead{X}, name=head]
+% 			[ZP, name=complement]
+% 		]
+% 		[YP, name=adjunct]
+% 	]
+% ]
+% %
+% \node [left=1em of spec, font=\itshape]
+% 	(spec_label) {specifier};
+% \draw [-latex] (spec_label) -- (spec);
+% %
+% \node [left=1em of head, font=\itshape]
+% 	(head_label) {head};
+% \draw [-latex] (head_label) -- (head);
+% %
+% \node [right=1em of complement, font=\itshape]
+% 	(complement_label) {complement};
+% \draw [-latex] (complement_label) -- (complement);
+% %
+% \node [right=1em of adjunct, font=\itshape]
+% 	(adjunct_label) {adjunct};
+% \draw [-latex] (adjunct_label) -- (adjunct);
+% \end{forest}
+% \xe
+
+% With regards to complements and adjuncts to NP, \citet{carnie2013} explains,
+% \textcquote[182]{carnie2013}{Since complements are sisters to X and not Xʹ,
+% they cannot stand next to the word \fw{one}. Adjuncts, by definition, can}.
+% To target \xbar{A} nodes, we need something corresponding to English \fw{so},
+% which we find in Ayeri \xayr{d/}{da-}{thus, so, such}. Since adverbs are
+% adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy}
+% in (\ref{ex:soreplacement}a) with \rayr{d/}{da-} in
+% (\ref{ex:soreplacement}b); the \xbar{A} in (\ref{ex:soreplacement}a) being
+% targeted is the sister to AdvP.
+
+% \ex\label{ex:soreplacement}\labels%
+% \begin{minipage}[t]{0.5\remaining}%
+% \tl\quad\begingl%
+% 	\gla bisuayas sadayo kalam //
+% 	\glb bisuay-as sadayo kalam //
+% 	\glc idea-\Parg{} crazy truly //
+% 	\glft `a truly crazy idea' //
+% \endgl\\[1ex]
+
+% \tl\quad\begingl
+% 	\gla Da-kalam bisuayang. //
+% 	\glb da=kalam bisuay-ang //
+% 	\glc so=truly idea-\Aarg{} //
+% 	\glft `The idea is truly so.' //
+% \endgl
+% \end{minipage}
+% ~
+% \begin{forest} shorter edges, italic leaves,
+% [NP
+% 	[\xbar{N}
+% 		[\xbar{N}
+% 			[\xhead{N}
+% 				[bisuayas]
+% 			]
+% 		]
+% 		[AP
+% 			[\xbar{A}
+% 				[\xbar{A}, name=marked
+% 					[\xhead{A}
+% 						[sadayo]
+% 					]
+% 				]
+% 				[AdvP
+% 					[\xbar{Adv}
+% 						[\xbar{Adv}
+% 							[\xhead{Adv}
+% 								[kalam]
+% 							]
+% 						]
+% 					]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% %
+% \draw (marked) circle [radius=1em];
+% \end{forest}
+% \xe
+
+% If we check replacement by \rayr{d/}{da-} for the other examples in 
+% (\ref{ex:adjmod}), we will see that this is not possible, since the outcomes
+% produced are ungrammatical:
+
+% \pex
+% \a\ljudge*\begingl
+% 	\gla Yang da-yanena nā. //
+% 	\glb yang da=yan-ena nā //
+% 	\glc \Fsg{}.\Aarg{} so=son-\Gen{} \Fsg{}.\Gen{} //
+% 	\glft `I am so about my son.' //
+% \endgl
+
+% \a\ljudge*\begingl
+% 	\gla Yang da-kalam vayam. //
+% 	\glb yang da=kalam vayam //
+% 	\glc \Fsg{}.\Aarg{} so=really \Second{}.\Dat{} //
+% 	\glft `I am really so for you.' //
+% \endgl
+
+% \a\ljudge*\begingl
+% 	\gla Yāng da-kong padangya yana. //
+% 	\glb yāng da=kong padang-ya yana //
+% 	\glc \TsgM{} so=inside mind-\Loc{} \TsgM{}.\Gen{} //
+% 	\glft `He is so inside of his mind.' //
+% \endgl
+
+% \a\ljudge*\begingl
+% 	\gla Adareng da-da-tangyang. //
+% 	\glb ada-reng da=da=tang=yang //
+% 	\glc that-\TsgI{}.\Aarg{} so=such=hear=\Fsg{}.\Aarg{} //
+% 	\glft `It is so to hear this.' //
+% \endgl
+% \xe
+
+% ...
 
 As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
 little, since there is no agreement morphology. However, it is possible for
