@@ -3642,13 +3642,25 @@ have been kicked out of the complement position they would usually occupy by
 the quantifier \xayr{AMkYu}{ankyu}{really} and moved to the end of the phrase:
 
 \pex
-\a \itshape Yang mino yayam.
-\a \itshape Yang valuy, yomavāng edaya.
+\a \textit{Yang mino yayam.}
+\a \textit{Yang valuy, yomavāng edaya.}
 \xe
 
-\pex~
-\a \itshape Yang mino \_$_i$ ankyu yayam$_i$.
-\a \itshape Yang valuy \_$_i$ ankyu, $[$yomavāng edaya$]_i$.
+\pex~\label{ex:intrusivequant}
+\a \textit{Yang mino \_\tikzmark{intrusivequant1_1} ankyu 
+	yayam\tikzmark{intrusivequant1_2}.}\medskip
+\a \textit{Yang valuy \_\tikzmark{intrusivequant2_1} ankyu, 
+	$[$yomavāng edaya\tikzmark{intrusivequant2_2}$]$.}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant1_1}) |- ++
+(south:.75em) -| ([xshift=-.5*width("yayam"),yshift=-.75ex]{pic
+cs:intrusivequant1_2});
+
+\draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant2_1}) |- ++
+(south:.75em) -| ([xshift=-.5*width("yomavāng edaya"),yshift=-.75ex]{pic
+cs:intrusivequant2_2});
+\end{tikzpicture}
 \xe
 
 In \Lfg{}, however, there are no transformations by design; instead,
@@ -3959,13 +3971,12 @@ appear equal:
 If we look at the phrase structure (\ref{ex:advpstruct}) and the c-structure
 (\ref{ex:advpcstruct}) for adverbs, however, there is a slight difference in
 that adverbs cannot serve as \XCompl{} in equative statements; they also can
-only be modified by other adverbs, but not by 
-%NP, DP, or 
-CP.\footnote{For adjectives, compare (\ref{ex:adjpstruct}),
-(\ref{ex:adjpcstruct}), and (\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.}
-On the other hand, adjectives are restricted to nominal contexts whereas
-adverbs may modify any other lexical category: verbs, adjectives, prepositions,
-as well as other adverbs.
+only be modified by other adverbs, but not by  NP, DP, or CP.\footnote{For
+adjectives, compare (\ref{ex:adjpstruct}), (\ref{ex:adjpcstruct}), and
+(\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.} On the other hand,
+adjectives are restricted to nominal contexts whereas adverbs may modify any
+other lexical category: verbs, adjectives, prepositions, as well as other
+adverbs.
 
 \pex\label{ex:advpstruct}
 \a AdvP → \anno*{\xbar{Adv}}
