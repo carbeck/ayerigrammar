@@ -3539,7 +3539,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 		\gla Yang valuy yomavāng edaya. //
 		\glb yang valuy yoma=vāng edaya //
 		\glc \Fsg{}.\Aarg{} glad exist=\Second.\Aarg{} here //
-		\glft `I am really glad you are here.' //
+		\glft `I am glad you are here.' //
 	\endgl~\\
 
 	\begin{avm}
@@ -3669,13 +3669,13 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 					]
 				]
 				[AdvP
-					[\xbar{Adv}
-						[\xbar{Adv}
-							[\xhead{Adv}
-								[kalam]
-							]
-						]
-					]
+					% [\xbar{Adv}
+					% 	[\xbar{Adv}
+					% 		[\xhead{Adv}
+								[kalam, roof]
+					% 		]
+					% 	]
+					% ]
 				]
 			]
 		]
@@ -3686,20 +3686,26 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 \end{forest}
 \xe
 
-If we check replacement by \rayr{d/}{da-} for the other examples in
-(\ref{ex:adjmod}), we will see that this is not possible, since the outcomes
-produced are ungrammatical (\ref{ex:soreplacement_2}).
+...
 
 \pex~\label{ex:soreplacement_2}
-\a\label{ex:soreplacement_2_1}\ljudge*\begingl
+\a\ljudge*\begingl
+	\gla Yang da-yanena nā. //
+	\glb yang da=yan-ena nā //
+	\glc \Fsg{}.\Aarg{} so=son-\Gen{} \Fsg{}.\Gen{} //
+	\glft `I am so about my son.'\\
+		\textit{Literally:} `I am my son's so.' //
+\endgl
+	
+\a\ljudge*\begingl
 	\gla Yang da-yayam. //
 	\glb yang da=yayam //
 	\glc \Fsg{}.\Aarg{} so=\TsgM{}.\Dat{} //
-	\glft `I am so for him.'\\
+	\glft `I am so for him.' \\
 		\textit{Literally:} `I am him so.' //
 \endgl
 
-\a\label{ex:soreplacement_2_2}\ljudge*\begingl
+\a\ljudge*\begingl
 	\gla Yang da-yomavāng edaya. //
 	\glb Yang da=yoma=vāng edaya //
 	\glc \Fsg{}.\Aarg{} so=exist=\Second{}.\Aarg{} here //
@@ -3707,100 +3713,88 @@ produced are ungrammatical (\ref{ex:soreplacement_2}).
 \endgl
 \xe
 
-A further complication with regards to complementation is that free-morpheme
-quanitfiers like \xayr{AMkYu}{ankyu}{really} may usurp the complement position
-so that the complement XP appears as an adjunct. This is due to Ayeri having
-modifiers very consistently follow their heads, and also possibly the fuzzy
-notion of syntactic weight \citep{wechsler2009}. Thus, as it looks like for
-(\ref{ex:adjmod_dp_comp2adj}) and (\ref{ex:adjmod_cp_comp2adj}), the DP and
-CP, respectively, have been kicked out of the complement position they would
-usually occupy by the quantifier \xayr{AMkYu}{ankyu}{really} and moved to the
-end of the phrase:
+Complications arise with regards to complementation in that non-clitic
+quantifiers like \xayr{AMkYu}{ankyu}{really} usurp the complement position so
+that an adjective's complement XP appears as an adjunct. This is possibly due
+to syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant})
+attempts to illustrate the c-structure for a displaced CP; the arrow shows the
+apparent movement from complement to adjunct.
 
-\pex\label{ex:intrusivequant}
-\a\label{ex:adjmod_dp_comp2adj} \begin{minipage}[t]{\remaining}
-	\textit{Yang mino \_\tikzmark{intrusivequant1_1} ankyu 
-	yayam\tikzmark{intrusivequant1_2}.}\medskip
+\ex\label{ex:intrusivequant}%
+\begingl[aboveglbskip=1em]
+	\gla Yang valuy {\_\tikzmark{intrusivequant2_1}} ankyu, 
+	{$[$yomavāng edaya\tikzmark{intrusivequant2_2}$]$}. //
+	\glb yang valuy {} ankyu yoma=vāng edaya //
+	\glc \Fsg{}.\Aarg{} glad {} really exist=\Second{}.\Aarg{} here //
+	\glft `I am really glad you are here.' //
+\endgl
 	
-	\begin{tikzpicture}[remember picture, overlay]
-	\draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant1_1}) |-
-	++ (south:.75em) -| ([xshift=-.5*width("yayam"),yshift=-.75ex]{pic
-	cs:intrusivequant1_2});
-	\end{tikzpicture}
-	
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xbar{A}}
-				[\anno{\xhead{A}}
-					[mino]
-				]
-				[{\anno[\pass{\Adjc}]{AdvP}}
-					[\anno{\xbar{Adv}}
-						[\anno{\xbar{Adv}}
-							[\anno{\xhead{Adv}}
-								[ankyu]
-							]
-						]
-					]
-				]
-			]
-			[{\anno[\pass{\Oblq{goal}}]{DP}}
-				[\anno{\xbar{D}}
-					[\anno{\xbar{D}}
-						[\anno{\xhead{D}}
-							[yayam]
-						]
-					]
-				]
-			]
-		]
-	]
-	\end{forest}
-	\end{minipage}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant2_1}) 
+|- ++ (south:.75em) -| ([xshift=-.5*width("yomavāng edaya"),yshift=-.75ex]{pic
+cs:intrusivequant2_2});
+\end{tikzpicture}
 
-\a\label{ex:adjmod_cp_comp2adj} \begin{minipage}[t]{\remaining}
-	\textit{Yang valuy \_\tikzmark{intrusivequant2_1} ankyu, 
-	$[$yomavāng edaya\tikzmark{intrusivequant2_2}$]$.}\medskip
-	
-	\begin{tikzpicture}[remember picture, overlay]
-	\draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant2_1}) 
-	|- ++ (south:.75em) -| ([xshift=-.5*width("yomavāng
-	edaya"),yshift=-.75ex]{pic cs:intrusivequant2_2});
-	\end{tikzpicture}
-
-	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\XCompl}]{AP}}
+	[\anno{\xbar{A}}
 		[\anno{\xbar{A}}
 			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
 					[valuy]
 				]
-				[{\anno[\pass{\Adjc}]{AdvP}}
-					[ankyu, roof]
-				]
+				[{\normalfont Ø}, name=CP_orig]
 			]
-			[{\anno[\pass{\Compl}]{CP}}
-				[{yomavāng\\ edaya}, roof]
+			[{\anno[\pass{\Adjc}]{AdvP}}
+				[ankyu, roof]
 			]
 		]
+		[{\anno[\pass{\Compl}]{CP}}
+			[{yomavāng edaya}, roof, name=CP]
+		]
 	]
-	\end{forest}
-	\end{minipage}
+]
+%
+\draw [-latex, dashed] (CP_orig) to [out=south, in=south, "?" {midway, below}] 
+(CP);
+\end{forest}
 \xe
 
 In \Lfg{}, however, there are no transformations by design; instead,
 c-structure is taken to be base-generated while acknowledging that different
 languages may have different phrase-structure plans, and the functional
 structure is what creates a sense of cohesion. Thus, even though the DP and CP
-of (\ref{ex:adjmod_dp}) and (\ref{ex:adjmod_cp}) appear dislocated, the
-information is still found in the `right' place in f-structure independent of
-the diverging c-structure, compare the \Avm{}s in those examples. In
-(\ref{ex:adjmod_dp}), thus, the adjective is given as having an oblique nominal
-complement, and what surfaces as the DP adjunct is annotated accordingly as
-\Oblq{goal}, not as \Adjc{}. The same goes for (\ref{ex:adjmod_cp}), where the
-adjective is indicated to have a phrasal complement, which the CP supplies even
-though in c-structure it appears in the position of an adjunct.
+of (\ref{ex:intrusivequant}) appears dislocated, the information is still found
+in the `right' place in f-structure independent of the diverging c-structure,
+compare the \Avm{}s in those examples. In (\ref{ex:intrusivequant_fstruct}),
+thus, the adjective is given as having an oblique nominal complement, and what
+surfaces as the CP adjunct is annotated accordingly as \Compl{}, not as
+\Adjc{}, even though in c-structure it appears in the position of an adjunct.
+
+\ex\label{ex:intrusivequant_fstruct}
+\begin{avm}
+\[
+	\XCompl	&	\[
+		\Pred	&	\astruct{glad}{\ups{\Compl}} \\
+		\Adjc	&	\[
+			\Pred	&	`really' \\
+		\]\\
+		\Compl	&	\[
+			\Pred	&	\astruct{exist}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
+			\Subj	&	\[
+				\Pred	&	`$pro$' \\
+				\Case	&	\Aarg \\
+				\Pers	&	\Second \\
+			\] \\
+
+			\Oblq{loc}	&	\[
+				\Pred	&	`here' \\
+			\] \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\xe
 
 ...
 
