@@ -3692,8 +3692,8 @@ dependent on their lexical head, which cannot be omitted or replaced by a
 pro-form. The idiomatic English translations in (\ref{ex:soreplacement_2})
 somewhat conceal this.\footnote{At least to me, as a non-native speaker of
 English, these translations do not sound too odd if context is taken into
-consideration. \citep[181]{carnie2013} gives an example *\fw{the one of poems
-with a red cover}, referring to a book; his point is that \fw{of poems} is a
+consideration. \citet[181]{carnie2013} gives an example *\fw{the one of poems
+with a red cover}, referring to a book. His point is that \fw{of poems} is a
 complement of \fw{the book}, so \fw{the book} cannot be replaced by a pro-form
 like \fw{one}. However, he notes that at least some native English speakers
 find this example acceptable. Personally, I do not take offense either, but I
@@ -3902,7 +3902,7 @@ synthetic comparison of adjectives are grammaticalized clitics literally
 meaning `rather, more' (\rayr{/ENF}{-eng}) and `most' (\rayr{/vaa}{-vā}) as
 lexical quantifiers. With adjectives, there is no clear-cut line between their
 functional and their lexical use. I have analyzed them here as functional,
-since they may be interpreted as such, depending on the context. As we have
+since they may be interpreted as such, depending on context. As we have
 observed before (\autoref{subsec:quantifiers}), quantifier clitics may modify
 adjectives like any other adverbial modifiers, except that their surface form
 is clitic rather than free. Quantifying adverbs, both enclitic and free, thus
@@ -4024,6 +4024,184 @@ adverbs.
 	]
 ]
 \end{forest}
+\xe
+
+Example (\ref{ex:advmod}) gives examples of modifiers of adverbs. These
+modifiers are often quantifying adverbs, whether clitic ones or free ones. 
+Since adjectives and adverbs are not distinguished by morphology, 
+the heads of both phrases, \xayr{vkis}{vakisa}{careful} and \xayr{bit}{bita}
+{ordinary, normal}, may be interpreted as well as adjectives, depending on
+context.
+
+\pex\label{ex:advmod}
+\a\label{ex:advmod_free}%
+\begin{minipage}[t]{.667\remaining}%
+\begingl
+	\gla bita ikan-ikan //
+	\glb bita ikan.ikan //
+	\glc ordinarily completely //
+	\glft `completely ordinarily' //
+\endgl~\\
+
+\begin{avm}
+\[
+	\Adjc	&	\[
+		\Pred	&	`ordinarily' \\
+		\Adjc	&	\[
+			\Pred	&	`completely' \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Adjc}]{AdvP}}
+	[\anno{\xbar{Adv}}
+		[\anno{\xhead{Adv}}
+			[bita]
+		]
+		[{\anno[\pass{\Adjc}]{AdvP}}
+%			[\anno{\xbar{Adv}}
+				[\anno{\xhead{Adv}}
+					[ikan-ikan]
+				]
+%			]
+		]
+	]
+]
+\end{forest}
+
+\a\label{ex:advmod_clitic}%
+\begin{minipage}[t]{.667\remaining}%
+\begingl
+	\gla vakisoy @ -ma //
+	\glb vakisa-oy =ma //
+	\glc carefully-\Neg{} =enough //
+	\glft `not carefully enough' //
+\endgl~\\
+
+\begin{avm}
+\[
+	\Adjc	&	\[
+		\Pred	&	`carefully' \\
+		\Neg	&	$+$ \\
+		\Adjc	&	\[
+			\Pred	&	`enough' \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Adjc}]{AdvP}}
+%	[\anno{\xbar{Adv}}
+		[\anno{\xhead{Adv}}
+			[\anno{\xhead{Adv}}
+				[vakisoy]
+			]
+			[{\anno[\pass{\Adjc}]{Cl}}
+				[-ma]
+			]
+		]
+%	]
+]
+\end{forest}
+\xe
+
+For the clitic \xayr{ku}{ku}{like} described above (\ref{ex:postkumorphlex}),
+it was necessary to make a separate rule for the prefixed and suffixed version.
+This, however, is not necessary for clitic quantifiers, since they attach
+immediately to the head they modify rather than to the last word of the AdvP.
+Besides their diverging morphological distribution, it may thus be assumed that
+the functional scheme given in (\ref{ex:advmorphlex}) also holds for enclitic
+quantifiers. Enclitic quantifiers seem to even be able to be modified
+themselves, as demonstrated in (\ref{ex:clitics_55}) from 
+\autoref{clitics_quant} (p.~\pageref{ex:clitics_55}), which is repeated again
+here, abbreviated:
+% FIXME: CAN YOU EVEN HAVE A HIERARCHICAL STRUCTURE OF MODIFICATION AMONG
+% CLITICS, LIKE ONE CLITIC MODIFYING ANOTHER?
+
+\ex\label{ex:clitics_55_short}%
+\begin{minipage}[t]{.667\remaining}%
+\begingl
+	\gla keynam @ -ikan kagan //
+	\glb keynam-Ø =ikan kagan //
+	\glc people-\Top{} =many far.too //
+	\glft `far too many people' //
+\endgl~\\
+
+\begin{avm}
+\[
+	\Top	&	\[
+					\Pred	&	`people' \\
+					\Anim	&	$+$ \\
+					\Case	&	\Aarg{} \\
+					\Num	&	\Pl \\
+					\Pers	&	\Third \\
+
+					\Adjc	&	\{\[
+									\Pred	&	`many' \\
+									\Adjc	&	\[
+										\Pred	&	`far too' \\
+									\] \\
+								\]\} \\
+				\] \tikzmark{clitics_55_short_Top} \\
+
+	\Subj	&	~\tikzmark{clitics_55_short_subj} \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:clitics_55_short_Top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:clitics_55_short_subj});
+\end{tikzpicture}
+\end{minipage}
+~
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Top{}}]{NP}}
+%	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[\anno{\xhead{N}}
+				[keynam]
+			]
+			[{\anno[\pass{\Adjc}]{Cl}}
+				[-ikan]
+				[{\anno[\pass{\Adjc}]{Cl}}
+					[kagan]
+				]
+			]
+		]
+%	]
+]
+\end{forest}
+\xe
+
+...
+
+\pex\label{ex:quantadvcomptest}
+\a\ljudge\excl\label{ex:quantadvcomptest_1}\begingl
+	\gla keynam-ikan gino kagan //
+	\glb keynam=ikan gino kagan //
+	\glc people=many drunk far.too //
+	\glft `many far too drunk people'\\
+		\textit{Intended:} `far too many drunk people' //
+\endgl
+
+\a\ljudge*\label{ex:quantadvcomptest_2}\begingl
+	\gla keynam-ikan kagan diring //
+	\glb keynam=ikan kagan diring //
+	\glc people=many far.too several //
+	\glft `several far too many people' //
+\endgl
+
+\a\ljudge*\label{ex:quantadvcomptest_3}\begingl
+	\gla tas kagan //
+	\glb tas kagan //
+	\glc \TplM{}.\Parg{} far.too //
+	\glft `far too of them' //
+\endgl
+
 \xe
 
 ...
