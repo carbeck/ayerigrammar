@@ -4116,15 +4116,16 @@ This, however, is not necessary for clitic quantifiers, since they attach
 immediately to the head they modify rather than to the last word of the AdvP.
 Besides their diverging morphological distribution, it may thus be assumed that
 the functional scheme given in (\ref{ex:advmorphlex}) also holds for enclitic
-quantifiers. Enclitic quantifiers seem to even be able to be modified
-themselves, as demonstrated in (\ref{ex:clitics_55}) from 
-\autoref{clitics_quant} (p.~\pageref{ex:clitics_55}), which is repeated again
-here, abbreviated:
-% FIXME: CAN YOU EVEN HAVE A HIERARCHICAL STRUCTURE OF MODIFICATION AMONG
+quantifiers. Quantifiers appear to be able to be modified in turn, as
+illustrated by (\ref{ex:clitics_55}) from \autoref{clitics_quant} (compare
+p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated; 
+\xayr{/IknF}{ikan}{much, many, very} is modified in this case by \xayr{kgnF}
+{kagan}{far too} to convey the meaning `far too many'.
+% FIXME: % CAN YOU EVEN HAVE A HIERARCHICAL STRUCTURE OF MODIFICATION AMONG
 % CLITICS, LIKE ONE CLITIC MODIFYING ANOTHER?
 
 \ex\label{ex:clitics_55_short}%
-\begin{minipage}[t]{.667\remaining}%
+%\begin{minipage}[t]{.667\remaining}%
 \begingl
 	\gla keynam @ -ikan kagan //
 	\glb keynam-Ø =ikan kagan //
@@ -4132,52 +4133,61 @@ here, abbreviated:
 	\glft `far too many people' //
 \endgl~\\
 
-\begin{avm}
-\[
-	\Top	&	\[
-					\Pred	&	`people' \\
-					\Anim	&	$+$ \\
-					\Case	&	\Aarg{} \\
-					\Num	&	\Pl \\
-					\Pers	&	\Third \\
+% \begin{avm}
+% \[
+% 	\Top	&	\[
+% 					\Pred	&	`people' \\
+% 					\Anim	&	$+$ \\
+% 					\Case	&	\Aarg{} \\
+% 					\Num	&	\Pl \\
+% 					\Pers	&	\Third \\
 
-					\Adjc	&	\{\[
-									\Pred	&	`many' \\
-									\Adjc	&	\[
-										\Pred	&	`far too' \\
-									\] \\
-								\]\} \\
-				\] \tikzmark{clitics_55_short_Top} \\
+% 					\Adjc	&	\{\[
+% 									\Pred	&	`many' \\
+% 									\Adjc	&	\[
+% 										\Pred	&	`far too' \\
+% 									\] \\
+% 								\]\} \\
+% 				\] \tikzmark{clitics_55_short_Top} \\
 
-	\Subj	&	~\tikzmark{clitics_55_short_subj} \\
-\]
-\end{avm}
-\begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:clitics_55_short_Top})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:clitics_55_short_subj});
-\end{tikzpicture}
-\end{minipage}
-~
-\begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Top{}}]{NP}}
-%	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}
-			[\anno{\xhead{N}}
-				[keynam]
-			]
-			[{\anno[\pass{\Adjc}]{Cl}}
-				[-ikan]
-				[{\anno[\pass{\Adjc}]{Cl}}
-					[kagan]
-				]
-			]
-		]
-%	]
-]
-\end{forest}
+% 	\Subj	&	~\tikzmark{clitics_55_short_subj} \\
+% \]
+% \end{avm}
+% \begin{tikzpicture}[remember picture, overlay]
+% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:clitics_55_short_Top})
+% 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:clitics_55_short_subj});
+% \end{tikzpicture}
+% \end{minipage}
+% ~
+% \ques\begin{forest} shorter edges, italic leaves,
+% [{\anno[\pass{\Top{}}]{NP}}
+% %	[\anno{\xbar{N}}
+% 		[\anno{\xhead{N}}
+% 			[\anno{\xhead{N}}
+% 				[keynam]
+% 			]
+% 			[{\anno[\Adjc]{Cl}}
+% 				[-ikan]
+% 				[{\anno[\pass{\Adjc}]{Cl}}
+% 					[kagan]
+% 				]
+% 			]
+% 		]
+% %	]
+% ]
+% \end{forest}
 \xe
 
-...
+Besides the parenthetical insertion tests on \rayr{kgnF}{kagan} in
+\autoref{clitics_quant}, the following examples show that \rayr{kgnF}{kagan}
+also cannot swap places with other nominal modifiers without a change in
+meaning (\ref{ex:quantadvcomptest_1}), that \rayr{kgnF}{kagan} does not work
+when the rest of the NP is replaced by an anaphora
+(\ref{ex:quantadvcomptest_2}), and that \rayr{/IknF}{-ikan} cannot be replaced
+by an anaphora either (\ref{ex:quantadvcomptest_3}). It should be
+clear that \rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that 
+\rayr{/IknF}{-ikan} has head-like qualities with regards to modification by
+\rayr{kgnF}{kagan}.
 
 \pex\label{ex:quantadvcomptest}
 \a\ljudge\excl\label{ex:quantadvcomptest_1}\begingl
@@ -4189,22 +4199,235 @@ here, abbreviated:
 \endgl
 
 \a\ljudge*\label{ex:quantadvcomptest_2}\begingl
-	\gla keynam-ikan kagan diring //
-	\glb keynam=ikan kagan diring //
-	\glc people=many far.too several //
-	\glft `several far too many people' //
-\endgl
-
-\a\ljudge*\label{ex:quantadvcomptest_3}\begingl
 	\gla tas kagan //
 	\glb tas kagan //
 	\glc \TplM{}.\Parg{} far.too //
 	\glft `far too of them' //
 \endgl
 
+\a\ljudge*\label{ex:quantadvcomptest_3}\begingl
+	\gla keynam da-kagan //
+	\glb keynam da=kagan //
+	\glc people so=far.too //
+	\glft `far too so people' //
+\endgl
+
 \xe
 
-...
+As (\ref{ex:quantadvcomptest_1}) shows, \rayr{kgnF}{kagan} and \rayr{EkeNF}
+{ekeng} also work with regular adjectives, and it is possible as well to add
+further adjuncts to the AdvP, for instance, \xayr{ptu}{patu}{surprisingly} in
+(\ref{ex:kgnadj}). \xayr{kgnF ptu}{kagan patu}{surprisingly too}, thus, has to
+form a phrase which acts as a modifier to \xayr{gino}{gino}{drunk}.
+
+\pex\label{ex:kgnadj}
+\a\label{ex:kgnadj_avm}\begin{avm}
+\[
+	\Adjc	&	\{
+					\[
+						\Pred	&	`many' \\
+					\],\\
+					\[
+						\Pred	&	`drunk' \\
+						\Adjc	&	\{\[
+							\Pred	&	`far too' \\
+							\Adjc	&	\{\[
+											\Pred	&	`surprisingly' \\
+										\]\} \\
+									\]\} \\
+					\]\\
+				\} \\
+\]
+\end{avm}
+
+\a\label{ex:kgnadj_cstruct}\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Top{}}]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[\anno{\xhead{N}}
+				[keynam]
+			]
+			[{\anno[\elem{\Adjc}]{Cl}}
+				[-ikan]
+			]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[\anno{\xbar{A}}
+				[\anno{\xhead{A}}
+					[gino]
+				]
+				[{\anno[\pass{\Adjc}]{AdvP}}
+					[\anno{\xbar{Adv}}
+						[\anno{\xhead{Adv}}
+							[kagan]
+						]
+						[{\anno[\pass{\Adjc}]{Adv}}
+%							[\anno{\xbar{Adv}}
+								[\anno{\xhead{Adv}}
+									[patu]
+								]
+%							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+Likewise, it is not ungrammatical to say \xayr{kejnmF/IknF kgnF ptu}
+{keynam-ikan kagan patu}{surprisingly too many people}. Since
+\rayr{kgnF}{kagan} apparently projects an AdvP (as it can be modified), it
+cannot be a clitic, because these do not project \citep[??]{spencerluis2012}.
+Thus, the c-structure in (\ref{ex:kgnrev_cstruct}) is possibly actually more
+correct, in that it is constructed in analogy to the one for an adjective
+modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
+
+\pex\label{ex:kgnrev}
+\a\label{ex:kgnrev_gloss}\begingl
+	\gla keynam-ikan kagan patu gino //
+	\glb keynam-Ø=ikan kagan patu gino //
+	\glc people-\Top{}=many far.too surprsingly drunk //
+	\glft `surprisingly far too many drunk people' //
+\endgl
+
+\a\label{ex:kgnrev_1_avm}\begin{avm}
+\[
+	\Top	&	\[
+		\Pred	&	`people' \\
+		... \\
+		\Adjc	&	\{\[
+			\Pred	&	`many' \\
+			\Adjc	&	\{\[
+				\Pred	&	`far too' \\
+				\Adjc	&	\{\[
+					\Pred	&	`surprisingly' \\
+				\]\} \\
+			\]\} \\
+		\],\\
+		\[
+			\Pred	&	`drunk' \\
+		\]\} \\
+	\] \\
+\]
+\end{avm}
+
+\a\label{ex:kgnrev_cstruct}\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Top}]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[\anno{\xhead{N}}
+					[keynam]
+				]
+				[{\anno[\elem{\Adjc}]{Cl}}
+					[-ikan]
+				]
+			]
+			[{\anno[\elem{\Adjc}]{AdvP}}
+				[\anno{\xbar{Adv}}
+					[\anno{\xhead{Adv}}
+						[Ø]
+					]
+					[{\anno[\pass{\Adjc}]{AdvP}}
+						[\anno{\xbar{Adv}}
+							[\anno{\xhead{Adv}}
+								[kagan]
+							]
+							[{\anno[\pass{\Adjc}]{AdvP}}
+%								[\anno{\xbar{Adv}}
+									[\anno{\xhead{Adv}}
+										[patu]
+									]
+%								]
+							]
+						]
+					]
+				]
+			]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+%			[\anno{\xbar{A}}
+				[\anno{\xhead{A}}
+					[gino]
+				]
+%			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+The c-structure in \ref{ex:kgnrev_cstruct} assumes that the head of the NP has
+an AdvP sister which has no head, but only an adjunct which is the AdvP headed
+by \rayr{kgnF}{kagan}. The head position left empty here is where one would
+find the adjective in (\ref{ex:kgnadj_cstruct}). It is also the position where
+one would expect a free quantifier, except that the quantifier in this example
+is clitic and found merged with the noun. In the functional representation, a
+clitic quantifier also logically places its information in the same spot a free
+quantifier would, by the distributed exponence principle: the \Adjc{} of the
+maximal projection, that is, the \Top{} NP's \Adjc{} in (\ref{ex:kgnrev}).
+Since word order matters with regards to quantification, however, we know that
+\rayr{kgnF ptu}{kagan patu} modifies its antecedent adjective or adverb, which
+is \rayr{/iknF}{-ikan} rather than \rayr{gino}{gino}. Furthermore, since empty
+terminals and non-branching bar levels are supposed to be pruned, the tree in
+(\ref{ex:kgnadj_cstruct}) should have the following structure:
+
+\ex
+\begin{forest} shorter edges,
+[...
+	[...]
+	[\xbar{N}
+		[AdvP
+			[AdvP
+				[\xbar{Adv}
+					[\xhead{Adv}
+						[...]
+					]
+					[AdvP
+						[...]
+					]
+				]
+			]
+		]
+	]
+]	
+\end{forest}
+\xe
+
+Building the tree this way, it is assumed that there is a hidden AdvP, which is
+a little unintuitive. However, if the AdvP headed by 
+\xayr{kgnF}{kagan}{far too} were attached directly to \xbar{N}, the
+constituency would be wrong: \rayr{kgnF}{kagan} would modify the noun,
+\xayr{kejnmF/IknF}{keynam-ikan}{many people} as a unit, compare
+(\ref{ex:kgn_directattachment}). \xayr{/IknF}{-ikan}{many} would also wrongly
+appear at the same level as \rayr{kgnF}{kagan} instead of subordinated to it,
+unless one were to give \rayr{kgnF}{kagan}'s maximal projection an annotation
+like \elem{\Adjc{} \Adjc{}}, again assuming that \rayr{kgnF}{kagan} is
+identified as modifying \rayr{/iknF}{ikan} on the grounds of word order.
+
+\ex\label{ex:kgn_directattachment}
+\ljudge*\begin{avm}
+\[
+	\Top	&	\[
+		\Pred	&	`people' \\
+		\Adjc	&	\{
+			\[
+				\Pred	&	`many' \\
+			\],\\
+			\[
+				\Pred	&	`far too' \\
+			\],\\
+			\[
+				\Pred	&	`drunk' \\
+			\]
+		\} \\
+	\] \\
+\]
+\end{avm}
+\xe
 
 % \section{Adpositional phrases}
 % \label{sec:pps}
