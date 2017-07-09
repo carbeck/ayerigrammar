@@ -2588,53 +2588,58 @@ morphology on the verb. Dependent marking is exhibited, for instance, in the
 expression of possessive relationships, where the dependent is marked for 
 genitive case\index{cases!genitive}:
 
-\begin{multicols}{2}
 \pex
-\a\label{ex:gennoun}\begingl
-	\glpreamble \begin{forest}
-	where n children=0{tier=word,edge=dotted,font=\itshape}{}
-	[{dema}, for tree={calign=first}
-		[{dema}, name=head]
-		[{na Tuvo}, for tree={calign=first}
-			[{\textbf{na} Tuvo}, name=dependent]
-		]
-	]
-	\node at (current bounding box.south) [below=0pt of head]
-		{\textsc{\tiny head}};
-	\node at (current bounding box.south) [below=0pt of dependent] 
-		{\textsc{\tiny dependent}};
-	\end{forest} //
+\a\label{ex:gennoun}%
+\begin{minipage}[t]{.5\remaining}%
+\begingl
 	\gla dema \textbf{na} Tuvo //
 	\glb dema \textbf{na} Tuvo //
 	\glc aunt \textbf{\Gen{}} Tuvo //
 	\glft `Tuvo's aunt' //
 \endgl
-
-\a\label{ex:genprn}\begingl
-	\glpreamble \begin{forest}
-	where n children=0{tier=word,edge=dotted,font=\itshape}{}
-	[{kasu}, for tree={calign=first}
-		[{kasu}, name=head]
-		[{bariri}, for tree={calign=first}
-			[{bariri}]
-		]
-		[{nā}, for tree={calign=first}
-			[{\textbf{nā}}, name=dependent]
-		]
+\end{minipage}
+~
+\begin{forest}
+where n children=0{tier=word,edge=dotted,font=\itshape}{}
+[{dema}, for tree={calign=first}
+	[{dema}, name=head]
+	[{na Tuvo}, for tree={calign=first}
+		[{\textbf{na} Tuvo}, name=dependent]
 	]
-	\node at (current bounding box.south) [below=0pt of head]
-		{\textsc{\tiny head}};
-	\node at (current bounding box.south) [below=0pt of dependent] 
-		{\textsc{\tiny dependent}};
-	\end{forest} //
+]
+\node at (current bounding box.south) [below=0pt of head]
+	{\textsc{\tiny head}};
+\node at (current bounding box.south) [below=0pt of dependent] 
+	{\textsc{\tiny dependent}};
+\end{forest}
+
+\a\label{ex:genprn}%
+\begin{minipage}[t]{.5\remaining}%
+\begingl
 	\gla kasu bariri \textbf{nā} //
 	\glb kasu bari-ri \textbf{nā} //
 	\glc basket meat-\Ins{} \Fsg{}.\textbf{\Gen{}} //
 	\glft `my basket of meat' //
 \endgl
-
+\end{minipage}
+~
+\begin{forest}
+where n children=0{tier=word,edge=dotted,font=\itshape}{}
+[{kasu}, for tree={calign=first}
+	[{kasu}, name=head]
+	[{bariri}, for tree={calign=first}
+		[{bariri}]
+	]
+	[{nā}, for tree={calign=first}
+		[{\textbf{nā}}, name=dependent]
+	]
+]
+\node at (current bounding box.south) [below=0pt of head]
+	{\textsc{\tiny head}};
+\node at (current bounding box.south) [below=0pt of dependent] 
+	{\textsc{\tiny dependent}};
+\end{forest}
 \xe
-\end{multicols}
 
 In (\ref{ex:gennoun}), \rayr{tuvo}{Tuvo} is grammatically in possession of her 
 \xayr{dem}{dema}{aunt}; the possessee forms the head of the phrase while it is 
@@ -2645,17 +2650,17 @@ then again, marked on the dependent. A further example of dependent marking is
 the locative case, which is marked on the prepositional object while the 
 preposition itself, as the head of the PP, does not receive marking:
 
-\begin{multicols}{2}
 \ex\label{ex:loc}
+\begin{minipage}[t]{.5\remaining}%
 \begingl
 	\gla agonan minkay\textbf{ya} //
 	\glb agonan minkay\textbf{-ya} //
 	\glc outside village\textbf{-\Loc{}} //
 	\glft `outside of the village' //
 \endgl
-\xe
-
-\smaller\begin{forest}
+\end{minipage}
+~
+\begin{forest}
 where n children=0{tier=word,edge=dotted,font=\itshape}{}
 [{agonan}, for tree={calign=first}
 	[{agonan}, name=head]
@@ -2668,7 +2673,7 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 \node at (current bounding box.south) [below=0pt of dependent] 
 	{\textsc{\tiny dependent}};
 \end{forest}
-\end{multicols}
+\xe
 
 The relativizer, likewise, may agree in case with the NP in the matrix clause
 to which it links the relative clause. This typically happens mainly in formal
@@ -2677,18 +2682,17 @@ the clause---if the relativizer cannot be immediately adjacent to the NP which
 the relative clause modifies, for example, when an adjective or a possessive
 pronoun is following the noun:
 
-%\begin{minipage}[t][11em][t]{\linewidth}
-\begin{multicols}{2}
 \ex
+\begin{minipage}[t]{.5\remaining}%
 \begingl
 	\gla sangalas kivo s\textbf{as} … //
 	\glb sangal-as kivo s\textbf{-as} … //
 	\glc room-\Parg{} small \Rel{}\textbf{-\Parg{}} … //
 	\glft `the small room which …' //
 \endgl
-\xe
-
-\smaller\begin{forest}
+\end{minipage}
+~
+\begin{forest}
 where n children=0{tier=word,edge=dotted,font=\itshape}{}
 [{sangalas}, for tree={calign=first}
 	[{sangalas}, name=head]
@@ -2714,8 +2718,7 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 \draw [-latex] (A) -- (B) -- (C) -- (D);
 \node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape case agreement};
 \end{forest}
-\end{multicols}
-%\end{minipage}
+\xe
 
 The only instance of head-marking there is in Ayeri is person-marking on the
 verb, which manifests when the NP following the verb (agent or patient) is not
@@ -2723,15 +2726,17 @@ pronominal and thus there is no pronoun to cliticize to the verb stem, but the
 verb still receives a suffix that indicates a relation with, usually, the agent
 NP:
 
-\begin{multicols}{2}
-\ex\begingl
+\ex
+\begin{minipage}[t]{.5\remaining}%
+\begingl
 	\gla Mal\textbf{ya} ang Amān. //
 	\glb mal\textbf{-ya} ang Amān //
 	\glc sing\textbf{-\TsgM{}} \Aarg{} Amān //
 	\glft `Amān sings.' //
-\endgl\xe
-
-\smaller\begin{forest}
+\endgl
+\end{minipage}
+~
+\begin{forest}
 where n children=0{tier=word,edge=dotted,font=\itshape}{}
 [{Malya}, for tree={calign=first}
 	[{Mal\textbf{ya}}, name=head]
@@ -2751,8 +2756,7 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 \draw [-latex] (A) -- (B) -- (C) -- (D);
 \node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape person agreement};
 \end{forest}
-
-\end{multicols}
+\xe
 
 Sentences containing more than one NP also have topic marking on the verb, so 
 that the verb agrees with one of the NPs in topicality. This may be the NP it 
@@ -2760,16 +2764,18 @@ has person agreement with or any other NP. The topicalized NP as a dependent
 of the verb is, in turn, zero-marked, so that the marking relationship for 
 topics is bilateral and thus mixed:
 
-\begin{multicols}{2}
-\ex[glspace=0.4em]\begingl
+\ex[glspace=0.4em]
+\begin{minipage}[t]{.5\remaining}%
+\begingl
 	\gla \textbf{Sa} manya ang Ajān {} \textbf{Pila}. //
 	\glb \textbf{Sa} man-ya ang Amān \textbf{Ø} \textbf{Pila} //
 	\glc \textbf{\PatT{}} greet-\TsgM{} \Aarg{} Ajān \textbf{\Top{}} %
 		\textbf{Pila} //
 	\glft `Pila, Ajān greets her.' //
-\endgl\xe
-
-\smaller\begin{forest}
+\endgl
+\end{minipage}
+~
+\begin{forest}
 where n children=0{tier=word,edge=dotted,font=\itshape}{}
 [{Sa manya}, for tree={calign=first}
 	[{\textbf{Sa} manya}, name=head]
@@ -2792,8 +2798,7 @@ where n children=0{tier=word,edge=dotted,font=\itshape}{}
 \draw [-latex] (A) -- (B) -- (C) -- (D);
 \node (label) at ($(B)!0.5!(C)$) [below] {\tiny\itshape topic agreement};
 \end{forest}
-
-\end{multicols}
+\xe
 
 In this example, the verb exhibits canonic agreement with the agent, 
 \rayr{AgYaanF}{Ajān}, in person, gender, and number. It is additionally marked 
