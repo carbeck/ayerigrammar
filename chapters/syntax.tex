@@ -4323,13 +4323,13 @@ modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
 					[keynam]
 				]
 				[{\anno[\elem{\Adjc}]{Cl}}
-					[-ikan]
+					[-ikan, name=ikan]
 				]
 			]
 			[{\anno[\elem{\Adjc}]{AdvP}}
 				[\anno{\xbar{Adv}}
 					[\anno{\xhead{Adv}}
-						[Ø]
+						[$e$, name=empty]
 					]
 					[{\anno[\pass{\Adjc}]{AdvP}}
 						[\anno{\xbar{Adv}}
@@ -4357,23 +4357,27 @@ modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
 		]
 	]
 ]
+%
+\draw [-latex] (empty) to ["identified with", font=\itshape, midway, out=west,
+in=south] (ikan);
 \end{forest}
 \xe
 
-The c-structure in \ref{ex:kgnrev_cstruct} assumes that the head of the NP has
-an AdvP sister which has no head, but only an adjunct which is the AdvP headed
-by \rayr{kgnF}{kagan}. The head position left empty here is where one would
-find the adjective in (\ref{ex:kgnadj_cstruct}). It is also the position where
-one would expect a free quantifier, except that the quantifier in this example
-is clitic and found merged with the noun. In the functional representation, a
-clitic quantifier also logically places its information in the same spot a free
-quantifier would, by the distributed exponence principle: the \Adjc{} of the
-maximal projection, that is, the \Top{} NP's \Adjc{} in (\ref{ex:kgnrev}).
-Since word order matters with regards to quantification, however, we know that
-\rayr{kgnF ptu}{kagan patu} modifies its antecedent adjective or adverb, which
-is \rayr{/iknF}{-ikan} rather than \rayr{gino}{gino}. Furthermore, since empty
-terminals and non-branching bar levels are supposed to be pruned, the tree in
-(\ref{ex:kgnadj_cstruct}) should have the following structure:
+The c-structure in (\ref{ex:kgnrev_cstruct}) assumes that the head of the NP
+has an AdvP sister which has no head, but only an adjunct which is the AdvP
+headed by \rayr{kgnF}{kagan}. The head position left empty here is where one
+would find the adjective in (\ref{ex:kgnadj_cstruct}). It is also the position
+where one would expect a free quantifier, except that the quantifier in this
+example is clitic and found merged with the noun. In the functional
+representation, a clitic quantifier also logically places its information in
+the same spot a free quantifier would, by the distributed exponence principle:
+the \Adjc{} of the maximal projection, that is, the \Top{} NP's \Adjc{} in
+(\ref{ex:kgnrev}). Since word order matters with regards to quantification,
+however, we know that \rayr{kgnF ptu}{kagan patu} modifies its antecedent
+adjective or adverb, which is \rayr{/iknF}{-ikan} rather than
+\rayr{gino}{gino}. Furthermore, since empty terminals and non-branching bar
+levels are supposed to be pruned, the tree in (\ref{ex:kgnadj_cstruct}) should
+have the following structure:
 
 \ex
 \begin{forest} shorter edges,
@@ -4427,6 +4431,41 @@ identified as modifying \rayr{/IknF}{-ikan} on the grounds of word order.
 	\] \\
 \]
 \end{avm}
+\xe
+
+Based on the observation above that \rayr{/IknF}{-ikan} acts like a head, it
+might also be the case that \rayr{/IknF}{-ikan}, as well as
+\xayr{/kj}{-kay}{few, little}, are acting as free morphemes in such contexts,
+thus eradicating the need for an empty slot in the c-structure in
+(\ref{ex:kgnrev_cstruct}). That is, these two forms would be simple clitics
+which appear in their full form in this context, the full form hapening to be
+homonymous with the clitic form at this stage, as illustrated by
+(\ref{ex:kgnfull_cstruct}). Even in this case, \rayr{IknF}{ikan} and
+\rayr{kj}{kay} would not have full word stress, though.
+
+\ex\label{ex:kgnfull_cstruct}\begin{forest} shorter edges, italic leaves,
+[NP
+	[\xbar{N}
+		[\xhead{N}
+			[keynam]
+		]
+		[AdvP
+			[\xbar{Adv}
+				[\xhead{Adv}
+					[ikan]
+				]
+				[AdvP
+%					[\xbar{Adv}
+						[\xhead{Adv}
+							[kagan]
+						]
+%					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
 \xe
 
 ...
