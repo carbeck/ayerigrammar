@@ -14,6 +14,10 @@ Currently working on
     1. Noun- and determiner phrases
     2. Adjective phrases
 
+The sections not currently worked on have been proofread once by myself. The proofread parts should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing. Note that I am not a native English speaker; corrections are thus welcome. If you're brave, you can [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
+
+I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
+
 Table of Contents
 =================
 
@@ -34,10 +38,6 @@ The table of contents encompasses the following topics so far:
    6. Adverbs
    7. Numerals
    8. Conjunctions
-
-The sections not currently worked on have been proofread once by myself. The proofread parts should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing. Note that I am not a native English speaker; corrections are thus welcome. If you're brave, you can [take a look at the most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf).
-
-I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
 
 Compiling
 =========
