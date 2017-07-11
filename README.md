@@ -3,7 +3,7 @@ A Grammar of Ayeri
 
 This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)).
 
-I had been leaving this earlier documentation attempt in a very sorry and unfinished state for over 5 years before finally returning to it, prompted by a (class on constructed languages)[http://www.sfs.uni-tuebingen.de/~abuch/16ss/conlang.html] at the University of Tübingen in the summer semester of 2016, which used Ayeri as one of its objects of study. I hope that by using LaTeX and GitHub, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big LibreOffice document before. If you feel inclined to do so, you can report issues on the [repository page](https://github.com/carbeck/ayerigrammar).
+I had been leaving this earlier documentation attempt in a very sorry and unfinished state for over 5 years before finally returning to it, prompted by a [class on constructed languages](http://www.sfs.uni-tuebingen.de/~abuch/16ss/conlang.html) at the University of Tübingen in the summer semester of 2016, which used Ayeri as one of its objects of study. I hope that by using LaTeX and GitHub, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big LibreOffice document before. If you feel inclined to do so, you can report issues on the [repository page](https://github.com/carbeck/ayerigrammar).
 
 Ayeri is a fictional language which I have been developing since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
 
