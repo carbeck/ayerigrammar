@@ -4672,13 +4672,16 @@ both prepositional and postpositional phrases, with their respective heads
 referred to as `\xhead{P}'. As described earlier, there is no morphological
 difference between prepositions and postpositions; head placement is a
 syntactic issue and the preference of placement is rooted in the lexical entry
-for each adposition.
+for each adposition.\footnote{\citet{pargram} does not list a feature to
+distinguish between preposition and postposition, probably because it does not
+have any relevance to semantics.}
 
 ...
 
 \pex\label{ex:ppstruct}
 \a PP → \anno*{\xbar{P}}
-\a \xbar{P} → \anno*{\xhead{P}} \anno*[{...}]{XP} $\left(\anno*{\xhead{P}}\right)$
+\a \xbar{P} → \anno*{\xhead{P}} \anno*[\pass{...}]{XP} $\left(\anno*{
+\xhead{P}}\right)$
 \xe
 
 ...
@@ -4689,9 +4692,9 @@ for each adposition.
 [{\anno[...]{NP}}
 	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}]
-		[{$\left(\anno[{%
+		[{\anno[{%
 				\pass{...}%
-			}]{XP}\right)$
+			}]{XP}
 		}]
 	]
 ]
@@ -4702,9 +4705,9 @@ for each adposition.
 \tl\quad\begin{forest}
 [{\anno[...]{NP}}
 	[\anno{\xbar{P}}
-		[{$\left(\anno[{%
+		[{\anno[{%
 				\pass{...}%
-			}]{XP}\right)$
+			}]{XP}
 		}]
 		[\anno{\xhead{P}}]
 	]
