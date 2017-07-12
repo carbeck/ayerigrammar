@@ -4661,6 +4661,74 @@ the preceding head, compare (\ref{ex:kgnrev_cstruct}) and
 \section{Adpositional phrases}
 \label{sec:pps}
 
+As described in the section on the morphology of adpositions
+(\autoref{sec:adpositions}), Ayeri employs both prepositions and postpositions,
+though the former are a lot more common and basic than the latter. Thus, PPs
+are an exceptional domain in that very limited left-branching is possible in
+that the complement of a postpositions precedes its head, the postposition. The
+complement is again right-branching, however. Since the label `AP' has already
+been used for `adjective phrase', I will use the common label `PP' to refer to
+both prepositional and postpositional phrases, with their respective heads
+referred to as `\xhead{P}'. As described earlier, there is no morphological
+difference between prepositions and postpositions; head placement is a
+syntactic issue and the preference of placement is rooted in the lexical entry
+for each adposition.
+
+...
+
+\pex\label{ex:ppstruct}
+\a PP → \anno*{\xbar{P}}
+\a \xbar{P} → \anno*{\xhead{P}} \anno*[{...}]{XP} $\left(\anno*{\xhead{P}}\right)$
+\xe
+
+...
+
+\ex\label{ex:ppcstruct}\labels
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{forest}
+[{\anno[...]{NP}}
+	[\anno{\xbar{P}}
+		[\anno{\xhead{P}}]
+		[{$\left(\anno[{%
+				\pass{...}%
+			}]{XP}\right)$
+		}]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{forest}
+[{\anno[...]{NP}}
+	[\anno{\xbar{P}}
+		[{$\left(\anno[{%
+				\pass{...}%
+			}]{XP}\right)$
+		}]
+		[\anno{\xhead{P}}]
+	]
+]
+\end{forest}
+\end{minipage}
+\xe
+
+...
+
+\begin{morphlex}
+\pex\label{ex:adpmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& P
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+
 ...
 
 % \section{Inflectional and verb phrases}
