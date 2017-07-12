@@ -3580,7 +3580,7 @@ adjective--adverb combination can be complemented by an NP, as shown in
 complements where English would use prepositions. Thus, in
 (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
 the genitive case: the NP complement expresses the source by which the
-experiencing subject becomes proud. This, however, should not be conflated with
+experiencing subject becomes happy. This, however, should not be conflated with
 a possessor, \Possr{}, but should be labeled separately as an oblique
 complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
 appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
@@ -3593,7 +3593,7 @@ information about whether a sister node to \xhead{X} is a complement or an
 adjunct instead. How do we know that the extensions to the adjective in
 (\ref{ex:adjmod}) are complements rather than adjuncts? X-bar theory posits
 that complements and adjuncts are on different \xbar{X} branches---a complement
-is a sister to the head whereas an adjunct is, so to speak, its niece:
+is a sister to the head whereas an adjunct is, so to speak, its cousin:
 
 \ex\label{ex:xbartree}
 \begin{forest}
@@ -3663,7 +3663,7 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 		]
 		[AP
 			[\xbar{A}
-				[\xbar{A}, name=marked
+				[\xbar{A}, draw, circle
 					[\xhead{A}
 						[sadayo]
 					]
@@ -3681,8 +3681,6 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 		]
 	]
 ]
-%
-\draw (marked) circle [radius=1em];
 \end{forest}
 \xe
 
@@ -4379,7 +4377,7 @@ adjective or adverb, which is \rayr{/iknF}{-ikan} rather than
 levels are supposed to be pruned, the tree in (\ref{ex:kgnadj_cstruct}) should
 have the following structure:
 
-\ex
+\ex\label{ex:kgnrev_cstruct_pruned}
 \begin{forest} shorter edges,
 [...
 	[\xbar{N}
@@ -4438,7 +4436,7 @@ might also be the case that both \rayr{/IknF}{-ikan} and its opposite
 \xayr{/kj}{-kay}{few, little} are acting as free morphemes in such
 contexts, thus eradicating the need for an empty slot in the c-structure in
 (\ref{ex:kgnrev_cstruct}). That is, these two forms would be simple clitics
-which appear in their full form in this context, the full form hapening to be
+which appear in their full form in this context, the full form happening to be
 homonymous with the clitic form at this stage, as illustrated by
 (\ref{ex:kgnfull_cstruct}).
 
@@ -4490,7 +4488,175 @@ which---untypically of clitics---carry stress, whereas
 
 \xe
 
-...
+Ayeri is different from English, but since English is often used as a model for
+generative grammar, let us also try to see what the `canonical' case for
+modification of APs is for the sake of exploring possibilities.
+\citet[110]{sobin2011} likens intensifiers of adjectives like \fw{very} (which
+I have subsumed under the label `quantifier' and classified as adverbs) to
+prepositions. He analyzes both, intensifiers and prepositions, as specifiers:
+
+\pex
+\a \begin{forest} shorter edges, italic leaves,
+[, phantom, s sep=0pt
+	[{Jane is ...}, tier=words]
+	[AjP, baseline
+		[Specifier
+			[very, tier=words]
+		]
+		[\xbar{Aj}
+			[Aj
+				[fond, tier=words]
+			]
+			[PP
+				[{of Cheetah}, roof, tier=words]
+			]
+		]
+	]
+]
+\end{forest}
+
+\a\begin{forest} shorter edges, italic leaves,
+[, phantom, s sep=0pt
+	[{Put the suitcase ...}, tier=words]
+	[PP, baseline
+		[Specifier
+			[over, tier=words]
+		]
+		[\xbar{P}
+			[Adj
+				[by, tier=words]
+			]
+			[PP
+				[{the closet}, roof, tier=words]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+This, however, does not seem to be how Ayeri works, if we assume that there are
+no transformations and that Ayeri is consistently right-branching. An approach
+like \citet{sobin2011} delineates for English, thus, generates the wrong word
+order for free intensifying adverbs like \xayr{AMkYu}{anyku}{really}, whether
+one assumes that an adverb in Spec is the first element in the phrase or the
+last. In fact, it consistently follows its head, as we have seen before.
+
+\pex\label{ex:ankyuwrongorder}
+\a\ljudge*\begingl
+	\gla Yāng \textbf{ankyu} mingoy sibunana //
+	\glb yāng ankyu mingoy sibunana //
+	\glc \TsgM{}.\Aarg{} really incapable syntax-\Gen{} //
+\endgl
+
+\a\ljudge*\begingl
+	\gla Yāng mingoy sibunana \textbf{ankyu} //
+	\glb yāng mingoy sibunana ankyu //
+	\glc \TsgM{}.\Aarg{} incapable syntax-\Gen{} really //
+\endgl
+
+\a\begingl
+	\gla Yāng mingoy \textbf{ankyu} sibunana //
+	\glb yāng mingoy ankyu sibunana //
+	\glc \TsgM{}.\Aarg{} incapable really syntax-\Gen{} //
+	\glft `He is really incapable of syntax.' //
+\endgl
+
+\xe
+
+It is also incompatible with our analysis of the most common quantifying
+and degree adverbs as clitics, since clitics, at least in \Lfg{}, cannot exist
+disembodied from their hosts due to lexical integrity:
+
+\ex\ljudge*
+\begin{minipage}[t]{.667\remaining}%
+\begingl
+	\gla mino yanena-ikan //
+	\glb mino yan-ena=ikan //
+	\glc happy boy-\Gen{}=very/many //
+	\glft `happy about the many boys' \\
+		\textit{Intended:} `very happy about the boy' //
+\endgl
+\end{minipage}
+~
+*\begin{forest} shorter edges, italic leaves,
+[AP
+	[\xbar{Adj}
+		[\xbar{Adj}
+			[\xhead{A}
+				[mino]
+			]
+			[NP
+				[yanena, roof]
+			]
+		]
+%		[...]
+	]
+	[D
+		[-ikan]
+	]
+]
+\end{forest}
+\xe
+
+Since Spec also cannot recursively branch \citep[184]{carnie2013}, examples
+like (\ref{ex:clitics_55_short}) would not be grammatical either if
+\rayr{/IknF}{-ikan} were in the position of a specifier. As a clitic,
+\rayr{/IknF}{-ikan} cannot be a head either as a logical consequence of lexical
+integrity.
+
+\ex
+*\begin{forest} shorter edges, italic leaves,
+[NP
+	[\xbar{N}
+		[\xbar{N}
+			[\xhead{N}
+				[keynam]
+			]
+%			[...]
+		]
+%		[...]
+	]
+	[AdvP
+		[\xbar{Adv}
+			[\xbar{Adv}
+				[\xhead{Adv}
+					[-ikan]
+				]
+%				[...]
+			]
+			[AdvP
+				[\xbar{Adv}
+					[\xbar{Adv}
+						[\xhead{Adv}
+							[kagan]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+In conclusion, Ayeri probably does not follow the way of English with regards
+to quantifiers and intensifiers of adjectives in that assuming these elements
+are in Spec results in wrong predictions about word order. Since \Lfg{} does
+not assume transformations, the hypothesis that Ayeri's quantifiers are in Spec
+can be discarded, since without transformations it results in wrong predictions
+about word order. It is probably more likely that quantifiers are treated as
+adjuncts with a constraint that quantifiers cannot be iterated---if a
+quantifier is present, no other quantifier may modify the same head unless it
+is coordinated with the first, if this is semantically plausible at all. There
+also needs to be a constraint which says that quantifiers always need to be
+adjacent to their modification target. Quantifiers, however, are optional
+elements, that is, they are not required to complete their head's argument
+structure in the way a preposition or a verb require an NP complement. It is
+tempting to treat clitic quantifiers the same way as free ones, just with an
+empty head position; the quantifying adverb instead finds itself cliticized to
+the preceding head, compare (\ref{ex:kgnrev_cstruct}) and
+(\ref{ex:kgnrev_cstruct_pruned}).
 
 \section{Adpositional phrases}
 \label{sec:pps}
