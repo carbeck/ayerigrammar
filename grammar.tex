@@ -113,6 +113,7 @@
 \newlist{glossdefs}{itemize}{1}
 \setlist[glossdefs]{nosep, leftmargin=4.5em, labelwidth=4em, align=left}
 \setlist[itemize]{noitemsep}
+\setlist[description]{font=\sffamily\bfseries}
 
 % Make multiple columns available in single-column document
 \usepackage{multicol}
@@ -293,7 +294,7 @@
 }}
 
 \forestset{narrower nodes/.style={
-	for tree={s sep-=.5em,s=0}
+	for tree={s sep-=1em,s=0}
 }}
 
 \forestset{italic leaves/.style={
@@ -474,6 +475,7 @@
 \newleipzig{Obj}{obj}{object}
 \newleipzig{SObj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
 \newleipzig{Oblique}{obl\fakesubscript{\normalfont\itshape θ}}{oblique constituent}
+\newleipzig{PCase}{pcase}{prepositional case}
 \newleipzig{Pers}{pers}{person}
 \newleipzig{Possr}{poss}{possessor}
 \newleipzig{Pred}{pred}{predicator}
