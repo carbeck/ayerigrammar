@@ -4643,20 +4643,19 @@ integrity.
 In conclusion, Ayeri probably does not follow the way of English with regards
 to quantifiers and intensifiers of adjectives in that assuming these elements
 are in Spec results in wrong predictions about word order. Since \Lfg{} does
-not assume transformations, the hypothesis that Ayeri's quantifiers are in Spec
-can be discarded, since without transformations it results in wrong predictions
-about word order. It is probably more likely that quantifiers are treated as
-adjuncts with a constraint that quantifiers cannot be iterated---if a
-quantifier is present, no other quantifier may modify the same head unless it
-is coordinated with the first, if this is semantically plausible at all. There
-also needs to be a constraint which says that quantifiers always need to be
-adjacent to their modification target. Quantifiers, however, are optional
-elements, that is, they are not required to complete their head's argument
-structure in the way a preposition or a verb require an NP complement. It is
-tempting to treat clitic quantifiers the same way as free ones, just with an
-empty head position; the quantifying adverb instead finds itself cliticized to
-the preceding head, compare (\ref{ex:kgnrev_cstruct}) and
-(\ref{ex:kgnrev_cstruct_pruned}).
+not assume movement, the hypothesis that Ayeri's quantifiers are in Spec can be
+discarded, since without movement it results in wrong predictions about word
+order. It is probably more likely that quantifiers are treated as adjuncts with
+a constraint that quantifiers cannot be iterated---if a quantifier is present,
+no other quantifier may modify the same head unless it is coordinated with the
+first, if this is semantically plausible at all. There also needs to be a
+constraint which says that quantifiers always need to be adjacent to their
+modification target. Quantifiers, however, are optional elements, that is, they
+are not required to complete their head's argument structure in the way a
+preposition or a verb require an NP complement. It is tempting to treat clitic
+quantifiers the same way as free ones, just with an empty head position; the
+quantifying adverb instead finds itself cliticized to the preceding head,
+compare (\ref{ex:kgnrev_cstruct}) and (\ref{ex:kgnrev_cstruct_pruned}).
 
 \section{Adpositional phrases}
 \label{sec:pps}
@@ -4675,6 +4674,152 @@ syntactic issue and the preference of placement is rooted in the lexical entry
 for each adposition, albeit \citet{pargram} does not list a feature to
 distinguish between preposition and postposition, probably because it does not
 have any relevance to semantics.
+
+\Lfg{} categorizes the object of an adposition as \Oblique{}, where $\theta$
+stands for the thematic role of the embedded phrase \citep[9--10]
+{dalrymple2001}. As we have seen in the previous chapter, adpositions in Ayeri
+usually allow adpositional objects to mark one of three cases:
+
+\begin{description}
+	\item[Locative (\Loc):] Standard case for prepositional objects, indicates 
+	a location (\textsc{location}).
+
+	\item[Dative (\Dat):] Indicates motion towards the direction the adposition
+	indicates (\textsc{goal, direction}) in cases where just locative marking
+	would be ambiguous, for instance, `up to' instead of `onto', since \rayr{mN
+	liNF}{manga ling} can mean both, by itself.
+
+	\item[Genitive (\Gen):] Indicates motion from the direction the adposition
+	indicates (\textsc{source, origin}) in cases where just locative marking
+	would be ambiguous, for instance, `down from' instead of `under', since
+	\rayr{mN AvnF}{manga avan} can mean both, by itself.
+\end{description}
+
+% Ayeri does not make use of verbs which take a transitive PP as a complement, so
+% there are no cases where an adpositional object is a required part of a verb's
+% argument structure as in English \fw{talk to someone}. Ayeri instead often uses
+% an NP complement marked with one of the cases above. In the case of
+% \xayr{nr/}{nara-} {speak, talk}, the complement appears in the locative case,
+% but as an NP, not as a PP.
+
+% \pex
+% \a\label{ex:talkcstruct}%
+% John talks to Mary. \\
+
+% \begin{minipage}[t]{.667\remaining}
+% \begin{forest} shorter edges, italic leaves,
+% [IP
+% 	[{\anno[\pass{\Subj}]{NP}}
+% %		[\anno{\xbar{N}}
+% %			[\anno{\xhead{N}}
+% 				[John, roof]
+% %			]
+% %		]
+% 	]
+% %	[\anno{\xbar{I}}
+% 		[\anno{VP}
+% 			[\anno{\xbar{V}}
+% 				[\anno{\xhead{V}}
+% 					[talks]
+% 				]
+% 				[{\anno[\ups{\downs{\PCase}}]{PP}}
+% 					[\anno{\xbar{P}}
+% 						[\anno{\xhead{N}}
+% 							[to]
+% 						]
+% 						[\anno{NP}
+% %							[\anno{\xbar{N}}
+% %								[\anno{\xhead{N}}
+% 									[Mary, roof]
+% %								]
+% %							]
+% 						]
+% 					]
+% 				]
+% 			]
+% 		]
+% %	]
+% ]
+% \end{forest}
+% \end{minipage}
+% ~
+% \begin{avm}
+% \[
+% 	\Pred	&	\astruct{talk}{%
+% 		\ups{\Subj},
+% 		\ups{\Oblq{goal}}
+% 	} \\
+
+% 	\Subj	&	\[
+% 		\Pred	&	`John' \\
+% 		\Pers	&	\Third \\
+% 	\]\\
+
+% 	\Oblq{goal}	&	\[
+% 		\Pred	&	`Mary' \\
+% 		\PCase	&	\Oblq{goal} \\
+% 	\]\\
+% \]
+% \end{avm}
+
+% \a\label{ex:naracstruct}%
+% \begingl
+% \gla Ang naraya {} Ajān ya Pila. //
+% \glb ang nara-ya Ø Ajān ya Pila //
+% \glc \AgtT{} talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
+% \glft `Ajān talks to Pila.' //
+% \endgl\medskip
+
+% \begin{minipage}[t]{.667\remaining}
+% \begin{forest} narrower nodes, shorter edges, italic leaves,
+% [IP
+% %	[\anno{\xbar{I}}
+% 		[\anno{\xhead{I}}
+% 			[{Ang naraya}, roof]
+% 		]
+% %	]
+% 	[\anno{S}
+% 		[{\anno[\pass{\Subj}]{NP}}
+% 			[Ajān, roof]
+% 		]
+% 		[{\anno[\pass{\Oblq{loc}}]{NP}}
+% 			[{ya Pila}, roof]
+% 		]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% ~
+% \begin{avm}
+% \[
+% 	\Pred	&	\astruct{talk}{%
+% 		\ups{\Subj},
+% 		\ups{\Oblq{loc}}%
+% 	} \\
+
+% 	\Top	&	\[
+% 		\Pred	&	`Ajān' \\
+% 		\Anim	&	$+$ \\
+% 		\Case	&	\Aarg \\
+% 		\Pers	&	\Third \\
+% 	\] \tikzmark{naracstruct_top} \\
+
+% 	\Subj	&	\tikzmark{naracstruct_subj} \\
+
+% 	\Oblq{loc}	&	\[
+% 		\Pred	&	`Pila' \\
+% 		\Case	&	\Loc{} \\
+% 	\]\\
+% \]
+% \end{avm}
+% \begin{tikzpicture}[remember picture, overlay]
+% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:naracstruct_top})
+% 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:naracstruct_subj}););
+% \end{tikzpicture}
+
+% \xe
+
+...
 
 \citet[151--153]{dalrymple2001}, \citet[31--38]{fortmann2006}
 
