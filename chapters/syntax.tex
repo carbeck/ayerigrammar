@@ -4681,154 +4681,179 @@ stands for the thematic role of the embedded phrase \citep[9--10]
 usually allow adpositional objects to mark one of three cases:
 
 \begin{description}
-	\item[Locative (\Loc):] Standard case for prepositional objects, indicates 
-	a location (\textsc{location}).
+	\item[Locative:] Standard case for prepositional objects, indicates a
+	location (\textsc{location}). It usually corresponds to English `at', `in'.
 
-	\item[Dative (\Dat):] Indicates motion towards the direction the adposition
-	indicates (\textsc{goal, direction}) in cases where just locative marking
-	would be ambiguous, for instance, `up to' instead of `onto', since \rayr{mN
-	liNF}{manga ling} can mean both, by itself.
+	\item[Dative:] Indicates motion towards the direction the adposition
+	indicates (\textsc{goal}, \textsc{direction}) in cases where just locative
+	marking would be ambiguous, for instance, `up to' instead of `onto', since
+	\rayr{mN liNF}{manga ling} can mean both, by itself. It usually corresponds
+	to English `to', `for'.
 
-	\item[Genitive (\Gen):] Indicates motion from the direction the adposition
-	indicates (\textsc{source, origin}) in cases where just locative marking
-	would be ambiguous, for instance, `down from' instead of `under', since
-	\rayr{mN AvnF}{manga avan} can mean both, by itself.
+	\item[Genitive:] Indicates motion from the direction the adposition
+	indicates (\textsc{source}, \textsc{origin}) in cases where just locative
+	marking would be ambiguous, for instance, `down from' instead of `under',
+	since  \rayr{mN AvnF}{manga avan} can mean both, by itself. It usually
+	corresponds to English `of', `from'.
 \end{description}
 
-% Ayeri does not make use of verbs which take a transitive PP as a complement, so
-% there are no cases where an adpositional object is a required part of a verb's
-% argument structure as in English \fw{talk to someone}. Ayeri instead often uses
-% an NP complement marked with one of the cases above. In the case of
-% \xayr{nr/}{nara-} {speak, talk}, the complement appears in the locative case,
-% but as an NP, not as a PP.
+Ayeri does not make use of verbs which take a transitive PP as a complement, so
+there are no cases where an adpositional object is a required part of a verb's
+argument structure as in English \fw{talk to someone}; the semantic role of the
+PP complement is encoded by the \PCase{} attribute. The complement is also
+presented as not governing a prepositional object, but the preposition is
+purely functional \citep[151--153]{dalrymple2001}. The case for English is
+illustrated by (\ref{ex:talkcstruct}).
 
-% \pex
-% \a\label{ex:talkcstruct}%
-% John talks to Mary. \\
+\ex\label{ex:talkcstruct}%
+John talks to Mary. \\
 
-% \begin{minipage}[t]{.667\remaining}
-% \begin{forest} shorter edges, italic leaves,
-% [IP
-% 	[{\anno[\pass{\Subj}]{NP}}
-% %		[\anno{\xbar{N}}
-% %			[\anno{\xhead{N}}
-% 				[John, roof]
-% %			]
-% %		]
-% 	]
-% %	[\anno{\xbar{I}}
-% 		[\anno{VP}
-% 			[\anno{\xbar{V}}
-% 				[\anno{\xhead{V}}
-% 					[talks]
-% 				]
-% 				[{\anno[\ups{\downs{\PCase}}]{PP}}
-% 					[\anno{\xbar{P}}
-% 						[\anno{\xhead{N}}
-% 							[to]
-% 						]
-% 						[\anno{NP}
-% %							[\anno{\xbar{N}}
-% %								[\anno{\xhead{N}}
-% 									[Mary, roof]
-% %								]
-% %							]
-% 						]
-% 					]
-% 				]
-% 			]
-% 		]
-% %	]
-% ]
-% \end{forest}
-% \end{minipage}
-% ~
-% \begin{avm}
-% \[
-% 	\Pred	&	\astruct{talk}{%
-% 		\ups{\Subj},
-% 		\ups{\Oblq{goal}}
-% 	} \\
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[{\anno[\pass{\Subj}]{NP}}
+%		[\anno{\xbar{N}}
+%			[\anno{\xhead{N}}
+				[John, roof]
+%			]
+%		]
+	]
+%	[\anno{\xbar{I}}
+		[\anno{VP}
+			[\anno{\xbar{V}}
+				[\anno{\xhead{V}}
+					[talks]
+				]
+				[{\anno[\ups{\downs{\PCase}}]{PP}}
+					[\anno{\xbar{P}}
+						[\anno{\xhead{P}}
+							[to]
+						]
+						[\anno{NP}
+%							[\anno{\xbar{N}}
+%								[\anno{\xhead{N}}
+									[Mary, roof]
+%								]
+%							]
+						]
+					]
+				]
+			]
+		]
+%	]
+]
+\end{forest}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{talk}{%
+		\ups{\Subj},
+		\ups{\Oblq{goal}}
+	} \\
 
-% 	\Subj	&	\[
-% 		\Pred	&	`John' \\
-% 		\Pers	&	\Third \\
-% 	\]\\
+	\Subj	&	\[
+		\Pred	&	`John' \\
+		\Pers	&	\Third \\
+	\]\\
 
-% 	\Oblq{goal}	&	\[
-% 		\Pred	&	`Mary' \\
-% 		\PCase	&	\Oblq{goal} \\
-% 	\]\\
-% \]
-% \end{avm}
+	\Oblq{goal}	&	\[
+		\Pred	&	`Mary' \\
+		\PCase	&	\Oblq{goal} \\
+	\]\\
+\]
+\end{avm}
+\xe
 
-% \a\label{ex:naracstruct}%
-% \begingl
-% \gla Ang naraya {} Ajān ya Pila. //
-% \glb ang nara-ya Ø Ajān ya Pila //
-% \glc \AgtT{} talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
-% \glft `Ajān talks to Pila.' //
-% \endgl\medskip
+Ayeri, in contrast to English, often uses an NP complement marked with one of
+the cases in the list above, compare (\ref{ex:naracstruct}). In the case of
+\xayr{nr/}{nara-}{speak, talk}, the complement thus appears in the locative
+case, but as an NP, not as a PP. Thus, there is no \PCase{} attribute
+necessary, since there is no preposition to indicate the relation of the
+complement to the verb because case marking accomplishes this function. Since
+the dative is also used for the \textsc{beneficiary} role, the argument
+expressing the direction of the talking appears exceptionally in the locative
+here. In (\ref{ex:naracstruct}) it may seem as though \rayr{y}{ya} is a
+preposition---which is likely accurate historically---however, it has been
+established previously that preposed case markers are proclitics (see
+\autoref{clitics_prenoun_case}, p.~\pageref{clitics_prenoun_case}).
+\rayr{y}{ya} is a case marker, not a preposition; `at/to Pila' is
+thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya Pilaya} with additional
+locative marking on the noun.
 
-% \begin{minipage}[t]{.667\remaining}
-% \begin{forest} narrower nodes, shorter edges, italic leaves,
-% [IP
-% %	[\anno{\xbar{I}}
-% 		[\anno{\xhead{I}}
-% 			[{Ang naraya}, roof]
-% 		]
-% %	]
-% 	[\anno{S}
-% 		[{\anno[\pass{\Subj}]{NP}}
-% 			[Ajān, roof]
-% 		]
-% 		[{\anno[\pass{\Oblq{loc}}]{NP}}
-% 			[{ya Pila}, roof]
-% 		]
-% 	]
-% ]
-% \end{forest}
-% \end{minipage}
-% ~
-% \begin{avm}
-% \[
-% 	\Pred	&	\astruct{talk}{%
-% 		\ups{\Subj},
-% 		\ups{\Oblq{loc}}%
-% 	} \\
+\ex\label{ex:naracstruct}%
+\begingl
+\gla Ang naraya {} Ajān ya Pila. //
+\glb ang nara-ya Ø Ajān ya Pila //
+\glc \AgtT{} talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
+\glft `Ajān talks to Pila.' //
+\endgl\medskip
 
-% 	\Top	&	\[
-% 		\Pred	&	`Ajān' \\
-% 		\Anim	&	$+$ \\
-% 		\Case	&	\Aarg \\
-% 		\Pers	&	\Third \\
-% 	\] \tikzmark{naracstruct_top} \\
+\begin{forest} narrower nodes, shorter edges, italic leaves,
+[IP
+%	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[{Ang naraya}, roof]
+		]
+%	]
+	[\anno{S}
+		[{\anno[\pass{\Top}]{NP}}
+			[Ajān, roof]
+		]
+		[\anno{VP}
+%			[\anno{\xbar{V}}
+				[{\anno[\pass{\Oblq{loc}}]{NP}}
+					[{ya Pila}, roof]
+				]
+%			]
+		]
+	]
+]
+\end{forest}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{talk}{%
+		\ups{\Subj},
+		\ups{\Oblq{loc}}%
+	} \\
 
-% 	\Subj	&	\tikzmark{naracstruct_subj} \\
+	\Top	&	\[
+		\Pred	&	`Ajān' \\
+		\Anim	&	$+$ \\
+		\Case	&	\Aarg \\
+		\Pers	&	\Third \\
+	\] \tikzmark{naracstruct_top} \\
 
-% 	\Oblq{loc}	&	\[
-% 		\Pred	&	`Pila' \\
-% 		\Case	&	\Loc{} \\
-% 	\]\\
-% \]
-% \end{avm}
-% \begin{tikzpicture}[remember picture, overlay]
-% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:naracstruct_top})
-% 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:naracstruct_subj}););
-% \end{tikzpicture}
+	\Subj	&	\tikzmark{naracstruct_subj} \\
 
-% \xe
+	\Oblq{loc}	&	\[
+		\Pred	&	`Pila' \\
+		\Case	&	\Loc{} \\
+	\]\\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:naracstruct_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:naracstruct_subj}););
+\end{tikzpicture}
+
+\xe
+
+Prepositional phrases proper in Ayeri are locative adverbials, that is, they
+are not subcategorized by a verb as required arguments but they add additional
+information about the literal site or time frame (most prepositions) of an
+action, or about its logical connection (some postpositions). In the following,
+proper PPs will be described in more detail.
 
 ...
 
-\citet[151--153]{dalrymple2001}, \citet[31--38]{fortmann2006}
+\citet[151--155]{dalrymple2001}, \citet[31--41]{fortmann2006}
 
 ...
 
 \pex\label{ex:ppstruct}
 \a PP → \anno*{\xbar{P}}
-\a \xbar{P} → \anno*{\xhead{P}} \anno*[\pass{...}]{XP} $\left(\anno*{
-\xhead{P}}\right)$
+\a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\pass{\Obj}]{XP}
+$\left(\anno*{\xhead{P}}\right)$
 \xe
 
 ...
@@ -4836,11 +4861,11 @@ usually allow adpositional objects to mark one of three cases:
 \ex\label{ex:ppcstruct}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest}
-[{\anno[\pass{...}]{PP}}
+[{\anno[\elem{\Adjc}]{PP}}
 	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}]
 		[{\anno[{%
-				\pass{...}%
+				\pass{\Obj}%
 			}]{XP}
 		}]
 	]
@@ -4850,10 +4875,10 @@ usually allow adpositional objects to mark one of three cases:
 ~
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest}
-[{\anno[\pass{...}]{PP}}
+[{\anno[\elem{\Adjc}]{PP}}
 	[\anno{\xbar{P}}
 		[{\anno[{%
-				\pass{...}%
+				\pass{\Obj}%
 			}]{XP}
 		}]
 		[\anno{\xhead{P}}]
@@ -4872,7 +4897,7 @@ usually allow adpositional objects to mark one of three cases:
 	...
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `...' \\
+			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
 		\end{tabular}
 	\end{tabu}%
 }
