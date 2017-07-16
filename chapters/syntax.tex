@@ -4919,6 +4919,7 @@ present.
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
 			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\} \\
+			\ups{\Obj{} \Case{}} & \req & \Loc{}\footnotemark
 		\end{tabular}
 	\end{tabu}%
 }
@@ -4934,6 +4935,10 @@ present.
 }
 \xe
 \end{morphlex}
+
+\footnotetext{This lexical rule goes for all adpositions except \rayr{liNF}
+{ling} and \rayr{AvnF}{avan}, which require special treatment with regards to
+case marking; see below.}
 
 German, for one, encodes the difference between locational and directional of a
 group of prepositions uses as well, but by an alternation in the prepositional
@@ -5034,44 +5039,56 @@ and `to the bottom, down on'. These are telic in that they express arriving at
 the destination specified by the adpositional object. However, Ayeri does not
 possess separate adpositions to express `up' and `down' as atelic concepts,
 that is, without referring to arriving at a destination.\footnote{Whether the
-directional equivalents `up to' and `down from' are atelic is debatable, since
-they also suggest arriving at a destination eventually. I will still keep the
-terminology, however, for the lack of a better way to make a binary
-distinction. Either way, dative and genitive complements rather relate to the
-path, whereas locative complements relate more to the destination.}
-Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up' and `down'
-with dative and genitive complements, respectively, do mark the difference,
-compare \autoref{tab:updowncompl}. Note, however, that Ayeri does not possess
-intransitive adpositions, with the exception of a few verbs where the
-adposition is a lexicalized part of the expression, for instance, \xayr{tpY/
-djrinF}{tapy- dayrin}{save (assets)}, with the fossilized, now defunct
-preposition \xayr{djrinF}{dayrin}{beside, next to} (modern \rayr{kjvo}
+directional equivalents `up to' and `down from' qualify as atelic as well is
+debatable, since they also suggest arriving at a destination eventually. I will
+still keep the terminology for the time being, however, for the lack of a
+better way to make a binary distinction. Either way, dative and genitive
+complements rather relate to the path, whereas locative complements relate more
+to the destination.} Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan} double
+for `up' and `down' with dative and genitive complements, respectively, to mark
+the difference, compare \autoref{tab:updowncompl}. Note, however, that Ayeri
+does not possess intransitive adpositions, with the exception of a few verbs
+where the adposition is a lexicalized part of the expression, for instance,
+\xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with the fossilized, now
+defunct preposition \xayr{djrinF}{dayrin}{beside, next to} (modern \rayr{kjvo}
 {kayvo}). `Up' and `down' thus refer to their transitive uses as in \fw{up the
-stairs} and \fw{down the hill}, respectively.
+stairs} and \fw{down the hill}, respectively. (\ref{ex:dirtel}) provides
+example sentences for all configurations.
 
 \begin{table}[tp]\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
 
-\begin{tabu} to \linewidth {I X[c] X[c] X[c]}
-\toprule
+\begin{tabu} to \linewidth {I X[c] X[c] X[c] X[c]}
+\toprule\tableheaderfont
 
 %
+	& %
 	& +~\Loc
 	& +~\Dat
 	& +~\Gen
 	\\
 
+\tableheaderfont
+%
+	& \PSem
+	& [\Tel{} $+$]
+	& [\Tel{} $-$]
+	& [\Tel{} $-$]
+	\\
+
 \toprule
 
 ling
+	& %[\PSem{} $loc$]
 	& on top
 	& up
 	& ---
 	\\
 
-\midrule
+% \midrule
 
 manga ling
+	& $dir$
 	& onto
 	& up to
 	& ---
@@ -5080,14 +5097,16 @@ manga ling
 \midrule
 
 avan
+	& %[\PSem{} $loc$]
 	& at bottom
 	& ---
 	& down
 	\\
 
-\midrule
+% \midrule
 
 manga avan
+	& $dir$
 	& down on
 	& ---
 	& down from
@@ -5099,7 +5118,136 @@ manga avan
 \label{tab:updowncompl}
 \end{table}
 
-... Examples with \Avm{}s ...
+\pex\label{ex:dirtel}
+\a\label{ex:dirtel_loc_tel}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
+%	\PSem	&	$loc$ \\
+	\Tel	&	$+$ \\
+	\Obj	&	\[
+		\Pred	&	`...' \\
+		\Case	&	\Loc \\
+	\]
+\]
+\end{avm}
+
+\a\label{ex:dirtel_dir_tel}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
+	\PSem	&	$dir$ \\
+	\Tel	&	$-$ \\
+	\Obj	&	\[
+		\Pred	&	`...' \\
+		\Case	&	\Dat \\
+	\]
+\]
+\end{avm}
+
+\a\label{ex:dirtel_loc_atel}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{bottom of}{\ups{\Obj}} \\
+%	\PSem	&	$loc$ \\
+	\Tel	&	$+$ \\
+	\Obj	&	\[
+		\Pred	&	`...' \\
+		\Case	&	\Loc \\
+	\]
+\]
+\end{avm}
+
+\a\label{ex:dirtel_dir_atel}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{bottom of}{\ups{\Obj}} \\
+	\PSem	&	$dir$ \\
+	\Tel	&	$-$ \\
+	\Obj	&	\[
+		\Pred	&	`...' \\
+		\Case	&	\Gen \\
+	\]
+\]
+\end{avm}
+
+\xe
+
+...
+
+\begin{morphlex}
+\pex\label{ex:lingavanmorphlex}%
+\a\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{\larger liNF}{ling}
+		& P
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & \astruct{on}{\ups{\Obj}} \\
+			\ups{\PSem}	& = & \{$loc, dir$\} \\
+			\ups{\Tel}	& = & $\pm$ \\
+		\end{tabular} \medskip
+
+		\begin{tabular}[t]{l l l}
+%			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
+			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
+		\end{tabular}
+	\end{tabu}%
+}
+
+\a\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{\larger AvnF}{avan}
+		& P
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & \astruct{bottom}{\ups{\Obj}} \\
+			\ups{\PSem}	& = & \{$loc, dir$\} \\
+			\ups{\Tel}	& = & $\pm$ \\
+		\end{tabular} \medskip
+
+		\begin{tabular}[t]{l l l}
+%			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
+			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Gen \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
 
 ... Not as grammaticalized as German hin-/her- + Prep directional adverbs; how
 to say `up from under' etc. ...
