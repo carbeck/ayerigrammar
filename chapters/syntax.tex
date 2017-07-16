@@ -4692,9 +4692,9 @@ usually allow adpositional objects to mark one of three cases:
 
 	\item[Genitive:] Indicates motion from the direction the adposition
 	indicates (\textsc{source}, \textsc{origin}) in cases where just locative
-	marking would be ambiguous, for instance, `down from' instead of `under',
-	since  \rayr{mN AvnF}{manga avan} can mean both, by itself. It usually
-	corresponds to English `of', `from'.
+	marking would be ambiguous, for instance, `down from' instead of `to the
+	bottom', since  \rayr{mN AvnF}{manga avan} can mean both, by itself. It
+	usually corresponds to English `of', `from'.
 \end{description}
 
 Ayeri does not make use of verbs which take a transitive PP as a complement, so
@@ -4766,18 +4766,19 @@ John talks to Mary. \\
 Ayeri, in contrast to English, often uses an NP complement marked with one of
 the cases in the list above, compare (\ref{ex:naracstruct}). In the case of
 \xayr{nr/}{nara-}{speak, talk}, the complement thus appears in the locative
-case, but as an NP, not as a PP. Thus, there is no \PCase{} attribute
-necessary here, since there is no preposition to indicate the relation of the
-complement to the verb because case marking accomplishes this function. Since
-the dative is also used for the \textsc{beneficiary} role, the argument
-expressing the direction of the talking appears exceptionally in the locative
-here. In (\ref{ex:naracstruct}) it may seem as though \rayr{y}{ya} is a
-preposition---which is likely accurate historically---however, it has been
-established previously that preposed case markers are proclitics (see
-\autoref{clitics_prenoun_case}, p.~\pageref{clitics_prenoun_case}).
-\rayr{y}{ya} is a case marker, not a preposition; `at/to Pila' is
-thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya Pilaya} with additional
-locative marking on the noun.
+case, but as an NP, not as a PP. Thus, there is no \PCase{} attribute necessary
+here, since there is no preposition to indicate the relation of the complement
+to the verb because case marking accomplishes this function. Which oblique case
+the complement appears in is determined by the a-structure of the verb, not by
+the semantics of the complement. Since the dative is also used for the
+\textsc{beneficiary} role, the argument expressing the direction of the talking
+appears exceptionally in the locative here. In (\ref{ex:naracstruct}) it may
+seem as though \rayr{y}{ya} is a preposition---which is likely accurate
+historically---however, it has been established previously that preposed case
+markers are proclitics (see \autoref{clitics_prenoun_case}, 
+p.~\pageref{clitics_prenoun_case}). \rayr{y}{ya} is a case marker, not a
+preposition; `at/to Pila' is thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya
+Pilaya} with additional locative marking on the noun.
 
 \ex\label{ex:naracstruct}%
 \begingl
@@ -4844,7 +4845,7 @@ complements is smaller than in English due to case marking, as described above.
 As mentioned initially, Ayeri possesses prepositions as well as postpositions,
 which is also reflected in the phrase structure rules given in
 (\ref{ex:ppstruct}). Here, the \xhead{P}s in brackets are supposed to mean that
-such an element can appear in either position. Since there are no cases of
+such an element can appear in either position. Since there are no
 circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
 catch-all term for various phrase types which form complements of semantic
 adpositions in the form of NPs and DPs. These are objects governed by the
@@ -4864,9 +4865,10 @@ complements headed by an adposition, for instance, in cases like \fw{Mary puts
 the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont ]~[\tsub{NP}} the
 pile {\normalfont ]]}}. The PP {\fw{on the pile} is not an adjunct here because
 \fw{She does so on the pile} makes no sense; the PP must be an argument of the
-verb. Ayeri behaves the same way in this regard. These governed PPs are
-categorized as \Oblique{} with $\theta$ replaced by the proper semantic
-macrorole (\textit{loc}, \textit{src} or \textit{goal}).
+verb in this case, not additional, optional information. Ayeri behaves the same
+way in this regard. These governed PPs are categorized as \Oblique{} with
+$\theta$ replaced by the proper semantic macrorole (\textit{loc}, \textit{src}
+or \textit{goal}).
 
 \ex\label{ex:ppcstruct}\labels
 \begin{minipage}[t]{.5\remaining}
@@ -4903,21 +4905,30 @@ postposition does not matter, so the \Avm{} in (\ref{ex:adpmorphlex}) does not
 make a formal distinction between prepositions and postpositions. As described
 in \autoref{clitics_prep_dyn} (p.~\pageref{clitics_prep_dyn}) and 
 \autoref{sec:adpositions}, there is a particle \rayr{mN}{manga}, which has been
-analyzed as a clitic. This particle indicates that an adposition has a dynamic
-(or directional) reading. This is encoded by the feature \PSem{}, which is
-repreented morphologically by said particle and hence not generally
+analyzed as a clitic. This particle indicates that an adposition has a
+directional reading. This is encoded by the feature \PSem{}, which is
+represented morphologically by said particle and hence not generally
 present.
 
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
-\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlexnarrow}}
+\a\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
 	...
 		& P
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
-			(\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\}) \\
-			(\ups{\PSem} & = & $dyn$) \\
+			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\} \\
+		\end{tabular}
+	\end{tabu}%
+}
+
+\a\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	\rayr{\larger mN}{manga}
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			\ups{\PSem} & = & $dir$ \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -4930,7 +4941,7 @@ object's case between \Dat{} (locational) and \Acc{} (directional). Thus,
 \fw{auf dem Tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
 whereas \fw{auf den Tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
 table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
-\fw{an} `on surface, at') as:
+\fw{an} `at') as:
 
 \ex
 \begin{tabular}[t]{l @{ $\implies$ } l}
@@ -4954,14 +4965,136 @@ alternation (%
 \fw{vor},
 \fw{zwischen}%
 ). In Ayeri, however, the particle \rayr{mN}{manga} alternates with nothing, so
-the absence of marking $dyn$ indicates a locational reading, which is reflected
-by \PCase{}'s attribute $loc$. Since the \PSem{} attribute finds no
-overt realization in the absence of the morphological marker, it may as well be
-omitted; \PCase{} thus defaults to \Oblq{loc}.
+the absence of marking $dir$ indicates a locational reading. Since the \PSem{}
+attribute finds no overt realization in the absence of the morphological
+marker, however, it may as well be omitted. Different than in German, the
+presence or absence of directionality marking also does not influence the case
+of the adpositional object.
 
-...
+Example (\ref{ex:mangaaltern}) illustrates the alternation in annotation
+between a bare adposition and one modified by \rayr{mN}{manga}:
+\rayr{mN}{manga} adds the feature--value pair [\PSem{} $dir$] to the \Adjc{} 
+(or \Oblique{} if the PP is governed by a verb) of the partial f-structure in (
+\ref{ex:mangaaltern_marked}), which is how the difference between locational
+`in' and directional `into' is represented. The case of the \Obj{} is \Loc{} in
+both cases.
 
-\citet[151--155]{dalrymple2001}, \citet[31--41]{fortmann2006}
+\pex\label{ex:mangaaltern}
+\a\label{ex:mangaaltern_bare}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla kong nangaya //
+	\glb kong nanga-ya //
+	\glc inside house-\Loc //
+	\glft `in the house' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[\Adjc	&	\{\[
+		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+		\Obj	&	\[
+			\Pred	&	`house' \\
+			\Case	&	\Loc \\
+		\]
+	\]\}
+\]
+\end{avm}
+
+\a\label{ex:mangaaltern_marked}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla manga kong nangaya //
+	\glb manga kong nanga-ya //
+	\glc \Dir{} inside house-\Loc{} //
+	\glft `into the house' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[\Adjc	&	\{\[
+		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+		\PSem	&	$dir$ \\
+		\Obj	&	\[
+			\Pred	&	`house' \\
+			\Case	&	\Loc \\
+		\]
+	\]\}
+\]
+\end{avm}
+
+\xe
+
+With the prepositions \xayr{liNF}{ling}{on top of} and \xayr{AvnF}{avan}{at the
+bottom of} there is another alternation, based on case, for verbs which do not
+encode direction. This is rooted in the etymology of these words:
+\rayr{liNF}{ling} as a noun means `top', \rayr{AvnF}{avan} means `ground,
+bottom'. The directional variants of these prepositions mean `to the top, upon'
+and `to the bottom, down on'. These are telic in that they express arriving at
+the destination specified by the adpositional object. However, Ayeri does not
+possess separate adpositions to express `up' and `down' as atelic concepts,
+that is, without referring to arriving at a destination. Instead, 
+\rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up' and `down' with dative
+and genitive complements, respectively, do mark the difference, compare 
+\autoref{tab:updowncompl}. Note, however, that Ayeri does not possess
+intransitive adpositions, with the exception of some particle verbs where the
+adposition is a lexicalized particle, for instance,
+\xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with the fossilized, now
+defunct preposition \rayr{djrinF}{beside, next to} (modern \rayr{kjvo}{kayvo}).
+`Up' and `down' thus refer to their transitive uses as in \fw{up the stairs}
+and \fw{down the hill}, respectively.
+
+\begin{table}[tp]\centering
+\caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
+
+\begin{tabu} to \linewidth {I X[c] X[c] X[c]}
+\toprule
+
+%
+	& +~\Loc
+	& +~\Dat
+	& +~\Gen
+	\\
+
+\toprule
+
+ling
+	& on top
+	& up
+	& ---
+	\\
+
+\midrule
+
+manga ling
+	& onto
+	& up to
+	& ---
+	\\
+
+\midrule
+
+avan
+	& at bottom
+	& ---
+	& down
+	\\
+
+\midrule
+
+manga avan
+	& down on
+	& ---
+	& down from
+	\\
+
+\bottomrule
+\end{tabu}
+
+\label{tab:updowncompl}
+\end{table}
+
+... Examples with \Avm{}s ...
 
 % \section{Inflectional and verb phrases}
 % \label{sec:ips-vps}
