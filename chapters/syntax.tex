@@ -2468,7 +2468,7 @@ with groups whose person features cannot easily be unified, which an example is
 given of in (\ref{ex:mfayeri}). In addition to this, Ayeri has a two-tier
 system where three genders---masculine, feminine, neuter---are grouped together
 as animate, which is in opposition to inanimate gender, compare
-(\ref{ex:gramgend}).
+(\ref{ex:gramgend2}).
 
 \pex
 \a\label{ex:mfengl}%
@@ -2487,7 +2487,7 @@ as animate, which is in opposition to inanimate gender, compare
 	\endgl
 \xe
 
-\ex~\label{ex:gramgend}
+\ex~\label{ex:gramgend2}
 \begin{forest}
 [{[\Gend{}]}
 	[{[\Anim{} $+$]}
@@ -2944,7 +2944,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 \begin{tabu} to \linewidth [t] {@{} X X}
 \begin{forest} narrower nodes, shorter edges, italic leaves
 [{\anno[\pass{\Subj}]{NP}}
-	[\anno{\xbar{N}}, narrower nodes
+	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
 			[\anno{Cl}
 				[ang]
@@ -2953,7 +2953,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 				[Apitu]
 			]
 		]
-		[{\anno[\elem{\Adjc}]{AP}}, narrower nodes
+		[{\anno[\elem{\Adjc}]{AP}}
 			[\anno{\xhead{A}}
 				[\anno{\xhead{A}}
 					[puti]
@@ -3605,7 +3605,7 @@ is a sister to the head whereas an adjunct is, so to speak, its cousin:
 		]
 		[YP, name=adjunct]
 	]
-	[W, name=spec]
+	[WP, name=spec]
 ]
 %
 \node [right=1em of spec, font=\itshape]
@@ -4767,7 +4767,7 @@ Ayeri, in contrast to English, often uses an NP complement marked with one of
 the cases in the list above, compare (\ref{ex:naracstruct}). In the case of
 \xayr{nr/}{nara-}{speak, talk}, the complement thus appears in the locative
 case, but as an NP, not as a PP. Thus, there is no \PCase{} attribute
-necessary, since there is no preposition to indicate the relation of the
+necessary here, since there is no preposition to indicate the relation of the
 complement to the verb because case marking accomplishes this function. Since
 the dative is also used for the \textsc{beneficiary} role, the argument
 expressing the direction of the talking appears exceptionally in the locative
@@ -4838,17 +4838,17 @@ locative marking on the noun.
 
 \xe
 
-Prepositional phrases proper in Ayeri are locative adverbials, that is, they
-are not subcategorized by a verb as required arguments but they add additional
-information about the literal site or time frame (most prepositions) of an
-action, or about its logical connection (some postpositions). In the following,
-proper PPs will be described in more detail.
-
-...
-
-\citet[151--155]{dalrymple2001}, \citet[31--41]{fortmann2006}
-
-...
+In Ayeri, PPs proper may either be locative complements of the verb or locative
+adverbials ungoverned by the verb, though the number of verbs taking PP
+complements is smaller than in English due to case marking, as described above.
+As mentioned initially, Ayeri possesses prepositions as well as postpositions,
+which is also reflected in the phrase structure rules given in
+(\ref{ex:ppstruct}). Here, the \xhead{P}s in brackets are supposed to mean that
+such an element can appear in either position. Since there are no cases of
+circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
+catch-all term for various phrase types which form complements of semantic
+adpositions in the form of NPs and DPs. These are objects governed by the
+adposition.
 
 \pex\label{ex:ppstruct}
 \a PP → \anno*{\xbar{P}}
@@ -4856,12 +4856,22 @@ proper PPs will be described in more detail.
 $\left(\anno*{\xhead{P}}\right)$
 \xe
 
-...
+The same as above is spelled out again in c-tree form in (\ref{ex:ppcstruct}).
+Prepositional phrases, if not subcategorized by the verb, are optional
+information and thus not governed by the verb; the respective PP is thus part
+of the set of adjuncts. Some verbs, like \xayr{tpY/}{tapy-}{put}, may take PP
+complements headed by an adposition, for instance, in cases like \fw{Mary puts
+the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont ]~[\tsub{NP}} the
+pile {\normalfont ]]}}. The PP {\fw{on the pile} is not an adjunct here because
+\fw{She does so on the pile} makes no sense; the PP must be an argument of the
+verb. Ayeri behaves the same way in this regard. These governed PPs are
+categorized as \Oblique{} with $\theta$ replaced by the proper semantic
+macrorole (\textit{loc}, \textit{src} or \textit{goal}).
 
 \ex\label{ex:ppcstruct}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest}
-[{\anno[\elem{\Adjc}]{PP}}
+[{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}]
 		[{\anno[{%
@@ -4875,7 +4885,7 @@ $\left(\anno*{\xhead{P}}\right)$
 ~
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest}
-[{\anno[\elem{\Adjc}]{PP}}
+[{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
 		[{\anno[{%
 				\pass{\Obj}%
@@ -4888,7 +4898,15 @@ $\left(\anno*{\xhead{P}}\right)$
 \end{minipage}
 \xe
 
-...
+With regards to functional structure, the difference between preposition and
+postposition does not matter, so the \Avm{} in (\ref{ex:adpmorphlex}) does not
+make a formal distinction between prepositions and postpositions. As described
+in \autoref{clitics_prep_dyn} (p.~\pageref{clitics_prep_dyn}) and 
+\autoref{sec:adpositions}, there is a particle \rayr{mN}{manga}, which has been
+analyzed as a clitic. This particle indicates that an adposition has a dynamic
+(or directional) reading. This is encoded by the feature \PSem{}, which is
+repreented morphologically by said particle and hence not generally
+present.
 
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
@@ -4898,13 +4916,52 @@ $\left(\anno*{\xhead{P}}\right)$
 		& P
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
+			(\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\}) \\
+			(\ups{\PSem} & = & $dyn$) \\
 		\end{tabular}
 	\end{tabu}%
 }
 \xe
 \end{morphlex}
 
+German, for one, encodes the difference between locational and directional of a
+group of prepositions uses as well, but by an alternation in the prepositional
+object's case between \Dat{} (locational) and \Acc{} (directional). Thus,
+\fw{auf dem Tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
+whereas \fw{auf den Tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
+table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
+\fw{an} `on surface, at') as:
+
+\ex
+\begin{tabular}[t]{l @{ $\implies$ } l}
+\PSem{} $dir$ & \ups{\Obj{} \Case{}} \req{} \Acc{} \\
+\PSem{} $loc$ & \ups{\Obj{} \Case{}} \req{} \Dat{} \\
+\end{tabular}
+\xe
+
+The \PSem{} attribute thus governs the case of the prepositional object by a
+requirement that its case be either \Acc{} or \Dat{}, depending on its value.
+Since nouns in German always carry case, the \PSem{} attribute needs to be
+present in the lexical rules for all prepositions which show the \Acc{}/\Dat{}
+alternation (%
+\fw{an},
+\fw{auf},
+\fw{hinter},
+\fw{in},
+\fw{neben},
+\fw{über},
+\fw{unter},
+\fw{vor},
+\fw{zwischen}%
+). In Ayeri, however, the particle \rayr{mN}{manga} alternates with nothing, so
+the absence of marking $dyn$ indicates a locational reading, which is reflected
+by \PCase{}'s attribute $loc$. Since the \PSem{} attribute finds no
+overt realization in the absence of the morphological marker, it may as well be
+omitted; \PCase{} thus defaults to \Oblq{loc}.
+
 ...
+
+\citet[151--155]{dalrymple2001}, \citet[31--41]{fortmann2006}
 
 % \section{Inflectional and verb phrases}
 % \label{sec:ips-vps}
