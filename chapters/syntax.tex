@@ -4863,7 +4863,7 @@ information and thus not governed by the verb; the respective PP is thus part
 of the set of adjuncts. Some verbs, like \xayr{tpY/}{tapy-}{put}, may take PP
 complements headed by an adposition, for instance, in cases like \fw{Mary puts
 the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont ]~[\tsub{NP}} the
-pile {\normalfont ]]}}. The PP {\fw{on the pile} is not an adjunct here because
+pile {\normalfont ]]}}. The PP \fw{on the pile} is not an adjunct here because
 \fw{She does so on the pile} makes no sense; the PP must be an argument of the
 verb in this case, not additional, optional information. Ayeri behaves the same
 way in this regard. These governed PPs are categorized as \Oblique{} with
@@ -4906,9 +4906,9 @@ make a formal distinction between prepositions and postpositions. As described
 in \autoref{clitics_prep_dyn} (p.~\pageref{clitics_prep_dyn}) and 
 \autoref{sec:adpositions}, there is a particle \rayr{mN}{manga}, which has been
 analyzed as a clitic. This particle indicates that an adposition has a
-directional reading. This is encoded by the feature \PSem{}, which is
-represented morphologically by said particle and hence not generally
-present.
+directional reading (specifically, into the direction of the preposition). This
+is encoded by the feature \PSem{}, which is represented morphologically by said
+particle and hence not generally present.
 
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
@@ -4930,6 +4930,7 @@ present.
 		& Cl
 		& \begin{tabular}[t]{l l l}
 			\ups{\PSem} & = & $dir$ \\
+			\ups{\PCase} & = & \Oblq{goal} \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -5019,6 +5020,7 @@ both cases.
 \begin{avm}
 \[\Adjc	&	\{\[
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+		\PCase	&	\Oblq{goal} \\
 		\PSem	&	$dir$ \\
 		\Obj	&	\[
 			\Pred	&	`house' \\
@@ -5140,6 +5142,7 @@ manga avan
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
+	\PCase	&	\Oblq{goal} \\
 	\PSem	&	$dir$ \\
 	\Tel	&	$+$ \\
 	\Obj	&	\[
@@ -5184,6 +5187,7 @@ manga avan
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
+	\PCase	&	\Oblq{goal} \\
 	\PSem	&	$dir$ \\
 	\Tel	&	$-$ \\
 	\Obj	&	\[
@@ -5242,29 +5246,50 @@ for `atelic' uses of the preposition.
 \xe
 \end{morphlex}
 
-... how to do `come up from under it' and such ...
+English verbs use prepositions heavily, whether they are idiomatic and part of
+the lexical entry of the word (\fw{clean up}, \fw{give in}, \fw{sign on}) or
+actually meaningful in connecting complements to the verb (\fw{come from}, 
+\fw{look at}, \fw{talk to}). As we have seen above, Ayeri behaves quite the
+opposite way in mostly using case for marking verbal complements, and having
+very few verbs with adpositional particles---compare the list in 
+(\ref{ex:particleverbs}) of \autoref{subsec:prepositions}
+(p.~\pageref{ex:particleverbs}). One effect of English's preposition-happiness
+is that they can also appear stacked, for instance, as in \fw{crawl out from
+under the table}, \fw{get out from inside the room}. Ayeri, however, cannot
+stack adpositions like this, and may use nouns instead, which is no surprise as
+most basic prepositions are, in fact, derived from nouns (compare
+\autoref{tab:prepos}, p.~\pageref{tab:prepos}). Hence, a phrase like \fw{out
+from under} might be rendered the following way:
+
+\ex\label{ex:nostackprep}\begingl
+	\gla Yam cacang (agonan) eyranena prihinena. //
+	\glb yam cat-yang agonan eyran-ena prihin-ena //
+	\glc \DatT{} crawl-\TsgM{}.\Aarg{} outside-\Top{} underside-\Gen{}
+		table-\Gen{} //
+	\glft `He crawls (to the outside) from the underside of the table.' //
+\endgl\xe
+
+In this particular example, \xayr{AgonnF}{agonan}{outside} is homonymous with
+the preposition \xayr{AgonnF}{agonan}{outside of}, however, the topic marker at
+the beginning of the clause shows that there is a corresponding dative NP.
+Strictly speaking, however, \rayr{AgonnF}{agonan} is not even
+necessary, since the first NP complement already indicates a motion from
+somewhere.\footnote{A grammaticalization process akin to that of
+\fw{inside of the X} to \fw{inside the X} may be a logical further
+development from here. What would be possible moreover as a result is the
+functionalization of the triad \Loc{}--\Dat{}--\Gen{} to indicate $loc$,
+$goal$, and $src$ also with adpositions in general, either with
+\rayr{mN}{manga} grammaticalizing further to really just marking direction,
+necessitating an obligatory \Dat{}/\Gen{} complement to indicate which way
+around, or with \rayr{mN}{manga} withering to zero, since the cases are already
+enough to mark direction. The way to express the difference between \fw{top/up}
+and \fw{bottom/down} would have to change, however, though
+\xayr{riNF/}{ring-}{rise, lift} and \xayr{les/}{lesa-}{fall} would be good
+candidates to generate new adpositions from. Alternatively,
+\rayr{sh}{saha} could become an equivalent of \rayr{mN}{manga} to indicate
+direction \fw{from} the indicated place.}
 
 ... modification of adpositions ...
-
-% \section{Complementizer phrases}
-% \label{sec:cps}
-
-% ...
-
-% \subsection{Relative clauses}
-% \label{subsec:relcs}
-
-% ...
-
-% \subsection{Conditional clauses}
-% \label{subsec:condcs}
-
-% ...
-
-% \subsection{Other types}
-% \label{subsec:cps_other}
-
-% ...
 
 % \section{Inflectional and verb phrases}
 % \label{sec:ips-vps}
@@ -5341,3 +5366,23 @@ for `atelic' uses of the preposition.
 % \citet[151\psqq]{dixon2012} → subjects
 % \citet[116\psqq]{comrie1989} → subjects
 % \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
+
+% \section{Complementizer phrases}
+% \label{sec:cps}
+
+% ...
+
+% \subsection{Relative clauses}
+% \label{subsec:relcs}
+
+% ...
+
+% \subsection{Conditional clauses}
+% \label{subsec:condcs}
+
+% ...
+
+% \subsection{Other types}
+% \label{subsec:cps_other}
+
+% ...
