@@ -382,13 +382,14 @@
 \newcounter{fnexno}
 \setcounter{fnexno}{1}
 \definelingstyle{fnex}{
-	exno=\roman{fnexno}\stepcounter{fnexno},
+	exno=\footnotesize\roman{fnexno}\stepcounter{fnexno},
+	everyex=\footnotesize,
 	numoffset=\footnotemargin,
-	exskip=0em,
-	belowpreambleskip=-0.5em,
-	interpartskip=-0.5em,
-	aboveglftskip=-0.5em,
-	exskip=1ex,
+	aboveexskip=2ex,
+	belowglpreambleskip=-1ex,
+	interpartskip=0.5ex,
+	aboveglftskip=-1ex,
+	belowexskip=0ex,
 }
 
 % Tahano Hikamu examples in the Writing System chapter
