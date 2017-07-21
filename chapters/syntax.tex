@@ -4855,6 +4855,7 @@ adposition.
 
 \pex\label{ex:ppstruct}
 \a PP → \anno*{\xbar{P}}
+\a \xbar{P} → \xbar{P} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
 \pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
 \xe
@@ -4874,35 +4875,41 @@ or \textit{goal}).
 
 \ex\label{ex:ppcstruct}\labels
 %\begin{minipage}[t]{.5\remaining}
-\tl\quad %Prepositions:\medskip
-%
-\begin{forest}
+\tl\quad Prepositions:\medskip
+
+\begin{forest} shorter edges,
 [{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
-		[\anno{\xhead{P}}]
-		[{\anno[{\{%
-				\pass{\Obj{}}
-				| \pass{\Compl{}}%
-			\}}]{XP}
-		}]
+		[\anno{\xbar{P}}
+			[\anno{\xhead{P}}]
+			[{\anno[{\{%
+					\pass{\Obj{}}
+					| \pass{\Compl{}}%
+				\}}]{XP}
+			}]
+		]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
 	]
 ]
-\end{forest}
+\end{forest}\medskip
 %\end{minipage}
 %~
 
 %\begin{minipage}[t]{.5\remaining}
-\tl\quad %Postpositions:\medskip
-%
-\begin{forest}
+\tl\quad Postpositions:\medskip
+
+\begin{forest} shorter edges,
 [{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
-		[{\anno[{\{%
-				\pass{\Obj{}}
-				| \pass{\Compl{}}%
-			\}}]{XP}
-		}]
-		[\anno{\xhead{P}}]
+		[\anno{\xbar{P}}
+			[{\anno[{\{%
+					\pass{\Obj{}}
+					| \pass{\Compl{}}%
+				\}}]{XP}
+			}]
+			[\anno{\xhead{P}}]
+		]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
 	]
 ]
 \end{forest}
@@ -5124,7 +5131,8 @@ example sentences for all configurations.
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
-%	\PSem	&	$loc$ \\
+	\PCase	&	\Oblq{loc} \\
+	\PSem	&	$loc$ \\
 	\Tel	&	$+$ \\
 	\Obj	&	\[
 		\Pred	&	`roof' \\
@@ -5169,7 +5177,8 @@ example sentences for all configurations.
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
-%	\PSem	&	$loc$ \\
+	\PCase	&	\Oblq{loc} \\
+	\PSem	&	$loc$ \\
 	\Tel	&	$-$ \\
 	\Obj	&	\[
 		\Pred	&	`hill' \\
@@ -5389,7 +5398,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 	\gla Ang galamyan panganya pesan-hen. //
 	\glb ang galam=yan.Ø pangan-ya pesan=hen //
 	\glc \AgtT{} wait=\TplM{}.\Top{} end-\Loc{} until=all //
-	\glft `They waited all until the end.' //
+	\glft `They waited until the very end.' //
 \endgl
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
@@ -5415,6 +5424,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 	\Adjc	&	\{\[
 		\Pred	&	\astruct{until}{\ups{\Obj}} \\
 		\PCase	&	\Oblq{loc} \\
+		\PSem	&	$loc$ \\
 		\Obj	&	\[
 			\Pred	&	`end' \\
 			\Case	&	\Loc \\
