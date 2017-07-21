@@ -4848,13 +4848,15 @@ which is also reflected in the phrase structure rules given in
 such an element can appear in either position. Since there are no
 circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
 catch-all term for various phrase types which form complements of semantic
-adpositions in the form of NPs and DPs. These are objects governed by the
+adpositions in the form of NPs and DPs, but especially the postposition 
+\xayr{pesnF}{pesan}{until} may also have a CP complement, that is, a whole
+complement clause. The nominal complements are objects governed by the
 adposition.
 
 \pex\label{ex:ppstruct}
 \a PP → \anno*{\xbar{P}}
-\a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\pass{\Obj}]{XP}
-$\left(\anno*{\xhead{P}}\right)$
+\a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
+\pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
 \xe
 
 The same as above is spelled out again in c-tree form in (\ref{ex:ppcstruct}).
@@ -4871,33 +4873,40 @@ $\theta$ replaced by the proper semantic macrorole (\textit{loc}, \textit{src}
 or \textit{goal}).
 
 \ex\label{ex:ppcstruct}\labels
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest}
+%\begin{minipage}[t]{.5\remaining}
+\tl\quad %Prepositions:\medskip
+%
+\begin{forest}
 [{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}]
-		[{\anno[{%
-				\pass{\Obj}%
-			}]{XP}
+		[{\anno[{\{%
+				\pass{\Obj{}}
+				| \pass{\Compl{}}%
+			\}}]{XP}
 		}]
 	]
 ]
 \end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest}
+%\end{minipage}
+%~
+
+%\begin{minipage}[t]{.5\remaining}
+\tl\quad %Postpositions:\medskip
+%
+\begin{forest}
 [{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
 	[\anno{\xbar{P}}
-		[{\anno[{%
-				\pass{\Obj}%
-			}]{XP}
+		[{\anno[{\{%
+				\pass{\Obj{}}
+				| \pass{\Compl{}}%
+			\}}]{XP}
 		}]
 		[\anno{\xhead{P}}]
 	]
 ]
 \end{forest}
-\end{minipage}
+%\end{minipage}
 \xe
 
 With regards to functional structure, the difference between preposition and
@@ -4949,7 +4958,7 @@ whereas \fw{auf den Tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
 table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
 \fw{an} `at') as:
 
-\ex
+\ex\rc{German}%
 \begin{tabular}[t]{l @{ $\implies$ } l}
 \PSem{} $dir$ & \ups{\Obj{} \Case{}} \req{} \Acc{} \\
 \PSem{} $loc$ & \ups{\Obj{} \Case{}} \req{} \Dat{} \\
@@ -5274,7 +5283,7 @@ somewhere.\footnote{A grammaticalization process similar to that of
 What would be possible moreover as a result is the functionalization of the
 triad \Loc{}--\Dat{}--\Gen{} to indicate $loc$, $goal$, and $src$ also with
 adpositions in general, either with \rayr{mN}{manga} grammaticalizing further
-to really just marking direction, necessitating an obligatory \Dat{}/\Gen{}
+to then solely mark direction, necessitating an obligatory \Dat{}/\Gen{}
 complement to indicate which way around, or with \rayr{mN}{manga} withering to
 zero, since the cases are already enough to mark direction.
 
@@ -5291,7 +5300,7 @@ zero, since the cases are already enough to mark direction.
 The way to express the difference between \fw{top/up} and \fw{bottom/down}
 would have to change for obvious reasons, though \rayr{riNF}{ring} from 
 \xayr{riNF/}{ring-}{rise, lift} and \rayr{les}{lesa} from \xayr{les/}{lesa-}
-{fall}, or \rayr{raut}{rauta} from \xayr{raut/}{raut-}{heave (up)} and
+{fall}, or \rayr{rot}{rota} from \xayr{rot/}{rot-}{heave (up)} and
 \rayr{kos}{kosa} from \xayr{kos/}{kosa-}{drop (down)} would be good candidates
 from which to generate new adpositions. Alternatively, \rayr{sh}{saha} could
 become an equivalent of \rayr{mN}{manga} to indicate direction \fw{from} the
@@ -5307,15 +5316,119 @@ indicated place.
 \endgl
 
 \a\begingl
-	\gla ... saha ring eyranya. //
-	\glb ... saha ring eyran-yam //
+	\gla ... saha rota eyranya. //
+	\glb ... saha rota eyran-ya //
 	\glc ... \Dir{}.\textsc{from} up cellar-\Loc{} //
 	\glft `... up from the cellar.' //
 \endgl
 \xe
 }
 
-... modification of adpositions ...
+Like adjectives, adpositions may be modified by adverbs, for instance, for
+intensification. This means that items from the class of adverbs categorized as
+quantifiers (\autoref{subsec:quantifiers}) are likely to occur. As we have seen
+previously, the most common such expressions are enclitic, that is, they merge
+with \xhead{P} rather than be adjuncts to \xbar{P}. An analysis of the c- and
+f-structure of adpositional phrases with adverbial modifiers is shown in 
+(\ref{ex:adpadv}).
+
+\pex\label{ex:adpadv}
+\a\label{ex:adpadv_1}
+\begingl
+	\gla Ang nimpya {} Tapan manga kong nangaya sirimang. //
+	\glb ang nimp-ya Ø Tapan manga kong nangaya sirimang //
+	\glc \AgtT{} run-\TsgM{} \Top{} Tapan \Dir{} inside house-\Loc{} 
+		straight //
+	\glft `Tapan is running straight into the house.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[{\anno[\pass{\downs{\PCase}}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{\xbar{P}}
+			[\anno{\xhead{P}}
+				[\anno{Cl}
+					[manga]
+				]
+				[\anno{\xhead{P}}
+					[kong]
+				]
+			]
+			[{\anno[\pass{\Obj}]{NP}}
+				[nangaya, roof]
+			]
+		]
+		[{\anno[\pass{\Adjc}]{AdvP}}
+			[sirimang, roof]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Oblq{goal}	&	\[
+		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+		\PCase	&	\Oblq{goal} \\
+		\PSem	&	$dir$ \\
+		\Obj	&	\[
+			\Pred	&	`house' \\
+			\Case	&	\Loc \\
+		\] \\
+		\Adjc	&	\{
+			\[
+				\Pred	&	`straight' \\
+			\]
+		\} \\
+	\] \\
+\]
+\end{avm}
+
+\a\label{ex:adppadv_2}
+\begingl
+	\gla Ang galamyan panganya pesan-hen. //
+	\glb ang galam=yan.Ø pangan-ya pesan=hen //
+	\glc \AgtT{} wait=\TplM{}.\Top{} end-\Loc{} until=all //
+	\glft `They waited all until the end.' //
+\endgl
+
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[{\anno[\elem{\Adjc}]{PP}}
+	[\anno{\xbar{P}}
+		[{\anno[\pass{\Obj}]{NP}}
+			[panganya, roof]
+		]
+		[\anno{\xhead{P}}
+			[\anno{\xhead{P}}
+				[pesan]
+			]
+			[\anno{Cl}
+				[-hen]
+			]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Adjc	&	\{\[
+		\Pred	&	\astruct{until}{\ups{\Obj}} \\
+		\PCase	&	\Oblq{loc} \\
+		\Obj	&	\[
+			\Pred	&	`end' \\
+			\Case	&	\Loc \\
+		\] \\
+		\Adjc	&	\{\[
+			\Pred	&	`all' \\
+		\]\}
+	\]\} \\
+\]
+\end{avm}
+
+\xe
+
+...
 
 % \section{Inflectional and verb phrases}
 % \label{sec:ips-vps}

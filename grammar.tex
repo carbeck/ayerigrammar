@@ -382,8 +382,9 @@
 \newcounter{fnexno}
 \setcounter{fnexno}{1}
 \definelingstyle{fnex}{
-	exno=\footnotesize\roman{fnexno}\stepcounter{fnexno},
-	everyex=\footnotesize,
+%	exno=\footnotesize\roman{fnexno}\stepcounter{fnexno},
+	exno=\roman{fnexno}\stepcounter{fnexno},
+%	everyex=\footnotesize,
 	numoffset=\footnotemargin,
 	aboveexskip=2ex,
 	belowglpreambleskip=-1ex,
