@@ -5342,7 +5342,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 (\ref{ex:adpadv}).
 
 \pex\label{ex:adpadv}
-\a\label{ex:adpadv_1}
+\a\label{ex:adpadv_pre}
 \begingl
 	\gla Ang nimpya {} Tapan manga kong nangaya sirimang. //
 	\glb ang nimp-ya Ø Tapan manga kong nangaya sirimang //
@@ -5393,7 +5393,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 \]
 \end{avm}
 
-\a\label{ex:adppadv_2}
+\a\label{ex:adppadv_post}
 \begingl
 	\gla Ang galamyan panganya pesan-hen. //
 	\glb ang galam=yan.Ø pangan-ya pesan=hen //
@@ -5436,6 +5436,104 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 \]
 \end{avm}
 
+\xe
+
+Since with prepositions the adverb comes after the nominal complement as in
+(\ref{ex:adpadv_pre}), there may be potential ambiguity as to constituency,
+since adjectives and adverbs do not differ in form. One such case is
+illustrated in (\ref{ex:adjadvprep_adv}), where the A-type modifier
+\xayr{brsF}{baras}{rough(ly)} may be interpreted either as an adverb modifying
+the adpositional phrase or as an adjective modifying the prepositional object.
+The individual words are copied again to the very bottom of the c-structure
+trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
+structures may lead to the same outcome on the surface.
+
+\ex\label{ex:adjadvprep_adv}
+\begingl
+	\gla marin altanya baras //
+	\glb marin altan-ya baras //
+	\glc front rock-\Loc{} rough(ly) //
+	\glft `roughly in front of the rock'\\
+		\textit{or:} `in front of the rough rock' //
+\endgl\medskip
+
+\begin{forest} shorter edges, italic leaves
+[{\anno[\pass{\GF}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{\xbar{P}}
+			[\anno{\xhead{P}}
+				[\fw{marin} [marin, tier=word, edge=dotted]]
+			]
+			[{\anno[\pass{\Obj}]{NP}}
+				[\anno{\xhead{N}}
+					[\fw{altanya} [altanya, tier=word, edge=dotted]]
+				]
+			]
+		]
+		[{\anno[\elem{\Adjc}]{AdvP}}
+			[\fw{baras}, roof [baras, tier=word, edge=dotted]]
+		]
+	]
+]
+\end{forest}~\quad{}or\quad{}~\begin{forest} shorter edges, italic leaves
+[{\anno[\pass{\GF}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{P}
+			[\fw{marin} [marin, tier=word, edge=dotted]]
+		]
+		[{\anno[\pass{\Obj}]{NP}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}
+					[\fw{altanya} [altanya, tier=word, edge=dotted]]
+				]
+				[{\anno[\elem{\Adjc}]{AP}}
+					[\fw{baras}, roof [baras, tier=word, edge=dotted]]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+Ambiguity can be resolved in these cases by subordinating the adjective to the
+noun explicitly with the relativizer \rayr{si}{si}, as shown in
+(\ref{ex:adjadvprep_adj}). The relative clause, then, essentially means `which
+is \textsc{adjective}'. The fact that it is somewhat hard to come up with an
+example is probably telling of the likelihood of such ambiguity. Wrapping an
+adjective into a CP to explicitly subordinate it is always a permissible
+strategy of clarification. In turn, this also means that adpositions cannot be
+modified by CPs, however, this should rarely be necessary.
+
+\ex\label{ex:adjadvprep_adj}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla marin altanya si baras //
+	\glb marin altan-ya si baras //
+	\glc front rock-\Loc{} \Rel{} rough //
+	\glft `in front of the rough rock' //
+\endgl
+\end{minipage}
+~
+\begin{forest} shorter edges, italic leaves
+[{\anno[\pass{\GF}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{P}
+			[marin]
+		]
+		[{\anno[\pass{\Obj}]{NP}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}
+					[altanya]
+				]
+				[{\anno[\elem{\Adjc}]{CP}}
+					[si baras, roof]
+				]
+			]
+		]
+	]
+]
+\end{forest}
 \xe
 
 ...
