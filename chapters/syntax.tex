@@ -254,30 +254,45 @@ however, will not be treated as targets of syntactic operations, since \Lfg{}
 follows the approach of lexical integrity. Thus, bound elements like affixes
 and clitics are assumed not to be reflected or affected by syntax itself. The
 phrase structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
+The asterisk in (\ref{ex:npstruct_Adj}) is the Kleene star and indicates zero
+or more instances of the element. Elements which may occur zero or once are in
+brackets.
 
 \pex\label{ex:npstruct}
-\a NP → \anno*{\xbar{N}}
-\a \xbar{N} → \anno*{\xhead{N}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
+\a\label{ex:npstruct_NP}%
+	NP → \anno*{\xbar{N}}
+\a\label{ex:npstruct_Compl}%
+	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{CP}\right)$
+\a\label{ex:npstruct_Poss}%
+	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
+	{\{NP | DP\}}\right)$
+\a\label{ex:npstruct_Adj}
+	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP*}
+\a\label{ex:npstruct_Comp}
+	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\XCompl}]{NP}\right)$
 \xe
 
 This rule defines that NPs have a lexical head which is on the left side,
-followed optionally by modifiers which act as adjuncts to the noun. The
-description leaves open which kind of phrases the adjuncts can consist of, but
-as mentioned above, these are commonly adjectives (forming adjective phrases,
-APs), nominal adjuncts (NPs), as well as relative clauses (forming
-complementizer phrases, CPs). This can be represented as a
-constituent-structure tree in the way described in (\ref{ex:npcstruct}).
+followed optionally by modifiers which may have various relationships to the
+noun: complement (instrumental nominal, NP/DP), adjunct (adjective phrase, AP),
+possessor (genitive NP/DP), relative clause (forming a complementizer phrase,
+CP). This can be represented as a constituent-structure tree in the way
+described in (\ref{ex:npcstruct}).
 
 \ex\label{ex:npcstruct}\labels
 \begin{forest}
 [{\anno[\{\pass{df} | \pass{gf}\}]{NP}}
 	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}]
-		[{$\left(\anno[{%
-				\elem{\Adjc}%
-			}]{XP}\right)$
-		}]
+		[\anno{\xbar{N}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}]
+				[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
+			]
+			[{\anno[\elem{\Adjc}]{AP*}}]
+		]
+		[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
 	]
+	[{$\left(\anno[\pass{\Compl}]{CP}\right)$}]
 ]
 \end{forest}
 \xe
@@ -355,7 +370,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{kasu}]
 			]
-			[{\anno[\pass{\Oblq{ins}}]{NP}}
+			[{\anno[\pass{\XCompl}]{NP}}
 				[{bariri}, roof]
 			]
 		]
@@ -626,8 +641,9 @@ in the choice of case markers of the agent and patient cases, which need to
 agree with the lexical head they attach to. An example of this is given in 
 (\ref{ex:animcaseagr}).
 
-\pex\label{ex:animcaseagr}
-\a\label{ex:animok} %
+\ex\label{ex:animcaseagr}\labels
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:animok} %
 \begin{forest}
 [\anno{\xhead{N}}
 	[\anno{N\tsub{stem}}
@@ -645,8 +661,10 @@ agree with the lexical head they attach to. An example of this is given in
 	]
 ]
 \end{forest}
-
-\a\label{ex:animclash} %
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:animclash} %
 \ljudge*\begin{forest}
 [\anno{\xhead{N}}
 	[\anno{N\tsub{stem}}
@@ -664,20 +682,22 @@ agree with the lexical head they attach to. An example of this is given in
 	]
 ]
 \end{forest}
+\end{minipage}
 \xe
 
-Example (\ref{ex:animok}) shows a well-formed construction: the noun,
+Example (\ref{ex:animcaseagr}a) shows a well-formed construction: the noun,
 \xayr{gnF}{gan}{child}, is animate, hence the case particle also needs to be 
 animate---the case particle must thus be \rayr{/As}{-ang} to be coherent. In
-contrast to this, example (\ref{ex:animclash}) is not well-formed in that the
-noun is animate but the case particle, \rayr{/reNF}{-reng}, signals that it is
-inanimate: the \Anim{} values of the noun stem and its suffix clash and cannot
-be conclusively unified for \xhead{N} itself. The same principle of coherence
-is, of course, also true for proper nouns, which receive a case-marking
-particle:
+contrast to this, example (\ref{ex:animcaseagr}b) is not well-formed in that
+the noun is animate but the case particle, \rayr{/reNF}{-reng}, signals that it
+is inanimate: the \Anim{} values of the noun stem and its suffix clash and
+cannot be conclusively unified for \xhead{N} itself. The same principle of
+coherence is, of course, also true for proper nouns, which receive a
+case-marking particle:
 
-\pex\label{ex:animcaseagrname}
-\a\label{ex:animokname} %
+\ex\label{ex:animcaseagrname}\labels
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:animokname} %
 \begin{forest}
 [\anno{\xhead{N}}
 	[\anno{Cl}
@@ -695,8 +715,10 @@ particle:
 	]
 ]
 \end{forest}
-
-\a\label{ex:animclashname} %
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:animclashname} %
 \ljudge*\begin{forest}
 [\anno{\xhead{N}}
 	[\anno{Cl}
@@ -714,6 +736,7 @@ particle:
 	]
 ]
 \end{forest}
+\end{minipage}
 \xe
 
 Furthermore, example (\ref{ex:nounqadj}) already showed that nouns may be
@@ -4845,16 +4868,21 @@ Pilaya} with additional locative marking on the noun.
 In Ayeri, PPs proper may either be locative complements of the verb or locative
 adverbials ungoverned by the verb, though the number of verbs taking PP
 complements is smaller than in English due to case marking, as described above.
-As mentioned initially, Ayeri possesses prepositions as well as postpositions,
-which is also reflected in the phrase structure rules given in
-(\ref{ex:pppstruct}). Here, the \xhead{P}s in brackets are supposed to mean
-that such an element can appear in either position. Since there are no
-circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
-catch-all term for various phrase types which form complements of semantic
-adpositions in the form of NPs and DPs, but especially the postposition
-\xayr{pesnF}{pesan}{until} may also have a CP complement, that is, a whole
-complement clause. The nominal complements are objects governed by the
-adposition.
+As mentioned initially, Ayeri possesses prepositions as well as postpositions. With regards to word order typology, we can thus note:
+
+\ex
+Order of noun and adposition: Adp N, N Adp
+\xe
+
+The fact that Ayeri has both prepositions and postpositions is also reflected
+in the phrase structure rules given in (\ref{ex:pppstruct}). Here, the
+\xhead{P}'s in brackets are supposed to mean that such an element can appear in
+either position. Since there are no circumpositions in Ayeri, only ever one
+site is occupied. XP is used again as a catch-all term for various phrase types
+which form complements of semantic adpositions in the form of NPs and DPs, but
+especially the postposition \xayr{pesnF}{pesan}{until} may also have a CP
+complement, that is, a whole complement clause. The nominal complements are
+objects governed by the adposition.
 
 \pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}}
@@ -4891,7 +4919,7 @@ or \textit{goal}).
 				\}}]{XP}
 			}]
 		]
-		[{\anno[\elem{\Adjc}]{AdvP}}]
+		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
 	]
 ]
 \end{forest}\medskip
@@ -4911,7 +4939,7 @@ or \textit{goal}).
 			}]
 			[\anno{\xhead{P}}]
 		]
-		[{\anno[\elem{\Adjc}]{AdvP}}]
+		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
 	]
 ]
 \end{forest}
@@ -5222,8 +5250,10 @@ location or destination as a goal (hence `telic') and the path as a non-goal
 define the lexical rules given in (\ref{ex:lingavanmorphlex}). Compared to the
 rules given for adpositions more generally in (\ref{ex:adpmorphlex}), there is
 an additional feature \Tel{}, which may be positive or negative depending on
-context, and an accompanying rule which determines the case of the complement 
-for `atelic' uses of the preposition.
+context, and an accompanying rule which determines the case of the complement
+for `atelic' uses of the preposition. An addtional rule is operating for both
+prepositions which determines that if the preposition is `atelic', put the
+prepositional object in the dative case.
 
 \begin{morphlex}
 \pex\label{ex:lingavanmorphlex}%
@@ -5236,10 +5266,10 @@ for `atelic' uses of the preposition.
 			\ups{\Tel}	& = & $\pm$ \\
 		\end{tabular} \medskip
 
-		\begin{tabular}[t]{l l l}
-%			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
-			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
-		\end{tabular}
+% 		\begin{tabular}[t]{l l l}
+% %			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
+% 			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
+% 		\end{tabular}
 	\end{tabu}%
 }
 
@@ -5252,12 +5282,16 @@ for `atelic' uses of the preposition.
 			\ups{\Tel}	& = & $\pm$ \\
 		\end{tabular} \medskip
 
-		\begin{tabular}[t]{l l l}
-%			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
-			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
-		\end{tabular}
+% 		\begin{tabular}[t]{l l l}
+% %			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
+% 			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
+% 		\end{tabular}
 	\end{tabu}%
 }
+
+\a\label{ex:telcaserule}%
+	\ups{\Tel} = $-$ $\implies$ \ups{\Obj{} \Case{}} \req{}
+\Dat{}
 \xe
 \end{morphlex}
 
@@ -5444,9 +5478,9 @@ since adjectives and adverbs do not differ in form. One such case is
 illustrated in (\ref{ex:adjadvprep_adv}), where the A-type modifier
 \xayr{brsF}{baras}{rough(ly)} may be interpreted either as an adverb modifying
 the adpositional phrase or as an adjective modifying the prepositional object.
-% The individual words are copied again to the very bottom of the c-structure
-% trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
-% structures may lead to the same outcome on the surface.
+The individual words are copied again to the very bottom of the c-structure
+trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
+structures may lead to the same outcome on the surface.
 
 \ex\label{ex:adjadvprep_adv}
 \begingl
