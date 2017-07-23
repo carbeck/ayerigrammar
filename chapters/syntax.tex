@@ -194,14 +194,17 @@ the following lexicocentric conditions operate on both DP and NP as exponents
 of case:
 
 \ex\label{ex:dpnpcasemap}\labels
-\begin{tabular}[t]{@{} l @{\quad} l @{$\implies$} l}
+\begin{tabular}[t]{@{} l @{\quad} l @{ $\implies$ } l}
 \tl\quad & \downs{\Case} = \Aarg	& \pass{\Sbj} \\
 \tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
 \tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
-	\pass{\Oblq{to}} \\
+%	\pass{\Oblq{goal}} \\
+	\ups{\PCase} = \Oblq{goal} \\
 \tl\quad & \downs{\Case} = \Gen		& \pass{\Possr} \logor{} 
-	\pass{\Oblq{src}} \logor{} \pass{\Oblq{from}} \\
-\tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \\
+%	\pass{\Oblq{src}} \\
+	\ups{\PCase} = \Oblq{src} \\
+\tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \logor{}
+	\ups{\PCase} = \Oblq{loc} \\
 \tl\quad & \downs{\Case} = \Caus	& \pass{\Oblq{caus}} \\
 \tl\quad & \downs{\Case} = \Ins		& \pass{\Oblq{ins}} \\
 \end{tabular}
@@ -254,7 +257,7 @@ phrase structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
 
 \pex\label{ex:npstruct}
 \a NP → \anno*{\xbar{N}}
-\a \xbar{N} → \anno*{\xhead{N}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
+\a \xbar{N} → \anno*{\xhead{N}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
 \xe
 
 This rule defines that NPs have a lexical head which is on the left side,
@@ -271,7 +274,7 @@ constituent-structure tree in the way described in (\ref{ex:npcstruct}).
 	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}]
 		[{$\left(\anno[{%
-				\pass{\Adjc}%
+				\elem{\Adjc}%
 			}]{XP}\right)$
 		}]
 	]
@@ -304,7 +307,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 			[\anno{\xhead{N}}
 				[{ningan}]
 			]
-			[{\anno[\pass{\Adjc}]{AP}}
+			[{\anno[\elem{\Adjc}]{AP}}
 				[{hiro}, roof]
 			]
 		]
@@ -1090,7 +1093,7 @@ such.
 
 \pex\label{ex:dpstruct}
 \a DP → \anno*{\xbar{D}}
-\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\pass{\Adjc}}]{XP}\right)$
+\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:dpcstruct}
@@ -1099,7 +1102,7 @@ such.
 	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
 		[{$\left(\anno[{%
-				\pass{\Adjc}%
+				\elem{\Adjc}%
 			}]{XP}\right)$
 		}]
 	]
@@ -1169,7 +1172,7 @@ as compared to nouns.
 	% 		[\anno{\xhead{D}}
 	% 			[{yāng}]
 	% 		]
-	% 		[{\anno[\pass{\Adjc}]{AP}}
+	% 		[{\anno[\elem{\Adjc}]{AP}}
 	% 			[{hiro}, roof]
 	% 		]
 	% 	]
@@ -1217,7 +1220,7 @@ as compared to nouns.
 	% 		[\anno{\xhead{D}}
 	% 			[{nang}]
 	% 		]
-	% 		[{\anno[\pass{\Adjc}]{NP}}
+	% 		[{\anno[\elem{\Adjc}]{NP}}
 	% 			[{bariri}, roof]
 	% 		]
 	% 	]
@@ -1248,7 +1251,7 @@ mino}{si mino}{who is happy}.
 	% 		[\anno{\xhead{D}}
 	% 			[{yeng}]
 	% 		]
-	% 		[{\anno[\pass{\Adjc}]{CP}}
+	% 		[{\anno[\elem{\Adjc}]{CP}}
 	% 			[{si mino}, roof]
 	% 		]
 	% 	]
@@ -1396,7 +1399,7 @@ unincorporated adjective looks like.
 		[\anno{\xhead{D}}
 			[danyās]
 		]
-		[{\anno[\pass{\Adjc}]{AP}}
+		[{\anno[\elem{\Adjc}]{AP}}
 			[{tuvo}, roof]
 		]
 	]
@@ -1471,7 +1474,7 @@ see.
 		[\anno{Cl}
 			[da-]
 		]
-		[{\anno[\pass{\Adjc}]{AP}}
+		[{\anno[\elem{\Adjc}]{AP}}
 %			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}, narrower nodes,
 					[\anno{A\tsub{stem}}
@@ -1684,7 +1687,7 @@ base to attach it to, which is represented in the accompanying c-structure
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
 %	[\anno{\xbar{D}}
-		[{\anno[\pass{\Adjc}]{AP}}
+		[{\anno[\elem{\Adjc}]{AP}}
 %			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}, narrower nodes,
 					[\anno{Cl}
@@ -3385,7 +3388,7 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 
 \ex~\label{ex:adjpcstruct}\labels
 \begin{forest}
-[{\anno[\{\pass{\Adjc} | \pass{\XCompl}\}]{AP}}
+[{\anno[\{\elem{\Adjc} | \pass{\XCompl}\}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
@@ -3438,12 +3441,12 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 			[\anno{\xhead{N}}
 				[bisuayas]
 			]
-			[{\anno[\pass{\Adjc}]{AP}}
+			[{\anno[\elem{\Adjc}]{AP}}
 				[\anno{\xbar{A}}
 					[\anno{\xhead{A}}
 						[sadayo]
 					]
-					[{\anno[\pass{\Adjc}]{AdvP}}
+					[{\anno[\elem{\Adjc}]{AdvP}}
 						[{kalam}, roof]
 					]
 				]
@@ -3760,7 +3763,7 @@ cs:intrusivequant2_2});
 				]
 				[{\normalfont Ø}, name=CP_orig]
 			]
-			[{\anno[\pass{\Adjc}]{AdvP}}
+			[{\anno[\elem{\Adjc}]{AdvP}}
 				[ankyu, roof]
 			]
 		]
@@ -4007,16 +4010,16 @@ adverbs.
 
 \pex\label{ex:advpstruct}
 \a AdvP → \anno*{\xbar{Adv}}
-\a \xbar{Adv} → \anno*{\xhead{Adv}} $\left(\anno*[{\pass{\Adjc}}]{AdvP}\right)$
+\a \xbar{Adv} → \anno*{\xhead{Adv}} $\left(\anno*[{\elem{\Adjc}}]{AdvP}\right)$
 \xe
 
 \ex~\label{ex:advpcstruct}\labels
 \begin{forest}
-[{\anno[\pass{\Adjc}]{AdvP}}
+[{\anno[\elem{\Adjc}]{AdvP}}
 	[\anno{\xbar{Adv}}
 		[\anno{\xhead{Adv}}]
 		[{$\left(\anno[{%
-				\pass{\Adjc}%
+				\elem{\Adjc}%
 			}]{AdvP}\right)$%
 		}]
 	]
@@ -4054,12 +4057,12 @@ context.
 \end{minipage}
 ~
 \begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Adjc}]{AdvP}}
+[{\anno[\elem{\Adjc}]{AdvP}}
 	[\anno{\xbar{Adv}}
 		[\anno{\xhead{Adv}}
 			[bita]
 		]
-		[{\anno[\pass{\Adjc}]{AdvP}}
+		[{\anno[\elem{\Adjc}]{AdvP}}
 %			[\anno{\xbar{Adv}}
 				[\anno{\xhead{Adv}}
 					[ikan-ikan]
@@ -4093,13 +4096,13 @@ context.
 \end{minipage}
 ~
 \begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Adjc}]{AdvP}}
+[{\anno[\elem{\Adjc}]{AdvP}}
 %	[\anno{\xbar{Adv}}
 		[\anno{\xhead{Adv}}
 			[\anno{\xhead{Adv}}
 				[vakisoy]
 			]
-			[{\anno[\pass{\Adjc}]{Cl}}
+			[{\anno[\elem{\Adjc}]{Cl}}
 				[-ma]
 			]
 		]
@@ -4166,7 +4169,7 @@ p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated;
 % 			]
 % 			[{\anno[\Adjc]{Cl}}
 % 				[-ikan]
-% 				[{\anno[\pass{\Adjc}]{Cl}}
+% 				[{\anno[\elem{\Adjc}]{Cl}}
 % 					[kagan]
 % 				]
 % 			]
@@ -4254,12 +4257,12 @@ form a phrase which acts as a modifier to \xayr{gino}{gino}{drunk}.
 				[\anno{\xhead{A}}
 					[gino]
 				]
-				[{\anno[\pass{\Adjc}]{AdvP}}
+				[{\anno[\elem{\Adjc}]{AdvP}}
 					[\anno{\xbar{Adv}}
 						[\anno{\xhead{Adv}}
 							[kagan]
 						]
-						[{\anno[\pass{\Adjc}]{Adv}}
+						[{\anno[\elem{\Adjc}]{Adv}}
 %							[\anno{\xbar{Adv}}
 								[\anno{\xhead{Adv}}
 									[patu]
@@ -4329,12 +4332,12 @@ adjective modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
 					[\anno{\xhead{Adv}}
 						[$e$, name=empty]
 					]
-					[{\anno[\pass{\Adjc}]{AdvP}}
+					[{\anno[\elem{\Adjc}]{AdvP}}
 						[\anno{\xbar{Adv}}
 							[\anno{\xhead{Adv}}
 								[kagan]
 							]
-							[{\anno[\pass{\Adjc}]{AdvP}}
+							[{\anno[\elem{\Adjc}]{AdvP}}
 %								[\anno{\xbar{Adv}}
 									[\anno{\xhead{Adv}}
 										[patu]
@@ -4844,16 +4847,16 @@ adverbials ungoverned by the verb, though the number of verbs taking PP
 complements is smaller than in English due to case marking, as described above.
 As mentioned initially, Ayeri possesses prepositions as well as postpositions,
 which is also reflected in the phrase structure rules given in
-(\ref{ex:ppstruct}). Here, the \xhead{P}s in brackets are supposed to mean that
-such an element can appear in either position. Since there are no
+(\ref{ex:pppstruct}). Here, the \xhead{P}s in brackets are supposed to mean
+that such an element can appear in either position. Since there are no
 circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
 catch-all term for various phrase types which form complements of semantic
-adpositions in the form of NPs and DPs, but especially the postposition 
+adpositions in the form of NPs and DPs, but especially the postposition
 \xayr{pesnF}{pesan}{until} may also have a CP complement, that is, a whole
 complement clause. The nominal complements are objects governed by the
 adposition.
 
-\pex\label{ex:ppstruct}
+\pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}}
 \a \xbar{P} → \xbar{P} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
@@ -4874,7 +4877,7 @@ $\theta$ replaced by the proper semantic macrorole (\textit{loc}, \textit{src}
 or \textit{goal}).
 
 \ex\label{ex:ppcstruct}\labels
-%\begin{minipage}[t]{.5\remaining}
+\begin{minipage}[t]{.5\remaining}
 \tl\quad Prepositions:\medskip
 
 \begin{forest} shorter edges,
@@ -4892,10 +4895,9 @@ or \textit{goal}).
 	]
 ]
 \end{forest}\medskip
-%\end{minipage}
-%~
-
-%\begin{minipage}[t]{.5\remaining}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
 \tl\quad Postpositions:\medskip
 
 \begin{forest} shorter edges,
@@ -4913,7 +4915,7 @@ or \textit{goal}).
 	]
 ]
 \end{forest}
-%\end{minipage}
+\end{minipage}
 \xe
 
 With regards to functional structure, the difference between preposition and
@@ -5264,15 +5266,14 @@ the lexical entry of the word (\fw{clean up}, \fw{give in}, \fw{sign up}) or
 actually meaningful in connecting complements to the verb (\fw{come from}, 
 \fw{look at}, \fw{talk to}). As we have seen above, Ayeri behaves quite the
 opposite way in mostly using case for marking verbal complements, and having
-very few verbs with adpositional particles---compare the list in 
+very few verbs with adpositional particles---compare the list in
 (\ref{ex:particleverbs}) of \autoref{subsec:prepositions}
-(p.~\pageref{ex:particleverbs}). One effect of English's preposition-happiness
-is that they can also appear stacked, for instance, as in \fw{crawl out from
-under the table}, \fw{get out from inside the room}. Ayeri, however, cannot
-stack adpositions like this, and may use nouns instead, which is no surprise as
-most basic prepositions are, in fact, derived from nouns (compare
-\autoref{tab:prepos}, p.~\pageref{tab:prepos}). Hence, a phrase like \fw{out
-from under} might be rendered the following way:
+(p.~\pageref{ex:particleverbs}). Different from English, Ayeri cannot stack
+prepositions as in \fw{crawl out from under the table}, \fw{get out from inside
+the room}. Instead, it uses nouns, which is no surprise as most basic
+prepositions are derived from nouns (compare \autoref{tab:prepos},
+p.~\pageref{tab:prepos}). A phrase like \fw{out from under} may thus be
+rendered as in (\ref{ex:nostackprep}).
 
 \ex\label{ex:nostackprep}\begingl
 	\gla Yam cacang (agonan) eyranena prihinena. //
@@ -5285,27 +5286,27 @@ from under} might be rendered the following way:
 In this particular example, \xayr{AgonnF}{agonan}{outside} is homonymous with
 the preposition \xayr{AgonnF}{agonan}{outside of}, however, the topic marker at
 the beginning of the clause shows that there is a corresponding dative NP.
-Strictly speaking, however, \rayr{AgonnF}{agonan} is not even
-necessary, since the first NP complement already indicates a motion from
-somewhere.\footnote{A grammaticalization process similar to that of
-\fw{inside of the X} to \fw{inside the X} may be a logical next step from here.
-What would be possible moreover as a result is the functionalization of the
-triad \Loc{}--\Dat{}--\Gen{} to indicate $loc$, $goal$, and $src$ also with
+Strictly speaking, \rayr{AgonnF}{agonan} is not even necessary, since the first
+NP complement already indicates a motion from somewhere.\footnote{A
+grammaticalization process similar to that of \fw{inside of the X} to
+\fw{inside the X} may be a logical next step from here. What would be possible
+moreover as a result is the functionalization of the triad
+\Loc{}--\Dat{}--\Gen{} to indicate $loc$, $goal$, and $src$ also with
 adpositions in general, either with \rayr{mN}{manga} grammaticalizing further
 to then solely mark direction, necessitating an obligatory \Dat{}/\Gen{}
 complement to indicate which way around, or with \rayr{mN}{manga} withering to
 zero, since the cases are already enough to mark direction.
-
-\ex[lingstyle=fnex]
-\begingl
-	\gla Sa tapyye ang Kemis koya (manga) kong taharyam. //
-	\glb Sa tapy-ye ang Kemis koya-Ø manga kong tahar-yam //
-	\glc \PatT{} put-\TsgF{} \Aarg{} Kemis book-\Top{} \Dir{} inside
-		closet-\Dat{} //
-	\glft `Kemis puts the book into the closet.' //
-\endgl
-\xe
-
+%
+% \ex[lingstyle=fnex]
+% \begingl
+% 	\gla Sa tapyye ang Kemis koya (manga) kong taharyam. //
+% 	\glb Sa tapy-ye ang Kemis koya-Ø manga kong tahar-yam //
+% 	\glc \PatT{} put-\TsgF{} \Aarg{} Kemis book-\Top{} \Dir{} inside
+% 		closet-\Dat{} //
+% 	\glft `Kemis puts the book into the closet.' //
+% \endgl
+% \xe
+%
 The way to express the difference between \fw{top/up} and \fw{bottom/down}
 would have to change for obvious reasons, though \rayr{riNF}{ring} from 
 \xayr{riNF/}{ring-}{rise, lift} and \rayr{les}{lesa} from \xayr{les/}{lesa-}
@@ -5314,23 +5315,23 @@ would have to change for obvious reasons, though \rayr{riNF}{ring} from
 from which to generate new adpositions. Alternatively, \rayr{sh}{saha} could
 become an equivalent of \rayr{mN}{manga} to indicate direction \fw{from} the
 indicated place.
-
-\pex[lingstyle=fnex]
-\a\begingl
-	\gla Ang hiyaya {} Bihān darsoley manga lesa eyranya. //
-	\glb ang hiya-ya Ø Bihān darso-ley manga lesa eyran-ya //
-	\glc \AgtT{} roll-\Loc{} \Top{} Bihān barrel-\PargI{} \Dir{}.\textsc{to}
-		down cellar-\Loc{} //
-	\glft `Bihān rolls a barrel down to the cellar.' //
-\endgl
-
-\a\begingl
-	\gla ... saha rota eyranya. //
-	\glb ... saha rota eyran-ya //
-	\glc ... \Dir{}.\textsc{from} up cellar-\Loc{} //
-	\glft `... up from the cellar.' //
-\endgl
-\xe
+%
+% \pex[lingstyle=fnex]
+% \a\begingl
+% 	\gla Ang hiyaya {} Bihān darsoley manga lesa eyranya. //
+% 	\glb ang hiya-ya Ø Bihān darso-ley manga lesa eyran-ya //
+% 	\glc \AgtT{} roll-\Loc{} \Top{} Bihān barrel-\PargI{} \Dir{}.\textsc{to}
+% 		down cellar-\Loc{} //
+% 	\glft `Bihān rolls a barrel down to the cellar.' //
+% \endgl
+%
+% \a\begingl
+% 	\gla ... saha rota eyranya. //
+% 	\glb ... saha rota eyran-ya //
+% 	\glc ... \Dir{}.\textsc{from} up cellar-\Loc{} //
+% 	\glft `... up from the cellar.' //
+% \endgl
+% \xe
 }
 
 Like adjectives, adpositions may be modified by adverbs, for instance, for
@@ -5349,8 +5350,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 	\glc \AgtT{} run-\TsgM{} \Top{} Tapan \Dir{} inside house-\Loc{} 
 		straight //
 	\glft `Tapan is running straight into the house.' //
-\endgl\medskip
-
+\endgl\medskip\\
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\downs{\PCase}}]{PP}}
 	[\anno{\xbar{P}}
@@ -5367,13 +5367,13 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 				[nangaya, roof]
 			]
 		]
-		[{\anno[\pass{\Adjc}]{AdvP}}
+		[{\anno[\elem{\Adjc}]{AdvP}}
 			[sirimang, roof]
 		]
 	]
 ]
 \end{forest}
-~\hfill
+~
 \begin{avm}
 \[
 	\Oblq{goal}	&	\[
@@ -5444,19 +5444,20 @@ since adjectives and adverbs do not differ in form. One such case is
 illustrated in (\ref{ex:adjadvprep_adv}), where the A-type modifier
 \xayr{brsF}{baras}{rough(ly)} may be interpreted either as an adverb modifying
 the adpositional phrase or as an adjective modifying the prepositional object.
-The individual words are copied again to the very bottom of the c-structure
-trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
-structures may lead to the same outcome on the surface.
+% The individual words are copied again to the very bottom of the c-structure
+% trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
+% structures may lead to the same outcome on the surface.
 
 \ex\label{ex:adjadvprep_adv}
 \begingl
 	\gla marin altanya baras //
 	\glb marin altan-ya baras //
-	\glc front rock-\Loc{} rough(ly) //
+	\glc in.front rock-\Loc{} rough(ly) //
 	\glft `roughly in front of the rock'\\
 		\textit{or:} `in front of the rough rock' //
 \endgl\medskip
 
+%\scalebox{.85}{%
 \begin{forest} shorter edges, italic leaves
 [{\anno[\pass{\GF}]{PP}}
 	[\anno{\xbar{P}}
@@ -5478,7 +5479,7 @@ structures may lead to the same outcome on the surface.
 \end{forest}~\quad{}or\quad{}~\begin{forest} shorter edges, italic leaves
 [{\anno[\pass{\GF}]{PP}}
 	[\anno{\xbar{P}}
-		[\anno{P}
+		[\anno{\xhead{P}}
 			[\fw{marin} [marin, tier=word, edge=dotted]]
 		]
 		[{\anno[\pass{\Obj}]{NP}}
@@ -5493,7 +5494,8 @@ structures may lead to the same outcome on the surface.
 		]
 	]
 ]
-\end{forest}
+\end{forest}%
+%}
 \xe
 
 Ambiguity can be resolved in these cases by subordinating the adjective to the
@@ -5510,7 +5512,7 @@ modified by CPs, however, this should rarely be necessary.
 \begingl
 	\gla marin altanya si baras //
 	\glb marin altan-ya si baras //
-	\glc front rock-\Loc{} \Rel{} rough //
+	\glc in.front rock-\Loc{} \Rel{} rough //
 	\glft `in front of the rough rock' \\
 		\textit{literally:} `in front of the rock which is rough' //
 \endgl
@@ -5527,7 +5529,7 @@ modified by CPs, however, this should rarely be necessary.
 				[\anno{\xhead{N}}
 					[altanya]
 				]
-				[{\anno[\elem{\Adjc}]{CP}}
+				[{\anno[\pass{\Compl}]{CP}}
 					[si baras, roof]
 				]
 			]
