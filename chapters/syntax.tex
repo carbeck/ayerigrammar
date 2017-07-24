@@ -266,9 +266,9 @@ brackets.
 \a\label{ex:npstruct_Poss}%
 	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
 	{\{NP | DP\}}\right)$
-\a\label{ex:npstruct_Adj}
+\a\label{ex:npstruct_Adj}%
 	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP*}
-\a\label{ex:npstruct_Comp}
+\a\label{ex:npstruct_Comp}%
 	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\XCompl}]{NP}\right)$
 \xe
 
@@ -2959,7 +2959,8 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 
 \xe
 
-\begin{figure}
+%\begin{figure}[tp]
+\ex~\label{ex:postkucstruct}%
 % \begingl
 % 	\gla ang @ Apitu puti-ku //
 % 	\glb ang= Apitu puti=ku //
@@ -3013,13 +3014,12 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 \]
 \end{avm}
 \end{tabu}
-\caption{C-structure of suffixed \rayr{/ku}{-ku}}
-\label{fig:postkucstruct}%
-\end{figure}
+\xe
+%\end{figure}
 
 Regarding the examples in (\ref{ex:kureplacementtest}), we cannot simply state
 that the clitic should be adjoined to a bar level higher than the adjective in
-\autoref{fig:postkucstruct} even though the replacement tests point into this
+\autoref{ex:postkucstruct} even though the replacement tests point into this
 direction, since \rayr{ku/}{ku-} cannot stand on its own as an independent word
 and \Lfg{} requires lexical integrity. Thus, we need to invoke the inside-out
 functional uncertainty principle again to associate the information provided by
@@ -3059,7 +3059,7 @@ the adjective, since adjectives only take \rayr{ku/}{ku-} as a proclitic, but
 never as an enclitic. Thus, the functional difference is also reflected in a
 difference in the morphological distribution of the clitic. Regarding
 functional annotations---as already suggested by 
-\autoref{fig:postkucstruct}---for the two kinds of \rayr{ku} {ku} we can posit:
+\autoref{ex:postkucstruct}---for the two kinds of \rayr{ku}{ku} we can posit:
 
 \begin{morphlex}
 \pex\label{ex:kumorphlex}%
@@ -4242,8 +4242,16 @@ As (\ref{ex:quantadvcomptest_1}) shows, \rayr{kgnF}{kagan} and \rayr{EkeNF}
 {ekeng} also work with regular adjectives, and it is possible as well to add
 further adjuncts to the AdvP, for instance, \xayr{ptu}{patu}{surprisingly} in
 (\ref{ex:kgnadj}). \xayr{kgnF ptu}{kagan patu}{surprisingly too}, thus, has to
-form a phrase which acts as a modifier to \xayr{gino}{gino}{drunk}.
+form a phrase which acts as a modifier to \xayr{gino}{gino}{drunk}. Likewise,
+it is not ungrammatical to say \xayr{kejnmF/IknF kgnF ptu} {keynam-ikan kagan
+patu}{surprisingly too many people}. Since \rayr{kgnF}{kagan} apparently
+projects an AdvP (as it can be modified), it cannot be a clitic, because
+clitics do not project phrases by their very nature. Thus, the c-structure in
+(\ref{ex:kgnrev_cstruct}) is possibly actually more correct, in that it is
+constructed in analogy to the one for an adjective modified by
+\rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
 
+\begin{figure}[htp]
 \pex\label{ex:kgnadj}
 \a\label{ex:kgnadj_avm}\begin{avm}
 \[
@@ -4300,15 +4308,9 @@ form a phrase which acts as a modifier to \xayr{gino}{gino}{drunk}.
 ]
 \end{forest}
 \xe
+\end{figure}
 
-Likewise, it is not ungrammatical to say \xayr{kejnmF/IknF kgnF ptu}
-{keynam-ikan kagan patu}{surprisingly too many people}. Since
-\rayr{kgnF}{kagan} apparently projects an AdvP (as it can be modified), it
-cannot be a clitic, because clitics do not project phrases by their very
-nature. Thus, the c-structure in ( \ref{ex:kgnrev_cstruct}) is possibly
-actually more correct, in that it is constructed in analogy to the one for an
-adjective modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
-
+\begin{figure}[htp]
 \pex\label{ex:kgnrev}
 \a\label{ex:kgnrev_gloss}\begingl
 	\gla keynam-ikan kagan patu gino //
@@ -4386,6 +4388,7 @@ adjective modified by \rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
 in=south] (ikan);
 \end{forest}
 \xe
+\end{figure}
 
 The c-structure in (\ref{ex:kgnrev_cstruct}) assumes that the head of the NP
 has an AdvP sister which has no head, but only an adjunct which is the AdvP
@@ -4401,7 +4404,7 @@ however, we know that \rayr{kgnF ptu}{kagan patu} modifies its antecedent
 adjective or adverb, which is \rayr{/iknF}{-ikan} rather than
 \rayr{gino}{gino}. Furthermore, since empty terminals and non-branching bar
 levels are supposed to be pruned, the tree in (\ref{ex:kgnadj_cstruct}) should
-have the following structure:
+have the structure depicted in (\ref{ex:kgnrev_cstruct_pruned}).
 
 \ex\label{ex:kgnrev_cstruct_pruned}
 \begin{forest} shorter edges,
@@ -4731,6 +4734,7 @@ presented as not governing a prepositional object, but the preposition is
 purely functional \citep[151--153]{dalrymple2001}. The case for English is
 illustrated by (\ref{ex:talkcstruct}).
 
+\begin{figure}[htp]
 \ex\label{ex:talkcstruct}%
 John talks to Mary. \\
 
@@ -4788,6 +4792,7 @@ John talks to Mary. \\
 \]
 \end{avm}
 \xe
+\end{figure}
 
 Ayeri, in contrast to English, often uses an NP complement marked with one of
 the cases in the list above, compare (\ref{ex:naracstruct}). In the case of
@@ -4806,6 +4811,7 @@ p.~\pageref{clitics_prenoun_case}). \rayr{y}{ya} is a case marker, not a
 preposition; `at/to Pila' is thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya
 Pilaya} with additional locative marking on the noun.
 
+\begin{figure}[htp]
 \ex\label{ex:naracstruct}%
 \begingl
 \gla Ang naraya {} Ajān ya Pila. //
@@ -4864,11 +4870,13 @@ Pilaya} with additional locative marking on the noun.
 \end{tikzpicture}
 
 \xe
+\end{figure}
 
 In Ayeri, PPs proper may either be locative complements of the verb or locative
 adverbials ungoverned by the verb, though the number of verbs taking PP
 complements is smaller than in English due to case marking, as described above.
-As mentioned initially, Ayeri possesses prepositions as well as postpositions. With regards to word order typology, we can thus note:
+As mentioned initially, Ayeri possesses prepositions as well as postpositions.
+With regards to word order typology, we can thus note:
 
 \ex
 Order of noun and adposition: Adp N, N Adp
@@ -4886,7 +4894,7 @@ objects governed by the adposition.
 
 \pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}}
-\a \xbar{P} → \xbar{P} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
+\a \xbar{P} → \anno*{\xbar{P}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
 \pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
 \xe
@@ -5482,6 +5490,7 @@ The individual words are copied again to the very bottom of the c-structure
 trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
 structures may lead to the same outcome on the surface.
 
+\begin{figure}[htp]
 \ex\label{ex:adjadvprep_adv}
 \begingl
 	\gla marin altanya baras //
@@ -5531,15 +5540,17 @@ structures may lead to the same outcome on the surface.
 \end{forest}%
 %}
 \xe
+\end{figure}
 
 Ambiguity can be resolved in these cases by subordinating the adjective to the
 noun explicitly with the relativizer \rayr{si}{si}, as shown in
 (\ref{ex:adjadvprep_adj}). The relative clause, then, essentially means `which
 is \textsc{adjective}'. The fact that it is somewhat hard to come up with an
-example is probably telling of the likelihood of such ambiguity. Wrapping an
-adjective into a CP to explicitly subordinate it is always a permissible
-strategy of clarification. In turn, this also means that adpositions cannot be
-modified by CPs, however, this should rarely be necessary.
+example is probably telling of the likelihood of such ambiguity. In either
+case, wrapping an adjective into a CP to explicitly subordinate it is always a
+permissible strategy of clarification. This also means in turn that
+adpositions cannot be modified by CPs, however, this should rarely be
+necessary.
 
 \ex\label{ex:adjadvprep_adj}
 \begin{minipage}[t]{.5\remaining}
