@@ -1895,7 +1895,7 @@ easier. Yet, however, we still need to account for \Q{}, \Foc{} and its
 associated \GF{} sharing information. In order to give an example, let us have
 a look again at (\ref{ex:sinyapro}):
 
-\needspace{3\baselineskip}
+\begin{figure}[htp]
 \ex\label{ex:ayrqcstruct}%
 \fw{Le tinkaya sinyāng kunang?} \medskip
 
@@ -1975,6 +1975,7 @@ a look again at (\ref{ex:sinyapro}):
 	-- ++(east:3em) |- ([yshift=1ex]{pic cs:ayrqcstruct_subj});
 \end{tikzpicture}
 \xe
+\end{figure}
 
 Example (\ref{ex:ayrqcstruct}) is an attempt to chart the c-strcuture and the
 accompanying \Avm{} for the sentence, \xayr{le tiMky sinFyaaNF kunNF?}{Le
@@ -2241,6 +2242,7 @@ Example (\ref{ex:indefprostruct}) attempts to model the c- and f-structure of a
 sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 {yanen}{everywhere}.
 
+\begin{figure}[htp]
 \ex\label{ex:indefprostruct}
 \begingl
 	\gla Balangya yanen ang Amān. //
@@ -2290,6 +2292,7 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 \end{avm}
 \end{tabu}
 \xe
+\end{figure}
 
 The annotation in example (\ref{ex:indefprostruct}) assumes that by its lexical
 meaning alone, \xayr{ynenF}{yanen}{everywhere} is identified as the locative
@@ -2416,6 +2419,7 @@ annotation by defining \Prontype{} as $recip$. Example
 (\ref{ex:eachotheravm}) illustrates what the \Avm{} for a sentence with a
 reciprocal pronoun could look like.
 
+\begin{figure}[htp]
 \ex\label{ex:eachotheravm}
 \begingl
 	\gla Ang silvyan {} Kan nay Maha sitanyās. //
@@ -2472,6 +2476,7 @@ reciprocal pronoun could look like.
 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:eachother_subj}););
 \end{tikzpicture}
 \xe
+\end{figure}
 
 In (\ref{ex:eachotheravm}), we have the case that the two coordinated subject
 NPs do not share the same features for \Gend{}, since \rayr{knF}{Kan} is a male
@@ -3019,7 +3024,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 
 Regarding the examples in (\ref{ex:kureplacementtest}), we cannot simply state
 that the clitic should be adjoined to a bar level higher than the adjective in
-\autoref{ex:postkucstruct} even though the replacement tests point into this
+(\ref{ex:postkucstruct}) even though the replacement tests point into this
 direction, since \rayr{ku/}{ku-} cannot stand on its own as an independent word
 and \Lfg{} requires lexical integrity. Thus, we need to invoke the inside-out
 functional uncertainty principle again to associate the information provided by
@@ -3158,9 +3163,14 @@ various forms of the relativizer \rayr{si}{si}.
 While demonstrative elements make NPs more specific in selecting a particular
 specimen out of a group of entities, the proclitic \rayr{me/}{mə-} does the
 opposite: it expresses that the speaker refers to any representative of a group
-entities, not a specific one:
+entities, not a specific one, as in (\ref{ex:thiswhichever}). The functional
+definition for \rayr{me/}{mə-} should thus look as given in
+(\ref{ex:memorphlex}): the NP it is added to is neither definite a definite nor
+specific reference, the speaker means just any representative of the kind the
+nominal head specifies.
 
-\ex\adjustbox{valign=t}{
+\begin{figure}[htp]
+\ex\label{ex:thiswhichever}\adjustbox{valign=t}{
 	\begin{tikzpicture}
 		\node (ellipse)	at (3,2)	{};
 		\node (this)	at (0,4)	{$this$};
@@ -3183,11 +3193,7 @@ entities, not a specific one:
 	\end{tikzpicture}
 	}
 \xe
-
-Thus, the functional definition for \rayr{me/}{mə-} should look as given in 
-(\ref{ex:memorphlex}): the NP it is added to is neither definite a definite nor
-specific reference, the speaker means just any representative of the kind the
-nominal head specifies.
+\end{figure}
 
 \begin{morphlex}
 \ex\label{ex:memorphlex}%
@@ -3662,6 +3668,7 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 (\ref{ex:soreplacement}a) with \rayr{d/}{da-} in (\ref{ex:soreplacement}b); the
 \xbar{A} in (\ref{ex:soreplacement}a) being targeted is the sister to AdvP.
 
+\begin{figure}[htp]
 \ex\label{ex:soreplacement}\labels%
 \begin{minipage}[t]{0.5\remaining}%
 \tl\quad\begingl%
@@ -3709,6 +3716,7 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 ]
 \end{forest}
 \xe
+\end{figure}
 
 Continuing this replacement test for the other example sentences from
 (\ref{ex:adjmod}), we can see that the outcomes are ungrammatical; the NPs are
@@ -3761,6 +3769,7 @@ to syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant})
 attempts to illustrate the c-structure for a displaced CP; the arrow shows the
 apparent movement from complement to adjunct.
 
+\begin{figure}[htp]
 \ex\label{ex:intrusivequant}%
 \begingl[aboveglbskip=1em]
 	\gla Yang valuy {\_\tikzmark{intrusivequant2_1}} ankyu, 
@@ -3800,6 +3809,7 @@ cs:intrusivequant2_2});
 (CP);
 \end{forest}
 \xe
+\end{figure}
 
 In \Lfg{}, however, there are no transformations by design; instead,
 c-structure is taken to be base-generated while acknowledging that different
@@ -3813,6 +3823,7 @@ adjunct is annotated accordingly as \Compl{}, not as \Adjc{}, even though in
 c-structure it appears in the position of an adjunct.
 % FIXME: Gahd, I *hope* this paragraph makes sense ...
 
+\begin{figure}[htp]
 \ex\label{ex:intrusivequant_fstruct}
 \begin{avm}
 \[
@@ -3837,6 +3848,7 @@ c-structure it appears in the position of an adjunct.
 \]
 \end{avm}
 \xe
+\end{figure}
 
 As pointed out in \autoref{sec:adjectives}, Ayeri's adjectives inflect very
 little, since there is no agreement morphology. However, it is possible for
@@ -4912,6 +4924,7 @@ way in this regard. These governed PPs are categorized as \Oblique{} with
 $\theta$ replaced by the proper semantic macrorole (\textit{loc}, \textit{src}
 or \textit{goal}).
 
+\begin{figure}[htp]
 \ex\label{ex:ppcstruct}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad Prepositions:\medskip
@@ -4953,6 +4966,7 @@ or \textit{goal}).
 \end{forest}
 \end{minipage}
 \xe
+\end{figure}
 
 With regards to functional structure, the difference between preposition and
 postposition does not matter, so the \Avm{} in (\ref{ex:adpmorphlex}) does not
