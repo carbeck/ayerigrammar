@@ -280,7 +280,7 @@ CP). This can be represented as a constituent-structure tree in the way
 described in (\ref{ex:npcstruct}).
 
 \ex\label{ex:npcstruct}\labels
-\begin{forest}
+\begin{forest} shorter edges,
 [{\anno[\{\pass{df} | \pass{gf}\}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
@@ -5592,6 +5592,119 @@ necessary.
 					[si baras, roof]
 				]
 			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+It was mentioned initially that certain adpositions are also able to take
+clausal complements. This is especially the case for when adpositions are used
+to describe points in or stretches of time. A list of adpositions which can be
+used for this purpose is given in \autoref{tab:temppos}. Essentially, a subset
+of spatial prepositions can be used metaphorically to refer to time, just as in
+English.
+
+\ex\label{ex:adptime}\begingl
+	\gla Gamaryāng marin sa-sahaye ang Sipra. //
+	\glb gamar=yāng marin sa\til{}saha-ye ang Sipra //
+	\glc manage=\Fsg{}.\Aarg{} before \Iter{}\til{}come-\TsgF{} \Aarg{} 
+		Sipra //
+	\glft `I'll get it done before Sipra returns.' //
+\endgl\xe
+
+Both \rayr{gmrFyaaNF}{gamaryāng} `I manage', `I get (it) done' and \rayr{s/shye
+ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' are complete sentences; the
+preposition \xayr{mrinF}{marin}{in front of, before} ties them together and
+indicates the second part's relationship to the first: the embedded clause
+expresses a future state which serves as the background for the action
+expressed by the matrix clause. The corresponding constituent structure of the
+PP is shown in (\ref{ex:adptimecstruct}).
+
+\ex\label{ex:adptimecstruct}
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\elem{\Adjc}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{\xhead{P}}
+			[marin]
+		]
+		[{\anno[\pass{\Compl}]{CP}}
+% 			[\anno{IP}
+% %				[\anno{\xbar{I}}
+% 					[\anno{\xhead{I}}
+% 						[sa-sahaye]
+% 					]
+% %				]
+% 				[\anno{S}
+% 					[{\anno[\pass{\Subj}]{NP}}
+% %						[\anno{\xbar{N}}
+% 							[\anno{\xhead{N}}
+% 								[{ang Sipra}, roof]
+% 							]
+% %						]
+% 					]
+% 				]
+% 			]
+			[{sa-sahaye ang Sipra}, roof]
+		]
+	]
+]
+\end{forest}
+\xe
+
+In cases like (\ref{ex:adptimecstruct}), an adverbial modifier in the fashion
+of (\ref{ex:adpadv}) would attach in the adjunct position as well, following
+the clausal complement. For the example above, this is not very awkward,
+because the embedded clause is very short and does not branch too deeply. For
+cases where the length or depth of the CP does produce an awkward result,
+however, it is possible to extrapose it with \rayr{d/}{da-} on the phrase's
+head representing the missing complement, altogether structurally similar to 
+(\ref{ex:intrusivequant}). An example of this strategy is given in 
+(\ref{ex:cpextrapos}).
+
+\ex\label{ex:cpextrapos}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Gamaryāng da-marin sirimang sa-sahaye ang Sipra. //
+	\glb gamar=yāng da=marin sirimang sa\til{}saha-ye ang Sipra //
+	\glc manage=\Fsg{}.\Aarg{} such=before straight \Iter{}\til{}come-\TsgF{} 
+		\Aarg{} Sipra //
+	\glft `I will do it right before Sipra returns.' //
+\endgl
+\end{minipage}
+~
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\elem{\Adjc}]{PP}}
+	[\anno{\xbar{P}}
+		[\anno{\xbar{P}}
+			[\anno{\xbar{P}}
+				[\anno{\xhead{P}}
+					[da-marin]
+				]
+				[Ø]
+			]
+			[{\anno[\elem{\Adjc}]{AdvP}}
+				[sirimang, roof]
+			]
+		]
+		[{\anno[\pass{\Compl}]{CP}}
+% 			[\anno{IP}
+% %				[\anno{\xbar{I}}
+% 					[\anno{\xhead{I}}
+% 						[sa-sahaye]
+% 					]
+% %				]
+% 				[\anno{S}
+% 					[{\anno[\pass{\Subj}]{NP}}
+% %						[\anno{\xbar{N}}
+% 							[\anno{\xhead{N}}
+% 								[{ang Sipra}, roof]
+% 							]
+% %						]
+% 					]
+% 				]
+% 			]
+			[{sa-sahaye\\ ang Sipra}, roof]
 		]
 	]
 ]
