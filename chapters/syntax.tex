@@ -285,20 +285,22 @@ described in (\ref{ex:npcstruct}).
 	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}]
-				[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
+				[\anno{\xbar{N}}
+					[\anno{\xhead{N}}]
+					[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
+				]
+				[{\anno[\elem{\Adjc}]{AP*}}]
 			]
-			[{\anno[\elem{\Adjc}]{AP*}}]
+			[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
 		]
-		[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
+		[{$\left(\anno[\pass{\Compl}]{CP}\right)$}]
 	]
-	[{$\left(\anno[\pass{\Compl}]{CP}\right)$}]
 ]
 \end{forest}
 \xe
 
 Here as well, we can see a nominal head on the left which may be modified by
-adjuncts of various types. The maximal projection of \xhead{N} (that is, NP) is
+phrases of various types. The maximal projection of \xhead{N} (that is, NP) is
 annotated very generally for the function of the NP---basically, an NP can act
 as either a discourse function (DF) or a grammatical function (\GF{}). 
 (\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is 
@@ -2138,21 +2140,19 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
-[PP
-	[NP
+[NP
+	[\xbar{N}
 		[\xbar{N}
-			[\xbar{N}
-				[\xhead{N}
-					[yanoya]
-				]
-				[AP
-					[{veno}, roof]
-				]
+			[\xhead{N}
+				[yanoya]
 			]
-			[DP
-				[\xhead{D}
-					[sinya]
-				]
+			[AP
+				[{veno}, roof]
+			]
+		]
+		[DP
+			[\xhead{D}
+				[sinya]
 			]
 		]
 	]
@@ -5606,20 +5606,20 @@ of spatial prepositions can be used metaphorically to refer to time, just as in
 English.
 
 \ex\label{ex:adptime}\begingl
-	\gla Gamaryāng marin sa-sahaye ang Sipra. //
-	\glb gamar=yāng marin sa\til{}saha-ye ang Sipra //
+	\gla Gamaryang marin sa-sahaye ang Sipra. //
+	\glb gamar=yang marin sa\til{}saha-ye ang Sipra //
 	\glc manage=\Fsg{}.\Aarg{} before \Iter{}\til{}come-\TsgF{} \Aarg{} 
 		Sipra //
 	\glft `I'll get it done before Sipra returns.' //
 \endgl\xe
 
-Both \rayr{gmrFyaaNF}{gamaryāng} `I manage', `I get (it) done' and \rayr{s/shye
-ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' are complete sentences; the
-preposition \xayr{mrinF}{marin}{in front of, before} ties them together and
-indicates the second part's relationship to the first: the embedded clause
-expresses a future state which serves as the background for the action
-expressed by the matrix clause. The corresponding constituent structure of the
-PP is shown in (\ref{ex:adptimecstruct}).
+Both \rayr{gmrFyNF}{gamaryang} `I manage (it), I get (it) done' and
+\rayr{s/shye ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' are complete
+sentences; the preposition \xayr{mrinF}{marin}{in front of, before} ties them
+together and indicates the second part's relationship to the first: the
+embedded clause expresses a future state which serves as the background for the
+action expressed by the matrix clause. The corresponding constituent structure
+of the PP is shown in (\ref{ex:adptimecstruct}).
 
 \ex\label{ex:adptimecstruct}
 \begin{forest} shorter edges, italic leaves,
@@ -5751,6 +5751,11 @@ head representing the missing complement, altogether structurally similar to
 
 \subsection{Equative statements}
 \label{subsec:eqs}
+
+...
+
+\subsection{Existential statements}
+\label{subsec:exs}
 
 ...
 
