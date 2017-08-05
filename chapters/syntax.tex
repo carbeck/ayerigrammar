@@ -4367,7 +4367,7 @@ constructed in analogy to the one for an adjective modified by
 			[{\anno[\elem{\Adjc}]{AdvP}}
 				[\anno{\xbar{Adv}}
 					[\anno{\xhead{Adv}}
-						[$e$, name=empty]
+						[$\epsilon$, name=empty]
 					]
 					[{\anno[\elem{\Adjc}]{AdvP}}
 						[\anno{\xbar{Adv}}
@@ -5681,7 +5681,7 @@ head representing the missing complement, altogether structurally similar to
 				[\anno{\xhead{P}}
 					[da-marin]
 				]
-				[e]
+				[$\epsilon$]
 			]
 			[{\anno[\elem{\Adjc}]{AdvP}}
 				[sirimang, roof]
@@ -5714,11 +5714,6 @@ head representing the missing complement, altogether structurally similar to
 \section{Inflectional and verb phrases}
 \label{sec:ips-vps}
 
-...
-
-\subsection{Typological quandaries}
-\label{sec:typoquand}
-
 \begin{itemize}
 	\item Ayeri as a so-called `trigger language'
 	
@@ -5738,12 +5733,39 @@ head representing the missing complement, altogether structurally similar to
 			\textcites[132\psqq]{carnie2013}[104\psqq]{comrie1989}
 			[76]{dixon2010}[151\psqq]{dixon2012}[]{lithompson1976}; regarding
 			AA: \citet[19--54]{kroeger1991}
-		\item What is a topic? → definitions: \textcites[171--175]{dixon2010}[]{lithompson1976}; regarding AA: \citet[55--68]{kroeger1991}
+		\item What is a topic? → definitions: \textcites[171--175]{dixon2010}
+		[]{givon1983}[]{lithompson1976}; regarding AA:
+		\citet[55--68]{kroeger1991}
 		\item Tests on cline between logical \Subj{} NPs vs. rest → compare
 			with \textcites[112]{kroeger1991} (who cites \cite[137]{speas1990}
 			for criteria, cf. \citet[123--201]{speas1990} for whole chapter)
 	\end{itemize}
 \end{itemize}
+
+\pex
+\a nominative--accusative alignment (S\tsub{A}---P):\medskip
+
+\begin{tikzpicture}
+\node (S) at (1,1) {S};
+\node (A) at (0,0) {A};
+\node (P) at (2,0) {P};
+
+\draw (0.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=45];
+\draw (P) circle [radius=1em];
+\end{tikzpicture}
+
+\a ergative--absolutive alignment (S\tsub{P}---A):\medskip
+
+\begin{tikzpicture}
+\node (S) at (1,1) {S};
+\node (A) at (0,0) {A};
+\node (P) at (2,0) {P};
+
+\draw (1.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=-45];
+\draw (A) circle [radius=1em];
+\end{tikzpicture}
+
+\xe
 
 \subsection{Inflectional phrases}
 \label{subsec:ips}
