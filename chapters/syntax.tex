@@ -5892,9 +5892,11 @@ in the initial position also shows inflection, so one might rather construe it
 as an \xhead{I}, projecting an IP, which frees up VP for other purposes. In
 fact, \citet{chungmccloskey1987} come to the conclusion that Irish, which is
 also a VSO language, organizes its constituents in the way depicted by
-(\ref{ex:irishcstruct}); \citet{bresnan2016} give the charts in
-(\ref{ex:welshcstruct}) for Welsh, based on examples provided by
-\citet{sproat1985}.
+(\ref{ex:irishcstruct}). \citet{bresnan2016} give the charts in
+(\ref{ex:welshcstruct}) for Welsh, equally a VSO language (also compare \cite
+[66]{dalrymple2001}, which sources \cite{sadler1997}). \citet{kroeger1991}
+suggests the two structures depicted in (\ref{ex:tagalogcstruct}) for Tagalog,
+based on the suggested constituent structure for Celtic languages.
 
 \pex
 \a Irish \citep[235]{chungmccloskey1987}:\label{ex:irishcstruct}\medskip \\
@@ -5909,41 +5911,64 @@ also a VSO language, organizes its constituents in the way depicted by
 \end{forest}
 
 \a Welsh \citep[134]{bresnan2016}:\label{ex:welshcstruct}\medskip \\
-\begin{minipage}[t]{.5\remaining}
-\begin{avm}
-\[
-	\Pred	&	\astruct{see}{$(f_1 \Subj) (f_1 \Obj)$} \\
-	\Tense	&	\textsc{past} \\
-	\Subj	&	\[
-		\Pred	&	`Siôn' \\
-		\Pers	&	\Third \\
-		\Num	&	\Sg \\
-	\] \\
-	\Obj	&	\[
-		``dragon''
-	\]
-\]
-\end{avm}
-\end{minipage}
-\hfill
-\begin{forest}
+\begin{forest} shorter edges,
 [IP
-	[I
+	[\anno{I}
 		[{\textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
 	]
-	[S
-		[NP
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
 			[{\textit{Siôn}\\ `John'}]
 		]
-		[VP
-			[NP
+		[\anno{VP}
+			[{\anno[\pass{\Obj}]{NP}}
 				[{\textit{ddraig}\\ `dragon'}]
 			]
 		]
 	]
 ]
 \end{forest}
+
+\a Tagalog \citep[131]{kroeger1991}:\label{ex:tagalogcstruct}\medskip \\
+\begin{minipage}[t]{.5\remaining}
+\begin{forest}
+[IP
+	[\textsc{spec}]
+	[\xbar{I}
+		[I]
+		[S
+			[{XP\\ (\textsc{pred})}]
+			[{NP\\ (\textsc{subj})}]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\begin{forest}
+[IP
+	[\textsc{spec}]
+	[\xbar{I}
+		[I]
+		[S
+			[\xhead{X}]
+			[YP]
+			[YP]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
 \xe
+
+What all of these c-structures have in common is that the inflected verb
+appears in \xbar{I}, which is a sister of S. S, in turn, is a small clause
+containing the arguments of the verb. In the cases of Irish and Welsh, however,
+there is a VP sister of the subject NP which itself does not have a head, but
+contains the object NP as a modifier. In the case of Tagalog, S is
+non-configurational, that is, while XP may contain an infinite verb, the
+subject and object NPs are on equal footing.
 
 Apparent V-to-I movement (except in \Lfg{} it's base-generated) etc. etc. We
 will need to test whether this analysis holds true for Ayeri as well.
