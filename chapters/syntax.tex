@@ -5752,6 +5752,35 @@ talk (and write) of nothing else}.}
 \subsection{Typological considerations}
 \label{sec:verbtypo}
 
+As mentioned above, Ayeri's unmarked word order has the verb come first, and
+then, in decreasing order of bondedness to the verb, the phrases which make up
+the verb's arguments: logical subject (agent), direct object (patient),
+indirect object (dative), followed by adverbials in the genitive, locative,
+instrumental, and causative case. Ayeri's basic word order is thus VSO, a trait
+it has in common with about 7\pct{} of the world's natural languages according
+to \citet{wals81} (compare \autoref{tab:wordorderfreq}).\footnote{It may be
+noted here that the `other' category is actually `no dominant order' in the
+original, and that this is maybe not quite accurate for at least a few
+languages in the sample, for instance, German. The unmarked word order of
+declarative statements in German main clauses is SVO with the finite verb
+mandatorily occupying the second position (V2). This position is commonly
+analyzed as \xhead{C} in German, however, since the infinite content verb
+\xhead{V} appears at the end of the clause when the \xhead{C} position is
+occupied by an auxiliary or a modal (compare, for instance, \cite[375--379,
+447--450]{bresnan2016}, and \cite{fortmann2006}); subclauses are verb-last. It
+is not uncommon to analyze German as an OV language with V2 tendencies.}
+Following the format of previous statements on word order typology, we can
+declare the generalization in (\ref{ex:constordertypo}), which is consistent
+also with previous observations on word order typology, where the head preceded
+the modifier. The head is here represented by the verb, the modifier by the
+object---like English, Ayeri is a VO language, thus. In addition to this,
+however, Ayeri regularly puts the verb as the head of the clause itself first.
+
+\pex\label{ex:constordertypo}
+\a Order of subject, object, and verb: VSO
+\a Order of verb and object: VO
+\xe
+
 \begin{table}[t]\centering
 \caption[Frequency of word order types]{Frequency of word order types\\
 	(n\,=\,1377; adapted from \cite{wals81})}
@@ -5767,41 +5796,41 @@ Order
 
 SOV
 	& 565
-	& 41.03\pct
+	& 41.0\pct
 	\\
 
 SVO
 	& 488
-	& 35.44\pct
+	& 35.4\pct
 	\\
 
 VSO
 	& 95
-	& 6.90\pct
+	& 6.9\pct
 	\\
 
 \midrule
 
 VOS
 	& 25
-	& 1.82\pct
+	& 1.9\pct
 	\\
 
 OVS
 	& 11
-	& 0.80\pct
+	& 0.8\pct
 	\\
 
 OSV
 	& 4
-	& 0.29\pct
+	& 0.3\pct
 	\\
 
 \midrule
 
 Other
 	& 189
-	& 13.73\pct
+	& 13.7\pct
 	\\
 
 \bottomrule
@@ -5809,6 +5838,117 @@ Other
 
 \label{tab:wordorderfreq}
 \end{table}
+
+It is commonly assumed that languages have a logical subject which occupies a
+certain position in the constituent structure---the predicate---and which
+commands a constituent jointly formed by the verb and its dependents---the
+predication. An SVO sentence thus very generally looks like this:
+
+\ex
+\begin{forest}
+[S
+	[NP
+		[\textsc{subject}, tier=end]
+	]
+	[VP
+		[\xbar{V}
+			[\textsc{verb}, tier=end]
+			[NP
+				[\textsc{object}, tier=end]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+However, Ayeri is an VSO language, so the question arises how the basic
+constituent structure should be diagrammed in tree form, since V and O are not
+adjacent. In an initial hypothesis one might assume that they cannot form a
+unit together, since S somehow stands in between the constituents it is
+supposed to command. A very first stab at diagramming would probably be to come
+up with a flat, non-configurational structure:
+
+\ex\ljudge\ques
+\begin{forest}
+[S
+	[VP
+		[\textsc{verb}]
+	]
+	[NP
+		[\textsc{subject}]
+	]
+	[NP
+		[\textsc{object}]
+	]
+]
+\end{forest}
+\xe
+
+Such a structure, though, does not do Ayeri justice in that the verb shows
+agreement usually with the constituent expressing the actor. Let us tentatively
+assume, thus, that the actor NP is priviledged over the undergoer NP. The verb
+in the initial position also shows inflection, so one might rather construe it
+as an \xhead{I}, projecting an IP, which frees up VP for other purposes. In
+fact, \citet{chungmccloskey1987} come to the conclusion that Irish, which is
+also a VSO language, organizes its constituents in the way depicted by
+(\ref{ex:irishcstruct}); \citet{bresnan2016} give the charts in
+(\ref{ex:welshcstruct}) for Welsh, based on examples provided by
+\citet{sprout1985}.
+
+\pex
+\a Irish \citep[235]{chungmccloskey1987}:\label{ex:irishcstruct}\medskip \\
+\begin{forest}
+[S
+	[Infl]
+	[S
+		[NP]
+		[VP]
+	]
+]
+\end{forest}
+
+\a Welsh \citep[134]{bresnan2016}:\label{ex:welshcstruct}\medskip \\
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{see}{$(f_1 \Subj) (f_1 \Obj)$} \\
+	\Tense	&	\textsc{past} \\
+	\Subj	&	\[
+		\Pred	&	`Siôn' \\
+		\Pers	&	\Third \\
+		\Num	&	\Sg \\
+	\] \\
+	\Obj	&	\[
+		``dragon''
+	\]
+\]
+\end{avm}
+\end{minipage}
+\hfill
+\begin{forest}
+[IP
+	[I
+		[{\textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	]
+	[S
+		[NP
+			[{\textit{Siôn}\\ `John'}]
+		]
+		[VP
+			[NP
+				[{\textit{ddraig}\\ `dragon'}]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+V-to-I movement etc. etc. We will need to test whether this analysis holds true
+for Ayeri as well.
+
+...
 
 \subsubsection{Ayeri as a `trigger language'}
 
