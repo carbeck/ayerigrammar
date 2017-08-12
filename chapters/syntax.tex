@@ -5848,13 +5848,15 @@ predication. An SVO sentence thus very generally looks like this:
 \begin{forest}
 [S
 	[NP
-		[\textsc{subject}, tier=end]
+		[\textsc{subject}, roof]
 	]
 	[VP
 		[\xbar{V}
-			[\textsc{verb}, tier=end]
+			[\xhead{V}
+				[\textsc{verb}]
+			]
 			[NP
-				[\textsc{object}, tier=end]
+				[\textsc{object}, roof]
 			]
 		]
 	]
@@ -5872,37 +5874,72 @@ up with a flat, non-configurational structure:
 \ex\ljudge\ques
 \begin{forest}
 [S
-	[VP
+	[V
 		[\textsc{verb}]
 	]
 	[NP
-		[\textsc{subject}]
+		[\textsc{subject}, roof]
 	]
 	[NP
-		[\textsc{object}]
+		[\textsc{object}, roof]
 	]
 ]
 \end{forest}
 \xe
 
-Such a structure, though, does not do Ayeri justice in that the verb shows
-agreement usually with the constituent expressing the actor. Let us tentatively
-assume, thus, that the actor NP is priviledged over the undergoer NP. The verb
-in the initial position also shows inflection, so one might rather construe it
-as an \xhead{I}, projecting an IP, which frees up VP for other purposes. In
-fact, \citet{chungmccloskey1987} come to the conclusion that Irish, which is
-also a VSO language, organizes its constituents in the way depicted by
-(\ref{ex:irishcstruct}). \citet{bresnan2016} give the charts in
-(\ref{ex:welshcstruct}) for Welsh, equally a VSO language (also compare \cite
-[66]{dalrymple2001}, which sources \cite{sadler1997}). \citet{kroeger1991}
-suggests the two structures depicted in (\ref{ex:tagalogcstruct}) for Tagalog,
-based on the suggested constituent structure for Celtic languages.
+Such a structure, though, does not do Ayeri justice in that the verb, for
+instance, shows agreement usually with the constituent expressing the actor.
+% ; the fact that adjectives are unmarked for case also does not favor
+% scrambling in the way seen in an example of Warlpiri given in
+% \citet[4]{bresnan2016}; \citet{bresnan2016} note that every permutation of
+% the words in the given sentence, meaning `The two small children are chasing
+% the dog', are possible as long as the auxiliary occurs in the second
+% position:
+%
+% \ex\rc{Warlpiri}
+% \begin{forest}
+% [S
+% 	[NP
+% 		[{\textit{wita-jarra-rlu}\\ small-\Du{}-\Erg{}}, roof]
+% 	]
+% 	[Aux
+% 		[{\textit{ka-pala}\\ \Prs{}-\Tdu{}.\Subj{}}, roof]
+% 	]
+% 	[V
+% 		[{\textit{wajilipi-nyi}\\ chase-\NPst{}}, roof]
+% 	]
+% 	[NP
+% 		[{\textit{yalumpu}\\ that-\Abs{}}, roof]
+% 	]
+% 	[NP
+% 		[{\textit{kurdu-jarra-rlu}\\ child-\Du{}-\Erg{}}, roof]
+% 	]
+% 	[NP
+% 		[{\textit{maliki}\\ dog.\Abs{}}, roof]
+% 	]
+% ]
+% \end{forest}
+% \xe
+%
+Let us tentatively assume, thus, that the actor NP is priviledged over the
+undergoer NP. The verb in the initial position also shows inflection, so one
+might rather construe it as an \xhead{I}, projecting an IP, which frees up VP
+for other purposes while we can use IP to govern both \xbar{I} and S. In fact,
+this is basically the conclusion \citet{chungmccloskey1987} come to for Irish,
+which is also a VSO language (\ref{ex:irishcstruct}). \citet{bresnan2016} give
+the similar chart in (\ref{ex:welshcstruct}) for Welsh, equally a VSO language
+(also compare \cite [66]{dalrymple2001}, which sources \cite{sadler1997}).
+\citet{kroeger1991} suggests the two structures depicted in
+(\ref{ex:tagalogcstruct}) for Tagalog, based on the suggested constituent
+structure for Celtic languages.
 
-\pex
+\pex\label{ex:vsocstructs}
 \a Irish \citep[235]{chungmccloskey1987}:\label{ex:irishcstruct}\medskip \\
 \begin{forest}
 [S
-	[Infl]
+	[Infl
+		[, phantom, tier=bottom]
+	]
 	[S
 		[NP]
 		[VP]
@@ -5910,32 +5947,69 @@ based on the suggested constituent structure for Celtic languages.
 ]
 \end{forest}
 
-\a Welsh \citep[134]{bresnan2016}:\label{ex:welshcstruct}\medskip \\
+\a Welsh \citep[adapted from][134]{bresnan2016}:\label{ex:welshcstruct}%
+\medskip \\
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{see}{$(f_1 \Subj) (f_1 \Obj)$}
+				\tikzmark{welshcstruct_Pred}~\quad\quad \\
+	\Tense	&	\textsc{past} \tikzmark{welshcstruct_Tense} \\
+	\Subj	&	\[
+		\Pred	&	`Siôn' \\
+		\Pers	&	\Third \\
+		\Num	&	\Sg \\
+	\] \tikzmark{welshcstruct_Subj} \\
+	\Obj	&	\[
+		{\normalfont ``dragon''}
+	\] \tikzmark{welshcstruct_Obj}
+\] \tikzmark{welshcstruct_f1}
+\end{avm}
+\end{minipage}
+\hfill
 \begin{forest} shorter edges,
 [IP
-	[\anno{I}
-		[{\textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	[\anno{\tikzmark{welshcstruct_IP} I}
+		[{\tikzmark{welshcstruct_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
 	]
 	[\anno{S}
-		[{\anno[\pass{\Subj}]{NP}}
+		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct_S} NP}}
 			[{\textit{Siôn}\\ `John'}]
 		]
-		[\anno{VP}
-			[{\anno[\pass{\Obj}]{NP}}
+		[\anno{\tikzmark{welshcstruct_VP} VP}
+			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct_O} NP}}
 				[{\textit{ddraig}\\ `dragon'}]
 			]
 		]
 	]
 ]
 \end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_IP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_VP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Pred});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Tense});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_S})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Subj});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_O})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Obj});
+\end{tikzpicture}
 
 \a Tagalog \citep[131]{kroeger1991}:\label{ex:tagalogcstruct}\medskip \\
 \begin{minipage}[t]{.5\remaining}
 \begin{forest}
 [IP
-	[\textsc{spec}]
+	[SPEC
+		[, phantom, tier=bottom]
+	]
 	[\xbar{I}
-		[I]
+		[I
+			[, phantom, tier=bottom]
+		]
 		[S
 			[{XP\\ (\textsc{pred})}]
 			[{NP\\ (\textsc{subj})}]
@@ -5948,9 +6022,13 @@ based on the suggested constituent structure for Celtic languages.
 \begin{minipage}[t]{.5\remaining}
 \begin{forest}
 [IP
-	[\textsc{spec}]
+	[SPEC
+		[, phantom, tier=bottom]
+	]
 	[\xbar{I}
-		[I]
+		[I
+			[, phantom, tier=bottom]
+		]
 		[S
 			[\xhead{X}]
 			[YP]
@@ -5970,10 +6048,47 @@ contains the object NP as a modifier. In the case of Tagalog, S is
 non-configurational, that is, while XP may contain an infinite verb, the
 subject and object NPs are on equal footing.
 
-Apparent V-to-I movement (except in \Lfg{} it's base-generated) etc. etc. We
-will need to test whether this analysis holds true for Ayeri as well.
+\citet[129--138]{bresnan2016} informs that the phenomenon of the verb ending up
+in a different head position (\xhead{V} apparently moves to \xhead{I}) in
+(\ref{ex:welshcstruct}) is commonly known as `head movement', except that
+\Lfg{} is built specifically without any movement. There is not supposed to be
+a trace of V left behind, since \Lfg{} avoids empty categories, as there is no
+information contained in an empty node. The functional information provided by
+the verb is not lost, however, it is merely now provided by the verb in
+\xhead{I}. The Welsh example furthermore does not violate endocentricity, since
+the finite verb in \xhead{I} still functions as the head in the f-structure.
+With regards to constituent structure, \xhead{V}, if present, c-commands its NP
+sister; both \xhead{V} and NP are dominated by VP:
 
-...
+\pex
+\a Exhaustive domination \citep[121]{carnie2013}:\smallskip
+	
+	``Node A exhaustively dominates a set of terminal nodes \{B, C, ..., D\},
+	provided it dominates all the members of the set so that there is no
+	member of the set that is not dominated by A and there is no terminal node
+	G dominated by A that is not a member of the set.''
+
+\a C-command \citep[127]{carnie2013}:\smallskip
+
+	``Node A c-commands node B if every node dominating A also dominates B, and
+	neither A nor B dominates the other.''
+\xe
+
+The \Avm{} in (\ref{ex:welshcstruct}) shows that the contents normally found in
+\xhead{V} are provided by the head of its equivalent functional category,
+\xhead{I}; \xhead{I} and VP are said to map into the same f-structure \citep
+[136]{bresnan2016}. Endocentricity still holds in that IP dominates all nodes
+below it, thus also \xhead{I} and the object NP. In addition, \xhead{I}
+c-commands its sister node and all of its children, hence also the object NP.
+As \citet{bresnan2016} put it: \textcquote[136]{bresnan2016}{X is an extended
+head of Y if X is the \xbar{X} categorial head of Y [...], or if Y lacks a
+categorial head but X is the closest element higher up in the tree that
+functions like the f-structure head of Y}. For our example, replace X with
+\xhead{I} and Y with VP in the second half of the quote: \xhead{I} is the
+closest element higher up in the tree that functions like the f-structure head
+of VP, which itself lacks a categorial head. In any case, tests need to be
+performed to see whether one of the analyses presented in
+(\ref{ex:vsocstructs}) holds true for Ayeri as well.
 
 \subsubsection{Ayeri as a `trigger language'}
 
