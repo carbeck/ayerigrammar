@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)).
+This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). You can also already take a look at the [most recently compiled PDF of the current working draft](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf) (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)).
 
 I had been leaving this earlier documentation attempt in a very sorry and unfinished state for over 5 years before finally returning to it, prompted by a [class on constructed languages](http://www.sfs.uni-tuebingen.de/~abuch/16ss/conlang.html) at the University of Tübingen in the summer semester of 2016, which used Ayeri as one of its objects of study. I hope that by using LaTeX and GitHub, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big LibreOffice document before. If you feel inclined to do so, you can report issues on the [repository page](https://github.com/carbeck/ayerigrammar).
 
@@ -18,7 +18,7 @@ Currently working on
     3. Adpositional phrases
     4. Inflectional and verb phrases
 
-The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing. Note that I am not a native English speaker; corrections are thus welcome. If you're brave, you can take a look at the [most recently compiled PDF](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf) (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)).
+The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing. Note that I am not a native English speaker; corrections are thus welcome.
 
 I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
 
