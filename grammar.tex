@@ -124,12 +124,11 @@
 % Set main fonts
 \usepackage[config=mt-Junicode]{microtype}
 
-% The version of Junicode used here is an inofficial one with the nasty
-% printing bug documented at https://sourceforge.net/p/junicode/bugs/33/ fixed
-% by recompiling the ttf files against a more recent version of ttfautohint.
-% Many thanks to Peter Baker.
-
-\setmainfont{Junicode_patched.ttf}[
+% Since Ubuntu 16.04 comes with an old and buggy version of Junicode, I had to
+% install the current version in a different directory to keep the system from
+% defaulting to the one installed in /usr/share/fonts (LaTeX seems to prefer
+% looking there over looking in ~/.fonts)
+\setmainfont{Junicode.ttf}[
 	Ligatures=TeX,
 	Numbers=Lowercase,
 	Path=fonts/,
@@ -157,7 +156,7 @@
 	BoldFont={*-Bold},
 	ItalicFont={*-Italic},
 	BoldItalicFont={*-BoldItalic},
-]{Junicode_patched.ttf}
+]{Junicode.ttf}
 
 \newfontfamily{\FS}[
 	Ligatures=TeX,
