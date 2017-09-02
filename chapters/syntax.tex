@@ -86,7 +86,6 @@ functional (f-)strucutre:
 	\quad sbj \tikzmark{subj} & \[
 		{\enspace}\vdots{\enspace} \\
 	\]{\quad} \\
-	
 	\quad obj \tikzmark{obj} & \[
 		{\enspace}\vdots{\enspace} \\
 	\] \tikzmark{objval}{\quad} \\
@@ -110,27 +109,22 @@ constituent (c-)structure:
 	([xshift=1.5ex, yshift=-0.5ex]{pic cs:verb})
 	to [out=south, in=north west]
 	([yshift=1ex]{pic cs:pred});
-	
 \draw [-latex]
 	([xshift=0.5ex, yshift=-0.5ex]{pic cs:x})
 	to [out=south, in=north east]
 	([yshift=1ex]{pic cs:subj});
-	
 \draw [-latex]
 	([xshift=0.5ex, yshift=-0.75ex]{pic cs:y})
 	to [out=south, in=north east]
 	([yshift=1ex]{pic cs:obj});
-	
 \draw [-latex]
 	([yshift=1ex]{pic cs:V})
 	to [out=west, in=south west]
 	([yshift=-10ex]{pic cs:fstruct});
-	
 \draw [-latex]
 	([yshift=1ex]{pic cs:NP})
 	to [out=east, in=east]
 	([yshift=1ex]{pic cs:objval});
-	
 \draw [-latex]
 	([yshift=1ex]{pic cs:Nbar})
 	to [out=east, in=east]
@@ -162,7 +156,7 @@ assumes the following hierarchies \citep[97, 100]{bresnan2016}:
 		\Compl{}}^{\text{a-fns}}\; 
 	\underbrace{\Adjc{}}_{\text{non-a-fns}}$
 \a\label{ex:dfs} Discourse functions (\DF{}s):\\
-	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}^{\text{d-fns}}\;  
+	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}^{\text{d-fns}}\;
 	\underbrace{\Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: \Compl{}\: 
 		\Adjc{}}_{\text{non-d-fns}}$
 \xe
@@ -797,22 +791,18 @@ like English or German.
 	& yam & Sān
 	& `to Sān'
 	\\
-	
 \Gen
 	& na & Sān
 	& `Sān's'
 	\\
-	
 \Loc
 	& ya & Sān
 	& `at Sān'
 	\\
-	
 \Caus
 	& sā & Sān
 	& `due to Sān'
 	\\
-	
 \Ins
 	& ri & Sān
 	& `with/by Sān'
@@ -859,22 +849,18 @@ like English or German.
 	& gan & yam
 	& `to a/the child'
 	\\
-	
 \Gen
 	& gan & ena
 	& `of a/the child'
 	\\
-	
 \Loc
 	& gan & ya
 	& `at a/the child'
 	\\
-	
 \Caus
 	& gan & isa
 	& `due to a/the child'
 	\\
-	
 \Ins
 	& gan & eri
 	& `with/by a/the child'
@@ -1954,7 +1940,6 @@ a look again at (\ref{ex:sinyapro}):
 					\Prontype	&	$wh$ \\
 				\] \tikzmark{ayrqcstruct_Foc} \\
 	\Q		&	~\tikzmark{ayrqcstruct_q} \\
-	
 	\Pred	&	~\astruct{open}{\ups{\Subj}, \ups{\Obj}} \\
 	\Subj	&	~\tikzmark{ayrqcstruct_subj} \\
 	\Obj	&	~\tikzmark{ayrqcstruct_obj} \\
@@ -3399,7 +3384,7 @@ dissimilarities between the two, as well as their distribution as morphemes.
 As described in the previous section, APs are usually found as adjuncts of NPs
 or DPs, where they describe properties of these nominal elements. Adjectives
 are likewise commonly found as open complements (\XCompl{}) in equative
-statements, which will be dealt with in \autoref{subsec:eqs}. Possessive
+statements, which will be dealt with in \autoref{subsubsec:eqs}. Possessive
 pronouns can be used as adjective-like modifiers as well, though they are
 probably still better classified as DP heads, since they are functional
 morphemes. Possessive adjectives thus also do not share all the morphological
@@ -3742,7 +3727,6 @@ to an Ayeri speaker.
 	\glft `I am so about my son.'\\
 		\textit{Literally:} `I am my son's so.' //
 \endgl
-	
 \a\label{ex:soreplacement_2_2}\ljudge*\begingl
 	\gla Yang da-yayam. //
 	\glb yang da=yayam //
@@ -3778,7 +3762,6 @@ apparent movement from complement to adjunct.
 	\glc \Fsg{}.\Aarg{} glad {} really exist=\Second{}.\Aarg{} here //
 	\glft `I am really glad you are here.' //
 \endgl
-	
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:intrusivequant2_1}) 
 |- ++ (south:.75em) -| ([xshift=-.5*width("yomavāng edaya"),yshift=-.75ex]{pic
@@ -6038,7 +6021,6 @@ NP are dominated by VP:
 
 \pex
 \a Exhaustive domination \citep[121]{carnie2013}:\smallskip
-	
 	``Node A exhaustively dominates a set of terminal nodes \{B, C, ..., D\},
 	provided it dominates all the members of the set so that there is no
 	member of the set that is not dominated by A and there is no terminal node
@@ -6130,16 +6112,16 @@ main reference grammar of Tagalog. However, what is interesting in comparing
 \citet{schachter2015}'s and \citet{kroeger1991}'s respective analyses of
 Tagalog's syntactic alignment is that both come to the same conclusion: Tagalog
 is ambiguous as to whether the subject notion is vested in the NP whose role is
-marked on the verb or the actor, since certain syntactic constructions apply to
-either. However, while these ambiguities lead \citet{schachter1976} to the
-conclusion that Tagalog all but lacks syntactic subjects, which is reaffirmed
-again by \citet[1675--1676]{schachter2015},\footnote{Curiously,
+marked on the verb or the actor, since certain syntactic constructions
+typically associated with subjects apply to either or both. While this
+ambiguity leads \textcites{schachter1976}{schachter2015} to conclude that
+Tagalog all but lacks syntactic subjects\footnote{Curiously,
 \citet{schachter2015} does not acknowledge \citet{kroeger1991} at all, nor does
 he refer to any other research more recent than 1985. One reason may be that
 Schachter presumably retired in the early 1990s, as the UCLA linguistics
-department's \citet{uclalingdepthist} would suggest.} \citet{kroeger1991}
+department's \citet{uclalingdepthist} would suggest.}, \citet{kroeger1991}
 reaches the opposite conclusion by performing more tests and taking a
-functional rather than structural perspective into account:
+functional rather than structural perspective:
 
 \begin{itemize}
 	\item \textcquote[225]{kroeger1991}{Tagalog has a well-defined grammatical
@@ -6322,6 +6304,26 @@ be used in the discussion below.
 		with \textcites[112]{kroeger1991} (who cites \cite[137]{speas1990}
 		for criteria, cf. \citet[123--201]{speas1990} for whole chapter)
 \end{itemize}
+
+\subsubsection{Inflectional phrases}
+\label{subsubsec:ips}
+
+...
+
+\subsubsection{Verb phrases}
+\label{subsubsec:vps}
+
+...
+
+\subsubsection{Equative statements}
+\label{subsubsec:eqs}
+
+...
+
+\subsubsection{Existential statements}
+\label{subsubsec:exs}
+
+...
 
 % \section{Complementizer phrases}
 % \label{sec:cps}
