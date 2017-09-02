@@ -6070,7 +6070,7 @@ lacking a VP if the notion of extended heads is accepted. In any case, tests
 need to be performed to see whether one of the analyses presented in
 (\ref{ex:vsocstructs}) holds true for Ayeri as well.
 
-\subsubsection{Ayeri as a so-called `trigger language'}
+\subsubsection{`Trigger languages' and Austronesian alignment}
 
 The term `trigger language' comes up in discussions on \citetitle{conlangl} as
 early as 1995, where it may well have originated as an established term for
@@ -6098,9 +6098,9 @@ the English sentence \enquote{I gave the dog the bone} can come out:
 \end{enumerate}
 
 This involves changing the name of \enquote{nominative} and
-\enquote{accusative} to \enquote{actor} and \enquote{patent} \sic{}, since there
-is no longer a \enquote{subject} or \enquote{object} as such. Of course, word
-order is free, so:
+\enquote{accusative} to \enquote{actor} and \enquote{patent} \sic{}, since
+there is no longer a \enquote{subject} or \enquote{object} as such. Of course,
+word order is free, so:
 
 \begin{enumerate}[start=4, nosep, label={\arabic*)}]
 \item dog-\textsc{dative} gave-\textsc{p.t.} I-\textsc{actor} 
@@ -6126,8 +6126,93 @@ preferable [...] There also seems to be good reason to reject the term
 \emph{focus}.}
 
 It may be noted that term `focus' is used in \citet{schachterotanes1972}, the
-main reference grammar of Tagalog. [Why does \citet{schachter2015} reject
-`subject' while \citet{kroeger1991} embraces it? Examples!]
+main reference grammar of Tagalog. However, what is interesting in comparing
+\citet{schachter2015}'s and \citet{kroeger1991}'s respective analyses of
+Tagalog's syntactic alignment is that both come to the same conclusion: Tagalog
+is ambiguous as to whether the subject notion is vested in the NP whose role is
+marked on the verb or the actor, since certain syntactic constructions apply to
+either. However, while these ambiguities lead \citet{schachter1976} to the
+conclusion that Tagalog all but lacks syntactic subjects, which is reaffirmed
+again by \citet[1675--1676]{schachter2015},\footnote{Curiously,
+\citet{schachter2015} does not acknowledge \citet{kroeger1991} at all, nor does
+he refer to any other research more recent than 1985. One reason may be that
+Schachter presumably retired in the early 1990s, as the UCLA linguistics
+department's \citet{uclalingdepthist} would suggest.} \citet{kroeger1991}
+reaches the opposite conclusion by performing more tests and taking a
+functional rather than structural perspective into account:
+
+\begin{itemize}
+	\item \textcquote[225]{kroeger1991}{Tagalog has a well-defined grammatical
+		subject};
+	\item \textcquote[225]{kroeger1991}{grammatical relations are defined
+		indepently of phrase structure};
+	\item \textcquote[225]{kroeger1991}{patients can become subjects even when
+		the agent is expressed as a direct (non-oblique) argument of the verb}.
+	\item \textcquote[226]{kroeger1991}{Subject selection in Tagalog does not
+		work by demotion or suppression of thematically more prominent
+		arguments. Rather, all arguments seem to be equally eligible for
+		mapping onto the subject relation}.
+\end{itemize}
+
+He also provides evidence based on satistics and examples that the marked-for
+relation, which he calls the `nominative relation' according to his hypothesis
+that it is the syntactic subject, is neither especially salient in terms of
+pragmatic topichood, nor does it show signs of carrying pragmatic focus
+specifically. He finds that rather, nominative marking works independent of
+discourse functions \citep[56\psqq]{kroeger1991}.
+
+The tests for typical properties associated with grammatical subjects which
+\citet{kroeger1991} performs partially extend those presented in
+\citet{schachter1976}. Moreover, his conclusions build on a more modern,
+functionally oriented approach than Schachter's. For this reason, I will follow
+Kroeger rather than Schachter in the following. Either way, we will have to
+test quantifier float, relativization, number agreement, reflexive binding,
+raising and control verbs, control of secondary predicates, and the termhood of
+the agent NP in transitive sentences with what was called `patient topic' so
+far. First of all, it will be helpful, however, to define some terms which will
+be used in the discussion below.
+
+\subsubsection{Definition of terms}
+
+\begin{itemize}
+	\item What is a subject? → definitions:
+		\textcites[132\psqq]{carnie2013}[104\psqq]{comrie1989}
+		[76]{dixon2010}[151\psqq]{dixon2012}[]{lithompson1976}; regarding
+		AA: \citet[19--54]{kroeger1991}
+	\item What is a topic? → definitions: \textcites[171--175]{dixon2010}
+	[]{givon1983}[]{lithompson1976}; regarding AA:
+	\citet[55--68]{kroeger1991}
+	\item What is focus? → definitions: ...
+\end{itemize}
+
+\pex
+\a nominative--accusative alignment (S\tsub{A}---P):\medskip
+
+\begin{tikzpicture}
+\node (S) at (1,1) {S};
+\node (A) at (0,0) {A};
+\node (P) at (2,0) {P};
+
+\draw (0.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=45];
+\draw (P) circle [radius=1em];
+\end{tikzpicture}
+
+\a ergative--absolutive alignment (S\tsub{P}---A):\medskip
+
+\begin{tikzpicture}
+\node (S) at (1,1) {S};
+\node (A) at (0,0) {A};
+\node (P) at (2,0) {P};
+
+\draw (1.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=-45];
+\draw (A) circle [radius=1em];
+\end{tikzpicture}
+
+\xe
+
+...
+
+\subsection{Tests on subjecthood}
 
 \begin{itemize}
 	\item \citet[1674--1676]{schachter2015}:
@@ -6147,13 +6232,6 @@ main reference grammar of Tagalog. [Why does \citet{schachter2015} reject
 		constructions, where the matrix verb passes either its S [= subject
 		control] or its O [= object control] down as the S of the subordinate
 		verb) \citep[1675]{schachter2015}.
-		\item Argument of \citet{schachter1976} that Tagalog all but lacks
-		syntactic subjects is reaffirmed \citep[1676]{schachter2015}.
-		\item Handbook article, of course cannot go into all detail; more
-		detailed information in \citet{schachter1976}. Does not acknowledge
-		\citet{kroeger1991} at all, nor any other research more recent than
-		1985!\footnote{Schachter may reasonably have retired in the early 90s
-		given he was born in 1929.}
 	\end{itemize}
 
 	\item \citet[19--52]{kroeger1991}:
@@ -6222,162 +6300,28 @@ main reference grammar of Tagalog. [Why does \citet{schachter2015} reject
 		ambiguity in subjecthood mentioned above \citep[54]{kroeger1991}.
 		\item Statistics reveal that the \Nom{} argument is not the topic and
 		not the focus either; those NPs marked for \Nom{} are not especially
-		salient for topicality \cite[56\psqq]{kroeger1991}.
+		salient for topicality \citep[56\psqq]{kroeger1991}.
 		\item \Nom{} NP can also bear pragmatic focus (e.g. in
 		\fw{wh}-questions), which would be impossible if it were a
 		grammaticalized topic \citep[60\psqq]{kroeger1991}. \fw{ay}-inversion
 		patterns much better with notions of pragmatic topichood \citep[63]
 		{kroeger1991}.
-		\item \textquote{Tagalog has a well-defined grammatical subject},
-		however, \textquote{grammatical relations are defined indepently of
-		phrase structure. [...] Neither can grammatical relations be defined in
-		terms of pragmatic functions}; \textcquote[225]{kroeger1991}{patients
-		can become subjects even when the agent is expressed as a direct
-		(non-oblique) argument of the verb}.
-		\textcquote[226]{kroeger1991}{Subject selection in Tagalog does not
-		work by demotion or suppression of thematically more prominent
-		arguments. Rather, all arguments seem to be equally eligible for
-		mapping onto the subject relation}.
 	\end{itemize}
 
 \end{itemize}
 
-...
-
-\subsubsection{Definition of terms}
+\subsection{Establishing the constituent structure}
 
 \begin{itemize}
-	\item What is a subject? → definitions:
-		\textcites[132\psqq]{carnie2013}[104\psqq]{comrie1989}
-		[76]{dixon2010}[151\psqq]{dixon2012}[]{lithompson1976}; regarding
-		AA: \citet[19--54]{kroeger1991}
-	\item What is a topic? → definitions: \textcites[171--175]{dixon2010}
-	[]{givon1983}[]{lithompson1976}; regarding AA:
-	\citet[55--68]{kroeger1991}
-\end{itemize}
-
-\pex
-\a nominative--accusative alignment (S\tsub{A}---P):\medskip
-
-\begin{tikzpicture}
-\node (S) at (1,1) {S};
-\node (A) at (0,0) {A};
-\node (P) at (2,0) {P};
-
-\draw (0.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=45];
-\draw (P) circle [radius=1em];
-\end{tikzpicture}
-
-\a ergative--absolutive alignment (S\tsub{P}---A):\medskip
-
-\begin{tikzpicture}
-\node (S) at (1,1) {S};
-\node (A) at (0,0) {A};
-\node (P) at (2,0) {P};
-
-\draw (1.5,0.5) ellipse [x radius=3em, y radius=2em, rotate=-45];
-\draw (A) circle [radius=1em];
-\end{tikzpicture}
-
-\xe
-
-\subsubsection{Establishing the constituent structure}
-
-\begin{itemize}
-	\item How do we know S is a constituent? → RNR and binding m/b possible
-		tests?
+	\item How do we know S is a constituent?
 	\item IP above S → verb in this position can't be infinite, so inflection 
 		is an obligatory condition in this position
 	\item Do we know whether there's a ``hidden'' VP in S? → test for 
 		constituency
-\end{itemize}
-
-\subsubsection{Tests on subjecthood}
-
-\begin{itemize}
-	\item Does Ayeri have a VP, since it's VSO? (i.e. is it configurational?);
-	\citet[118--119]{bresnan2016} reminds that configurationality is basically
-	a gradient
 	\item Tests on cline between logical \Subj{} NPs vs. rest → compare
 		with \textcites[112]{kroeger1991} (who cites \cite[137]{speas1990}
 		for criteria, cf. \citet[123--201]{speas1990} for whole chapter)
 \end{itemize}
-
-\subsection{Inflectional phrases}
-\label{subsec:ips}
-
-...
-
-\subsection{Verb phrases}
-\label{subsec:vps}
-
-...
-
-\subsection{Equative statements}
-\label{subsec:eqs}
-
-...
-
-\subsection{Existential statements}
-\label{subsec:exs}
-
-...
-
-% * Ayeri's unmarked word order is essentially VSO, maaaaaaaybe like this???
-%
-%   IP
-%     \
-%      I'
-%     /  \
-%    D°   I'
-%        /  \
-%       I°   S
-%           / \
-%          NP XP*
-% 
-%   → Analysis similar to the one suggested for Irish by ??? and ??? 
-%     (Kroeger 1991, 1993; Bresnan 2016)
-%   → Probably one has to distinguish clauses with IP from `small clauses' 
-% 	  (cf. exposition to Kroeger 1991) with only S
-%   → S is likely an exocentric category
-% 	  → support/tests for this?
-% 	  → Kroeger 1991 should list some criteria in this respect
-% * Subject vs. Topic vs. Actor vs. Nominative in Ayeri, in relation to
-%   superficial (?) similarities with Austronesian alignment (Kroeger 1991,
-%   1993, 2007; Schachter 2015)
-%   → Promoting patient in whatever way does not demote logical subject etc.
-%   → Ayeri's notion of A = logical subject (also what LFG calls `SUBJ', right?)
-%     probably stronger than Tagalog's
-%   → PROBLEM: terminology all about the place---may have inspired differences 
-%     between Ayeri and real-world AA + my only now beginning to learn more
-%     about syntax and stuff
-%     → IMPORTANT: how do I use the respective terms and why?
-% * Bresnan (2016) on extended head principle relevant w/r/t placement of 
-%   finite verb in I°?
-%   → Are there any tests for whether there's a covert VP after all? Nothing
-%     verbal ever seems to occur in S'
-%   → Ayeri should treat logical subjects and objects similarly, so no 
-%     hierarchy between them?
-% * Interesting problem: subject pronoun citics as a specifier of S?
-%   → Funny stuff happens when adverbs are present
-%   → Especially with patient-pronoun subjects (if that term is appropriate)
-% * Patient subjects, causative constructions, no secundative, avoidance (?) of 
-%   raising all need to be investigated with regards to proto-role mapping in 
-%   a-structure ([±r, ±o])
-% * Existential vs. predicative statements
-%   → also, object predicatives!
-%   → also, comparative verbs: kama-, eng-, va- and why they're weird
-% * Agreement with conjoined/disjoined NPs
-%   → due to the way verb agreement in general works, closest-conjunct agreement
-%     is the most likely strategy for gender mismatches; yet number resolution.
-%   → default gender for anaphoric reference to mixed-gender NPs (also animacy
-%     mismatches!)
-%
-% \citet[153--156, 165]{bresnan2016} → pronouns to clitics to agreement
-% \citet[157]{bresnan2016} → evidence criteria for IP
-% \citet[151\psqq]{dixon2012} → subjects
-% \citet[116\psqq]{comrie1989} → subjects
-% \citet[26--54]{kroeger1991} → subjects (and actually the whole thesis)
 
 % \section{Complementizer phrases}
 % \label{sec:cps}
