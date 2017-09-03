@@ -5829,7 +5829,7 @@ certain position in the constituent structure---the predicate---and which
 commands a constituent jointly formed by the verb and its dependents---the
 predication. An SVO sentence thus very generally looks like this:
 
-\ex
+\ex\label{ex:basicsvo}
 \begin{forest}
 [S
 	[NP
@@ -6162,31 +6162,21 @@ discussion below.
 
 \subsection{Definition of terms}
 
-The terms `subject', `topic', and `focus' were used above, but it seems
-advisable to sketch out working definitions. First things first, the
-\textbf{subject} can be defined in a variety of ways, and maybe especially
-because the notion of a subject is so fundamental, \citet{comrie1989} notes
-that if
+The terms `subject', `topic', and `focus' were already used a number of times
+above, but it seems advisable to sketch out working definitions in order to
+preclude confusion before continuing to look at how Ayeri fares with regards to
+these notions. First things first, the \textbf{subject} can be defined in a
+variety of ways, and maybe especially because the notion of a subject is so
+basic, \citet{comrie1989} notes that if
 
 \blockcquote[104]{comrie1989}{linguists were invariably in agreement in stating
 which noun phrase, in each construction in each language, is the subject, then
 we could, perhaps, accept this inter-subjective agreement, and devote
 correspondingly less energy to trying to find an explicit definition of
 subject. However, it turns out that, in a wide range of cases, this
-inter-subjective agreement is lacking}.
+inter-subjective agreement is lacking.}
 
-A basic definition is given by the chart in (\ref{ex:subject}). It shows the
-definition of the notion of `subject' for both nominative--accusative languages
-(like English) and ergative--absolutive languages (like Basque). The subject is
-here understood to be the single nominal relation of an intransitive verb (S).
-Languages then differ based on their treatment of the two nominal relations of
-a transitive verb in relation to intransitive verbs: they may either treat the
-actor (A) or the patient/undergoer (P) the same as S. In the former case, the
-language is said to have nominative--accusative alignment
-(\ref{ex:subject_nomacc}), whereas in the latter case, the language is said to
-have ergative--absolutive alignment (\ref{ex:subject_abserg}).
-
-\begin{figure}[ht]
+\begin{figure}[t]
 \pex\label{ex:subject}
 \a\label{ex:subject_nomacc}%
 nominative--accusative alignment (S\tsub{A}---P):\medskip
@@ -6201,7 +6191,7 @@ nominative--accusative alignment (S\tsub{A}---P):\medskip
 \end{tikzpicture}
 
 \a\label{ex:subject_abserg}%
-ergative--absolutive alignment (S \tsub{P}---A):\medskip
+ergative--absolutive alignment (S\tsub{P}---A):\medskip
 
 \begin{tikzpicture}
 \node (S) at (1,1) {S};
@@ -6215,12 +6205,124 @@ ergative--absolutive alignment (S \tsub{P}---A):\medskip
 \xe
 \end{figure}
 
-...
+\citet{dixon2010} defines a subject as \textcquote[76]{dixon2010}{the entity
+about which something is affirmed or denied}. He goes on to explain that,
+ignoring copula clauses like `I am tired', every language has two varieties of
+clauses, intransitive ones, where the verb has just one core argument, and
+transitive ones, where the verb has two core arguments. A basic definition
+based on this is given by the chart in (\ref{ex:subject}). It shows the
+definition of the notion of `subject' for both nominative--accusative languages
+and ergative--absolutive languages. Languages of the world differ based on how
+they prefer to treat the two nominal relations of a transitive verb in relation
+to intransitive verbs: they may have a strong preference to either treat the
+agent (A)---as the entity that prototypically acts in some way---or the
+patient/undergoer (P)---as the entity which is prototypically affected by the
+action in some way, that is, the object---the same as S. In the former case,
+the language is said to have nominative--accusative alignment
+(\ref{ex:subject_nomacc}), whereas in the latter case, the language is said to
+have ergative--absolutive alignment (\ref{ex:subject_abserg}).
+\citet{comrie1989} illustrates this difference by an example from Chukchi,
+which we will here contrast with English:
 
-From the point of view of constituent structure, it is normally understood to
-be a \textcquote[221]{carnie2013}{DP that has the property indicated by the
-predicate phrase. What the sentence is about. In most sentences, this surfaces
-in the specifier of TP [the Tense Phrase]}.
+\needspace{5\baselineskip}%
+\pex\label{ex:engchuk_eng}
+\a\label{ex:engchuk_eng1}\begingl
+	\gla I came. //
+	\glb \Fsg{}.\Nom{} {} //
+	\glc S {} //
+\endgl
+
+\a\label{ex:engchuk_eng2}\begingl
+	\gla I saw her. //
+	\glb \Fsg{}.\Nom{} {} \TsgF{}.\Obl{} //
+	\glc S\tsub{A} {} P //
+\endgl
+
+\xe
+
+\needspace{5\baselineskip}%
+\pex~\label{ex:engchuk_chuk}%
+Chukchi (adapted from \cite*[104]{comrie1989}):
+\a\label{ex:engchuk_chuk1}\begingl
+	\gla Ɣəm tə-yet-ɣʔek. //
+	\glb \Fsg{}.\Abs{} came-\Fsg{} //
+	\glc S {} //
+	\glft `I came.' //
+\endgl
+
+\a\label{ex:engchuk_chuk2}\begingl
+	\gla Ɣəm-nan ɣət tə-lʔu-ɣət. //
+	\glb \Fsg{}.\Erg{} \Ssg{}.\Abs{} saw-\Fsg{}-\Ssg{} //
+	\glc A S\tsub{P} {} //
+	\glft `I saw thee.' //
+\endgl
+
+\xe
+
+While English treats the subject of the intransitive sentence
+(\ref{ex:engchuk_eng1}) the same as that of the transitive one
+(\ref{ex:engchuk_eng2})---both sentences use \fw{I} in the nominative---Chukchi
+appears to use a different pronoun for the subject of the intransitive sentence
+(\ref{ex:engchuk_chuk1}) than the subject of the transitive one---absolutive
+\fw{ɣəm} versus ergative \fw{ɣəmnan}, respectively. At least in Standard
+English, it would be ungrammatical to use the pronoun \fw{me} in place of
+\fw{I} in (\ref{ex:engchuk_eng2}), since \fw{me} can only be used for
+first-person objects of the verb, but not for subjects of transitive clasues.
+
+However, \citet{comrie1989} also urges to consider that grammatical relations
+and their representation in morphology are not always this clear cut as in the
+example above. While he characterizes the prototypical subject as the
+intersection of agent and topic as far as cross-linguistic evidence is
+concerned \citep[107]{comrie1989}, he also points out that subjects do not
+necessarily have to unite all the properties typically associated with them
+\citep[110]{comrie1989}. This is the case, for instance, with Tagalog, as
+observed by both \citet{schachter1976} and \citet{kroeger1991}, and may
+considerably complicate making a definitive statement.
+
+Moreover, he points out that statistically, languages of the world show a
+strong preference for nominative--accusative alignment, possibly due to the
+fact that human perception values agents as more relevant to discourse than
+patients, which is why agents are far more likely also to be pragmatic topics
+\citep[120]{comrie1989}. Yet, though, dominantly nominative--accusative may
+show a bias towards an ergative--absolutive treatment, for instance, of
+resultative constructions. On the other hand, dominantly ergative--absolutive
+languages show a bias towards a nominative--accusative treatment, for instance,
+of addressees of imperatives \citep[116--119]{comrie1989}.
+
+According to \citep{carnie2013}, from the point of view of constituent
+structure (which is key in Generative Grammar), a subject is normally
+understood to be a \textcquote[221]{carnie2013}{DP that has the property
+indicated by the predicate phrase. What the sentence is about. In most
+sentences, this surfaces in the specifier of [the tense phrase]}, which is also
+what we already saw in (\ref{ex:basicsvo}), which is repeated here for
+convenience:
+
+\ex\label{ex:basicsvo2}
+\begin{forest}
+[S
+	[NP
+		[\textsc{subject}, roof]
+	]
+	[VP
+		[\xbar{V}
+			[\xhead{V}
+				[\textsc{verb}]
+			]
+			[NP
+				[\textsc{object}, roof]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+What \citep{carnie2013} calls `tense phrase' (TP) for reasons of how
+generative grammar treats verb inflection is essentially what is labeled `VP'
+for `verb phrase' above. However, as we have learned above, this notion is
+challenged by languages such as Tagalog \citep[225]{kroeger1991}.
+
+...
 
 \begin{itemize}
 	\item What is a subject? → definitions:
