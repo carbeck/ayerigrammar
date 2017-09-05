@@ -6179,7 +6179,7 @@ inter-subjective agreement is lacking.}
 \begin{figure}[t]
 \pex\label{ex:subject}
 \a\label{ex:subject_nomacc}%
-nominative--accusative alignment (S\tsub{A}---P):\medskip
+nominative--accusative alignment (S/A---P):\medskip
 
 \begin{tikzpicture}
 \node (S) at (1,1) {S};
@@ -6191,7 +6191,7 @@ nominative--accusative alignment (S\tsub{A}---P):\medskip
 \end{tikzpicture}
 
 \a\label{ex:subject_abserg}%
-ergative--absolutive alignment (S\tsub{P}---A):\medskip
+ergative--absolutive alignment (S/P---A):\medskip
 
 \begin{tikzpicture}
 \node (S) at (1,1) {S};
@@ -6235,14 +6235,16 @@ which we will here contrast with English:
 \a\label{ex:engchuk_eng2}\begingl
 	\gla I saw her. //
 	\glb \Fsg{}.\Nom{} {} \TsgF{}.\Obl{} //
-	\glc S\tsub{A} {} P //
+	\glc S/A {} P //
 \endgl
 
 \xe
 
 \needspace{5\baselineskip}%
 \pex~\label{ex:engchuk_chuk}%
-Chukchi (adapted from \cite*[104]{comrie1989}):
+Chukchi (adapted from Comrie 1989: 104\nocite{comrie1989}):
+% FIXME: None of the citation commands seems to allow printing the author name
+% and year in this context, where the name has already been printed just above.
 \a\label{ex:engchuk_chuk1}\begingl
 	\gla Ɣəm tə-yet-ɣʔek. //
 	\glb \Fsg{}.\Abs{} came-\Fsg{} //
@@ -6253,7 +6255,7 @@ Chukchi (adapted from \cite*[104]{comrie1989}):
 \a\label{ex:engchuk_chuk2}\begingl
 	\gla Ɣəm-nan ɣət tə-lʔu-ɣət. //
 	\glb \Fsg{}.\Erg{} \Ssg{}.\Abs{} saw-\Fsg{}-\Ssg{} //
-	\glc A S\tsub{P} {} //
+	\glc A S/P {} //
 	\glft `I saw thee.' //
 \endgl
 
@@ -6267,7 +6269,7 @@ appears to use a different pronoun for the subject of the intransitive sentence
 \fw{ɣəm} versus ergative \fw{ɣəmnan}, respectively. At least in Standard
 English, it would be ungrammatical to use the pronoun \fw{me} in place of
 \fw{I} in (\ref{ex:engchuk_eng2}), since \fw{me} can only be used for
-first-person objects of the verb, but not for subjects of transitive clasues.
+first-person objects of the verb, but not for subjects of transitive clauses.
 
 However, \citet{comrie1989} also urges to consider that grammatical relations
 and their representation in morphology are not always this clear cut as in the
@@ -6286,8 +6288,8 @@ patients, which is why agents are far more likely also to be pragmatic topics
 \citep[120]{comrie1989}. Yet, though, dominantly nominative--accusative may
 show a bias towards an ergative--absolutive treatment, for instance, of
 resultative constructions. On the other hand, dominantly ergative--absolutive
-languages show a bias towards a nominative--accusative treatment, for instance,
-of addressees of imperatives \citep[116--119]{comrie1989}.
+languages show a bias towards a nominative--accu\-sa\-tive treatment, for
+instance, of addressees of imperatives \citep[116--119]{comrie1989}.
 
 According to \citep{carnie2013}, from the point of view of constituent
 structure (which is key in Generative Grammar), a subject is conventionally
@@ -6297,13 +6299,99 @@ sentences, this surfaces in the specifier of [the tense phrase]}. However, as
 we have learned above, this notion is challenged by languages such as Tagalog
 \citep[225]{kroeger1991}.
 
+\Lfg{} distinguishes between a syntactic-subject function, \Subj{}, and a
+logical subject, $\hat{\theta}$. Which semantic component the subject is mapped
+onto is understood to be based on the relative prominence of the subject
+argument along some dimension compared to other arguments. For instance,
+nominative--accusative languages prefer the semantically most prominent
+available role of a verb's argument structure, ergative--absolutive languages
+instead pick the argument most affected by the agent's action, and active
+languages focus on the argument in control of the action
+\citep[95--96]{bresnan2016}. The mapping between grammatical functions like
+\Subj{} and the lexical components that make it up also does not need to be a
+one-to-one correspondence, since \Lfg{} allows for the distributed exponence of
+grammatical features like in the example of Warlpiri in (\ref{ex:warlastruct}).
+The only condition is that grammatical functions be uniquely defined within
+their minimal f-structure \citep[45]{bresnan2016}.
+
+\begin{figure}[htp]
+\ex\label{ex:warlastruct}
+\begingl[glwordalign=center]
+\glpreamble Warlpiri \citep[325]{bresnan2016}: //
+\gla {~\hspace{1.5em}} {} chase {\quad\normalfont ⟨} agent {\quad} patient 
+{\normalfont ⟩} {} //
+\glb {} {[}
+	\Pred{}\tikzmark{warlastruct_Pred}
+	{}
+	\Subj{}\tikzmark{warlastruct_Subj}
+	{}
+	\Obj{}\tikzmark{warlastruct_Obj}
+	{}
+	{]} //
+\endgl
+
+\begin{forest}
+[IP
+	[{NP~\tikzmark{warlastruct_ERGNP1}}
+		[{...-\Erg{}}, roof]
+	]
+	[\xbar{I}
+		[I, minimum width=5em]
+		[S, minimum width=5em
+			[{\tikzmark{warlastruct_V}~V}]
+			[{NP~\tikzmark{warlastruct_ABSNP1}}
+				[{...-\Abs{}}, roof]
+			]
+			[{NP~\tikzmark{warlastruct_ERGNP2}}
+				[{...-\Erg{}}, roof]
+			]
+			[{NP~\tikzmark{warlastruct_ABSNP2}}
+				[{...-\Abs{}}, roof]
+			]
+		]
+	]
+]
+\end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex, min distance=1cm]
+	([yshift=1ex]{pic cs:warlastruct_V})
+	to [out=west, in=south]
+	([xshift=-1em, yshift=-.5ex]{pic cs:warlastruct_Pred});
+
+\draw [-latex, min distance=1cm]
+	([yshift=1ex]{pic cs:warlastruct_ERGNP1})
+	to [out=east, in=south]
+	([xshift=-.75em, yshift=-.5ex]{pic cs:warlastruct_Subj});
+\draw [-latex, min distance=1cm]
+	([yshift=1ex]{pic cs:warlastruct_ERGNP2})
+	to [out=east, in=south]
+	([xshift=-.75em, yshift=-.5ex]{pic cs:warlastruct_Subj});
+
+\draw [-latex, min distance=1cm]
+	([yshift=1ex]{pic cs:warlastruct_ABSNP1})
+	to [out=east, in=south]
+	([xshift=-.5em, yshift=-.5ex]{pic cs:warlastruct_Obj});
+\draw [-latex, min distance=1cm]
+	([yshift=1ex]{pic cs:warlastruct_ABSNP2})
+	to [out=east, in=south]
+	([xshift=-.5em, yshift=-.5ex]{pic cs:warlastruct_Obj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+The logical subject $\hat{\theta}$ is defined as \textcquote[330]{bresnan2016}
+{the most prominent semantic role of a predicator}. Furthermore,
+\citet{bresnan2016} devise two a-structure features, [±\,o] (objective) and
+[±\,r] (restrictive). According to this classification, \Subj{} is assigned the
+features [–\,r, –\,o], since the subject is not restricted to a certain
+semantic role, nor needs to have a semantic role. Also, subjects do not
+complement transitive predicators like objects do, so they are not `objective'.
+\citet{bresnan2016}'s lexical mapping theory assumes that all languages have
+subjects \citep[330--331]{bresnan2016}.
+
 ...
 
 \begin{itemize}
-	\item What is a subject? → definitions:
-		\textcites[132\psqq]{carnie2013}[104\psqq]{comrie1989}
-		[76]{dixon2010}[151\psqq]{dixon2012}[]{lithompson1976}; regarding
-		AA: \citet[19--54]{kroeger1991}
 	\item What is a topic? → definitions: \textcites[171--175]{dixon2010}
 	[]{givon1983}[]{lithompson1976}; regarding AA:
 	\citet[55--68]{kroeger1991}
