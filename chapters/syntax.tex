@@ -5827,21 +5827,27 @@ Other
 It is commonly assumed that languages have a logical subject which occupies a
 certain position in the constituent structure---the predicate---and which
 commands a constituent jointly formed by the verb and its dependents---the
-predication. An SVO sentence thus very generally looks like this:
+predication. An SVO sentence thus very generally looks like this
+\parencite[compare the examples in][101--111]{bresnan2016}:
 
 \ex\label{ex:basicsvo}
 \begin{forest}
-[S
+[IP
 	[NP
 		[\textsc{subject}, roof]
 	]
-	[VP
-		[\xbar{V}
-			[\xhead{V}
-				[\textsc{verb}]
-			]
-			[NP
-				[\textsc{object}, roof]
+	[\xbar{I}
+		[\xhead{I}
+			[\textsc{(auxiliary)}]
+		]
+		[VP
+			[\xbar{V}
+				[\xhead{V}
+					[\textsc{verb}]
+				]
+				[NP
+					[\textsc{object}, roof]
+				]
 			]
 		]
 	]
@@ -6215,8 +6221,8 @@ definition of the notion of `subject' for both nominative--accusative languages
 and ergative--absolutive languages. Languages of the world differ based on how
 they prefer to treat the two nominal relations of a transitive verb in relation
 to intransitive verbs: they may have a strong preference to either treat the
-agent (A)---as the entity that prototypically acts in some way---or the
-patient/undergoer (P)---as the entity which is prototypically affected by the
+agent (A)---the entity that prototypically acts in some way---or the
+patient/undergoer (P)---the entity which is prototypically affected by the
 action in some way, that is, the object---the same as S. In the former case,
 the language is said to have nominative--accusative alignment
 (\ref{ex:subject_nomacc}), whereas in the latter case, the language is said to
@@ -6297,16 +6303,48 @@ understood to be a \textcquote[221]{carnie2013}{DP that has the property
 indicated by the predicate phrase. What the sentence is about. In most
 sentences, this surfaces in the specifier of [the tense phrase]}. However, as
 we have learned above, this notion is challenged by languages such as Tagalog
-\citep[225]{kroeger1991}.
+\citep[225]{kroeger1991}. What \citet{carnie2013} refers to structurally was
+basically already indicated by (\ref{ex:basicsvo}), except with different
+lables; the example is repeated here for convenience:
 
-\Lfg{} distinguishes between a syntactic-subject function, \Subj{}, and a
-logical subject, $\hat{\theta}$. Which semantic component the subject is mapped
-onto is understood to be based on the relative prominence of the subject
-argument along some dimension compared to other arguments. For instance,
-nominative--accusative languages prefer the semantically most prominent
-available role of a verb's argument structure, ergative--absolutive languages
-instead pick the argument most affected by the agent's action, and active
-languages focus on the argument in control of the action
+\ex\label{ex:basicsvo2}
+\begin{forest}
+[IP
+	[NP
+		[\textsc{subject}, roof]
+	]
+	[\xbar{I}
+		[\xhead{I}
+			[\textsc{(auxiliary)}]
+		]
+		[VP
+			[\xbar{V}
+				[\xhead{V}
+					[\textsc{verb}]
+				]
+				[NP
+					[\textsc{object}, roof]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+
+For systematic reasons, \citet{carnie2013} refers to a DP subject which serves
+as the specifier of a TP. This corresponds to the subject NP and the IP here.
+Unlike \textsc{gg}, \Lfg{} treats tense as a semantic feature, not as a
+functional head with a fixed position in constituent structure, hence the difference in labeling.
+
+\Lfg{} defines both a syntactic-subject function, \Subj{}, and a logical
+subject, $\hat{\theta}$, which operate in lockstep. Which semantic component
+the subject is mapped onto is understood to be based on the relative prominence
+of the subject argument along some dimension compared to other arguments. For
+instance, nominative--accusative languages prefer the semantically most
+prominent available role of a verb's argument structure, ergative--absolutive
+languages instead pick the argument most affected by the agent's action, and
+active languages focus on the argument in control of the action
 \citep[95--96]{bresnan2016}. The mapping between grammatical functions like
 \Subj{} and the lexical components that make it up also does not need to be a
 one-to-one correspondence, since \Lfg{} allows for the distributed exponence of
