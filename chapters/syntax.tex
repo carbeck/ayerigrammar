@@ -10,19 +10,22 @@
 
 While the previous chapter dealt largely with the various parts of speech and
 their various distributive and inflectional properties, the present chapter
-will elaborate on how these words combine into syntactic phrases. Since Ayeri
-is a verb-initial language, it is probably most comfortably analyzed in terms
-of Lexical-Functional Grammar (\cite{bresnan1982}~ff.; more recently
-\cite{bresnan2016}; \cite{dalrymple2001}), since \Lfg{} does not require
-complicated derivations behind the surface structure of
-sentences.\footnote{Passivization, for instance, is assumed to be a lexically
-motivated alternation in predicate structure (\Sbj{} is blocked, so the
-nominative is assigned to \Obj{}, and the original \Sbj{} is expressed  by an
-\Adjc{}), rather than an internal derivational process
-\citep[23\psqq]{bresnan2016}.} It will be assumed here that, even though Ayeri
-is basically VSO with predicate and predication not adjacent to each other, it
-is configurational in that there is a VP which c-commands a number of other
-constituents as complements in transitive sentences.
+will elaborate on how these words combine into syntactic phrases.\footnote{It
+should be noted that, since trees are large, a number of regularly numbered
+examples in this chapter will appear not in place but floated, like tables and
+figures in the previous chapters.} Since Ayeri is a verb-initial language, it
+is probably most comfortably analyzed in terms of Lexical-Functional Grammar
+(\cite{bresnan1982}~ff.; more recently \cite{bresnan2016};
+\cite{dalrymple2001}), since \Lfg{} does not require complicated derivations
+behind the surface structure of sentences.\footnote{Passivization, for
+instance, is assumed to be a lexically motivated alternation in predicate
+structure (\Sbj{} is blocked, so the nominative is assigned to \Obj{}, and the
+original \Sbj{} is expressed  by an \Adjc{}), rather than an internal
+derivational process \citep[23\psqq]{bresnan2016}.} It will be assumed here
+that, even though Ayeri is basically VSO with predicate and predication not
+adjacent to each other, it is configurational in that there is a VP which
+c-commands a number of other constituents as complements in transitive
+sentences.
 
 In principle, \Lfg{} assumes that grammar operates on different structural 
 levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
@@ -296,10 +299,11 @@ described in (\ref{ex:npcstruct}).
 Here as well, we can see a nominal head on the left which may be modified by
 phrases of various types. The maximal projection of \xhead{N} (that is, NP) is
 annotated very generally for the function of the NP---basically, an NP can act
-as either a discourse function (DF) or a grammatical function (\GF{}). 
+as either a discourse function (\DF{}) or a grammatical function (\GF{}). 
 (\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is 
 no grammatical context given, NP is unmarked for function in these examples.
 
+%\begin{figure}[hp]
 \pex\label{ex:nounmods}
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -398,6 +402,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 	\end{forest}
 
 \xe
+%\end{figure}
 
 As described before (compare \autoref{subsec:clitics}), nouns can be modified
 by a number of clitics which are not represented through syntax. Since it is
@@ -6171,9 +6176,21 @@ discussion below.
 The terms `subject', `topic', and `focus' were already used a number of times
 above, but it seems advisable to sketch out working definitions in order to
 preclude confusion before continuing to look at how Ayeri fares with regards to
-these notions. First things first, the \textbf{subject} can be defined in a
-variety of ways, and maybe especially because the notion of a subject is so
-basic, \citet{comrie1989} notes that if
+these notions. As we will see, all of subject, topic, and focus relate to
+different ways in which the relative prominence of certain NPs is raised;
+subject and topic are also closely related to each other. It ought to be noted
+that while \Lfg{} treats topic and focus as grammaticalized discourse functions
+outside of the argument-structure frame of a verb, it treats the subject as
+both a discourse function and an argument function; topic and focus, on the
+other hand, must be identified with a corresponding argument function
+(\cite[99--100]{bresnan2016}; also compare (\ref{ex:functions}) above,
+p.~\pageref{ex:functions}).
+
+\subsubsection{Subject}
+
+First things first, the \textbf{subject} can be defined in a variety of ways,
+and maybe especially because the notion of a subject is so basic,
+\citet{comrie1989} notes that if
 
 \blockcquote[104]{comrie1989}{linguists were invariably in agreement in stating
 which noun phrase, in each construction in each language, is the subject, then
@@ -6213,34 +6230,37 @@ ergative--absolutive alignment (S/P---A):\medskip
 
 \citet{dixon2010} defines a subject as \textcquote[76]{dixon2010}{the entity
 about which something is affirmed or denied}. He goes on to explain that,
-ignoring copula clauses like `I am tired', every language has two varieties of
-clauses, intransitive ones, where the verb has just one core argument, and
-transitive ones, where the verb has two core arguments. A basic definition
-based on this is given by the chart in (\ref{ex:subject}). It shows the
-definition of the notion of `subject' for both nominative--accusative languages
-and ergative--absolutive languages. Languages of the world differ based on how
-they prefer to treat the two nominal relations of a transitive verb in relation
-to intransitive verbs: they may have a strong preference to either treat the
-agent (A)---the entity that prototypically acts in some way---or the
-patient/undergoer (P)---the entity which is prototypically affected by the
-action in some way, that is, the object---the same as S. In the former case,
-the language is said to have nominative--accusative alignment
+ignoring copula clauses like `We are tired and thirsty', every language has two
+varieties of clauses, intransitive ones, where the verb has just one core
+argument, and transitive ones, where the verb has two core arguments. A basic
+definition based on this is given by the chart in (\ref{ex:subject}). It shows
+the definition of the notion of subject for both nominative--accusative
+languages and ergative--absolutive languages. Languages of the world differ
+based on how they prefer to treat the two nominal relations of a transitive
+verb in relation to intransitive verbs: they may have a strong preference to
+either treat the agent (A)---the entity that prototypically acts in some
+way---or the patient/undergoer (P)---the entity which is prototypically
+affected by the action in some way, that is, the object---the same as S. In the
+former case, the language is said to have \Nom{}--\Acc{} alignment
 (\ref{ex:subject_nomacc}), whereas in the latter case, the language is said to
-have ergative--absolutive alignment (\ref{ex:subject_abserg}).
-\citet{comrie1989} illustrates this difference by an example from Chukchi,
-which we will here contrast with English:
+have \Erg{}--\Abs{} alignment (\ref{ex:subject_abserg}).
+\citet{comrie1989} illustrates this difference with an example from Chukchi,
+which we will here contrast with English:\footnote{In English, \fw{you} is the
+same for both singular and plural as well as subjective and objective case,
+which is why I replaced it with the unambiguous \fw{her} in
+(\ref{ex:engchuk_eng}).}
 
 \needspace{5\baselineskip}%
 \pex\label{ex:engchuk_eng}
 \a\label{ex:engchuk_eng1}\begingl
-	\gla I came. //
-	\glb \Fsg{}.\Nom{} {} //
+	\gla I came //
+	\glb \Fsg{}.\Nom{} come.\Pst{} //
 	\glc S {} //
 \endgl
 
 \a\label{ex:engchuk_eng2}\begingl
-	\gla I saw her. //
-	\glb \Fsg{}.\Nom{} {} \TsgF{}.\Obl{} //
+	\gla I saw her //
+	\glb \Fsg{}.\Nom{} see.\Pst{} \TsgF{}.\Obl{} //
 	\glc S/A {} P //
 \endgl
 
@@ -6252,14 +6272,14 @@ Chukchi (adapted from Comrie 1989: 104\nocite{comrie1989}):
 % FIXME: None of the citation commands seems to allow printing the author name
 % and year in this context, where the name has already been printed just above.
 \a\label{ex:engchuk_chuk1}\begingl
-	\gla Ɣəm tə-yet-ɣʔek. //
+	\gla ɣəm tə-yet-ɣʔek //
 	\glb \Fsg{}.\Abs{} came-\Fsg{} //
 	\glc S {} //
 	\glft `I came.' //
 \endgl
 
 \a\label{ex:engchuk_chuk2}\begingl
-	\gla Ɣəm-nan ɣət tə-lʔu-ɣət. //
+	\gla ɣəm-nan ɣət tə-lʔu-ɣət //
 	\glb \Fsg{}.\Erg{} \Ssg{}.\Abs{} saw-\Fsg{}-\Ssg{} //
 	\glc A S/P {} //
 	\glft `I saw thee.' //
@@ -6288,14 +6308,14 @@ observed by both \citet{schachter1976} and \citet{kroeger1991}, and may
 considerably complicate making a definitive statement.
 
 Moreover, he points out that statistically, languages of the world show a
-strong preference for nominative--accusative alignment, possibly due to the
-fact that human perception values agents as more relevant to discourse than
-patients, which is why agents are far more likely also to be pragmatic topics
-\citep[120]{comrie1989}. Yet, though, dominantly nominative--accusative may
-show a bias towards an ergative--absolutive treatment, for instance, of
-resultative constructions. On the other hand, dominantly ergative--absolutive
-languages show a bias towards a nominative--accu\-sa\-tive treatment, for
-instance, of addressees of imperatives \citep[116--119]{comrie1989}.
+strong preference for \Nom{}--\Acc{} alignment, possibly due to the fact that
+human perception values agents as more relevant to discourse than patients,
+which is why agents are far more likely also to be pragmatic topics
+\citep[120]{comrie1989}. Yet, though, dominantly \Nom{}--\Acc{}-aligned
+languages may show a bias towards an \Erg{}--\Abs{} treatment, for instance, of
+resultative constructions. On the other hand, dominantly \Erg{}--\Abs{}
+languages show a bias towards a \Nom{}--\Acc{} treatment, for instance, of
+addressees of imperatives \citep[116--119]{comrie1989}.
 
 According to \citep{carnie2013}, from the point of view of constituent
 structure (which is key in Generative Grammar), a subject is conventionally
@@ -6303,10 +6323,16 @@ understood to be a \textcquote[221]{carnie2013}{DP that has the property
 indicated by the predicate phrase. What the sentence is about. In most
 sentences, this surfaces in the specifier of [the tense phrase]}. However, as
 we have learned above, this notion is challenged by languages such as Tagalog
-\citep[225]{kroeger1991}. What \citet{carnie2013} refers to structurally was
-basically already indicated by (\ref{ex:basicsvo}), except with different
-lables; the example is repeated here for convenience:
+\citep[225]{kroeger1991}. What \citet{carnie2013} refers to in terms of
+constituent structure was basically already indicated by (\ref{ex:basicsvo}),
+except with different lables; the example is repeated here for convenience as
+(\ref{ex:basicsvo2}). For systemic reasons, \citet{carnie2013} refers to a DP
+subject which serves as the specifier of a TP. This corresponds to the subject
+NP and the IP here. Unlike \textsc{gg}, \Lfg{} treats tense as a semantic
+feature, not as a functional head with a fixed position in constituent
+structure, hence the difference in labeling.
 
+\begin{figure}[htp]
 \ex\label{ex:basicsvo2}
 \begin{forest}
 [IP
@@ -6331,19 +6357,14 @@ lables; the example is repeated here for convenience:
 ]
 \end{forest}
 \xe
-
-For systemic reasons, \citet{carnie2013} refers to a DP subject which serves as
-the specifier of a TP. This corresponds to the subject NP and the IP here.
-Unlike \textsc{gg}, \Lfg{} treats tense as a semantic feature, not as a
-functional head with a fixed position in constituent structure, hence the
-difference in labeling.
+\end{figure}
 
 \Lfg{} defines both a syntactic-subject function, \Subj{}, and a logical
 subject, $\hat{\theta}$, which operate in lockstep. Which semantic component
 the subject is mapped onto is understood to be based on the relative prominence
 of the subject argument along some dimension compared to other arguments. For
-instance, nominative--accusative languages prefer the semantically most
-prominent available role of a verb's argument structure, ergative--absolutive
+instance, \Nom{}--\Acc{} languages prefer the semantically most
+prominent available role of a verb's argument structure, \Erg{}--\Abs{}
 languages instead pick the argument most affected by the agent's action, and
 active languages focus on the argument in control of the action
 \citep[95--96]{bresnan2016}. The mapping between grammatical functions like
@@ -6432,18 +6453,25 @@ complement transitive predicators like objects do, so they are not `objective'.
 subjects, which goes counter to \textcites{schachter1976}{schachter2015}'s
 claim that subjects are possibly not a universal \citep[330--331]{bresnan2016}.
 
-The notion of a \textbf{topic} refers essentially to who or what a longer
-stretch of conversation is about. \citet{givon1983} defines the topic of a
-`thematic paragraph'---as he calls a coherent unit of discourse above the level
-of a single sentence---to be \textquote{the continuity marker, the
-\fw{leitmotif}}. The topic is thus \textcquote[8]{givon1983}{the participant
-\emph{most crucially involved} in the action sequence running through the
-paragraph; it is the participant most closely associated with the higher-level
-\enquote{theme} of the paragraph; and finally, it is the participant most
-likely to be coded as the \emph{primary topic}---or grammatical subject---of
-the vast majority of sequentially-ordered clauses/sentences comprising the
-thematic paragraph}. Topic and subject are thus closely related, as already
-mentioned above in reference to \citet{comrie1989}. Languages employ various means to indicate topics; right- and left-dislocation, as known from English, are only one among many possibilities \citep[174]{dixon2010}.
+\subsubsection{Topic}
+
+The notion of \textbf{topic} refers essentially to who or what a longer stretch
+of conversation is about. \citet{givon1983} defines the topic of a `thematic
+paragraph'---as he calls a coherent unit of discourse above the level of a
+single sentence---to be \textcquote[8]{givon1983}{the continuity marker, the
+\fw{leitmotif}}. The topic is thus
+
+\blockcquote[8]{givon1983}{the participant \emph{most crucially involved} in
+the action sequence running through the paragraph; it is the participant most
+closely associated with the higher-level \enquote{theme} of the paragraph; and
+finally, it is the participant most likely to be coded as the \emph{primary
+topic}---or grammatical subject---of the vast majority of sequentially-ordered
+clauses/sentences comprising the thematic paragraph.}
+
+This indicates that topic and subject are closely related concepts, as already
+mentioned above in reference to \citet{comrie1989}. Languages employ various
+means to indicate topics; right- and left-dislocation, as known from English,
+are only one among many possibilities \citep[174]{dixon2010}.
 
 Topicality also interfaces with definiteness in that chain-initial topics may
 be definite (already introduced into discourse) or indefinite (newly introduced
@@ -6451,11 +6479,13 @@ into discourse), while chain-medial topics and chain-final topics are always
 expected to be definite \citep[10]{givon1983}. \citet[171]{dixon2010} adds that
 topic NPs are coreferential with arguments of clauses immediately preceding or
 following the current clause. Moreover, the strategy of passivization (in
-nominative--accusative languages) or of antipassivization (in
+\Nom{}--\Acc{} languages) or of antipassivization (in
 absolutive--ergative languages) exists in order to keep a certain discourse
 item persistent in the highly topical subject position even if it would
 otherwise be the object of the clause. This is related in turn to the notion of
 syntactic pivot in clause coordination \citep[172]{dixon2010}.
+
+\subsubsection{Focus}
 
 Regarding the definition of \textbf{focus}, \citet[174]{dixon2010} only
 mentions contrastive focus, which basically raises the prominence of a certain
@@ -6465,18 +6495,19 @@ is often confused with topic. Perhaps this is in part also, as
 \citet{bresnan2016} mention, due to the fact that English may use the topic
 position for either topic or focus under certain circumstances:
 
-\ex\label{ex:engfoc} English \citep[98]{bresnan2016}:\medskip
-
+\ex\label{ex:engfoc}%
 Q: What did you name your cat?\\
 A: \textsc{rosie} I named her. (\fw{Rosie} = \Foc{})
+\tc{\citep[98]{bresnan2016}}
 \xe
 
 The answer to a \fw{wh}-question is considered focused, so \fw{Rosie} in
-(\ref{ex:engfoc}) is the focus in `I named her \textsc{Rosie}'. However, in the
-example above, \fw{Rosie} is fronted, which following \citet{givon1983}, is a
-disruptive action to establish a new topic of conversation: left-dislocation in
-languages with rigid SVO word order such as English is typically associated
-with low topic continuity \citep[32]{givon1983}.
+(\ref{ex:engfoc}) is the focus in `I named her \textsc{rosie}'. However, in the
+example above, \fw{Rosie} is fronted, which following \citet{givon1983},
+constitutes a disruptive action used to establish a new topic of conversation:
+left-dislocation in languages with rigid SVO word order such as English is
+typically associated with low topic continuity, and left-dislocated NPs can be
+found most often as initiating a topic chain \citep[32]{givon1983}.
 
 \subsection{Tests on subjecthood}
 
