@@ -6634,10 +6634,10 @@ the following result:
 		$hunts$ $\underbrace{the\ mouse}_{\Parg}$.
 	
 	\a\label{ex:engpivot_2}%
-		$\underbrace{The\ cat}_{\textsc{s}}$ $runs\ here.$
+		$\underbrace{The\ cat}_{\textsc{s}}$ $comes\ here.$
 	
 	\a\label{ex:engpivot_3}%
-		$\underbrace{The\ mouse}_{\textsc{s}}$ $runs\ here.$
+		$\underbrace{The\ mouse}_{\textsc{s}}$ $comes\ here.$
 	
 	\a\label{ex:engpivot_4}%
 		$\underbrace{The\ cat}_{\Aarg\tikzmark{engpivot_ant}}$
@@ -6645,7 +6645,7 @@ the following result:
 		$\underbrace{the\ mouse}_{\Parg}$
 		$and$
 		$\underbrace{ }_{\textsc{s}\tikzmark{engpivot_drop}}$
-		$runs\ here.$
+		$comes\ here.$
 
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex] ([xshift=-.25em,yshift=-.75ex]{pic cs:engpivot_ant}) 
@@ -6714,7 +6714,12 @@ For Tagalog, \textcquote[30]{kroeger1991}{the deletion is not obligatory but
 null nominative arguments are always interpreted as referring to the nominative
 argument of the main clause}. Due to the way Tagalog treats subjects, however,
 which NP is interpreted as coreferential depends on the voice marking of the
-verb:
+verb in (\ref{ex:tagpivot}). Compare the English passive sentence
+\fw{Marvin$_i$ was asked by Derek before he$_i$ left} with 
+(\ref{ex:tagpivot_1}).\footnote{In English, the reference of \fw{he} is
+ambiguous between the syntactic subject \fw{Marvin} and the agent \fw{Derek},
+however.} As we have seen above, though, Tagalog would also be able to make a
+subject of an oblique argument, not just the patient.
 
 \pex\label{ex:tagpivot}%
 	Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
@@ -6759,7 +6764,7 @@ verb:
 \draw [-latex] 
 	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot2_vc})
 	|- ++ (north:.75em) -|
-	([xshift=-.5*width{"nom=Marvin"}, yshift=2.25ex]{pic cs:tagpivot2_anta});
+	([xshift=-.5*width{"nom=Derek"}, yshift=2.25ex]{pic cs:tagpivot2_anta});
 
 \draw [-latex]
 	([xshift=-.25em,yshift=-.75ex]{pic cs:tagpivot2_antb}) 
