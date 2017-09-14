@@ -6715,11 +6715,13 @@ null nominative arguments are always interpreted as referring to the nominative
 argument of the main clause}. Due to the way Tagalog treats subjects, however,
 the nominative argument can be formed by either NP in (\ref{ex:tagpivot}) with
 the voice marked accordingly on the verb.\footnote{Thus, compare the English
-passive sentence \fw{Marvin$_i$ was asked by Derek before he$_i$ left} with
+passive sentence \fw{Marvin$_i$ was asked by Derek$_j$ before he$_i$ left} with
 (\ref{ex:tagpivot_1}). In English, the reference of \fw{he} is ambiguous
 between the syntactic subject \fw{Marvin} and the agent \fw{Derek}, however. As
 we have seen above, though, Tagalog would also be able to make a subject of
-an oblique argument, not just the patient.}
+an oblique argument, not just of the patient/theme or the recipient. The actor
+of the Tagalog sentence is also basically an object, not demoted to an
+adverbial as in English \citep[38--44]{kroeger1991}.}
 
 \pex\label{ex:tagpivot}%
 	Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
@@ -6731,8 +6733,9 @@ an oblique argument, not just the patient.}
 			$\underbrace{\text{\Gen{}=Derek}}_{\Aarg}$
 			$\underbrace{\text{\Nom{}=Marvin}\tikzmark{tagpivot1_anta}}_%
 				{\Parg\tikzmark{tagpivot1_antb}}$
-			before \Pfv{}.\Av{}-leave
-			$\underbrace{ }_{\textsc{s}\tikzmark{tagpivot1_drop}}$
+			before \Pfv{}.\Av{}\tikzmark{tagpivot1_vc2}-leave
+			$\underbrace{ \tikzmark{tagpivot1_anta2}}_%
+				{\textsc{s}\tikzmark{tagpivot1_drop}}$
 			//
 		\glft `Derek asked Marvin before [Marvin] left.' //
 	\endgl
@@ -6744,8 +6747,9 @@ an oblique argument, not just the patient.}
 			$\underbrace{\text{\Nom{}=Derek}\tikzmark{tagpivot2_anta}}_%
 				{\Aarg\tikzmark{tagpivot2_antb}}$
 			$\underbrace{\text{\Dat{}=Marvin}}_{\Parg}$
-			before \Pfv{}.\Av{}-leave
-			$\underbrace{ }_{\textsc{s}\tikzmark{tagpivot2_drop}}$
+			before \Pfv{}.\Av{}\tikzmark{tagpivot2_vc2}-leave
+			$\underbrace{ \tikzmark{tagpivot2_anta2}}_%
+				{\textsc{s}\tikzmark{tagpivot2_drop}}$
 			//
 		\glft `Derek asked Marvin before [Derek] left.' //
 	\endgl
@@ -6757,9 +6761,14 @@ an oblique argument, not just the patient.}
 	([xshift=-.5*width{"nom=Marvin"}, yshift=2.25ex]{pic cs:tagpivot1_anta});
 
 \draw [-latex]
-	([xshift=-.25em,yshift=-.75ex]{pic cs:tagpivot1_antb}) 
+	([xshift=-.125em,yshift=-.75ex]{pic cs:tagpivot1_antb}) 
 	|- ++ (south:.75em) -|
 	([xshift=-.25ex, yshift=-.75ex]{pic cs:tagpivot1_drop});
+
+\draw [-latex] 
+	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot1_vc2})
+	|- ++ (north:.75em) -|
+	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot1_anta2});
 
 \draw [-latex] 
 	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot2_vc})
@@ -6767,9 +6776,14 @@ an oblique argument, not just the patient.}
 	([xshift=-.5*width{"nom=Derek"}, yshift=2.25ex]{pic cs:tagpivot2_anta});
 
 \draw [-latex]
-	([xshift=-.25em,yshift=-.75ex]{pic cs:tagpivot2_antb}) 
+	([xshift=-.125em,yshift=-.75ex]{pic cs:tagpivot2_antb}) 
 	|- ++ (south:.75em) -|
 	([xshift=-.25ex, yshift=-.75ex]{pic cs:tagpivot2_drop});
+
+\draw [-latex] 
+	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot2_vc2})
+	|- ++ (north:.75em) -|
+	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot2_anta2});
 \end{tikzpicture}
 \xe
 
