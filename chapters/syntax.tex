@@ -6630,21 +6630,21 @@ the following result:
 \pex[belowexskip=1.75em]\label{ex:engpivot}%
 	English:
 	\a\label{ex:engpivot_1}
-		$\underbrace{The\ cat}_{\Aarg}$ 
-		$hunts$ $\underbrace{the\ mouse}_{\Parg}$.
+		$\underbrace{The\ cat}_{\text{A}}$ 
+		$hunts$ $\underbrace{the\ mouse}_{\text{P}}$.
 	
 	\a\label{ex:engpivot_2}%
-		$\underbrace{The\ cat}_{\textsc{s}}$ $comes\ here.$
+		$\underbrace{The\ cat}_{\text{S}}$ $comes\ here.$
 	
 	\a\label{ex:engpivot_3}%
-		$\underbrace{The\ mouse}_{\textsc{s}}$ $comes\ here.$
+		$\underbrace{The\ mouse}_{\text{S}}$ $comes\ here.$
 	
 	\a\label{ex:engpivot_4}%
-		$\underbrace{The\ cat}_{\Aarg\tikzmark{engpivot_ant}}$
+		$\underbrace{The\ cat}_{\text{A}\tikzmark{engpivot_ant}}$
 		$hunts$
-		$\underbrace{the\ mouse}_{\Parg}$
+		$\underbrace{the\ mouse}_{\text{P}}$
 		$and$
-		$\underbrace{ }_{\textsc{s}\tikzmark{engpivot_drop}}$
+		$\underbrace{ }_{\text{S}\tikzmark{engpivot_drop}}$
 		$comes\ here.$
 
 \begin{tikzpicture}[remember picture, overlay]
@@ -6661,38 +6661,38 @@ alike. In an \Abs{}--\Erg{} language, then, we would expect the opposite case:
 S and P should be treated alike. In Dyirbal, we find the following situation:
 
 \pex\label{ex:dyirpivot}%
-	Dyirbal \parencite[adpated from][112]{comrie1989}:
-	\a\label{ex:dyirpivot_1}
+Dyirbal \parencite[adpated from][112]{comrie1989}:
+\a\label{ex:dyirpivot_1}
 	\begingl
 		\gla {balan dʸugumbil} {baŋgul yaṛaŋgu} balgan //
-		\glb $\underbrace{\text{\Det{} woman-\Abs{}}}_{\Parg}$
-			$\underbrace{\text{\Det{} man-\Erg{}}}_{\Aarg}$ hit //
+		\glb $\underbrace{\text{\Det{} woman-\Abs{}}}_{\text{P}}$
+			$\underbrace{\text{\Det{} man-\Erg{}}}_{\text{A}}$ hit //
 		\glft `The man hit the woman.' //
 	\endgl
 	
-	\a\label{ex:dyirpivot_2}%
+\a\label{ex:dyirpivot_2}%
 	\begingl
 		\gla {bayi yaṛa} baninʸu //
-		\glb $\underbrace{\text{\Det{} man-\Abs{}}}_{\textsc{s}}$ came.here //
+		\glb $\underbrace{\text{\Det{} man-\Abs{}}}_{\text{S}}$ came.here //
 		\glft `The man came here.' //
 	\endgl
 	
-	\a\label{ex:dyirpivot_3}%
+\a\label{ex:dyirpivot_3}%
 	\begingl
 		\gla {balan dʸugumbil} baninʸu //
-		\glb $\underbrace{\text{\Det{} woman-\Abs{}}}_{\textsc{s}}$ 
+		\glb $\underbrace{\text{\Det{} woman-\Abs{}}}_{\text{S}}$ 
 			came.here //
 		\glft `The woman came here.' //
 	\endgl
 	
-	\a\label{ex:dyirpivot_4}%
+\a\label{ex:dyirpivot_4}%
 	\begingl[aboveglftskip=1.75em]
 		\gla {balan dʸugumbil} {baŋgul yaṛaŋgu} balgan, {} baninʸu //
 		\glb $\underbrace{\text{\Det{} woman-\Abs{}}}_%
-				{\Parg\tikzmark{dyirpivot_ant}}$
-			$\underbrace{\text{\Det{} man-\Erg{}}}_{\Aarg}$
+				{\text{P}\tikzmark{dyirpivot_ant}}$
+			$\underbrace{\text{\Det{} man-\Erg{}}}_{\text{A}}$
 			hit 
-			$\underbrace{ }_{\textsc{s}\tikzmark{dyirpivot_drop}}$
+			$\underbrace{ }_{\text{S}\tikzmark{dyirpivot_drop}}$
 			came.here //
 		\glft `The man hit the woman, and [the woman] came here.' //
 	\endgl
@@ -6724,32 +6724,32 @@ of the Tagalog sentence is also basically an object, not demoted to an
 adverbial as in English \citep[38--44]{kroeger1991}.}
 
 \pex\label{ex:tagpivot}%
-	Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
-	\cite[151--152]{ramoscena1990}):
-	\a\label{ex:tagpivot_1}%
+Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
+\cite[151--152]{ramoscena1990}):
+\a\label{ex:tagpivot_1}%
 	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
 		\gla tinanong ni=Derek si=Marvin, bago umalis {} //
 		\glb \Pfv{}-ask-\Ov{}\tikzmark{tagpivot1_vc}
-			$\underbrace{\text{\Gen{}=Derek}}_{\Aarg}$
+			$\underbrace{\text{\Gen{}=Derek}}_{\text{A}}$
 			$\underbrace{\text{\Nom{}=Marvin}\tikzmark{tagpivot1_anta}}_%
-				{\Parg\tikzmark{tagpivot1_antb}}$
+				{\text{P}\tikzmark{tagpivot1_antb}}$
 			before \Pfv{}.\Av{}\tikzmark{tagpivot1_vc2}-leave
 			$\underbrace{ \tikzmark{tagpivot1_anta2}}_%
-				{\textsc{s}\tikzmark{tagpivot1_drop}}$
+				{\text{S}\tikzmark{tagpivot1_drop}}$
 			//
 		\glft `Derek asked Marvin before [Marvin] left.' //
 	\endgl
 
-	\a\label{ex:tagpivot_2}%
+\a\label{ex:tagpivot_2}%
 	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
 		\gla nagtanog si=Derek kay=Marvin, bago umalis {} //
 		\glb \Pfv{}.\Av{}\tikzmark{tagpivot2_vc}-ask
 			$\underbrace{\text{\Nom{}=Derek}\tikzmark{tagpivot2_anta}}_%
-				{\Aarg\tikzmark{tagpivot2_antb}}$
-			$\underbrace{\text{\Dat{}=Marvin}}_{\Parg}$
+				{\text{A}\tikzmark{tagpivot2_antb}}$
+			$\underbrace{\text{\Dat{}=Marvin}}_{\text{P}}$
 			before \Pfv{}.\Av{}\tikzmark{tagpivot2_vc2}-leave
 			$\underbrace{ \tikzmark{tagpivot2_anta2}}_%
-				{\textsc{s}\tikzmark{tagpivot2_drop}}$
+				{\text{S}\tikzmark{tagpivot2_drop}}$
 			//
 		\glft `Derek asked Marvin before [Derek] left.' //
 	\endgl
@@ -6788,6 +6788,95 @@ adverbial as in English \citep[38--44]{kroeger1991}.}
 \xe
 
 ...
+
+\pex\label{ex:ayrpivot}%
+\a\label{ex:ayrpivot_1}
+	\begingl
+		\gla Ang kimbyo paral prabarās. //
+		\glb ang kimb-yo paral-Ø prabara-as //
+		\glc \AgtT{} hunt-\TsgN{}
+			$\underbrace{\text{cat-\Top{}}}_{\text{A}}$
+			$\underbrace{\text{mouse-\Parg{}}}_{\text{P}}$ //
+		\glft `The cat hunts the mouse.' //
+	\endgl
+	
+\a\label{ex:ayrpivot_2}%
+	\begingl
+		\gla Sahayo paralang edaya. //
+		\glb saha-yo paral-ang edaya //
+		\glc come-\TsgN{} $\underbrace{\text{cat-\Aarg{}}}_{\text{S}}$
+			here //
+		\glft `The cat comes here.' //
+	\endgl
+	
+\a\label{ex:ayrpivot_3}%
+	\begingl
+		\gla Sahayo prabarāng edaya. //
+		\glb saha-yo prabara-ang edaya //
+		\glc come-\TsgN{} $\underbrace{\text{mouse-\Aarg{}}}_{\text{S}}$
+			here //
+		\glft `The mouse comes here.' //
+	\endgl
+	
+\a\label{ex:ayrpivot_4}%
+	\begingl[aboveglftskip=1em]
+		\gla Ang kimbyo paral prabarās nay sahayo {} edaya. //
+		\glb ang kimb-yo paral-Ø prabara-as nay saha-yo {} edaya  //
+		\glc \AgtT{} hunt-\TsgN{}
+			$\underbrace{\text{cat-\Top{}}}_{\text{A}\tikzmark{ayrpivot_ctrl}}$
+			$\underbrace{\text{mouse-\Parg{}}}_{\text{P}}$
+			and come-\TsgN{}.\Aarg{}
+			$\underbrace{}_{\text{S}\tikzmark{ayrpivot_targ}}$
+			here //
+		\glft `The cat, it hunts the mouse and [the cat] comes here.' //
+	\endgl
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot_ctrl}) 
+	|- ++ (south:.75em) -|
+	([yshift=-.75ex]{pic cs:ayrpivot_targ});
+\end{tikzpicture}
+\xe
+
+...
+
+% THIS IS A NEWLY INTRODUCED IDEA RIPPED STRAIGHT OFF TAGALOG TO MAKE THINGS A
+% BIT MORE INTERESTING WITH REGARDS TO ADDING SOME SLIGHT
+% AMBIGUITY/IRREGULARITY TO SUBJECTHOOD. DUNNO IF I'M GONNA KEEP IT BUT IT'S
+% WORTH A TRY.
+\pex\ljudge\ques\label{ex:ayrpivot2}
+\begingl[aboveglcskip=1.5em, aboveglftskip=1em]
+		\gla Sa kimbyo paralang prabara nay sahayo {} edaya. //
+		\glb sa kimb-yo paral-ang prabara-Ø nay saha-yo {} edaya  //
+		\glc \PatT{}\tikzmark{ayrpivot2_ctrl1} hunt-\TsgN{}
+			$\underbrace{\text{cat-\Aarg{}}}_{\text{A}}$
+			$\underbrace{\text{mouse-\Top{}}\tikzmark{ayrpivot2_targ1}}_%
+				{\text{P}\tikzmark{ayrpivot2_ctrl2}}$
+			and come-\TsgN{}
+			$\underbrace{}_{\text{S}\tikzmark{ayrpivot2_targ2}}$
+			here //
+		\glft `The mouse, the cat hunts it and [the mouse] comes here.' //
+	\endgl
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] 
+	([xshift=-1ex,yshift=+2.25ex]{pic cs:ayrpivot2_ctrl1})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"mouse-top"}, yshift=2.25ex]{pic cs:ayrpivot2_targ1});
+
+\draw [-latex] 
+	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot2_ctrl2})
+	|- ++ (south:.75em) -|
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot2_targ2});
+\end{tikzpicture}
+\xe
+
+...
+
+\ex referents of differing gender: verb agreement disambiguates \xe
+\ex what happens with a transitive coordinated clause? \xe
+\ex the whole thing with pronouns \xe
 
 \subsubsection{Verb agreement}
 \label{subsubsec:verbagr}
