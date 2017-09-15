@@ -6239,7 +6239,7 @@ languages and ergative--absolutive languages. Languages of the world differ
 based on how they prefer to treat the two nominal relations of a transitive
 verb in relation to intransitive verbs: they may have a strong preference to
 either treat the agent (A)---the entity that prototypically acts in some
-way---or the patient/undergoer (P)---the entity which is prototypically
+way---or the patient/undergoer/theme (P)---the entity which is prototypically
 affected by the action in some way, that is, the object---the same as S. In the
 former case, the language is said to have \Nom{}--\Acc{} alignment
 (\ref{ex:subject_nomacc}), whereas in the latter case, the language is said to
@@ -6710,18 +6710,19 @@ treats S and P alike, as predicted for an \Abs{}--\Erg{} language---at least in
 this case, since \citet[113]{comrie1989} also explains that \Fsg{} and \Ssg{}
 pronouns in Dyirbal behave in terms in terms of \Nom{}--\Acc{}.
 
-For Tagalog, \textcquote[30]{kroeger1991}{the deletion is not obligatory but
-null nominative arguments are always interpreted as referring to the nominative
-argument of the main clause}. Due to the way Tagalog treats subjects, however,
-the nominative argument can be formed by either NP in (\ref{ex:tagpivot}) with
-the voice marked accordingly on the verb.\footnote{Thus, compare the English
-passive sentence \fw{Marvin$_i$ was asked by Derek$_j$ before he$_i$ left} with
-(\ref{ex:tagpivot_1}). In English, the reference of \fw{he} is ambiguous
-between the syntactic subject \fw{Marvin} and the agent \fw{Derek}, however. As
-we have seen above, though, Tagalog would also be able to make a subject of
-an oblique argument, not just of the patient/theme or the recipient. The actor
-of the Tagalog sentence is also basically an object, not demoted to an
-adverbial as in English \citep[38--44]{kroeger1991}.}
+For Tagalog, as \citet{kroeger1991} explains, \textcquote[30]{kroeger1991}{the
+deletion is not obligatory but null nominative arguments are always interpreted
+as referring to the nominative argument of the main clause}. Due to the way
+Tagalog treats subjects, however, the nominative argument can be formed by
+either NP in (\ref{ex:tagpivot}) with the voice marked accordingly on the
+verb.\footnote{Thus, compare the English passive sentence \fw{Marvin$_i$ was
+asked by Derek$_j$ before he$_i$ left} with (\ref{ex:tagpivot_1}). In English,
+the reference of \fw{he} is ambiguous between the syntactic subject \fw{Marvin}
+and the agent \fw{Derek}, however. As we have seen above, though, Tagalog would
+also be able to make a subject of an oblique argument, not just of the
+patient/theme or the recipient. The actor of the Tagalog sentence is also
+basically an object, not demoted to an adverbial as in English
+\citep[38--44]{kroeger1991}.}
 
 \pex\label{ex:tagpivot}%
 Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
@@ -6733,7 +6734,7 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 			$\underbrace{\text{\Gen{}=Derek}}_{\text{A}}$
 			$\underbrace{\text{\Nom{}=Marvin}\tikzmark{tagpivot1_anta}}_%
 				{\text{P}\tikzmark{tagpivot1_antb}}$
-			before \Pfv{}.\Av{}\tikzmark{tagpivot1_vc2}-leave
+			before \Pfv{}.\Av{}-leave\tikzmark{tagpivot1_vc2}
 			$\underbrace{ \tikzmark{tagpivot1_anta2}}_%
 				{\text{S}\tikzmark{tagpivot1_drop}}$
 			//
@@ -6742,12 +6743,12 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 
 \a\label{ex:tagpivot_2}%
 	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
-		\gla nagtanog si=Derek kay=Marvin, bago umalis {} //
-		\glb \Pfv{}.\Av{}\tikzmark{tagpivot2_vc}-ask
+		\gla nagtanong si=Derek kay=Marvin, bago umalis {} //
+		\glb \Pfv{}.\Av{}-ask\tikzmark{tagpivot2_vc}
 			$\underbrace{\text{\Nom{}=Derek}\tikzmark{tagpivot2_anta}}_%
 				{\text{A}\tikzmark{tagpivot2_antb}}$
 			$\underbrace{\text{\Dat{}=Marvin}}_{\text{P}}$
-			before \Pfv{}.\Av{}\tikzmark{tagpivot2_vc2}-leave
+			before \Pfv{}.\Av{}-leave\tikzmark{tagpivot2_vc2}
 			$\underbrace{ \tikzmark{tagpivot2_anta2}}_%
 				{\text{S}\tikzmark{tagpivot2_drop}}$
 			//
@@ -6756,7 +6757,7 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex] 
-	([xshift=-.5em,yshift=+2.25ex]{pic cs:tagpivot1_vc})
+	([xshift=-.5*width{"pfv-ask-ov"},yshift=+2.25ex]{pic cs:tagpivot1_vc})
 	|- ++ (north:.75em) -|
 	([xshift=-.5*width{"nom=Marvin"}, yshift=2.25ex]{pic cs:tagpivot1_anta});
 
@@ -6766,12 +6767,12 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 	([xshift=-.25ex, yshift=-.75ex]{pic cs:tagpivot1_drop});
 
 \draw [-latex] 
-	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot1_vc2})
+	([xshift=-.5*width{"pfv.av-leave"},yshift=+2.25ex]{pic cs:tagpivot1_vc2})
 	|- ++ (north:.75em) -|
 	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot1_anta2});
 
 \draw [-latex] 
-	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot2_vc})
+	([xshift=-.5*width{"pfv.av-ask"},yshift=+2.25ex]{pic cs:tagpivot2_vc})
 	|- ++ (north:.75em) -|
 	([xshift=-.5*width{"nom=Derek"}, yshift=2.25ex]{pic cs:tagpivot2_anta});
 
@@ -6781,19 +6782,31 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 	([xshift=-.25ex, yshift=-.75ex]{pic cs:tagpivot2_drop});
 
 \draw [-latex] 
-	([xshift=-.5*width{"pfv.av"},yshift=+2.25ex]{pic cs:tagpivot2_vc2})
+	([xshift=-.5*width{"pfv.av-leave"},yshift=+2.25ex]{pic cs:tagpivot2_vc2})
 	|- ++ (north:.75em) -|
 	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot2_anta2});
 \end{tikzpicture}
 \xe
 
-...
+What can be observed in Tagalog, thus, is that in (\ref{ex:tagpivot_1}), the
+dropped S argument in the second conjunct, \fw{bago umalis ...} `before ...\
+leaves', is coreferential with \fw{Marvin}, since he is marked as the subject
+of the first conjunct. Since \fw{Marvin} is the theme (P) of \fw{tanong} `ask',
+the clause needs to be marked for objective voice. On the other hand, in
+(\ref{ex:tagpivot_2}), it is \fw{Derek} who is the subject of the clause, so it
+is also he who leaves; the verb in the first conjunct clause is marked for
+active voice according to the asker as the actor (A) being the subject.
+
+In order to now investigate what the situation is in Ayeri, let us return to
+our initial set of examples. These examples feature two animals which are
+treated both as animate neuters. Anaphoric reference is thus potentially
+ambiguous between \xayr{prlF}{paral}{cat} and \xayr{pFrbr}{prabara}{mouse}.
 
 \pex\label{ex:ayrpivot}%
 \a\label{ex:ayrpivot_1}
 	\begingl
-		\gla Ang kimbyo paral prabarās. //
-		\glb ang kimb-yo paral-Ø prabara-as //
+		\gla Ang @ kimbyo paral prabarās. //
+		\glb ang= kimb-yo paral-Ø prabara-as //
 		\glc \AgtT{} hunt-\TsgN{}
 			$\underbrace{\text{cat-\Top{}}}_{\text{A}}$
 			$\underbrace{\text{mouse-\Parg{}}}_{\text{P}}$ //
@@ -6820,56 +6833,113 @@ Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
 	
 \a\label{ex:ayrpivot_4}%
 	\begingl[aboveglftskip=1em]
-		\gla Ang kimbyo paral prabarās nay sahayo {} edaya. //
-		\glb ang kimb-yo paral-Ø prabara-as nay saha-yo {} edaya  //
+		\gla Ang @ kimbyo paral prabarās nay sahayong edaya. //
+		\glb ang= kimb-yo paral-Ø prabara-as nay saha=yong edaya  //
 		\glc \AgtT{} hunt-\TsgN{}
 			$\underbrace{\text{cat-\Top{}}}_{\text{A}\tikzmark{ayrpivot_ctrl}}$
 			$\underbrace{\text{mouse-\Parg{}}}_{\text{P}}$
-			and come-\TsgN{}.\Aarg{}
-			$\underbrace{}_{\text{S}\tikzmark{ayrpivot_targ}}$
+			and
+			come=$\underbrace{\text{\smash{\TsgN{}}.\Aarg{}}}_%
+				{\text{S}\tikzmark{ayrpivot_targ}}$
 			here //
-		\glft `The cat, it hunts the mouse and [the cat] comes here.' //
+		\glft `The cat, it hunts the mouse, and it comes here.' //
 	\endgl
 
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
 	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot_ctrl}) 
 	|- ++ (south:.75em) -|
-	([yshift=-.75ex]{pic cs:ayrpivot_targ});
+	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot_targ});
 \end{tikzpicture}
 \xe
 
-...
+While it is possible in Ayeri to not repeat the coreferential NP in a conjunct
+clause, Ayeri appears to avoid an empty subject slot. Thus, the verb 
+\xayr{shyoNF}{sahayong}{it comes} in (\ref{ex:ayrpivot_4}) displays a
+cliticized resumptive subject pronoun, \xayr{/yoNF}{-yong}{it}. In
+(\ref{ex:ayrpivot_4}) at least, this pronoun is coreferential with the subject
+in the first conjunct, \xayr{prlF}{paral}{cat}. Seeing as Tagalog switches the
+subject around by altering the voice marking on the verb, it is certainly
+illustrative to check how Ayeri fares if the topic is swapped to \xayr{pFrbr}
+{prabara}{mouse}.
 
-% THIS IS A NEWLY INTRODUCED IDEA RIPPED STRAIGHT OFF TAGALOG TO MAKE THINGS A
-% BIT MORE INTERESTING WITH REGARDS TO ADDING SOME SLIGHT
-% AMBIGUITY/IRREGULARITY TO SUBJECTHOOD. DUNNO IF I'M GONNA KEEP IT BUT IT'S
-% WORTH A TRY.
-\pex\ljudge\ques\label{ex:ayrpivot2}
-\begingl[aboveglcskip=1.5em, aboveglftskip=1em]
-		\gla Sa kimbyo paralang prabara nay sahayo {} edaya. //
-		\glb sa kimb-yo paral-ang prabara-Ø nay saha-yo {} edaya  //
-		\glc \PatT{}\tikzmark{ayrpivot2_ctrl1} hunt-\TsgN{}
-			$\underbrace{\text{cat-\Aarg{}}}_{\text{A}}$
-			$\underbrace{\text{mouse-\Top{}}\tikzmark{ayrpivot2_targ1}}_%
-				{\text{P}\tikzmark{ayrpivot2_ctrl2}}$
-			and come-\TsgN{}
-			$\underbrace{}_{\text{S}\tikzmark{ayrpivot2_targ2}}$
-			here //
-		\glft `The mouse, the cat hunts it and [the mouse] comes here.' //
-	\endgl
+\ex\label{ex:ayrpivot2}
+\begingl[aboveglftskip=1em]
+	\gla Sa @ kimbyo paralang prabara nay sahayong edaya. //
+	\glb sa= kimb-yo paral-ang prabara-Ø nay saha=yong edaya  //
+	\glc \PatT{} hunt-\TsgN{}
+		$\underbrace{\text{cat-\Aarg}}_{\text{A}}$
+		$\underbrace{\text{mouse-\Top{}}}_{\text{P}\tikzmark{ayrpivot2_ctrl}}$
+		and
+		come=$\underbrace{\text{\smash{\TsgN{}}.\Aarg{}}}_%
+			{\text{S}\tikzmark{ayrpivot2_targ}}$
+		here //
+	\glft `The mouse, the cat hunts it, and it comes here.' //
+\endgl
 
 \begin{tikzpicture}[remember picture, overlay]
-\draw [-latex] 
-	([xshift=-1ex,yshift=+2.25ex]{pic cs:ayrpivot2_ctrl1})
-	|- ++ (north:.75em) -|
-	([xshift=-.5*width{"mouse-top"}, yshift=2.25ex]{pic cs:ayrpivot2_targ1});
-
-\draw [-latex] 
-	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot2_ctrl2})
+\draw [-latex]
+	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot2_ctrl}) 
 	|- ++ (south:.75em) -|
-	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot2_targ2});
+	([xshift=-.25em,yshift=-.75ex]{pic cs:ayrpivot2_targ});
 \end{tikzpicture}
+\xe
+
+In (\ref{ex:ayrpivot2}), the resumptive pronoun is indicated to not refer to
+the first conjunct's agent/subject, \rayr{prlF}{paral}, but to its
+theme/object, \rayr{pFrbr}{prabara}. This may be explained by topicalization
+insofar as the mouse, as a pragmatic topic, outranks the subject: the sentence
+is about the mouse, so the underspecified argument in the second conjunct, in
+absence of topic marking that would indicate otherwise, corresponds to the
+topic. Interestingly, the result is structurally similar to the example of
+Tagalog in (\ref{ex:tagpivot}) above. It is too early yet, however, to conclude
+that what was called `topic' so far is the subject; Ayeri is merely not
+completely unambiguous in this context. Since Tagalog allows any NP of a clause
+to be the subject, as displayed in (\ref{ex:tagmarking}), let us test whether
+the behavior just described for Ayeri also holds in other contexts of
+topicalization.
+
+\pex\label{ex:ayrpivot3}
+\a\label{ex:ayrpivot3_dat}\begingl
+	\gla Yam @ ilya ang @ Akan ilonley {} @ Maran nay sarayāng. //
+	\glb yam= il-ya ang= Akan ilon-ley Ø= Maran nay sara=yāng //
+	\glc \DatT{}= give-\TsgM{} \Aarg{}= Akan present-\PargI{} \Top{}= Maran
+		and leave=\TsgM{}.\Aarg{} //
+	\glft `Maran, Akan gives him a present, and he leaves.' //
+\endgl
+
+\a\label{ex:ayrpivot3_gen}\begingl
+	\gla Na @ pahya ang @ Maran ilonley {} @ Diyan nay sarayāng. //
+	\glb na= pah-ya ang= Maran ilon-ley Ø= Diyan nay sara=yāng //
+	\glc \GenT{}= take.away-\TsgM{} \Aarg{}= Maran present-\PargI{} \Top{}=
+		Diyan and leave=\TsgM{}.\Aarg{} //
+	\glft `Diyan, Maran takes the present away from him, and he leaves.' //
+\endgl
+
+\a\label{ex:ayrpivot3_loc}\begingl
+	\gla Ya @ bahaya ang @ Diyan {} @ Maran nay sarayāng. //
+	\glb ya= baha-ya ang= Diyan Ø= Maran nay sara=yāng //
+	\glc \LocT{}= baha-\TsgM{} \Aarg{}= Diyan \Top{}= Maran and 
+		leave=\TsgM{}.\Aarg{} //
+	\glft `Maran, Diyan shouts at him, and he leaves.' //
+\endgl
+
+\a\label{ex:ayrpivot3_ins}\begingl
+	\gla Ri @ su-sunca ang @ Diyan ilonley {} @ Sedan nay sarayāng. //
+	\glb ri= su\til{}sunt-ya ang= Diyan ilon-ley Ø= Sedan nay sara=yāng. //
+	\glc \InsT{}= \Iter{}\til{}claim-\TsgM{} \Aarg{}= Diyan present-\PargI{}
+		\Top{}= Sedan and leave=\TsgM{}.\Aarg{} //
+	\glft `Sedan, Diyan reclaims the present with his help, and he leaves.' //
+\endgl
+
+\a\label{ex:ayrpivot3_cau}\begingl
+	\gla Sā @ pinyaya ang @ Maran tatamanyam {} @ Sedan nay sarayāng. //
+	\glb sā= pinya-ya ang= Maran tataman-yam Ø= Sedan nay sara=yāng //
+	\glc \CauT{}= ask-\TsgM{} \Aarg{}= Maran forgiveness-\Dat{} \Top{}= Sedan
+		and leave=\TsgM{}.\Aarg{} //
+	\glft `Sedan, he makes Maran ask for forgiveness, and he leaves.' //
+\endgl
+
 \xe
 
 ...
