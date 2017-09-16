@@ -7122,42 +7122,61 @@ resumptive pronominal clitic in the intransitive clause, as indicated above.
 The affix on the verb thus has the status of a pronominal predicator:
 
 \pex\label{ex:ayrpivot5}
-\a\label{ex:ayrpivot5_1}\begingl[aboveglftskip=1.75em]
+\a\label{ex:ayrpivot5_1}\begingl[aboveglftskip=2.5em]
 	\gla Ang @ tinisaya Lita {sa Kumang} nay sarayāng. //
 	\glb ang= tinisa-ya Ø=Lita sa=Kumang nay sara=yāng //
 	\glc \AgtT{}= hug-\TsgM{}
-		$\underbrace{\text{\Top{}=Lita}}_{\text{A}\tikzmark{ayrpivot5_ctrl1}}$
-		$\underbrace{\text{\Parg{}=\smash{Kumang}}}_{\text{P}}$
+		$\underbrace{\text{\Top{}=Lita}}_{\text{A}\tikzmark{ayrpivot5a_ctrl1}}$
+		$\underbrace{\text{\Parg{}=\smash{Kumang}}}_%
+			{\text{P}\tikzmark{ayrpivot5a_ctrl2}}$
 		and 
 		leave=$\underbrace{\text{\smash{\TsgM{}}.\Aarg{}}}_%
-			{\text{S}\tikzmark{ayrpivot5_targ1}}$ //
+			{\text{S}\tikzmark{ayrpivot5a_targ}}$ //
 	\glft `Lita hugs Kumang and he leaves.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
-	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5_ctrl1}) 
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5a_ctrl1}) 
 	|- ++ (south:.75em) -|
-	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5_targ1});
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5a_targ});
+
+\draw [-latex, dashed]
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5a_ctrl2}) 
+	|- ++ (south:1.5em) -|
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5a_targ});
+
+\node (a) at ([yshift={-.75ex - 1.5em}]{pic cs:ayrpivot5a_ctrl2}) {};
+\node (b) at ([yshift={-.75ex - 1.5em}]{pic cs:ayrpivot5a_targ}) {};
+\node (x) at ($(a)!0.5!(b)$) {\bfseries\larger ×};
 \end{tikzpicture}
 
-\a\label{ex:ayrpivot5_2}\begingl[aboveglftskip=1.75em]
+\a\label{ex:ayrpivot5_2}\begingl[aboveglftskip=2.5em]
 	\gla Ang @ tinisaya Lita {sa Kumang} nay sarayeng. //
 	\glb ang= tinisa-ya Ø=Lita sa=Kumang nay sara=yeng //
 	\glc \AgtT{}= hug-\TsgM{}
-		$\underbrace{\text{\Top{}=Lita}}_{\text{A}}$
+		$\underbrace{\text{\Top{}=Lita}}_{\text{A}\tikzmark{ayrpivot5b_ctrl1}}$
 		$\underbrace{\text{\Parg{}=\smash{Kumang}}}_%
-			{\text{P}\tikzmark{ayrpivot5_ctrl2}}$
+			{\text{P}\tikzmark{ayrpivot5b_ctrl2}}$
 		and 
 		leave=$\underbrace{\text{\smash{\TsgF{}}.\Aarg{}}}_%
-			{\text{S}\tikzmark{ayrpivot5_targ2}}$ //
+			{\text{S}\tikzmark{ayrpivot5b_targ}}$ //
 	\glft `Lita hugs Kumang and she leaves.' //
 \endgl
 
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
-	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5_ctrl2}) 
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5b_ctrl2}) 
+	|- ++ (south:1.5em) -|
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5b_targ});
+
+\draw [-latex, dashed]
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5b_ctrl1}) 
 	|- ++ (south:.75em) -|
-	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5_targ2});
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5b_targ});
+
+\node (a) at ([yshift={-.75ex - .75em}]{pic cs:ayrpivot5b_ctrl1}) {};
+\node (b) at ([yshift={-.75ex - .75em}]{pic cs:ayrpivot5b_targ}) {};
+\node (x) at ($(a)!0.5!(b)$) {\bfseries\larger ×};
 \end{tikzpicture}
 \xe
 
