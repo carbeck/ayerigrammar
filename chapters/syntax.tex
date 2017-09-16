@@ -5739,6 +5739,53 @@ Of course, I had to go and pick the syntactic alignment which has long been
 syntacticians} to the point where it \textcquote[41]{kroeger2007} {sometimes
 seems as if Austronesian specialists can talk (and write) of nothing else}.}
 
+Before launching on a discussion of typological aspects and the details of the
+syntactic makeup of verb/inflectional phrases, let us briefly consider the
+featural setup of verbs.
+
+\begin{morphlex}
+\ex\label{ex:verbmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& V/I
+		& \begin{tabu}[t]{l l X[l]}
+			\ups{\Pred} & = & `...' \\
+			\ups{\Tense} & = & \{\NPst, \Pst, \RPst, \NFut, \Fut,
+				\RFut\} \\
+			\ups{\Asp} & = & \{\Prog, \Hab, \Iter\} \\
+			\ups{\Mood} & = & \{\Irr, \Neg, \Imp, \Hort\} \\
+			\ups{\Mod} & = & \{$ability$, $desire$, $intention$, $permission$,
+				$requirement$, $obligation$, $continuation$\}\bigskip \\
+
+			\ups{\Top{} \Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Top{} \Anim{}} & = & $\pm$\bigskip \\
+			
+			(\ups{\Subj{} \Pred} & = & `$pro$') \\
+			\ups{\Subj{} \Anim} & = & $\pm$ \\
+			\ups{\Subj{} \Gend} & = & \{\M, \F, \N, \Inan\} \\
+			\ups{\Subj{} \Num} & = & \{\Sg, \Pl\} \\
+			\ups{\Subj{} \Pers} & = & \{\First, \Second, \Third\} \\
+		\end{tabu}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+
+As discussed in \autoref{sec:verbs}, verbs can grammatically mark a large
+number of features. These are listed in (\ref{ex:verbmorphlex}). For tenses,
+Ayeri distinguishes an unmarked present tense from three degrees of past and
+future tense each. Furthermore, it marks a range of grammatical aspects,
+that is, progressive, habitative, and iterative. Since its modal particles may
+be characterized as clitics, they can also be listed in terms of a feature
+\Mod\textsc{ality}. Besides this, transitive finite verbs are obligatorily
+marked for the case and animacy of the clause's topic. Ayeri also uses a system
+of verb agreement which alternates between morphological agreement with
+full third-person NPs and pronominal clitics, which is why the feature 
+\ups{\Subj{} \Pred} appears in brackets: it is only defined for pronominal
+clitics.
+
 \subsection{Typological considerations}
 \label{sec:verbtypo}
 
@@ -6268,9 +6315,7 @@ which is why I replaced it with the unambiguous \fw{her} in
 
 \needspace{5\baselineskip}%
 \pex~\label{ex:engchuk_chuk}%
-Chukchi (adapted from Comrie 1989: 104\nocite{comrie1989}):
-% FIXME: None of the citation commands seems to allow printing the author name
-% and year in this context, where the name has already been printed just above.
+Chukchi \parencite[adapted from][104]{comrie1989}:
 \a\label{ex:engchuk_chuk1}\begingl
 	\gla ɣəm tə-yet-ɣʔek //
 	\glb \Fsg{}.\Abs{} came-\Fsg{} //
@@ -6496,7 +6541,7 @@ is often confused with topic. Perhaps this is in part also, as
 position for either topic or focus under certain circumstances:
 
 \ex\label{ex:engfoc}%
-English (Bresnan 2016: 98\nocite{bresnan2016}):\medskip
+English \parencite[98]{bresnan2016}:\medskip
 
 Q: What did you name your cat?\\
 A: \textsc{rosie} I named her. (\fw{Rosie} = \Foc{})
@@ -6616,16 +6661,26 @@ by the genitive clitic \fw{ng}, while actor voice is marked by \fw{mag-} or
 non-topic animate agents are marked by \rayr{/ANF}{-ang} or \rayr{ANF}{ang},
 and animate agent-topics are marked by \rayr{ANF}{ang} as well.
 
+\subsubsection{Verb agreement}
+\label{subsubsec:verbagr}
+
+One of the most prominent features of Ayeri with regards to verbs and their
+relation to subjects is verb agreement with 3rd-person NPs. This was already
+discussed at length in \autoref{clitics_postverb_person} 
+(p.~\pageref{clitics_postverb_person}\,ff.) and \autoref{sec:verbs}.
+
+...
+
 \subsubsection{Syntactic pivot}
 \label{subsubsec:pivot}
 
-First of all, it may be interesting to find out whether basic declarative
+It may be furthermore interesting to find out whether basic declarative
 statements in Ayeri are following a \Nom{}--\Acc{} or \Abs{}--\Erg{} pattern. A
-simple experiment which \citet[111--114]{comrie1989} performs in this regard is
-to test coreference in coordinated clauses. Commonly, in coordinated clauses,
-the subject of the second conjunct may drop out. Thus, in English, which
-behaves very much in terms of \Nom{}--\Acc{} alignment in this regard, we get
-the following result:
+simple test which \citet[111--114]{comrie1989} devises in this regard is to
+test coreference in coordinated clauses. Commonly, in coordinated clauses, the
+subject of the second conjunct may drop out. Thus, in English, which behaves
+very much in terms of \Nom{}--\Acc{} alignment in this regard, we get the
+following result:
 
 \pex[belowexskip=1.75em]\label{ex:engpivot}%
 	English:
@@ -6661,7 +6716,7 @@ alike. In an \Abs{}--\Erg{} language, then, we would expect the opposite case:
 S and P should be treated alike. In Dyirbal, we find the following situation:
 
 \pex\label{ex:dyirpivot}%
-Dyirbal \parencite[adpated from][112]{comrie1989}:
+Dyirbal \parencite[adapted from][112]{comrie1989}:
 \a\label{ex:dyirpivot_1}
 	\begingl
 		\gla {balan dʸugumbil} {baŋgul yaṛaŋgu} balgan //
@@ -6704,11 +6759,15 @@ Dyirbal \parencite[adpated from][112]{comrie1989}:
 \xe
 
 In (\ref{ex:dyirpivot}), we find that \fw{balan dʸugumbil} `the woman' is
-coreferential in (\ref{ex:dyirpivot_4}). This is the S of 
+coreferential in (\ref{ex:dyirpivot_4}). This is the S of
 (\ref{ex:dyirpivot_3}), and the P of (\ref{ex:dyirpivot_1}). Dyirbal, thus,
 treats S and P alike, as predicted for an \Abs{}--\Erg{} language---at least in
 this case, since \citet[113]{comrie1989} also explains that \Fsg{} and \Ssg{}
 pronouns in Dyirbal behave in terms in terms of \Nom{}--\Acc{}.
+\citet{comrie1989} also notes that some languages do not show a clear
+preference for whether the A or P of the transitive clause in the first
+conjunct is the preferred reference of the S of the intransitive clause in the
+second conjunct.
 
 For Tagalog, as \citet{kroeger1991} explains, \textcquote[30]{kroeger1991}{the
 deletion is not obligatory but null nominative arguments are always interpreted
@@ -6725,8 +6784,8 @@ basically an object, not demoted to an adverbial as in English
 \citep[38--44]{kroeger1991}.}
 
 \pex\label{ex:tagpivot}%
-Tagalog (adapted from Kroeger 1991: 31\nocite{kroeger1991}, from
-\cite[151--152]{ramoscena1990}):
+Tagalog (\cite[adapted from][31]{kroeger1991}, from 
+	\cite[151--152]{ramoscena1990}):
 \a\label{ex:tagpivot_1}%
 	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
 		\gla tinanong ni=Derek si=Marvin, bago umalis {} //
@@ -7061,11 +7120,6 @@ strategy to disambiguate between two possible controllers for the same target.
 \ex referents of differing gender: verb agreement disambiguates \xe
 \ex what happens with a transitive coordinated clause? \xe
 \ex the whole thing with pronouns \xe
-
-\subsubsection{Verb agreement}
-\label{subsubsec:verbagr}
-
-...
 
 \subsubsection{Quantifier float}
 \label{subsubsec:quantfloat}
