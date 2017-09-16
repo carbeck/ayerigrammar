@@ -7068,12 +7068,10 @@ is conjugated so as to require an animate masculine controller, whereas
 \pex
 \a \adjustbox{valign=t}{%
 \begin{tabu} {\usetabu{morphlex}}
-\rayr{\larger le—IlonF}{le ... ilon}
+\rayr{\larger IlonF}{ilon}
 	& N
 	& \begin{tabular}[t]{l l l}
 		\ups{\Pred} & = & `present' \\
-		\ups{\Anim} & = & $-$ \\
-		\ups{\Case} & = & \Parg\bigskip \\
 		\ups{\Index{} \Pers} & = & \Third \\
 		\ups{\Index{} \Num} & = & \Sg{} \\
 		\ups{\Index{} \Anim} & = & $-$ \\
@@ -7117,11 +7115,58 @@ where the topic marking basically determines the controller of the coordinated
 intransitive clause, which is reminiscent of Tagalog's syntax, is essentially a
 strategy to disambiguate between two possible controllers for the same target.
 
-...
+When only one of the referents in the transitive conjunct is eligible as the
+controller of the subject of the intransitive conjunct at the same time, A and
+P are regularly indicated by person agreement, since Ayeri requires a
+resumptive pronominal clitic in the intransitive clause, as indicated above.
+The affix on the verb thus has the status of a pronominal predicator:
 
-\ex referents of differing gender: verb agreement disambiguates \xe
-\ex what happens with a transitive coordinated clause? \xe
-\ex the whole thing with pronouns \xe
+\pex\label{ex:ayrpivot5}
+\a\label{ex:ayrpivot5_1}\begingl[aboveglftskip=1.75em]
+	\gla Ang @ tinisaya Lita {sa Kumang} nay sarayāng. //
+	\glb ang= tinisa-ya Ø=Lita sa=Kumang nay sara=yāng //
+	\glc \AgtT{}= hug-\TsgM{}
+		$\underbrace{\text{\Top{}=Lita}}_{\text{A}\tikzmark{ayrpivot5_ctrl1}}$
+		$\underbrace{\text{\Parg{}=\smash{Kumang}}}_{\text{P}}$
+		and 
+		leave=$\underbrace{\text{\smash{\TsgM{}}.\Aarg{}}}_%
+			{\text{S}\tikzmark{ayrpivot5_targ1}}$ //
+	\glft `Lita hugs Kumang and he leaves.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5_ctrl1}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5_targ1});
+\end{tikzpicture}
+
+\a\label{ex:ayrpivot5_2}\begingl[aboveglftskip=1.75em]
+	\gla Ang @ tinisaya Lita {sa Kumang} nay sarayeng. //
+	\glb ang= tinisa-ya Ø=Lita sa=Kumang nay sara=yeng //
+	\glc \AgtT{}= hug-\TsgM{}
+		$\underbrace{\text{\Top{}=Lita}}_{\text{A}}$
+		$\underbrace{\text{\Parg{}=\smash{Kumang}}}_%
+			{\text{P}\tikzmark{ayrpivot5_ctrl2}}$
+		and 
+		leave=$\underbrace{\text{\smash{\TsgF{}}.\Aarg{}}}_%
+			{\text{S}\tikzmark{ayrpivot5_targ2}}$ //
+	\glft `Lita hugs Kumang and she leaves.' //
+\endgl
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.125em,yshift=-.75ex]{pic cs:ayrpivot5_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.25ex, yshift=-.75ex]{pic cs:ayrpivot5_targ2});
+\end{tikzpicture}
+\xe
+
+In (\ref{ex:ayrpivot5_1}), the verb in the second conjunct, \xayr{sryaaNF}
+{sarayāng}{he leaves} is marked for a masculine third-person subject. The only
+available controller in the first con\-junct is \rayr{lit}{Lita} on behalf of
+being male, since \rayr{kumNF}{Kumang} is female. Hence, in
+(\ref{ex:ayrpivot5_2}) the verb of the intransitive conjunct, \xayr{sryeNF}
+{sarayeng}{she leaves}, finds its controller only in \rayr{kumNF}{Kumang}.
 
 \subsubsection{Quantifier float}
 \label{subsubsec:quantfloat}
