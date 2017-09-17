@@ -6654,10 +6654,10 @@ absence of case marking on the NP itself. The case marker appears as a clitic
 marker in its prefix form at the left-most edge of the clause, before the verb
 (compare sections \ref{subsec:case} and \ref{sec:verbs}). While the marker on
 the verb is related to nominal case markers in Ayeri, Tagalog uses a number of
-prefixes, suffixes, and infixes for voice marking which are not obviously
-related to case markers on nouns. For instance, non-subject actors are marked
-by the genitive clitic \fw{ng}, while actor voice is marked by \fw{mag-} or
-\fw{-um-} \citep[74, 78]{schachterotanes1972}. In Ayeri, on the other hand,
+affixes for voice marking which are not obviously related to case markers on
+nouns. For instance, non-subject actors are marked by the genitive clitic
+\fw{ng}, while actor voice is marked by \fw{mag-} or \fw{-um-} \parencites[74,
+78]{schachterotanes1972}[16--18]{kroeger1991}. In Ayeri, on the other hand,
 non-topic animate agents are marked by \rayr{/ANF}{-ang} or \rayr{ANF}{ang},
 and animate agent-topics are marked by \rayr{ANF}{ang} as well.
 
@@ -6667,20 +6667,189 @@ and animate agent-topics are marked by \rayr{ANF}{ang} as well.
 One of the most prominent features of Ayeri with regards to verbs and their
 relation to subjects is verb agreement with 3rd-person NPs. This was already
 discussed at length in \autoref{clitics_postverb_person} 
-(p.~\pageref{clitics_postverb_person}\,ff.) and \autoref{sec:verbs}.
+(p.~\pageref{clitics_postverb_person}\,ff.) and \autoref{sec:verbs}. Hence, I
+will only give basic information here.
 
-...
+\citet{kroeger1991} mentions that Tagalog has optional plural agreement of
+predicates when with the nominative NP if the nominative argument of the clause
+is plural. This is independent of whether the nominative argument is also the
+actor of the clause or not \citep[24--25]{kroeger1991}:
+
+\pex\label{ex:tagagr}%
+Tagalog (adapted from \cite[24--25]{kroeger1991}, from 
+	\cite[122--123]{aspillera1969}):
+\a\label{ex:tagagr_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla nagsisi-kain na ang=mga=bata ng=hapunan //
+	\glb \Av{}.\Impf{}.\Pl{}-eat\tikzmark{tagagra_targ} already 
+		$\underbrace{\text{\Nom{}=\Pl{}=child}\tikzmark{tagagra_ctrl1}}_%
+			{\text{S/A}\tikzmark{tagagra_ctrl2}}$
+		$\underbrace{\text{\Gen{}=\smash{supper}}}_%
+			{\text{P}}$ //
+	\glft `The children are eating their supper already.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"av.impf.pl-eat"}, yshift=2.25ex]{pic cs:tagagra_targ})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=pl=child"}, yshift=2.25ex]{pic cs:tagagra_ctrl1});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]{pic cs:tagagra_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"av.impf.pl-eat"}, yshift=-.75ex]{pic cs:tagagra_targ});
+\end{tikzpicture}
+
+\a\label{ex:tagagr_2}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla pagsu-sulat-in ni=Linda ang=mga=liham //
+	\glb \Fut{}.\Pl{}-write-\Ov{}\tikzmark{tagagrb_targ}
+		$\underbrace{\text{\Gen{}=Linda}}_%
+			{\text{A}}$
+		$\underbrace{\text{\Nom{}=\Pl{}=letter}\tikzmark{tagagrb_ctrl1}}_%
+			{\text{S/P}\tikzmark{tagagrb_ctrl2}}$ //
+	\glft `Linda will write the letters.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"fut.pl-write-ov"}, yshift=2.25ex]{pic cs:tagagrb_targ})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=pl=letter"}, yshift=2.25ex]{pic cs:tagagrb_ctrl1});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]{pic cs:tagagrb_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"fut.pl-write-ov"}, yshift=-.75ex]%
+		{pic cs:tagagrb_targ});
+\end{tikzpicture}
+\xe
+
+The arrows in (\ref{ex:tagagr}) mark government and agreement relationships:
+the verb governs role and case assignment (top arrow), while the subject NP
+controls plural agreement on the verb (bottom arrow). As the arrows illustrate,
+the relationship between the assignment of the subject role and thus nominative
+case and plural agreement on the verb are congruent: the verb agrees in both
+(\ref{ex:tagagr_1}) and (\ref{ex:tagagr_2}) with the respective subject NP,
+whether it is the agent (\ref{ex:tagagr_1}) or not (\ref{ex:tagagr_2}).
+
+As described before, person agreement in Ayeri is essentially fixed to the
+agent NP in canonical cases, whether it is the topic of the clause or not.
+Thus, in (\ref{ex:ayragr_1}), we can see the verb determining that the agent
+argument is also the topic, with the verb agreeing itself in person with the
+agent: \rayr{AgYaanF}{Ajān} is a male name. In (\ref{ex:ayragr_2}), however,
+the relation is asymmetric in that the marking on the verb shows that the
+patient argument is the topic, while the verb still displays masculine person
+agreement, while \rayr{pil}{Pila} is a female name. The verb thus continues to
+agree with the agent NP in spite of not being the topic of the clause.
+Topicalization appears to have no influence on the distribution of person
+agreement on the verb; the agent NP thus remains the subject. This is a very 
+\Nom{}--\Acc{} trait.
+
+\pex\label{ex:ayragr}
+\a\label{ex:ayragr_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang manya} Ajān {sa Pila}. //
+	\glb ang=man-ya {Ø=Ajān} {sa=Pila} //
+	\glc \AgtT{}=greet-\TsgM{}\tikzmark{ayragra_targ}
+		$\underbrace{\text{\Top{}=\smash{Ajān}}\tikzmark{ayragra_ctrl1}}_%
+		{\text{S/A}\tikzmark{ayragra_ctrl2}}$
+		$\underbrace{\text{\Parg{}=Pila}}_{\text{P}}$ //
+	\glft `Ajān, he greets Pila.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=greet-3sg.m"}, yshift=2.25ex]{pic cs:ayragra_targ})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Ajān"}, yshift=2.25ex]{pic cs:ayragra_ctrl1});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]{pic cs:ayragra_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"at=greet-3sg.m"}, yshift=-.75ex]{pic cs:ayragra_targ});
+\end{tikzpicture}
+
+\a\label{ex:ayragr_2}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa manya} {ang Ajān} Pila. //
+	\glb sa=man-ya {ang=Ajān} {Ø=Pila} //
+	\glc \PatT{}=greet-\TsgM{}\tikzmark{ayragrb_targ}
+		$\underbrace{\text{\Aarg{}=\smash{Ajān}}}_%
+			{\text{S/A}\tikzmark{ayragrb_ctrl2}}$
+		$\underbrace{\text{\Top{}=Pila}\tikzmark{ayragrb_ctrl1}}_{\text{P}}$ //
+	\glft `Pila, Ajān greets her.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=greet-3sg.m"}, yshift=2.25ex]{pic cs:ayragrb_targ})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Pila"}, yshift=2.25ex]{pic cs:ayragrb_ctrl1});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]{pic cs:ayragrb_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"pt=greet-3sg.m"}, yshift=-.75ex]{pic cs:ayragrb_targ});
+\end{tikzpicture}
+
+\xe
+
+In agentless clauses, however, the verb agrees with the patient argument, which
+makes Ayeri less typical a \Nom{}--\Acc{} language, and more similar in this
+regard to what an \Abs{}--\Erg{} language would be expected to do.
+Passivization of a transitive clause as a strategy for keeping the topic
+constant as a subject is essentially preempted by Ayeri's use of a topic
+particle in the verb phrase. Hence, a sentence like (\ref{ex:ayragr2_1})---as a
+parallel to (\ref{ex:tagagr_2})---sounds odd, while (\ref{ex:ayragr2_2}) is
+fine.
+
+\pex\label{ex:ayragr2}
+\a\label{ex:ayragr2_1}\ljudge\ques%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa manye} {ang Ajān} Pila. //
+	\glb sa=man-ye {ang=Ajān} {Ø=Pila} //
+	\glc \PatT{}=greet-\TsgF{}\tikzmark{ayragr2a_targ}
+		$\underbrace{\text{\Aarg{}=\smash{Ajān}}}_{\text{A}}$
+		$\underbrace{\text{\Top{}=Pila}\tikzmark{ayragr2a_ctrl1}}_%
+			{\text{S/P}\tikzmark{ayragr2a_ctrl2}}$ //
+	\glft `Pila, she is greeted by Ajān.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=greet-3sg.f"}, yshift=2.25ex]{pic cs:ayragr2a_targ})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Pila"}, yshift=2.25ex]{pic cs:ayragr2a_ctrl1});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]{pic cs:ayragr2a_ctrl2}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"pt=greet-3sg.f"}, yshift=-.75ex]%
+		{pic cs:ayragr2a_targ});
+\end{tikzpicture}
+
+\a\label{ex:ayragr2_2}\begingl[aboveglftskip=1.75em]
+	\gla Manye {sa Pila}. //
+	\glb man-ye Ø=Pila //
+	\glc greet-\TsgF{}\tikzmark{ayragr2b_targ}
+		$\underbrace{\text{\Parg{}=Pila}}_%
+			{\text{S/P}\tikzmark{ayragr2b_ctrl}}$ //
+	\glft `Pila is greeted.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]{pic cs:ayragr2b_ctrl}) 
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"pt=greet-3sg.f"}, yshift=-.75ex]%
+		{pic cs:ayragr2b_targ});
+\end{tikzpicture}
+
+\xe
 
 \subsubsection{Syntactic pivot}
 \label{subsubsec:pivot}
 
-It may be furthermore interesting to find out whether basic declarative
-statements in Ayeri are following a \Nom{}--\Acc{} or \Abs{}--\Erg{} pattern. A
-simple test which \citet[111--114]{comrie1989} devises in this regard is to
-test coreference in coordinated clauses. Commonly, in coordinated clauses, the
-subject of the second conjunct may drop out. Thus, in English, which behaves
-very much in terms of \Nom{}--\Acc{} alignment in this regard, we get the
-following result:
+Since we have just dealt with aspects of syntactic alignment and found that
+Ayeri behaves a little oddly with regards to this, it may be interesting as
+well to perform another test on declarative statements and their syntactic
+pivot. A simple test which \citet[111--114]{comrie1989} devises in this regard
+is to test coreference in coordinated clauses. Commonly, in coordinated
+clauses, the subject of the second conjunct may drop out. Thus, in English,
+which behaves very much in terms of \Nom{}--\Acc{} alignment in this regard, we
+get the following result:
 
 \pex[belowexskip=1.75em]\label{ex:engpivot}%
 	English:
@@ -6783,6 +6952,7 @@ patient/theme or the recipient. The actor of the Tagalog sentence is also
 basically an object, not demoted to an adverbial as in English
 \citep[38--44]{kroeger1991}.}
 
+\needspace{5\baselineskip}
 \pex\label{ex:tagpivot}%
 Tagalog (\cite[adapted from][31]{kroeger1991}, from 
 	\cite[151--152]{ramoscena1990}):
@@ -6913,14 +7083,14 @@ ambiguous between \xayr{prlF}{paral}{cat} and \xayr{pFrbr}{prabara}{mouse}.
 \xe
 
 While it is possible in Ayeri to not repeat the coreferential NP in a conjunct
-clause, Ayeri appears to avoid an empty subject slot. Thus, the verb 
-\xayr{shyoNF}{sahayong}{it comes} in (\ref{ex:ayrpivot_4}) displays a
-cliticized resumptive subject pronoun, \xayr{/yoNF}{-yong}{it}. In
-(\ref{ex:ayrpivot_4}) at least, this pronoun is coreferential with the subject
-in the first conjunct, \xayr{prlF}{paral}{cat}. Seeing as Tagalog switches the
-subject around by altering the voice marking on the verb, it is certainly
-illustrative to check how Ayeri fares if the topic is swapped to \xayr{pFrbr}
-{prabara}{mouse}.
+clause verbatim, Ayeri still appears to avoid an empty subject slot. Thus, the
+verb \xayr{shyoNF}{sahayong}{it comes} in (\ref{ex:ayrpivot_4}) displays a
+pronominal clitic, \xayr{/yoNF}{-yong}{it}, which constitutes the resumptive
+subject pronoun of the clause. In (\ref{ex:ayrpivot_4}) at least, this pronoun
+is coreferential with the subject in the first conjunct,
+\xayr{prlF}{paral}{cat}. Seeing as Tagalog switches the subject around by
+altering the voice marking on the verb, it is certainly illustrative to check
+how Ayeri fares if the topic is swapped to \xayr{pFrbr}{prabara}{mouse}.
 
 \ex\label{ex:ayrpivot2}
 \begingl[aboveglftskip=1em]
@@ -7132,7 +7302,7 @@ The affix on the verb thus has the status of a pronominal predicator:
 		and 
 		leave=$\underbrace{\text{\smash{\TsgM{}}.\Aarg{}}}_%
 			{\text{S}\tikzmark{ayrpivot5a_targ}}$ //
-	\glft `Lita hugs Kumang and he leaves.' //
+	\glft `Lita, he hugs Kumang, and he leaves.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
@@ -7160,7 +7330,7 @@ The affix on the verb thus has the status of a pronominal predicator:
 		and 
 		leave=$\underbrace{\text{\smash{\TsgF{}}.\Aarg{}}}_%
 			{\text{S}\tikzmark{ayrpivot5b_targ}}$ //
-	\glft `Lita hugs Kumang and she leaves.' //
+	\glft `Lita, he hugs Kumang, and she leaves.' //
 \endgl
 
 \begin{tikzpicture}[remember picture, overlay]
