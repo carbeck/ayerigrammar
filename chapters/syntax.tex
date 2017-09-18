@@ -7233,7 +7233,8 @@ the verb in the second conjunct, \xayr{sr/}{sara-}{leave}. Besides, this verb
 is conjugated so as to require an animate masculine controller, whereas
 \rayr{IlonF}{ilon} is inanimate, as shown by the topic marker \rayr{le}{le}.
 \rayr{IlonF}{ilon} is thus not a suitable controller for \rayr{sryaaNF}
-{sarayāng}:
+{sarayāng}, since their person-feature values clash with each other---the 
+\Anim{} and \Gend{} values in particular:
 
 \begin{morphlex}
 \pex
@@ -7243,10 +7244,11 @@ is conjugated so as to require an animate masculine controller, whereas
 	& N
 	& \begin{tabular}[t]{l l l}
 		\ups{\Pred} & = & `present' \\
-		\ups{\Index{} \Pers} & = & \Third \\
-		\ups{\Index{} \Num} & = & \Sg{} \\
-		\ups{\Index{} \Anim} & = & $-$ \\
-		\ups{\Index{} \Gend} & = & \Inan \\
+		\ups{\Index} & = & ↓ \\
+		\quad\downs{\Pers} & = & \Third \\
+		\quad\downs{\Num} & = & \Sg{} \\
+		\quad\downs{\Anim} & = & $-$ \\
+		\quad\downs{\Gend} & = & \Inan \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -7257,11 +7259,13 @@ is conjugated so as to require an animate masculine controller, whereas
 	& V
 	& \begin{tabular}[t]{l l l}
 		\ups{\Pred} & = & \astruct{leave}{\ups{\Subj}} \\
-		\ups{\Subj{} \Pred} & = & `$pro$' \\
-		\ups{\Subj{} \Pers} & = & \Third \\
-		\ups{\Subj{} \Num} & = & \Sg \\
-		\ups{\Subj{} \Anim} & = & $+$ \\
-		\ups{\Subj{} \Gend} & = & \M \\
+		\ups{\Subj} & = & ↓ \\
+		\quad\downs{\Pred} & = & `$pro$' \\
+		\quad\downs{\Pers} & = & \Third \\
+		\quad\downs{\Num} & = & \Sg \\
+		\quad\downs{\Anim} & = & $+$ \\
+		\quad\downs{\Gend} & = & \M \\
+		\quad\downs{\Case} & = & \Aarg \\
 	\end{tabular}
 \end{tabu}%
 }
