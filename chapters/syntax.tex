@@ -7740,7 +7740,128 @@ since the subject is indicated as \fw{ang isda} `the fish', however,
 fit better with `Maria'. However, this interpretation would be ungrammatical
 since `Maria' is not the subject of the clause.
 
-...
+Secondary predicates in Ayeri also follow the finite verb, and they refer to
+the subject. If what was identified as the topic would be the subject like in
+Tagalog, thus, the reference of the adjective should change in the way shown in
+(\ref{ex:tagsecpred}). However, as we will see below, this is not the case.
+
+\pex\label{ex:ayrsecpred1}
+\a\label{ex:ayrsecpred1_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang kongaye} gino Migray sangalya. //
+	\glb ang=konga-ye gino Ø=Migray sangal-ya //
+	\glc \AgtT{}=enter-\TsgF{}\tikzmark{ayrsecpred1a_vbtop}
+		drunk\tikzmark{ayrsecpred1a_adj}
+		\Top{}=Migray\tikzmark{ayrsecpred1a_sbtop}%
+			\tikzmark{ayrsecpred1a_sbbot}
+		room-\Loc{}\tikzmark{ayrsecpred1a_obtop}%
+			\tikzmark{ayrsecpred1a_obbot} //
+	\glft `Migray, she enters the room drunk.' (Migray is drunk) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=enter-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred1a_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Migray"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred1a_sbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"drunk"}, yshift=-.75ex]%
+		{pic cs:ayrsecpred1a_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"top=Migray"},yshift=-.75ex]%
+		{pic cs:ayrsecpred1a_sbbot});
+\end{tikzpicture}
+
+\a\label{ex:ayrsecpred1_2}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ya kongaye} gino {ang Migray} sangal. //
+	\glb ya=konga-ye gino {ang=Migray} sangal-Ø //
+	\glc \LocT{}=enter-\TsgF{}\tikzmark{ayrsecpred1b_vbtop}
+		drunk\tikzmark{ayrsecpred1b_adj}
+		\Aarg{}=Migray\tikzmark{ayrsecpred1b_sbtop}%
+			\tikzmark{ayrsecpred1b_sbbot}
+		room-\Top{}\tikzmark{ayrsecpred1b_obtop}%
+			\tikzmark{ayrsecpred1b_obbot} //
+	\glft `The room, Migray enters it drunk.' (Migray is drunk) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=enter-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred1b_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"room-top"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred1b_obtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"drunk"}, yshift=-.75ex]%
+		{pic cs:ayrsecpred1b_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"a=Migray"},yshift=-.75ex]%
+		{pic cs:ayrsecpred1b_sbbot});
+\end{tikzpicture}
+
+\xe
+
+In (\ref{ex:ayrsecpred1_1}), the topic NP, \rayr{migFrj}{Migray}, happens to be
+the same NP that is modified by the secondary predicate, \xayr{gino}{gino}
+{drunk}: Migray is drunk. However, (\ref{ex:ayrsecpred1_2}) generates the same
+reading even though this time, \xayr{sNlF}{sangal}{the room} is marked as the
+topic of the clause. A reading in which the room is drunk cannot be forced by
+morphological means, although it needs to be pointed out that predicative
+adjectives relating to the object inhabit the same postverbal position.
+Considering structure alone, the sentence in (\ref{ex:ayrsecpred1_2}) is
+ambiguous, though context certainly favors the reading provided in the
+translation of (\ref{ex:ayrsecpred1_2}), since `drunk' is not typically a
+property of rooms.
+
+\ex\label{ex:ayrsecpred2}
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang ginya} sati Niyas kangaley. //
+	\glb ang=gin-ya sati Ø=Niyas kanga-ley //
+	\glc \AgtT{}=drink-\TsgM{}\tikzmark{ayrsecpred2_vbtop}
+		cold\tikzmark{ayrsecpred2_adj}
+		\Top{}=Niyas\tikzmark{ayrsecpred2_sbtop}%
+			\tikzmark{ayrsecpred2_sbbot}
+		milk-\PargI{}\tikzmark{ayrsecpred2_obtop}%
+			\tikzmark{ayrsecpred2_obbot} //
+	\glft `Niyas, he drinks milk cold.' (The milk is cold) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=enter-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred2_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Niyas"}, yshift=2.25ex]%
+		{pic cs:ayrsecpred2_sbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"cold"}, yshift=-.75ex]%
+		{pic cs:ayrsecpred2_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"milk-p.inan"},yshift=-.75ex]%
+		{pic cs:ayrsecpred2_obbot});
+\end{tikzpicture}
+\xe
+
+Different than in (\ref{ex:ayrsecpred1}), the adjective in
+(\ref{ex:ayrsecpred2}), \xayr{sti}{sati}{cold}, refers to the object of the
+clause, \xayr{kNlej}{kangaley}{milk}, even though \rayr{kNlej}{kangaley} is not
+the topic of the clause. By structure alone, Niyas could also be the one who is
+cold, rather than the milk, however, this would be unlikely considering context
+and extralinguistic experience. Equally unlikely is the possible interpretation
+of the milk becoming cold by \rayr{niysF}{Niyas}' drinking it.
+
+Different than in Tagalog, thus, it is not morphology but the meaning of the
+verb which determines whether the postverbal predicative adjective refers to
+the agent or the patient.\footnote{Unfortunately, \citet{kroeger1991} does not
+give any examples of object predicatives in Tagalog, and neither does
+\citet{schachterotanes1972} readily contain information on these.} However,
+since in Ayeri, the predicative adjective following the verb can refer to
+either the agent or the patient depending on context, this test does not have a
+very clear outcome. However, at least we could establish that alternations
+in the morphological marking of the privileged NP has no impact on the relation
+between adjective and noun. The marking on the verb is thus not used for
+manipulating grammatical relations in this context, unlike Tagalog.
 
 \subsubsection{Raising}
 \label{subsubsec:raising}
