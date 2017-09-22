@@ -7643,8 +7643,102 @@ Relative clauses in Ayeri may even just consist of a predicative adjective, as
 (\ref{ex:ayrrel3}) illustrates. In these cases, there is no case-marked noun or
 topic contained in the relative clause.
 
-\subsubsection{Reflexive binding}
-\label{subsubsec:reflbind}
+\subsubsection{Control of secondary predicates}
+\label{subsubsec:secpred}
+
+Secondary predicates in Tagalog are interesting insofar as depictive adjectives
+which occur after the verb always modify the nominative argument:
+
+\needspace{5\baselineskip}
+\pex\label{ex:tagsecpred}
+Tagalog \parencite[adapted from][29--30]{kroeger1991}:
+\a\label{ex:tagsecpred_1}%
+	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla naghain na lasing si=Maria ng=isda //
+	\glb \Av.\Pfv-serve\tikzmark{tagsecpred1a_vbtop}%
+		\tikzmark{tagsecpred1a_vbbot}
+		\Lnk{}
+		drunk\tikzmark{tagsecpred1a_adj}
+		\Nom{}=Maria\tikzmark{tagsecpred1a_sbtop}\tikzmark{tagsecpred1a_sbbot}
+		\Gen{}=fish\tikzmark{tagsecpred1a_obbot}
+		//
+	\glft `Maria served the fish drunk.' (Maria was drunk) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"av.pfv-serve"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1a_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=Maria"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1a_sbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"drunk"}, yshift=-.75ex]{pic cs:tagsecpred1a_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"nom=Maria"},yshift=-.75ex]{pic cs:tagsecpred1a_sbbot});
+\end{tikzpicture}
+
+\a\label{ex:tagsecpred_2}%
+	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla inihain na hilaw ni=Maria ang=isda //
+	\glb \Iv{}.\Pfv-serve\tikzmark{tagsecpred1b_vbtop}%
+			\tikzmark{tagsecpred1b_vbbot}
+		\Lnk{}
+		raw\tikzmark{tagsecpred1b_adj}
+		\Gen{}=Maria\tikzmark{tagsecpred1b_obbot}
+		\Nom{}=fish\tikzmark{tagsecpred1b_sbtop}\tikzmark{tagsecpred1b_sbbot}
+		//
+	\glft `Maria served the fish raw.' (The fish was raw) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"iv.pfv-serve"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1b_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=fish"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1b_sbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"raw"}, yshift=-.75ex]%
+		{pic cs:tagsecpred1b_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"nom=fish"},yshift=-.75ex]{pic cs:tagsecpred1b_sbbot});
+\end{tikzpicture}
+
+\a\label{ex:tagsecpred_3}%
+	\ljudge\ques\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla inihain na lasing ni=Maria ang=isda //
+	\glb \Iv{}.\Pfv{}-serve\tikzmark{tagsecpred1c_vbtop}%
+			\tikzmark{tagsecpred1c_vbbot}
+		\Lnk{}
+		drunk\tikzmark{tagsecpred1c_adj}
+		\Gen{}=Maria\tikzmark{tagsecpred1c_obbot}
+		\Nom{}=fish\tikzmark{tagsecpred1c_sbtop}\tikzmark{tagsecpred1c_sbbot}
+		//
+	\glft `Maria served the fish drunk.' (The fish was drunk) //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"iv.pfv-serve"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1c_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=fish"}, yshift=2.25ex]%
+		{pic cs:tagsecpred1c_sbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"drunk"}, yshift=-.75ex]%
+		{pic cs:tagsecpred1c_adj})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"nom=fish"},yshift=-.75ex]{pic cs:tagsecpred1c_sbbot});
+\end{tikzpicture}
+
+\xe
+
+\citet[30]{kroeger1991} explains that (\ref{ex:tagsecpred_3}) is anomalous,
+since the subject is indicated as \fw{ang isda} `the fish', however,
+\fw{lasing} `drunk' is not a property usually associated with fish---it would
+fit better with `Maria'. However, this interpretation would be ungrammatical
+since `Maria' is not the subject of the clause.
 
 ...
 
@@ -7658,8 +7752,8 @@ topic contained in the relative clause.
 
 ...
 
-\subsubsection{Control of secondary predicates}
-\label{subsubsec:secpred}
+\subsubsection{Reflexive binding}
+\label{subsubsec:reflbind}
 
 ...
 
