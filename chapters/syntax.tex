@@ -8077,9 +8077,9 @@ initially both feature to-object raising: the subject of the complement clause
 becomes an object of the matrix clause's verb. This phenomenon is also known as
 \emph{exceptional case marking} (\textsc{ecm}) or \emph{accusative and
 infinitive} (\textsc{aci}) and entails that the matrix verb assigns
-accusative/objective case to the raised subject \citep[445, 451]{carnie2013}.
-The raised subject is not semantically an object of the matrix verb, however,
-but an external agent:
+accusative/objective case to the raised subject \citep[439--442, 445, 451]
+{carnie2013}. The raised subject is not semantically an object of the matrix
+verb, however, but an external agent:
 
 \pex
 \a \fw{Mother wants them to study tonight} ≠ \fw{Mother wants them}
@@ -8162,6 +8162,319 @@ to-object raising with verbs of perception and verbs of cognition either.
 
 \subsubsection{Control}
 \label{subsubsec:control}
+
+Control verbs behave basically in the opposite way of raising verbs: the
+subject of the subordinate verb is also an argument of the verb in the matrix
+clause---subject or object---and this argument is said to act as a controller
+for the subject of the subordinate verb. The main clause predicate thus is
+thought to assign two thematic roles. In \textsc{gg} it is assumed that the
+subject of the lower clause is a silent \textsc{pro} element which is coindexed
+with the controller \citep[442--445, 451]{carnie2013}.
+
+\pex
+\a \fw{John$_i$ tries that John$_i$ gets a job}\\
+	= \fw{John$_i$ tries \textsc{\upshape pro}$_i$ to \textup{t$_\textsc{pro}$}
+	get a job}
+\a \fw{The officer ordered Mary$_i$ that Mary$_i$ turn back}\\
+	= \fw{The officer ordered Mary$_i$ \textsc{\upshape pro}$_i$ to
+	\textup{t$_\textsc{pro}$} turn back}
+\xe
+
+\citet{kroeger1991} refers to subject control as `Equi' and reports that
+according to \citet[505]{schachter1976}, it is typically the actor of the
+subordinate verb that is the target of deletion. At first sight this would be a
+strong argument in favor of defining the actor NP as the subject, however, he
+notes that under certain circumstances, \textcquote[37]{kroeger1991}{the
+controllee in a transitive complement clause [is allowed] to be either the
+Actor (regardless of case marking) or the argument which bears nominative
+case}. This is the case, for instance, with \fw{himukin} `persuade' and
+\fw{magpilit} `insist on'. Subordinate verbs marked for non-volitive
+mood form an exception as well \citep[36--37, also 96--97]{kroeger1991}.
+\citet{kroeger1991} illustrates the main pattern of control in Tagalog with the
+following set of example sentences:
+
+\pex\label{ex:tagctrl1}
+Tagalog \citep[adapted from][37]{kroeger1991}:
+\a\label{ex:tagctrl1_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla binalak niya=ng \textup{[} magbigay {} ng=pera sa=Nanay \textup{]} //
+	\glb \Pfv{}-plan-\Ov{}
+		$\underbrace{\text{\smash{\Tsg{}}.\Gen{}=\Comp{}}}_{\text{A}%
+			\tikzmark{tagctrl1a_act1}%
+		}$
+		{}
+		\Av{}-give%
+			\tikzmark{tagctrl1a_vb2}
+		$\underbrace{%
+			\tikzmark{tagctrl1a_sb}%
+		}_{\text{S/A}%
+			\tikzmark{tagctrl1a_act2}%
+		}$
+		$\underbrace{\text{\Gen{}=\smash{money}}}_{\text{T}}$
+		$\underbrace{\text{\Dat{}=mother}}_{\text{R}}$
+		{} //
+	\glft `He planned to give money to Mother.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"av-give"}, yshift=2.25ex]%
+		{pic cs:tagctrl1a_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagctrl1a_sb});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl1a_act1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:tagctrl1a_act2});
+\end{tikzpicture}
+
+\a\label{ex:tagctrl1_2}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla binalak niya=ng \textup{[} ibigay {} sa=Nanay ang=pera \textup{]} //
+	\glb \Pfv{}-plan-\Ov{}
+		$\underbrace{\text{\smash{\Tsg{}}.\Gen{}=\Comp{}}}_{\text{A}%
+			\tikzmark{tagctrl1b_act1}%
+		}$
+		{}
+		\Iv{}-give%
+			\tikzmark{tagctrl1b_vb2}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{tagctrl1b_act2}%
+		}$
+		$\underbrace{\text{\Dat{}=mother}}_{\text{R}}$
+		$\underbrace{\text{\Nom{}=\smash{money}}%
+			\tikzmark{tagctrl1b_sb}%
+		}_{\text{S/T}}$
+		{} //
+	\glft `He planned to give the money to Mother.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"iv-give"}, yshift=2.25ex]%
+		{pic cs:tagctrl1b_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=money"}, yshift=2.25ex]%
+		{pic cs:tagctrl1b_sb});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl1b_act1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"a"},yshift=-.75ex]%
+		{pic cs:tagctrl1b_act2});
+\end{tikzpicture}
+
+\a\label{ex:tagctrl1_3}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla binalak niya=ng \textup{[} bigyan {} ng=pera ang=Nanay \textup{]} //
+	\glb \Pfv{}-plan-\Ov{}
+		$\underbrace{\text{\smash{\Tsg{}}.\Gen{}=\Comp{}}}_{\text{A}%
+			\tikzmark{tagctrl1c_act1}%
+		}$
+		{}
+		\Dv{}-give%
+			\tikzmark{tagctrl1c_vb2}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{tagctrl1c_act2}%
+		}$
+		$\underbrace{\text{\Gen{}=\smash{money}}}_{\text{T}}$
+		$\underbrace{\text{\Nom{}=mother}%
+			\tikzmark{tagctrl1c_sb}%
+		}_{\text{S/R}}$
+		{} //
+	\glft `He planned to give Mother (some/the) money.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"dv-give"}, yshift=2.25ex]%
+		{pic cs:tagctrl1c_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=mother"}, yshift=2.25ex]%
+		{pic cs:tagctrl1c_sb});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl1c_act1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"a"},yshift=-.75ex]%
+		{pic cs:tagctrl1c_act2});
+\end{tikzpicture}
+
+\xe
+
+While the nominative argument of the subordinate verb changes between the actor
+in (\ref{ex:tagctrl1_1}), the theme in (\ref{ex:tagctrl1_2}), and the recipient
+in (\ref{ex:tagctrl1_3}), it is always the actor which is dropped as the
+coreferential argument. Why the example sentences in (\ref{ex:tagctrl1}) use
+\fw{balak} `plan, intend' in its object-voice form is not explained. However,
+\citet{kroeger1991} mentions that \textcquote[37]{kroeger1991}{alternation in
+the voice category of the matrix verb and the case marking of the controller
+does not affect the control relation}. In other words: whether the actor in the
+matrix clause is the subject or not does not matter. \citet{kroeger1991} mostly
+gives examples of subject control, though (\ref{ex:tagctrl2}) is an interesting
+example of (`obligatory') object control:
+
+%\needspace{5\baselineskip}
+\pex\label{ex:tagctrl2}
+Tagalog \parencite[adapted from][93--94]{kroeger1991}:
+\a\label{ex:tagctrl2_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla in-utus-an ko si=Maria=ng \textup{[} halik-an {} si=Pedro \textup{]}
+		//
+	\glb \Pfv{}-order-\Dv{}%
+			\tikzmark{tagctrl2a_vb1}
+		$\underbrace{\text{\Fsg{}.\Gen{}}}_{\text{A}}$
+		$\underbrace{\text{\Nom=Maria=\Comp{}}%
+			\tikzmark{tagctrl2a_sb1}%
+		}_{\text{P}%
+			\tikzmark{tagctrl2a_pat1}%
+		}$
+		{}
+		kiss-\Dv{}%
+			\tikzmark{tagctrl2a_vb2}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{tagctrl2a_act2}%
+		}$
+		$\underbrace{\text{\Nom{}=Pedro}%
+			\tikzmark{tagctrl2a_sb2}%
+		}_{\text{P}}$
+		{} //
+	\glft `I ordered Maria to kiss Pedro.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pfv-order-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2a_vb1})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=Maria=comp"}, yshift=2.25ex]%
+		{pic cs:tagctrl2a_sb1});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl2a_pat1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"a"},yshift=-.75ex]%
+		{pic cs:tagctrl2a_act2});
+
+\draw [-latex]
+	([xshift=-.5*width{"kiss-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2a_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=Pedro"}, yshift=2.25ex]%
+		{pic cs:tagctrl2a_sb2});
+\end{tikzpicture}
+
+\a\label{ex:tagctrl2_2}\ljudge*%
+\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla in-utus-an ko si=Maria=ng \textup{[} halik-an {} ni=Pedro \textup{]}
+		//
+	\glb \Pfv{}-order-\Dv{}%
+			\tikzmark{tagctrl2b_vb1}
+		$\underbrace{\text{\Fsg{}.\Gen{}}}_{\text{A}}$
+		$\underbrace{\text{\Nom=Maria=\Comp{}}%
+			\tikzmark{tagctrl2b_sb1}%
+		}_{\text{P}%
+			\tikzmark{tagctrl2b_pat1}%
+		}$
+		{}
+		kiss-\Dv{}%
+			\tikzmark{tagctrl2b_vb2}
+		$\underbrace{%
+			\tikzmark{tagctrl2b_sb2}%
+		}_{\text{S/P}%
+			\tikzmark{tagctrl2b_pat2}
+		}$
+		$\underbrace{\text{\Gen{}=Pedro}}_{\text{A}%
+			\tikzmark{tagctrl2b_act2}%
+		}$
+		{} //
+	\glft `I ordered Maria to be kissed by Pedro.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pfv-order-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2b_vb1})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=Maria=comp"}, yshift=2.25ex]%
+		{pic cs:tagctrl2b_sb1});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl2b_pat1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+		{pic cs:tagctrl2b_pat2});
+
+\draw [-latex]
+	([xshift=-.5*width{"kiss-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2b_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagctrl2b_sb2});
+\end{tikzpicture}
+
+\a\label{ex:tagctrl2_3}
+\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla in-utus-an ko si=Maria=ng \textup{[} ma-halik-an {} ni=Pedro 
+		\textup{]} //
+	\glb \Pfv{}-order-\Dv{}%
+			\tikzmark{tagctrl2c_vb1}
+		$\underbrace{\text{\Fsg{}.\Gen{}}}_{\text{A}}$
+		$\underbrace{\text{\Nom=Maria=\Comp{}}%
+			\tikzmark{tagctrl2c_sb1}%
+		}_{\text{P}%
+			\tikzmark{tagctrl2c_pat1}%
+		}$
+		{}
+		\Nvol{}-kiss-\Dv{}%
+			\tikzmark{tagctrl2c_vb2}
+		$\underbrace{%
+			\tikzmark{tagctrl2c_sb2}%
+		}_{\text{S/P}%
+			\tikzmark{tagctrl2c_pat2}
+		}$
+		$\underbrace{\text{\Gen{}=Pedro}}_{\text{A}%
+			\tikzmark{tagctrl2c_act2}%
+		}$
+		{} //
+	\glft `I ordered Maria (to allow herself) to be kissed by Pedro.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pfv-order-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2c_vb1})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"nom=Maria=comp"}, yshift=2.25ex]%
+		{pic cs:tagctrl2c_sb1});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagctrl2c_pat1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+		{pic cs:tagctrl2c_pat2});
+
+\draw [-latex]
+	([xshift=-.5*width{"nvol-kiss-dv"}, yshift=2.25ex]%
+		{pic cs:tagctrl2c_vb2})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagctrl2c_sb2});
+\end{tikzpicture}
+
+\xe
+
+Regarding (\ref{ex:tagctrl2}ab), \citet{kroeger1991} explains that
+\textcquote[93]{kroeger1991}{when the complement verb appears in its volitive
+(unmarked) form, the controllee must be the Actor of the embedded clause}.
+Thus, \fw{Maria} cannot be the patient subject in (\ref{ex:tagctrl2_2}), since
+she is still the controllee. If the verb of the embedded clause is marked for
+non-volitive mood as in \ref{ex:tagctrl2_3}), however, the sentence becomes
+grammatical: \textcquote[94]{kroeger1991}{When the embedded verb is marked for
+non-volitive mood, the pattern is reversed: the controllee must be the subject,
+and not the Actor. Actor gaps cannot be controlled in non-volitive
+complements}. The difference between obligatory and non-obligatory control adds
+a further complication in acceptability, but these details do not need to
+preoccupy us here.
 
 ...
 
