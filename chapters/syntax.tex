@@ -6860,7 +6860,7 @@ get the following result:
 
 \pex[belowexskip=1.75em]\label{ex:engpivot}%
 %	English:
-	\a\label{ex:engpivot_1}
+	\a\label{ex:engpivot_1}%
 		$\underbrace{The\ cat}_{\text{A}}$ 
 		$hunts$ $\underbrace{the\ mouse}_{\text{P}}$.
 	
@@ -7942,9 +7942,9 @@ to-object raising. First of all, let us look at to-subject raising, however.
 \endgl
 
 \a\label{ex:ayrrais1_2}\begingl
-	\gla Surpye ang @ Pada$_i$ koronyam \_$_i$ guratanley. //
-	\glb surp-ye ang= Pada koron-yam {} guratan-ley //
-	\glc seem-\TsgF{} \Aarg{}= Pada know-\Ptcp{} {} answer-\PargI{} //
+	\gla Surpye ang @ Pada$_i$ \_$_i$ koronyam guratanley. //
+	\glb surp-ye ang= Pada {} koron-yam guratan-ley //
+	\glc seem-\TsgF{} \Aarg{}= Pada {} know-\Ptcp{} answer-\PargI{} //
 	\glft `Pada seems to know the answer.' //
 \endgl
 
@@ -8039,9 +8039,9 @@ raised into the subject position of the matrix clause in the (b) examples.
 \endgl
 
 \a\label{ex:ayrrais3_2}\ljudge*\begingl
-	\gla Surpara guratanreng$_i$ koronyam ang @ Pila \_$_i$. //
-	\glb surp-ara guratan-reng koron-yam ang= Pila {} //
-	\glc seem-\TsgI{} answer-\AargI{} know-\Ptcp{} \Aarg{}= Pila {} //
+	\gla Surpara guratanreng$_i$ ang @ Pila koronyam \_$_i$. //
+	\glb surp-ara guratan-reng ang= Pila koron-yam {} //
+	\glc seem-\TsgI{} answer-\AargI{} \Aarg{}= Pila know-\Ptcp{} {} //
 	\glft \textit{Intended:} `The answer seems to be known by Pila.' //
 \endgl
 
@@ -8057,9 +8057,9 @@ raised into the subject position of the matrix clause in the (b) examples.
 \endgl
 
 \a\label{ex:ayrrais4_2}\ljudge*\begingl
-	\gla Silvye ang @ Apitu$_i$ latayam ang @ Maran disaley \_$_i$. //
-	\glb silv-ye ang= Apitu lata-yam ang= Maran disa-ley //
-	\glc look-\TsgF{} \Aarg{}= Apitu sell-\Ptcp{} \Aarg{}= Maran 
+	\gla Silvye ang @ Apitu$_i$ ang @ Maran latayam disaley \_$_i$. //
+	\glb silv-ye ang= Apitu ang= Maran lata-yam disa-ley //
+	\glc look-\TsgF{} \Aarg{}= Apitu \Aarg{}= Maran sell-\Ptcp{} 
 		soap-\PargI{} //
 	\glft \textit{Intended:} `Apitu appears to have been sold the soap by
 		Maran.' //
@@ -8180,13 +8180,14 @@ thought to assign two thematic roles. In \textsc{gg} it is assumed that the
 subject of the lower clause is a silent \textsc{pro} element which is coindexed
 with the controller \citep[442--445, 451]{carnie2013}.
 
-\pex
-\a \fw{John$_i$ tries that John$_i$ gets a job}\\
+\pex\label{ex:engctrl1}
+\a Subject control:\medskip \\
+	\fw{John$_i$ tries that John$_i$ gets a job}\\
 	= \fw{John$_i$ tries \textsc{\upshape pro}$_i$ to \textup{t$_\textsc{pro}$}
 	get a job}
-\a \fw{The officer ordered Mary$_i$ that Mary$_i$ turn back}\\
-	= \fw{The officer ordered Mary$_i$ \textsc{\upshape pro}$_i$ to
-	\textup{t$_\textsc{pro}$} turn back}
+\a Object control:\medskip \\
+	\fw{The officer ordered Mary$_i$ that Mary$_i$ turn back}\\
+	= \fw{The officer ordered Mary$_i$ \textsc{\upshape pro}$_i$ to \textup{t$_\textsc{pro}$} turn back}
 \xe
 
 \citet{kroeger1991} refers to subject control as `Equi' and reports that
@@ -8539,16 +8540,16 @@ respective verb picks as the clause's topic for all example sentences.
 \end{tikzpicture}
 
 \a\label{ex:ayrctrl1_2}\begingl[aboveglftskip=1.75em]
-	\gla Linkaya {ang Maran} \textup{[} kondisayam {} agujas
+	\gla Linkaya {ang Maran} \textup{[} {} kondisayam agujas
 		\textup{]}. //
-	\glb linka-ya ang=Maran {} kondisa-yam {} agu-ye-as {} //
+	\glb linka-ya ang=Maran {} {} kondisa-yam agu-ye-as {} //
 	\glc try-\TsgM{}
 		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S}%
 			\tikzmark{ayrctrl1b_act1}
 		}$
 		{}
-		feed-\Ptcp{}
 		$\underbrace{}_{\text{S/A}\tikzmark{ayrctrl1b_act2}}$
+		feed-\Ptcp{}
 		$\underbrace{\text{chicken-\Pl{}-\Parg{}}}_{\text{P}}$
 		{}
 		//
@@ -8631,8 +8632,8 @@ way English has them.
 		}_{\text{P}}$
 		{}
 		//
-	\glft \textit{Literally:} `Maran tried that, as for the the chicken, he
-		feeds them.' //
+	\glft \textit{Literally:} `Maran tried that, as for the chicken, he feeds
+		them.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
