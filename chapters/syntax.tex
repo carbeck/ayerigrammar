@@ -8489,6 +8489,199 @@ a further complication in acceptability, but these details do not need to
 preoccupy us for the purpose of comparison to Ayeri, which lacks these
 distinctions.
 
+As previously with raising verbs, it is possible in Ayeri to combine a
+subordinating verb with a full complement clause (\ref{ex:ayrctrl1_1}), an
+embedded IP complement (\ref{ex:ayrctrl1_2}), or complete incorporation
+(\ref{ex:ayrctrl1_3}). In both (\ref{ex:ayrctrl1_1}) and (\ref{ex:ayrctrl1_2})
+cases, it is necessarily the actor which is coindexed, as the bottom arrow
+shows. In (\ref{ex:ayrctrl1_3}), the bottom arrow does not show coindexing, but
+the relation of verb agreement. The arrow on top, as before, shows what the
+respective verb picks as the clause's topic for all example sentences.
+
+\begin{figure}[htp]
+\pex\label{ex:ayrctrl1}
+\a\label{ex:ayrctrl1_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla Linkaya {ang Maran}, \textup{[} {ang kondisaya} agujas. 
+		\textup{]}. //
+	\glb linka-ya ang=Maran {} ang=kondisa=ya.Ø agu-ye-as {} //
+	\glc try-\TsgM{}
+		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S}%
+			\tikzmark{ayrctrl1a_act1}
+		}$
+		{}
+		\AgtT{}=feed=$\underbrace{\text{\smash{\TsgM{}}.\Top{}}%
+			\tikzmark{ayrctrl1a_vbtop}
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl1a_act2}
+		}$
+		$\underbrace{\text{chicken-\Pl{}-\Parg{}}}_{\text{P}}$
+		{}
+		//
+	\glft \textit{Literally:} `Maran tried that he feeds the chicken.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.55*width{"at=feed=3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl1a_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.45*width{"at=feed=3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl1a_vbtop});
+
+\draw [-latex]
+	([xshift=-.5*width{"s"}, yshift=-.75ex]%
+		{pic cs:ayrctrl1a_act1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl1a_act2});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl1_2}\begingl[aboveglftskip=1.75em]
+	\gla Linkaya {ang Maran} \textup{[} kondisayam {} agujas
+		\textup{]}. //
+	\glb linka-ya ang=Maran {} kondisa-yam {} agu-ye-as {} //
+	\glc try-\TsgM{}
+		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S}%
+			\tikzmark{ayrctrl1b_act1}
+		}$
+		{}
+		feed-\Ptcp{}
+		$\underbrace{}_{\text{S/A}\tikzmark{ayrctrl1b_act2}}$
+		$\underbrace{\text{chicken-\Pl{}-\Parg{}}}_{\text{P}}$
+		{}
+		//
+	\glft `Maran tried to feed the chicken.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"s"}, yshift=-.75ex]%
+		{pic cs:ayrctrl1b_act1})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl1b_act2});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl1_3}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang linkaya} kondisayam Maran agujas. //
+	\glb ang=linka-ya kondisa-yam Ø=Maran agu-ye-as //
+	\glc \AgtT{}=try-\TsgM{}%
+			\tikzmark{ayrctrl1c_vbtop}%
+			\tikzmark{ayrctrl1c_vbbot}
+		feed-\Ptcp{}
+		$\underbrace{\text{\Top{}=Maran}%
+			\tikzmark{ayrctrl1c_top}%
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl1c_act}%
+		}$
+		$\underbrace{\text{chicken-\Pl{}-\Parg{}}}_{\text{P}}$
+		//
+	\glft `Maran, he tried feeding the chicken.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=try-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl1c_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"top=Maran"}, yshift=2.25ex]%
+		{pic cs:ayrctrl1c_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+		{pic cs:ayrctrl1c_act})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"at=try-3sg.m"},yshift=-.75ex]%
+		{pic cs:ayrctrl1c_vbbot});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+As with raising verbs, the embedded and incorporated verbs appear in a
+non-finite form, the participle. For (\ref{ex:ayrctrl1_2}) the reason may be
+that there is no overt agent in the clause with which to agree, and agreement
+with the patient does not make sense here because the clause does not express a
+passive either. In (\ref{ex:ayrctrl1_3}) the reason may be that the main verb
+already carries person features. If the topic marking on the finite verb is
+altered as in (\ref{ex:ayrctrl2}), the meaning of the sentences does not change
+with regards to grammatical relations and voice, giving us yet more reason to
+assume that the agent is the grammatical subject, and that topic marking has no
+influence on these matters. Ayeri thus has actual subject-control verbs in the
+way English has them.
+
+\begin{figure}[htp]
+\pex\label{ex:ayrctrl2}
+\a\label{ex:ayrctrl2_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla Linkaya {ang Maran}, \textup{[} {le kondisayāng} aguye. 
+		\textup{]}. //
+	\glb linka-ya ang=Maran {} le=kondisa=yāng agu-ye-Ø {} //
+	\glc try-\TsgM{}
+		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S}%
+			\tikzmark{ayrctrl2a_act1}
+		}$
+		{}
+		\PatT{}=feed=$\underbrace{\text{\smash{\TsgM{}}.\Aarg{}}%
+			\tikzmark{ayrctrl2a_vbtop}
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl2a_act2}
+		}$
+		$\underbrace{\text{chicken-\Pl{}-\Top{}}%
+			\tikzmark{ayrctrl2a_top}
+		}_{\text{P}}$
+		{}
+		//
+	\glft \textit{Literally:} `Maran tried that, as for the the chicken, he
+		feeds them.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=feed=3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl2a_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"chicken-pl-top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl2a_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"s"}, yshift=-.75ex]%
+		{pic cs:ayrctrl2a_act1})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl2a_act2});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl2_3}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Le linkaya} kondisayam {ang Maran} aguye. //
+	\glb le=linka-ya kondisa-yam ang=Maran agu-ye-Ø //
+	\glc \PatT{}=try-\TsgM{}%
+			\tikzmark{ayrctrl2c_vbtop}%
+			\tikzmark{ayrctrl2c_vbbot}
+		feed-\Ptcp{}
+		$\underbrace{\text{\Top{}=Maran}}_{\text{S/A}%
+			\tikzmark{ayrctrl2c_act}%
+		}$
+		$\underbrace{\text{chicken-\Pl{}-\Parg{}}%
+			\tikzmark{ayrctrl2c_top}%
+		}_{\text{P}}$
+		//
+	\glft `The chicken, Maran tried feeding them.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=try-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl2c_vbtop})
+	|- ++ (north:.75em) -|
+	([xshift=-.5*width{"chicken-pl-p"}, yshift=2.25ex]%
+		{pic cs:ayrctrl2c_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+		{pic cs:ayrctrl2c_act})
+	|- ++ (south:.75em) -|
+	([xshift=-.5*width{"pt=try-3sg.m"},yshift=-.75ex]%
+		{pic cs:ayrctrl2c_vbbot});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
 ...
 
 \subsubsection{Reflexive binding}
