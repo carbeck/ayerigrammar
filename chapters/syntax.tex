@@ -5801,7 +5801,7 @@ original, and that this is maybe not quite accurate for at least a few
 languages in the sample, for instance, German. The unmarked word order of
 declarative statements in German main clauses is SVO with the finite verb
 mandatorily occupying the second position (V2). This position is commonly
-analyzed as \xhead{C} in German, however, since the infinite content verb
+analyzed as \xhead{C} in German, however, since the non-finite content verb
 \xhead{V} appears at the end of the clause when the \xhead{C} position is
 occupied by an auxiliary or a modal (compare, for instance, \cite[375--379,
 447--450]{bresnan2016}, and \cite{fortmann2006}); subclauses are verb-last. It
@@ -6060,7 +6060,7 @@ appears in \xbar{I}, which is a sister of S. S, in turn, is a small clause
 containing the arguments of the verb. In the cases of Irish and Welsh, however,
 there is a VP sister of the subject NP which itself does not have a head, but
 contains the object NP as a modifier. In the case of Tagalog, S is
-non-configurational, that is, while XP may contain an infinite verb, the
+non-configurational, that is, while XP may contain a non-finite verb, the
 subject and object NPs are on equal footing.
 
 \citet[129--138]{bresnan2016} informs that the phenomenon of the verb ending up
@@ -6128,27 +6128,31 @@ Tagalog concept of a \enquote{trigger}}. By his definition, this entails that
 \blockcquote{cowan1995}{each clause contains one noun phrase which is not
 marked for case, but rather has a distinct marking called the \enquote{trigger
 marker}. [...] The verb carries a marking (which of course looks nothing like
-the noun case markers) that tells the true case of the trigger. For example,
-the English sentence \enquote{I gave the dog the bone} can come out:
-
-\begin{enumerate}[nosep, label={\arabic*)}]
-\item I-\textsc{trigger} gave-\textsc{a.t.} dog-\textsc{dative}
-	bone-\textsc{patient}
-\item I-\textsc{actor} gave-\textsc{p.t.} dog-\textsc{dative} 
-	bone-\textsc{trigger}
-\item I-\textsc{actor} gave-\textsc{d.t.} dog-\textsc{trigger} 
-	bone-\textsc{patient}
-\end{enumerate}
-
+the noun case markers) that tells the true case of the trigger.
+% For example,
+% the English sentence \enquote{I gave the dog the bone} can come out:
+% 
+% \begin{enumerate}[nosep, label={\arabic*)}]
+% \item I-\textsc{trigger} gave-\textsc{a.t.} dog-\textsc{dative}
+% 	bone-\textsc{patient}
+% \item I-\textsc{actor} gave-\textsc{p.t.} dog-\textsc{dative} 
+% 	bone-\textsc{trigger}
+% \item I-\textsc{actor} gave-\textsc{d.t.} dog-\textsc{trigger} 
+% 	bone-\textsc{patient}
+% \end{enumerate}
+%
+[...]
+%
 This involves changing the name of \enquote{nominative} and
 \enquote{accusative} to \enquote{actor} and \enquote{patent} \sic{}, since
 there is no longer a \enquote{subject} or \enquote{object} as such. Of course,
-word order is free, so:
-
-\begin{enumerate}[start=4, nosep, label={\arabic*)}]
-\item dog-\textsc{dative} gave-\textsc{p.t.} I-\textsc{actor} 
-	bone-\textsc{trigger}
-\end{enumerate}
+word order is free
+% , so:
+% 
+% \begin{enumerate}[start=4, nosep, label={\arabic*)}]
+% \item dog-\textsc{dative} gave-\textsc{p.t.} I-\textsc{actor} 
+% 	bone-\textsc{trigger}
+% \end{enumerate}
 }
 
 He also notes that \textcquote{cowan1995}{Usually the trigger is definite
@@ -6958,33 +6962,18 @@ basically an object, not demoted to an adverbial as in English
 Tagalog (\cite[adapted from][31]{kroeger1991}, from 
 	\cite[151--152]{ramoscena1990}):
 \a\label{ex:tagpivot_1}%
-	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
-		\gla tinanong ni=Derek si=Marvin, bago umalis {} //
-		\glb \Pfv{}-ask-\Ov{}\tikzmark{tagpivot1_vc}
-			$\underbrace{\text{\Gen{}=Derek}}_{\text{A}}$
-			$\underbrace{\text{\Nom{}=Marvin}\tikzmark{tagpivot1_anta}}_%
-				{\text{P}\tikzmark{tagpivot1_antb}}$
-			before \Pfv{}.\Av{}-leave\tikzmark{tagpivot1_vc2}
-			$\underbrace{ \tikzmark{tagpivot1_anta2}}_%
-				{\text{S}\tikzmark{tagpivot1_drop}}$
-			//
-		\glft `Derek asked Marvin before [Marvin] left.' //
-	\endgl
-
-\a\label{ex:tagpivot_2}%
-	\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
-		\gla nagtanong si=Derek kay=Marvin, bago umalis {} //
-		\glb \Pfv{}.\Av{}-ask\tikzmark{tagpivot2_vc}
-			$\underbrace{\text{\Nom{}=Derek}\tikzmark{tagpivot2_anta}}_%
-				{\text{A}\tikzmark{tagpivot2_antb}}$
-			$\underbrace{\text{\Dat{}=Marvin}}_{\text{P}}$
-			before \Pfv{}.\Av{}-leave\tikzmark{tagpivot2_vc2}
-			$\underbrace{ \tikzmark{tagpivot2_anta2}}_%
-				{\text{S}\tikzmark{tagpivot2_drop}}$
-			//
-		\glft `Derek asked Marvin before [Derek] left.' //
-	\endgl
-
+\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla tinanong ni=Derek si=Marvin, bago umalis {} //
+	\glb \Pfv{}-ask-\Ov{}\tikzmark{tagpivot1_vc}
+		$\underbrace{\text{\Gen{}=Derek}}_{\text{A}}$
+		$\underbrace{\text{\Nom{}=Marvin}\tikzmark{tagpivot1_anta}}_%
+			{\text{P}\tikzmark{tagpivot1_antb}}$
+		before \Pfv{}.\Av{}-leave\tikzmark{tagpivot1_vc2}
+		$\underbrace{ \tikzmark{tagpivot1_anta2}}_%
+			{\text{S}\tikzmark{tagpivot1_drop}}$
+		//
+	\glft `Derek asked Marvin before [Marvin] left.' //
+\endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex] 
 	([xshift=-.5*width{"pfv-ask-ov"},yshift=+2.25ex]{pic cs:tagpivot1_vc})
@@ -7000,7 +6989,22 @@ Tagalog (\cite[adapted from][31]{kroeger1991}, from
 	([xshift=-.5*width{"pfv.av-leave"},yshift=+2.25ex]{pic cs:tagpivot1_vc2})
 	|- ++ (north:.75em) -|
 	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot1_anta2});
+\end{tikzpicture}
 
+\a\label{ex:tagpivot_2}%
+\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla nagtanong si=Derek kay=Marvin, bago umalis {} //
+	\glb \Pfv{}.\Av{}-ask\tikzmark{tagpivot2_vc}
+		$\underbrace{\text{\Nom{}=Derek}\tikzmark{tagpivot2_anta}}_%
+			{\text{A}\tikzmark{tagpivot2_antb}}$
+		$\underbrace{\text{\Dat{}=Marvin}}_{\text{P}}$
+		before \Pfv{}.\Av{}-leave\tikzmark{tagpivot2_vc2}
+		$\underbrace{ \tikzmark{tagpivot2_anta2}}_%
+			{\text{S}\tikzmark{tagpivot2_drop}}$
+		//
+	\glft `Derek asked Marvin before [Derek] left.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
 \draw [-latex] 
 	([xshift=-.5*width{"pfv.av-ask"},yshift=+2.25ex]{pic cs:tagpivot2_vc})
 	|- ++ (north:.75em) -|
@@ -7016,6 +7020,7 @@ Tagalog (\cite[adapted from][31]{kroeger1991}, from
 	|- ++ (north:.75em) -|
 	([xshift=0ex, yshift=2.25ex]{pic cs:tagpivot2_anta2});
 \end{tikzpicture}
+
 \xe
 
 What can be observed in Tagalog, thus, is that in (\ref{ex:tagpivot_1}), the
@@ -7562,7 +7567,7 @@ the relative clause. Thus, (\ref{ex:tagrel_1}) is grammatical, while
 (\ref{ex:tagrel_2}) is not.
 
 \pex\label{ex:tagrel}%
-Tagalog (\cite[24]{kroeger1991}, from \citep[141--142]{foleyvanvalin1984}):
+Tagalog (\cite[24]{kroeger1991}, from \citet[141--142]{foleyvanvalin1984}):
 \a\label{ex:tagrel_1}\begingl
 	\gla bata=ng b-in-igy-an ng=lalake ng=isda //
 	\glb child=\Lnk{} \Pfv{}-give-\Dv{} \Gen{}=man \Gen{}=fish //
@@ -8033,7 +8038,7 @@ raised into the subject position of the matrix clause in the (b) examples.
 \a\label{ex:ayrrais3_2}\ljudge*\begingl
 	\gla Surpara guratanreng$_i$ koronyam ang @ Pila \_$_i$. //
 	\glb surp-ara guratan-reng koron-yam ang= Pila {} //
-	\glc seem-\TsgI{} know-\AargI{} know-\Ptcp{} \Aarg{}= Pila {} //
+	\glc seem-\TsgI{} answer-\AargI{} know-\Ptcp{} \Aarg{}= Pila {} //
 	\glft \textit{Intended:} `The answer seems to be known by Pila.' //
 \endgl
 
@@ -8069,8 +8074,9 @@ evidence in favor of an interpretation of the actor NP as the subject, it is
 possibly the fact that the subordinate verb appears in a non-finite form when
 raising occurs that prevents some of the flexibility of Tagalog observed above.
 Even if Ayeri were to work like Tagalog large and by, since finiteness in Ayeri
-also includes topic marking, it would not be possible for the infinite verb to
-mark the assignment of grammatical roles to its complements, overt or covert.
+also includes topic marking, it would not be possible for the non-finite verb
+to mark the assignment of grammatical roles to its complements, overt or
+covert.
 
 The examples (\ref{ex:tagrais1}) and (\ref{ex:tagrais2}) from Tagalog quoted
 initially both feature to-object raising: the subject of the complement clause
@@ -8191,8 +8197,9 @@ case}. This is the case, for instance, with \fw{himukin} `persuade' and
 \fw{magpilit} `insist on'. Subordinate verbs marked for non-volitive
 mood form an exception as well \citep[36--37, also 96--97]{kroeger1991}.
 \citet{kroeger1991} illustrates the main pattern of control in Tagalog with the
-following set of example sentences:
+following set of example sentences in (\ref{ex:tagctrl1}).
 
+\begin{figure}[htp]
 \pex\label{ex:tagctrl1}
 Tagalog \citep[adapted from][37]{kroeger1991}:
 \a\label{ex:tagctrl1_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
@@ -8301,6 +8308,7 @@ Tagalog \citep[adapted from][37]{kroeger1991}:
 \end{tikzpicture}
 
 \xe
+\end{figure}
 
 While the nominative argument of the subordinate verb changes between the actor
 in (\ref{ex:tagctrl1_1}), the theme in (\ref{ex:tagctrl1_2}), and the recipient
@@ -8315,9 +8323,9 @@ of subject-control verbs the control relationship always finds its origin in
 the actor argument, although there are a few exceptions, as mentioned above.
 The set in (\ref{ex:tagctrl2}) presents an interesting example of
 (`obligatory') control based on the patient/theme argument in Tagalog's
-equivalent of object-control verbs:
+equivalent of object-control verbs.
 
-\needspace{5\baselineskip}
+\begin{figure}[htp]
 \pex\label{ex:tagctrl2}
 Tagalog \parencite[adapted from][93--94]{kroeger1991}:
 \a\label{ex:tagctrl2_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
@@ -8465,6 +8473,7 @@ Tagalog \parencite[adapted from][93--94]{kroeger1991}:
 \end{tikzpicture}
 
 \xe
+\end{figure}
 
 Regarding (\ref{ex:tagctrl2}ab), \citet{kroeger1991} explains that
 \textcquote[93]{kroeger1991}{when the complement verb appears in its volitive
