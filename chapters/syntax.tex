@@ -8505,7 +8505,7 @@ respective verb picks as the clause's topic for all example sentences.
 \begin{figure}[htp]
 \pex\label{ex:ayrctrl1}
 \a\label{ex:ayrctrl1_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla Linkaya {ang Maran}, \textup{[} {ang kondisaya} agujas. 
+	\gla Linkaya {ang Maran}, \textup{[\tsub{CP}} {ang kondisaya} agujas. 
 		\textup{]}. //
 	\glb linka-ya ang=Maran {} ang=kondisa=ya.Ø agu-ye-as {} //
 	\glc try-\TsgM{}
@@ -8540,7 +8540,7 @@ respective verb picks as the clause's topic for all example sentences.
 \end{tikzpicture}
 
 \a\label{ex:ayrctrl1_2}\begingl[aboveglftskip=1.75em]
-	\gla Linkaya {ang Maran} \textup{[} {} kondisayam agujas
+	\gla Linkaya {ang Maran} \textup{[\tsub{S}} {} kondisayam agujas
 		\textup{]}. //
 	\glb linka-ya ang=Maran {} {} kondisa-yam agu-ye-as {} //
 	\glc try-\TsgM{}
@@ -8614,7 +8614,7 @@ way English has them.
 \begin{figure}[htp]
 \pex\label{ex:ayrctrl2}
 \a\label{ex:ayrctrl2_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla Linkaya {ang Maran}, \textup{[} {le kondisayāng} aguye. 
+	\gla Linkaya {ang Maran}, \textup{[\tsub{CP}} {le kondisayāng} aguye. 
 		\textup{]}. //
 	\glb linka-ya ang=Maran {} le=kondisa=yāng agu-ye-Ø {} //
 	\glc try-\TsgM{}
@@ -8686,6 +8686,229 @@ way English has them.
 \xe
 \end{figure}
 
+In object-control constructions, the object of the matrix clause's verb is an
+actual argument of it, as shown in (\ref{ex:engctrl2}). This argument becomes
+the subject of the embedded clause, and there is no change in the meaning of
+the verb between both versions of sentences. We have seen above that Ayeri does
+not allow to-object raising, since it is not possible to assign patient case to
+an external agent because Ayeri's case marking is not purely based on
+grammatical functions, but there is still also some semantic motivation. Ayeri
+does, however, allow object control, so it seems to be possible at least to
+implicitly convert the matrix clause's patient or theme to the agent of the
+embedded clause, while the opposite is apparently not possible. Whether
+syntactic precedence or some kind of accessibility hierarchy is involved here
+still needs to be investigated.
+
+\pex\label{ex:engctrl2}
+\a \fw{John asked [Mary to give Peter the book]}\\
+	= \fw{John asked Mary}
+\a \fw{The teacher instructs [the students to calculate parables]}\\
+	= \fw{The teacher instructs the students}
+\a \fw{I persuaded [my friend to come along]}\\
+	= \fw{I persuaded my friend}
+\xe
+
+The example sentences in (\ref{ex:ayrctrl3}) follow the format of those above.
+Again, it is generally possible to use a complement clause 
+(\ref{ex:ayrctrl3_1}) as well as complementing the verb in the matrix clause
+with a non-finite clause with object control (\ref{ex:ayrctrl3_2}). However,
+the incorporation strategy is not possible here because this would cause a
+doubling of case roles (\ref{ex:ayrctrl3_3}). As we will see below, however,
+this is not an issue for intransitive complement clauses.
+
+\afterpage{%
+\clearpage%
+\begin{landscape}\centering%
+\mbox{}\vfill%
+\pex\label{ex:ayrctrl3}
+\a\label{ex:ayrctrl3_1}\begingl%
+	[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa pinyaya} {ang Amān} Kagan, \textup{[\tsub{CP}} {ang ilya} kasuley
+		{yam Pada} \textup{]}. //
+	\glb sa=pinya-ya ang=Amān Ø=Kagan {} ang=ilya kasu-ley yam=Pada {} //
+	\glc \PatT{}=ask-\TsgM{}%
+			\tikzmark{ayrctrl3a_vb1top}%
+			\tikzmark{ayrctrl3a_vb1bot}
+		$\underbrace{\text{\Aarg{}=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl3a_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=\smash{Kagan}}%
+			\tikzmark{ayrctrl3a_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl3a_pat1}%
+		}$
+		{}
+		\AgtT{}=give=$\underbrace{\text{\smash{\TsgM{}}.\Top{}}}_{\text{S/A}%
+			\tikzmark{ayrctrl3a_sb2}%
+		}$%
+			\tikzmark{ayrctrl3a_vb2top}
+		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
+		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		{}
+		//
+	\glft `Kagan, Amān asks him that he give Pada the basket.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3a_vb1top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3a_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3a_pat1})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl3a_sb2});
+
+\draw [-latex]
+	([xshift=-.55*width{"at=give-3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3a_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.45*width{"at=give-3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3a_vb2top});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl3_2}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa pinyaya} {ang Amān} Kagan \textup{[\tsub{S}} {} ilyam kasuley {yam
+		Pada} \textup{]}. //
+	\glb sa=pinya-ya ang=Amān Ø=Kagan {} {} il-yam kasu-ley yam=Pada //
+	\glc \PatT{}=ask-\TsgM{}%
+			\tikzmark{ayrctrl3b_vbtop}%
+			\tikzmark{ayrctrl3b_vbbot}
+		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl3b_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=\smash{Kagan}}%
+			\tikzmark{ayrctrl3b_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl3b_pat1}%
+		}$
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl3b_sb2}%
+		}$
+		give-\Ptcp{}
+		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
+		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		{}
+		//
+	\glft `Kagan, Amān asks him to give Pada the basket.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3b_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3b_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3b_pat1})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl3b_sb2});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl3_3}\ljudge*%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa pinyaya} ilyam {ang Amān} Kagan kasuley {yam Pada}. //
+	\glb sa=pinya-ya il-yam ang=Amān Ø=Kagan kasu-ley yam=Pada //
+	\glc \PatT{}=ask-\TsgM{}%
+			\tikzmark{ayrctrl3c_vbtop}%
+			\tikzmark{ayrctrl3c_vbbot}
+		give-\Ptcp{}
+		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl3c_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=\smash{Kagan}}%
+			\tikzmark{ayrctrl3c_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl3c_pat1}%
+		}$
+		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
+		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		//
+	\glft \textit{Literally:} `Kagan, Amān asks giving him Pila the basket.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3c_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3c_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3c_sb1})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"pt=as-3sg.m"},yshift=-.75ex]%
+		{pic cs:ayrctrl3c_vbbot});
+\end{tikzpicture}
+
+\xe%
+\mbox{}\vfill%
+\end{landscape}%
+\clearpage%
+}
+
+...
+
+\ex\label{ex:ayrctrl4}\ljudge\ques%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa pinyaya} \textup{[\tsub{VP}} {} ilyam kasuley {yam Pada}
+		\textup{]} {ang Amān} Kagan //
+	\glb sa=pinya-ya {} {} il-yam kasu-ley yam=Pada {} ang=Amān Ø=Kagan //
+	\glc \PatT{}=ask-\TsgM{}%
+			\tikzmark{ayrctrl4_vbtop}%
+			\tikzmark{ayrctrl4_vbbot}
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl4_sb2}%
+		}$
+		give-\Ptcp{}
+		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
+		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		{}
+		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl4_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=\smash{Kagan}}%
+			\tikzmark{ayrctrl4_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl4_pat1}%
+		}$
+		//
+	\glft \textit{Literally:} `Kagan, Amān asks to give Pila the basket 
+		him.' //
+\endgl
+\xe
+
+...
+
+\ex\label{ex:ayrctrl5}%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang nosaya} nimpyam Amān {sa Pada}. //
+	\glb ang=nosa-ya nimp-yam Ø=Amān sa=Pada //
+	\glc \AgtT{}=order-\TsgM{}%
+			\tikzmark{ayrctrl5_vbtop}%
+			\tikzmark{ayrctrl5_vbbot}
+		run-\Ptcp{}
+		$\underbrace{\text{\Top{}=Amān}%
+			\tikzmark{ayrctrl5_top}%
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl5_sb}%
+		}$
+		$\underbrace{\text{\Parg{}=Pada}}_{\text{P}}$
+		//
+	\glft `Amān, he orders Pada to run.' //
+\endgl
+\xe
+
 ...
 
 \subsubsection{Reflexive binding}
@@ -8698,108 +8921,108 @@ way English has them.
 % 
 % ...
 
-\begin{itemize}
-	\item \citet[1674--1676]{schachter2015}:
-	\begin{itemize}
-		\item The relation the verb marks should be called `trigger', as it is
-		inappropriate to identify it as the syntactic subject
-		\citep[1674]{schachter2015}.
+% \begin{itemize}
+% 	\item \citet[1674--1676]{schachter2015}:
+% 	\begin{itemize}
+% 		\item The relation the verb marks should be called `trigger', as it is
+% 		inappropriate to identify it as the syntactic subject
+% 		\citep[1674]{schachter2015}.
 
-		\item Trigger system is not a voice system; calling it that disregards
-		differences between familiar voice systems and Tagalog's strategy
-		\citep[1674]{schachter2015}.
+% 		\item Trigger system is not a voice system; calling it that disregards
+% 		differences between familiar voice systems and Tagalog's strategy
+% 		\citep[1674]{schachter2015}.
 
-		\item Properties commonly associated with the syntactic subject are
-		divided bewteen actor and trigger: actor is the addressee of
-		imperatives; actor controls reference of reflexive pronoun; only
-		triggers and ``certain constituents of triggers'' may be relativized;
-		only triggers can launch floated quantifiers; only actor \emph{or}
-		trigger may be deleted in so-called Equi-NP constructions (i.e. control
-		constructions, where the matrix verb passes either its S [= subject
-		control] or its O [= object control] down as the S of the subordinate
-		verb) \citep[1675]{schachter2015}.
-	\end{itemize}
+% 		\item Properties commonly associated with the syntactic subject are
+% 		divided bewteen actor and trigger: actor is the addressee of
+% 		imperatives; actor controls reference of reflexive pronoun; only
+% 		triggers and ``certain constituents of triggers'' may be relativized;
+% 		only triggers can launch floated quantifiers; only actor \emph{or}
+% 		trigger may be deleted in so-called Equi-NP constructions (i.e. control
+% 		constructions, where the matrix verb passes either its S [= subject
+% 		control] or its O [= object control] down as the S of the subordinate
+% 		verb) \citep[1675]{schachter2015}.
+% 	\end{itemize}
 
-	\item \citet[19--52]{kroeger1991}:
-	\begin{itemize}
-		\item Floated quantifiers always modify \Nom{} argument as the
-		highest term (in reference to \cite[501]{schachter1976}; presumably
-		also referring to \Lfg{}'s functional hierarchy, cf.
-		\cite[230--231]{bresnan2016}?) \citep[23]{kroeger1991}.
+% 	\item \citet[19--52]{kroeger1991}:
+% 	\begin{itemize}
+% 		\item Floated quantifiers always modify \Nom{} argument as the
+% 		highest term (in reference to \cite[501]{schachter1976}; presumably
+% 		also referring to \Lfg{}'s functional hierarchy, cf.
+% 		\cite[230--231]{bresnan2016}?) \citep[23]{kroeger1991}.
 
-		\item Only \Nom{} can be relativized, gap in relative clause always
-		corresponds to the argument role signalled by the verb; relativized NP
-		may be of any role \citep[23--24]{kroeger1991}.
+% 		\item Only \Nom{} can be relativized, gap in relative clause always
+% 		corresponds to the argument role signalled by the verb; relativized NP
+% 		may be of any role \citep[23--24]{kroeger1991}.
 
-		\item What number agreement on the verb there is, is with the \Nom{}
-		argument, independent of whether it is the actor or not
-		\citep[24--25]{kroeger1991}.
+% 		\item What number agreement on the verb there is, is with the \Nom{}
+% 		argument, independent of whether it is the actor or not
+% 		\citep[24--25]{kroeger1991}.
 
-		\item Raising verbs promote the \Nom{} argument of the complement
-		clause, which is not necessarily the actor (exs. 13, 14) which is
-		especially clear with clitic pronouns \citep[26]{kroeger1991}.
-		Non-\Nom{} actors may be raised only when a resumptive pronoun appears
-		in the complement clause \citep[28]{kroeger1991}. No NP in the
-		complement clause may be marked for \Nom{} and the raised argument in
-		the main clause must be marked \Nom{} \cite[29]{kroeger1991}.
+% 		\item Raising verbs promote the \Nom{} argument of the complement
+% 		clause, which is not necessarily the actor (exs. 13, 14) which is
+% 		especially clear with clitic pronouns \citep[26]{kroeger1991}.
+% 		Non-\Nom{} actors may be raised only when a resumptive pronoun appears
+% 		in the complement clause \citep[28]{kroeger1991}. No NP in the
+% 		complement clause may be marked for \Nom{} and the raised argument in
+% 		the main clause must be marked \Nom{} \cite[29]{kroeger1991}.
 
-		\item Post-verbal secondary predicates must refer to \Nom{} if
-		occurring in post-verbal position; the \Nom{} argument is not
-		necessarily the actor \citep[29--30]{kroeger1991}.
+% 		\item Post-verbal secondary predicates must refer to \Nom{} if
+% 		occurring in post-verbal position; the \Nom{} argument is not
+% 		necessarily the actor \citep[29--30]{kroeger1991}.
 
-		\item Dropped \Nom{} arguments in subclauses are always interpreted as
-		referring to the coreferential \Nom{} argument in the main clause
-		\citep[30--31]{kroeger1991}. → relevance?
+% 		\item Dropped \Nom{} arguments in subclauses are always interpreted as
+% 		referring to the coreferential \Nom{} argument in the main clause
+% 		\citep[30--31]{kroeger1991}. → relevance?
 
-		\item Only genitive attributes of \Nom{} NPs can be topicalized
-		\citep[31]{kroeger1991}. → relevance?
+% 		\item Only genitive attributes of \Nom{} NPs can be topicalized
+% 		\citep[31]{kroeger1991}. → relevance?
 
-		\item Only \Nom{} arguments can be deleted/omitted in `conjunction
-		reduction', and never non-\Nom{} actors or non-\Nom{} ``direct
-		objects''; this is different from both pro-drop and right node raising
-		\citep[32-34]{kroeger1991}.
+% 		\item Only \Nom{} arguments can be deleted/omitted in `conjunction
+% 		reduction', and never non-\Nom{} actors or non-\Nom{} ``direct
+% 		objects''; this is different from both pro-drop and right node raising
+% 		\citep[32-34]{kroeger1991}.
 
-		\item Control verbs typically target the subject of their complement
-		clause, and both \Nom{} and actor arguments are eligible for this
-		purpose under certain circumstances, i.e. the controllee subject of a
-		transitive complement clause is not necessarily the actor
-		\citep[36--38]{kroeger1991}.
+% 		\item Control verbs typically target the subject of their complement
+% 		clause, and both \Nom{} and actor arguments are eligible for this
+% 		purpose under certain circumstances, i.e. the controllee subject of a
+% 		transitive complement clause is not necessarily the actor
+% 		\citep[36--38]{kroeger1991}.
 
-		\item Non-\Nom{} actors are not demoted to oblique status (`chômeurs')
-		like in passives, i.e. they keep their status as terms and are thus
-		treated as objects \citep[38\psqq]{kroeger1991}. → relevance?
+% 		\item Non-\Nom{} actors are not demoted to oblique status (`chômeurs')
+% 		like in passives, i.e. they keep their status as terms and are thus
+% 		treated as objects \citep[38\psqq]{kroeger1991}. → relevance?
 
-		\item Existential, meteorological, and exclamatory sentences, and
-		experiencer verbs with indefinite objects lack \Nom{} arguments are
-		grammatical nonetheless. Existential and weather verbs are
-		cross-linguistically very common contexts for subjectlessness
-		\citep[46--49]{kroeger1991}. Applicability of an inversion construction
-		only applies to subjects, but can also apply to the single nominal
-		non-\Nom{} agent argument of exclamatory sentences involving
-		predicative adjectives \cite[50]{kroeger1991}.
+% 		\item Existential, meteorological, and exclamatory sentences, and
+% 		experiencer verbs with indefinite objects lack \Nom{} arguments are
+% 		grammatical nonetheless. Existential and weather verbs are
+% 		cross-linguistically very common contexts for subjectlessness
+% 		\citep[46--49]{kroeger1991}. Applicability of an inversion construction
+% 		only applies to subjects, but can also apply to the single nominal
+% 		non-\Nom{} agent argument of exclamatory sentences involving
+% 		predicative adjectives \cite[50]{kroeger1991}.
 
-		\item Statistically, patients appear to be preferred subjects if
-		definite, unless a syntactic operation is applied to another argument
-		which requires that that relation be the subject; object-voice marked
-		verbs are also less marked than active-voice ones
-		\citep[53]{kroeger1991}.
+% 		\item Statistically, patients appear to be preferred subjects if
+% 		definite, unless a syntactic operation is applied to another argument
+% 		which requires that that relation be the subject; object-voice marked
+% 		verbs are also less marked than active-voice ones
+% 		\citep[53]{kroeger1991}.
 
-		\item Tagalog is thus basically an ergative language, but the termhood
-		of actors and their semantic and pragmatic prominence creates the
-		ambiguity in subjecthood mentioned above \citep[54]{kroeger1991}.
+% 		\item Tagalog is thus basically an ergative language, but the termhood
+% 		of actors and their semantic and pragmatic prominence creates the
+% 		ambiguity in subjecthood mentioned above \citep[54]{kroeger1991}.
 
-		\item Statistics reveal that the \Nom{} argument is not the topic and
-		not the focus either; those NPs marked for \Nom{} are not especially
-		salient for topicality \citep[56\psqq]{kroeger1991}.
+% 		\item Statistics reveal that the \Nom{} argument is not the topic and
+% 		not the focus either; those NPs marked for \Nom{} are not especially
+% 		salient for topicality \citep[56\psqq]{kroeger1991}.
 
-		\item \Nom{} NP can also bear pragmatic focus (e.g. in
-		\fw{wh}-questions), which would be impossible if it were a
-		grammaticalized topic \citep[60\psqq]{kroeger1991}. \fw{ay}-inversion
-		patterns much better with notions of pragmatic topichood \citep[63]
-		{kroeger1991}.
-	\end{itemize}
+% 		\item \Nom{} NP can also bear pragmatic focus (e.g. in
+% 		\fw{wh}-questions), which would be impossible if it were a
+% 		grammaticalized topic \citep[60\psqq]{kroeger1991}. \fw{ay}-inversion
+% 		patterns much better with notions of pragmatic topichood \citep[63]
+% 		{kroeger1991}.
+% 	\end{itemize}
 
-\end{itemize}
+% \end{itemize}
 
 \subsection{Establishing the constituent structure}
 \label{subsec:verbcstruct}
