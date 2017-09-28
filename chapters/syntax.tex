@@ -8564,7 +8564,7 @@ respective verb picks as the clause's topic for all example sentences.
 		{pic cs:ayrctrl1b_act2});
 \end{tikzpicture}
 
-\a\label{ex:ayrctrl1_3}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+\a\label{ex:ayrctrl1_3}\begingl[aboveglcskip=1.5em,] % aboveglftskip=1.75em]
 	\gla {Ang linkaya} kondisayam Maran agujas. //
 	\glb ang=linka-ya kondisa-yam Ø=Maran agu-ye-as //
 	\glc \AgtT{}=try-\TsgM{}%
@@ -8588,12 +8588,12 @@ respective verb picks as the clause's topic for all example sentences.
 	([xshift=-.5*width{"top=Maran"}, yshift=2.25ex]%
 		{pic cs:ayrctrl1c_top});
 
-\draw [-latex]
-	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
-		{pic cs:ayrctrl1c_act})
-	|- ++ (south:.75em) -|
-	([xshift=-.5*width{"at=try-3sg.m"},yshift=-.75ex]%
-		{pic cs:ayrctrl1c_vbbot});
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl1c_act})
+% 	|- ++ (south:.75em) -|
+% 	([xshift=-.5*width{"at=try-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl1c_vbbot});
 \end{tikzpicture}
 
 \xe
@@ -8651,7 +8651,7 @@ way English has them.
 		{pic cs:ayrctrl2a_act2});
 \end{tikzpicture}
 
-\a\label{ex:ayrctrl2_3}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+\a\label{ex:ayrctrl2_3}\begingl[aboveglcskip=1.5em,] % aboveglftskip=1.75em]
 	\gla {Le linkaya} kondisayam {ang Maran} aguye. //
 	\glb le=linka-ya kondisa-yam ang=Maran agu-ye-Ø //
 	\glc \PatT{}=try-\TsgM{}%
@@ -8675,12 +8675,12 @@ way English has them.
 	([xshift=-.5*width{"chicken-pl-p"}, yshift=2.25ex]%
 		{pic cs:ayrctrl2c_top});
 
-\draw [-latex]
-	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
-		{pic cs:ayrctrl2c_act})
-	|- ++ (south:.75em) -|
-	([xshift=-.5*width{"pt=try-3sg.m"},yshift=-.75ex]%
-		{pic cs:ayrctrl2c_vbbot});
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl2c_act})
+% 	|- ++ (south:.75em) -|
+% 	([xshift=-.5*width{"pt=try-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl2c_vbbot});
 \end{tikzpicture}
 
 \xe
@@ -8709,76 +8709,56 @@ still needs to be investigated.
 \xe
 
 The example sentences in (\ref{ex:ayrctrl3}) follow the format of those above.
-Again, it is generally possible to use a complement clause 
-(\ref{ex:ayrctrl3_1}) as well as complementing the verb in the matrix clause
-with a non-finite clause with object control (\ref{ex:ayrctrl3_2}). However,
-the incorporation strategy is not possible here because this would cause a
-doubling of case roles (\ref{ex:ayrctrl3_3}). As we will see below, however,
-this is not an issue for intransitive complement clauses.
+Again, it is generally possible to use a complement clause as in
+(\ref{ex:ayrctrl3_1}) or (\ref{ex:ayrctrl3_2}), as well as complementing the
+verb in the matrix clause with a non-finite clause with object control
+(\ref{ex:ayrctrl3_3}). However, the incorporation strategy is not possible here
+because this would cause a doubling of case roles (\ref{ex:ayrctrl3_4}). As we
+will see below, however, this is not an issue for intransitive complement
+clauses.
 
-\afterpage{%
-\clearpage%
-\begin{landscape}\centering%
-\mbox{}\vfill%
+\begin{figure}[htp]
 \pex\label{ex:ayrctrl3}
-\a\label{ex:ayrctrl3_1}\begingl%
-	[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla {Sa pinyaya} {ang Amān} Kagan, \textup{[\tsub{CP}} {ang ilya} kasuley
-		{yam Pada} \textup{]}. //
-	\glb sa=pinya-ya ang=Amān Ø=Kagan {} ang=ilya kasu-ley yam=Pada {} //
-	\glc \PatT{}=ask-\TsgM{}%
+\a\label{ex:ayrctrl3_1}\begingl[aboveglcskip=1.5em,] % aboveglftskip=1.75em]
+	\gla Pinyaya {ang Amān}, \textup{[\tsub{CP}} {ang rimaya} Kagan
+		kunangley \textup{]}. //
+	\glb pinya-ya ang=Amān {} ang=rimaya Ø=Kagan kunang-ley {} //
+	\glc ask-\TsgM{}%
 			\tikzmark{ayrctrl3a_vb1top}%
 			\tikzmark{ayrctrl3a_vb1bot}
-		$\underbrace{\text{\Aarg{}=Amān}}_{\text{S/A}%
+		$\underbrace{\text{\Aarg{}=Amān}}_{\text{S}%
 			\tikzmark{ayrctrl3a_sb1}%
 		}$
+		{}
+		\AgtT{}=close-\TsgM{}%
+			\tikzmark{ayrctrl3a_vb2top}
 		$\underbrace{\text{\Top{}=\smash{Kagan}}%
 			\tikzmark{ayrctrl3a_top}%
-		}_{\text{P}%
-			\tikzmark{ayrctrl3a_pat1}%
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl3a_agt2}%
 		}$
-		{}
-		\AgtT{}=give=$\underbrace{\text{\smash{\TsgM{}}.\Top{}}}_{\text{S/A}%
-			\tikzmark{ayrctrl3a_sb2}%
-		}$%
-			\tikzmark{ayrctrl3a_vb2top}
-		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
-		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		$\underbrace{\text{door-\PargI{}}}_{\text{P}}$
 		{}
 		//
-	\glft `Kagan, Amān asks him that he give Pada the basket.' //
+	\glft `Amān asks that, as for Kagan, he close the door.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
 	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
-		{pic cs:ayrctrl3a_vb1top})
+		{pic cs:ayrctrl3a_vb2top})
 	|- ++ (north:0.75em) -|
 	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
 		{pic cs:ayrctrl3a_top});
-
-\draw [-latex]
-	([xshift=-.5*width{"p"}, yshift=-.75ex]%
-		{pic cs:ayrctrl3a_pat1})
-	|- ++ (south:0.75em) -|
-	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
-		{pic cs:ayrctrl3a_sb2});
-
-\draw [-latex]
-	([xshift=-.55*width{"at=give-3sg.m.top"}, yshift=2.25ex]%
-		{pic cs:ayrctrl3a_vb2top})
-	|- ++ (north:0.75em) -|
-	([xshift=-.45*width{"at=give-3sg.m.top"}, yshift=2.25ex]%
-		{pic cs:ayrctrl3a_vb2top});
 \end{tikzpicture}
 
 \a\label{ex:ayrctrl3_2}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla {Sa pinyaya} {ang Amān} Kagan \textup{[\tsub{S}} {} ilyam kasuley {yam
-		Pada} \textup{]}. //
-	\glb sa=pinya-ya ang=Amān Ø=Kagan {} {} il-yam kasu-ley yam=Pada //
-	\glc \PatT{}=ask-\TsgM{}%
-			\tikzmark{ayrctrl3b_vbtop}%
-			\tikzmark{ayrctrl3b_vbbot}
-		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
+	\gla {Sa (da-)pinyaya} {ang Amān} Kagan, \textup{[\tsub{CP}} {ang rimaya}
+		kunangley \textup{]}. //
+	\glb sa=(da=)pinya-ya ang=Amān Ø=Kagan {} ang=rimaya kunang-ley {} //
+	\glc \PatT{}=(so=)ask-\TsgM{}%
+			\tikzmark{ayrctrl3b_vb1top}%
+			\tikzmark{ayrctrl3b_vb1bot}
+		$\underbrace{\text{\Aarg{}=Amān}}_{\text{S/A}%
 			\tikzmark{ayrctrl3b_sb1}%
 		}$
 		$\underbrace{\text{\Top{}=\smash{Kagan}}%
@@ -8787,20 +8767,19 @@ this is not an issue for intransitive complement clauses.
 			\tikzmark{ayrctrl3b_pat1}%
 		}$
 		{}
-		$\underbrace{}_{\text{S/A}%
+		\AgtT{}=close=$\underbrace{\text{\smash{\TsgM{}}.\Top{}}}_{\text{S/A}%
 			\tikzmark{ayrctrl3b_sb2}%
-		}$
-		give-\Ptcp{}
-		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
-		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		}$%
+			\tikzmark{ayrctrl3b_vb2top}
+		$\underbrace{\text{door-\PargI{}}}_{\text{P}}$
 		{}
 		//
-	\glft `Kagan, Amān asks him to give Pada the basket.' //
+	\glft `Kagan, Amān asks him that he close the door.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
-	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
-		{pic cs:ayrctrl3b_vbtop})
+	([xshift=-.5*width{"pt=(so=)ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3b_vb1top})
 	|- ++ (north:0.75em) -|
 	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
 		{pic cs:ayrctrl3b_top});
@@ -8811,16 +8790,22 @@ this is not an issue for intransitive complement clauses.
 	|- ++ (south:0.75em) -|
 	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
 		{pic cs:ayrctrl3b_sb2});
+
+\draw [-latex]
+	([xshift=-.55*width{"at=close-3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3b_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.45*width{"at=close-3sg.m.top"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3b_vb2top});
 \end{tikzpicture}
 
-\a\label{ex:ayrctrl3_3}\ljudge*%
-\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla {Sa pinyaya} ilyam {ang Amān} Kagan kasuley {yam Pada}. //
-	\glb sa=pinya-ya il-yam ang=Amān Ø=Kagan kasu-ley yam=Pada //
+\a\label{ex:ayrctrl3_3}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Sa pinyaya} {ang Amān} Kagan \textup{[\tsub{S}} {} rimayam kunangley
+		\textup{]}. //
+	\glb sa=pinya-ya ang=Amān Ø=Kagan {} {} rima-yam kunang-ley //
 	\glc \PatT{}=ask-\TsgM{}%
 			\tikzmark{ayrctrl3c_vbtop}%
 			\tikzmark{ayrctrl3c_vbbot}
-		give-\Ptcp{}
 		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
 			\tikzmark{ayrctrl3c_sb1}%
 		}$
@@ -8829,10 +8814,15 @@ this is not an issue for intransitive complement clauses.
 		}_{\text{P}%
 			\tikzmark{ayrctrl3c_pat1}%
 		}$
-		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
-		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl3c_sb2}%
+		}$
+		close-\Ptcp{}
+		$\underbrace{\text{door-\PargI{}}}_{\text{P}}$
+		{}
 		//
-	\glft \textit{Literally:} `Kagan, Amān asks giving him Pila the basket.' //
+	\glft `Kagan, Amān asks him to close the door.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
 \draw [-latex]
@@ -8843,26 +8833,110 @@ this is not an issue for intransitive complement clauses.
 		{pic cs:ayrctrl3c_top});
 
 \draw [-latex]
-	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
-		{pic cs:ayrctrl3c_sb1})
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3c_pat1})
 	|- ++ (south:0.75em) -|
-	([xshift=-.5*width{"pt=as-3sg.m"},yshift=-.75ex]%
-		{pic cs:ayrctrl3c_vbbot});
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl3c_sb2});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl3_4}\ljudge*%
+\begingl[aboveglcskip=1.5em, aboveglftskip=2.5em] % aboveglftskip=3.25em]
+	\gla {Sa pinyaya} \textup{[\tsub{VP}} {} rimayam {} \textup{]} {ang Amān}
+		Kagan kunangley. //
+	\glb sa=pinya-ya {} {} rima-yam {} {} ang=Amān Ø=Kagan kunang-ley //
+	\glc \PatT{}=ask-\TsgM{}%
+			\tikzmark{ayrctrl3d_vbtop}%
+			\tikzmark{ayrctrl3d_vbbot}
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl3d_sb2}%
+		}$
+		close-\Ptcp{}
+		$\underbrace{}_{\text{P}%
+			\tikzmark{ayrctrl3d_pat3}%
+		}$
+		{}
+		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl3d_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=\smash{Kagan}}%
+			\tikzmark{ayrctrl3d_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl3d_pat1}%
+		}$
+		$\underbrace{\text{door-\PargI{}}}_{\text{P}%
+			\tikzmark{ayrctrl3d_pat2}%
+		}$
+		//
+	\glft \textit{Literally:} `Kagan$_i$, Amān asks closing him$_i$ the 
+		door.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3d_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
+		{pic cs:ayrctrl3d_top});
+
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl3d_sb1})
+% 	|- ++ (south:0.75em) -|
+% 	([xshift=-.5*width{"pt=ask-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl3d_vbbot});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3d_pat1})
+%	|- ++ (south:1.5em) -|
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl3d_sb2});
+
+\draw [latex-]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl3d_pat2})
+%	|- ++ (south:2.25em) -|
+	|- ++ (south:1.5em) -|
+	([xshift=-.5*width{"p"},yshift=-.75ex]%
+		{pic cs:ayrctrl3d_pat3});
 \end{tikzpicture}
 
 \xe%
-\mbox{}\vfill%
-\end{landscape}%
-\clearpage%
-}
+\end{figure}
 
-...
+Strictly speaking, it does not matter in (\ref{ex:ayrctrl3_1}) and
+(\ref{ex:ayrctrl3_2}) whether the coreferential argument is the topic in both
+clauses or not; it is simply not unlikely that it is. Again, topicalization
+does not have an effect on grammatical relations---although it was shown above
+that Tagalog, in the canonical case, deviates from its normal behavior as well
+with regards to control verbs to the point where this construction has been
+used as an argument in favor of the actor argument being the subject. As for
+Ayeri, unlike in coordinated main clauses, topicalization is not a strategy for
+disambiguation of several possible controllers for the pronominal agent of the
+complement/embedded clause here. Due to the semantics of the verb in the matrix
+clause, it is clear that the patient argument is to be understood as the agent
+of the subordinate verb. Thus, there is no ambiguity in anaphoric reference in
+the complement clause.
 
-\ex\label{ex:ayrctrl4}\ljudge\ques%
-\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla {Sa pinyaya} \textup{[\tsub{VP}} {} ilyam kasuley {yam Pada}
-		\textup{]} {ang Amān} Kagan //
-	\glb sa=pinya-ya {} {} il-yam kasu-ley yam=Pada {} ang=Amān Ø=Kagan //
+As mentioned above, forming a complex predicate and extraposing the arguments
+of the embedded verb in (\ref{ex:ayrctrl3_4}) is problematic due to the
+doubling of case roles. However, the `intermediate' strategy of adjoining the
+VP of the complement clause, containing all its arguments, to the IP of the
+matrix clause, as shown in (\ref{ex:ayrctrl4}), is equally unfavorable. A whole
+clause would end up center-embedded between the matrix verb and its core
+arguments this way, which becomes the more awkward the longer clause is. It is
+possible, however, to use the VP adjunction strategy with intransitive
+complement clauses, as illustrated by (\ref{ex:ayrctrl5}), since there are no
+objects in the embedded VP to become problematic.
+
+\ex\label{ex:ayrctrl4}\ljudge\ques*%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em] % aboveglftskip=2.5em]
+	\gla {Sa pinyaya} \textup{[\tsub{VP}} {} rimayam kunangley \textup{]} 
+		{ang Amān} Kagan //
+	\glb sa=pinya-ya {} {} rima-yam kunang-ley {} ang=Amān Ø=Kagan //
 	\glc \PatT{}=ask-\TsgM{}%
 			\tikzmark{ayrctrl4_vbtop}%
 			\tikzmark{ayrctrl4_vbbot}
@@ -8870,9 +8944,8 @@ this is not an issue for intransitive complement clauses.
 		$\underbrace{}_{\text{S/A}%
 			\tikzmark{ayrctrl4_sb2}%
 		}$
-		give-\Ptcp{}
-		$\underbrace{\text{basket-\PargI{}}}_{\text{T}}$
-		$\underbrace{\text{\Dat{}=Pada}}_{\text{R}}$
+		close-\Ptcp{}
+		$\underbrace{\text{door-\PargI{}}}_{\text{P}}$
 		{}
 		$\underbrace{\text{\Aarg=Amān}}_{\text{S/A}%
 			\tikzmark{ayrctrl4_sb1}%
@@ -8883,33 +8956,132 @@ this is not an issue for intransitive complement clauses.
 			\tikzmark{ayrctrl4_pat1}%
 		}$
 		//
-	\glft \textit{Literally:} `Kagan, Amān asks to give Pila the basket 
-		him.' //
+	\glft \textit{Literally:} `Kagan, Amān asks to close the door him.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt=ask-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl4_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Kagan"}, yshift=2.25ex]%
+		{pic cs:ayrctrl4_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl4_pat1})
+%	|- ++ (south:1.5em) -|
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl4_sb2});
+
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl4_sb1})
+% 	|- ++ (south:0.75em) -|
+% 	([xshift=-.5*width{"pt=ask-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl4_vbbot});
+\end{tikzpicture}
 \xe
 
-...
-
-\ex\label{ex:ayrctrl5}%
-\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
-	\gla {Ang nosaya} nimpyam Amān {sa Pada}. //
-	\glb ang=nosa-ya nimp-yam Ø=Amān sa=Pada //
+\pex~\label{ex:ayrctrl5}%
+\a\label{ex:ayrctrl5_1}%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em] % aboveglftskip=2.5em]
+	\gla {Ang nosaya} \textup{[\tsub{VP}} {} nimpyam \textup{]} Amān 
+		{sa Pada}. //
+	\glb ang=nosa-ya {} {} nimp-yam {} Ø=Amān sa=Pada //
 	\glc \AgtT{}=order-\TsgM{}%
-			\tikzmark{ayrctrl5_vbtop}%
-			\tikzmark{ayrctrl5_vbbot}
-		run-\Ptcp{}
-		$\underbrace{\text{\Top{}=Amān}%
-			\tikzmark{ayrctrl5_top}%
-		}_{\text{S/A}%
-			\tikzmark{ayrctrl5_sb}%
+			\tikzmark{ayrctrl5a_vbtop}%
+			\tikzmark{ayrctrl5a_vbbot}
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl5a_sb2}%
 		}$
-		$\underbrace{\text{\Parg{}=Pada}}_{\text{P}}$
+		run-\Ptcp{}
+		{}
+		$\underbrace{\text{\Top{}=Amān}%
+			\tikzmark{ayrctrl5a_top}%
+		}_{\text{S/A}%
+			\tikzmark{ayrctrl5a_sb1}%
+		}$
+		$\underbrace{\text{\Parg{}=Pada}}_{\text{P}%
+			\tikzmark{ayrctrl5a_pat}%
+		}$
 		//
 	\glft `Amān, he orders Pada to run.' //
 \endgl
-\xe
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=order-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl5a_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Amān"}, yshift=2.25ex]%
+		{pic cs:ayrctrl5a_top});
 
-...
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl5a_pat})
+%	|- ++ (south:1.5em) -|
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl5a_sb2});
+
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl5a_sb1})
+% 	|- ++ (south:0.75em) -|
+% 	([xshift=-.5*width{"pt=order-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl5a_vbbot});
+\end{tikzpicture}
+
+\a\label{ex:ayrctrl5_2}%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em] % aboveglftskip=2.5em]
+	\gla {Sa nosaya} \textup{[\tsub{VP}} {} nimpyam \textup{]} {ang Amān} 
+		Pada. //
+	\glb sa=nosa-ya {} {} nimp-yam {} ang=Amān Ø=Pada //
+	\glc \PatT{}=order-\TsgM{}%
+			\tikzmark{ayrctrl5b_vbtop}%
+			\tikzmark{ayrctrl5b_vbbot}
+		{}
+		$\underbrace{}_{\text{S/A}%
+			\tikzmark{ayrctrl5b_sb2}%
+		}$
+		run-\Ptcp{}
+		{}
+		$\underbrace{\text{\Aarg{}=Amān}}_{\text{S/A}%
+			\tikzmark{ayrctrl5b_sb1}%
+		}$
+		$\underbrace{\text{\Top{}=Pada}%
+			\tikzmark{ayrctrl5b_top}%
+		}_{\text{P}%
+			\tikzmark{ayrctrl5b_pat}%
+		}$
+		//
+	\glft `Pada, Amān orders her to run.' //
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"at=order-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrctrl5b_vbtop})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Pada"}, yshift=2.25ex]%
+		{pic cs:ayrctrl5b_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrctrl5b_pat})
+%	|- ++ (south:1.5em) -|
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrctrl5b_sb2});
+
+% \draw [-latex]
+% 	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+% 		{pic cs:ayrctrl5b_sb1})
+% 	|- ++ (south:0.75em) -|
+% 	([xshift=-.5*width{"pt=order-3sg.m"},yshift=-.75ex]%
+% 		{pic cs:ayrctrl5b_vbbot});
+\end{tikzpicture}
+\xe
 
 \subsubsection{Reflexive binding}
 \label{subsubsec:reflbind}
