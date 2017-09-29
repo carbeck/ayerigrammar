@@ -6215,12 +6215,11 @@ The tests for typical properties associated with grammatical subjects which
 \citet{kroeger1991} performs partially extend those presented in
 \citet{schachter1976}. Moreover, his conclusions build on a more modern,
 functionally oriented approach than Schachter's. For this reason, I will follow
-Kroeger rather than Schachter. Either way, we will have to test quantifier
-float, relativization, number agreement, reflexive binding, raising and control
-verbs, control of secondary predicates, and the termhood of the agent NP in
-transitive sentences with what was called `patient topic' so far. First of all,
-it will be helpful, however, to define some terms which will be used in the
-discussion below.
+Kroeger rather than Schachter. Either way, we will have to test number
+agreement, quantifier float, control of secondary predicates, relativization,
+and the behavior of both raising and control verbs, . First of all, it will be
+helpful, however, to define some terms which will be used in the discussion
+below.
 
 \subsection{Definition of terms}
 
@@ -6545,11 +6544,10 @@ NP within a single clause. It is not necessary for the focussed NP to be
 coordinated with another NP by `or'. \citet{dixon2010} also warns that focus
 is often confused with topic. Perhaps this is in part also, as
 \citet{bresnan2016} mention, due to the fact that English may use the topic
-position for either topic or focus under certain circumstances:
+position for either topic or focus under certain circumstances 
+\parencite[98]{bresnan2016}:
 
 \ex\label{ex:engfoc}%
-English \parencite[98]{bresnan2016}:\medskip
-
 Q: What did you name your cat?\\
 A: \textsc{rosie} I named her. (\fw{Rosie} = \Foc{})
 \xe
@@ -7899,61 +7897,206 @@ nominative arguments in Tagalog. Non-nominative actors may be raised into the
 matrix clause as well, however, but at least for some speakers there needs to
 be a resumptive pronoun---basically, an overt pronominal `trace' in terms of
 \textsc{gg}---in the complement clause, as shown in (\ref{ex:tagrais2}).
+Example (\ref{ex:tagrais1}) shows a case of raising of the nominative argument
+of the complement clause to the patient of a transitive verb; the nominative
+argument of the complement clause subsequently is realized as a null element
+coindexed with the patient of the matrix clause, that is, the raised argument.
+In English, one would speak of to-object raising, though here the patient of
+\fw{gusto}, \fw{sila}, is in its nominative form, so syntactically, \fw{ng
+Nanay} `mother', the actor, is the object in this clause. In
+(\ref{ex:tagrais2_1}), the verb of the complement clause marks its patient
+argument as the subject. Yet, the non-subject agent, \fw{Charlie}, is raised to
+occupy the patient role in the matrix clause. The position of the non-subject
+agent in the complement clause is subsequently realized as a resumptive
+pronoun, \fw{niya}, coindexed with the raised NP. Example (\ref{ex:tagrais2_2})
+shows that it would be ungrammatical to have a null element in its stead.
 
+\begin{figure}[htp]
 \ex\label{ex:tagrais1}%
 Tagalog \parencite[adapted from][26]{kroeger1991}:\medskip \\
-\begingl
-	\gla gusto sila$_i$ ng=Nanay (na) mag-aral \_$_i$ mamayang.gabi //
-	\glb want \Tpl{}.\Nom{} \Gen{}=Mother \Comp{} \Av{}-study {} tonight //
+\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla gusto sila ng=Nanay (na) mag-aral {} mamayang.gabi //
+	\glb want
+		$\underbrace{\text{\smash{\Tpl{}}.\Nom{}}}_{\text{S/P}%
+			\tikzmark{tagrais1_pat1}%
+		}$
+		$\underbrace{\text{\Gen{}=Mother}}_{\text{A}}$
+		\Comp{}
+		\Av{}-study%
+			\tikzmark{tagrais1_vb2top}
+		$\underbrace{%
+			\tikzmark{tagrais1_sb2}%
+		}_{\text{S/A}%
+			\tikzmark{tagrais1_act2}%
+		}$
+		tonight
+		//
 	\glft `Mother wants them to study tonight.' //
 \endgl
-\xe
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"av-study"}, yshift=2.25ex]%
+		{pic cs:tagrais1_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagrais1_sb2});
 
-\pex~\label{ex:tagrais2}
+\draw [-latex]
+	([xshift=-.5*width{"s/a"}, yshift=-.75ex]%
+		{pic cs:tagrais1_act2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+		{pic cs:tagrais1_pat1});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+\begin{figure}[htp]
+\pex\label{ex:tagrais2}
 Tagalog \parencite[adpated from][28]{kroeger1991}:
-\a\label{ex:tagrais1_1}\begingl
-	\gla gusto ko si=Charlie$_i$ na lutu-in niya$_i$ ang=suman //
-	\glb want \Fsg{}.\Gen{} \Abs{}=Charlie \Comp{} cook-\Ov{}
-		\Tsg{}.\Gen{} \Abs{}=rice.cake //
+\a\label{ex:tagrais2_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla gusto ko si=Charlie na lutu-in niya ang=suman //
+	\glb want
+		$\underbrace{\text{\Fsg{}.\Gen{}}}_{\text{A}}$
+		$\underbrace{\text{\Abs{}=Charlie}}_{\text{S/P}%
+			\tikzmark{tagrais2_pat1}%
+		}$
+		\Comp{}
+		cook-\Ov{}%
+			\tikzmark{tagrais2_vb2top}
+		$\underbrace{\text{\smash{\Tsg{}}.\Gen{}}}_{\text{A}%
+			\tikzmark{tagrais2_act2}%
+		}$
+		$\underbrace{\text{\Abs{}=rice.cake}%
+			\tikzmark{tagrais2_sb2}%
+		}_{\text{S/P}}$
+		//
 	\glft `I want Charlie to cook the \fw{suman}.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"cook-ov"}, yshift=2.25ex]%
+		{pic cs:tagrais2_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"abs=rice.cake"}, yshift=2.25ex]%
+		{pic cs:tagrais2_sb2});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:tagrais2_act2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+		{pic cs:tagrais2_pat1});
+\end{tikzpicture}
 
 \a\label{ex:tagrais2_2}%
 	\ljudge* gusto ko si Charlie$_i$ na lutuin \_$_i$ ang suman
 \xe
+\end{figure}
 
-Presumably, \citet{kroeger1991} switches to labeling the raised NP as \Abs{} in
+\citet{kroeger1991} presumably switches to labeling the raised NP as \Abs{} in
 (\ref{ex:tagrais2}) because it is the patient-subject of \fw{gusto} `want'
 (note the actor \fw{ko} occurs in genitive case); the patient of the embedded
 clause, \fw{suman} `rice cake', is also marked as a subject with the verb
-indicating this by object-voice marking. The raised logical subject of the
-embedded clause is present as the non-subject actor pronoun \fw{niya}.
-\citet{kroeger1991} also unfortunately only gives examples of to-object
-raising, but not of to-subject raising \citep[430]{carnie2013}. As we will see
-below, Ayeri has no problem with to-subject raising, however, it cannot do
-to-object raising. First of all, let us look at to-subject raising, however.
+indicating this by object-voice marking. This is basically consistent with how
+an \Abs{}-\Erg{} language would mark subjects. Unfortunately,
+\citet{kroeger1991} only gives examples of `to-patient' raising, but not of
+`to-agent' raising \citep[430]{carnie2013}. As we will see below, Ayeri has no
+problem with the former (as to-subject raising), however, it cannot do the
+latter (as to-object raising), probably for semantic reasons. First of all, let
+us look at to-subject raising, however.
 
+\begin{figure}[htp]
 \pex\label{ex:ayrrais1}
-\a\label{ex:ayrrais1_1}\begingl
-	\gla Surpreng, koronye ang @ Pada$_i$ guratanley. //
-	\glb surp=reng koron-ye ang= Pada guratan-ley //
-	\glc seem=\Tsg{}.\AargI{} know-\TsgF{} \Aarg{}= Pada answer-\PargI{} //
-	\glft `It seems that Pada, she knows the answer. //
+\a\label{ex:ayrrais1_1}\begingl[aboveglcskip=1.5em]
+	\gla Surpreng, \textup{[\tsub{CP}} {ang koronye} Pada guratanley
+		\textup{]}. //
+	\glb surp=reng {} ang=koron-ye Ø=Pada guratan-ley {} //
+	\glc seem=$\underbrace{\text{\smash{\Tsg{}}.\AargI{}}}_{\text{dummy S}}$
+		{}
+		\AgtT{}=know-\TsgF{}%
+			\tikzmark{ayrrais1a_vb2top}
+		$\underbrace{\text{\Top{}=Pada}%
+			\tikzmark{ayrrais1a_top}%
+		}_{\text{S/A}}$
+		$\underbrace{\text{answer-\PargI{}}}_{\text{P}}$
+		{}
+		//
+	\glft `Pada, it seems that she knows the answer. //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"know-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrrais1a_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Pada"}, yshift=2.25ex]%
+		{pic cs:ayrrais1a_top});
+\end{tikzpicture}
 
-\a\label{ex:ayrrais1_2}\begingl
-	\gla Surpye ang @ Pada$_i$ \_$_i$ koronyam guratanley. //
-	\glb surp-ye ang= Pada {} koron-yam guratan-ley //
-	\glc seem-\TsgF{} \Aarg{}= Pada {} know-\Ptcp{} answer-\PargI{} //
+\a\label{ex:ayrrais1_2}\begingl[aboveglftskip=1.75em]
+	\gla Surpye {ang Pada} \textup{[\tsub{S}} {} koronyam guratanley
+		\textup{]}. //
+	\glb surp-ye ang=Pada {} {} koron-yam guratan-ley {} //
+	\glc seem-\TsgF{}
+		$\underbrace{\text{\Aarg{}=Pada}}_{\text{S}%
+			\tikzmark{ayrrais1b_sb}%
+		}$
+		{}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{ayrrais1b_agt2}%
+		}$
+		know-\Ptcp{}
+		$\underbrace{\text{answer-\PargI{}}}_{\text{P}}$
+		{}
+		//
 	\glft `Pada seems to know the answer.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:ayrrais1b_agt2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
+		{pic cs:ayrrais1b_sb});
+\end{tikzpicture}
 
-\a\label{ex:ayrrais1_3}\ljudge*\begingl
-	\gla Ang @ surpye Pada koronyam guratanley. //
-	\glb ang= surp-ye Pada koron-yam guratan-ley //
-	\glc \Aarg{}= seem-\TsgF{} Pada know-\Ptcp{} answer-\PargI{} //
+\a\label{ex:ayrrais1_3}\ljudge*%
+\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
+	\gla {Ang surpye} Pada \textup{[\tsub{S}} {} koronyam guratanley 
+		\textup{]}. //
+	\glb ang=surp-ye Ø=Pada {} {} koron-yam guratan-ley {} //
+	\glc \Aarg{}=seem-\TsgF{}%
+			\tikzmark{ayrrais1c_vb1top}
+		$\underbrace{\text{\Top{}=Pada}%
+			\tikzmark{ayrrais1c_top}%
+		}_{\text{S}%
+			\tikzmark{ayrrais1c_sb}%
+		}$
+		{}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{ayrrais1c_agt2}%
+		}$
+		know-\Ptcp{}
+		$\underbrace{\text{answer-\PargI{}}}_{\text{P}}$
+		{}
+		//
 	\glft \textit{Intended:} `Pada, she seems to know the answer.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"a=seem-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrrais1c_vb1top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Pada"}, yshift=2.25ex]%
+		{pic cs:ayrrais1c_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:ayrrais1c_agt2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
+		{pic cs:ayrrais1c_sb});
+\end{tikzpicture}
 
 \a\label{ex:ayrrais1_4}\ljudge*\begingl
 	\gla Surpye ang @ Pada. //
@@ -7963,6 +8106,7 @@ to-object raising. First of all, let us look at to-subject raising, however.
 \endgl
 
 \xe
+\end{figure}
 
 In (\ref{ex:ayrrais1}), \rayr{pd}{Pada} is both the topic and the logical
 subject of \xayr{koronF/}{koron-}{know}, but not of
@@ -7974,52 +8118,162 @@ illustrated by the ungrammaticality of (\ref{ex:ayrrais1_3}). The verb in
 (\ref{ex:ayrrais1_2}) also becomes non-finite, like in English. Unlike in
 Tagalog, it cannot carry any marking for grammatical relations. Furthermore, it
 is possible in Ayeri to form a complex predicate like \rayr{surFpF/ koronYmF}
-{surp- koronyam}, literally `seems knowing', with all of the arguments of the
-embedded clause becoming arguments of the matrix clause, that is, the matrix
-verb may carry topic marking for any of its syntactic (rather than semantic)
-arguments:
+{surp- koronyam} in (\ref{ex:ayrrais2}), literally `seems knowing', with all of
+the arguments of the embedded clause becoming arguments of the matrix clause,
+that is, the matrix verb is interpreted as a transitive clause and may carry
+topic marking for any of its syntactic (rather than semantic) arguments.
 
-\ex\label{ex:ayrrais2}\begingl
-	\gla Ang @ surpye koronyam Pada guratanley. //
-	\glb ang= surp-ye koron-yam Pada guratan-ley //
-	\glc \Aarg{}= seem-\TsgF{} know-\Ptcp{} Pada answer-\PargI{} //
+\begin{figure}[htp]
+\ex\label{ex:ayrrais2}\begingl[aboveglcskip=1.5em, aboveglftskip=2.5em]
+	\gla {Ang surpye} \textup{[\tsub{S}} {} koronyam {} \textup{]} Pada
+		guratanley. //
+	\glb ang=surp-ye {} {} koron-yam {} {} Ø=Pada guratan-ley //
+	\glc \Aarg{}=seem-\TsgF{}%
+			\tikzmark{ayrrais2_vb1top}
+		{}
+		$\underbrace{}_{\text{A}%
+			\tikzmark{ayrrais2_agt2}%
+		}$
+		know-\Ptcp{}
+		$\underbrace{}_{\text{P}%
+			\tikzmark{ayrrais2_pat2}%
+		}$
+		{}
+		$\underbrace{\text{\Top{}=Pada}%
+			\tikzmark{ayrrais2_top}%
+		}_{\text{S/A}%
+			\tikzmark{ayrrais2_sb}%
+		}$
+		$\underbrace{\text{answer-\PargI{}}}_{\text{P}%
+			\tikzmark{ayrrais2_pat1}%
+		}$
+		//
 	\glft `Pada, she seems to know the answer.' //
-\endgl\xe
+\endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"a=seem-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrrais2_vb1top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Pada"}, yshift=2.25ex]%
+		{pic cs:ayrrais2_top});
+
+\draw [-latex]
+	([xshift=-.5*width{"a"}, yshift=-.75ex]%
+		{pic cs:ayrrais2_agt2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:ayrrais2_sb});
+
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrrais2_pat2})
+	|- ++ (south:1.5em) -|
+	([xshift=-.5*width{"p"},yshift=-.75ex]%
+		{pic cs:ayrrais2_pat1});
+\end{tikzpicture}
+
+\xe
+\end{figure}
 
 If the topic is actually the subject, it should be possible in Ayeri to raise
 non-actor topics into the matrix clause easily. Of course, this is possible in
-Tagalog:
+Tagalog. In (\ref{ex:tagrais3_1}), thus, \fw{Manuel} is the one arrested, so he
+is the patient of the subordinate clause which acts as the subject of the
+matrix clause. The fact that \fw{Manuel} is a patient-subject of the
+subordinate verb, \fw{hulihin} `be caught', is reflected in its being marked
+for objective voice. The English translation is consequently given with the
+subordinate clause phrased in the passive voice. Similarly, in
+(\ref{ex:tagrais3_2}), the subordinate verb, \fw{sinuhulan} `be bribed', is
+marked for directional voice. According to this, \fw{ang pangulo} `the
+president' is a non-actor subject of the subordinate verb here as well. So it
+is in the matrix clause as well, however, as the matrix verb,
+\fw{napagbintangan} `be accused of', is marked for directional voice as well.
 
+\begin{figure}[htp]
 \pex\label{ex:tagrais3}
 Tagalog \parencite[adapted from][26]{kroeger1991}:
-\a\label{ex:tagrais3_1}\begingl
-	\gla malapit na si=Manuel$_i$ na hulihin ng=polis \_$_i$ //
-	\glb \Nvol{}-close already \Nom{}=Manuel \Comp{} catch-\Ov{}
-		\Gen{}=police {} //
+\a\label{ex:tagrais3_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla malapit na si=Manuel na hulihin ng=polis {} //
+	\glb \Nvol{}-close
+		already
+		$\underbrace{\text{\Nom{}=Manuel}}_{\text{S/A}%
+			\tikzmark{tagrais3a_act1}%
+		}$
+		\Comp{}
+		catch-\Ov{}%
+			\tikzmark{tagrais3a_vb2top}
+		$\underbrace{\text{\Gen{}=\smash{police}}}_{\text{A}}$
+		$\underbrace{%
+			\tikzmark{tagrais3a_sb2}%
+		}_{\text{S/P}%
+			\tikzmark{tagrais3a_pat}%
+		}$
+		//
 	\glft `Manuel is about to be arrested by the police.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"catch-ov"}, yshift=2.25ex]%
+		{pic cs:tagrais3a_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagrais3a_sb2});
 
-\a\label{ex:tagrais3_2}\begingl
-	\gla napagbintangan ang=pangulo=ng sinuhulan ng=Sindikato \_$_i$ //
-	\glb \Nvol{}.\Pfv{}-accuse-\Dv{} \Nom{}=president$_i$=\Comp{}
-		\Pfv{}-bribe-\Dv{} \Gen{}=syndicate {} //
+\draw [-latex]
+	([xshift=-.5*width{"s/p"}, yshift=-.75ex]%
+		{pic cs:tagrais3a_pat})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+		{pic cs:tagrais3a_act1});
+\end{tikzpicture}
+
+\a\label{ex:tagrais3_2}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
+	\gla napagbintangan ang=pangulo=ng sinuhulan ng=Sindikato {} //
+	\glb \Nvol{}.\Pfv{}-accuse-\Dv{}%
+			\tikzmark{tagrais3b_vb1top}
+		$\underbrace{\text{\Nom{}=\smash{president}=\Comp{}}%
+			\tikzmark{tagrais3b_sb1}%
+		}_{\text{S/P}%
+			\tikzmark{tagrais3b_pat1}%
+		}$
+		\Pfv{}-bribe-\Dv{}%
+			\tikzmark{tagrais3b_vb2top}
+		$\underbrace{\text{\Gen{}=syndicate}}_{\text{A}}$
+		$\underbrace{%
+			\tikzmark{tagrais3b_sb2}%
+		}_{\text{S/P}%
+			\tikzmark{tagrais3b_pat2}%
+		}$
+		//
 	\glft `The president was accused of having been bribed by the
 		Syndicate.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"nvol.pfv-accuse-dv"}, yshift=2.25ex]%
+		{pic cs:tagrais3b_vb1top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"nom-president=comp"}, yshift=2.25ex]%
+		{pic cs:tagrais3b_sb1});
+
+\draw [-latex]
+	([xshift=-.5*width{"pfv-brive-dv"}, yshift=2.25ex]%
+		{pic cs:tagrais3b_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{""}, yshift=2.25ex]%
+		{pic cs:tagrais3b_sb2});
+
+\draw [-latex]
+	([xshift=-.5*width{"s/p"}, yshift=-.75ex]%
+		{pic cs:tagrais3b_pat2})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+		{pic cs:tagrais3b_pat1});
+\end{tikzpicture}
 
 \xe
-
-In (\ref{ex:tagrais3_1}), thus, \fw{Manuel} is the one arrested, so he is the
-patient of the subordinate clause which acts as the subject of the matrix
-clause. The fact that \fw{Manuel} is a patient-subject of the subordinate verb,
-\fw{hulihin} `be caught', is reflected in its being marked for objective voice.
-The English translation is consequently given with the subordinate clause
-phrased in the passive voice. Similarly, in (\ref{ex:tagrais3_2}), the
-subordinate verb, \fw{sinuhulan} `be bribed', is marked for directional voice.
-According to this, \fw{ang pangulo} `the president' is a non-actor subject of
-the subordinate verb here as well. So it is in the matrix clause as well,
-however, as the matrix verb, \fw{napagbintangan} `be accused of', is marked for
-directional voice as well.
+\end{figure}
 
 As we have seen above, the marking of the privileged NP on the verb has
 no effect on grammatical relations; making a transitive verb agree with another
@@ -8924,11 +9178,11 @@ the complement clause.
 As mentioned above, forming a complex predicate and extraposing the arguments
 of the embedded verb in (\ref{ex:ayrctrl3_4}) is problematic due to the
 doubling of case roles. However, the `intermediate' strategy of adjoining the
-VP of the complement clause, containing all its arguments, to the IP of the
+S of the complement clause, containing all its arguments, to the IP of the
 matrix clause, as shown in (\ref{ex:ayrctrl4}), is equally unfavorable. A whole
 clause would end up center-embedded between the matrix verb and its core
 arguments this way, which becomes the more awkward the longer clause is. It is
-possible, however, to use the VP adjunction strategy with intransitive
+possible, however, to use the S adjunction strategy with intransitive
 complement clauses, as illustrated by (\ref{ex:ayrctrl5}), since there are no
 objects in the embedded VP to become problematic.
 
@@ -9035,7 +9289,7 @@ objects in the embedded VP to become problematic.
 
 \a\label{ex:ayrctrl5_2}%
 \begingl[aboveglcskip=1.5em, aboveglftskip=1.75em] % aboveglftskip=2.5em]
-	\gla {Sa nosaya} \textup{[\tsub{VP}} {} nimpyam \textup{]} {ang Amān} 
+	\gla {Sa nosaya} \textup{[\tsub{S}} {} nimpyam \textup{]} {ang Amān} 
 		Pada. //
 	\glb sa=nosa-ya {} {} nimp-yam {} ang=Amān Ø=Pada //
 	\glc \PatT{}=order-\TsgM{}%
@@ -9083,118 +9337,9 @@ objects in the embedded VP to become problematic.
 \end{tikzpicture}
 \xe
 
-\subsubsection{Reflexive binding}
-\label{subsubsec:reflbind}
+\subsubsection{Conclusion}
 
-...
-
-% \subsubsection{Termhood of the non-topic agent NP}
-% \label{subsubsec:agtnpterm}
-% 
-% ...
-
-% \begin{itemize}
-% 	\item \citet[1674--1676]{schachter2015}:
-% 	\begin{itemize}
-% 		\item The relation the verb marks should be called `trigger', as it is
-% 		inappropriate to identify it as the syntactic subject
-% 		\citep[1674]{schachter2015}.
-
-% 		\item Trigger system is not a voice system; calling it that disregards
-% 		differences between familiar voice systems and Tagalog's strategy
-% 		\citep[1674]{schachter2015}.
-
-% 		\item Properties commonly associated with the syntactic subject are
-% 		divided bewteen actor and trigger: actor is the addressee of
-% 		imperatives; actor controls reference of reflexive pronoun; only
-% 		triggers and ``certain constituents of triggers'' may be relativized;
-% 		only triggers can launch floated quantifiers; only actor \emph{or}
-% 		trigger may be deleted in so-called Equi-NP constructions (i.e. control
-% 		constructions, where the matrix verb passes either its S [= subject
-% 		control] or its O [= object control] down as the S of the subordinate
-% 		verb) \citep[1675]{schachter2015}.
-% 	\end{itemize}
-
-% 	\item \citet[19--52]{kroeger1991}:
-% 	\begin{itemize}
-% 		\item Floated quantifiers always modify \Nom{} argument as the
-% 		highest term (in reference to \cite[501]{schachter1976}; presumably
-% 		also referring to \Lfg{}'s functional hierarchy, cf.
-% 		\cite[230--231]{bresnan2016}?) \citep[23]{kroeger1991}.
-
-% 		\item Only \Nom{} can be relativized, gap in relative clause always
-% 		corresponds to the argument role signalled by the verb; relativized NP
-% 		may be of any role \citep[23--24]{kroeger1991}.
-
-% 		\item What number agreement on the verb there is, is with the \Nom{}
-% 		argument, independent of whether it is the actor or not
-% 		\citep[24--25]{kroeger1991}.
-
-% 		\item Raising verbs promote the \Nom{} argument of the complement
-% 		clause, which is not necessarily the actor (exs. 13, 14) which is
-% 		especially clear with clitic pronouns \citep[26]{kroeger1991}.
-% 		Non-\Nom{} actors may be raised only when a resumptive pronoun appears
-% 		in the complement clause \citep[28]{kroeger1991}. No NP in the
-% 		complement clause may be marked for \Nom{} and the raised argument in
-% 		the main clause must be marked \Nom{} \cite[29]{kroeger1991}.
-
-% 		\item Post-verbal secondary predicates must refer to \Nom{} if
-% 		occurring in post-verbal position; the \Nom{} argument is not
-% 		necessarily the actor \citep[29--30]{kroeger1991}.
-
-% 		\item Dropped \Nom{} arguments in subclauses are always interpreted as
-% 		referring to the coreferential \Nom{} argument in the main clause
-% 		\citep[30--31]{kroeger1991}. → relevance?
-
-% 		\item Only genitive attributes of \Nom{} NPs can be topicalized
-% 		\citep[31]{kroeger1991}. → relevance?
-
-% 		\item Only \Nom{} arguments can be deleted/omitted in `conjunction
-% 		reduction', and never non-\Nom{} actors or non-\Nom{} ``direct
-% 		objects''; this is different from both pro-drop and right node raising
-% 		\citep[32-34]{kroeger1991}.
-
-% 		\item Control verbs typically target the subject of their complement
-% 		clause, and both \Nom{} and actor arguments are eligible for this
-% 		purpose under certain circumstances, i.e. the controllee subject of a
-% 		transitive complement clause is not necessarily the actor
-% 		\citep[36--38]{kroeger1991}.
-
-% 		\item Non-\Nom{} actors are not demoted to oblique status (`chômeurs')
-% 		like in passives, i.e. they keep their status as terms and are thus
-% 		treated as objects \citep[38\psqq]{kroeger1991}. → relevance?
-
-% 		\item Existential, meteorological, and exclamatory sentences, and
-% 		experiencer verbs with indefinite objects lack \Nom{} arguments are
-% 		grammatical nonetheless. Existential and weather verbs are
-% 		cross-linguistically very common contexts for subjectlessness
-% 		\citep[46--49]{kroeger1991}. Applicability of an inversion construction
-% 		only applies to subjects, but can also apply to the single nominal
-% 		non-\Nom{} agent argument of exclamatory sentences involving
-% 		predicative adjectives \cite[50]{kroeger1991}.
-
-% 		\item Statistically, patients appear to be preferred subjects if
-% 		definite, unless a syntactic operation is applied to another argument
-% 		which requires that that relation be the subject; object-voice marked
-% 		verbs are also less marked than active-voice ones
-% 		\citep[53]{kroeger1991}.
-
-% 		\item Tagalog is thus basically an ergative language, but the termhood
-% 		of actors and their semantic and pragmatic prominence creates the
-% 		ambiguity in subjecthood mentioned above \citep[54]{kroeger1991}.
-
-% 		\item Statistics reveal that the \Nom{} argument is not the topic and
-% 		not the focus either; those NPs marked for \Nom{} are not especially
-% 		salient for topicality \citep[56\psqq]{kroeger1991}.
-
-% 		\item \Nom{} NP can also bear pragmatic focus (e.g. in
-% 		\fw{wh}-questions), which would be impossible if it were a
-% 		grammaticalized topic \citep[60\psqq]{kroeger1991}. \fw{ay}-inversion
-% 		patterns much better with notions of pragmatic topichood \citep[63]
-% 		{kroeger1991}.
-% 	\end{itemize}
-
-% \end{itemize}
+Now that a few tests were conducted, let us collect the results. ...
 
 \subsection{Establishing the constituent structure}
 \label{subsec:verbcstruct}
