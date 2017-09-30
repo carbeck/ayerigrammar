@@ -8197,7 +8197,7 @@ Tagalog \parencite[adapted from][26]{kroeger1991}:
 	\gla malapit na si=Manuel na hulihin ng=polis {} //
 	\glb \Nvol{}-close
 		already
-		$\underbrace{\text{\Nom{}=Manuel}}_{\text{S/A}%
+		$\underbrace{\text{\Nom{}=Manuel}}_{\text{S}%
 			\tikzmark{tagrais3a_act1}%
 		}$
 		\Comp{}
@@ -8224,7 +8224,7 @@ Tagalog \parencite[adapted from][26]{kroeger1991}:
 	([xshift=-.5*width{"s/p"}, yshift=-.75ex]%
 		{pic cs:tagrais3a_pat})
 	|- ++ (south:0.75em) -|
-	([xshift=-.5*width{"s/a"},yshift=-.75ex]%
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
 		{pic cs:tagrais3a_act1});
 \end{tikzpicture}
 
@@ -8234,12 +8234,12 @@ Tagalog \parencite[adapted from][26]{kroeger1991}:
 			\tikzmark{tagrais3b_vb1top}
 		$\underbrace{\text{\Nom{}=\smash{president}=\Comp{}}%
 			\tikzmark{tagrais3b_sb1}%
-		}_{\text{S/P}%
+		}_{\text{S}%
 			\tikzmark{tagrais3b_pat1}%
 		}$
 		\Pfv{}-bribe-\Dv{}%
 			\tikzmark{tagrais3b_vb2top}
-		$\underbrace{\text{\Gen{}=syndicate}}_{\text{A}}$
+		$\underbrace{\text{\Gen{}=\smash{syndicate}}}_{\text{A}}$
 		$\underbrace{%
 			\tikzmark{tagrais3b_sb2}%
 		}_{\text{S/P}%
@@ -8268,7 +8268,7 @@ Tagalog \parencite[adapted from][26]{kroeger1991}:
 	([xshift=-.5*width{"s/p"}, yshift=-.75ex]%
 		{pic cs:tagrais3b_pat2})
 	|- ++ (south:0.75em) -|
-	([xshift=-.5*width{"s/p"},yshift=-.75ex]%
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
 		{pic cs:tagrais3b_pat1});
 \end{tikzpicture}
 
@@ -8280,46 +8280,124 @@ no effect on grammatical relations; making a transitive verb agree with another
 NP but the agent NP was also judged questionable. Thus, we would expect Ayeri
 to not allow for the same flexibility as Tagalog. The next two sets of example
 sentences, (\ref{ex:ayrrais3}) and (\ref{ex:ayrrais4}), thus feature non-actor
-topics in the complement clause in the (a) examples which are attempted to be
-raised into the subject position of the matrix clause in the (b) examples.
+topics in the complement clause in the (a) examples which we attempt to raised
+into the subject position of the matrix clause in the (b) examples.
 
+\begin{figure}[htp]
 \pex\label{ex:ayrrais3}
-\a\label{ex:ayrrais3_1}\begingl
-	\gla Surpreng, le @ koronye ang @ Pila guratan$_i$. //
-	\glb surp-reng le= koron-ye ang= Pila guratan-Ø //
-	\glc seem-\Tsg{}.\AargI{} \PatTI{}= know-\TsgF{} \Aarg{}= Pila
-		guratan-\Top{} //
-	\glft `It seems that, as for the answer, Pila knows it.' //
+\a\label{ex:ayrrais3_1}\begingl[aboveglcskip=1.5em]
+	\gla Surpreng, \textup{[\tsub{CP}} {le koronye} {ang Pila} guratan
+		\textup{]}. //
+	\glb surp=reng {} le=koron-ye ang=Pila guratan-Ø {} //
+	\glc seem=$\underbrace{\text{\smash{\Tsg{}}.\AargI{}}}_{\text{dummy S}}$
+		{}
+		\PatTI{}=know-\TsgF{}%
+			\tikzmark{ayrrais3a_vb2top}
+		$\underbrace{\text{\Aarg{}=Pila}}_{\text{S/A}}$
+		$\underbrace{\text{\smash{guratan}-\Top{}}%
+			\tikzmark{ayrrais3a_top}%
+		}_{\text{P}}$
+		{} //
+	\glft `The answer, it seems that Pila knows it.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"pt.inan=know-3sg.f"}, yshift=2.25ex]%
+		{pic cs:ayrrais3a_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"guratan-top"}, yshift=2.25ex]%
+		{pic cs:ayrrais3a_top});
+\end{tikzpicture}
 
-\a\label{ex:ayrrais3_2}\ljudge*\begingl
-	\gla Surpara guratanreng$_i$ ang @ Pila koronyam \_$_i$. //
-	\glb surp-ara guratan-reng ang= Pila koron-yam {} //
-	\glc seem-\TsgI{} answer-\AargI{} \Aarg{}= Pila know-\Ptcp{} {} //
+\a\label{ex:ayrrais3_2}\ljudge*%
+\begingl[aboveglftskip=1.75em]
+	\gla Surpara guratanreng \textup{[\tsub{S}} {ang Pila} koronyam {}
+		\textup{]}. //
+	\glb surp-ara guratan-reng {} ang=Pila koron-yam {} {} //
+	\glc seem-\TsgI{}
+		$\underbrace{\text{answer-\AargI{}}}_{\text{S}%
+			\tikzmark{ayrrais3b_sb1}%
+		}$
+		{}
+		$\underbrace{\text{\Aarg{}=Pila}}_{\text{A}}$
+		know-\Ptcp{}
+		$\underbrace{}_{\text{P}%
+			\tikzmark{ayrrais3b_pat}%
+		}$
+		{} //
 	\glft \textit{Intended:} `The answer seems to be known by Pila.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"p"}, yshift=-.75ex]%
+		{pic cs:ayrrais3b_pat})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
+		{pic cs:ayrrais3b_sb1});
+\end{tikzpicture}
 
 \xe
+\end{figure}
 
-\pex~\label{ex:ayrrais4}
-\a\label{ex:ayrrais4_1}\begingl
-	\gla Silvreng, yam @ lataya ang @ Maran disaley {} @ Apitu$_i$. //
-	\glb Silv=reng yam= lata-ya ang= Maran disa-ley Ø= Apitu //
-	\glc look=\Tsg{}.\AargI{} \DatT{}= sell-\TsgM{} \Aarg{}= Maran
-		soap-\PargI{} \Top{}= Apitu //
-	\glft `It appears that, as for Apitu, Maran sold her the soap.' //
+\begin{figure}[htp]
+\pex\label{ex:ayrrais4}
+\a\label{ex:ayrrais4_1}\begingl[aboveglcskip=1.5em]
+	\gla Silvreng, \textup{[\tsub{CP}} {yam lataya} {ang Maran} disaley Apitu
+		\textup{]}. //
+	\glb Silv=reng {} yam=lata-ya ang=Maran disa-ley Ø=Apitu {} //
+	\glc look=$\underbrace{\text{\smash{\Tsg{}}.\AargI{}}}_{\text{dummy S}}$
+		{}
+		\DatT{}=sell-\TsgM{}%
+			\tikzmark{ayrrais4a_vb2top}
+		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S/A}}$
+		$\underbrace{\text{\smash{soap}-\PargI{}}}_{\text{T}}$
+		$\underbrace{\text{\Top{}=\smash{Apitu}}%
+			\tikzmark{ayrrais4a_top}%
+		}_{\text{R}}$
+		{}
+		//
+	\glft `Apitu, it appears that Maran sold her the soap.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"datt=sell-3sg.m"}, yshift=2.25ex]%
+		{pic cs:ayrrais4a_vb2top})
+	|- ++ (north:0.75em) -|
+	([xshift=-.5*width{"top=Apitu"}, yshift=2.25ex]%
+		{pic cs:ayrrais4a_top});
+\end{tikzpicture}
 
-\a\label{ex:ayrrais4_2}\ljudge*\begingl
-	\gla Silvye ang @ Apitu$_i$ ang @ Maran latayam disaley \_$_i$. //
-	\glb silv-ye ang= Apitu ang= Maran lata-yam disa-ley //
-	\glc look-\TsgF{} \Aarg{}= Apitu \Aarg{}= Maran sell-\Ptcp{} 
-		soap-\PargI{} //
+\a\label{ex:ayrrais4_2}\ljudge*%
+\begingl[aboveglftskip=1.75em]
+	\gla Silvye {ang Apitu} \textup{[\tsub{S}} {ang Maran} latayam disaley {}
+		\textup{]} //
+	\glb silv-ye ang=Apitu {} ang=Maran lata-yam disa-ley {} {} //
+	\glc look-\TsgF{}
+		$\underbrace{\text{\Aarg{}=\smash{Apitu}}}_{\text{S}%
+			\tikzmark{ayrrais4b_sb1}%
+		}$
+		{}
+		$\underbrace{\text{\Aarg{}=Maran}}_{\text{S/A}}$
+		sell-\Ptcp{} 
+		$\underbrace{\text{\smash{soap}-\PargI{}}}_{\text{T}}$
+		$\underbrace{}_{\text{R}%
+			\tikzmark{ayrrais4b_rec}%
+		}$
+		{} //
 	\glft \textit{Intended:} `Apitu appears to have been sold the soap by
 		Maran.' //
 \endgl
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([xshift=-.5*width{"r"}, yshift=-.75ex]%
+		{pic cs:ayrrais4b_rec})
+	|- ++ (south:0.75em) -|
+	([xshift=-.5*width{"s"},yshift=-.75ex]%
+		{pic cs:ayrrais4b_sb1});
+\end{tikzpicture}
 
 \xe
+\end{figure}
 
 Comparing (\ref{ex:ayrrais3}) and (\ref{ex:ayrrais4}) with
 (\ref{ex:tagrais3_1}) and (\ref{ex:tagrais3_2}), it becomes apparent that Ayeri
