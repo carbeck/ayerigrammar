@@ -9621,8 +9621,8 @@ layongye koyās, nay layayeng cuyam}{She said she would read the book, and she
 read (it) indeed} in Ayeri.} but it is possible to reproduce 
 (\ref{ex:engvconst}bc):
 
-\pex\label{ex:ayrvconst}
-\a\label{ex:ayrvconst_1}\begingl
+\pex\label{ex:ayrvconst1}
+\a\label{ex:ayrvconst1_1}\begingl
 	\gla Sa layaye ang @ Mali koya, naynay da-miraya ang @ Yan. //
 	\glb sa laya-ye ang= Mali koya-Ø naynay da=mira-ya ang= Yan //
 	\glc \PatT{} read-\TsgF{} \Aarg{}= Mali book-\Top{} and.also so=do-\TsgM{}
@@ -9630,7 +9630,7 @@ read (it) indeed} in Ayeri.} but it is possible to reproduce
 	\glft `The book, Mali read it, and Yan did so as well.' //
 \endgl
 
-\a\label{ex:ayrvconst_2}\begingl
+\a\label{ex:ayrvconst1_2}\begingl
 	\gla Sa layoyye ang @ Anang koya, nārya māy da-miraya ang @ Tang. //
 	\glb sa laya-oy-ye ang= Anang koya-Ø nārya māy da=mira-ya ang= Tang //
 	\glc \PatT{} read-\Neg{}-\TsgF{} \Aarg{}= Anang book-\Top{} but \Aff{}
@@ -9642,12 +9642,143 @@ read (it) indeed} in Ayeri.} but it is possible to reproduce
 
 Even though the verb and the object are not adjacent, it appears that together
 they can be replaced by \xayr{d/miry}{da-miraya}{(he) did}. In \textsc{gg} it
-would probably be assumed that the sentence in Ayeri actually has \xayr{lyye
-koyaasF}{layaye koyās}{(she) reads the book} underlying the sentences in
-(\ref{ex:ayrvconst}), though it should also be possible to analyze this in
-terms of f-structure.
+would probably be assumed that the sentences in (\ref{ex:ayrvconst1}) actually
+have \xayr{lyye koyaasF}{layaye koyās}{(she) reads the book} underlying, though
+it should also be possible to analyze this in terms of f-structure. Ayeri also
+allows to drop the repeated part completely, as (\ref{ex:ayrvconst2}) shows.
 
-...
+\ex\label{ex:ayrvconst2}\begingl
+	\gla Sa layaye ang @ Mali koya, naynay ang @ Yan. //
+	\glb sa laya-ye ang= Mali koya-Ø naynay ang= Yan //
+	\glc \PatT{} read-\TsgF{} \Aarg{}= Mali book-\Top{} and.also \Aarg{}= 
+		Yan //
+	\glft `The book, Mali read it, and Yan as well.' //
+\endgl
+\xe
+
+The example in (\ref{ex:ayrvconst3}) attempts to capture the functional
+structure of example (\ref{ex:ayrvconst1_1}) as representative of all three
+sentences in (\ref{ex:ayrvconst1}ab) and (\ref{ex:ayrvconst1_2}). The chart is
+based on the discussion of apparent V-to-I movement outlined in
+\autoref{sec:verbtypo}, where \xhead{I} is an extended head of VP, and thus is
+functionally equivalent to \xhead{V}. Hence, even though V and O are not
+directly adjacent in Ayeri, the pro-verb \xayr{mir/}{mira-}{do} may still stand
+in for the first conjunct's verb, and the argument structure of the first
+conjunct's verb as well as its object are copied to the second conjunct, with
+the object/topic of the first conjunct being dropped in order to avoid
+repetition. Replacement by a pro-form and dropping are thus not good measures
+to establish Ayeri's surface constituent structure with regards to VP.
+
+\begin{figure}
+\ex\label{ex:ayrvconst3}
+\begin{avm}
+\[
+	\[
+		\Conj \quad \textnormal{`and also'} \\
+		\{
+			\Pred	&	\astruct{read}{\ups{\Subj} \ups{\Obj}%
+				\tikzmark{ayrvconst1_1_args1}} \bigskip \\
+
+			\Top	&	\[
+				\Pred	&	`book' \\
+				\Anim	&	$-$ \\
+				\Case	&	\Parg \\
+			\] \tikzmark{ayrvconst1_1_top1} \\
+
+			\Subj	&	\[
+				\Pred	&	`Mali' \\
+				\Pers	&	\Third \\
+				\Num	&	\Sg \\
+				\Anim	&	$+$ \\
+				\Gend	&	\F \\
+				\Case	&	\Aarg{} \\
+			\] \tikzmark{ayrvconst1_1_subj1} \\
+
+			\Obj	&	\tikzmark{ayrvconst1_1_obj1} \\
+		\},
+
+		\{
+			\Pred	&	\astruct{do}{\quad\tikzmark{ayrvconst1_1_args2}} 
+				\tikzmark{ayrvconst1_1_vb2} \bigskip \\
+
+			\Top	&	[\quad\tikzmark{ayrvconst1_1_top2cont}] %
+				\tikzmark{ayrvconst1_1_top2} \\
+
+			\Subj	&	\[
+				\Pred	&	`Yan' \\
+				\Pers	&	\Third \\
+				\Num	&	\Sg \\
+				\Anim	&	$+$ \\
+				\Gend	&	\M \\
+				\Case	&	\Aarg{} \\
+			\] \tikzmark{ayrvconst1_1_subj2}~\hspace{2em} \\
+
+			\Obj	&	[\quad\tikzmark{ayrvconst1_1_obj2cont}] %
+				\tikzmark{ayrvconst1_1_obj2} \\
+		\}
+	\]
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+% Sentence 1 TOP--OBJ
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrvconst1_1_top1})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:ayrvconst1_1_obj1});
+
+% Sentence 2 TOP--OBJ
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrvconst1_1_top2})
+	-- ++(east:5em) |-
+	([yshift=1ex]{pic cs:ayrvconst1_1_obj2});
+
+% Sentence 1 verb args to sentence 2 verb args
+\draw
+	([xshift=-.5*width("(↑ subj) (↑ obj)"), yshift=-1ex]%
+		{pic cs:ayrvconst1_1_args1})
+	to [out=south, in=north]
+	([xshift=-.5*width("---"), yshift=1ex]{pic cs:ayrvconst1_1_args2});
+
+% Sentence 1 topic to sentence 2 topic
+\draw
+	([yshift=1ex]{pic cs:ayrvconst1_1_top1})
+	to [out=east, in=north]
+	([xshift=-.5*width("---"), yshift=1ex]{pic cs:ayrvconst1_1_top2cont});
+
+% Sentence 1 obj to sentence 2 obj
+\draw
+	([xshift=-.5*width("---"), yshift=1ex]{pic cs:ayrvconst1_1_obj1})
+	to [out=east, in=south]
+	([xshift=-.5*width("---"), yshift=1ex]{pic cs:ayrvconst1_1_obj2cont});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+However, we can exclude that the subject NP and V/I group together in that
+sentences where \xayr{mir/}{mira-}{do} is supposed to replace the subject and
+the verb are ungrammatical, as illustrated in (\ref{ex:ayrvconst4}).
+
+\ex\label{ex:ayrvconst4}%
+\ljudge*\begingl
+\gla Ang keca {} @ Mandan nikaley naynay miraya disuley. //
+\glb ang ket-ya Ø= Mandan nika-ley naynay mira-ya disu-ley //
+\glc \AgtT{} wash-\TsgM{} \Top{}= Mandan potato-\PargI{} and.also do-\TsgM{}
+	banana-\PargI{} //
+\glft `Mandan, he washes the potato and as well does the banana.' //
+\endgl\xe
+
+What is mostly awkward about this example is that there is a transitive
+sentence in the second conjunct, but no topic is marked on the verb. If an
+agent topic were marked as a logical continuation of the first conjunct, it
+would mean that the verb carries not simply the third-person agreement suffix
+\xayr{/y}{-ya}{-s}, but the topic-marked pronominal clitic
+\xayr{/y}{-ya}{he}. The conjunct, then, would have a separate subject,
+though, rendering our test futile. Switching the topic to the object of each
+conjunct would produce an awkward result as well, though, since topic
+continuity can be reasonably expected in this case. In this case the verb in
+the second conjunct would be obliged to carry the third-person pronominal
+clitic \xayr{/yaaNF}{-yāng}{he} and thus would again render the test futile.
 
 \subsubsection{Influence on thematic roles}
 
