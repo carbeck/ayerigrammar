@@ -6714,7 +6714,7 @@ agreement relationships: the verb governs role and case assignment (top arrow),
 while the nominative NP controls plural agreement on the verb (bottom arrow).
 As the arrows illustrate, the relationship between the assignment of the
 subject role and thus nominative case and plural agreement on the verb are
-congruent: the verb agrees in both (\ref{ex:tagagr_1}) and (\ref{ex:tagagr_2})
+symmetric: the verb agrees in both (\ref{ex:tagagr_1}) and (\ref{ex:tagagr_2})
 with the respective nominative NP, whether it is the agent (\ref{ex:tagagr_1})
 or not (\ref{ex:tagagr_2}).
 
@@ -6776,11 +6776,12 @@ agreement. In (\ref{ex:ayragr_2}), however, the relation is asymmetric in that
 the marking on the verb shows that the patient argument is the topic, while the
 verb still displays masculine person agreement. We know that the verb agrees
 with \rayr{AgYaanF}{Ajān} rather than with \rayr{pil}{Pila} because the latter
-is a female name, so the verb should have feminine agreement in that case.
-However, as the example shows, the verb continues to agree with the agent NP in
-spite of not being the topic of the clause. Topicalization appears to have no
-influence on the distribution of person agreement on the verb; the agent NP
-remains the subject. This is a very \Nom{}--\Acc{} trait.
+is a female name, so the verb should have feminine agreement if it were to
+agree with the patient NP. However, as the example shows, the verb continues to
+agree with the agent NP in spite of not being the topic of the clause.
+Topicalization appears to have no influence on the distribution of person
+agreement on the verb; the agent NP remains the subject. This is a very
+\Nom{}--\Acc{} trait.
 
 \begin{figure}
 \pex\label{ex:ayragr}
@@ -9955,6 +9956,185 @@ subject be (\ref{ex:subjctrl_3}).
 \xe
 
 \subsubsection{Binding}
+
+According to \citep{speas1990}, coreference of pronouns in English can be
+explained by the subject's being higher in a clause's structure than an object.
+From this, she deduces that if \textcquote[132]{speas1990}{some language has a
+`flat' structure, then the subject and object will c-command each other, and so
+it is possible for the object to bind the subject}. The anaphor would bind the
+subject in sentences like the following, instead of the other way around, so
+that the following sentences should be grammatical or ungrammatical,
+respectively:
+
+\pex\label{ex:flatbind}
+	\a\label{ex:flatbind_1} \fw{Mary$_i$ likes her$_i$ father.}
+	\a\label{ex:flatbind_2} \ljudge* \fw{Mary$_i$'s father likes her$_i$.}
+	\a\label{ex:flatbind_3} \fw{Her$_i$ father likes Mary$_i$.}
+	\a\label{ex:flatbind_4} \ljudge* \fw{She$_i$ likes Mary$_i$'s father.}
+\xe
+
+In Government and Binding theory, there are three binding principles posited,
+referring to the grammaticality of coreference between reflexive pronouns
+(`ana\-phora'), personal pronouns, and R-expressions (references to
+extralingusitic reality, like names):
+
+\pex\label{ex:gbprinciples}
+	The Binding Principles \citep[157]{carnie2013}:
+	\a\label{ex:gb_a}%
+		An anaphor must be bound [i.e. c-commanded, \CB] in its binding domain.
+	\a\label{ex:gb_b}%
+		A pronoun must be free [i.e. not c-commanded, \CB] in its binding
+		domain.
+	\a\label{ex:gb_c}%
+		An R-expression must be free.
+\xe
+
+\begin{figure}
+\ex\labels\label{ex:flatbindchart}
+\begin{tabular}[t]{@{} l @{\hspace{2em}} l}
+\tl\quad\begin{forest}
+[S
+	[NP
+		[Mary$_i$, roof]
+	]
+	[V
+		[likes]
+	]
+	[DP
+		[\xbar{D}
+			[\xhead{D}
+				[her$_i$]
+			]
+			[NP
+				[father, roof]
+			]
+		]
+	]
+]
+\end{forest}
+&
+\tl\quad\ljudge*\begin{forest}
+[S
+	[DP
+		[\xbar{D}
+			[\xhead{D}
+				[Mary$_i$'s]
+			]
+			[NP
+				[father, roof]
+			]
+		]
+	]
+	[V
+		[likes]
+	]
+	[DP
+		[her$_i$, roof]
+	]
+]
+\end{forest}
+\bigskip\\
+
+\tl\quad\begin{forest}
+[S
+	[DP
+		[\xbar{D}
+			[\xhead{D}
+				[Her$_i$]
+			]
+			[NP
+				[father, roof]
+			]
+		]
+	]
+	[V
+		[likes]
+	]
+	[NP
+		[Mary$_i$, roof]
+	]
+]
+\end{forest}
+&
+\tl\quad\ljudge*\begin{forest}
+[S
+	[DP
+		[She$_i$]
+	]
+	[V
+		[likes]
+	]
+	[DP
+		[\xbar{D}
+			[\xhead{D}
+				[Mary$_i$'s]
+			]
+			[NP
+				[father, roof]
+			]
+		]
+	]
+]
+\end{forest}
+\end{tabular}
+\xe
+\end{figure}
+
+According to these principles, (\ref{ex:flatbind_1}) is expected to be
+grammatical in a language in which the object c-commands the subject because
+\fw{Mary} is not bound by the pronoun \fw{her}, whose binding domain is \fw{her
+father}, so Principle C is not violated. However, in (\ref{ex:flatbind_2}), the
+pronoun c-commands \fw{Mary} and R-expressions must not be bound even across
+binding domains, so Principle C is violated here. Conversely again, \fw{her} in
+(\ref{ex:flatbind_3}) is free in its binding domain and in a different binding
+domain than \fw{Mary}, so even though \fw{her father} is commanded by
+\fw{Mary}, Principle B is not violated. Lastly, (\ref{ex:flatbind_4}) is
+ungrammatical again because \fw{she} is c-commanded and thus not free. Also
+compare the diagrams in (\ref{ex:flatbindchart}).
+
+The examples above assume a stucturalist approach, while I have so far tried to
+use a more flexible functional approach. \Lfg{}'s approach to binding are not
+based in constituent structure hierarchies, but in functional structure. It
+distinguishes nuclear (positive) and non-nuclear (negative) binding
+constraints using the inside-out principle to establish a relation between
+referents \citep[248]{bresnan2016}:
+
+\pex\label{ex:nucbind}
+\a\label{ex:nucbind_1}%
+	Positive (nuclear) binding constraint:\medskip \\
+	((DomainPath~↑) Antecedent \Index) = \ups{\Index}
+\a\label{ex:nucbind_2}%
+	Negative (non-nuclear) binding constraint:\medskip \\
+	((DomainPath~↑) Antecedent \Index) ≠ \ups{\Index}
+\xe
+
+The definition in (\ref{ex:nucbind_1}) states that for the current pronominal
+f-structure element there is a path to an antecedent which matches its
+\Index{}; (\ref{ex:nucbind_2}) states that there is not. Essentially, this is
+the difference between \fw{Mary$_i$ likes her$_i$ mother}, in which Mary likes
+her own mother (\Index{} $i$ and \Index{} $i$ are matching), and \fw{Mary$_i$
+likes her$_j$ mother}, in which Mary likes someone other \fw{her}'s mother
+(\Index{} $i$ and \Index{} $j$ are not matching).
+
+For pronominal f-structures, there is also a condition which states that the
+pronoun must be outranked by its antecedent on the functional hierarchy; the
+DomainPath is required to have a top attribute \GF{} which is \textcquote
+[248--249]{bresnan2016}{which is dominated on the functional hierarchy [...]
+by the antecedent}:
+
+\needspace{3\baselineskip}
+\pex
+\a\label{ex:funchier}%
+	Functional hierarchy \citep[229]{bresnan2016}:\medskip \\
+	$\Subj > \Obj > \SObj > \Oblique > \Compl > \Adjc$
+
+\a\label{ex:fsdpcond}%
+	F-structure DomainPath condition \citep[249]{bresnan2016}:\medskip \\
+	All DomainPaths in positive and negative binding constraints [...] must be
+	constructed so that: (i)~Domain Path = \GF{} $\alpha$ for some possibly
+	empty attribute string $\alpha$; (ii)~Antecedent = \xbar{\GF}; and
+	(iii)~\xbar{\GF} > \GF{} in the functional hierarchy [...].
+\xe
 
 ...
 
