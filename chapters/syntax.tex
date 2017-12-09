@@ -10092,6 +10092,349 @@ domain than \fw{Mary}, so even though \fw{her father} is commanded by
 ungrammatical again because \fw{she} is c-commanded and thus not free.
 % Also compare the diagrams in (\ref{ex:flatbindchart}).
 
+In \Lfg{}, however, due to its being based primarily on functional structure,
+the condition for binding is not based on the constituent structure of a
+clause. Rather, a pronoun is required to have an antecedent in the minimal
+f-structure of the predicator, that is, \textquote{the \Pred{} element and all
+of the elements whose attributes are functions designated by the \Pred{}}
+\parencites[230]{bresnan2016}[also compare][250]{bresnan2016}. For the examples
+above this means that functionally, a reversal of dependency relations is not
+possible, unless one were to assume that the pronoun could outrank the binding
+NP functionally so that, for instance, an \Obj{} could syntactically outrank a
+\Subj{}. Due to \Lfg{}'s design, even if the structure of the clause were flat,
+it is assumed that every language has grammatical functions, so that what
+functions as an object NP cannot normally outrank what functions as a subject
+NP. Besides, though, Ayeri does fulfill the requirements based on constituent
+structure sketched out above as well as the functional requirements, compare
+examples (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
+
+\begin{figure}
+\ex\label{ex:ayrbind_1}
+\begingl
+	\gla Ang @ vacye {} @ Mali badanas yena. //
+	\glb ang= vac-ye Ø= Mali badan-as yena //
+	\glc \AgtT{}= like-\TsgF{} \Top{} Mali father-\Parg{} \TsgF{}.\Gen{} //
+	\glft `Mali$_i$ likes her$_i$ father.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, 
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[Cl
+				[Ang]
+			]
+			[\xhead{I}
+				[vacye]
+			]
+		]
+		[S
+			[NP
+				[\xhead{N}, roof
+					[Mali$_i$]
+				]
+			]
+			[VP
+				[NP
+					[\xbar{N}
+						[\xhead{N}
+							[badan]
+						]
+						[DP
+							[\xhead{D}, roof
+								[yena$_i$]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj{}} \ups{\Obj}} \\
+
+	\Top	& \[
+		\Pred	&	`Mali$_i$' \\
+		\Case	&	\Aarg{} \\
+		\Pers	&	\Third \\
+		\Num	&	\Sg \\
+		\Anim	&	$+$ \\
+		\Gend	&	\F \\
+	\] \tikzmark{ayrbind1_top} \\
+
+	\Subj	&	\tikzmark{ayrbind1_subj} \\
+
+	\Obj	&	$g$: \[
+		\Pred	& \astruct{father-of}{\ups{\Possr}} \\
+		\Possr	& \[
+			\Pred	& `$pro_i$' \\
+			\Pers	& \Third \\
+			\Num	& \Sg \\
+			\Gend	& \F \\
+			\Anim	& $+$ \\
+			\Case	& \Gen \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrbind1_top})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:ayrbind1_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:ayrbind_2}
+\begingl
+	\gla Ang @ vacya badan na @ Mali yes. //
+	\glb ang= vac-ya badan-Ø na= Mali yes //
+	\glc \AgtT{}= like-\TsgM{} father-\Top{} \Gen{}= Mali \TsgF{}.\Parg{} //
+	\glft `Mali$_i$'s father, he likes her$_i$.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, 
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[Cl
+				[Ang]
+			]
+			[\xhead{I}
+				[vacya]
+			]
+		]
+		[S
+			[NP
+				[\xbar{N}
+					[\xhead{N}
+						[badan]
+					]
+					[NP
+						[\xhead{N}
+							[Cl
+								[na]
+							]
+							[\xhead{N}
+								[Mali$_i$]
+							]
+						]
+					]
+				]
+			]
+			[VP
+				[DP
+					[\xhead{D}, roof
+						[yes$_i$]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj{}} \ups{\Obj}} \\
+
+	\Top	& \[
+		\Pred	& \astruct{father-of}{\ups{\Possr}} \\
+		\Possr	& \[
+			\Pred	&	`Mali$_i$' \\
+			\Case	&	\Gen{} \\
+		\]
+	\] \tikzmark{ayrbind2_top} \\
+
+	\Subj	&	\tikzmark{ayrbind2_subj} \\
+
+	\Obj	&	$g$: \[
+		\Pred	& `$pro_i$' \\
+		\Pers	& \Third \\
+		\Num	& \Sg \\
+		\Gend	& \F \\
+		\Anim	& $+$ \\
+		\Case	& \Parg \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrbind2_top})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:ayrbind2_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:ayrbind_3}
+\begingl
+	\gla Ang @ vacya badan yena sa @ Mali. //
+	\glb ang= vac-ya badan yena sa= Mali //
+	\glc \AgtT{}= like-\TsgM{} father \TsgF{}.\Gen{} \Parg{}= Mali //
+	\glft `Her$_i$ father, he likes Mali$_i$.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, 
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[Cl
+				[Ang]
+			]
+			[\xhead{I}
+				[vacya]
+			]
+		]
+		[S
+			[NP
+				[\xbar{N}
+					[\xhead{N}
+						[badan]
+					]
+					[DP
+						[\xhead{D}, roof
+							[yena$_i$]
+						]
+					]
+				]
+			]
+			[VP
+				[NP
+					[\xhead{N}
+						[Cl
+							[sa]
+						]
+						[\xhead{N}
+							[Mali$_i$]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj{}} \ups{\Obj}} \\
+
+	\Top	& $g$: \[
+		\Pred	& \astruct{father-of}{\ups{\Possr}} \\
+		\Possr	& \[
+			\Pred	& `$pro_i$' \\
+			\Pers	& \Third \\
+			\Num	& \Sg \\
+			\Gend	& \F \\
+			\Anim	& $+$ \\
+			\Case	& \Gen \\
+		\] \\
+	\] \tikzmark{ayrbind3_top} \\
+
+	\Subj	&	\tikzmark{ayrbind3_subj} \\
+
+	\Obj	&	\[
+		\Pred	& `Mali$_i$' \\
+		\Anim	& $+$ \\
+		\Case	& \Parg \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrbind3_top})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:ayrbind3_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:ayrbind_4}
+\begingl
+	\gla Ang @ vacye badanas na @ Mali. //
+	\glb ang= vac=ye.Ø badan-as na= Mali //
+	\glc \AgtT{}= like=\TsgF{}.\Top{} father-\Parg{} \Gen{}= Mali //
+	\glft `As for her$_i$, she likes Mali$_{*i/j}$'s father.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, 
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[Cl
+				[Ang]
+			]
+			[\xhead{I}
+				[vacye$_i$]
+			]
+		]
+		[S
+			[VP
+				[NP
+					[\xbar{N}
+						[\xhead{N}
+							[badanas]
+						]
+						[NP
+							[\xhead{N}, roof
+								[Cl
+									[na]
+								]
+								[\xhead{N}
+									[Mali$_{*i/j}$]
+								]
+							]
+						]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj{}} \ups{\Obj}} \\
+
+	\Top	& \[
+		\Pred	& `$pro_i$' \\
+		\Pers	& \Third \\
+		\Num	& \Sg \\
+		\Gend	& \F \\
+		\Anim	& $+$ \\
+		\Case	& \Aarg \\
+	\] \tikzmark{ayrbind4_top} \\
+
+	\Subj	&	\tikzmark{ayrbind4_subj} \\
+
+	\Obj	&	$g$: \[
+		\Pred	& \astruct{father-of}{\ups{\Possr}} \\
+		\Possr	& \[
+			\Pred	& `Mali$_{*i/j}$' \\
+			\Case	& \Gen \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:ayrbind4_top})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:ayrbind4_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
 ...
 
 \begin{itemize}
