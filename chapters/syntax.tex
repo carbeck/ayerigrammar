@@ -10550,9 +10550,59 @@ existential statements in more formal language use the existential verb
 	\glft `The children are at school.' //
 \endgl\xe
 
-→ \citet{attia2008} for a proposal of how to treat copula constructions in \Lfg
-{}? (\cite{bresnan2016} favor \XCompl{}; \cite[104]{attia2008} for why this is
-problematic)
+How can we formalize the phrase structure and the functional structure of
+equative statements in Ayeri, though, especially since there is no overt
+copula, but the juxtaposition of two phrases creates a predication
+relationship? I will follow \citet{attia2008} in this, who rejects the analysis
+of predicative complements as \XCompl{} described, among others, by
+\citet{bresnan2016} in favor of treating them as closed complements of the
+\Plink{} type \citep[??]{butt1999}. He maintains
+\textcquote[105]{attia2008}{the closed complement analysis is the default
+syntactic representation for all languages. The presence vs. absence of a
+copula, presence vs. absence of agreement features on the predicate are all
+paradigmatic alternations that do not affect the syntactic function}. Relatedly
+he claims that, moreover, the \textcquote[107]{attia2008}{presence or absence
+of a copula is a parameter of variation. The copula itself is considered
+semantically redundant}. \citet{attia2008}, in reference to
+\citet{dalrymple2004}, describes the structure of a copula clause with a
+zero-copula essentially in the following way:
+
+\ex\label{ex:copstruct}
+	S → \anno*[\pass{\Subj}]{NP} \anno*[%
+		\ups{\Pred}~=~\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
+	]{$\epsilon$} \anno*[\pass{\Plink}]{XP}
+\xe
+
+What this equation does is to introduce a \Pred{} into the phrase structure as
+an empty node which subcategorizes for the required functions, since
+\citet{attia2008} argues that whether a nominal takes a \Plink{} is not
+determined by its lexical entry, but is a constraint on phrase structure \citep
+[103]{attia2008}. XP in this case may be NP, AP, PP, or CP; \fw{null-be} is
+basically a dummy since we still need a label for what assigns \Pred{} in the
+clause. The phrase structure rule in (\ref{ex:copstruct}) results in the
+c-structure---a small clause---in (\ref{ex:copcstruct}) and corresponds to the
+f-structure in (\ref{ex:copfstruct}).
+
+\ex\label{ex:copcstruct}
+\begin{forest} shorter edges,
+[S
+	[{\anno[\pass{\Subj}]{NP}}]
+	[{\anno[\pass{\Plink}]{XP}}]
+]
+\end{forest}
+\xe
+
+\ex~\label{ex:copfstruct}
+\begin{avm}
+\[
+	\Pred	& \astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	& ... \\
+	\Plink	& \[
+		\Pred	& ... \\
+	\]\\
+\]
+\end{avm}
+\xe
 
 ...
 
