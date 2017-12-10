@@ -81,9 +81,14 @@
 % however, it contains a stupid bug in dependency checking, see
 % <http://tex.stackexchange.com/a/85700>.
 \usepackage{mathspec}
-\makeatletter % undo the wrong changes made by mathspec
+\makeatletter
+% undo the wrong changes made by mathspec
 \let\RequirePackage\original@RequirePackage
 \let\usepackage\RequirePackage
+
+% use alternative epsilon shape instead of default
+\let\epsilon\original@epsilon
+\let\epsilon\varepsilon
 \makeatother
 \usepackage{mathtools}
 \usepackage{amsmath}
@@ -487,6 +492,7 @@
 \newleipzig{Pers}{pers}{person}
 \newleipzig{Possr}{poss}{possessor}
 \newleipzig{Pred}{pred}{predicator}
+\newleipzig{Plink}{predlink}{predication link}
 \newleipzig{Prontype}{prontype}{pronoun type}
 \newleipzig{PSem}{psem}{prepositional semantics}
 \newleipzig{Spec}{spec}{specificity}
