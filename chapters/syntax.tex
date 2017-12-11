@@ -10122,7 +10122,7 @@ examples (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
 	\glft `Mali$_i$ likes her$_i$ father.' //
 \endgl\medskip
 
-\begin{forest} shorter edges, 
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\xbar{I}
 		[\xhead{I}
@@ -10201,7 +10201,7 @@ $f$: \[
 	\glft `Mali$_i$'s father, he likes her$_i$.' //
 \endgl\medskip
 
-\begin{forest} shorter edges, 
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\xbar{I}
 		[\xhead{I}
@@ -10284,7 +10284,7 @@ $f$: \[
 	\glft `Her$_i$ father, he likes Mali$_i$.' //
 \endgl\medskip
 
-\begin{forest} shorter edges, 
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\xbar{I}
 		[\xhead{I}
@@ -10368,7 +10368,7 @@ $f$: \[
 	\glft `As for her$_i$, she likes Mali$_{*i/j}$'s father.' //
 \endgl\medskip
 
-\begin{forest} shorter edges, 
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\xbar{I}
 		[\xhead{I}
@@ -10590,6 +10590,7 @@ arguments in the clause. The phrase structure rule in (\ref{ex:copstruct})
 results in the c-structures---both small clauses---in (\ref{ex:copcstruct}) and
 corresponds to the f-structure in (\ref{ex:copfstruct}).
 
+\begin{figure}
 \pex\label{ex:copcstruct}
 \a\begin{forest} shorter edges,
 [S
@@ -10617,6 +10618,7 @@ corresponds to the f-structure in (\ref{ex:copfstruct}).
 \]
 \end{avm}
 \xe
+\end{figure}
 
 The phrase structure equation in (\ref{ex:copstruct}) indicates that there is
 an empty node $\epsilon$, however, since \Lfg{} avoids empty nodes in
@@ -10626,25 +10628,15 @@ clause, as previously.
 
 \pex\label{ex:copcompl}
 \a\label{ex:copcompl_ap}%
-\begin{minipage}[t]{\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
 	\gla Mabo parayang. //
 	\glb mabo paray-ang //
 	\glc hungry cat-\Aarg{} //
 	\glft `The cat is hungry.' //
-\endgl\medskip
-
-\begin{forest}
-[S
-	[{\anno[\pass{\Plink}]{AP}}
-		[mabo, roof]
-	]
-	[{\anno[\pass{\Subj}]{NP}}
-		[parayang, roof]
-	]
-]
-\end{forest}
-~\hfill
+\endgl
+\end{minipage}
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
@@ -10654,69 +10646,47 @@ clause, as previously.
 	\Subj	&	\[
 		\Pred	&	`cat' \\
 		\Case	&	\Aarg \\
-		\Anim	&	$+$ \\
+	%	\Anim	&	$+$ \\
 	\] \\
 \]
 \end{avm}
-\end{minipage}
 
 \a\label{ex:copcompl_np}%
-\begin{minipage}[t]{\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
 	\gla Ang @ Ijān petāyās. //
 	\glb ang= Ijān petāya-as //
 	\glc \Aarg{}= Ijān idiot-\Parg{} //
 	\glft `Ijān is an idiot.' //
-\endgl\medskip
-
-\begin{forest}
-[S
-	[{\anno[\pass{\Subj}]{NP}}
-		[Ang Ijān, roof]
-	]
-	[{\anno[\pass{\Plink}]{NP}}
-		[petāyās, roof]
-	]
-]
-\end{forest}
-~\hfill
+\endgl
+\end{minipage}
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
 	\Subj	&	\[
 		\Pred	&	`Ijān' \\
 		\Case	&	\Aarg \\
-		\Anim	&	$+$ \\
+	%	\Anim	&	$+$ \\
 	\] \\
 	\Plink	&	\[
 		\Pred	&	`idiot' \\
 		\Case	&	\Parg \\
-		\Anim	&	$+$
+	%	\Anim	&	$+$
 	\] \\
 \]
 \end{avm}
-\end{minipage}
 
 \a\label{ex:copcompl_dp}%
-\begin{minipage}[t]{\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
 	\gla Yang sitang-yās. //
 	\glb yang sitang-yās //
 	\glc \Fsg{}.\Aarg{} self=\Fsg{}.\Parg{} //
 	\glft `I am myself.' //
-\endgl\medskip
-
-\begin{forest}
-[S
-	[{\anno[\pass{\Subj}]{DP}}
-		[Yang, roof]
-	]
-	[{\anno[\pass{\Plink}]{DP}}
-		[sitang-yās, roof]
-	]
-]
-\end{forest}
-~\hfill
+\endgl
+\end{minipage}
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
@@ -10728,35 +10698,24 @@ clause, as previously.
 	\] \\
 \]
 \end{avm}
-\end{minipage}
 
 \a\label{ex:copcompl_cp}%
-\begin{minipage}[t]{\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
 	\gla Prantanreng, sahatang? //
 	\glb prantan-reng saha=tang //
 	\glc question-\AargI{} come=\TplM{}.\Aarg{} //
 	\glft `The question is, will they come?' //
-\endgl\medskip
-
-\begin{forest}
-[S
-	[{\anno[\pass{\Subj}]{NP}}
-		[Prantanreng, roof]
-	]
-	[{\anno[\pass{\Plink}]{CP}}
-		[sahatang, roof]
-	]
-]
-\end{forest}
-~\hfill
+\endgl
+\end{minipage}
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
 	\Subj	&	\[
 		\Pred	&	`question' \\
 		\Case	&	\Aarg \\
-		\Anim	&	$-$ \\
+	%	\Anim	&	$-$ \\
 	\] \\
 	\Plink	&	\[
 		\Pred	&	\astruct{come}{\ups{\Subj}} \\
@@ -10766,28 +10725,17 @@ clause, as previously.
 	\] \\
 \]
 \end{avm}
-\end{minipage}
 
 \a\label{ex:copcompl_pp}%
-\begin{minipage}[t]{\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
 	\gla Yāng rangya. //
 	\glb yāng rang-ya //
 	\glc \TsgM{}.\Aarg{} home-\Loc{} //
 	\glft `He's at home.' //
-\endgl\medskip
-
-\begin{forest}
-[S
-	[{\anno[\pass{\Subj}]{DP}}
-		[Yāng, roof]
-	]
-	[{\anno[\pass{\Plink}]{PP}}
-		[rangya, roof]
-	]
-]
-\end{forest}
-~\hfill
+\endgl
+\end{minipage}
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
@@ -10800,7 +10748,6 @@ clause, as previously.
 	\] \\
 \]
 \end{avm}
-\end{minipage}
 
 \xe
 
@@ -10812,31 +10759,15 @@ that is, as an \Adjc{} within \Plink{}. This is illustrated by
 (\ref{ex:copadv}).
 
 \begin{figure}
-\ex\label{ex:copadv}\begingl
+\ex\label{ex:copadv}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
 	\gla Mabo netoy ang @ Briha. //
 	\glb mabo netoy ang= Briha //
 	\glc hungry not.anymore \Aarg{}= Briha //
 	\glft `Briha is not hungry anymore.' //
 \endgl\medskip
 
-\begin{forest}
-[S
-	[{\anno[\pass{\Plink}]{AP}}
-		[\anno{\xbar{A}}
-			[\anno{\xhead{A}}
-				[mabo]
-			]
-			[{\anno[\pass{\Adjc}]{AdvP}}
-				[netoy, roof]
-			]
-		]
-	]
-	[{\anno[\pass{\Subj}]{NP}}
-		[ang Briha, roof]
-	]
-]
-\end{forest}
-~\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
@@ -10853,6 +10784,25 @@ that is, as an \Adjc{} within \Plink{}. This is illustrated by
 	\] \\
 \]
 \end{avm}
+\end{minipage}
+\hfill
+\begin{forest} narrower nodes, shorter edges, italic leaves,
+[S
+	[{\anno[\pass{\Plink}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[mabo]
+			]
+			[{\anno[\pass{\Adjc}]{AdvP}}
+				[netoy, roof]
+			]
+		]
+	]
+	[{\anno[\pass{\Subj}]{NP}}
+		[ang Briha, roof]
+	]
+]
+\end{forest}
 \xe
 \end{figure}
 
@@ -10867,8 +10817,13 @@ general rule. The former assumption would need us to modify the phrase
 structure equation in (\ref{ex:copstruct}) to account for an optional copula
 element. Since this is a question of constituency, testing word order and
 replaceability by a pro-form should clarify these matters. First, let us test a
-sentence without an emphatic particle:
+sentence without an emphatic particle (\ref{ex:copnoemph}). Ayeri permits the
+subject and the predicate of a simple copula clause to be reversed, for
+instance, for contrastive focus, as in (\ref{ex:copnoemph_2}). The predicate
+can also be replaced by a pro-form, which is illustrated by
+\xayr{d/kYuymF}{da-cuyam}{indeed so} in (\ref{ex:copnoemph_3}).
 
+\begin{figure}
 \pex\label{ex:copnoemph}
 \a\label{ex:copnoemph_1}\begingl
 	\gla Ang @ Apan nimpayās ban. //
@@ -10887,15 +10842,10 @@ sentence without an emphatic particle:
 	\glc so=indeed \Aarg{}= Apan //
 	\glft `Indeed Apan is.' //
 \endgl
-
 \xe
+\end{figure}
 
-Ayeri permits the subject and the predicate of a simple copula clause to be
-reversed, for instance, for contrastive focus, as in (\ref{ex:copnoemph_2}).
-The predicate can also be replaced by a pro-form, which is illustrated by
-\xayr{d/kYuymF}{da-cuyam}{indeed so} in (\ref{ex:copnoemph_3}). Let us now
-introduce \rayr{maaj}{māy} as a positive emphatic particle.
-
+\begin{figure}
 \pex\label{ex:copemph}
 \a\label{ex:copemph_1}\begingl
 	\gla Ang @ Apan māy nimpayās ban. //
@@ -10919,21 +10869,22 @@ introduce \rayr{maaj}{māy} as a positive emphatic particle.
 \a\label{ex:copemph_5}%
 	\fw{Da-cuyam ang Apan.} \\
 	`Indeed Apan is.'
-
 \xe
+\end{figure}
 
-It appears that \rayr{maaj}{māy} does not fulfill the role of linking subject
-and predicate, so (\ref{ex:copemph_2}) is nonsensical. Instead, it may move to
-the front together with the predicate (\ref{ex:copemph_3}). It is also possible
-for it to stand alone at the beginning of a clause, then emphasizing the
-statement as such, as shown in (\ref{ex:copemph_4}); its position here is
-probably not that of a finite verb. The whole phrase \rayr{maaj niMpyaasF bnF}
-{māy nimpayās ban} can also be replaced as a unit as illustrated by
-(\ref{ex:copemph_5}). All in all, it seems that \rayr{maaj}{māy} is basically a
-discourse particle and as such does not perform the role of a copula, but it
-seems to be more similar to a clitic in nature, binding to the left edge of a
-phrase. As previously, we can test its status as a word by trying to place
-words between it and the word it follows:
+Let us now introduce \rayr{maaj}{māy} as a positive emphatic particle
+(\ref{ex:copemph}). It appears that \rayr{maaj}{māy} does not fulfill the role
+of linking subject and predicate, so (\ref{ex:copemph_2}) is nonsensical.
+Instead, it may move to the front together with the predicate
+(\ref{ex:copemph_3}). It is also possible for it to stand alone at the
+beginning of a clause, then emphasizing the statement as such, as shown in
+(\ref{ex:copemph_4}); its position here is probably not that of a finite verb.
+The whole phrase \rayr{maaj niMpyaasF bnF} {māy nimpayās ban} can also be
+replaced as a unit as illustrated by (\ref{ex:copemph_5}). All in all, it seems
+that \rayr{maaj}{māy} is basically a discourse particle and as such does not
+perform the role of a copula, but it seems to be more similar to a clitic in
+nature, binding to the left edge of a phrase. As previously, we can test its
+status as a word by trying to place words between it and the word it follows:
 
 \ex\label{ex:copemphclit}\ljudge*\begingl
 	\gla Ang @ Apan māy, naratang, nimpayās ban. //
