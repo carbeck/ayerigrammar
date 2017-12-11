@@ -10135,9 +10135,7 @@ examples (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
 		]
 		[S
 			[NP
-				[\xhead{N}, roof
-					[Mali$_i$]
-				]
+				[Mali$_i$, roof]
 			]
 			[VP
 				[NP
@@ -10146,9 +10144,7 @@ examples (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
 							[badan]
 						]
 						[DP
-							[\xhead{D}, roof
-								[yena$_i$]
-							]
+							[yena$_i$, roof]
 						]
 					]
 				]
@@ -10235,9 +10231,7 @@ $f$: \[
 			]
 			[VP
 				[DP
-					[\xhead{D}, roof
-						[yes$_i$]
-					]
+					[yes$_i$, roof]
 				]
 			]
 		]
@@ -10305,9 +10299,7 @@ $f$: \[
 						[badan]
 					]
 					[DP
-						[\xhead{D}, roof
-							[yena$_i$]
-						]
+						[yena$_i$, roof]
 					]
 				]
 			]
@@ -10539,7 +10531,7 @@ a predicate rather than attributive of the noun it refers to. Furthermore,
 Ayeri marks predicative NPs with the patient case as a further quirk, as shown
 in (\ref{ex:ayreqstmt_3}). It needs to be pointed out here as well that
 existential statements in more formal language use the existential verb
-\xayr{yom/}{yoma-}{be, exist} instead of juxtaposition, as in 
+\xayr{yom/}{yoma-}{be (in a place), exist} instead of juxtaposition, as in 
 (\ref{ex:ayrexstmt}). We will have a closer look at existential statements in
 \autoref{subsec:exs}.
 
@@ -10568,32 +10560,41 @@ of a copula is a parameter of variation. The copula itself is considered
 semantically redundant}. For him, whether there is an overt copula morpheme or
 not, is secondary to capturing its function, which is present either way. He
 also attempts to keep f-structure free from artifacts of morphological
-variation to create a generalized way of describing copulaic clauses
+variation to create a generalized way of describing copula clauses
 independent of how individual languages deal with them. \citet{attia2008}, in
 reference to \citet{dalrymple2004}, describes the structure of a copula clause
-with a zero-copula essentially in the following way:
+with a zero-copula essentially in the following way (adapted for Ayeri):
 
 \ex\label{ex:copstruct}
-	S → \anno*[\pass{\Subj}]{NP} \anno*[%
+	S → \anno*[\pass{\Subj}]{XP} \anno*[%
 		\ups{\Pred}~=~\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
-	]{$\epsilon$} \anno*[\pass{\Plink}]{XP}
+	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}
+	$\left(\anno*[\pass{\Subj}]{XP}\right)$
 \xe
 
-What this equation does is to introduce a \Pred{} into the phrase structure as
+What this equation does, is to introduce a \Pred{} into the phrase structure as
 an empty node which subcategorizes for the required functions, since
 \citet{attia2008} argues that whether a nominal takes a \Plink{} is not
 determined by its lexical entry, but is a constraint on phrase structure \citep
-[103]{attia2008}. XP in this case may be NP, AP, PP, or CP; \fw{null-be} is
-basically a dummy since we still need a label for what assigns \Pred{} in the
-clause. The phrase structure rule in (\ref{ex:copstruct}) results in the
-c-structure---a small clause---in (\ref{ex:copcstruct}) and corresponds to the
-f-structure in (\ref{ex:copfstruct}).
+[103]{attia2008}. XP may be an NP or a DP here, and YP may be an NP, DP, AP,
+CP, and colloquially a PP; \fw{null-be} is basically a dummy since we still
+need a label for what assigns \Pred{} in order to establish coherence of the
+arguments in the clause. The phrase structure rule in (\ref{ex:copstruct})
+results in the c-structures---both small clauses---in (\ref{ex:copcstruct}) and
+corresponds to the f-structure in (\ref{ex:copfstruct}).
 
-\ex\label{ex:copcstruct}
-\begin{forest} shorter edges,
+\pex\label{ex:copcstruct}
+\a\begin{forest} shorter edges,
 [S
-	[{\anno[\pass{\Subj}]{NP}}]
-	[{\anno[\pass{\Plink}]{XP}}]
+	[{\anno[\pass{\Subj}]{XP}}]
+	[{\anno[\pass{\Plink}]{YP}}]
+]
+\end{forest}
+
+\a\begin{forest} shorter edges,
+[S
+	[{\anno[\pass{\Plink}]{YP}}]
+	[{\anno[\pass{\Subj}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -10609,6 +10610,244 @@ f-structure in (\ref{ex:copfstruct}).
 \]
 \end{avm}
 \xe
+
+The phrase structure equation in (\ref{ex:copstruct}) indicates that there is
+an empty node $\epsilon$, however, since \Lfg{} avoids empty nodes in
+c-structure graphs, I have not included it in (\ref{ex:copcstruct}). In the
+following, I will list an example of each type of complement in a copula
+clause, as previously.
+
+\pex\label{ex:copcompl}
+\a\label{ex:copcompl_ap}%
+\begin{minipage}[t]{\remaining}
+\begingl
+	\gla Mabo parayang. //
+	\glb mabo paray-ang //
+	\glc hungry cat-\Aarg{} //
+	\glft `The cat is hungry.' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Plink}]{AP}}
+		[mabo, roof]
+	]
+	[{\anno[\pass{\Subj}]{NP}}
+		[parayang, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Plink	&	\[
+		\Pred	&	`hungry' \\
+	\] \\
+	\Subj	&	\[
+		\Pred	&	`cat' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+
+\a\label{ex:copcompl_np}%
+\begin{minipage}[t]{\remaining}
+\begingl
+	\gla Ang @ Ijān petāyās. //
+	\glb ang= Ijān petāya-as //
+	\glc \Aarg{}= Ijān idiot-\Parg{} //
+	\glft `Ijān is an idiot.' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Subj}]{NP}}
+		[Ang Ijān, roof]
+	]
+	[{\anno[\pass{\Plink}]{NP}}
+		[petāyās, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\Pred	&	`Ijān' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+	\] \\
+	\Plink	&	\[
+		\Pred	&	`idiot' \\
+		\Case	&	\Parg \\
+		\Anim	&	$+$
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+
+\a\label{ex:copcompl_dp}%
+\begin{minipage}[t]{\remaining}
+\begingl
+	\gla Yang sitang-yās. //
+	\glb yang sitang-yās //
+	\glc \Fsg{}.\Aarg{} self=\Fsg{}.\Parg{} //
+	\glft `I am myself.' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Subj}]{DP}}
+		[Yang, roof]
+	]
+	[{\anno[\pass{\Plink}]{DP}}
+		[sitang-yās, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\avmspan{``I''}
+	\] \\
+	\Plink	&	\[
+		\avmspan{``myself''}
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+
+\a\label{ex:copcompl_cp}%
+\begin{minipage}[t]{\remaining}
+\begingl
+	\gla Prantanreng, sahatang? //
+	\glb prantan-reng saha=tang //
+	\glc question-\AargI{} come=\TplM{}.\Aarg{} //
+	\glft `The question is, will they come?' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Subj}]{NP}}
+		[Prantanreng, roof]
+	]
+	[{\anno[\pass{\Plink}]{CP}}
+		[sahatang, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\Pred	&	`question' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$-$ \\
+	\] \\
+	\Plink	&	\[
+		\Pred	&	\astruct{come}{\ups{\Subj}} \\
+		\Subj	&	\[
+			\avmspan{``they''}
+		\] \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+
+\a\label{ex:copcompl_pp}%
+\begin{minipage}[t]{\remaining}
+\begingl
+	\gla Yāng rangya. //
+	\glb yāng rang-ya //
+	\glc \TsgM{}.\Aarg{} home-\Loc{} //
+	\glft `He's at home.' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Subj}]{DP}}
+		[Yāng, roof]
+	]
+	[{\anno[\pass{\Plink}]{PP}}
+		[rangya, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\avmspan{``he''}
+	\] \\
+	\Plink	&	\[
+		\Pred	&	`home' \\
+		\Case	&	\Loc \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+
+\xe
+
+Another question related to copula clauses is how to treat adverbs, since there
+is no VP to attach them to. Since \citet{attia2008} says that the literature
+agrees on that the copula is \textcquote[107]{attia2008}{semantically
+redundant}, one might instead prefer to treat adverbs as part of the
+predication, that is, as an \Adjc{} within \Plink{}. This is illustrated by 
+(\ref{ex:copadv}).
+
+\begin{figure}
+\ex\label{ex:copadv}\begingl
+	\gla Mabo netoy ang @ Briha. //
+	\glb mabo netoy ang= Briha //
+	\glc hungry not.anymore \Aarg{}= Briha //
+	\glft `Briha is not hungry anymore.' //
+\endgl\medskip
+
+\begin{forest}
+[S
+	[{\anno[\pass{\Plink}]{AP}}
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[mabo]
+			]
+			[{\anno[\pass{\Adjc}]{AdvP}}
+				[netoy, roof]
+			]
+		]
+	]
+	[{\anno[\pass{\Subj}]{NP}}
+		[ang Briha, roof]
+	]
+]
+\end{forest}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\Pred	&	`Briha' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+	\] \\
+	\Plink	&	\[
+		\Pred	&	`hungry' \\
+		\Adjc	&	\{\[
+				\Pred	&	`not anymore' \\
+		\]\}
+	\] \\
+\]
+\end{avm}
+\xe
+\end{figure}
 
 ...
 
