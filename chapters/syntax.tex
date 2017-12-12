@@ -276,6 +276,7 @@ possessor (genitive NP/DP), relative clause (forming a complementizer phrase,
 CP). This can be represented as a constituent-structure tree in the way
 described in (\ref{ex:npcstruct}).
 
+\begin{figure}
 \ex\label{ex:npcstruct}\labels
 \begin{forest} shorter edges,
 [{\anno[\{\pass{df} | \pass{gf}\}]{NP}}
@@ -295,15 +296,17 @@ described in (\ref{ex:npcstruct}).
 ]
 \end{forest}
 \xe
+\end{figure}
 
-Here as well, we can see a nominal head on the left which may be modified by
-phrases of various types. The maximal projection of \xhead{N} (that is, NP) is
-annotated very generally for the function of the NP---basically, an NP can act
-as either a discourse function (\DF{}) or a grammatical function (\GF{}). 
-(\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is 
-no grammatical context given, NP is unmarked for function in these examples.
+In (\ref{ex:npcstruct}) as well, we can see a nominal head on the left which
+may be modified by phrases of various types. The maximal projection of
+\xhead{N} (that is, NP) is annotated very generally for the function of the
+NP---basically, an NP can act as either a discourse function (\DF{}) or a
+grammatical function (\GF{}). (\ref{ex:nounmods}) gives an example of each kind
+of modifier. Since there is no grammatical context given, NP is unmarked for
+function in these examples.
 
-%\begin{figure}[hp]
+\begin{figure}
 \pex\label{ex:nounmods}
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -402,7 +405,7 @@ no grammatical context given, NP is unmarked for function in these examples.
 	\end{forest}
 
 \xe
-%\end{figure}
+\end{figure}
 
 As described before (compare \autoref{subsec:clitics}), nouns can be modified
 by a number of clitics which are not represented through syntax. Since it is
@@ -411,6 +414,7 @@ hosts, they should be treated as being an integral part of the word they attach
 to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 \xhead{N}.
 
+\begin{figure}
 \pex\label{ex:nouncltree}
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -479,6 +483,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 	\end{forest}
 
 \xe
+\end{figure}
 
 Of course, it is also possible to combine these nominal modifiers. In this
 case, there is a certain hierarchy, presumably based on Behaghel's first law,
@@ -505,6 +510,7 @@ information content after them, especially when it refers to a different head
 than all the things inside the relative clause. The following example
 (\ref{ex:nounmodord}) illustrates the unmarked order of modifiers.
 
+\begin{figure}
 \pex\label{ex:nounmodord}
 \a\begingl
 	\gla diranang caban nā si ang mica ya @ Kārvisam //
@@ -537,8 +543,8 @@ than all the things inside the relative clause. The following example
 	]
 ]
 \end{forest}
-
 \xe
+\end{figure}
 
 As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers
 head--dependent word order with exceeding consistency. As illustrated by
@@ -608,7 +614,8 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 \xe
 \end{morphlex}
 
-\pex~\label{ex:nounqadj}
+\begin{figure}
+\pex\label{ex:nounqadj}
 \a\begingl
 	\gla ganang-hen mino //
 	\glb gan-ang=hen mino //
@@ -634,6 +641,7 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 \]
 \end{avm}
 \xe
+\end{figure}
 
 \subsubsection{Morphosyntactic operations within the noun phrase}
 
@@ -642,6 +650,7 @@ in the choice of case markers of the agent and patient cases, which need to
 agree with the lexical head they attach to. An example of this is given in 
 (\ref{ex:animcaseagr}).
 
+\begin{figure}
 \ex\label{ex:animcaseagr}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\label{ex:animok} %
@@ -685,6 +694,7 @@ agree with the lexical head they attach to. An example of this is given in
 \end{forest}
 \end{minipage}
 \xe
+\end{figure}
 
 Example (\ref{ex:animcaseagr}a) shows a well-formed construction: the noun,
 \xayr{gnF}{gan}{child}, is animate, hence the case particle also needs to be 
@@ -694,8 +704,9 @@ the noun is animate but the case particle, \rayr{/reNF}{-reng}, signals that it
 is inanimate: the \Anim{} values of the noun stem and its suffix clash and
 cannot be conclusively unified for \xhead{N} itself. The same principle of
 coherence is, of course, also true for proper nouns, which receive a
-case-marking particle:
+case-marking particle, as illustrated by (\ref{ex:animcaseagrname}).
 
+\begin{figure}
 \ex\label{ex:animcaseagrname}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\label{ex:animokname} %
@@ -739,6 +750,7 @@ case-marking particle:
 \end{forest}
 \end{minipage}
 \xe
+\end{figure}
 
 Furthermore, example (\ref{ex:nounqadj}) already showed that nouns may be
 modified by quantifiers, whether these are clitic suffixes
@@ -748,9 +760,9 @@ which supplies the information by itself so that further morphological plural
 marking by the suffix \rayr{/ye}{-ye} on the noun stem itself would be
 redundant. As shown in \autoref{sec:numerals} (p.~\pageref{hundreds}), however,
 there are very limited occasions where a noun may be marked for plural in spite
-of the presence of a numeral, for instance:
+of the presence of a numeral, for instance as in (ex:plovermkg).
 
-\ex\begingl
+\ex\label{ex:plovermkg}\begingl
 	\gla Ang bengyon keynamye menang kanānya {desay iray}. //
 	\glb ang beng-yon keynam-ye-Ø menang kanān-ya {desay iray} //
 	\glc \AgtT{} attend-\TplN{} people-\Pl{}-\Top{} hundred wedding-\Loc{} 
@@ -906,6 +918,7 @@ are an exception compared to the much more frequent occurrence of case-marking
 suffixes on generic nouns. It thus does not seem straightforward to analyze the
 case markers as heads of DPs.
 
+\begin{figure}
 \pex\label{ex:germandetdist}
 	\a German:\medskip \\
 	\begingl
@@ -960,6 +973,7 @@ case markers as heads of DPs.
 		\glft `this house of mine' //
 	\endgl
 \xe
+\end{figure}
 
 The examples in (\ref{ex:germandetdist}) show that determining elements such as
 a definite article (\fw{der} `the'), a demonstrative pronoun (\fw{dieser}
@@ -1107,6 +1121,7 @@ constituent is in brackets in both cases since it is optional, that is, it is
 an adjunct rather than a complement. The functional annotation identifies it as
 such.
 
+\begin{figure}
 \pex\label{ex:dpstruct}
 \a DP → \anno*{\xbar{D}}
 \a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
@@ -1125,6 +1140,7 @@ such.
 ]
 \end{forest}
 \xe
+\end{figure}
 
 \subsubsection{Personal pronouns}
 
@@ -1407,6 +1423,7 @@ for the unincorporated and the incorporated adjective, respectively. Example
 (\ref{ex:danyaastuvo}) illustrates what the c- and f-structure for the
 unincorporated adjective looks like.
 
+\begin{figure}
 \ex\label{ex:danyaastuvo}\labels %
 \begin{tabular}[t]{@{} l @{\quad} l}
 \tl\quad\begin{forest} shorter edges, italic leaves,
@@ -1440,6 +1457,7 @@ unincorporated adjective looks like.
 
 \end{tabular}
 \xe
+\end{figure}
 
 The difference between \rayr{d/}{da-} combined with a noun and the same
 combined with an adjective is, however, that with a noun, the meaning is `such
@@ -1480,7 +1498,7 @@ about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
 (\ref{ex:daadjcase}). This is not unproblematic, though, as we will shortly
 see.
 
-%\begin{figure}[tp]
+\begin{figure}
 \ex\labels
 \begin{tabular}[t]{@{} l @{\quad} l}
 \tl\quad\label{ex:daadjcase}\ques%
@@ -1523,7 +1541,7 @@ see.
 \end{avm}}
 \end{tabular}
 \xe
-%\end{figure}
+\end{figure}
 
 One question is, whether the \Avm{} in this case should look like the one in
 (\ref{ex:danyaastuvoavm}), since now it is the adjective which carries the
@@ -1606,9 +1624,10 @@ well one lexeme, \fw{pirli-ngka-rlu}, unites two instances of the same feature.
 
 She explains that the stacked case marking in \fw{pirli-ngka-rlu} `rock-\Loc
 {}-\Erg{}', according to \citet{nordlinger1998}, can be represented in
-f-structure in the following way:
+f-structure in the way described in (\ref{ex:warldblcaseavm}).
 
-\pex
+\begin{figure}
+\pex\label{ex:warldblcaseavm}
 \a\label{ex:warlavm} \begin{avm}
 \[
 	\Subj	&	$f$: \[
@@ -1636,6 +1655,7 @@ f-structure in the following way:
 	\end{morphlex}
 }
 \xe
+\end{figure}
 
 What the lexical annotations in (\ref{ex:warllex}) mean, according to \citet
 [145--146]{dalrymple2001}, is that there is a word with `rock' for its \Pred{},
@@ -1653,8 +1673,9 @@ adjective \rayr{tuvo}{tuvo} which has `red' for \Pred{}. This is embedded as
 the \Adjc{} to a functional head with deictic features (formerly \rayr{dnYlej}
 {danyaley}, now reduced to a simple clitic \rayr{d/}{da-}). The whole compound
 is marked for \Parg{} case, which identifies it as an \Obj{}. Thus, I propose
-the f-structure and annotations in (\ref{ex:datuvoleyuncert}):
+the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 
+\begin{figure}
 \pex\label{ex:datuvoleyuncert}
 \a \begin{avm}
 \[
@@ -1686,6 +1707,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}):
 	\end{morphlex}
 }
 \xe
+\end{figure}
 
 Essentially, we can generate the same f-structure as in
 (\ref{ex:danyaastuvoavm}) above this way, since \rayr{d/tuvolej}{da-tuvoley}
@@ -1699,6 +1721,7 @@ case marker just happens to be stuck on it because it is the next best lexical
 base to attach it to, which is represented in the accompanying c-structure 
 (non-branching bar levels and the empty \xhead{D} have been pruned).
 
+\begin{figure}
 \ex\label{ex:datuvoleycstr}
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
@@ -1722,6 +1745,7 @@ base to attach it to, which is represented in the accompanying c-structure
 ]
 \end{forest}
 \xe
+\end{figure}
 
 \subsubsection{Interrogative pronouns}
 
@@ -1786,10 +1810,11 @@ common' must be phrased using (generic) nouns (\ref{ex:hownoun}).
 
 Logically, what the question word queries for is both the implied object of the
 question and also new information. That is, what it asks for is the sentence's
-focus. For English, \citet[406]{dalrymple2001} gives the following example:
+focus. For English, \citet[406]{dalrymple2001} gives the example in
+(\ref{ex:engq}).
 
-\needspace{3\baselineskip}
-\pex
+\begin{figure}
+\pex\label{ex:engq}
 \a\label{ex:engqcstruct}%
 \fw{Who does David like?} \medskip
 
@@ -1863,6 +1888,7 @@ CP → $\left(\anno*[{\pass{\Foc} \\ %
 	}]{XP}\right)$ $\left(\anno*{\xbar{C}}\right)$
 
 \xe
+\end{figure}
 
 The \Avm{} in (\ref{ex:engqcstruct}) indicates that information contained in
 \Foc{} (as a discourse function) is shared with both the question particle \Q{}
@@ -1878,15 +1904,14 @@ annotation for XP is due to English's fronting of the question word, which
 necessitates definitions to retrieve the correct corresponding information
 further down the tree. The annotation basically says that XP is the focus of
 the clause and specifies that the corresponding information must be found in a
-location accessible to the \fw{wh}-word (that is, the
-\fw{wh}-word must c-command it), and there is a requirement that a
-\fw{wh}-word exist.
+location accessible to the \fw{wh}-word (that is, the \fw{wh}-word must
+c-command it), and there is a requirement that a \fw{wh}-word exist.
 
 Since Ayeri does not front interrogative pronouns like English does, the
 functional annotations of the phrase structure rule should look a whole lot
 easier. Yet, however, we still need to account for \Q{}, \Foc{} and its
 associated \GF{} sharing information. In order to give an example, let us have
-a look again at (\ref{ex:sinyapro}):
+a look again at (\ref{ex:sinyapro}), see (\ref{ex:ayrqcstruct}).
 
 \begin{figure}[htp]
 \ex\label{ex:ayrqcstruct}%
@@ -3400,6 +3425,7 @@ multiple possessive morphemes, which means that they are not part of \Adjc{}.
 The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 (\ref{ex:adjpcstruct}) show how an AP is constructed.
 
+\begin{figure}
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}}
 \a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
@@ -3407,7 +3433,7 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 
 \ex~\label{ex:adjpcstruct}\labels
 \begin{forest}
-[{\anno[\{\elem{\Adjc} | \pass{\XCompl}\}]{AP}}
+[{\anno[\{\elem{\Adjc} | \pass{\Plink}\}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
@@ -3418,14 +3444,17 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 ]
 \end{forest}
 \xe
+\end{figure}
 
 Adjective phrases have an adjective as their lexical head. This head may be
 extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
 of multiple modifiers. Since modifiers follow their heads here as well, APs are
 also a right-branching constituent. Modifiers of adjectives are subsumed under
 the label XP here, which here stands for AdvP, NP, DP, and CP. An example of
-each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
+each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and 
+(\ref{ex:adjmod2}).
 
+\begin{figure}
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
 	\begin{minipage}[t]{.667\remaining}%
@@ -3486,16 +3515,17 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 	\begin{avm}
 	\[
-		\XCompl	&	\[
+		\Plink	&	\[
 			\Pred		&	\astruct{happy}{\Oblq{src}} \\
 			\Oblq{src}	&	\[
 				\Pred	&	`son' \\
 				\Case	&	\Gen \\
 				\Poss	&	\[
-					\Pred	&	`$pro$' \\
-					\Case	&	\Gen \\
-					\Num	&	\Sg \\
-					\Pers	&	\First \\
+					% \Pred	&	`$pro$' \\
+					% \Case	&	\Gen \\
+					% \Num	&	\Sg \\
+					% \Pers	&	\First \\
+					\avmspan{``my''} \\
 				\] \\
 			\] \\
 		\] \\
@@ -3504,7 +3534,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
+	[{\anno[\pass{\Plink}]{AP}}
 		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
@@ -3514,8 +3544,12 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 			]
 		]
 	]
-	\end{forest}\medskip
+	\end{forest}
+\xe
+\end{figure}
 
+\begin{figure}
+\pex\label{ex:adjmod2}
 \a\label{ex:adjmod_dp}%
 	\begin{minipage}[t]{.667\remaining}
 	\begingl
@@ -3528,13 +3562,14 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 	\begin{avm}
 	\[
-		\XCompl	&	\[
+		\Plink	&	\[
 			\Pred	&	\astruct{happy}{\ups{\Oblq{goal}}} \\
 			\Oblq{goal}	&	\[
-				\Pred	&	`$pro$' \\
-				\Case	&	\Dat \\
-				\Num	&	\Sg \\
-				\Pers	&	\Second \\
+				% \Pred	&	`$pro$' \\
+				% \Case	&	\Dat \\
+				% \Num	&	\Sg \\
+				% \Pers	&	\Second \\
+				\avmspan{``him''} \\
 			\] \\
 		\] \\
 	\]
@@ -3542,7 +3577,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
+	[{\anno[\pass{\Plink}]{AP}}
 		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
@@ -3566,7 +3601,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 
 	\begin{avm}
 	\[
-		\XCompl	&	\[
+		\Plink	&	\[
 			\Pred	&	\astruct{glad}{\ups{\Compl}} \\
 			\Compl	&	\[
 				\Pred		&	\astruct{exist}{...} \\
@@ -3579,7 +3614,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{minipage}
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
-	[{\anno[\pass{\XCompl}]{AP}}
+	[{\anno[\pass{\Plink}]{AP}}
 		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[valuy]
@@ -3592,6 +3627,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}).
 	\end{forest}\medskip
 
 \xe
+\end{figure}
 
 Example (\ref{ex:adjmod_adv}) gives the f- and c-structures for the adjective
 phrase to show that \Adjc{} may be recursive: an adjective which serves as one
@@ -3615,8 +3651,10 @@ information about whether a sister node to \xhead{X} is a complement or an
 adjunct instead. How do we know that the extensions to the adjective in
 (\ref{ex:adjmod}) are complements rather than adjuncts? X-bar theory posits
 that complements and adjuncts are on different \xbar{X} branches---a complement
-is a sister to the head whereas an adjunct is, so to speak, its cousin:
+is a sister to the head whereas an adjunct is its cousin, so to speak, compare 
+(\ref{ex:xbartree}).
 
+\begin{figure}
 \ex\label{ex:xbartree}
 \begin{forest}
 [XP, for tree={s sep=2em}%, l sep=2em}
@@ -3647,6 +3685,7 @@ is a sister to the head whereas an adjunct is, so to speak, its cousin:
 \draw [-latex] (head_label) -- (head);
 \end{forest}
 \xe
+\end{figure}
 
 How does this hypothesis fare when applying constituency tests, though? With
 regards to complements and adjuncts to NP, \citet{carnie2013} explains,
@@ -3658,7 +3697,7 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 (\ref{ex:soreplacement}a) with \rayr{d/}{da-} in (\ref{ex:soreplacement}b); the
 \xbar{A} in (\ref{ex:soreplacement}a) being targeted is the sister to AdvP.
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:soreplacement}\labels%
 \begin{minipage}[t]{0.5\remaining}%
 \tl\quad\begingl%
@@ -3724,6 +3763,7 @@ complements are more tightly integrated into the sentence in Ayeri than in the
 idiomatic translations in an attempt to convey how they must seem non-sensical
 to an Ayeri speaker.
 
+\begin{figure}
 \pex\label{ex:soreplacement_2}
 \a\label{ex:soreplacement_2_1}\ljudge*\begingl
 	\gla Yang da-yanena nā. //
@@ -3747,6 +3787,7 @@ to an Ayeri speaker.
 	\glft `I am so that you are here.' //
 \endgl
 \xe
+\end{figure}
 
 % FIXME: Can this be mitigated by replacing "da-" with a full demonstrative?
 % Would the conjunct be interpreted as an adjunct in this case? Why?
@@ -3758,7 +3799,7 @@ to syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant})
 attempts to illustrate the c-structure for a displaced CP; the arrow shows the
 apparent movement from complement to adjunct.
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:intrusivequant}%
 \begingl[aboveglbskip=1em]
 	\gla Yang valuy {\_\tikzmark{intrusivequant2_1}} ankyu, 
@@ -3774,14 +3815,14 @@ cs:intrusivequant2_2});
 \end{tikzpicture}
 
 \begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\XCompl}]{AP}}
+[{\anno[\pass{\Plink}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xbar{A}}
 			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
 					[valuy]
 				]
-				[e, name=CP_orig]
+				[$\epsilon$, name=CP_orig]
 			]
 			[{\anno[\elem{\Adjc}]{AdvP}}
 				[ankyu, roof]
@@ -3811,11 +3852,11 @@ adjunct is annotated accordingly as \Compl{}, not as \Adjc{}, even though in
 c-structure it appears in the position of an adjunct.
 % FIXME: Gahd, I *hope* this paragraph makes sense ...
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:intrusivequant_fstruct}
 \begin{avm}
 \[
-	\XCompl	&	\[
+	\Plink	&	\[
 		\Pred	&	\astruct{glad}{\ups{\Compl}} \\
 		\Adjc	&	\[
 			\Pred	&	`really' \\
@@ -4031,6 +4072,7 @@ adjectives are restricted to nominal contexts whereas adverbs may modify any
 other lexical category: verbs, adjectives, prepositions, as well as other
 adverbs.
 
+\begin{figure}
 \pex\label{ex:advpstruct}
 \a AdvP → \anno*{\xbar{Adv}}
 \a \xbar{Adv} → \anno*{\xhead{Adv}} $\left(\anno*[{\elem{\Adjc}}]{AdvP}\right)$
@@ -4049,6 +4091,7 @@ adverbs.
 ]
 \end{forest}
 \xe
+\end{figure}
 
 Example (\ref{ex:advmod}) gives examples of modifiers of adverbs. These
 modifiers are often quantifying adverbs, whether clitic ones or free ones. 
@@ -4057,6 +4100,7 @@ the heads of both phrases, \xayr{vkis}{vakisa}{careful} and \xayr{bit}{bita}
 {ordinary, normal}, may be interpreted as well as adjectives, depending on
 context.
 
+\begin{figure}
 \pex\label{ex:advmod}
 \a\label{ex:advmod_free}%
 \begin{minipage}[t]{.667\remaining}%
@@ -4133,6 +4177,7 @@ context.
 ]
 \end{forest}
 \xe
+\end{figure}
 
 For the clitic \xayr{ku}{ku}{like} described above (\ref{ex:postkumorphlex}),
 it was necessary to make a separate rule for the prefixed and suffixed version.
@@ -4406,6 +4451,7 @@ adjective or adverb, which is \rayr{/iknF}{-ikan} rather than
 levels are supposed to be pruned, the tree in (\ref{ex:kgnadj_cstruct}) should
 have the structure depicted in (\ref{ex:kgnrev_cstruct_pruned}).
 
+\begin{figure}
 \ex\label{ex:kgnrev_cstruct_pruned}
 \begin{forest} shorter edges,
 [...
@@ -4427,6 +4473,7 @@ have the structure depicted in (\ref{ex:kgnrev_cstruct_pruned}).
 ]	
 \end{forest}
 \xe
+\end{figure}
 
 Building the tree this way, it is assumed that there is a hidden AdvP, which is
 a little unintuitive. However, if the AdvP headed by 
@@ -4439,6 +4486,7 @@ unless one were to give \rayr{kgnF}{kagan}'s maximal projection an annotation
 like \elem{\Adjc{} \Adjc{}}, again assuming that \rayr{kgnF}{kagan} is
 identified as modifying \rayr{/IknF}{-ikan} on the grounds of word order.
 
+\begin{figure}
 \ex\label{ex:kgn_directattachment}
 \ljudge*\begin{avm}
 \[
@@ -4459,6 +4507,7 @@ identified as modifying \rayr{/IknF}{-ikan} on the grounds of word order.
 \]
 \end{avm}
 \xe
+\end{figure}
 
 Based on the observation above that \rayr{/IknF}{-ikan} acts like a head, it
 might also be the case that both \rayr{/IknF}{-ikan} and its opposite
@@ -4469,6 +4518,7 @@ which appear in their full form in this context, the full form happening to be
 homonymous with the clitic form at this stage, as illustrated by
 (\ref{ex:kgnfull_cstruct}).
 
+\begin{figure}
 \ex\label{ex:kgnfull_cstruct}\begin{forest} shorter edges, italic leaves,
 [NP
 	[\xbar{N}
@@ -4493,6 +4543,7 @@ homonymous with the clitic form at this stage, as illustrated by
 ]
 \end{forest}
 \xe
+\end{figure}
 
 On the other hand, when using other combinations, like \xayr{/m nilj}{-ma
 nilay}{probably enough}, the dilemma starts anew, since \rayr{/m}{-ma} is even
@@ -4593,11 +4644,17 @@ last. In fact, it consistently follows its head, as we have seen before.
 
 \xe
 
-It is also incompatible with our analysis of the most common quantifying
-and degree adverbs as clitics, since clitics, at least in \Lfg{}, cannot exist
-disembodied from their hosts due to lexical integrity:
+It is also incompatible with our analysis of the most common quantifying and
+degree adverbs as clitics, since clitics, at least in \Lfg{}, cannot exist
+disembodied from their hosts due to lexical integrity, compare
+(\ref{ex:adjpclit}). Since Spec also cannot branch recursively
+\citep[184]{carnie2013}, examples like (\ref{ex:clitics_55_short}) would not be
+grammatical either if \rayr{/IknF}{-ikan} were in the position of a specifier.
+As a clitic, \rayr{/IknF}{-ikan} cannot be a head either as a logical
+consequence of lexical integrity.
 
-\ex\ljudge\excl
+\begin{figure}
+\ex\label{ex:adjpclit}\ljudge\excl
 \begin{minipage}[t]{.667\remaining}%
 \begingl
 	\gla mino yanena-ikan //
@@ -4627,13 +4684,9 @@ disembodied from their hosts due to lexical integrity:
 ]
 \end{forest}
 \xe
+\end{figure}
 
-Since Spec also cannot recursively branch \citep[184]{carnie2013}, examples
-like (\ref{ex:clitics_55_short}) would not be grammatical either if
-\rayr{/IknF}{-ikan} were in the position of a specifier. As a clitic,
-\rayr{/IknF}{-ikan} cannot be a head either as a logical consequence of lexical
-integrity.
-
+\begin{figure}
 \ex
 *\begin{forest} shorter edges, italic leaves,
 [NP
@@ -4668,6 +4721,7 @@ integrity.
 ]
 \end{forest}
 \xe
+\end{figure}
 
 In conclusion, Ayeri probably does not follow the way of English with regards
 to quantifiers and intensifiers of adjectives in that assuming these elements
@@ -4734,7 +4788,7 @@ presented as not governing a prepositional object, but the preposition is
 purely functional \citep[151--153]{dalrymple2001}. The case for English is
 illustrated by (\ref{ex:talkcstruct}).
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:talkcstruct}%
 John talks to Mary. \\
 
@@ -4811,7 +4865,7 @@ p.~\pageref{clitics_prenoun_case}). \rayr{y}{ya} is a case marker, not a
 preposition; `at/to Pila' is thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya
 Pilaya} with additional locative marking on the noun.
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:naracstruct}%
 \begingl
 \gla Ang naraya {} Ajān ya Pila. //
@@ -4892,33 +4946,35 @@ especially the postposition \xayr{pesnF}{pesan}{until} may also have a CP
 complement, that is, a whole complement clause. The nominal complements are
 objects governed by the adposition.
 
+\begin{figure}
 \pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}}
 \a \xbar{P} → \anno*{\xbar{P}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
 \pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
 \xe
+\end{figure}
 
-The same as above is spelled out again in c-tree form in (\ref{ex:ppcstruct}).
-Prepositional phrases, if not subcategorized by the verb, are optional
-information and thus not governed by the verb; the respective PP is thus part
-of the set of adjuncts. Some verbs, like \xayr{tpY/}{tapy-}{put}, may take PP
-complements headed by an adposition, for instance, in cases like \fw{Mary puts
-the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont ]~[\tsub{NP}} the
-pile {\normalfont ]]}}. The PP \fw{on the pile} is not an adjunct here because
-\fw{She does so on the pile} makes no sense; the PP must be an argument of the
-verb in this case, not additional, optional information. Ayeri behaves the same
-way in this regard. These governed PPs are categorized as \Oblique{} with
-$\theta$ replaced by the proper semantic macrorole (\textit{loc}, \textit{src}
-or \textit{goal}).
+The same as in (\ref{ex:pppstruct}) is spelled out again in c-tree form in
+(\ref{ex:ppcstruct}). Prepositional phrases, if not subcategorized by the verb,
+are optional information and thus not governed by the verb; the respective PP
+is thus part of the set of adjuncts. Some verbs, like \xayr{tpY/}{tapy-}{put},
+may take PP complements headed by an adposition, for instance, in cases like
+\fw{Mary puts the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont
+]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP \fw{on the pile} is not an
+adjunct here because \fw{She does so on the pile} makes no sense; the PP must
+be an argument of the verb in this case, not additional, optional information.
+Ayeri behaves the same way in this regard. These governed PPs are categorized
+as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
+(\textit{loc}, \textit{src} or \textit{goal}).
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:ppcstruct}\labels
 \begin{minipage}[t]{.5\remaining}
 \tl\quad Prepositions:\medskip
 
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
+[{\anno[\{\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
 	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xhead{P}}]
@@ -4938,7 +4994,7 @@ or \textit{goal}).
 \tl\quad Postpositions:\medskip
 
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\downs{\PCase}} | \elem{\Adjc}\}]{PP}}
+[{\anno[\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
 	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[{\anno[{\{%
@@ -5112,7 +5168,7 @@ defunct preposition \xayr{djrinF}{dayrin}{beside, next to} (modern \rayr{kjvo}
 stairs} and \fw{down the hill}, respectively. (\ref{ex:dirtel}) provides
 example sentences for all configurations.
 
-\begin{table}[tp]\centering
+\begin{table}\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
 
 \begin{tabu} to \linewidth {X X[c] X[c]}
@@ -5386,6 +5442,7 @@ with \xhead{P} rather than be adjuncts to \xbar{P}. An analysis of the c- and
 f-structure of adpositional phrases with adverbial modifiers is shown in 
 (\ref{ex:adpadv}).
 
+\begin{figure}
 \pex\label{ex:adpadv}
 \a\label{ex:adpadv_pre}
 \begingl
@@ -5479,8 +5536,8 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 	\]\} \\
 \]
 \end{avm}
-
 \xe
+\end{figure}
 
 Since with prepositions the adverb comes after the nominal complement as in
 (\ref{ex:adpadv_pre}), there may be potential ambiguity as to constituency,
@@ -5492,7 +5549,7 @@ The individual words are copied again to the very bottom of the c-structure
 trees in (\ref{ex:adjadvprep_adv}) to highlight that different syntactic
 structures may lead to the same outcome on the surface.
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:adjadvprep_adv}
 \begingl
 	\gla marin altanya baras //
@@ -5554,6 +5611,7 @@ it is always a permissible strategy of clarification. This also means in turn
 that adpositions cannot be modified by relative clauses, however, this should
 rarely be necessary, if it makes any sense at all.
 
+\begin{figure}
 \ex\label{ex:adjadvprep_adj}
 \begin{minipage}[t]{.5\remaining}
 \begingl
@@ -5585,6 +5643,7 @@ rarely be necessary, if it makes any sense at all.
 ]
 \end{forest}
 \xe
+\end{figure}
 
 It was mentioned initially that certain adpositions are also able to take
 clausal complements. This is especially the case for when adpositions are used
@@ -5602,12 +5661,13 @@ English.
 \endgl\xe
 
 Both \rayr{gmrFyNF}{gamaryang} `I manage (it), I get (it) done' and
-\rayr{s/shye ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' are complete
-sentences; the preposition \xayr{mrinF}{marin}{in front of, before} ties them
-together and indicates the second part's relationship to the first: the
-embedded clause expresses a future state which serves as the background for the
-action expressed by the matrix clause. The corresponding constituent structure
-of the PP is shown in (\ref{ex:adptimecstruct}).
+\rayr{s/shye ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' in
+(\ref{ex:adptime}) are complete sentences; the preposition
+\xayr{mrinF}{marin}{in front of, before} ties them together and indicates the
+second part's relationship to the first: the embedded clause expresses a future
+state which serves as the background for the action expressed by the matrix
+clause. The corresponding constituent structure of the PP is shown in
+(\ref{ex:adptimecstruct}).
 
 \ex\label{ex:adptimecstruct}
 \begin{forest} shorter edges, italic leaves,
@@ -5650,6 +5710,7 @@ head representing the missing complement, altogether structurally similar to
 (\ref{ex:intrusivequant}). An example of this strategy is given in 
 (\ref{ex:cpextrapos}).
 
+\begin{figure}
 \ex\label{ex:cpextrapos}
 \begin{minipage}[t]{.5\remaining}
 \begingl
@@ -5698,6 +5759,7 @@ head representing the missing complement, altogether structurally similar to
 ]
 \end{forest}
 \xe
+\end{figure}
 
 \section{Inflectional and verb phrases}
 \label{sec:ips-vps}
@@ -9807,14 +9869,14 @@ This is not the case in Ayeri, though, and a few examples (to varying degrees
 of idiom-ness) are:
 
 \pex\label{ex:ayrvbidm1}%
-\xayr{triNy}{taringaya}{the minister}
+\xayr{\larger triNy}{taringaya}{the minister}
 \a \xayr{ANF beNFy — sNlFy}{ang bengya ... sangalya}{... stands in a room}
 \a \xayr{ANF beNFy — knaanFy}{ang bengya ... kanānya}{... attends a wedding}
 \a \xayr{ANF beNFy — tesaanFlej}{ang bengya ... tesānley}{... admits a lie}
 \xe
 
 \pex~\label{ex:ayrvbidm2}%
-\xayr{devy}{devaya}{the captain}
+\xayr{\larger devy}{devaya}{the captain}
 \a \xayr{ANF phFy — telbaanFlej}{ang pahya ... telbānley}{... removes a sign}
 \a \xayr{ANF phFy — pegmyaasF}{ang pahya ... pegamayās}{... arrests a thief}
 \xe
@@ -9838,16 +9900,16 @@ subject NP, while there are idioms consisting of a set combination of a verb
 and a complement which is attributed to a subject as a unit, for instance:
 
 \pex\label{ex:ayridms}
-\a \xayr{bFrsF/ tihNy}{bras- tihangya}{bathe in knives}\\
+\a \xayr{\larger bFrsF/ tihNy}{bras- tihangya}{bathe in knives} \\
 	(be in terrible distress)
-\a \xayr{petig/ InunsF spyeri/nm}{petiga- inunas sapayeri-nama}{catch a fish
-	with bare hands} \\
+\a \xayr{\larger petig/ InunsF spyeri/nm}{petiga- inunas sapayeri-nama}{catch a
+	fish with bare hands} \\
 	(make a futile attempt)
-\a \xayr{sikYF/ koyyelej}{sic- koyayeley}{spit books} \\
+\a \xayr{\larger sikYF/ koyyelej}{sic- koyayeley}{spit books} \\
 	(be smartassing)
 \a \xayr{tbd/ venFlej}{tabada- venley}{chew air} \\
 	(be poor, have nothing to eat)
-\a \xayr{vihis/ hpNFyelej bihnen sris kynFymF Iri}{vihisa- hapangyeley
+\a \xayr{\larger vihis/ hpNFyelej bihnen sris kynFymF Iri}{vihisa- hapangyeley
 	bihanena sarisa kayanyam iri}{dish out last week's remains for the third
 	time already} \\
 	(bring up a topic which has been discussed to death)
