@@ -10635,22 +10635,23 @@ reference to \citet{dalrymple2004}, describes the structure of a copula clause
 with a zero-copula essentially in the following way (adapted for Ayeri):
 
 \ex\label{ex:copstruct}
-	S → \anno*[\pass{\Subj}]{XP} \anno*[%
+	S → \anno*[\pass{\Subj}]{XP} \anno*{VP} $\lor$ $\Bigl\{$\anno*[%
 		\ups{\Pred}~=~\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
-	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}
+	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}$\Bigr\}$
 	$\left(\anno*[\pass{\Subj}]{XP}\right)$
 \xe
 
-What this equation does, is to introduce a \Pred{} into the phrase structure as
-an empty node which subcategorizes for the required functions, since
-\citet{attia2008} argues that whether a nominal takes a \Plink{} is not
-determined by its lexical entry, but is a constraint on phrase structure \citep
-[103]{attia2008}. XP may be an NP or a DP here, and YP may be an NP, DP, AP,
-CP, and colloquially a PP; \fw{null-be} is basically a dummy since we still
-need a label for what assigns \Pred{} in order to establish coherence of the
-arguments in the clause. The phrase structure rule in (\ref{ex:copstruct})
-results in the c-structures---both small clauses---in (\ref{ex:copcstruct}) and
-corresponds to the f-structure in (\ref{ex:copfstruct}).
+What this equation does if no VP is specified, is to introduce a \Pred{} into
+the phrase structure as an empty node which subcategorizes for the required
+functions, since \citet{attia2008} argues that whether a nominal takes a
+\Plink{} is not determined by its lexical entry, but is a constraint on phrase
+structure \citep[103]{attia2008}. XP may be an NP or a DP here, and YP may be
+an NP, DP, AP, CP, and colloquially a PP; \fw{null-be} is basically a dummy
+since we still need a label for what assigns \Pred{} in order to establish
+coherence of the arguments in the clause. XP may stand on either side. The
+phrase structure rule in (\ref{ex:copstruct}) results in the
+c-structures---both small clauses---in (\ref{ex:copcstruct}) and corresponds to
+the f-structure in (\ref{ex:copfstruct}).
 
 \begin{figure}
 \pex\label{ex:copcstruct}
@@ -10969,6 +10970,51 @@ to be made.
 
 \subsection{Inflectional phrases}
 \label{subsec:ips}
+
+Copula clauses are probably the most basic kind of sentence possible to form in
+Ayeri. They do not contain a verb, but form a small clause. As we have seen
+above, Ayeri is very consistently verb-first apart from these small clauses, so
+let us assume that there is an XP governing both a phrase containing a verb and
+optionally an S, which in turn contains the arguments of the verb---at least
+the subject, if this is a free nominal (NP or DP). Since the main verb in a
+clause is obligatorily finite, I will interpret this XP as an IP---an
+inflectional phrase. The phrase structure for an IP will thus look like in
+(\ref{ex:vppstruct}), with its translation as a c-structure tree in
+(\ref{ex:vpcstruct}).
+
+\begin{figure}
+\pex\label{ex:vppstruct}
+\a IP → \anno*{\xbar{I}}
+\a \xbar{I} → \anno*{\xbar{I}} $\left(\anno*{\{S | CP\}}\right)$
+\a \xbar{I} → \anno*{\xhead{I}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
+\a \xhead{I} → \anno*{Cl} \anno*{\xhead{I}}
+\xe
+\end{figure}
+\begin{figure}
+\ex\label{ex:vpcstruct}
+\begin{forest} shorter edges,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xbar{I}}
+			[\anno{\xhead{I}}
+				[\anno{Cl}]
+				[\anno{\xhead{I}}]
+			]
+			[{\anno[\pass{\Adjc}]{AdvP}}]
+		]
+		[\anno{\{S | CP\}}]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+The explanation about YP in the definition of S given above (compare
+(\ref{ex:copstruct})) stated that there may also be a VP complement of a
+nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
+arguments of a verb, making a clause transitive, I want to defer the discussion
+of VP's setup to the next section, \ref{subsec:vps}. This means, we will only
+be dealing with intransitive clauses in this section.
 
 ...
 
