@@ -10979,26 +10979,29 @@ optionally an S, which in turn contains the arguments of the verb---at least
 the subject, if this is a free nominal (NP or DP). Since the main verb in a
 clause is obligatorily finite, I will interpret this XP as an IP---an
 inflectional phrase. The phrase structure for an IP will thus look like in
-(\ref{ex:vppstruct}), with its translation as a c-structure tree in
-(\ref{ex:vpcstruct}).
+(\ref{ex:ippstruct}), with its translation as a c-structure tree in
+(\ref{ex:ipcstruct}).
 
 \begin{figure}
-\pex\label{ex:vppstruct}
-\a IP → \anno*{\xbar{I}} $\left(\anno*{S}\right)$
+\pex\label{ex:ippstruct}
+\a IP → \anno*{\xbar{I}} \anno*{S}
 \a \xbar{I} → \anno*{\xhead{I}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
-\a \xhead{I} → \anno*{Cl} \anno*{\xhead{I}}
+\a \xhead{I} → \anno*{Cl*} \anno*{\xhead{I}} \anno*{Cl*}
 \xe
 \end{figure}
 \begin{figure}
-\ex\label{ex:vpcstruct}
+\ex\label{ex:ipcstruct}
 \begin{forest} shorter edges,
 [IP
 	[\anno{\xbar{I}}
 		[\anno{\xhead{I}}
-			[\anno{Cl}]
-			[\anno{\xhead{I}}]
+			[{$\left(\anno{Cl}\right)$}]
+			[\anno{\xhead{I}}
+				[\anno{\xhead{I}}]
+				[{$\left(\anno{Cl}\right)$}]
+			]
 		]
-		[{\anno[\pass{\Adjc}]{AdvP}}]
+		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
 	]
 	[\anno{S}]
 ]
@@ -11020,31 +11023,31 @@ be dealing with intransitive clauses in this section.
 \begin{avm}
 \[
 	\Pred	&	\astruct{see}{$(f_1 \Subj) (f_1 \Obj)$}
-				\tikzmark{welshcstruct_Pred}~\quad\quad \\
-	\Tense	&	\textsc{past} \tikzmark{welshcstruct_Tense} \\
+				\tikzmark{welshcstruct2_Pred}~\quad\quad \\
+	\Tense	&	\textsc{past} \tikzmark{welshcstruct2_Tense} \\
 	\Subj	&	\[
 		\Pred	&	`Siôn' \\
 		\Pers	&	\Third \\
 		\Num	&	\Sg \\
-	\] \tikzmark{welshcstruct_Subj} \\
+	\] \tikzmark{welshcstruct2_Subj} \\
 	\Obj	&	\[
 		{\normalfont ``dragon''}
-	\] \tikzmark{welshcstruct_Obj}
-\] \tikzmark{welshcstruct_f1}
+	\] \tikzmark{welshcstruct2_Obj}
+\] \tikzmark{welshcstruct2_f1}
 \end{avm}
 \end{minipage}
 \hfill
 \begin{forest} shorter edges,
 [IP
-	[\anno{\tikzmark{welshcstruct_IP} I}
-		[{\tikzmark{welshcstruct_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	[\anno{\tikzmark{welshcstruct2_IP} I}
+		[{\tikzmark{welshcstruct2_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
 	]
 	[\anno{S}
-		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct_S} NP}}
+		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct2_S} NP}}
 			[{\textit{Siôn}\\ `John'}]
 		]
-		[\anno{\tikzmark{welshcstruct_VP} VP}
-			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct_O} NP}}
+		[\anno{\tikzmark{welshcstruct2_VP} VP}
+			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct2_O} NP}}
 				[{\textit{ddraig}\\ `dragon'}]
 			]
 		]
@@ -11052,18 +11055,18 @@ be dealing with intransitive clauses in this section.
 ]
 \end{forest}
 \begin{tikzpicture}[remember picture, overlay]
-\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_IP})
-	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
-\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_VP})
-	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
-% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
-% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Pred});
-% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
-% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Tense});
-\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_S})
-	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Subj});
-\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_O})
-	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Obj});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_IP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_f1});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_VP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_f1});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_Pred});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_Tense});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_S})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_Subj});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct2_O})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct2_Obj});
 \end{tikzpicture}
 \xe
 \end{figure}
@@ -11078,7 +11081,7 @@ may be fronted as a unit, as in (\ref{ex:welshvpfr}).
 \ex\label{ex:welshvpfr}\begingl
 	\glpreamble Welsh (\cite[131]{bresnan2016}, from
 		\cite[245]{tallerman1998}): //
-	\gla $[_\text{VP}$ adeiladu tai ym Mangor $]$ a wnaeth o //
+	\gla $[$\tsub{VP} adeiladu tai ym Mangor $]$ a wnaeth o //
 	\glb {} build house.\Pl{} in Bangor {} \Ptcl{} do.\Pst{}.\Tsg{} he //
 	\glft `He \emph{built houses in Bangor}.' //
 \endgl\xe
@@ -11087,7 +11090,7 @@ This is not possible in Ayeri, however, it is possible in Ayeri to reverse the
 order of the subject and its complement, for instance, when a relative clause
 modifies the subject, as in (\ref{ex:ayrsinv}). Here, the subject, \rayr{runj
 si petigojnNF tml}{runay si petigoynang tamala} follows the object
-\rayr{AguAsF}{aguas}.
+\rayr{Agu\_asF}{aguas}.
 
 \ex\label{ex:ayrsinv}\begingl
 	\gla Ang @ pegaya aguas runay si petigoynang tamala. //
@@ -11101,7 +11104,10 @@ Moreover, according to \citep{carnie2013}, the specifier rule is not recursive,
 so a subject NP must not be modified by another NP. If the analysis of Ayeri's
 NP in \autoref{subsec:nps} is correct, however, Ayeri permits this in
 constructions like in (\ref{ex:subjnprec}), where an NP is modified by another
-NP in the instrumental case.
+NP in the instrumental case. Since Ayeri does not possess articles and
+possessive pronouns work similar to adjectives, there is no reason to assume
+that there is a DP for an NP to be embedded in, so a subject containing such an
+NP--NP construction does not qualify as a specifier.
 
 \ex\label{ex:subjnprec}\begingl
 	\gla ayon tiganeri //
@@ -11115,9 +11121,35 @@ basically take the structure [NP XP] where XP may consist of a range of phrase
 types and the juxtaposition of a subject and its predicative complement is
 already enough to establish a predication structure in absence of a verb. If we
 assumed that in clauses with verbs the subject were the specifier of VP we
-would also need two distinct building plans for clauses. If we analyse Ayeri's
-clause structure as in (\ref{ex:welshcstruct2}), VP would conveniently be just
-another phrase type permitted for XP.
+would also need two distinct building plans for clauses. A correction to the
+phrase structure rules in (\ref{ex:ippstruct}) for clauses with verbs would be
+necessary, accordingly:
+
+\ex\ljudge\ques%
+IP → \anno*{\xbar{I}} \anno*{VP}
+\xe
+
+VP would then have to be defined in a way that permitted the subject NP in
+SpecVP to appear on either side of the head in the same way as the subject NP
+in S can appear on either side of the predicate in (\ref{ex:copstruct}). Such
+an analysis would come at the benefit of a simpler phrase structure rule for S,
+since VP would not be able to occur in this context:
+
+\ex\ljudge\ques%
+S → \anno*[\pass{\Subj}]{XP} \anno*[%
+		\ups{\Pred}~=~\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
+	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}
+	$\left(\anno*[\pass{\Subj}]{XP}\right)$
+\xe
+
+If we analysed Ayeri's clause structure as in (\ref{ex:welshcstruct2}),
+however, VP very conveniently would be just another phrase type permitted as a
+complement of the subject NP and copular clauses would be embedded in the
+general clause structure instead. Since there is no overt verb in copular
+clauses, the difference for copular clauses would only be that there were no
+\xhead{I} and its associated maximal projection, IP, for S to be embedded in.
+This is another reason I favor the analysis of S being a specifier of IP for
+clauses with verbs.
 
 ...
 
