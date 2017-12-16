@@ -5939,9 +5939,9 @@ Other
 \end{table}
 
 It is commonly assumed that languages have a subject which occupies a certain
-position in the constituent structure---the predicate---and which commands a
-constituent jointly formed by the verb and its dependents---the predication. An
-SVO sentence in English thus very generally looks like in (\ref{ex:basicsvo})
+position in the constituent structure which commands a constituent jointly
+formed by the verb and its dependents---the predicate. An SVO sentence in
+English thus very generally looks like in (\ref{ex:basicsvo})
 \parencite[compare the examples in][101--111]{bresnan2016}.
 
 \begin{figure}
@@ -10984,8 +10984,7 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 
 \begin{figure}
 \pex\label{ex:vppstruct}
-\a IP → \anno*{\xbar{I}}
-\a \xbar{I} → \anno*{\xbar{I}} $\left(\anno*{\{S | CP\}}\right)$
+\a IP → \anno*{\xbar{I}} $\left(\anno*{S}\right)$
 \a \xbar{I} → \anno*{\xhead{I}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xhead{I} → \anno*{Cl} \anno*{\xhead{I}}
 \xe
@@ -10995,15 +10994,13 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 \begin{forest} shorter edges,
 [IP
 	[\anno{\xbar{I}}
-		[\anno{\xbar{I}}
-			[\anno{\xhead{I}}
-				[\anno{Cl}]
-				[\anno{\xhead{I}}]
-			]
-			[{\anno[\pass{\Adjc}]{AdvP}}]
+		[\anno{\xhead{I}}
+			[\anno{Cl}]
+			[\anno{\xhead{I}}]
 		]
-		[\anno{\{S | CP\}}]
+		[{\anno[\pass{\Adjc}]{AdvP}}]
 	]
+	[\anno{S}]
 ]
 \end{forest}
 \xe
@@ -11015,6 +11012,112 @@ nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
 arguments of a verb, making a clause transitive, I want to defer the discussion
 of VP's setup to the next section, \ref{subsec:vps}. This means, we will only
 be dealing with intransitive clauses in this section.
+
+\begin{figure}
+\ex Welsh \citep[adapted from][134]{bresnan2016}:\label{ex:welshcstruct2}%
+\medskip \\
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{see}{$(f_1 \Subj) (f_1 \Obj)$}
+				\tikzmark{welshcstruct_Pred}~\quad\quad \\
+	\Tense	&	\textsc{past} \tikzmark{welshcstruct_Tense} \\
+	\Subj	&	\[
+		\Pred	&	`Siôn' \\
+		\Pers	&	\Third \\
+		\Num	&	\Sg \\
+	\] \tikzmark{welshcstruct_Subj} \\
+	\Obj	&	\[
+		{\normalfont ``dragon''}
+	\] \tikzmark{welshcstruct_Obj}
+\] \tikzmark{welshcstruct_f1}
+\end{avm}
+\end{minipage}
+\hfill
+\begin{forest} shorter edges,
+[IP
+	[\anno{\tikzmark{welshcstruct_IP} I}
+		[{\tikzmark{welshcstruct_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct_S} NP}}
+			[{\textit{Siôn}\\ `John'}]
+		]
+		[\anno{\tikzmark{welshcstruct_VP} VP}
+			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct_O} NP}}
+				[{\textit{ddraig}\\ `dragon'}]
+			]
+		]
+	]
+]
+\end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_IP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_VP})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_f1});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Pred});
+% \draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_I})
+% 	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Tense});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_S})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Subj});
+\draw [-latex, min distance=1cm] ([yshift=1ex]{pic cs:welshcstruct_O})
+	to [out=west, in=east] ([yshift=1ex]{pic cs:welshcstruct_Obj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+I have so far simply assumed that Ayeri follows the same sentence structure as
+Welsh does according to existing analyses in the \Lfg{} framework, compare 
+(\ref{ex:welshcstruct2}). According to \citet[130]{bresnan2016}, S is chosen as
+a governing category for the subject NP and VP, since in place of VP, one may
+also put a range of other categories—VP, NP, AP, or PP. They also note that VP
+may be fronted as a unit, as in (\ref{ex:welshvpfr}).
+
+\ex\label{ex:welshvpfr}\begingl
+	\glpreamble Welsh (\cite[131]{bresnan2016}, from
+		\cite[245]{tallerman1998}): //
+	\gla $[_\text{VP}$ adeiladu tai ym Mangor $]$ a wnaeth o //
+	\glb {} build house.\Pl{} in Bangor {} \Ptcl{} do.\Pst{}.\Tsg{} he //
+	\glft `He \emph{built houses in Bangor}.' //
+\endgl\xe
+
+This is not possible in Ayeri, however, it is possible in Ayeri to reverse the
+order of the subject and its complement, for instance, when a relative clause
+modifies the subject, as in (\ref{ex:ayrsinv}). Here, the subject, \rayr{runj
+si petigojnNF tml}{runay si petigoynang tamala} follows the object
+\rayr{AguAsF}{aguas}.
+
+\ex\label{ex:ayrsinv}\begingl
+	\gla Ang @ pegaya aguas runay si petigoynang tamala. //
+	\glb ang= pega-ya agu-as runay-Ø si petiga-oy=nang tamala //
+	\glc \AgtT{}= steal-\TsgM{} chicken-\Parg{} fox-\Top{} \Rel{}
+		catch-\Neg{}-\Fpl {}.\Aarg{} yesterday //
+	\glft `The fox we didn't catch yesterday stole a chicken.' //
+\endgl\xe
+
+Moreover, according to \citep{carnie2013}, the specifier rule is not recursive,
+so a subject NP must not be modified by another NP. If the analysis of Ayeri's
+NP in \autoref{subsec:nps} is correct, however, Ayeri permits this in
+constructions like in (\ref{ex:subjnprec}), where an NP is modified by another
+NP in the instrumental case.
+
+\ex\label{ex:subjnprec}\begingl
+	\gla ayon tiganeri //
+	\glb ayon tigan-eri //
+	\glc man honor-\Ins{} //
+	\glft `a man of honor' //
+\endgl\xe
+
+As described in the previous section, \ref{subsec:eqs}, Ayeri's copula clauses
+basically take the structure [NP XP] where XP may consist of a range of phrase
+types and the juxtaposition of a subject and its predicative complement is
+already enough to establish a predication structure in absence of a verb. If we
+assumed that in clauses with verbs the subject were the specifier of VP we
+would also need two distinct building plans for clauses. If we analyse Ayeri's
+clause structure as in (\ref{ex:welshcstruct2}), VP would conveniently be just
+another phrase type permitted for XP.
 
 ...
 
