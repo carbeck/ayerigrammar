@@ -10984,7 +10984,7 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 
 \begin{figure}
 \pex\label{ex:ippstruct}
-\a IP → \anno*{\xbar{I}} \anno*{S}
+\a IP → \anno*{\xbar{I}} $\left(\anno*{S}\right)$
 \a \xbar{I} → \anno*{\xhead{I}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xhead{I} → \anno*{Cl*} \anno*{\xhead{I}} \anno*{Cl*}
 \xe
@@ -11003,7 +11003,7 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 		]
 		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
 	]
-	[\anno{S}]
+	[$\left(\anno{S}\right)$]
 ]
 \end{forest}
 \xe
@@ -11130,7 +11130,7 @@ IP → \anno*{\xbar{I}} \anno*{VP}
 \xe
 
 VP would then have to be defined in a way that permitted the subject NP in
-SpecVP to appear on either side of the head in the same way as the subject NP
+Spec,VP to appear on either side of the head in the same way as the subject NP
 in S can appear on either side of the predicate in (\ref{ex:copstruct}). Such
 an analysis would come at the benefit of a simpler phrase structure rule for S,
 since VP would not be able to occur in this context:
@@ -11151,7 +11151,143 @@ clauses, the difference for copular clauses would only be that there were no
 This is another reason I favor the analysis of S as a complement of IP for
 clauses with verbs---although AdvPs will, like adjectives, follow the head
 directly in spite of being adjuncts rather than complements and the complement
-becomes extraposed.
+becomes essentially extraposed, as illustrated in
+(\ref{ex:ayradvorder}).\footnote{An analysis of the constituent structure in
+(\ref{ex:ayradvorder_1}) and (\ref{ex:advoradj}) in which \rayr{mino}{mino} is
+an adjunct of VP is also possible.}
+
+\begin{figure}
+\pex\label{ex:ayradvorder}
+\a\label{ex:ayradvorder_1}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble Expected: //
+	\gla \textup{\ques{}} @ Apaya ang @ Amān mino. //
+	\glb {} apa-ya ang= Amān mino //
+	\glc {} laugh-\TsgM{} \Aarg{}= Amān happily //
+	\glft `Amān laughs happily.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[Apaya]
+		]
+		[\anno{S}
+			[{\anno[\pass{\Subj}]{NP}}
+				[{ang Amān}, roof]
+			]
+		]
+	]
+	[{\anno[\elem{\Adjc}]{AdvP}}
+		[mino, roof]
+	]
+]
+\end{forest}
+
+\a\label{ex:ayradvorder_2}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble Found: //
+	\gla Apaya mino ang @ Amān. //
+	\glb apa-ya mino ang= Amān //
+	\glc laugh-\TsgM{} happily \Aarg{}= Amān //
+	\glft \textit{Literally:} `Amān happily laughs.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[Apaya]
+		]
+		[{\anno[\elem{\Adjc}]{AdvP}}
+			[mino, roof]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Amān}, roof]
+		]
+	]
+]
+\end{forest}
+
+\a\label{ex:ayradvorderfstr}
+\begin{avm}
+\[
+	\Pred	&	\astruct{laugh}{\ups{\Subj}} \\
+	\Subj	&	\[
+		% \Pred	&	`Amān' \\
+		% \Pers	&	\Third \\
+		% \Num	&	\Sg \\
+		% \Gend	&	\M \\
+		% \Anim	&	$+$ \\
+		% \Case	&	\Aarg \\
+		\avmspan{``Amān''} \\
+	\] \\
+	\Adjc	&	\{\[
+		\Pred	&	`happily' \\
+	\]\} \\
+\]
+\end{avm}
+\xe
+\end{figure}
+
+\begin{figure}
+\pex\labels\label{ex:advoradj}
+\begin{minipage}[t]{.5\remaining}
+\tl\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xbar{I}
+		[\fw{...} [..., tier=words, edge=dotted]]
+		[S
+			[NP
+				[{ang Amān}, roof, tier=words]
+			]
+		]
+	]
+	[AdvP
+		[\fw{mino}, roof [mino, tier=words, edge=dotted]]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\begin{forest} shorter edges, italic leaves,
+[IP
+	[\fw{...} [..., tier=words, edge=dotted]]
+	[S
+		[NP
+			[\xbar{N}
+				[\xhead{N}
+					[\fw{ang Amān}, roof, tier=words]
+				]
+				[AP
+					[\fw{mino}, roof, tier=words]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+
+\xe
+\end{figure}
+
+Similar to NPs, the adverb `usurps' the structural position of the verb's
+complement in order to avoid ambiguity in its modification relationship: in
+(\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the adverb
+to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān}, since
+adverbs and adjectives are not strictly distinguished morphologically 
+(\ref{ex:advoradj}). Due to \Lfg{}'s functional approach, however, both
+c-structures in (\ref{ex:ayradvorder}) map to the f-structure shown in
+(\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
 
 ...
 
