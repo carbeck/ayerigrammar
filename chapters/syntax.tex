@@ -19,8 +19,8 @@ is probably most comfortably analyzed in terms of Lexical-Functional Grammar
 \cite{dalrymple2001}), since \Lfg{} does not require complicated derivations
 behind the surface structure of sentences.\footnote{Passivization, for
 instance, is assumed to be a lexically motivated alternation in predicate
-structure (\Sbj{} is prohibited, so the nominative is assigned to \Obj{}, and
-the original \Sbj{} is expressed  by an \Adjc{}), rather than an internal
+structure (\Subj{} is prohibited, so the nominative is assigned to \Obj{}, and
+the original \Subj{} is expressed  by an \Adjc{}), rather than an internal
 derivational process \citep[23\psqq]{bresnan2016}.} It will be assumed here
 that, even though Ayeri is basically VSO with predicate and predication not
 adjacent to each other, it is configurational in that there is a VP which
@@ -58,7 +58,7 @@ states that \emph{internal structures are largely invariant across languages}.
 The formal model of internal structure in \Lfg{} is the \emph{f-structure},
 which stands for \enquote{functional structure}}. The f-structure is depicted
 as an argument-value matrix (\Avm{}) which maps the relations between `subject'
-(\Sbj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
+(\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
 abstractions of NP, VP, V, etc.\ \citep[42]{bresnan2016}. Verbs are also
 presented with their \fw{a-structure} spelled out. That is, which arguments a
 verb has relations to is formally stated \citep[15]{bresnan2016}. The
@@ -142,7 +142,7 @@ To illustrate the different parallel structures in operation,
 which part of the a- and c-structure respectively corresponds (`links', `maps')
 to which part of the f-structure.
 % \footnote{\citet{bresnan2016} use \textsc{`subj'} for `subject'. ; for
-% consistency with the above I will use `\Sbj{}' in the following. I will also
+% consistency with the above I will use `\Subj{}' in the following. I will also
 % divergently use \Compl{} and \XCompl{} for \textsc{(x)comp}, since
 % \textsc{comp} has already been used for `comparative' above.}
 Regarding the different functions distinguished, \Lfg{} 
@@ -150,16 +150,16 @@ assumes the following hierarchies \citep[97, 100]{bresnan2016}:
 
 \pex\label{ex:functions}
 \a\label{ex:gfs} Grammatical functions (\GF{}s):\\
-	$\overbrace{\Sbj{} > \Obj{} > \SObj{}}^{\text{core}} > 
+	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{\text{core}} > 
 	\overbrace{\Oblique{} > \XCompl{}, \Compl{} > \Adjc{}}^{\text{noncore}}$
 \a\label{ex:nonafs} (Non)argument functions (\AF{}s/$\overline{\mbox{\AF{}}%
 }$s):\\
 	$\underbrace{\Top{}\: \Foc{}}_{\text{non-a-fns}}\; 
-	\overbrace{\Sbj{}\: \Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: 
+	\overbrace{\Subj{}\: \Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: 
 		\Compl{}}^{\text{a-fns}}\; 
 	\underbrace{\Adjc{}}_{\text{non-a-fns}}$
 \a\label{ex:dfs} Discourse functions (\DF{}s):\\
-	$\overbrace{\Top{}\: \Foc{}\: \Sbj{}}^{\text{d-fns}}\;
+	$\overbrace{\Top{}\: \Foc{}\: \Subj{}}^{\text{d-fns}}\;
 	\underbrace{\Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: \Compl{}\: 
 		\Adjc{}}_{\text{non-d-fns}}$
 \xe
@@ -167,7 +167,7 @@ assumes the following hierarchies \citep[97, 100]{bresnan2016}:
 The elements listed in (\ref{ex:functions}) will also appear in
 phrase-structure rules and c-structure trees together with arrows. These arrows
 symbolize inheritance of feature information from the current level (↓) of the
-tree to the next (↑), so for instance, `\pass{\Sbj}' means that the information
+tree to the next (↑), so for instance, `\pass{\Subj}' means that the information
 subsumed by the current node (`down') is passed on as the subject function of
 the next higher node (`up') in the tree. Concise information on notational
 formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
@@ -176,7 +176,7 @@ formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
 \label{sec:nps-dps}
 
 Noun phrases (NPs), and determiner phrases (DPs) as their functional 
-counterpart, fulfill the functions of subject (\Sbj{}), object (\Obj{}), 
+counterpart, fulfill the functions of subject (\Subj{}), object (\Obj{}), 
 secondary object (\SObj{}), as well as various oblique constituents (\Oblique;
 see (\ref{ex:dpnpcasemap}) below), and they can also form adjuncts (\Adjc{}).
 DPs and NPs can also constitute topics (\Top{}). Which DP or NP receives which 
@@ -192,7 +192,7 @@ of case:
 
 \ex\label{ex:dpnpcasemap}\labels
 \begin{tabular}[t]{@{} l @{\quad} l @{ $\implies$ } l}
-\tl\quad & \downs{\Case} = \Aarg	& \pass{\Sbj} \\
+\tl\quad & \downs{\Case} = \Aarg	& \pass{\Subj} \\
 \tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
 \tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
 %	\pass{\Oblq{goal}} \\
@@ -522,7 +522,7 @@ than all the things inside the relative clause. The following example
 \medskip
 
 \a\begin{forest} shorter edges, narrower nodes, italic leaves,
-[{\anno[\pass{\Sbj}]{NP}}
+[{\anno[\pass{\Subj}]{NP}}
 	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xbar{N}}
@@ -11284,9 +11284,9 @@ Similar to NPs, the adverb `usurps' the structural position of the verb's
 complement in order to avoid ambiguity in its modification relationship: in
 (\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the adverb
 to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān}, since
-adverbs and adjectives are not strictly distinguished morphologically 
+adverbs and adjectives are not strictly distinguished by morphologic means 
 (\ref{ex:advoradj}). Due to \Lfg{}'s functional approach, however, both
-c-structures in (\ref{ex:ayradvorder}) map to the f-structure shown in
+c-structures in (\ref{ex:ayradvorder}ab) map to the f-structure shown in
 (\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
 
 ...
