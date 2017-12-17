@@ -5798,56 +5798,6 @@ problem for both descriptive grammarians and theoretical syntacticians} to the
 point where it \textcquote[41]{kroeger2007} {sometimes seems as if Austronesian
 specialists can talk (and write) of nothing else}.}
 
-Before launching on a discussion of typological aspects and the details of the
-syntactic makeup of verb/inflectional phrases, let us briefly consider the
-featural setup of finite verbs (non-finite verbs only have \Pred{}).
-
-\begin{morphlex}
-\ex\label{ex:verbmorphlex}%
-\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlexnarrow}}
-	...
-		& I
-		& \begin{tabu}[t]{l l X[l]}
-			\ups{\Pred} & = & `...' \\
-			\ups{\Tense} & = & \{\NPst, \Pst, \RPst, \NFut, \Fut,
-				\RFut\} \\
-			\ups{\Asp} & = & \{\Prog, \Hab, \Iter\} \\
-			\ups{\Mood} & = & \{\Irr, \Neg, \Imp, \Hort\} \\
-			\ups{\Mod} & = & \{$ability$, $desire$, $intention$, $permission$,
-				$requirement$, $obligation$, $continuation$\}\bigskip \\
-
-			\ups{\Top{} \Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
-				\Loc{}, \Ins{}, \Caus{}\} \\
-			\ups{\Top{} \Anim{}} & = & $\pm$\bigskip \\
-			
-			(\ups{\Subj{} \Pred} & = & `$pro$') \\
-			\ups{\Subj{} \Anim} & = & $\pm$ \\
-			\ups{\Subj{} \Gend} & = & \{\M, \F, \N, \Inan\} \\
-			\ups{\Subj{} \Num} & = & \{\Sg, \Pl\} \\
-			\ups{\Subj{} \Pers} & = & \{\First, \Second, \Third\} \\
-		\end{tabu}
-	\end{tabu}%
-}
-\xe
-\end{morphlex}
-
-As discussed in \autoref{sec:verbs}, verbs can grammatically mark a large
-number of features. These are listed in (\ref{ex:verbmorphlex}). For tenses,
-Ayeri distinguishes an unmarked present tense from three degrees of past and
-future tense each (\autoref{subsec:tense}). Furthermore, it marks a range of
-grammatical aspects, that is, progressive, habitative, and iterative
-(\autoref{subsec:aspect}), as well as various moods, namely, irrealis,
-negative, imperative, and hortative (\autoref{subsec:mood}). Since its modal
-particles may be characterized as clitics, they can also be listed in terms of
-a feature \Mod\textsc{ality} (\autoref{subsec:modals}). Besides this,
-transitive finite verbs are obligatorily marked for the case and animacy of the
-clause's topic. Ayeri also uses a system of verb agreement which alternates
-between morphological agreement with full third-person NPs and pronominal
-clitics, which is why the feature \ups{\Subj{} \Pred} appears in brackets: it
-is only defined for pronominal clitics (sections \ref{clitics_postverb_person},
-p.~\pageref{clitics_postverb_person}, and \ref{subsec:persnumagr}).
-
 \subsection{Typological considerations}
 \label{sec:verbtypo}
 
@@ -10980,7 +10930,8 @@ the subject, if this is a free nominal (NP or DP). Since the main verb in a
 clause is obligatorily finite, I will interpret this XP as an IP---an
 inflectional phrase. The phrase structure for an IP will thus look like in
 (\ref{ex:ippstruct}), with its translation as a c-structure tree in
-(\ref{ex:ipcstruct}).
+(\ref{ex:ipcstruct}). The categories verbs can inflect for are listed in 
+(\ref{ex:verbmorphlex}).
 
 \begin{figure}
 \pex\label{ex:ippstruct}
@@ -10989,6 +10940,7 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 \a \xhead{I} → \anno*{Cl*} \anno*{\xhead{I}} \anno*{Cl*}
 \xe
 \end{figure}
+
 \begin{figure}
 \ex\label{ex:ipcstruct}
 \begin{forest} shorter edges,
@@ -11009,12 +10961,62 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 \xe
 \end{figure}
 
-The explanation about YP in the definition of S given above (compare
-(\ref{ex:copstruct})) stated that there may also be a VP complement of a
-nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
+\begin{figure}
+\begin{morphlex}
+\ex\label{ex:verbmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& I
+		& \begin{tabu}[t]{l l X[l]}
+			\ups{\Pred} & = & `...' \\
+			\ups{\Tense} & = & \{\NPst, \Pst, \RPst, \NFut, \Fut,
+				\RFut\} \\
+			\ups{\Asp} & = & \{\Prog, \Hab, \Iter\} \\
+			\ups{\Mood} & = & \{\Irr, \Neg, \Imp, \Hort\} \\
+			\ups{\Mod} & = & \{$ability$, $desire$, $intention$, $permission$,
+				$requirement$, $obligation$, $continuation$\}\bigskip \\
+
+			\ups{\Top{} \Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Top{} \Anim{}} & = & $\pm$\bigskip \\
+			
+			(\ups{\Subj{} \Pred} & = & `$pro$') \\
+			\ups{\Subj{} \Anim} & = & $\pm$ \\
+			\ups{\Subj{} \Gend} & = & \{\M, \F, \N, \Inan\} \\
+			\ups{\Subj{} \Num} & = & \{\Sg, \Pl\} \\
+			\ups{\Subj{} \Pers} & = & \{\First, \Second, \Third\} \\
+		\end{tabu}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+\end{figure}
+
+As discussed in \autoref{sec:verbs}, verbs can mark a large number of features
+by means of morphojlogy. For tenses, Ayeri distinguishes an unmarked present
+tense from three degrees of past and future tense each
+(\autoref{subsec:tense}). Furthermore, it marks a range of grammatical aspects,
+that is, progressive, habitative, and iterative (\autoref{subsec:aspect}), as
+well as various moods, namely, irrealis, negative, imperative, and hortative
+(\autoref{subsec:mood}). Since its modal particles may be characterized as
+clitics, they can also be listed in terms of a feature \Mod\textsc{ality}
+(\autoref{subsec:modals}). Besides this, transitive finite verbs are
+obligatorily marked for the case and animacy of the clause's topic. Ayeri also
+uses a system of verb agreement which alternates between agreement with full
+third-person NPs and pronominal clitics, which is why the feature \ups{\Subj{}
+\Pred} appears in brackets: it is only defined for pronominal clitics (sections
+\ref{clitics_postverb_person}, p.~\pageref{clitics_postverb_person}, and
+\ref{subsec:persnumagr}). Absence of tense, mood, and aspect marking specifies
+that the verb is in the contextually appropriate tense (compare
+\autoref{subsec:tense}), indicative mood, and simple aspect.
+
+Regarding phrase structure, the explanation about YP in the definition of S
+given in (\ref{ex:copstruct}) stated that there may also be a VP complement of
+a nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
 arguments of a verb, making a clause transitive, I want to defer the discussion
 of VP's setup to the next section, \ref{subsec:vps}. This means, we will only
-be dealing with intransitive clauses in this section.
+be dealing with intransitive clauses (headed by finite verbs) in this section.
 
 \begin{figure}
 \ex Welsh \citep[adapted from][134]{bresnan2016}:\label{ex:welshcstruct2}%
@@ -11284,10 +11286,13 @@ Similar to NPs, the adverb `usurps' the structural position of the verb's
 complement in order to avoid ambiguity in its modification relationship: in
 (\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the adverb
 to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān}, since
-adverbs and adjectives are not strictly distinguished by morphologic means 
+adverbs and adjectives are not strictly distinguished by morphologic means
 (\ref{ex:advoradj}). Due to \Lfg{}'s functional approach, however, both
 c-structures in (\ref{ex:ayradvorder}ab) map to the f-structure shown in
 (\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
+Whatever the actual c-structure realization looks like, coherence thought to be
+created by unifying semantic information provided by the individual words and
+mapping them into f-structure.
 
 ...
 
