@@ -316,14 +316,14 @@ function in these examples.
 	~
 	\begin{forest} shorter edges, italic leaves,
 	[NP
-		[\anno{\xbar{N}}
+%		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[{ningan}]
 			]
 			[{\anno[\elem{\Adjc}]{AP}}
 				[{hiro}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}
 
@@ -340,14 +340,14 @@ function in these examples.
 	~
 	\begin{forest} shorter edges, italic leaves,
 	[NP
-		[\anno{\xbar{N}}
+%		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[{kegan}]
 			]
 			[{\anno[\pass{\Possr}]{NP}}
 				[{ayonena}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}
 
@@ -364,14 +364,14 @@ function in these examples.
 	~
 	\begin{forest} shorter edges, italic leaves,
 	[NP
-		[\anno{\xbar{N}}
+%		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[{kasu}]
 			]
 			[{\anno[\pass{\XCompl}]{NP}}
 				[{bariri}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}
 
@@ -388,14 +388,14 @@ function in these examples.
 	~
 	\begin{forest} shorter edges, italic leaves,
 	[NP
-		[\anno{\xbar{N}}
+%		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[{nanga}]
 			]
 			[{\anno[\pass{\Compl}]{CP}}
 				[{si incāng}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}
 
@@ -1118,20 +1118,19 @@ such.
 
 \begin{figure}
 \pex\label{ex:dpstruct}
-\a DP → \anno*{\xbar{D}}
-\a \xbar{D} → \anno*{\xhead{D}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
+\a DP → \anno*{\xhead{D}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:dpcstruct}
 \begin{forest}
-[{\anno[\{\pass{df} | \pass{gf}\}]{DP}}
-	[\anno{\xbar{D}}
+[{\anno[\{\pass{\DF} | \pass{\GF}\}]{DP}}
+%	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
 		[{$\left(\anno[{%
 				\elem{\Adjc}%
 			}]{XP}\right)$
 		}]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -1423,14 +1422,14 @@ unincorporated adjective looks like.
 \begin{tabular}[t]{@{} l @{\quad} l}
 \tl\quad\begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
-	[\anno{\xbar{D}}
+%	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
 			[danyās]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}
 			[{tuvo}, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -1499,7 +1498,7 @@ see.
 \tl\quad\label{ex:daadjcase}\ques%
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
-	[\anno{\xbar{D}}
+%	[\anno{\xbar{D}}
 		[\anno{Cl}
 			[da-]
 		]
@@ -1515,7 +1514,7 @@ see.
 				]
 %			]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -2078,7 +2077,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [NP
-	[\xbar{N}
+%	[\xbar{N}
 		[\xbar{N}
 			[\xhead{N}
 				[nyānas]
@@ -2092,7 +2091,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 				[sinya]
 			]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -2151,7 +2150,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [NP
-	[\xbar{N}
+%	[\xbar{N}
 		[\xbar{N}
 			[\xhead{N}
 				[yanoya]
@@ -2165,7 +2164,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 				[sinya]
 			]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -2262,15 +2261,17 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 \endgl\medskip
 
 \begin{tabu} to \linewidth [t] {@{} X X}
-\begin{forest} narrower nodes, shorter edges, italic leaves
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\anno{\xhead{I}}
 		[Balangya]
 	]
-	[\anno{S}, narrower nodes,
-		[{\anno[\pass{\Oblq{loc}}]{DP}}
-			[\anno{\xhead{D}}
-				[yanen]
+	[\anno{S},
+		[\anno{VP}
+			[{\anno[\pass{\Oblq{loc}}]{DP}}
+				[\anno{\xhead{D}}
+					[yanen]
+				]
 			]
 		]
 		[{\anno[\pass{\Subj}]{NP}}
@@ -2986,7 +2987,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 \begin{tabu} to \linewidth [t] {@{} X X}
 \begin{forest} narrower nodes, shorter edges, italic leaves
 [{\anno[\pass{\Subj}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
 			[\anno{Cl}
 				[ang]
@@ -3005,7 +3006,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 				]
 			]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -3422,20 +3423,19 @@ The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 
 \begin{figure}
 \pex\label{ex:adjpstruct}
-\a AP → \anno*{\xbar{A}}
-\a \xbar{A} → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
+\a AP → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
 \xe
 
 \ex~\label{ex:adjpcstruct}\labels
 \begin{forest}
 [{\anno[\{\elem{\Adjc} | \pass{\Plink}\}]{AP}}
-	[\anno{\xbar{A}}
+%	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
 		[{$\left(\anno[{%
 				\pass{\GF}%
 			}]{XP}\right)$%
 		}]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -3480,21 +3480,21 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Obj}]{NP}}
-		[\anno{\xbar{N}}
+%		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[bisuayas]
 			]
 			[{\anno[\elem{\Adjc}]{AP}}
-				[\anno{\xbar{A}}
+%				[\anno{\xbar{A}}
 					[\anno{\xhead{A}}
 						[sadayo]
 					]
 					[{\anno[\elem{\Adjc}]{AdvP}}
 						[{kalam}, roof]
 					]
-				]
+%				]
 			]
-		]
+%		]
 	]
 	\end{forest}\medskip
 
@@ -3530,14 +3530,14 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
-		[\anno{\xbar{A}}
+%		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
 			]
 			[{\anno[\pass{\Oblq{src}}]{NP}}
 				[{yanena nā}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}
 \xe
@@ -3573,14 +3573,14 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
-		[\anno{\xbar{A}}
+%		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
 			]
 			[{\anno[\pass{\Oblq{goal}}]{DP}}
 				[{yayam}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}\medskip
 
@@ -3610,14 +3610,14 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	~
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
-		[\anno{\xbar{A}}
+%		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[valuy]
 			]
 			[{\anno[\pass{\Compl}]{CP}}
 				[{yomavāng\\ edaya}, roof]
 			]
-		]
+%		]
 	]
 	\end{forest}\medskip
 
@@ -3711,6 +3711,7 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 \end{minipage}
 ~
 \begin{forest} shorter edges, italic leaves,
+% Superfluous bar levels here are on purpose!
 [NP
 	[\xbar{N}
 		[\xbar{N}
@@ -3811,7 +3812,7 @@ cs:intrusivequant2_2});
 
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Plink}]{AP}}
-	[\anno{\xbar{A}}
+%	[\anno{\xbar{A}}
 		[\anno{\xbar{A}}
 			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
@@ -3826,7 +3827,7 @@ cs:intrusivequant2_2});
 		[{\anno[\pass{\Compl}]{CP}}
 			[{yomavāng edaya}, roof, name=CP]
 		]
-	]
+%	]
 ]
 %
 \draw [-latex, dashed] (CP_orig) to [out=south, in=south, "?" {midway, below}] 
@@ -4069,20 +4070,19 @@ adverbs.
 
 \begin{figure}
 \pex\label{ex:advpstruct}
-\a AdvP → \anno*{\xbar{Adv}}
-\a \xbar{Adv} → \anno*{\xhead{Adv}} $\left(\anno*[{\elem{\Adjc}}]{AdvP}\right)$
+\a AdvP → \anno*{\xhead{Adv}} $\left(\anno*[{\elem{\Adjc}}]{AdvP}\right)$
 \xe
 
 \ex~\label{ex:advpcstruct}\labels
 \begin{forest}
 [{\anno[\elem{\Adjc}]{AdvP}}
-	[\anno{\xbar{Adv}}
+%	[\anno{\xbar{Adv}}
 		[\anno{\xhead{Adv}}]
 		[{$\left(\anno[{%
 				\elem{\Adjc}%
 			}]{AdvP}\right)$%
 		}]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -4120,7 +4120,7 @@ context.
 ~
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{AdvP}}
-	[\anno{\xbar{Adv}}
+%	[\anno{\xbar{Adv}}
 		[\anno{\xhead{Adv}}
 			[bita]
 		]
@@ -4131,7 +4131,7 @@ context.
 				]
 %			]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -4314,7 +4314,7 @@ constructed in analogy to the one for an adjective modified by
 
 \a\label{ex:kgnadj_cstruct}\begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Top{}}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xhead{N}}
 			[\anno{\xhead{N}}
 				[keynam]
@@ -4324,12 +4324,12 @@ constructed in analogy to the one for an adjective modified by
 			]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}
-			[\anno{\xbar{A}}
+%			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
 					[gino]
 				]
 				[{\anno[\elem{\Adjc}]{AdvP}}
-					[\anno{\xbar{Adv}}
+%					[\anno{\xbar{Adv}}
 						[\anno{\xhead{Adv}}
 							[kagan]
 						]
@@ -4340,11 +4340,11 @@ constructed in analogy to the one for an adjective modified by
 								]
 %							]
 						]
-					]
+%					]
 				]
-			]
+%			]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -4382,7 +4382,7 @@ constructed in analogy to the one for an adjective modified by
 
 \a\label{ex:kgnrev_cstruct}\begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Top}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}
 				[\anno{\xhead{N}}
@@ -4398,7 +4398,7 @@ constructed in analogy to the one for an adjective modified by
 						[$\epsilon$, name=empty]
 					]
 					[{\anno[\elem{\Adjc}]{AdvP}}
-						[\anno{\xbar{Adv}}
+%						[\anno{\xbar{Adv}}
 							[\anno{\xhead{Adv}}
 								[kagan]
 							]
@@ -4409,7 +4409,7 @@ constructed in analogy to the one for an adjective modified by
 									]
 %								]
 							]
-						]
+%						]
 					]
 				]
 			]
@@ -4421,7 +4421,7 @@ constructed in analogy to the one for an adjective modified by
 				]
 %			]
 		]
-	]
+%	]
 ]
 %
 \draw [-latex] (empty) to ["identified with", font=\itshape, midway, out=west,
@@ -4516,12 +4516,12 @@ homonymous with the clitic form at this stage, as illustrated by
 \begin{figure}
 \ex\label{ex:kgnfull_cstruct}\begin{forest} shorter edges, italic leaves,
 [NP
-	[\xbar{N}
+%	[\xbar{N}
 		[\xhead{N}
 			[keynam]
 		]
 		[AdvP
-			[\xbar{Adv}
+%			[\xbar{Adv}
 				[\xhead{Adv}
 					[ikan]
 				]
@@ -4532,9 +4532,9 @@ homonymous with the clitic form at this stage, as illustrated by
 						]
 %					]
 				]
-			]
+%			]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -4661,9 +4661,10 @@ consequence of lexical integrity.
 \end{minipage}
 ~
 *\begin{forest} shorter edges, italic leaves,
+% Superfluous bar levels are on purpose here?
 [AP
-	[\xbar{Adj}
-		[\xbar{Adj}
+	[\xbar{A}
+		[\xbar{A}
 			[\xhead{A}
 				[mino]
 			]
@@ -4684,6 +4685,7 @@ consequence of lexical integrity.
 \begin{figure}
 \ex
 *\begin{forest} shorter edges, italic leaves,
+% Superfluous bar levels are on purpose here
 [NP
 	[\xbar{N}
 		[\xbar{N}
@@ -4798,12 +4800,12 @@ John talks to Mary. \\
 	]
 %	[\anno{\xbar{I}}
 		[\anno{VP}
-			[\anno{\xbar{V}}
+%			[\anno{\xbar{V}}
 				[\anno{\xhead{V}}
 					[talks]
 				]
 				[{\anno[\ups{\downs{\PCase}}]{PP}}
-					[\anno{\xbar{P}}
+%					[\anno{\xbar{P}}
 						[\anno{\xhead{P}}
 							[to]
 						]
@@ -4814,9 +4816,9 @@ John talks to Mary. \\
 %								]
 %							]
 						]
-					]
+%					]
 				]
-			]
+%			]
 		]
 %	]
 ]
@@ -4943,8 +4945,7 @@ objects governed by the adposition.
 
 \begin{figure}
 \pex\label{ex:pppstruct}
-\a PP → \anno*{\xbar{P}}
-\a \xbar{P} → \anno*{\xbar{P}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
+\a PP → \anno*{\xbar{P}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
 \a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
 \pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
 \xe
@@ -4970,17 +4971,17 @@ as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
 
 \begin{forest} shorter edges,
 [{\anno[\{\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xhead{P}}]
 			[{\anno[{\{%
-					\pass{\Obj{}}
+					\pass{\Obj{}}\\
 					| \pass{\Compl{}}%
 				\}}]{XP}
 			}]
 		]
 		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
-	]
+%	]
 ]
 \end{forest}\medskip
 \end{minipage}
@@ -4990,17 +4991,17 @@ as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
 
 \begin{forest} shorter edges,
 [{\anno[\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[{\anno[{\{%
-					\pass{\Obj{}}
+					\pass{\Obj{}}\\
 					| \pass{\Compl{}}%
 				\}}]{XP}
 			}]
 			[\anno{\xhead{P}}]
 		]
 		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
-	]
+%	]
 ]
 \end{forest}
 \end{minipage}
@@ -5449,7 +5450,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 \endgl\medskip\\
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\downs{\PCase}}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xhead{P}}
 				[\anno{Cl}
@@ -5466,7 +5467,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 		[{\anno[\elem{\Adjc}]{AdvP}}
 			[sirimang, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 ~
@@ -5499,7 +5500,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[{\anno[\pass{\Obj}]{NP}}
 			[panganya, roof]
 		]
@@ -5511,7 +5512,7 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 				[-hen]
 			]
 		]
-	]
+%	]
 ]
 \end{forest}
 ~\hfill
@@ -5557,7 +5558,7 @@ structures may lead to the same outcome on the surface.
 %\scalebox{.85}{%
 \begin{forest} shorter edges, italic leaves
 [{\anno[\pass{\GF}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xhead{P}}
 				[\fw{marin} [marin, tier=word, edge=dotted]]
@@ -5571,11 +5572,11 @@ structures may lead to the same outcome on the surface.
 		[{\anno[\elem{\Adjc}]{AdvP}}
 			[\fw{baras}, roof [baras, tier=word, edge=dotted]]
 		]
-	]
+%	]
 ]
 \end{forest}~\quad{}or\quad{}~\begin{forest} shorter edges, italic leaves
 [{\anno[\pass{\GF}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}
 			[\fw{marin} [marin, tier=word, edge=dotted]]
 		]
@@ -5589,7 +5590,7 @@ structures may lead to the same outcome on the surface.
 				]
 			]
 		]
-	]
+%	]
 ]
 \end{forest}%
 %}
@@ -5620,21 +5621,21 @@ rarely be necessary, if it makes any sense at all.
 \hfill
 \begin{forest} shorter edges, italic leaves
 [{\anno[\pass{\GF}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{P}
 			[marin]
 		]
 		[{\anno[\pass{\Obj}]{NP}}
-			[\anno{\xbar{N}}
+%			[\anno{\xbar{N}}
 				[\anno{\xhead{N}}
 					[altanya]
 				]
 				[{\anno[\pass{\Compl}]{CP}}
 					[si baras, roof]
 				]
-			]
+%			]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -5667,7 +5668,7 @@ clause. The corresponding constituent structure of the PP is shown in
 \ex\label{ex:adptimecstruct}
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xhead{P}}
 			[marin]
 		]
@@ -5690,7 +5691,7 @@ clause. The corresponding constituent structure of the PP is shown in
 % 			]
 			[{sa-sahaye ang Sipra}, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -5719,7 +5720,7 @@ head representing the missing complement, altogether structurally similar to
 ~
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
-	[\anno{\xbar{P}}
+%	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xbar{P}}
 				[\anno{\xhead{P}}
@@ -5750,7 +5751,7 @@ head representing the missing complement, altogether structurally similar to
 % 			]
 			[{sa-sahaye\\ ang Sipra}, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -5901,14 +5902,14 @@ English thus very generally looks like in (\ref{ex:basicsvo})
 			[\textsc{(auxiliary)}]
 		]
 		[VP
-			[\xbar{V}
+%			[\xbar{V}
 				[\xhead{V}
 					[\textsc{verb}]
 				]
 				[NP
 					[\textsc{object}, roof]
 				]
-			]
+%			]
 		]
 	]
 ]
@@ -10147,14 +10148,14 @@ examples (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
 			]
 			[VP
 				[NP
-					[\xbar{N}
+%					[\xbar{N}
 						[\xhead{N}
 							[badan]
 						]
 						[DP
 							[yena$_i$, roof]
 						]
-					]
+%					]
 				]
 			]
 		]
@@ -10222,7 +10223,7 @@ $f$: \[
 		]
 		[S
 			[NP
-				[\xbar{N}
+%				[\xbar{N}
 					[\xhead{N}
 						[badan]
 					]
@@ -10237,7 +10238,7 @@ $f$: \[
 						% ]
 						[{na Mali$_i$}, roof]
 					]
-				]
+%				]
 			]
 			[VP
 				[DP
@@ -10305,14 +10306,14 @@ $f$: \[
 		]
 		[S
 			[NP
-				[\xbar{N}
+%				[\xbar{N}
 					[\xhead{N}
 						[badan]
 					]
 					[DP
 						[yena$_i$, roof]
 					]
-				]
+%				]
 			]
 			[VP
 				[NP
@@ -10390,7 +10391,7 @@ $f$: \[
 		[S
 			[VP
 				[NP
-					[\xbar{N}
+%					[\xbar{N}
 						[\xhead{N}
 							[badanas]
 						]
@@ -10405,7 +10406,7 @@ $f$: \[
 							% ]
 							[{na Mali$_{*i/j}$}, roof]
 						]
-					]
+%					]
 				]
 			]
 		]
@@ -10803,14 +10804,14 @@ that is, as an \Adjc{} within \Plink{}. This is illustrated by
 \begin{forest} narrower nodes, shorter edges, italic leaves,
 [S
 	[{\anno[\pass{\Plink}]{AP}}
-		[\anno{\xbar{A}}
+%		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mabo]
 			]
 			[{\anno[\pass{\Adjc}]{AdvP}}
 				[netoy, roof]
 			]
-		]
+%		]
 	]
 	[{\anno[\pass{\Subj}]{NP}}
 		[ang Briha, roof]
@@ -11260,14 +11261,14 @@ an adjunct of VP is also possible.}
 	[\fw{...} [..., tier=words, edge=dotted]]
 	[S
 		[NP
-			[\xbar{N}
+%			[\xbar{N}
 				[\xhead{N}
 					[\fw{ang Amān}, roof, tier=words]
 				]
 				[AP
 					[\fw{mino}, roof, tier=words]
 				]
-			]
+%			]
 		]
 	]
 ]
@@ -11292,6 +11293,8 @@ and mapping it into f-structure.
 A special morphosyntactic property of the IP is that the verb is marked for the
 clause's topic by a clitic corresponding to the NP's case marker in its clitic
 form (see \autoref{subsec:case}). ...
+
+Clitic quantifiers ...
 
 \subsection{Verb phrases}
 \label{subsec:vps}
