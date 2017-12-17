@@ -252,21 +252,16 @@ follows the approach of lexical integrity. Thus, bound elements like affixes
 and clitics are assumed not to be reflected or affected by syntax itself. The
 phrase structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
 The asterisk in (\ref{ex:npstruct_Adj}) is the Kleene star and indicates zero
-or more instances of the element. Elements which may occur zero or once are in
-brackets.
+or more instances of the element. Elements which may be omitted or occur once
+are in brackets.
 
 \pex\label{ex:npstruct}
-\a\label{ex:npstruct_NP}%
-	NP → \anno*{\xbar{N}}
-\a\label{ex:npstruct_Compl}%
-	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{CP}\right)$
-\a\label{ex:npstruct_Poss}%
-	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
+\a NP → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{CP}\right)$
+\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
 	{\{NP | DP\}}\right)$
+\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\XCompl}]{NP}\right)$
 \a\label{ex:npstruct_Adj}%
-	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP*}
-\a\label{ex:npstruct_Comp}%
-	\xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\XCompl}]{NP}\right)$
+	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP*}
 \xe
 
 This rule defines that NPs have a lexical head which is on the left side,
@@ -279,20 +274,20 @@ described in (\ref{ex:npcstruct}).
 \begin{figure}
 \ex\label{ex:npcstruct}\labels
 \begin{forest} shorter edges,
-[{\anno[\{\pass{df} | \pass{gf}\}]{NP}}
-	[\anno{\xbar{N}}
+[{\anno[\{\pass{\DF} | \pass{\GF}\}]{NP}}
+%	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xbar{N}}
 				[\anno{\xbar{N}}
 					[\anno{\xhead{N}}]
-					[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
+					[{\anno[\elem{\Adjc}]{AP*}}]
 				]
-				[{\anno[\elem{\Adjc}]{AP*}}]
+				[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
 			]
 			[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
 		]
 		[{$\left(\anno[\pass{\Compl}]{CP}\right)$}]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -523,7 +518,7 @@ than all the things inside the relative clause. The following example
 
 \a\begin{forest} shorter edges, narrower nodes, italic leaves,
 [{\anno[\pass{\Subj}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xbar{N}}
 				[\anno{\xhead{N}}
@@ -540,7 +535,7 @@ than all the things inside the relative clause. The following example
 		[{\anno[\pass{\Comp}]{CP}}
 			[{si ang mica ...}, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 \xe
@@ -11290,14 +11285,59 @@ adverbs and adjectives are not strictly distinguished by morphologic means
 (\ref{ex:advoradj}). Due to \Lfg{}'s functional approach, however, both
 c-structures in (\ref{ex:ayradvorder}ab) map to the f-structure shown in
 (\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
-Whatever the actual c-structure realization looks like, coherence thought to be
-created by unifying semantic information provided by the individual words and
-mapping them into f-structure.
+Whatever the actual c-structure realization looks like, coherence is thought to
+be created by unifying semantic information provided by the individual words
+and mapping it into f-structure.
 
-...
+A special morphosyntactic property of the IP is that the verb is marked for the
+clause's topic by a clitic corresponding to the NP's case marker in its clitic
+form (see \autoref{subsec:case}). ...
 
 \subsection{Verb phrases}
 \label{subsec:vps}
+
+Verb phrases in Ayeri are distinct from inflectional phrases in that they are
+headed by a non-finite verb, if there is a head: since Ayeri is verb-intial,
+the inflected, finite verb is an extended head of verb phrase, compare
+\autoref{sec:verbtypo}. \xhead{V} is an empty node in this case and gets
+pruned from c-structure. Nevertheless, there are cases where non-finite verbs
+do occur, namely, in CPs from which a subject has been raised or in which a
+subject or object slot is controlled from without. It is also the verb phrase
+which carries the arguments subcategorized by the verb apart from the subject.
+Here as well, if there is an adverbial modifier in the VP, it follows the head,
+and \xhead{V}'s complement and other modifiers are shifted to the right/up. The
+XP in the phrase structure rules in (\ref{ex:vppstruct}) and their c-structure
+equivalent in (\ref{ex:vpcstruct}) may be formed by an NP, DP, AP, PP, or CP in
+decreasing order on the functional hierarchy; the position may also be left
+unoccupied for intransitive verbs.
+
+\begin{figure}
+\pex\label{ex:vppstruct}
+\a VP → \anno*{\xbar{V}} \anno*[\pass{\AF}]{XP*}
+\a \xbar{V} → \anno*{\xhead{V}}
+	\anno*[\elem{\Adjc}]{AdvP}
+\a \xhead{V} → \anno*{\xhead{V}} $\left(\anno*{Cl}\right)$
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:vpcstruct}
+\begin{forest}
+[\anno{VP}
+%	[\anno{\xbar{V}}
+			[\anno{\xbar{V}}
+				[\anno{\xhead{V}}
+					[\anno{\xhead{V}}]
+					[{$\left(\anno{Cl}\right)$}]
+				]
+				[{\anno[\elem{\Adjc}]{AdvP}}]
+			]
+		[{\anno[\pass{\AF}]{XP*}}]
+%	]
+]
+\end{forest}
+\xe
+\end{figure}
 
 ...
 
