@@ -10920,6 +10920,8 @@ to be made.
 \subsection{Inflectional phrases}
 \label{subsec:ips}
 
+\subsubsection{Phrase structure}
+
 Copula clauses are probably the most basic kind of sentence possible to form in
 Ayeri. They do not contain a verb, but form a small clause. As we have seen
 above, Ayeri is very consistently verb-first apart from these small clauses, so
@@ -10993,7 +10995,7 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 \end{figure}
 
 As discussed in \autoref{sec:verbs}, verbs can mark a large number of features
-by means of morphojlogy. For tenses, Ayeri distinguishes an unmarked present
+by means of morphology. For tenses, Ayeri distinguishes an unmarked present
 tense from three degrees of past and future tense each
 (\autoref{subsec:tense}). Furthermore, it marks a range of grammatical aspects,
 that is, progressive, habitative, and iterative (\autoref{subsec:aspect}), as
@@ -11293,13 +11295,15 @@ Whatever the actual c-structure realization looks like, coherence is thought to
 be created by unifying semantic information provided by the individual words
 and mapping it into f-structure.
 
+\subsubsection{Topic marking}
+
 A special morphosyntactic property of the IP is that the verb is marked for the
 clause's topic by a clitic corresponding to the NP's case marker in its clitic
 form (see \autoref{subsec:case}). Topic marking on the verb works in tandem
-with case marking on the marked-for noun phrase, which receives zero-marking.
-Personal pronouns occur in an undeclined base form if topicalized (see
-\autoref{subsec:perspro}). Morphologic topic marking is limited to finite verbs
-which subcategorize more than one grammatical function, so a verb whose
+with case marking on the marked-for noun phrase, which receives zero-marking
+for case. Personal pronouns occur in an undeclined base form if topicalized
+(see \autoref{subsec:perspro}). Morphologic topic marking is limited to finite
+verbs which subcategorize more than one grammatical function, so a verb whose
 argument structure defines, for instance, \astruct{...}{\ups{\Subj} \ups{\Oblq
 {loc}}} also qualifies for topic marking even though \Oblq{loc} is not
 necessarily a semantic core role for this verb but only an adjunct. There have
@@ -11307,9 +11311,9 @@ already been numerous examples of topic marking above, but for the sake of
 completeness, see (\ref{ex:topmkg}). Topic marking also is restricted to the
 core f-structure of the verb, that is, a matrix verb cannot mark topic for
 arguments of a subordinate verb. Raising is required to make an embedded
-argument part of the matrix verb's argument structure. However, as described
-in \autoref{subsubsec:raising} (p.~\pageref{subsubsec:raising}), only
-to-subject raising is permitted in Ayeri.
+argument part of the matrix verb's argument structure. However, as described in
+\autoref{subsubsec:raising} (p.~\pageref{subsubsec:raising}), only to-subject
+raising is permitted in Ayeri.
 
 \begin{figure}
 \pex\label{ex:topmkg}
@@ -11426,7 +11430,21 @@ correspondingly identifies the NP/DP as the clause's topic, which the rule in
 \xe
 \end{morphlex}
 
-Clitic quantifiers ...
+The fact that topic marking operates only within a verb's nucleus prohibits
+possessors or instrumental complements from being topicalized, since they are
+separate, embedded f-structures. They thus have their own predicator that is
+not the verb, but a noun which they modify. According to \citep{bresnan2016}'s
+annotations, possessees are conceptualized as having the power to subcategorize
+a possessor: the noun's \Pred{} value is modified by appending \astruct{...-of}
+{\ups{\Poss}}. Presumably, we want instrumental complements in Ayeri to work
+along these lines, except that the attributive, rather than possessive,
+relationship is expressed by a difference in case marking.
+
+...
+
+\subsubsection{Clitic quantifiers}
+
+...
 
 \subsection{Verb phrases}
 \label{subsec:vps}
