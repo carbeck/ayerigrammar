@@ -44,14 +44,17 @@ constituency trees are based on an extended version of X-bar theory
 are observed:
 \begin{enumerate}[nosep, leftmargin={2\footnotemargin}]
 \item XP → YP, \xbar{X} (specifier rule)
-\item \xbar{X} → \xbar{X}, YP (adjunct rule)
-\item \xbar{X} → \xhead{X}, YP (complement rule)
+\item \xbar{X} → \xbar{X}, ZP (adjunct rule)
+\item \xbar{X} → \xhead{X}, WP (complement rule)
 \end{enumerate}
 
-The principle of economy of expression furthermore dictates that essentially, 
-trees be pruned of empty terminal nodes and non-branching preterminal nodes, 
-since these do not provide structurally or semantically relevant information 
-\citep[119--128]{bresnan2016}.}
+The principle of economy of expression furthermore dictates that essentially,
+trees be pruned of empty terminal nodes and non-branching preterminal nodes,
+since these do not provide structurally or semantically relevant information
+\citep[119--128]{bresnan2016}. Thus, for instance, in a rule like XP →
+\xhead{X} YP, YP is not necesssarily XP's complement. Functional annotations on
+nodes will clarify their status instead of their position in a c-structure
+tree.}
 
 \item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality
 states that \emph{internal structures are largely invariant across languages}.
@@ -11011,7 +11014,7 @@ Regarding phrase structure, the explanation about YP in the definition of S
 given in (\ref{ex:copstruct}) stated that there may also be a VP complement of
 a nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
 arguments of a verb, making a clause transitive, I want to defer the discussion
-of VP's setup to the next section, \ref{subsec:vps}. This means, we will only
+of VP's setup to the next section, \ref{subsec:vps}. This means, we will mainly
 be dealing with intransitive clauses (headed by finite verbs) in this section.
 
 \begin{figure}
@@ -11292,7 +11295,136 @@ and mapping it into f-structure.
 
 A special morphosyntactic property of the IP is that the verb is marked for the
 clause's topic by a clitic corresponding to the NP's case marker in its clitic
-form (see \autoref{subsec:case}). ...
+form (see \autoref{subsec:case}). Topic marking on the verb works in tandem
+with case marking on the marked-for noun phrase, which receives zero-marking.
+Personal pronouns occur in an undeclined base form if topicalized (see
+\autoref{subsec:perspro}). Morphologic topic marking is limited to finite verbs
+which subcategorize more than one grammatical function, so a verb whose
+argument structure defines, for instance, \astruct{...}{\ups{\Subj} \ups{\Oblq
+{loc}}} also qualifies for topic marking even though \Oblq{loc} is not
+necessarily a semantic core role for this verb but only an adjunct. There have
+already been numerous examples of topic marking above, but for the sake of
+completeness, see (\ref{ex:topmkg}). Topic marking also is restricted to the
+core f-structure of the verb, that is, a matrix verb cannot mark topic for
+arguments of a subordinate verb. Raising is required to make an embedded
+argument part of the matrix verb's argument structure. However, as described
+in \autoref{subsubsec:raising} (p.~\pageref{subsubsec:raising}), only
+to-subject raising is permitted in Ayeri.
+
+\begin{figure}
+\pex\label{ex:topmkg}
+\a\label{ex:topmkg_np}
+\begin{minipage}[t]{.6\remaining}
+\begingl
+	\glpreamble \textsc{context:} Diyas //
+	\gla \textbf{Sa} @ no @ si-silvya ang @ Tenan {} @ \textbf{Diyas}. //
+	\glb sa= no= si\til{}silv-ya ang= Tenan Ø= Diyas //
+	\glc \PatT{}= want= \Iter{}\til{}see-\TsgM{} \Aarg{}= Tenan \Top{}= 
+		Diyas //
+	\glft `Diyas, Tenan wants to see her again.' //
+\endgl
+\end{minipage}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{see}{\ups{\Subj} \ups{\Obj}} \\
+	\Mod	&	$desire$ \\
+	\Asp	&	\Iter \\
+
+	\Top	&	\[
+		\Pred	&	`Diyas' \\
+		\Anim	&	$+$ \\
+		\Case	&	\Parg \\
+	\] \tikzmark{topmkgnp_top} \\
+
+	\Subj	&	\[
+		\Pred	&	`Tenan' \\
+		% \Pers	&	\Third \\
+		% \Num	&	\Sg \\
+		% \Gend	&	\M \\
+		\Anim	&	$+$ \\
+		\Case	&	\Aarg \\
+	\] \\
+
+	\Obj	&	\tikzmark{topmkgnp_obj}
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:topmkgnp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:topmkgnp_obj});
+\end{tikzpicture}
+
+\a\label{ex:topmkg_dp}\begin{minipage}[t]{.6\remaining}
+\begingl
+	\glpreamble \textsc{context:} you //
+	\gla \textbf{Ang} @ ming @ prantong\textbf{va} tas. //
+	\glb ang= ming= prant-ong=va.Ø tas //
+	\glc \AgtT{}= can= ask-\Irr{}=\Second{}.\Top{} \TplM{}.\Parg{} //
+	\glft `You could ask them.' //
+\endgl
+\end{minipage}
+~\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{ask}{\ups{\Subj} \ups{\Obj}} \\
+	\Mod	&	$possibility$ \\
+	\Mood	&	\Irr \\
+
+	\Top	&	\[
+		\avmspan{``you''} \\
+		\Anim	&	$+$ \\
+		\Case	&	\Parg \\
+	\] \tikzmark{topmkgdp_top} \\
+
+	\Subj	&	\tikzmark{topmkgdp_subj} \\
+
+	\Obj	&	\[
+		\avmspan{``them''} \\
+		\Anim	&	$+$ \\
+		\Case	&	\Parg \\
+	\]
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:topmkgdp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:topmkgdp_subj});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+Functionally, the topic marker---\rayr{s}{sa} in (\ref{ex:topmkg_np}), 
+\rayr{ANF}{ang} in (\ref{ex:topmkg_dp})---provides information about the case
+of the topicalized NP and thus signals which argument of the verb is the topic
+as shown in (\ref{ex:topmorphlex}). Unmarkedness for case of a nominal head
+correspondingly identifies the NP/DP as the clause's topic, which the rule in
+(\ref{ex:nptopcorr}) tries to capture.
+
+\begin{morphlex}
+\pex
+\a\label{ex:topmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& Cl
+		& \begin{tabular}[t]{l l l}
+			\ups{\Top{} \Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Top{} \Anim} & = & $\pm$ \\
+		\end{tabular}
+	\end{tabu}
+}
+
+\a\label{ex:nptopcorr}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& N/D
+		& ¬\,\downs{\Case} $\implies$ \pass{\Top}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
 
 Clitic quantifiers ...
 
