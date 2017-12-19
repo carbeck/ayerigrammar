@@ -11307,10 +11307,10 @@ whose argument structure defines, for instance, \astruct{...}{\ups{\Subj}
 \ups{\Oblq {loc}}} also qualifies for topic marking even though \Oblq{loc} is
 not necessarily a semantic core role for this verb but only an adjunct. There
 have already been numerous examples of topic marking above, but for the sake of
-completeness, see (\ref{ex:topmkg}). Topic marking also is restricted to the
-core f-structure of the verb, that is, a matrix verb cannot mark topic for
-arguments of a subordinate verb. Raising is required to make an embedded
-argument part of the matrix verb's argument structure. However, as described in
+completeness, see (\ref{ex:topmkg}). Topic marking also is restricted to clause
+level, that is, a matrix verb cannot topic-mark arguments of a subordinate
+verb. Raising is required to make an embedded argument part of the matrix
+verb's argument structure. However, as described in
 \autoref{subsubsec:raising} (p.~\pageref{subsubsec:raising}), only to-subject
 raising is permitted in Ayeri.
 
@@ -11396,13 +11396,7 @@ raising is permitted in Ayeri.
 \xe
 \end{figure}
 
-Functionally, the topic marker---\rayr{s}{sa} in (\ref{ex:topmkg_np}), 
-\rayr{ANF}{ang} in (\ref{ex:topmkg_dp})---provides information about the case
-of the topicalized NP and thus signals which argument of the verb is the topic
-as shown in (\ref{ex:topmorphlex}). Unmarkedness for case of a nominal head
-correspondingly identifies the NP/DP as the clause's topic, which the rule in
-(\ref{ex:nptopcorr}) tries to capture.
-
+\begin{figure}
 \begin{morphlex}
 \pex
 \a\label{ex:topmorphlex}%
@@ -11428,21 +11422,30 @@ correspondingly identifies the NP/DP as the clause's topic, which the rule in
 }
 \xe
 \end{morphlex}
+\end{figure}
 
-The fact that topic marking operates only within a verb's nucleus prevents
-possessors or instrumental complements from being topicalized, since they are
-separate, embedded f-structures. They thus have their own predicator that is
-not the verb, but a noun which they modify. According to \citep{bresnan2016}'s
-annotations, possessees are conceptualized as having the power to subcategorize
-for a possessor: the noun's \Pred{} value is modified by appending
-\astruct{...-of}{\ups{\Poss}} at least in their English examples. I will,
-however, omit the \fw{-of} and more generally indicate nouns taking a possessor
-as \astruct{noun}{\Poss} with the NP marked for genitive case. Presumably, we
-want instrumental complements in Ayeri to work along these lines as well for
-the reason of structural similarity of the construction, except that the
-attributive, rather than possessive, relationship of the complement is
-expressed by a difference in case marking: instrumental instead of genitive. An
-example is given in (\ref{ex:transnoun}).
+Functionally, the topic marker---\rayr{s}{sa} in (\ref{ex:topmkg_np}),
+\rayr{ANF}{ang} in (\ref{ex:topmkg_dp})---provides information about the case
+of the topicalized NP and thus signals which argument of the verb is the topic
+as shown in (\ref{ex:topmorphlex}). Unmarkedness for case of a nominal head
+correspondingly identifies the NP/DP as the clause's topic, which the rule in
+(\ref{ex:nptopcorr}) tries to capture. The fact that topic marking operates
+only within a verb's nucleus prevents possessors or instrumental complements
+from being topicalized, since they are separate, embedded f-structures. They
+are subcategorized for, but not by the verb, but by the noun which they modify.
+According to \citet{bresnan2016}'s annotations, possessees are realized
+schematically with the noun's \Pred{} value modified by appending
+\astruct{...-of}{\ups{\Poss}}---at least in their English examples \citep[315]
+{bresnan2016}. I will, however, omit the \fw{-of} and more generally indicate
+nouns taking a possessor as \astruct{noun}{\Poss} with the embedded NP marked
+for genitive case. Presumably, we want instrumental complements in Ayeri to
+work along these lines as well for the reason of structural similarity of the
+construction, except that the attributive, rather than possessive, relationship
+of the complement is expressed by a difference in case marking: instrumental
+instead of genitive. An example is given in (\ref{ex:transnoun}).
+
+% FIXME: § 4.1.3 contains an example where a possessor NP has been topicalized.
+% But normally, only arguments of the verb can be topic-marked?
 
 \begin{figure}
 \pex\label{ex:transnoun}
@@ -11488,6 +11491,101 @@ example is given in (\ref{ex:transnoun}).
 
 \xe
 \end{figure}
+
+\begin{figure}
+\pex\label{ex:npembedfull}
+\a\label{ex:npembedfull_1}
+\begin{minipage}[t]{.5\remaining}%
+\begingl
+	\gla Ang @ vacay veneyas na @ Kaman. //
+	\glb ang= vac=ay.Ø veney-as na= Kaman //
+	\glc \AgtT{}= like=\Fsg{}.\Top{} dog-\Parg{} \Gen{}= Kaman //
+	\glft `I like Kaman's dog.' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj} \ups{\Obj}} \\
+
+	\Top	&	\[
+		\avmspan{``I''} \\
+	\] \tikzmark{npembedfull1_top} \\
+
+	\Subj	&	[~\tikzmark{npembedfull1_subj}~] \\
+
+	\Obj	&	\[
+		\Pred	&	\astruct{dog}{\ups{\Poss}} \\
+		\Poss	&	$g$: \[
+			\Pred	&	`Kaman' \\
+			\Case	&	\Gen \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:npembedfull1_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:npembedfull1_subj});
+\end{tikzpicture}
+
+% FIXME: § 4.1.3 contains an example where a possessor NP has been topicalized.
+% But normally, only arguments of the verb can be topic-marked?
+
+\a\label{ex:npembedfull_2}
+\ljudge*\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Na @ vacyang veneyas {} @ Kaman. //
+	\glb na= vac=yang veney-as Ø= Kaman //
+	\glc \AgtT{}= like=\Fsg{}.\Top{} dog-\Parg{} \Top{}= Kaman //
+	\glft \textit{Intended:} `Kaman, I like his dog.' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{like}{\ups{\Subj} \ups{\Obj}} \\
+
+	\Top	&	\[
+		\Pred	&	`Kaman' \\
+		\Case	&	\Gen \\
+	\] \tikzmark{npembedfull2_top} \\
+
+	\Subj	&	\[
+		\avmspan{``I''} \\
+	\] \\
+
+	\Obj	&	\[
+		\Pred	&	\astruct{dog}{\ups{\Poss}} \\
+		\Poss	&	$g:$ [~\tikzmark{npembedfull2_poss}~] \\
+	\]~\hspace{2em} \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:npembedfull2_top})
+	-- ++(east:4em) |- ([yshift=1ex]{pic cs:npembedfull2_poss});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+We have just looked at NPs with a genitive attribute and a nominal complement,
+respectively, individually. Example (\ref{ex:npembedfull}) shows a full
+sentence with an embedded NP modifying an NP which in turn is an argument of
+the verb. In (\ref{ex:npembedfull}), the subject pronominal suffix has been
+topicalized and thus only appears as \rayr{/Aj}{-ay} instead of full
+\rayr{/yNF}{-yang}. If we try to topicalize the possessor, though, as in 
+(\ref{ex:npembedfull_2}), the relationship between topic and its corresponding
+function, \Poss{}, skips into a subordinate f-structure which is not an
+argument of the verb.
+
+...
+
+% IDEA: Kamanᵢ, I like himᵢ hisᵢ dog (Yam vacyang Kaman veneyas yana). This
+% should also work for pronominal binding, since the binder precedes the
+% bindee, the binder is a free nominal and the pronoun is likewise free in its
+% nucelus. However, it is unclear how POSS ranks in terms of the functional
+% hierarchy (Bresnan et al. 2016: 100), so I don't know if OBJθ > POSS (by
+% intuition, yes, if only by precedence, both in f- and c-structure).
 
 \subsubsection{Clitic quantifiers}
 
