@@ -262,7 +262,7 @@ are in brackets.
 \a NP → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{CP}\right)$
 \a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
 	{\{NP | DP\}}\right)$
-\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\XCompl}]{NP}\right)$
+\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{NP}\right)$
 \a\label{ex:npstruct_Adj}%
 	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP*}
 \xe
@@ -285,7 +285,7 @@ described in (\ref{ex:npcstruct}).
 					[\anno{\xhead{N}}]
 					[{\anno[\elem{\Adjc}]{AP*}}]
 				]
-				[{$\left(\anno[\pass{\XCompl}]{XP}\right)$}]
+				[{$\left(\anno[\pass{\Compl}]{XP}\right)$}]
 			]
 			[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
 		]
@@ -371,7 +371,7 @@ function in these examples.
 			[\anno{\xhead{N}}
 				[{kasu}]
 			]
-			[{\anno[\pass{\XCompl}]{NP}}
+			[{\anno[\pass{\Compl}]{NP}}
 				[{bariri}, roof]
 			]
 %		]
@@ -3412,17 +3412,16 @@ dissimilarities between the two, as well as their distribution as morphemes.
 
 As described in the previous section, APs are usually found as adjuncts of NPs
 or DPs, where they describe properties of these nominal elements. Adjectives
-are likewise commonly found as open complements (\XCompl{}) in equative
-statements, which will be dealt with in \autoref{subsec:eqs}. Possessive
-pronouns can be used as adjective-like modifiers as well, though they are
-probably still better classified as DP heads, since they are functional
-morphemes. Possessive adjectives thus also do not share all the morphological
-properties of adjectives, for instance, they cannot be compared (see
-\autoref{phsec:possadj}, p.~\pageref{phsec:possadj}), also they can only be
-instanced once. In other words, it is not possible to modify the same noun with
-multiple possessive morphemes, which means that they are not part of \Adjc{}.
-The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
-(\ref{ex:adjpcstruct}) show how an AP is constructed.
+are likewise commonly found as \Plink{} in copula clauses, which will be dealt
+with in \autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
+modifiers as well, though they are probably still better classified as DP
+heads, since they are functional morphemes. Possessive adjectives thus also do
+not share all the morphological properties of adjectives, for instance, they
+cannot be compared (see \autoref{phsec:possadj}, p.~\pageref{phsec:possadj}),
+also they can only be instanced once. In other words, it is not possible to
+modify the same noun with multiple possessive morphemes, which means that they
+are not part of \Adjc{}. The phrase-structure rule in (\ref{ex:adjpstruct}) and
+the c-structure tree in (\ref{ex:adjpcstruct}) show how an AP is constructed.
 
 \begin{figure}
 \pex\label{ex:adjpstruct}
@@ -4955,17 +4954,17 @@ objects governed by the adposition.
 \end{figure}
 
 The same as in (\ref{ex:pppstruct}) is spelled out again in c-tree form in
-(\ref{ex:ppcstruct}). Prepositional phrases, if not subcategorized by the verb,
-are optional information and thus not governed by the verb; the respective PP
-is thus part of the set of adjuncts. Some verbs, like \xayr{tpY/}{tapy-}{put},
-may take PP complements headed by an adposition, for instance, in cases like
-\fw{Mary puts the book {\normalfont [\tsub{PP}~[\tsub{P}} on {\normalfont
-]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP \fw{on the pile} is not an
-adjunct here because \fw{She does so on the pile} makes no sense; the PP must
-be an argument of the verb in this case, not additional, optional information.
-Ayeri behaves the same way in this regard. These governed PPs are categorized
-as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
-(\textit{loc}, \textit{src} or \textit{goal}).
+(\ref{ex:ppcstruct}). Prepositional phrases, if not subcategorized for by the
+verb, are optional information and thus not governed by the verb; the
+respective PP is thus part of the set of adjuncts. Some verbs, like
+\xayr{tpY/}{tapy-}{put}, may take PP complements headed by an adposition, for
+instance, in cases like \fw{Mary puts the book {\normalfont [\tsub{PP}~[
+\tsub{P}} on {\normalfont]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP
+\fw{on the pile} is not an adjunct here because \fw{She does so on the pile}
+makes no sense; the PP must be an argument of the verb in this case, not
+additional, optional information. Ayeri behaves the same way in this regard.
+These governed PPs are categorized as \Oblique{} with $\theta$ replaced by the
+proper semantic macrorole (\textit{loc}, \textit{src} or \textit{goal}).
 
 \begin{figure}
 \ex\label{ex:ppcstruct}\labels
@@ -10566,7 +10565,7 @@ copula, but the juxtaposition of two phrases creates a predication
 relationship? I will follow \citet{attia2008} in this, who rejects the analysis
 of predicative complements as \XCompl{} described, among others, by
 \citet{bresnan2016} in favor of treating them as closed complements of the
-\Plink{} type \citep[??]{butt1999}. He maintains that
+\Plink{} type \citep[70]{butt1999}. He maintains that
 
 \blockcquote[105]{attia2008}{the closed complement analysis is the default
 syntactic representation for all languages. The presence vs.\ absence of a
@@ -11303,11 +11302,11 @@ form (see \autoref{subsec:case}). Topic marking on the verb works in tandem
 with case marking on the marked-for noun phrase, which receives zero-marking
 for case. Personal pronouns occur in an undeclined base form if topicalized
 (see \autoref{subsec:perspro}). Morphologic topic marking is limited to finite
-verbs which subcategorize more than one grammatical function, so a verb whose
-argument structure defines, for instance, \astruct{...}{\ups{\Subj} \ups{\Oblq
-{loc}}} also qualifies for topic marking even though \Oblq{loc} is not
-necessarily a semantic core role for this verb but only an adjunct. There have
-already been numerous examples of topic marking above, but for the sake of
+verbs which subcategorize for more than one grammatical function, so a verb
+whose argument structure defines, for instance, \astruct{...}{\ups{\Subj}
+\ups{\Oblq {loc}}} also qualifies for topic marking even though \Oblq{loc} is
+not necessarily a semantic core role for this verb but only an adjunct. There
+have already been numerous examples of topic marking above, but for the sake of
 completeness, see (\ref{ex:topmkg}). Topic marking also is restricted to the
 core f-structure of the verb, that is, a matrix verb cannot mark topic for
 arguments of a subordinate verb. Raising is required to make an embedded
@@ -11430,17 +11429,65 @@ correspondingly identifies the NP/DP as the clause's topic, which the rule in
 \xe
 \end{morphlex}
 
-The fact that topic marking operates only within a verb's nucleus prohibits
+The fact that topic marking operates only within a verb's nucleus prevents
 possessors or instrumental complements from being topicalized, since they are
 separate, embedded f-structures. They thus have their own predicator that is
 not the verb, but a noun which they modify. According to \citep{bresnan2016}'s
 annotations, possessees are conceptualized as having the power to subcategorize
-a possessor: the noun's \Pred{} value is modified by appending \astruct{...-of}
-{\ups{\Poss}}. Presumably, we want instrumental complements in Ayeri to work
-along these lines, except that the attributive, rather than possessive,
-relationship is expressed by a difference in case marking.
+for a possessor: the noun's \Pred{} value is modified by appending
+\astruct{...-of}{\ups{\Poss}} at least in their English examples. I will,
+however, omit the \fw{-of} and more generally indicate nouns taking a possessor
+as \astruct{noun}{\Poss} with the NP marked for genitive case. Presumably, we
+want instrumental complements in Ayeri to work along these lines as well for
+the reason of structural similarity of the construction, except that the
+attributive, rather than possessive, relationship of the complement is
+expressed by a difference in case marking: instrumental instead of genitive. An
+example is given in (\ref{ex:transnoun}).
 
-...
+\begin{figure}
+\pex\label{ex:transnoun}
+\a\label{transnoun_poss}
+	\begin{minipage}[t]{.5\remaining}
+	\begingl
+		\gla kegan ayonena //
+		\glb kegan ayon-ena //
+		\glc hat man-\Gen{} //
+		\glft `the man's hat' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{avm}
+	\[
+		\Pred	&	\astruct{hat}{\ups{\Poss}} \\
+		\Poss	&	\[
+			\Pred	&	`man' \\
+			\Case	&	\Gen \\
+		\] \\
+	\]
+	\end{avm}
+
+\a\label{transnoun_compl}
+	\begin{minipage}[t]{.5\remaining}
+	\begingl
+		\gla kasu bariri //
+		\glb kasu bari-ri //
+		\glc basket meat-\Ins{} //
+		\glft `basket of meat' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{avm}
+	\[
+		\Pred	&	\astruct{basket}{\ups{\Compl}} \\
+		\Compl	&	\[
+			\Pred	&	`meat' \\
+			\Case	&	\Ins \\
+		\] \\
+	\]
+	\end{avm}
+
+\xe
+\end{figure}
 
 \subsubsection{Clitic quantifiers}
 
@@ -11456,13 +11503,13 @@ the inflected, finite verb is an extended head of verb phrase, compare
 pruned from c-structure. Nevertheless, there are cases where non-finite verbs
 do occur, namely, in CPs from which a subject has been raised or in which a
 subject or object slot is controlled from without. It is also the verb phrase
-which carries the arguments subcategorized by the verb apart from the subject.
-Here as well, if there is an adverbial modifier in the VP, it follows the head,
-and \xhead{V}'s complement and other modifiers are shifted to the right/up. The
-XP in the phrase structure rules in (\ref{ex:vppstruct}) and their c-structure
-equivalent in (\ref{ex:vpcstruct}) may be formed by an NP, DP, AP, PP, or CP in
-decreasing order on the functional hierarchy; the position may also be left
-unoccupied for intransitive verbs.
+which carries the arguments subcategorized for by the verb apart from the
+subject. Here as well, if there is an adverbial modifier in the VP, it follows
+the head, and \xhead{V}'s complement and other modifiers are shifted to the
+right/up. The XP in the phrase structure rules in (\ref{ex:vppstruct}) and
+their c-structure equivalent in (\ref{ex:vpcstruct}) may be formed by an NP,
+DP, AP, PP, or CP in decreasing order on the functional hierarchy; the position
+may also be left unoccupied for intransitive verbs.
 
 \begin{figure}
 \pex\label{ex:vppstruct}
