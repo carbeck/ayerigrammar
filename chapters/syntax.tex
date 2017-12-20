@@ -758,7 +758,7 @@ which supplies the information by itself so that further morphological plural
 marking by the suffix \rayr{/ye}{-ye} on the noun stem itself would be
 redundant. As shown in \autoref{sec:numerals} (p.~\pageref{hundreds}), however,
 there are very limited occasions where a noun may be marked for plural in spite
-of the presence of a numeral, for instance as in (ex:plovermkg).
+of the presence of a numeral, for instance as in (\ref{ex:plovermkg}).
 
 \ex\label{ex:plovermkg}\begingl
 	\gla Ang bengyon keynamye menang kanānya {desay iray}. //
@@ -11287,12 +11287,82 @@ complement in order to avoid ambiguity in its modification relationship: in
 (\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the adverb
 to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān}, since
 adverbs and adjectives are not strictly distinguished by morphologic means
-(\ref{ex:advoradj}). Due to \Lfg{}'s functional approach, however, both
-c-structures in (\ref{ex:ayradvorder}ab) map to the f-structure shown in
+(\ref{ex:advoradj}).\footnote{S cannot be applied recursively and does not
+coordinate with anything \xbar{I} might contain. Assuming that specifiers in
+Ayeri also branch off to the right and that S is indeed in Spec,IP for the
+reasons mentioned, the interpretation in (\ref{ex:advoradj}a) is not licensed.
+S would have to be the right-most node in IP---which it normally is.} Due to
+\Lfg{}'s functional approach, however, both c-structures in
+(\ref{ex:ayradvorder}ab) map to the f-structure shown in
 (\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
 Whatever the actual c-structure realization looks like, coherence is thought to
 be created by unifying semantic information provided by the individual words
 and mapping it into f-structure.
+
+Quantifier suffixes work with verbs as well, except that they have an
+grading or intensifying rather than quantifying meaning in this context,
+compare \autoref{tab:quantifiers} (p.~\pageref{tab:quantifiers}). An example is
+given in (\ref{ex:verbint}). The suffix is an enclitic with an adverbial
+meaning. It thus feeds into the \Adjc{} function at clause level in the way
+regular adverbs do (\ref{ex:verbintfstr}).
+
+\begin{figure}
+\pex
+\a\label{ex:verbint}
+\begingl
+	\gla Ang @ danguyan-ngas karisa. //
+	\glb ang= dangu=yan.Ø=ngas kar-isa //
+	\glc \AgtT{} flee=\TplM{}.\Top{}=almost fear-\Caus{} //
+	\glft `They almost fled for fear.' //
+\endgl
+
+\a\label{ex:verbintfstr}
+\begin{minipage}[t]{.5\remaining}
+\begin{forest} shorter edges, narrower nodes, italic leaves
+[IP
+	[\anno{\xhead{I}}
+		[\anno{\xhead{I}}
+			[{Ang danguyan}, roof]
+		]
+		[{\anno[\elem{\Adjc}]{Cl}}
+			[-ngas]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Oblq{cau}}]{NP}}
+			[karisa, roof]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{flee}{\ups{\Subj} \ups{\Oblq{cau}}} \\
+
+	\Top	&	\[
+		\avmspan{``they''} \\
+	\] \tikzmark{verbintfstr_top} \\
+
+	\Subj	&	\tikzmark{verbintfstr_subj} \\
+
+	\Oblq{cau}	&	\[
+		\Pred	&	`fear' \\
+		\Case	&	\Caus \\
+	\] \\
+
+	\Adjc	&	\{\[
+		\Pred	&	`almost' \\
+	\]\}
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:verbintfstr_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:verbintfstr_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
 
 \subsubsection{Topic marking}
 
@@ -11508,12 +11578,13 @@ case marking: instrumental instead of genitive. An example is given in
 			\Pred	&	`Kaman' \\
 			\Case	&	\Gen \\
 		\] \\
-	\] \tikzmark{npembedfull1_top} \\
+	\] \tikzmark{npembedfull1_top}~\hspace{1em} \\
 
-	\Subj	&	\avmspan{``I''} \\
+	\Subj	&	\[
+		\avmspan{``I''} \\
+	\] \\
 
 	\Obj	&	\tikzmark{npembedfull1_obj} \\
-	\] \\
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
@@ -11563,13 +11634,10 @@ respectively, individually. Example (\ref{ex:npembedfull}) shows a full
 sentence with an embedded NP modifying an NP which in turn is an argument of
 the verb. In (\ref{ex:npembedfull}), the object NP has been topicalized and
 thus appears as \rayr{venej}{veney} instead of full \rayr{veneysF}{veneyas}.
-Example (\ref{ex:npembedfull_2}) shows that it is no problem for the topic
-marker to select an NP which is not part of the a-structure of the verb, but
-simply an NP within the clause.
-
-\subsubsection{Clitic quantifiers}
-
-...
+That is, the head of the phrase is marked for topic and identifies the phrase
+as such. Example (\ref{ex:npembedfull_2}) shows that it is no problem either
+for the topic marker to select an embedded NP which is not part of the
+a-structure of the verb, but simply an NP within the clause.
 
 \subsection{Verb phrases}
 \label{subsec:vps}
