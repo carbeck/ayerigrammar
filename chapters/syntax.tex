@@ -10931,7 +10931,7 @@ clause is obligatorily finite, I will interpret this XP as an IP---an
 inflectional phrase. The phrase structure for an IP will thus look like in
 (\ref{ex:ippstruct}), with its translation as a c-structure tree in
 (\ref{ex:ipcstruct}). The categories verbs can inflect for are listed in 
-(\ref{ex:verbmorphlex}).
+(\ref{ex:inflmorphlex}).
 
 \begin{figure}
 \pex\label{ex:ippstruct}
@@ -10963,19 +10963,21 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 
 \begin{figure}
 \begin{morphlex}
-\ex\label{ex:verbmorphlex}%
+\ex\label{ex:inflmorphlex}%
 \adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& I
 		& \begin{tabu}[t]{l l X[l]}
 			\ups{\Pred} & = & `...' \\
-			\ups{\Tense} & = & \{\NPst, \Pst, \RPst, \NFut, \Fut,
+			\ups{\VType} & = & $finite$ \bigskip \\
+
+			\ups{\Tense} & = & \{\Prs, \NPst, \Pst, \RPst, \NFut, \Fut,
 				\RFut\} \\
-			\ups{\Asp} & = & \{\Prog, \Hab, \Iter\} \\
-			\ups{\Mood} & = & \{\Irr, \Neg, \Imp, \Hort\} \\
-			\ups{\Mod} & = & \{$ability$, $desire$, $intention$, $permission$,
-				$requirement$, $obligation$, $continuation$\}\bigskip \\
+			\ups{\Asp} & = & \{\Simp, \Prog, \Hab, \Iter\} \\
+			\ups{\Mood} & = & \{\Ind, \Irr, \Neg, \Imp, \Hort\} \\
+			(\ups{\Mod} & = & \{$ability$, $desire$, $intention$, $permission$,
+				$requirement$, $obligation$, $continuation$\}) \bigskip \\
 
 			\ups{\Top{} \Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
@@ -11696,7 +11698,7 @@ subject. Here as well, if there is an adverbial modifier in the VP, it follows
 the head, and \xhead{V}'s complement and other modifiers are shifted to the
 right/up. The XP in the phrase structure rules in (\ref{ex:vppstruct}) and
 their c-structure equivalent in (\ref{ex:vpcstruct}) may be formed by an NP,
-DP, AP, PP, CP, or VP in decreasing order on the functional hierarchy, and in
+DP, AP, PP, VP, or CP in decreasing order on the functional hierarchy, and in
 increasing order regarding syntactic weight. The position may also be left
 unoccupied for intransitive verbs.
 
@@ -11738,7 +11740,10 @@ be negated. However, they do not mark person and topic, and in contrast to
 imperative verbs, they do not imply a subject. \rayr{Il/IlymF}{il-ilyam} in
 (\ref{ex:vpsent_2}) rather receives its subject from the matrix verb,
 \xayr{shyNF}{sahayang}{I went}; the example is thus an instance of subject
-control.
+control. The set in (\ref{ex:verbmorphlex}) gives the definitions of the
+semantic features a non-finite verb marks; (\ref{ex:vpcompl}) gives examples of
+the different complements of a verb (for simplicity, all examples have agent
+topics and none are ditransitive or complex transitive).
 
 \begin{figure}
 \pex\label{ex:vpsent}
@@ -11755,6 +11760,217 @@ control.
 	\glc go=\Fsg{}.\Aarg{} \Iter{}\til{}give-\Ptcp{} book-\Parg{} //
 	\glft `I went to return the book.' //
 \endgl
+\xe
+\end{figure}
+
+\begin{figure}
+\begin{morphlex}
+\ex\label{ex:verbmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& V
+		& \begin{tabu}[t]{l l X[l]}
+			\ups{\Pred} & = & `...' \\
+			\ups{\VType} & = & $nonfinite$ \bigskip \\
+
+			\ups{\Asp} & = & \{\Simp, \Prog, \Iter\} \\
+			\ups{\Mood} & = & \{\Ind, \Neg\} \\
+		\end{tabu}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+\end{figure}
+
+\begin{figure}
+\pex\label{ex:vpcompl}
+\a\label{ex:vpcompl_np}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + NP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcomplnp_top} \\
+
+	\Subj	&	\tikzmark{vpcomplnp_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplnp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplnp_subj});
+\end{tikzpicture}
+
+\a\label{ex:vpcompl_dp}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + DP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcompldp_top} \\
+
+	\Subj	&	\tikzmark{vpcompldp_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcompldp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcompldp_subj});
+\end{tikzpicture}
+
+\a\label{ex:vpcompl_ap}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + AP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcomplap_top} \\
+
+	\Subj	&	\tikzmark{vpcomplap_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplap_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplap_subj});
+\end{tikzpicture}
+
+\a\label{ex:vpcompl_pp}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + PP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcomplpp_top} \\
+
+	\Subj	&	\tikzmark{vpcomplpp_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplpp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplpp_subj});
+\end{tikzpicture}
+
+\a\label{ex:vpcompl_vp}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + VP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcomplvp_top} \\
+
+	\Subj	&	\tikzmark{vpcomplvp_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplvp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplvp_subj});
+\end{tikzpicture}
+
+\a\label{ex:vpcompl_cp}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\glpreamble verb + CP complement: //
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Top	&	\[
+		\Pred	&	'...' \\
+	\] \tikzmark{vpcomplcp_top} \\
+
+	\Subj	&	\tikzmark{vpcomplcp_subj} \\
+	
+	...	&	\[
+		\Pred	&	`...' \\
+		\Case	&	... \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplcp_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplcp_subj});
+\end{tikzpicture}
+
 \xe
 \end{figure}
 
