@@ -11650,6 +11650,37 @@ as such. Example (\ref{ex:npembedfull_2}) shows that it is no problem either
 for the topic marker to select an embedded NP which is not part of the
 a-structure of the verb, but simply an NP within the clause.
 
+\subsubsection{Imperatives}
+
+While verbs can be inflected for imperative mood, such imperative verbs do not
+have person agreement and also do not regularly mark topic, except for emphatic
+imperatives. They imply a second person subject without marking it with
+\rayr{/v}{-va} or \rayr{/vaaNF}{-vāng} specifically, though the \rayr{/U}{-u}
+suffix can be interpreted as being a fusional morpheme embodying both
+person-features and information on the mood, as illustrated by the set of
+morpholexical information in (\ref{ex:impfeat}). Imperative verbs may also be
+inflected for other moods and aspects in addition.
+
+\begin{figure}
+\begin{morphlex}
+\ex\label{ex:impfeat}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	\rayr{\larger /U}{-u}
+		& V$_{infl}$
+		& \begin{tabular}[t]{l l l}
+			\ups{\Mood} & = & \Imp \\
+			\ups{\Subj} & = & ↓ \\
+				\quad\downs{\Pred} & = & `$pro$' \\
+				\quad\downs{\Pers} & = & \Second \\
+				\quad\downs{\Case} & = & \Aarg \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+\end{figure}
+
 \subsection{Verb phrases}
 \label{subsec:vps}
 
@@ -11670,7 +11701,7 @@ may also be left unoccupied for intransitive verbs.
 
 \begin{figure}
 \pex\label{ex:vppstruct}
-\a VP → \anno*{\xbar{V}} \anno*[\pass{\AF}]{XP*}
+\a VP → \anno*{\xbar{V}} \anno*[\pass{\GF}]{XP*}
 \a \xbar{V} → \anno*{\xhead{V}}
 	\anno*[\elem{\Adjc}]{AdvP}
 \a \xhead{V} → \anno*{\xhead{V}} $\left(\anno*{Cl}\right)$
@@ -11689,7 +11720,7 @@ may also be left unoccupied for intransitive verbs.
 				]
 				[{\anno[\elem{\Adjc}]{AdvP}}]
 			]
-		[{\anno[\pass{\AF}]{XP*}}]
+		[{\anno[\pass{\GF}]{XP*}}]
 %	]
 ]
 \end{forest}
