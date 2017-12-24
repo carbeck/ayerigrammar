@@ -11741,9 +11741,11 @@ imperative verbs, they do not imply a subject. \rayr{Il/IlymF}{il-ilyam} in
 (\ref{ex:vpsent_2}) rather receives its subject from the matrix verb,
 \xayr{shyNF}{sahayang}{I went}; the example is thus an instance of subject
 control. The set in (\ref{ex:verbmorphlex}) gives the definitions of the
-semantic features a non-finite verb marks; (\ref{ex:vpcompl}) gives examples of
-the different complements of a verb (for simplicity, all examples have agent
-topics and none are ditransitive or complex transitive).
+semantic features a non-finite verb marks. Subordinate, non-finite verbs are
+one of the possible complements of finite verbs, so (\ref{ex:vpcompl}) and
+(\ref{ex:vpcompl2}) give general examples of the different complements of a
+verb. For simplicity, all examples have agent topics and none are ditransitive
+or complex transitive.
 
 \begin{figure}
 \pex\label{ex:vpsent}
@@ -11789,25 +11791,28 @@ topics and none are ditransitive or complex transitive).
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + NP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Ang @ konje {} @ Bamis seygoley. //
+	\glb ang= kond-ye Ø= Bamis seygo-ley  //
+	\glc \AgtT{}= eat-\TsgF{} \Top{}= Bamis apple-\PargI{} //
+	\glft `Bamis eats an apple.' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Pred	&	\astruct{eat}{\ups{\Subj} \ups{\Obj}} \\
 	\Top	&	\[
-		\Pred	&	'...' \\
+		\Pred	&	`Bamis' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
 	\] \tikzmark{vpcomplnp_top} \\
 
 	\Subj	&	\tikzmark{vpcomplnp_subj} \\
 	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\Obj	&	\[
+		\Pred	&	`apple' \\
+		\Case	&	\Parg \\
+		\Anim	&	$-$ \\
 	\] \\
 \]
 \end{avm}
@@ -11820,25 +11825,29 @@ topics and none are ditransitive or complex transitive).
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + DP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Ang @ menuya {} @ Tikim yas. //
+	\glb ang= menu-ya Ø= Tikim yas //
+	\glc \AgtT{}= visit-\TsgM{} \Top{}= Tikim \Fsg{}.\Parg{} //
+	\glft `Tikim visited me.' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Pred	&	\astruct{visit}{\ups{\Subj} \ups{\Obj{}}} \\
 	\Top	&	\[
-		\Pred	&	'...' \\
+		\Pred	&	`Tikim' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
 	\] \tikzmark{vpcompldp_top} \\
 
 	\Subj	&	\tikzmark{vpcompldp_subj} \\
 	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\Obj	&	\[
+		\Pred	&	`$pro$' \\
+		\Pers	&	\First \\
+		\Num	&	\Sg \\
+		\Case	&	\Parg{} \\
 	\] \\
 \]
 \end{avm}
@@ -11851,56 +11860,61 @@ topics and none are ditransitive or complex transitive).
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + AP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Lentareng ban. //
+	\glb lenta=reng ban //
+	\glc sound=\TsgI{}.\Aarg{} good //
+	\glft `It sounds good.' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
-	\Top	&	\[
-		\Pred	&	'...' \\
-	\] \tikzmark{vpcomplap_top} \\
-
-	\Subj	&	\tikzmark{vpcomplap_subj} \\
+	\Pred	&	\astruct{sound}{\ups{\Subj} \ups{\XCompl}} \\
 	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\Subj	&	\[
+		\avmspan{``it''} \\
+	\] \\
+	
+	\XCompl	&	\[
+		\Pred	&	`good' \\
 	\] \\
 \]
 \end{avm}
-\begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplap_top})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplap_subj});
-\end{tikzpicture}
+\xe
+\end{figure}
 
+\begin{figure}
+\pex\label{ex:vpcompl2}
 \a\label{ex:vpcompl_pp}
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + PP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Ang @ lampya {} @ Mico manga @ luga minkayya. //
+	\glb ang= lamp-ya Ø= Mico manga= luga minkay-ya //
+	\glc \AgtT{}= walk-\TsgM{} \Top{}= Mico \Dir{}= among village-\Loc{} //
+	\glft `Mico walks through the village.' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
+	\Pred	&	\astruct{walk}{\ups{\Subj} \ups{\Oblq{goal}}} \\
 	\Top	&	\[
-		\Pred	&	'...' \\
+		\Pred	&	`Mico' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
 	\] \tikzmark{vpcomplpp_top} \\
 
 	\Subj	&	\tikzmark{vpcomplpp_subj} \\
 	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\Oblq{goal}	&	\[
+		\Pred	&	\astruct{among}{\ups{\Obj}} \\
+		\PSem	&	$dir$ \\
+		\PCase	&	\Oblq{goal} \\
+		\Obj	&	\[
+			\Pred	&	`village' \\
+			\Case	&	\Loc \\
+		\]
 	\] \\
 \]
 \end{avm}
@@ -11913,31 +11927,36 @@ topics and none are ditransitive or complex transitive).
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + VP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Linkaya ang @ Prano sungyam tinkayley. //
+	\glb linka-ya ang= Prano sung-yam tinkay-ley //
+	\glc try-\TsgM{} \Aarg{}= Prano find-\Ptcp{} key-\PargI{} //
+	\glft `Prano tries to find the key.' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
-	\Top	&	\[
-		\Pred	&	'...' \\
-	\] \tikzmark{vpcomplvp_top} \\
-
-	\Subj	&	\tikzmark{vpcomplvp_subj} \\
+	\Pred	&	\astruct{try}{\ups{\Subj} \ups{\XCompl}} \\
+	\Subj	&	\[
+		\Pred	&	`Prano' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+	\] \tikzmark{vpcomplvp_subj1} \\
 	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\XCompl{}	&	\[
+		\Pred	&	\astruct{find}{\ups{\Subj} \ups{\Obj}} \\
+		\Subj	&	\tikzmark{vpcomplvp_subj2} \\
+		\Obj	&	\[
+			\Pred	&	`key' \\
+			\Case	&	\Parg \\
+			\Anim	&	$-$ \\
+		\] \\
 	\] \\
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplvp_top})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplvp_subj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplvp_subj1})
+	-- ++(east:7em) |- ([yshift=1ex]{pic cs:vpcomplvp_subj2});
 \end{tikzpicture}
 
 \a\label{ex:vpcompl_cp}
@@ -11950,12 +11969,12 @@ topics and none are ditransitive or complex transitive).
 	\glft `...' //
 \endgl
 \end{minipage}
-\hfill
+~
 \begin{avm}
 \[
 	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
 	\Top	&	\[
-		\Pred	&	'...' \\
+		\Pred	&	`...' \\
 	\] \tikzmark{vpcomplcp_top} \\
 
 	\Subj	&	\tikzmark{vpcomplcp_subj} \\
