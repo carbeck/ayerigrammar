@@ -2231,7 +2231,7 @@ any countable or quantifiable noun:
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs, but also PPs; and they may
-also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{theme}) as well as
 various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
 decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
@@ -10970,8 +10970,6 @@ inflectional phrase. The phrase structure for an IP will thus look like in
 		& I
 		& \begin{tabu}[t]{l l X[l]}
 			\ups{\Pred} & = & `...' \\
-			\ups{\VType} & = & $finite$ \bigskip \\
-
 			\ups{\Tense} & = & \{\Prs, \NPst, \Pst, \RPst, \NFut, \Fut,
 				\RFut\} \\
 			\ups{\Asp} & = & \{\Simp, \Prog, \Hab, \Iter\} \\
@@ -11744,8 +11742,8 @@ control. The set in (\ref{ex:verbmorphlex}) gives the definitions of the
 semantic features a non-finite verb marks. Subordinate, non-finite verbs are
 one of the possible complements of finite verbs, so (\ref{ex:vpcompl}) and
 (\ref{ex:vpcompl2}) give general examples of the different complements of a
-verb. For simplicity, all examples have agent topics and none are ditransitive
-or complex transitive.
+verb. For simplicity, all examples have agent topics where it is relevant, and
+none are ditransitive or complex transitive.
 
 \begin{figure}
 \pex\label{ex:vpsent}
@@ -11774,8 +11772,6 @@ or complex transitive.
 		& V
 		& \begin{tabu}[t]{l l X[l]}
 			\ups{\Pred} & = & `...' \\
-			\ups{\VType} & = & $nonfinite$ \bigskip \\
-
 			\ups{\Asp} & = & \{\Simp, \Prog, \Iter\} \\
 			\ups{\Mood} & = & \{\Ind, \Neg\} \\
 		\end{tabu}
@@ -11963,35 +11959,186 @@ or complex transitive.
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\glpreamble verb + CP complement: //
-	\gla ... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\gla Paronyang, koronyāng. //
+	\glb paron=yang koron=yāng //
+	\glc believe=\Fsg{}.\Aarg{} know=\TsgM{}.\Aarg{} //
+	\glft `I believe that he knows (it).' //
 \endgl
 \end{minipage}
 ~
 \begin{avm}
 \[
-	\Pred	&	\astruct{...}{\ups{\Subj} \ups{...}} \\
-	\Top	&	\[
-		\Pred	&	`...' \\
-	\] \tikzmark{vpcomplcp_top} \\
-
-	\Subj	&	\tikzmark{vpcomplcp_subj} \\
-	
-	...	&	\[
-		\Pred	&	`...' \\
-		\Case	&	... \\
+	\Pred	&	\astruct{believe}{\ups{\Subj} \ups{\Compl}} \\
+	\Subj	&	\[
+		\avmspan{``I''} \\
+	\] \\
+	\Compl{}	&	\[
+		\Pred	&	\astruct{know}{\ups{\Subj}} \\
+		\Subj	&	\[
+			\avmspan{``he''} \\
+		\] \\
 	\] \\
 \]
 \end{avm}
-\begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:vpcomplcp_top})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:vpcomplcp_subj});
-\end{tikzpicture}
-
 \xe
 \end{figure}
+
+Ditransitive verbs in Ayeri differ from English in that there is no dative
+shift where the recipient is expressed as a prepositional phrase. Like German,
+for instance, Ayeri uses the dative case to mark recipients. However, different
+from both English and German, Ayeri puts recipients after themes, irrespective
+of, for instance, animacy differences between the arguments.
+(\ref{ex:doubleobj}) gives an example of such a double-object construction.
+
+\begin{figure}
+\pex\label{ex:doubleobj}
+\a\label{ex:doubleobj_1}\begingl
+	\gla Ang @ ilya {} @ Apan koyās yam @ Diya kardangya. //
+	\glb ang= il-ya Ø= Apan koya-as yam= Diya kardang-ya //
+	\glc \AgtT{}= give-\TsgM{} \Top{}= Apan book-\Parg{} \Dat{}= Diya
+	kardang-ya //
+	\glft `Apan gives Diya a book at school.' //
+\endgl
+
+\a\label{ex:doubleobj_2}\ljudge*%
+	\fw{Ang ilya Apan yam Diya koyās kardangya.}
+\xe
+\end{figure}
+
+Functionally, the verb subcategorizes three arguments: a subject, an object,
+and a secondary object, where the object expresses the recipient and the
+secondary object expresses the theme, as shown in (\ref{ex:doubleobjfstruct}).
+In (\ref{ex:doubleobj}), the object/recipient is \rayr{diy}{Diya}, and the
+secondary object/theme is \rayr{koyaasF}{koyās}. The graphic in
+(\ref{ex:ditranscase}) extends that in (\ref{ex:subject_nomacc}) to show how
+Ayeri maps case to the complements of ditransitive verbs in relation to
+transitive verbs: the same case which marks the patients (P) of monotransitive
+verbs marks the theme (T) of a ditransitive verb (P\,=\,T). Furthermore,
+another case is used to mark the donor (D) of ditransitive verbs, the agent of
+monotransitive verbs (A), and the subject (S) of intransitive verbs in
+canonical cases (S\,=\,A\,=\,D). The recipient (R) receives extra marking.
+Ayeri is an indirective language, thus.
+
+\begin{figure}
+\ex\label{ex:doubleobjfstruct}
+\begin{avm}
+\[
+	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\SObjc{theme}} \ups{\Obj}} \\
+
+	\Top	&	\[
+		\Pred	&	`Apan' \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+	\] \tikzmark{doubleobjfstruct_top} \\
+
+	\Subj	&	 \tikzmark{doubleobjfstruct_subj} \\
+
+	\SObjc{theme}	&	\[
+		\Pred	&	`book' \\
+		\Case	&	\Parg \\
+		\Anim	&	$+$ \\
+	\] \\
+
+	\Obj	&	\[
+		\Pred	&	`Diya' \\
+		\Case	&	\Dat \\
+	\] \\
+
+	\Adjc	&	\{\[
+		\Pred	&	`school' \\
+		\Case	&	\Loc \\
+	\]\} \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:doubleobjfstruct_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:doubleobjfstruct_subj});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:ditranscase}
+\begin{tikzpicture}[baseline={(S.base)}]
+\node (S) at (0.5,2.5) {S};
+\node (A) at (0.5,1.5) {A};
+\node (D) at (0.5,0.5) {D};
+
+\node (P) at (2.0,1.5) {P};
+\node (T) at (2.0,0.5) {T};
+
+\node (R) at (3.5,0.5) {R};
+
+\draw [rounded corners=1.5em] (0.0,0.0) rectangle (1.0,3.0);
+\draw [rounded corners=1.5em] (1.5,0.0) rectangle (2.5,2.0);
+\draw (3.5,0.5) circle [radius=1.5em];
+\end{tikzpicture}
+\xe
+\end{figure}
+
+Essentially, Ayeri follows the same order of NPs as English in the construction
+where the recipient appears as a prepositional phrase headed by \fw{to}.
+However, the recipient is not an adjunct, it must be an argument. That is, it
+is not possible to have multiple recipient NPs (unless one coordinates them
+with \xayr{nj}{nay}{and}), just as it is not possible to have multiple patients
+with transitive verbs. Furthermore, it is not possible to link either the theme
+and the recipient, or the recipient and an adjunct with \xayr{nj}{nay}
+{and}---only non-arguments can be coordinated this way \citep[181]{carnie2013}.
+Likewise, it is not possible for patient, recipient and adjuncts like 
+\xayr{krFdNFy}{kardangya}{at school} in (\ref{ex:doubleobj}) to switch places.
+Both the patient and the recipient must be complements of the verb as a phrasal
+unit, which we may want to treat as a VP as well.
+
+Since the recipient may be omitted but the patient cannot be, I propose to
+treat the patient as a complement proper, and the recipient as an adjunct to a
+VP which itself forms a complement of the main verb, though the main verb of
+course appears in \xhead{I}, not as the head of the VP daughter of S. Example
+(\ref{ex:doubleobjcstruct}) attempts to chart this proposal as a c-structure
+tree; nodes have been moderately pruned as per the economy of expression
+principle \citep[119--121]{bresnan2016}. If we introduce a subordinating verb
+like \xayr{liMk/}{linka-}{try} (control) or \xayr{surFpF/}{surp-}{seem}
+(raising), the dependent verb probably ought to be generated as a daughter of
+the \xbar{V} sister of \rayr{krFdNFy}{kardangya}, so that \rayr{koyaasF ymF
+diy}{koyās yam Diya} is its complement. In either case, the second VP's empty
+head (the would-be sister of \rayr{koyaasF}{koyās}) should find its extended
+head in the next higher \xhead{V}. If this \xhead{V} is empty as well,
+\xhead{I} is the verbal head, as in (\ref{ex:doubleobjcstruct}).
+
+\begin{figure}
+\ex\label{ex:doubleobjcstruct}
+\begin{forest} shorter edges, italic leaves
+[IP
+	[\anno{\xhead{I}}
+		[{Ang ilya}, roof]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Top}]{NP}}
+			[Apan, roof]
+		]
+		[\anno{VP}
+			[\anno{\xbar{V}}
+				[\anno{VP}
+					[\anno{\xbar{V}}
+						[{\anno[\pass{\SObjc{theme}}]{NP}}
+							[koyās, roof]
+						]
+					]
+					[{\anno[\pass{\Obj}]{NP}}
+						[{yam Diya}, roof]
+					]
+				]
+			]
+			[{\anno[\elem{\Adjc}]{NP}}
+				[kardangya, roof]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+...
 
 \subsection{Existential statements}
 \label{subsec:exs}
