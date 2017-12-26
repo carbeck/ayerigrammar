@@ -11735,7 +11735,7 @@ only be acceptable as an elliptical statement, for instance as an answer to
 grammatical statement is given in (\ref{ex:vpsent_2}). The latter example also
 shows that non-finite verbs may nonetheless be marked for aspect; they can also
 be negated. However, they do not mark person and topic, and in contrast to
-imperative verbs, they do not imply a subject. \rayr{Il/IlymF}{il-ilyam} in
+imperative verbs, they do not imply a subject. \rayr{IlF/IlFymF}{il-ilyam} in
 (\ref{ex:vpsent_2}) rather receives its subject from the matrix verb,
 \xayr{shyNF}{sahayang}{I went}; the example is thus an instance of subject
 control. The set in (\ref{ex:verbmorphlex}) gives the definitions of the
@@ -11983,6 +11983,8 @@ none are ditransitive or complex transitive.
 \xe
 \end{figure}
 
+\subsubsection{Ditransitive verbs}
+
 Ditransitive verbs in Ayeri differ from English in that there is no dative
 shift where the recipient is expressed as a prepositional phrase. Like German,
 for instance, Ayeri uses the dative case to mark recipients. However, different
@@ -12084,25 +12086,12 @@ with \xayr{nj}{nay}{and}), just as it is not possible to have multiple patients
 with transitive verbs. Furthermore, it is not possible to link either the theme
 and the recipient, or the recipient and an adjunct with \xayr{nj}{nay}
 {and}---only non-arguments can be coordinated this way \citep[181]{carnie2013}.
-Likewise, it is not possible for patient, recipient and adjuncts like 
-\xayr{krFdNFy}{kardangya}{at school} in (\ref{ex:doubleobj}) to switch places.
-Both the patient and the recipient must be complements of the verb as a phrasal
-unit, which we may want to treat as a VP as well.
-
-Since the recipient may be omitted but the patient cannot be, I propose to
-treat the patient as a complement proper, and the recipient as an adjunct to a
-VP which itself forms a complement of the main verb, though the main verb of
-course appears in \xhead{I}, not as the head of the VP daughter of S. Example
-(\ref{ex:doubleobjcstruct}) attempts to chart this proposal as a c-structure
-tree; nodes have been moderately pruned as per the economy of expression
-principle \citep[119--121]{bresnan2016}. If we introduce a subordinating verb
-like \xayr{liMk/}{linka-}{try} (control) or \xayr{surFpF/}{surp-}{seem}
-(raising), the dependent verb probably ought to be generated as a daughter of
-the \xbar{V} sister of \rayr{krFdNFy}{kardangya}, so that \rayr{koyaasF ymF
-diy}{koyās yam Diya} is its complement. In either case, the second VP's empty
-head (the would-be sister of \rayr{koyaasF}{koyās}) should find its extended
-head in the next higher \xhead{V}. If this \xhead{V} is empty as well,
-\xhead{I} is the verbal head, as in (\ref{ex:doubleobjcstruct}).
+Likewise, it is not possible for patient, recipient, and adjuncts like 
+\xayr{krFdNFy}{kardangya}{at school} in (\ref{ex:doubleobj}) to randomly switch
+places with each other. Both the patient and the recipient must be complements
+of the verb together. The recipient is more readily expendable than the
+theme, however. Example (\ref{ex:doubleobjcstruct}) attempts to chart
+this proposal as a c-structure tree.
 
 \begin{figure}
 \ex\label{ex:doubleobjcstruct}
@@ -12117,15 +12106,11 @@ head in the next higher \xhead{V}. If this \xhead{V} is empty as well,
 		]
 		[\anno{VP}
 			[\anno{\xbar{V}}
-				[\anno{VP}
-					[\anno{\xbar{V}}
-						[{\anno[\pass{\SObjc{theme}}]{NP}}
-							[koyās, roof]
-						]
-					]
-					[{\anno[\pass{\Obj}]{NP}}
-						[{yam Diya}, roof]
-					]
+				[{\anno[\pass{\SObjc{theme}}]{NP}}
+					[koyās, roof]
+				]
+				[{\anno[\pass{\Obj}]{NP}}
+					[{yam Diya}, roof]
 				]
 			]
 			[{\anno[\elem{\Adjc}]{NP}}
@@ -12137,6 +12122,362 @@ head in the next higher \xhead{V}. If this \xhead{V} is empty as well,
 \end{forest}
 \xe
 \end{figure}
+
+\subsubsection{Control verbs}
+
+Control verbs have already been touched on in \autoref{subsubsec:control}
+(p.~\pageref{subsubsec:control}) in order to compare Ayeri to Tagalog in terms
+of syntactic alignment. In this section, I want to elaborate on their
+structural and functional properties. Since \Lfg{} does not assume empty nodes
+to carry semantic or functional value, there is no \textsc{pro} element in
+c-structure trees. VP complements of control verbs are simply treated as
+\XCompl{}s, that is, open complements. These \XCompl{}s lack f-structure
+subjects and are thus dependent on the superordinate verb: control verbs share
+their subject or their object with the subject of a non-finite subordinate
+verb \citep[289\psqq]{bresnan2016}, also compare the English examples in 
+(\ref{ex:engctrlstruct}). Typical S-control verbs in Ayeri are
+\xayr{Ep/}{epa-}{refuse},
+\xayr{liMk/}{linka-}{try},
+\xayr{no/}{no-}{plan},\footnote{This is the same stem as the modal particle 
+\rayr{no}{no}, but as the related content verb.}
+\xayr{pebuk/}{pebuka-}{promise},
+\xayr{sr/}{sara-}{go}, and
+\xayr{vtYF/}{vac-}{like},\footnote{This verb also exists as a modal particle
+\rayr{vtY}{vaca} with the same meaning.}
+among others. On the other hand, typical O-control verbs are, for instance,
+\xayr{glmF/}{galam-}{expect},
+\xayr{kilisF/}{kilis-}{allow},
+\xayr{nelF/}{nel-}{help},
+\xayr{nos/}{nosa-}{order},
+\xayr{pinY/}{pinya-}{ask}, and
+\xayr{tonisF/}{tonis-}{convince}. Examples of control verbs in Ayeri
+are given (\ref{ex:ctrlstruct}).
+
+Since topicalization does not apply across complete f-structures (?),
+% FIXME: OR DOES IT AND THE RULE IS THAT NO VERB MAY INTERVENE AND ROLES MUST
+% NOT APPEAR TWICE IF NO VERB IS IN BETWEEN???
+the \xayr{nyiNsF}{nayingas}{roof} in both (\ref{ex:ctrlstruct}ab) cannot be the
+topic of the verb in the respective matrix clauses, \xayr{liMky}{linkaya}{(he)
+tries} and \xayr{nelFye}{nelye}{(she) helps}. Likewise, since topicalization
+does not apply to non-finite verbs, the subordinate verb in both sentences,
+\xayr{sidegYmF}{sidejam}{repairing}, cannot be marked for topic within its own
+f-structure cores.	
+
+\begin{figure}
+\pex\label{ex:engctrlstruct}
+\a%
+Subject control in English \citep[289]{bresnan2016}:\\
+
+\begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
+\begin{forest} shorter edges, italic leaves,
+[IP$_{f1}$
+	[DP \tikzmark{engctrlstruct1_sus}
+		[Susan]
+	]
+	[VP
+		[V
+			[kept]
+		]
+		[VP$_{f2}$ \tikzmark{engctrlstruct1_eat}
+			[V
+				[eating]
+			]
+			[DP \tikzmark{engctrlstruct1_mar}
+				[marshmallows]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f_1$: \[
+	\Subj	&	\tikzmark{engctrlstruct1_subj} \[
+		\avmspan{``Susan''} \\
+	\] \tikzmark{engctrlstruct1_subj1} \\
+	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \XCompl)} \\
+	\Tense	&	\Pst \\
+	\XCompl	&	$f_2$: \tikzmark{engctrlstruct1_xcomp} \[
+		\Subj	&	\tikzmark{engctrlstruct1_subj2} \\
+		\Pred	&	\astruct{eat}{($f_2$ \Subj) ($f_2$ \Obj)} \\
+		\Obj	&	\tikzmark{engctrlstruct1_obj} \[
+			\avmspan{``marshmallows''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_sus})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_subj});
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_eat})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_mar})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct1_subj1})
+	-- ++(east:7em) |- ([yshift=1ex]{pic cs:engctrlstruct1_subj2});
+\end{tikzpicture}
+
+\a%
+Object control in English \citep[292]{bresnan2016}:\\
+
+\begin{minipage}[t]{.3\remaining}\vspace{1\baselineskip}
+\begin{forest} for tree={s sep-=.5em,s=0}, shorter edges, italic leaves
+[IP$_{f1}$
+	[DP \tikzmark{engctrlstruct2_sus}
+		[Susan]
+	]
+	[VP
+		[V
+			[kept]
+		]
+		[DP \tikzmark{engctrlstruct2_joh}
+			[John]
+		]
+		[VP$_{f2}$ \tikzmark{engctrlstruct2_dou}
+			[V
+				[doubting]
+			]
+			[DP \tikzmark{engctrlstruct2_him}
+				[himself]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f_1$: \[
+	\Subj	&	\tikzmark{engctrlstruct2_subj} \[
+		\avmspan{``Susan''} \\
+	\] \\
+	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \Obj) ($f_1$ \XCompl)} \\
+	\Tense	&	\Pst \\
+	\Obj	&	\tikzmark{engctrlstruct2_obj} \[
+		\avmspan{``John''} \\
+	\] \tikzmark{engctrlstruct2_obj3} \\
+	\XCompl	&	$f_2$: \tikzmark{engctrlstruct2_xcomp} \[
+		\Subj	&	\tikzmark{engctrlstruct2_subj2} \\
+		\Pred	&	\astruct{doubt}{($f_2$ \Subj) ($f_2$ \Obj)} \\
+		\Obj	&	\tikzmark{engctrlstruct2_obj2} \[
+			\avmspan{``himself''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_sus})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_subj});
+	\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_joh})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj});
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_dou})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_him})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj2});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct2_obj3})
+	-- ++(east:2em) |- ([yshift=1ex]{pic cs:engctrlstruct2_subj2});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+\begin{figure}
+\pex\label{ex:ctrlstruct}
+\a\label{ex:ctrlstruct_1}%
+Subject control in Ayeri:\\
+
+\begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xhead{I}
+		[Linkaya]
+	]
+	[S
+		[NP \tikzmark{ctrlstruct1_mic}
+			[{ang Mican}, roof]
+		]
+		[VP
+			[VP \tikzmark{ctrlstruct1_sid}
+				[\xhead{V}
+					[sidejam]
+				]
+				[NP \tikzmark{ctrlstruct1_nay}
+					[nayingley]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{try}{\ups{\Subj} \ups{\XCompl}} \\
+	\Subj	&	\tikzmark{ctrlstruct1_subj} \[
+		\avmspan{``Mican''} \\
+	\] \tikzmark{ctrlstruct1_subj1} \\
+	\XCompl	&	\tikzmark{ctrlstruct1_xcomp} \[
+		\Subj	&	\tikzmark{ctrlstruct1_subj2} \\
+		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
+		\Obj	&	\tikzmark{ctrlstruct1_obj} \[
+			\avmspan{``roof''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_mic})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_subj});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_sid})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_nay})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct1_subj1})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlstruct1_subj2});
+\end{tikzpicture}
+
+\a\label{ex:ctrlstruct_2}%
+Object control in Ayeri:\\
+
+\begin{minipage}[t]{.3\remaining}\vspace{3\baselineskip}
+\begin{forest} shorter edges, italic leaves
+[IP
+	[\xhead{I}
+		[{Ang nelye}, roof]
+	]
+	[S
+		[NP \tikzmark{ctrlstruct2_pih}
+			[Piha]
+		]
+		[VP
+			[NP \tikzmark{ctrlstruct2_mic}
+				[{sa Mican}, roof]
+			]
+			[VP \tikzmark{ctrlstruct2_sid}
+				[\xhead{V}
+					[sidejam]
+				]
+				[NP \tikzmark{ctrlstruct2_nay}
+					[nayingley]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{help}{\ups{\Subj} \ups{\Obj} \ups{\XCompl}} \\
+	\Top	&	\tikzmark{ctrlstruct2_top1} \[
+		\avmspan{``Piha''} \\
+	\] \tikzmark{ctrlstruct2_top2} \\
+	\Subj	&	\tikzmark{ctrlstruct2_subj} \\
+	\Obj	&	\tikzmark{ctrlstruct2_obj} \[
+		\avmspan{``Mican''} \\
+	\] \tikzmark{ctrlstruct2_obj3} \\
+	\XCompl	&	\tikzmark{ctrlstruct2_xcomp} \[
+		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
+		\Subj	&	\tikzmark{ctrlstruct2_subj2} \\
+		\Obj	&	\tikzmark{ctrlstruct2_obj2} \[
+			\avmspan{``roof''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_pih})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_top1});
+	\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_mic})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_obj});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_sid})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_nay})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_obj2});
+
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct2_top2})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlstruct2_subj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct2_obj3})
+	-- ++(east:10em) |- ([yshift=1ex]{pic cs:ctrlstruct2_subj2});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+Furthermore, the process which places the matrix verb in \xhead{I} can also be
+seems to be applicable as well to the subordinate verb if this leads to no
+doubling of semantic roles in the linear order of constituents in the clause.
+The subordinate verb probably becomes a complement of \xhead{I}, and both VPs
+need to be annotated with \elem{\XCompl} instead of plain \pass{\XCompl}, since
+both \xhead{V} and its complements are part of the \XCompl{} of the matrix
+verb, only that the lexical material belonging to this function is not
+contiguous anymore. An example is given in (\ref{ex:ctrlinc}).
+
+\begin{figure}
+\ex\label{ex:ctrlinc}
+\begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[Linkaya]
+		]
+		[VP \tikzmark{ctrlinc_sid1}
+			[sidejam]
+		]
+	]
+	[S
+		[NP \tikzmark{ctrlinc_mic}
+			[{ang Mican}, roof]
+		]
+		[VP
+			[VP \tikzmark{ctrlinc_sid2}
+				[NP \tikzmark{ctrlinc_nay}
+					[nayingley]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct{try}{\ups{\Subj} \ups{\XCompl}} \\
+	\Subj	&	\tikzmark{ctrlinc_subj} \[
+		\avmspan{``Mican''} \\
+	\] \tikzmark{ctrlinc_subj1} \\
+	\XCompl	&	\tikzmark{ctrlinc_xcomp} \[
+		\Subj	&	\tikzmark{ctrlinc_subj2} \\
+		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
+		\Obj	&	\tikzmark{ctrlinc_obj} \[
+			\avmspan{``roof''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlinc_mic})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlinc_subj});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlinc_sid1})
+	to [out=east, in=south west] ([yshift=1ex]{pic cs:ctrlinc_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlinc_sid2})
+	to [out=east, in=south west] ([yshift=1ex]{pic cs:ctrlinc_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:ctrlinc_nay})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlinc_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlinc_subj1})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlinc_subj2});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+...
+
+\subsubsection{Raising verbs}
 
 ...
 
