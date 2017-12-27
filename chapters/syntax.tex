@@ -12674,6 +12674,117 @@ $f$: \[
 \xe
 \end{figure}
 
+Superficially, the charts in (\ref{ex:raisestruct}) look more or less identical
+to those in (\ref{ex:ctrlstruct}). However, while the a-structure definitions
+in the matrix verbs' \Pred{} feature in (\ref{ex:ctrlstruct}) define their
+subjects and objects as arguments, the verbs in (\ref{ex:raisestruct}) do not.
+Instead, (\ref{ex:raisestruct_1}) defines only an \XCompl{} as an argument, and
+its \Subj{} is defined as an athematic subject. This is indicated by placing
+the function label outside of the pointed brackets. The same goes for the
+\Obj{} in (\ref{ex:raisestruct_2}): here as well, the object is not strictly an
+argument of the matrix verb. In the accompanying \Avm{}s, the respective
+athematic functions in $f$ are connected to the \Subj{} function in $g$ in both
+cases to indicate coherence.
+
+The example sentence in (\ref{ex:raisestruct_2}) is also marked ungrammatical
+in contrast to (\ref{ex:ctrlstruct_1}). Even though both sentences may be
+structurally similar in their constituency, their matrix verbs differ in
+argument structure:
+
+\pex\label{ex:ctrlraisecomp}
+\a\label{ex:ctrlraisecomp_octrl}%
+	\astruct{help}{\ups{\Subj} \ups{\Obj} \ups{\XCompl}}
+
+\a\label{ex:ctrlraisecomp_raiseo}%
+	\ljudge*\astruct[\ups{\Obj}]{believe}{\ups{\Subj} \ups{\XCompl}}
+\xe
+
+While \xayr{nelF/}{nel-}{help} subcategorizes for a thematic object,
+\xayr{pronF/}{paron-}{believe} does not. Apparently, Ayeri has no problem
+unifying a thematic object with the subject of a subordinate verb, in spite of
+discrepancies in case marking between agent and patient. On the other hand, an
+athematic object cannot be unified with the subject of a subordinate verb. A
+thematic object can thus become a subordinate thematic subject, but an
+athematic object cannot become a subordinate thematic subject. Note, however,
+that even raising-to-subject is only common in Ayeri with \xayr{surFpF/}{surp-}
+{seem}, so Ayeri more generally seems to have an aversion towards raising. Or,
+assuming that the difference to English is lexical, Ayeri's verbs do not allow
+for athematic functions with the notable exception of \rayr{surFpF/}{surp-}.
+Instead of an \XCompl{} and an athematic function, they subcategorize for a
+\Compl{}.
+
+\begin{figure}
+\ex\label{ex:raiseinc}
+\begingl
+	\gla Le @ surpya valyyam ang @ Ajān umang. //
+	\glb le= surp-ya valy-yam ang= Ajān umang-ley //
+	\glc \PatTI{}= seem-\TsgM{} enjoy-\Ptcp{} \Aarg{}= Ajān beach-\Top{} //
+	\glft `The beach, Ajān seems to enjoy it.' //
+\endgl\medskip
+
+\begin{forest} narrower nodes, shorter edges, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+			[\anno{\xhead{I}}
+				[{Le surpya}, roof]
+			]
+		[{\anno[\elem{\XCompl}]{VP}}
+			[valyyam]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Ajān}, roof]
+		]
+		[\anno{VP}
+			[{\anno[\elem{\XCompl}]{VP}}
+				[{\anno[\uncertain{\XCompl}{\Top}~=~↓]{NP}}
+					[umang]
+				]
+			]
+		]
+	]
+]
+\end{forest}\medskip
+
+\begin{avm}
+\[
+	\Pred	&	\astruct[\ups{\Subj}]{seem}{\ups{\XCompl}} \\
+	
+	\Top	&	\[
+			\avmspan{``beach''} \\
+	\] \tikzmark{raiseinc_top} \\
+
+	\Subj	&	\[
+		\avmspan{``Ajān''} \\
+	\] \tikzmark{raiseinc_subj1} \\
+	
+	\XCompl	&	\[
+		\Subj	&	\tikzmark{raiseinc_subj2} \\
+		\Pred	&	\astruct{enjoy}{\ups{\Subj} \ups{\Obj}} \\
+		\Obj	&	\tikzmark{raiseinc_obj} \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raiseinc_top})
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:raiseinc_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raiseinc_subj1})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:raiseinc_subj2});
+\end{tikzpicture}
+\xe
+\end{figure}
+
+Just as with control verbs, it is possible to generate the subordinating verb
+as a complement of the matrix verb in \xhead{I}. This way as well, it is
+possible to topicalize arguments of the subordinate verb, the condition being
+that no argument functions are doubled here as well. Again, the subordinated
+verb and the VP with its dependent NPs have to be annotated \elem{\XCompl}, and
+the topicalized NP has to be marked with \uncertain{\XCompl}{\Top}~=~↓ in
+accordance with the position of the topic marker as adjoined to the left edge
+of the matrix verb's f-structure, that is, since the subordinated verb is
+non-finite and thus cannot carry topic marking.
+
 ...
 
 \subsubsection{Passivization}
