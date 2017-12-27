@@ -12137,8 +12137,9 @@ c-structure trees. VP complements of control verbs are simply treated as
 \XCompl{}s, that is, open complements. These \XCompl{}s lack f-structure
 subjects and are thus dependent on the superordinate verb: control verbs share
 their subject or their object with the subject of a non-finite subordinate
-verb \citep[289\psqq]{bresnan2016}, also compare the English examples in 
-(\ref{ex:engctrlstruct}). Typical S-control verbs in Ayeri are
+verb \citep[289\psqq]{bresnan2016}.
+% , also compare the English examples in (\ref{ex:engctrlstruct})
+Typical S-control verbs in Ayeri are
 \xayr{Ep/}{epa-}{refuse},
 \xayr{liMk/}{linka-}{try},
 \xayr{no/}{no-}{plan},\footnote{This is the same stem as the modal particle 
@@ -12157,141 +12158,142 @@ among others. On the other hand, typical O-control verbs are, for instance,
 are given (\ref{ex:ctrlstruct}).
 
 Topicalization of NPs in subordinate VPs by matrix verbs is not possible if the
-subordinate verb stands in between the matrix verb and the subordinate verb.
-Thus, the \xayr{nyiNsF}{nayingas}{roof} in both (\ref{ex:ctrlstruct}ab) cannot
-be the topic of the verb in the respective matrix clauses,
-\xayr{liMky}{linkaya}{(he) tries} and \xayr{nelFye}{nelye}{(she) helps}.
-Since topicalization does not apply to non-finite verbs, the subordinate verb
-in both sentences, \xayr{sidegYmF}{sidejam}{repairing}, cannot be marked for
-topic within its own f-structure cores either.
+subordinate verb stands in between the matrix verb and the subordinate verb's
+arguments. Thus, the \xayr{nyiNsF}{nayingas}{roof} in both
+(\ref{ex:ctrlstruct}ab) cannot be the topic of the verb in the respective
+matrix clauses, \xayr{liMky}{linkaya}{(he) tries} and
+\xayr{nelFye}{nelye}{(she) helps}. Since topicalization does not apply to
+non-finite verbs, the subordinate verb in both sentences,
+\xayr{sidegYmF}{sidejam}{repairing}, cannot be marked for topic within its own
+f-structure cores either.
 
-\begin{figure}
-\pex\label{ex:engctrlstruct}
-\a%
-Subject control in English \citep[289]{bresnan2016}:\\
+% \begin{figure}
+% \pex\label{ex:engctrlstruct}
+% \a%
+% Subject control in English \citep[289]{bresnan2016}:\\
 
-\begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
-\begin{forest} shorter edges, italic leaves,
-[IP$_{f1}$
-	[DP \tikzmark{engctrlstruct1_sus}
-		[Susan]
-	]
-	[VP
-		[V
-			[kept]
-		]
-		[VP$_{f2}$ \tikzmark{engctrlstruct1_eat}
-			[V
-				[eating]
-			]
-			[DP \tikzmark{engctrlstruct1_mar}
-				[marshmallows]
-			]
-		]
-	]
-]
-\end{forest}
-\end{minipage}
-\hfill
-\begin{avm}
-$f_1$: \[
-	\Subj	&	\tikzmark{engctrlstruct1_subj} \[
-		\avmspan{``Susan''} \\
-	\] \tikzmark{engctrlstruct1_subj1} \\
-	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \XCompl)} \\
-	\Tense	&	\Pst \\
-	\XCompl	&	$f_2$: \tikzmark{engctrlstruct1_xcomp} \[
-		\Subj	&	\tikzmark{engctrlstruct1_subj2} \\
-		\Pred	&	\astruct{eat}{($f_2$ \Subj) ($f_2$ \Obj)} \\
-		\Obj	&	\tikzmark{engctrlstruct1_obj} \[
-			\avmspan{``marshmallows''} \\
-		\] \\
-	\] \\
-\]
-\end{avm}
-\begin{tikzpicture}[remember picture, overlay]
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_sus})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_subj});
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_eat})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_xcomp});
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_mar})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_obj});
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct1_subj1})
-	-- ++(east:7em) |- ([yshift=1ex]{pic cs:engctrlstruct1_subj2});
-\end{tikzpicture}
+% \begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
+% \begin{forest} shorter edges, italic leaves,
+% [IP$_{f1}$
+% 	[DP \tikzmark{engctrlstruct1_sus}
+% 		[Susan]
+% 	]
+% 	[VP
+% 		[V
+% 			[kept]
+% 		]
+% 		[VP$_{f2}$ \tikzmark{engctrlstruct1_eat}
+% 			[V
+% 				[eating]
+% 			]
+% 			[DP \tikzmark{engctrlstruct1_mar}
+% 				[marshmallows]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% \hfill
+% \begin{avm}
+% $f_1$: \[
+% 	\Subj	&	\tikzmark{engctrlstruct1_subj} \[
+% 		\avmspan{``Susan''} \\
+% 	\] \tikzmark{engctrlstruct1_subj1} \\
+% 	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \XCompl)} \\
+% 	\Tense	&	\Pst \\
+% 	\XCompl	&	$f_2$: \tikzmark{engctrlstruct1_xcomp} \[
+% 		\Subj	&	\tikzmark{engctrlstruct1_subj2} \\
+% 		\Pred	&	\astruct{eat}{($f_2$ \Subj) ($f_2$ \Obj)} \\
+% 		\Obj	&	\tikzmark{engctrlstruct1_obj} \[
+% 			\avmspan{``marshmallows''} \\
+% 		\] \\
+% 	\] \\
+% \]
+% \end{avm}
+% \begin{tikzpicture}[remember picture, overlay]
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_sus})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_subj});
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_eat})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_xcomp});
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct1_mar})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct1_obj});
+% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct1_subj1})
+% 	-- ++(east:7em) |- ([yshift=1ex]{pic cs:engctrlstruct1_subj2});
+% \end{tikzpicture}
 
-\a%
-Object control in English \citep[292]{bresnan2016}:\\
+% \a%
+% Object control in English \citep[292]{bresnan2016}:\\
 
-\begin{minipage}[t]{.3\remaining}\vspace{1\baselineskip}
-\begin{forest} for tree={s sep-=.5em,s=0}, shorter edges, italic leaves
-[IP$_{f1}$
-	[DP \tikzmark{engctrlstruct2_sus}
-		[Susan]
-	]
-	[VP
-		[V
-			[kept]
-		]
-		[DP \tikzmark{engctrlstruct2_joh}
-			[John]
-		]
-		[VP$_{f2}$ \tikzmark{engctrlstruct2_dou}
-			[V
-				[doubting]
-			]
-			[DP \tikzmark{engctrlstruct2_him}
-				[himself]
-			]
-		]
-	]
-]
-\end{forest}
-\end{minipage}
-\hfill
-\begin{avm}
-$f_1$: \[
-	\Subj	&	\tikzmark{engctrlstruct2_subj} \[
-		\avmspan{``Susan''} \\
-	\] \\
-	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \Obj) ($f_1$ \XCompl)} \\
-	\Tense	&	\Pst \\
-	\Obj	&	\tikzmark{engctrlstruct2_obj} \[
-		\avmspan{``John''} \\
-	\] \tikzmark{engctrlstruct2_obj3} \\
-	\XCompl	&	$f_2$: \tikzmark{engctrlstruct2_xcomp} \[
-		\Subj	&	\tikzmark{engctrlstruct2_subj2} \\
-		\Pred	&	\astruct{doubt}{($f_2$ \Subj) ($f_2$ \Obj)} \\
-		\Obj	&	\tikzmark{engctrlstruct2_obj2} \[
-			\avmspan{``himself''} \\
-		\] \\
-	\] \\
-\]
-\end{avm}
-\begin{tikzpicture}[remember picture, overlay]
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_sus})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_subj});
-	\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_joh})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj});
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_dou})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_xcomp});
-\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_him})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj2});
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct2_obj3})
-	-- ++(east:2em) |- ([yshift=1ex]{pic cs:engctrlstruct2_subj2});
-\end{tikzpicture}
+% \begin{minipage}[t]{.3\remaining}\vspace{1\baselineskip}
+% \begin{forest} for tree={s sep-=.5em,s=0}, shorter edges, italic leaves
+% [IP$_{f1}$
+% 	[DP \tikzmark{engctrlstruct2_sus}
+% 		[Susan]
+% 	]
+% 	[VP
+% 		[V
+% 			[kept]
+% 		]
+% 		[DP \tikzmark{engctrlstruct2_joh}
+% 			[John]
+% 		]
+% 		[VP$_{f2}$ \tikzmark{engctrlstruct2_dou}
+% 			[V
+% 				[doubting]
+% 			]
+% 			[DP \tikzmark{engctrlstruct2_him}
+% 				[himself]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% \hfill
+% \begin{avm}
+% $f_1$: \[
+% 	\Subj	&	\tikzmark{engctrlstruct2_subj} \[
+% 		\avmspan{``Susan''} \\
+% 	\] \\
+% 	\Pred	&	\astruct{keep}{($f_1$ \Subj) ($f_1$ \Obj) ($f_1$ \XCompl)} \\
+% 	\Tense	&	\Pst \\
+% 	\Obj	&	\tikzmark{engctrlstruct2_obj} \[
+% 		\avmspan{``John''} \\
+% 	\] \tikzmark{engctrlstruct2_obj3} \\
+% 	\XCompl	&	$f_2$: \tikzmark{engctrlstruct2_xcomp} \[
+% 		\Subj	&	\tikzmark{engctrlstruct2_subj2} \\
+% 		\Pred	&	\astruct{doubt}{($f_2$ \Subj) ($f_2$ \Obj)} \\
+% 		\Obj	&	\tikzmark{engctrlstruct2_obj2} \[
+% 			\avmspan{``himself''} \\
+% 		\] \\
+% 	\] \\
+% \]
+% \end{avm}
+% \begin{tikzpicture}[remember picture, overlay]
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_sus})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_subj});
+% 	\draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_joh})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj});
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_dou})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_xcomp});
+% \draw [-latex] ([yshift=1ex]{pic cs:engctrlstruct2_him})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:engctrlstruct2_obj2});
+% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:engctrlstruct2_obj3})
+% 	-- ++(east:2em) |- ([yshift=1ex]{pic cs:engctrlstruct2_subj2});
+% \end{tikzpicture}
 
-\xe
-\end{figure}
+% \xe
+% \end{figure}
 
 \begin{figure}
 \pex\label{ex:ctrlstruct}
 \a\label{ex:ctrlstruct_1}%
-Subject control in Ayeri:\\
+Subject control:\\
 
 \begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
 \begin{forest} shorter edges, italic leaves,
-[IP
+[IP$_f$
 	[\xhead{I}
 		[Linkaya]
 	]
@@ -12300,7 +12302,7 @@ Subject control in Ayeri:\\
 			[{ang Mican}, roof]
 		]
 		[VP
-			[VP \tikzmark{ctrlstruct1_sid}
+			[VP$_g$ \tikzmark{ctrlstruct1_sid}
 				[\xhead{V}
 					[sidejam]
 				]
@@ -12315,14 +12317,14 @@ Subject control in Ayeri:\\
 \end{minipage}
 \hfill
 \begin{avm}
-\[
-	\Pred	&	\astruct{try}{\ups{\Subj} \ups{\XCompl}} \\
+$f$: \[
+	\Pred	&	\astruct{try}{($f$ \Subj) ($f$ \XCompl)} \\
 	\Subj	&	\tikzmark{ctrlstruct1_subj} \[
 		\avmspan{``Mican''} \\
 	\] \tikzmark{ctrlstruct1_subj1} \\
-	\XCompl	&	\tikzmark{ctrlstruct1_xcomp} \[
+	\XCompl	&	$g:$ \tikzmark{ctrlstruct1_xcomp} \[
+		\Pred	&	\astruct{repair}{($g$ \Subj) ($g$ \Obj)} \\
 		\Subj	&	\tikzmark{ctrlstruct1_subj2} \\
-		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
 		\Obj	&	\tikzmark{ctrlstruct1_obj} \[
 			\avmspan{``roof''} \\
 		\] \\
@@ -12333,19 +12335,19 @@ Subject control in Ayeri:\\
 \draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_mic})
 	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_subj});
 \draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_sid})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_xcomp});
+	to [out=east, in=south west] ([yshift=-1ex]{pic cs:ctrlstruct1_xcomp});
 \draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct1_nay})
 	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct1_obj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct1_subj1})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlstruct1_subj2});
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:ctrlstruct1_subj2});
 \end{tikzpicture}
 
 \a\label{ex:ctrlstruct_2}%
-Object control in Ayeri:\\
+Object control:\\
 
 \begin{minipage}[t]{.3\remaining}\vspace{3\baselineskip}
 \begin{forest} shorter edges, italic leaves
-[IP
+[IP$_f$
 	[\xhead{I}
 		[{Ang nelye}, roof]
 	]
@@ -12357,7 +12359,7 @@ Object control in Ayeri:\\
 			[NP \tikzmark{ctrlstruct2_mic}
 				[{sa Mican}, roof]
 			]
-			[VP \tikzmark{ctrlstruct2_sid}
+			[VP$_g$ \tikzmark{ctrlstruct2_sid}
 				[\xhead{V}
 					[sidejam]
 				]
@@ -12372,8 +12374,8 @@ Object control in Ayeri:\\
 \end{minipage}
 \hfill
 \begin{avm}
-\[
-	\Pred	&	\astruct{help}{\ups{\Subj} \ups{\Obj} \ups{\XCompl}} \\
+$f$: \[
+	\Pred	&	\astruct{help}{($f$ \Subj) ($f$ \Obj) ($f$ \XCompl)} \\
 	\Top	&	\tikzmark{ctrlstruct2_top1} \[
 		\avmspan{``Piha''} \\
 	\] \tikzmark{ctrlstruct2_top2} \\
@@ -12381,8 +12383,8 @@ Object control in Ayeri:\\
 	\Obj	&	\tikzmark{ctrlstruct2_obj} \[
 		\avmspan{``Mican''} \\
 	\] \tikzmark{ctrlstruct2_obj3} \\
-	\XCompl	&	\tikzmark{ctrlstruct2_xcomp} \[
-		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
+	\XCompl	&	$g:$ \tikzmark{ctrlstruct2_xcomp} \[
+		\Pred	&	\astruct{repair}{($g$ \Subj) ($g$ \Obj)} \\
 		\Subj	&	\tikzmark{ctrlstruct2_subj2} \\
 		\Obj	&	\tikzmark{ctrlstruct2_obj2} \[
 			\avmspan{``roof''} \\
@@ -12396,14 +12398,14 @@ Object control in Ayeri:\\
 	\draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_mic})
 	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_obj});
 \draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_sid})
-	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_xcomp});
+	to [out=east, in=south west] ([yshift=-1ex]{pic cs:ctrlstruct2_xcomp});
 \draw [-latex] ([yshift=1ex]{pic cs:ctrlstruct2_nay})
 	to [out=east, in=west] ([yshift=1ex]{pic cs:ctrlstruct2_obj2});
 
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct2_top2})
 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlstruct2_subj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlstruct2_obj3})
-	-- ++(east:10em) |- ([yshift=1ex]{pic cs:ctrlstruct2_subj2});
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:ctrlstruct2_subj2});
 \end{tikzpicture}
 
 \xe
@@ -12423,9 +12425,9 @@ this `verb raising' operation is that NPs subcategorized by the subordinate
 verb can now also be topicalized. The topic particle, as usual, appears as a
 proclitic before the verb. In order to adress the \Top{} function of the matrix
 verb in case an embedded NP is topicalized, we have to use inside-out
-functional uncertainty and annotate the NP with \uncertain{\GF}{\Top}~=~↓ to
-signal that \Top{} is an attribute of the f-structure containing \GF{}. An
-example is given in (\ref{ex:ctrlinc}).
+functional uncertainty and annotate the NP with \uncertain{\XCompl}{\Top}~=~↓
+to signal that \Top{} is an attribute of the f-structure containing \XCompl{}.
+An example is given in (\ref{ex:ctrlinc}).
 
 \begin{figure}
 \ex\label{ex:ctrlinc}
@@ -12452,7 +12454,7 @@ example is given in (\ref{ex:ctrlinc}).
 		]
 		[\anno{VP}
 			[{\anno[\elem{\XCompl}]{VP}}
-				[{\anno[\uncertain{\GF}{\Top}~=~↓]{NP}}
+				[{\anno[\uncertain{\XCompl}{\Top}~=~↓]{NP}}
 					[naying]
 				]
 			]
@@ -12489,9 +12491,11 @@ example is given in (\ref{ex:ctrlinc}).
 \xe
 \end{figure}
 
+\subsubsection{Raising verbs}
+
 ...
 
-\subsubsection{Raising verbs}
+\subsubsection{Passivization}
 
 ...
 
