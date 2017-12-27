@@ -12497,10 +12497,10 @@ Raising verbs, like control verbs, are verbs which take a VP complement whose
 subject is shared with the subject or the object of the matrix verb. They as
 well have already been dealt with briefly in \autoref{subsubsec:raising}
 (p.~\pageref{subsubsec:raising}) with regards to questions of syntactic
-alignment. In contrast to control verbs, the subject of the matrix verb is not
-semantically an argument of it, but of the subordinated verb. The subject of
-the matrix verb may thus also be a dummy \fw{it} or \fw{there} in English.
-Ayeri seems to only have \xayr{surFpF/}{surp-}{seem} as a raising
+alignment. In contrast to control verbs, the syntactic subject of the matrix
+verb is not semantically an argument of it, but of the subordinate verb. The
+subject of the matrix verb may thus also be a dummy \fw{it} or \fw{there} in
+English. Ayeri seems to only have \xayr{surFpF/}{surp-}{seem} as a raising
 verb.\footnote{This is likely an artefact of working mostly in English, since
 \fw{seem} is a very common verb in English. Since it is interesting for Ayeri
 to have only one verb which works this way, apparently, I decided to leave it
@@ -12510,9 +12510,156 @@ grammaticalization for the verb to turn into a modal particle, \rayr{surFp}
 comment, entered on \DTMdate{2005-11-22}, and possibly intended to be used as a
 control verb rather than for `look after, care for'.} Instead of using verbal
 expressions like \fw{happen}, \fw{tend}, and \fw{be likely}, one may rather use
-adverbials or adverbs like \xayr{mmNeri}{mamangeri}{coincidentally},
-\fw{kraaneri}{krāneri}{by tendency} and
-\xayr{nilj}{nilay}{probably}.
+adverbials or adverbs like \xayr{mmNeri}{mamangeri}{by coincidence},
+\xayr{kraaneri}{krāneri}{by tendency} and
+\xayr{nilj}{nilay}{probably}. English has raising verbs like
+\fw{expect}, \fw{order} or \fw{want}, which may take an object and a verbal
+complement, but whose syntactic object is the semantic subject of the
+subordinate verb. Ayeri, however, lacks the raising-to-object mechanism and
+instead requires a complement clause.
+
+\begin{figure}
+\pex\label{ex:raisestruct}
+\a\label{ex:raisestruct_1}\begingl
+	\glpreamble Raising to subject: //
+	\gla Surpya ang @ Ajān valyyam umangley. //
+	\glb surp-ya ang= Ajān valy-yam umang-ley //
+	\glc seem-\TsgM{} \Aarg{}= Ajān enjoy-\Ptcp{} beach-\PargI{} //
+	\glft `Ajān seems to enjoy the beach.' //
+\endgl\medskip
+
+\begin{minipage}[t]{.3\remaining}
+\begin{forest} shorter edges, italic leaves,
+[IP$_f$
+	[\xhead{I}
+		[Surpya]
+	]
+	[S
+		[NP \tikzmark{raisestruct1_aja}
+			[{ang Ajān}, roof]
+		]
+		[VP
+			[VP$_g$ \tikzmark{raisestruct1_val}
+				[\xhead{V}
+					[valyyam]
+				]
+				[NP \tikzmark{raisestruct1_uma}
+					[umangley]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct[($f$ \Subj)]{seem}{($f$ \XCompl)} \\
+
+	\Subj	&	\tikzmark{raisestruct1_subj1} \[
+		\avmspan{``Ajān''} \\
+	\] \tikzmark{raisestruct1_subj2} \\
+
+	\XCompl	&	$g$: \tikzmark{raisestruct1_xcomp} \[
+		\Pred	&	\astruct{enjoy}{($g$ \Subj) ($g$ \Obj)} \\
+		\Subj	&	\tikzmark{raisestruct1_subj3} \\
+		\Obj	&	\tikzmark{raisestruct1_obj} \[
+			\avmspan{``beach''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct1_aja})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:raisestruct1_subj1});
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct1_val})
+	to [out=east, in=south west] ([yshift=-1ex]{pic cs:raisestruct1_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct1_uma})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:raisestruct1_obj});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raisestruct1_subj2})
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:raisestruct1_subj3});
+\end{tikzpicture}
+
+\a\label{ex:raisestruct_2}\begingl
+	\glpreamble Raising to object: //
+	\gla \textup{\ljudge*} @ Ang @ paronye {} @ Niva sa @ Ajān valyyam
+		umangley. //
+	\glb {} ang= paron-ye Ø= Niva sa= Ajān valy-yam umang-ley //
+	\glc {} \AgtT{}= believe-\TsgF{} \Top{}= Niva \Parg{}= Ajān enjoy-\Ptcp{}
+		beach-\PargI{} //
+	\glft \textit{Intended:} `Niva believes Ajān to enjoy the beach.' //
+\endgl\medskip
+
+\begin{minipage}[t]{.3\remaining}\vspace{4\baselineskip}
+\begin{forest} shorter edges, italic leaves,
+[IP$_f$
+	[\xhead{I}
+		[{Ang paronye}, roof]
+	]
+	[S
+		[NP \tikzmark{raisestruct2_niv}
+			[Niva]
+		]
+		[VP
+			[NP \tikzmark{raisestruct2_aja}
+				[{sa Ajān}, roof]
+			]
+			[VP$_g$ \tikzmark{raisestruct2_val}
+				[\xhead{V}
+					[valyyam]
+				]
+				[NP \tikzmark{raisestruct2_uma}
+					[umangley]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct[($f$ \Obj)]{believe}{($f$ \Subj) ($f$ \XCompl)} \\
+
+	\Top	&	\tikzmark{raisestruct2_top1} \[
+		\avmspan{``Niva''} \\
+	\] \tikzmark{raisestruct2_top2} \\
+
+	\Subj	&	\tikzmark{raisestruct2_subj1} \\
+
+	\Obj	&	\tikzmark{raisestruct2_obj1} \[
+		\avmspan{``Ajān''} \\
+	\] \tikzmark{raisestruct2_obj2} \\
+
+	\XCompl	&	$g$: \tikzmark{raisestruct2_xcomp} \[
+		\Pred	&	\astruct{enjoy}{($g$ \Subj) ($g$ \Obj)} \\
+		\Subj	&	\tikzmark{raisestruct2_subj2} \\
+		\Obj	&	\tikzmark{raisestruct2_obj3} \[
+			\avmspan{``beach''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct2_niv})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:raisestruct2_top1});
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct2_aja})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:raisestruct2_obj1});
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct2_val})
+	to [out=east, in=south west] ([yshift=-1ex]{pic cs:raisestruct2_xcomp});
+\draw [-latex] ([yshift=1ex]{pic cs:raisestruct2_uma})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:raisestruct2_obj3});
+
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raisestruct2_top2})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:raisestruct2_subj1});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raisestruct2_obj2})
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:raisestruct2_subj2});
+\end{tikzpicture}
+
+\xe
+\end{figure}
 
 ...
 
