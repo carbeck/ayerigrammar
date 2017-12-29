@@ -12489,17 +12489,17 @@ An example is given in (\ref{ex:ctrlinc}).
 	\] \tikzmark{ctrlinc_subj1} \\
 	
 	\XCompl	&	\[
-		\Subj	&	\tikzmark{ctrlinc_subj2} \\
 		\Pred	&	\astruct{repair}{\ups{\Subj} \ups{\Obj}} \\
+		\Subj	&	\tikzmark{ctrlinc_subj2} \\
 		\Obj	&	\tikzmark{ctrlinc_obj} \\
 	\] \\
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlinc_top})
-	-- ++(east:11em) |- ([yshift=1ex]{pic cs:ctrlinc_obj});
+	-- ++(east:12em) |- ([yshift=1ex]{pic cs:ctrlinc_obj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlinc_subj1})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:ctrlinc_subj2});
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:ctrlinc_subj2});
 \end{tikzpicture}
 \xe
 \end{figure}
@@ -12521,15 +12521,20 @@ in for now. Alternatively, it would be a reasonable next step in
 grammaticalization for the verb to turn into a modal particle, \rayr{surFp}
 {surpa}. The dictionary also lists \xayr{kFr/}{kra-}{tend} with no further
 comment, entered on \DTMdate{2005-11-22}, and possibly intended to be used as a
-control verb meaning `have a tendency' rather than `look after, care for'.}
-Instead of using verbal expressions like \fw{happen}, \fw{tend}, and
-\fw{be likely}, one may rather use adverbials or adverbs like
+raising verb meaning `have a tendency' rather than `look after, care for'.
+There is also \xayr{rmYF/}{ramy-}{let, let go of} which was intended as a
+raising causative verb and which was entered early on as well
+(\DTMdate{2006-05-24}). Ayeri can express causative relationships by case
+marking, though (see p.~\pageref{subsubsec:valincr}). If need be,
+\rayr{rmYF/}{ramy-} can be used with a complement clause instead of a verbal
+complement.} Instead of using verbal expressions like \fw{happen}, \fw{tend},
+and \fw{be likely}, one may rather use adverbials or adverbs like
 \xayr{mmNeri}{mamangeri}{by coincidence}, \xayr{kraaneri}{krāneri}{by tendency}
-and \xayr{nilj}{nilay}{probably}. English has raising verbs like
-\fw{expect}, \fw{order} or \fw{want}, which may take an object and a verbal
-complement, but whose syntactic object is the semantic subject of the
-subordinate verb. Ayeri, however, lacks the raising-to-object mechanism and
-instead requires a complement clause.
+and \xayr{nilj}{nilay} {probably}. English has raising verbs like \fw{expect},
+\fw{order} or \fw{want}, which may take an object and a verbal complement, but
+whose syntactic object is the semantic subject of the subordinate verb. Ayeri,
+however, lacks the raising-to-object mechanism and instead requires a
+complement clause.
 
 \begin{figure}
 \pex\label{ex:raisestruct}
@@ -12687,7 +12692,7 @@ accompanying \Avm{}s, the respective athematic functions in $f$ are connected
 to the \Subj{} function in $g$ in both cases to indicate coherence.
 
 The example sentence in (\ref{ex:raisestruct_2}) is also marked ungrammatical
-in contrast to (\ref{ex:ctrlstruct_1}). Even though both sentences may be
+in contrast to (\ref{ex:ctrlstruct_2}). Even though both sentences may be
 structurally similar in their constituency, their matrix verbs differ in
 argument structure:
 
@@ -12764,17 +12769,17 @@ they subcategorize for a \Compl{}.
 	\] \tikzmark{raiseinc_subj1} \\
 	
 	\XCompl	&	\[
-		\Subj	&	\tikzmark{raiseinc_subj2} \\
 		\Pred	&	\astruct{enjoy}{\ups{\Subj} \ups{\Obj}} \\
+		\Subj	&	\tikzmark{raiseinc_subj2} \\
 		\Obj	&	\tikzmark{raiseinc_obj} \\
 	\] \\
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raiseinc_top})
-	-- ++(east:11em) |- ([yshift=1ex]{pic cs:raiseinc_obj});
+	-- ++(east:12em) |- ([yshift=1ex]{pic cs:raiseinc_obj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:raiseinc_subj1})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:raiseinc_subj2});
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:raiseinc_subj2});
 \end{tikzpicture}
 \xe
 \end{figure}
@@ -12807,6 +12812,25 @@ is used to indicate that \rayr{UmNF}{umang} feeds into the \Top{} function of
 the superior f-structure which specifies \XCompl{}.
 
 \subsubsection{Passivization}
+\label{subsubsec:valdecr}
+
+Passivization is a valency-decreasing operation in that, according to \Lfg{}
+theory, the lexical entry of a verb is manipulated in a way to lose its agent
+argument so that the patient becomes the syntactic subject. In English,
+passivization is a way to keep a topic in the subject slot, for one. This
+function is basically acted out by Ayeri's topic marking, however. However,
+there may still be situations in which one does not want to explicitly state an
+agent. Furthermore, we may want to test how Ayeri fares with regards to
+passivizing the objects of subordinate verbs. Another question is whether Ayeri
+allows recipients in ditransitive constructions to be passivized, or even
+oblique arguments of verbs such as the recipient of \xayr{nr/}{nara-}{speak},
+which in Ayeri appears in the locative case, or its theme, which appears in the
+genitive case.
+
+...
+
+\subsubsection{Causatives}
+\label{subsubsec:valincr}
 
 ...
 
