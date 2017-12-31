@@ -12930,9 +12930,9 @@ transitive verb with the meaning \enquote{to exceed} or \enquote{to surpass}.
 Thus, the construction typically includes two predicates, one which is the
 comparative predicate, and another which is the \enquote{exceed}-verb}, also
 compare \citet{beermannetal2005}. What is described by \citet{wals121} has
-similarities to a serial-verb construction:
+similarities to a serial-verb construction (\ref{ex:svcexceed}).
 
-\ex
+\ex\label{ex:svcexceed}
 	\textsc{comparee} is \textsc{quality} exceeds \textsc{standard}
 \xe
 
@@ -12952,7 +12952,7 @@ structure in Ayeri is as stated in (\ref{ex:ayrexceedscheme}).
 \xe
 
 \ex~\label{ex:ayrexceedscheme}%
-	\textsc{comparee} exceeds \textsc{quality} \textsc{standard}
+	exceeds \textsc{quality} \textsc{comparee} \textsc{standard}
 \xe
 
 The way \Lfg{} handles comparison of adjectives in predicative contexts is
@@ -12999,12 +12999,13 @@ adjective seems to appear in the place an adverb would normally inhabit? In
 fact, the \Avm{} in (\ref{ex:lfgpredcomp}) has a certain similarity to those
 presented for control and raising verbs, compare (\ref{ex:ctrlstruct}) and
 (\ref{ex:raisestruct}). In all cases, there is a subordinate predicator
-subcategorizing for a complement. So, what if rather than treating the quality
-in the way of an adverb, Ayeri actually generalized the way subordinate verbs
-can be fronted in order to enable topicalization of the subordinate verb's
-dependents, treating the adjective in the way of a verbal complement of
-\xhead{I}, so that the embedded object appears superficially like a complement
-of the matrix verb?
+subcategorizing for a complement. What if rather than treating the quality in
+the way of an adverb, Ayeri actually generalized the way subordinate verbs can
+be fronted, treating the adjective in the way of a verbal complement of
+\xhead{I}? This hypothesis neatly coincides with Ayeri's strategy of fronting
+subordinate verbs in order to enable topicalization of their dependents by
+making the embedded NPs look like regular arguments of the matrix clause's
+verb.
 
 First of all, (\ref{ex:vcompmorphlex}) gives the morpholexical annotations for
 all comparative verbs, \xayr{km/}{kama-}{be as}, \xayr{ENF/}{eng-}{be more},
@@ -13087,6 +13088,96 @@ verb here.
 \xe
 \end{morphlex}
 \end{figure}
+
+Following the hypothesis above, the c-structure of a comparative statement in
+Ayeri should look like in (\ref{ex:compcstruct}). This is purposefully designed
+in parallel to (\ref{ex:ctrlinc}), even though the subject of the comparative
+verb is not shared by the a-structure of the adjective. As in
+(\ref{ex:ctrlinc}) and (\ref{ex:raiseinc}), the complement of the verb is
+understood as a discontinuous constituent and hence annotated \elem{\Plink}
+rather than just \ups{\Plink}. The complement of the adjective is generated in
+its canonical position as a daughter of the AP in S. Alternatively, it should
+be possible for the \xhead{A} not to be fronted, just as the subordinate verb
+in (\ref{ex:ctrlstruct}) and (\ref{ex:raisestruct}) appears as the head of the
+subordinate VP. However, this leads to ambiguity in that an adjective, then,
+directly follows a noun, so modification relationships would not be entirely
+clear. The preferred way is, thus, to generate the adjective as a complement of
+\xhead{I}.
+
+\begin{figure}
+\ex\label{ex:compcstruct}\begingl
+	\gla Ang @ engye para {} @ Cisu sa @ Kaman. //
+	\glb ang= eng-ye para Ø= Cisu sa= Kaman //
+	\glc \AgtT{}= be.more-\TsgF{} fast \Top{}= Cisu \Parg{}= Kaman //
+	\glft `Cisu is faster than Kaman.' //
+\endgl\medskip
+
+\begin{minipage}[t]{.5\remaining}
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[{Ang engye}, roof]
+		]
+		[{\anno[\elem{\Plink}]{AP}}% \tikzmark{compcstruct_par}
+			[para]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}% \tikzmark{compcstruct_cis}
+			[Cisu]
+		]
+		[\anno{VP}
+			[{\anno[\elem{\Plink}]{AP}}% \tikzmark{compcstruct_ap}
+				[{\anno[\pass{\Compl}]{NP}}% \tikzmark{compcstruct_kam}
+					[Kaman]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+
+\begin{avm}
+\[
+	\Pred	&	\astruct{be}{\ups{\Subj} \ups{\Plink}} \\
+
+	\Top	&	\[%\tikzmark{compcstruct_top1} \[
+		\avmspan{``Cisu''}
+	\] \tikzmark{compcstruct_top2} \\
+
+	\Subj	&	\tikzmark{compcstruct_subj} \\
+
+	\Plink	&	\[%\tikzmark{compcstruct_plink} \[
+		\Pred	&	\astruct{fast}{\ups{\Compl}} \\
+		\Deg	&	\Comp \\
+		\Degdim	&	$positive$ \\
+		\Compl	&	\[%\tikzmark{compcstruct_compl} \[
+			\avmspan{``Kaman''}	\\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+% \draw [-latex] ([yshift=1ex]{pic cs:compcstruct_cis})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:compcstruct_top1});
+% \draw [-latex] ([yshift=1ex]{pic cs:compcstruct_par})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:compcstruct_plink});
+% \draw [-latex] ([yshift=1ex]{pic cs:compcstruct_ap})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:compcstruct_plink});
+% \draw [-latex] ([yshift=1ex]{pic cs:compcstruct_kam})
+% 	to [out=east, in=west] ([yshift=1ex]{pic cs:compcstruct_compl});
+% 
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:compcstruct_top2})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:compcstruct_subj});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+So far, we have only considered comparison of adjectives, but NPs may undergo
+comparison as well, though again, if modified by an adjective.
 
 ...
 
