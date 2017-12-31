@@ -13130,7 +13130,7 @@ clear. The preferred way is, thus, to generate the adjective as a complement of
 		[\anno{VP}
 			[{\anno[\elem{\Plink}]{AP}}% \tikzmark{compcstruct_ap}
 				[{\anno[\pass{\Compl}]{NP}}% \tikzmark{compcstruct_kam}
-					[Kaman]
+					[{sa Kaman}, roof]
 				]
 			]
 		]
@@ -13176,8 +13176,95 @@ clear. The preferred way is, thus, to generate the adjective as a complement of
 \xe
 \end{figure}
 
-So far, we have only considered comparison of adjectives, but NPs may undergo
-comparison as well, though again, if modified by an adjective.
+In order to form clauses of the kind \fw{John is a better doctor than Bill},
+with the quality composed of an NP--AP combination, it is necessary to use a
+relative clause: \fw{John is a doctor who is better than Bill}. Ayeri only
+allows for \xhead{A} to be extracted if it does not modify a predicative
+nominal. The sentences in (\ref{ex:comppredn}) are therefore
+ungrammatical.
+
+\begin{figure}
+\pex\label{ex:comppredn}
+\a\ljudge*%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Engya ang @ Apican karomayās ban sa @ Hiro. //
+	\glb eng-ya ang= Apican karomaya-as ban sa= Hiro //
+	\glc be.more-\TsgM{} \Aarg{}= Apican doctor-\Parg{} good \Parg{}= Hiro //
+	\glft \textit{Intended:} `Apican is a doctor better than Hiro.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xhead{I}
+		[Engya]
+	]
+	[S
+		[NP
+			[{ang Apican}, roof]
+		]
+		[VP
+			[NP
+				[\xhead{N}
+					[karomayās]
+				]
+				[AP
+					[\xhead{A}
+						[ban]
+					]
+					[NP
+						[{sa Hiro}, roof]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+\a\ljudge*%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Engya ban ang @ Apican karomayās sa @ Hiro. //
+	\glb eng-ya ban ang= Apican karomaya-as sa= Hiro //
+	\glc be.more-\TsgM{} good \Aarg{}= Apican doctor-\Parg{} \Parg{}= Hiro //
+	\glft \textit{Intended:} `Apican is a better doctor than Hiro.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xbar{I}, narrower nodes,
+		[\xhead{I}
+			[Engya]
+		]
+		[AP
+			[ban]
+		]
+	]
+	[S
+		[NP
+			[{ang Apican}, roof]
+		]
+		[VP
+			[NP, narrower nodes,
+				[\xhead{N}
+					[karomayās]
+				]
+				[AP
+					[NP
+						[{sa Hiro}, roof]
+					]
+				]
+			]
+		]
+	]
+]
+\end{forest}
+
+\xe
+\end{figure}
 
 ...
 
