@@ -18,7 +18,7 @@ Currently working on
     3. Adpositional phrases
     4. Inflectional and verb phrases
 
-The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing. Note that I am not a native English speaker; corrections are thus welcome.
+The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
 I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
 
@@ -59,4 +59,4 @@ Compile `grammar.tex` with `xelatex`, `biber`, `makeindex` and `makeglossaries`,
 Licensing
 =========
 
-Carsten Becker, 2016–17. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Carsten Becker, 2016–18. This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
