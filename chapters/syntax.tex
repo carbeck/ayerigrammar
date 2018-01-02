@@ -13101,8 +13101,7 @@ not to be fronted, just as the subordinate verb in (\ref{ex:ctrlstruct}) and
 (\ref{ex:raisestruct}) appears as the head of the subordinate VP. However, this
 leads to ambiguity in that an adjective, then, directly follows a noun, so
 modification relationships would not be entirely clear. The preferred way is,
-thus, to generate the adjective as a complement of
-\xhead{I}.
+thus, to generate the adjective as a complement of \xhead{I}.
 
 \begin{figure}
 \ex\label{ex:compcstruct}\begingl
@@ -13271,7 +13270,150 @@ to use comparison clitics, see \autoref{sec:adverbs}.}
 \xe
 \end{figure}
 
-...
+\subsection{Object Predicatives}
+\label{subsec:objpred}
+
+In \autoref{subsec:eqs}, we have only considered predicative expressions
+relating to subjects, but objects as well can be modified by predicative
+elements, as (\ref{ex:engobjpred}) illustrates. This attribution relation is
+often analyzed as a small clause (S) in English, and from this point of view
+seems to be related to subordinating verbs in that depending on context, the
+subject of the small clause is an object of the matrix clause, whether semantic
+or not.
+
+%\begin{figure}
+\pex\label{ex:engobjpred}
+\a\label{ex:engobjpred_1}%
+	\fw{Bill wipes the \textup{[\tsub{S}} table \textbf{clean}\textup{]}.}
+	(\fw{table} controlled)
+\a\label{ex:engobjpred_2}%
+	\fw{Mary considers \textup{[\tsub{S}} John \textbf{a liar}\textup{]}.}
+	(\fw{John} raised)
+\xe
+%\end{figure}
+
+As it appears from \citet{bresnan2016}, who capture this phenomenon under the
+label \emph{resultatives}, different hypotheses have been proposed about how to
+handle this type of construction in \Lfg{}. They note that many researchers
+\textcquote[347]{bresnan2016}{have suggested that the verb and the resultative
+adjective form a complex predicate, such as \fw{pound-flat}}. What is not clear
+from this, however, is how a predicative NP is handled in this case. In Ayeri,
+resultative adjectives appear in the position after the verb, just like
+qualities in the comparative-verb constructions outlined above.\footnote{I may
+have been guided by my intuition as a German speaker here, since German
+(arguably?) allows compounds of a resultative adjective and a verb---compare,
+for instance, \citet{mueller2006} for a discussion of the collocation \fw{leer
+fischen} `fish dry' as essentially a compound from a mostly \textsc{hpsg}
+viewpoint.} Following this analysis, the IP of a sentence like in 
+(\ref{ex:engobjpred_1}) should maybe be modeled as (\ref{ex:ayrobjpredip1}).
+
+\begin{figure}
+\ex\label{ex:ayrobjpredip1}
+\begin{minipage}[t]{.67\remaining}
+\begingl
+	\gla Ang @ gonja apitu {} @ Ajān prihinley. //
+	\glb ang= gond-ya apitu Ø= Ajān prihin-ley //
+	\glc \AgtT{} wipe-\TsgM{} clean \Top{}= Ajān table-\PargI{} //
+	\glft `Ajān wipes the table clean.' //
+\endgl
+\end{minipage}
+\hfill
+\ques{}\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xhead{I}
+		[\xhead{I}
+			[{Ang gonja}, roof]
+		]
+		[Â
+			[apitu]
+		]
+	]
+	[S
+		[\vdots]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+On the other hand, there must be a possibility to modify the adjective in this
+position with a quantifying adverb like \xayr{EkeNF}{ekeng}{too}, for example
+to express \fw{filled the cup too high}, so a non-projecting adjective as in
+(\ref{ex:ayrobjpredip1}) cannot be a solution---an AP is needed to account for
+the adverb as a modifier, compare (\ref{ex:objpredip2}). This would suggest
+an analysis along the lines mentioned earlier, with the object and the
+adjective forming a small-clause constituent (compare \autoref{subsec:eqs}),
+though with the adjective fronted again. The whole construction could then be
+analyzed in terms of object control, so the small clause is an \XCompl{} of the
+matrix verb, and the object of the matrix verb is shared with the subject
+function of the small clause. Relatedly, we may want to analyze a predicative
+adjective expressing the state of the subject as in \fw{Bill started the
+project enthusiastic} so that the subject is formed by a small clause. The
+subject of the small clause and the subject of the matrix clause are shared in
+this case. The adjective occurs after the verb as well in this case, that is,
+there is no clear distinction between an adverb and an adjective here.
+
+\begin{figure}
+\ex\label{ex:objpredip2}
+\begin{minipage}[t]{.67\remaining}
+\begingl
+	\gla Ang @ suyaya iray ekeng {} @ Ajān tehasley. //
+	\glb ang= suya-ya iray ekeng Ø= Ajān tehas-ley //
+	\glc \AgtT{} fill-\TsgM{} high too \Top{}= Ajān cup-\PargI{} //
+	\glft `Ajān filled the cup too high.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xbar{I}
+		[\xhead{I}
+			[{Ang suyaya}, roof]
+		]
+		[AP
+%			[\xbar{A}
+				[\xhead{A}
+					[iray]
+				]
+				[AdvP
+					[ekeng]
+				]
+%			]
+		]
+	]
+	[S
+		[\vdots]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+Since Ayeri is adverse to raising-to-object, it comes as no surprise that the
+preferred way to deal with nominal object-predicatives is to rephrase them as
+a complement clause. Thus, \fw{Mary considers John a liar} is expressed as 
+\fw{Mary thinks/considers, John is a liar} in Ayeri. An exception to this are
+sentences which contain a name or a title as the predicative nominal, since
+those are unmarked for case. An example is provided in (\ref{ex:objprednom}).
+
+\begin{figure}
+\pex\label{ex:objprednom}
+\a\label{ex:ex:objprednom_1}\begingl
+	\gla Nilye ang @ Mali, ang @ Yan tesātias. //
+	\glb nil-ye ang= Mali ang= Yan tesāti-as //
+	\glc consider-\TsgF{} \Aarg{}= Mali \Aarg{}= Yan liar-\Parg{} //
+	\glft `Mary considers Yan a liar.' //
+\endgl
+
+\a\label{ex:ex:objprednom_2}\begingl
+	\gla Sa @ garatang ya Didi //
+	\glb sa= gara=tang ya Didi //
+	\glc \PatT{} call=\TplM{}.\Aarg{} \TsgM{}.\Top{} Buddy //
+	\glft `Him they call Buddy.' //
+\endgl
+
+\xe
+\end{figure}
 
 \subsection{Passivization}
 \label{subsubsec:valdecr}
