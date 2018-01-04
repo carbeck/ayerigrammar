@@ -13404,8 +13404,116 @@ predicate is as an adjunct of the verb and expressed the relationship between
 
 In Ayeri, the depictive adjective, whether it refers to the subject or the
 object, follows the verb. This nicely fits the analysis fashioned after
-\citep{mueller2002} above, by which the depictive acts as an adjunct of the
-verb with reference to one of the verb's arguments.
+\citet{mueller2002} above, by which the depictive acts as an adjunct of the
+verb with reference to one of the verb's arguments. Ayeri makes no formal
+distinction between adjectives and adverbs, but context should clarify under
+normal circumstances. An example of depictive secondary predicates in Ayeri is
+given in (\ref{ex:depict}). In (\ref{ex:depict_subj}), there is only a subject,
+\rayr{gd}{Gada} to be described by the adjective, \xayr{pisu}{pisu}{tired}. In
+(\ref{ex:depict_obj}), the adjective, \xayr{tuvo}{tuvo}{red} (here in the
+meaning `raw') can describe either the subject or the object, but semantically,
+it makes most sense for it to refer to the object, \xayr{InunF}{inun}{fish}. It
+may be noted again here that topicalization has no impact on the argument of
+the verb the secondary predicate refers to (compare 
+\autoref{subsubsec:secpred}, p.~\pageref{subsubsec:secpred}).
+
+\begin{figure}
+\pex\label{ex:depict}
+\a\label{ex:depict_subj}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Radanye pisu ang @ Gada. //
+	\glb radan-ye pisu ang= Gada //
+	\glc wake.up-\TsgF{} tired \Aarg{}= Gada //
+	\glft `Gada wakes up tired.' //
+\endgl\medskip
+
+\begin{avm}
+\[
+	\Pred	&	\astruct{wake-up}{\ups{\Subj}} \\
+	\Subj	&	\[
+		\avmspan{``Gada$_i$''} \\
+	\] \\
+	\Adjc	&	\{\[
+		\Pred	&	`tired$_i$' \\
+	\]\} \\
+\]
+\end{avm}
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[Radanye]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[pisu]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Gada}, roof]
+		]
+	]
+]
+\end{forest}
+
+\a\label{ex:depict_obj}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Le @ konja tuvo ang @ Kaji inun. //
+	\glb le= kond-ya tuvo ang= Kaji inun //
+	\glc \PatTI{}= eat-\TsgM{} raw \Aarg{}= Kaji fish-\Top{} //
+	\glft `The fish, Kaji eats it raw.' //
+\endgl\medskip
+
+\begin{avm}
+\[
+	\Pred	&	\astruct{eat}{\ups{\Subj} \ups{\Obj}} \\
+	\Top	&	\[
+		\avmspan{``fish$_i$''} \\
+	\] \tikzmark{depictobj_top} \\
+	\Subj	&	\[
+		\avmspan{``Kaji''} \\
+	\] \\
+	\Obj	&	\tikzmark{depictobj_obj} \\
+	\Adjc	&	\{\[
+		\Pred	&	`raw$_i$' \\
+	\]\} \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:depictobj_top})
+	-- ++(east:1em) |- ([yshift=1ex]{pic cs:depictobj_obj});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[{Le konja}, roof]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[tuvo]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Kaji}, roof]
+		]
+		[\anno{VP}
+			[{\anno[\pass{\Obj}]{NP}}
+				[inun]
+			]
+		]
+	]
+]
+\end{forest}
+
+\xe
+\end{figure}
 
 ...
 
