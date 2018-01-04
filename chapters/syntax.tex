@@ -2231,7 +2231,7 @@ any countable or quantifiable noun:
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs, but also PPs; and they may
-also form various core arguments (\Subj{}, \Obj{}, \SObjc{theme}) as well as
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
 various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
 decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
@@ -12031,7 +12031,7 @@ Ayeri is an indirective language, thus.
 \ex\label{ex:doubleobjfstruct}
 \begin{avm}
 \[
-	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\SObjc{theme}} \ups{\Obj}} \\
+	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\Obj} \ups{\SObjc{recip}}} \\
 
 	\Top	&	\[
 		\Pred	&	`Apan' \\
@@ -12041,13 +12041,13 @@ Ayeri is an indirective language, thus.
 
 	\Subj	&	 \tikzmark{doubleobjfstruct_subj} \\
 
-	\SObjc{theme}	&	\[
+	\Obj	&	\[
 		\Pred	&	`book' \\
 		\Case	&	\Parg \\
 		\Anim	&	$+$ \\
 	\] \\
 
-	\Obj	&	\[
+	\SObj{recip}	&	\[
 		\Pred	&	`Diya' \\
 		\Case	&	\Dat \\
 	\] \\
@@ -12112,10 +12112,10 @@ this proposal as a c-structure tree.
 		]
 		[\anno{VP}
 			[\anno{\xbar{V}}
-				[{\anno[\pass{\SObjc{theme}}]{NP}}
+				[{\anno[\pass{\Obj}]{NP}}
 					[koyās]
 				]
-				[{\anno[\pass{\Obj}]{NP}}
+				[{\anno[\pass{\SObjc{recip}}]{NP}}
 					[{yam Diya}, roof]
 				]
 			]
@@ -13270,151 +13270,62 @@ to use comparison clitics, see \autoref{sec:adverbs}.}
 \xe
 \end{figure}
 
-\subsection{Object Predicatives}
-\label{subsec:objpred}
+\subsection{Secondary Predicates}
+\label{subsec:secpred}
 
-In \autoref{subsec:eqs}, we have only considered predicative expressions
-relating to subjects, but objects as well can be modified by predicative
-elements, as (\ref{ex:engobjpred}) illustrates. This attribution relation is
-often analyzed as a small clause (S) in English, and from this point of view
-seems to be related to subordinating verbs in that depending on context, the
-subject of the small clause is an object of the matrix clause, whether semantic
-or not.
+\autoref{subsec:eqs} has only dealt with predicative adjectives and nominals
+over the subject in order to illustrate a very common basic type of statement.
+There are also secondary predicates, however, which can be subdivided further
+into depictive and resultative secondary predicates. A depictive secondary
+predicate, on the one hand, \textcquote[173]{mueller2002}{provides information
+about the state of the entity it refers to. This state holds at the time of the
+event described by the verb}. A resultative secondary predicate, on the other
+hand, refers to \textcquote[173]{mueller2002}{the result of an event [...]
+specified by the adjective}. This difference is illustrated in
+(\ref{ex:engsecpred}).
 
-%\begin{figure}
-\pex\label{ex:engobjpred}
-\a\label{ex:engobjpred_1}%
-	\fw{Bill wipes the \textup{[\tsub{S}} table \textbf{clean}\textup{]}.}
-	(\fw{table} controlled)
-\a\label{ex:engobjpred_2}%
-	\fw{Mary considers \textup{[\tsub{S}} John \textbf{a liar}\textup{]}.}
-	(\fw{John} raised)
+\pex\label{ex:engsecpred}
+\a\label{ex:engsecpred1_subj}%
+	\fw{Suzy came to work \textbf{sick}.}
+
+\a\label{ex:engsecpred1_obj}%
+	\fw{Jack eats the apple \textbf{unwashed}.}
+
+\a\label{ex:engsecpred2_obj}%
+	\fw{Bill wipes the table \textbf{clean}.}
 \xe
-%\end{figure}
 
-As it appears from \citet{bresnan2016}, who capture this phenomenon under the
-label \emph{resultatives}, different hypotheses have been proposed about how to
-handle this type of construction in \Lfg{}. They note that many researchers
-\textcquote[347]{bresnan2016}{have suggested that the verb and the resultative
-adjective form a complex predicate, such as \fw{pound-flat}}. What is not clear
-from this, however, is how a predicative NP is handled in this case. In Ayeri,
-resultative adjectives appear in the position after the verb, just like
-qualities in the comparative-verb constructions outlined above.\footnote{I may
-have been guided by my intuition as a German speaker here, since German
-(arguably?) allows compounds of a resultative adjective and a verb---compare,
-for instance, \citet{mueller2006} for a discussion of the collocation \fw{leer
-fischen} `fish dry' as essentially a compound from a mostly \textsc{hpsg}
-viewpoint.} Following this analysis, the IP of a sentence like in 
-(\ref{ex:engobjpred_1}) should maybe be modeled as (\ref{ex:ayrobjpredip1}).
+In (\ref{ex:engsecpred1_subj}), \fw{sick} does not describe the manner in which
+Suzy came to work, but the state in which she came in to work. Similarly, 
+\fw{unwashed} in (\ref{ex:engsecpred1_obj}) refers to the state of the apple at
+the time of being eaten rather than the manner in which it is eaten. It is also
+possible to interpret the adjective as referring to Jack, but let us assume
+that, in the context of this statement, it is rather more relevant for the
+apple to be clean. In contrast to these two examples, \fw{clean} in
+(\ref{ex:engsecpred2_obj}) does not refer to the state of the subject or the
+object at the moment of wiping, but the state of the table as result of being
+wiped.
 
-\begin{figure}
-\ex\label{ex:ayrobjpredip1}
-\begin{minipage}[t]{.67\remaining}
-\begingl
-	\gla Ang @ gonja apitu {} @ Ajān prihinley. //
-	\glb ang= gond-ya apitu Ø= Ajān prihin-ley //
-	\glc \AgtT{} wipe-\TsgM{} clean \Top{}= Ajān table-\PargI{} //
-	\glft `Ajān wipes the table clean.' //
-\endgl
-\end{minipage}
-\hfill
-\ques{}\begin{forest} shorter edges, italic leaves,
-[IP
-	[\xhead{I}
-		[\xhead{I}
-			[{Ang gonja}, roof]
-		]
-		[Â
-			[apitu]
-		]
-	]
-	[S
-		[\vdots]
-	]
-]
-\end{forest}
-\xe
-\end{figure}
+Unfortunately, \citet[347]{bresnan2016}, while mentioning resultatives, do not
+go into detail about an \Lfg{} analysis of them, and do not say anything at all
+about depictives. While they give a few references about \Lfg{}-based surveys
+of resultatives in English, a cursory web search does not bring up papers on
+depictive predicates in terms of \Lfg{}, insofar one has to assume that this
+topic probably constitutes a desideratum at the time of writing.
+\citet{dalrymple2001} does not touch the topic of secondary predication at all,
+and neither do \citet{butt1999}. \textcites{mueller2002}{mueller2006}, on the
+other hand, provides analyses of both depictives and resultatives in terms of
+constraint-based grammar, however, he does so from the point of view of
+Head-driven Phrase-Structure Grammar (\textsc{hpsg}; \cite{pollardsag1994}) and
+uses only German as his object of study.
 
-On the other hand, there must be a possibility to modify the adjective in this
-position with a quantifying adverb like \xayr{EkeNF}{ekeng}{too}, for example
-to express \fw{filled the cup too high}, so a non-projecting adjective as in
-(\ref{ex:ayrobjpredip1}) cannot be a solution---an AP is needed to account for
-the adverb as a modifier, compare (\ref{ex:objpredip2}). This would suggest
-an analysis along the lines mentioned earlier, with the object and the
-adjective forming a small-clause constituent (compare \autoref{subsec:eqs}),
-though with the adjective fronted again. The whole construction could then be
-analyzed in terms of object control, so the small clause is an \XCompl{} of the
-matrix verb, and the object of the matrix verb is shared with the subject
-function of the small clause.
-% Relatedly, we may want to analyze a predicative adjective expressing the
-% state of the subject as in \fw{Bill started the project enthusiastic} so that
-% the subject is formed by a small clause. The subject of the small clause and
-% the subject of the matrix clause are shared in this case. The adjective
-% occurs after the verb as well in this case, that is, there is no clear
-% distinction between an adverb and an adjective here.
+\subsubsection{Depictives}
 
-\begin{figure}
-\ex\label{ex:objpredip2}
-\begin{minipage}[t]{.67\remaining}
-\begingl
-	\gla Ang @ suyaya iray ekeng {} @ Ajān tehasley. //
-	\glb ang= suya-ya iray ekeng Ø= Ajān tehas-ley //
-	\glc \AgtT{} fill-\TsgM{} high too \Top{}= Ajān cup-\PargI{} //
-	\glft `Ajān filled the cup too high.' //
-\endgl
-\end{minipage}
-\hfill
-\begin{forest} shorter edges, italic leaves,
-[IP
-	[\xbar{I}
-		[\xhead{I}
-			[{Ang suyaya}, roof]
-		]
-		[AP
-%			[\xbar{A}
-				[\xhead{A}
-					[iray]
-				]
-				[AdvP
-					[ekeng]
-				]
-%			]
-		]
-	]
-	[S
-		[\vdots]
-	]
-]
-\end{forest}
-\xe
-\end{figure}
+...
 
-Since Ayeri is adverse to raising-to-object, it comes as no surprise that the
-preferred way to deal with nominal object-predicatives is to rephrase them as
-a complement clause. Thus, \fw{Mary considers John a liar} is expressed as 
-\fw{Mary thinks/considers, John is a liar} in Ayeri. An exception to this are
-sentences which contain a name or a title as the predicative nominal, since
-those are unmarked for case. An example is provided in (\ref{ex:objprednom}).
+\subsubsection{Resultatives}
 
-\begin{figure}
-\pex\label{ex:objprednom}
-\a\label{ex:ex:objprednom_1}\begingl
-	\gla Nilye ang @ Mali, ang @ Yan tesātias. //
-	\glb nil-ye ang= Mali ang= Yan tesāti-as //
-	\glc consider-\TsgF{} \Aarg{}= Mali \Aarg{}= Yan liar-\Parg{} //
-	\glft `Mary considers Yan a liar.' //
-\endgl
-
-\a\label{ex:ex:objprednom_2}\begingl
-	\gla Sa @ garatang ya Didi //
-	\glb sa= gara=tang ya Didi //
-	\glc \PatT{} call=\TplM{}.\Aarg{} \TsgM{}.\Top{} Buddy //
-	\glft `Him they call Buddy.' //
-\endgl
-
-\xe
-\end{figure}
+...
 
 \subsection{Passivization}
 \label{subsubsec:valdecr}
