@@ -13333,17 +13333,18 @@ verbal elements} as a way to \textcquote[196]{mueller2002}{capture the adjunct
 properties of depictive secondary predicates}. I tried to cast this in
 (\ref{ex:depictfstruct}) as an f-structure in which the depictive secondary
 predicate is as an adjunct of the verb and expressed the relationship between
-\Subj{} and the adjective as binding.\footnote{Alternatively, one could maybe
-construct this as an f-structure embedded as an adjunct of the main verb. In
-this f-structure, the adjective would be a \Plink{} complement of a 
-\fw{null-be} predicate whose subject is shared with an argument of the
-sentence's main verb. This would essentially result in a subject-control
-relationship, except that the subordinate f-structure is an adjunct to rather
-than an argument of the matrix verb.}
+\Subj{} and the adjective with $i$ as an index to mark that they are coindexed.
+% \footnote{Alternatively, one could maybe
+% construct this as an f-structure embedded as an adjunct of the main verb. In
+% this f-structure, the adjective would be a \Plink{} complement of a 
+% \fw{null-be} predicate whose subject is shared with an argument of the
+% sentence's main verb. This would essentially result in a subject-control
+% relationship, except that the subordinate f-structure is an adjunct to rather
+% than an argument of the matrix verb.}
 
 \begin{figure}
 \ex\label{ex:depictfstruct} \fw{Suzy$_i$ came to work sick$_i$.} \medskip
-%
+
 % \label{ex:depictfstruct_1}
 % \begin{avm}
 % \[
@@ -13375,18 +13376,24 @@ than an argument of the matrix verb.}
 % 	-- ++(east:17em) |- ([yshift=1ex]{pic cs:depictfstruct1_subj});
 % \end{tikzpicture}
 %
-\label{ex:depictfstruct_2}
+% \label{ex:depictfstruct_2}
 \begin{avm}
 \[
-	\avmspan{...} \\
+	\Pred	&	\astruct{come}{\ups{\Subj} \ups{\Oblq{to}}} \\
+	\Tense	&	\Pst \\
 	\Subj	&	\[
 		\avmspan{``Suzy$_i$''} \\
 	\] \\
-	\avmspan{...} \\
+	\Oblq{to}	&	\[
+		\Pred	&	\astruct{to}{\ups{\Obj}} \\
+		\PCase	&	$to$ \\
+		\Obj	&	\[
+			\avmspan{``work''} \\
+		\] \\
+	\] \\
 	\Adjc	&	\{
 		\[
-			\Pred	&	`sick' \\
-			\textup{\itshape bind}	&	$i$ \\
+			\Pred	&	`sick$_i$' \\
 		\] \\
 	\} \\
 \]
@@ -13394,6 +13401,11 @@ than an argument of the matrix verb.}
 
 \xe
 \end{figure}
+
+In Ayeri, the depictive adjective, whether it refers to the subject or the
+object, follows the verb. This nicely fits the analysis fashioned after
+\citep{mueller2002} above, by which the depictive acts as an adjunct of the
+verb with reference to one of the verb's arguments.
 
 ...
 
