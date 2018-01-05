@@ -13451,11 +13451,11 @@ the verb the secondary predicate refers to (compare
 			[pisu]
 		]
 	]
-	[\anno{S}
+%	[\anno{S}
 		[{\anno[\pass{\Subj}]{NP}}
 			[{ang Gada}, roof]
 		]
-	]
+%	]
 ]
 \end{forest}
 
@@ -13506,6 +13506,114 @@ the verb the secondary predicate refers to (compare
 		[\anno{VP}
 			[{\anno[\pass{\Obj}]{NP}}
 				[inun]
+			]
+		]
+	]
+]
+\end{forest}
+
+\xe
+\end{figure}
+
+As mentioned initially, there is also the possibility of nominal depictives.
+These are introduced with the proclitic expressing likeness, \rayr{ku/}{ku-}.
+Since secondary complements are adjuncts, they are not subcategorized for by
+the verb, so the question is which case they should receive---Ayeri, curiously,
+does not assign case to these NPs. \footnote{One might be tempted to analyze
+\rayr{ku/}{ku-} as a case marker used for essive and equative functions.
+NPs marked with \rayr{ku/}{ku-} may be regularly case marked in other contexts,
+though, and Ayeri does not make use of multiple case marking or
+\fw{suffixaufnahme} otherwise. Moreover, there is none of the usual alternation
+between overtly marked and zero-marked forms with \rayr{ku/}{ku-}. The
+distribution of \rayr{ku/}{ku-} is thus different from that of typical case
+markers.} Nominal depictives may appear right after the verb or as adjuncts of
+the VP if they are heavy. This is illustrated in (\ref{ex:nomdepict}): while
+the NP \xayr{ku/sikty}{ku-sikataya}{as a winner} follows the verb directly in
+in (\ref{ex:nomdepict_1}), the depictive NP \xayr{ku/ArilinY—kovro}{ku-arilinya
+... kovaro}{someone ... easily} follows the subject, \rayr{ANF Apitu}{ang
+Apitu}, as a result of being modified by a relative clause.
+
+\begin{figure}
+\pex\label{ex:nomdepict}
+\a\label{ex:nomdepict_1}\begingl
+	\gla Sa-sahaya ku-sikataya ang @ Mahān. //
+	\glb sa\til{}saha-ya ku=sikataya ang= Mahān //
+	\glc \Iter{}\til{}come-\TsgM{} as=winner \Aarg{}= Mahān //
+	\glft `Mahān returned (as) a winner.' //
+\endgl \medskip
+
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{come}{\ups{\Subj}} \\
+	\Asp	&	\Iter \\
+	\Subj	&	\[
+		\avmspan{``Mahān$_i$''} \\
+	\] \\
+	\Adjc	&	\{\[
+		\Pred	&	`winner$_i$' \\
+	\]\}
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[Sa-sahaya]
+		]
+		[{\anno[\elem{\Adjc}]{NP}}
+			[ku-sikataya]
+		]
+	]
+%	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Mahān}, roof]
+		]
+%	]
+]
+\end{forest}
+
+\a\label{ex:nomdepict_2}\begingl
+	\gla Nakasye ang @ Apitu ku-arilinya si tesisoyyes kovaro. //
+	\glb nakas-ye ang= Apitu ku=arilinya si tesisa-oy=yes kovaro //
+	\glc grow.up-\TsgF{} \Aarg{}= Apitu as=someone \Rel{} 
+		betray-\Neg{}=\TsgF{}.\Aarg{} easily //
+	\glft `Apitu grew up someone not betrayed easily.' //
+\endgl \medskip
+
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{grow-up}{\ups{\Subj}} \\
+	\Subj	&	\[
+		\avmspan{``Apitu$_i$''}
+	\] \\
+	\Adjc	&	\{\[
+		\avmspan{\normalfont ``someone not ...$_i$''} \\
+	\]\}
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[IP
+	[\anno{\xhead{I}}
+		[Nakasye]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[{ang Apitu}, roof]
+		]
+		[\anno{VP}
+			[{\anno[\elem{\Adjc}]{DP}}
+				[\anno{\xhead{D}}
+					[arilinya]
+				]
+				[{\anno[\elem{\Adjc}]{CP}}
+					[{si tesitoyyes kovaro}, roof]
+				]
 			]
 		]
 	]
