@@ -13748,14 +13748,24 @@ According to \citet{simpson1983}, the structure all of the examples in
 illustrated by (\ref{ex:adjresstr}). This, however, is an interpretation which
 extrapolates from the article because she only gives the a-structure
 definition, but no f- and c-structures. \citet{simpson1983} explicitly likens
-the a-structure of transitive clauses with unaccusative verbs to that of
+the a-structure of transitive clauses with unergative verbs to that of
 control verbs---she analyses resultative secondary predicates in terms of
 functional control by analyzing the object of the verb as the subject of the
-resultative. My interpretation is that this suggests a structure as described
-for copula clauses (\autoref{subsec:eqs}), so there should be a \fw{null-be}
+resultative.
+
+My interpretation is that this suggests a structure as described for copula
+clauses (\autoref{subsec:eqs}), so there should be a \fw{null-be} predicator
 requiring a subject and a predicative element as its arguments here as well.
-This f-structure $g$ forms an open complement of the verb in $f$, so I have
-also included an S daughter of VP as an equivalent for the \XCompl{} function.
+This f-structure $g$ forms an open complement of the verb in $f$. The \XCompl{}
+has no structural equivalent in the c-structure tree in (\ref{ex:adjresstr}),
+however, the XP node of the resultative element should be annotated
+\pass{\XCompl{} \Plink}. This way, \XCompl{} is represented functionally. Since
+the resultative XP is a complement of the verb according to both
+\citet{simpson1983} and \citet{christie2013}, we probably do not want it to be
+included inside an S sister of the object NP (annotated \pass{\XCompl}) if
+there is anything present in this place at all. As we have seen, the
+resultative mostly occupies the spot to the right of the verb, so this S would
+mostly be pruned anyway according to \Lfg{}'s version of X-bar theory.
 
 \begin{figure}
 \ex\label{ex:adjresstr}
@@ -13778,8 +13788,8 @@ $f$: \[
 		\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
 		\Plink	&	\[
 			\avmspan{...} \\
-		\] \tikzmark{adjresstr_plink}~\enspace~\\
-	\] \tikzmark{adjresstr_xcomp}~\enspace~\\
+		\] \tikzmark{adjresstr_plink} \\ % ~\enspace~\\
+	\] \tikzmark{adjresstr_xcomp} \\ % ~\enspace~\\
 \]
 \end{avm}
 \end{minipage}
@@ -13794,9 +13804,9 @@ $f$: \[
 		[NP]
 		[VP
 			[\tikzmark{adjresstr_NP}NP]
-			[\tikzmark{adjresstr_S}S
+%			[\tikzmark{adjresstr_S}S
 				[(XP)\tikzmark{adjresstr_XP2}]
-			]
+%			]
 		]
 	]
 ]
@@ -13817,9 +13827,9 @@ $f$: \[
 	to [out=east, in=west]
 	([xshift=-width(" "), yshift=1ex]{pic cs:adjresstr_NP});
 %
-\draw [-latex] ([yshift=1ex]{pic cs:adjresstr_xcomp})
-	to [out=east, in=south west]
-	([xshift=-width(" "), yshift=1ex]{pic cs:adjresstr_S});
+% \draw [-latex] ([yshift=1ex]{pic cs:adjresstr_xcomp})
+% 	to [out=east, in=south west]
+% 	([xshift=-width(" "), yshift=1ex]{pic cs:adjresstr_S});
 \end{tikzpicture}
 \xe
 \end{figure}
