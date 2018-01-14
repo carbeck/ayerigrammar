@@ -13695,16 +13695,17 @@ is not entirely clear, probably because of the added-argument status of
 		\glpreamble object NP + resultative AP: //
 		\gla Ang @ gondaya \textbf{apitu} {} @ Sedan prihinley. //
 		\glb ang= gonda-ya apitu Ø= Sedan prihin-ley //
-		\glc \AgtT{}= wipe-\TsgM{} clean \Top{} Sedan table-\PargI{} //
+		\glc \AgtT{}= wipe-\TsgM{} clean \Top{}= Sedan table-\PargI{} //
 		\glft `Sedan wipes the table clean.' //
 	\endgl
 
 \a\label{ex:adjres_np}%
 	\begingl
 		\glpreamble object NP + resultative NP: //
-		\gla Ang @ visaya \textbf{ku-nernanye} kivo ang @ Amān seygoley. //
+		\gla Ang @ visaya \textbf{ku-nernanye} \textbf{kivo} ang @ Amān
+			seygoley. //
 		\glb ang= visa-ya ku=nernan-ye kivo ang= Amān seygo-ley //
-		\glc \AgtT{}= cut-\TsgM{} as=piece-\Pl{} \Aarg{}= Amān 
+		\glc \AgtT{}= cut-\TsgM{} as=piece-\Pl{} small \Aarg{}= Amān 
 			apple-\PargI{} //
 		\glft `Amān cuts the apple into little pieces.' //
 	\endgl
@@ -13741,6 +13742,87 @@ this phrase consists of three words and contains its own complement. While
 (\ref{ex:adjres_np}) also contains a modifier, this phrase only consists of two
 words, and the modifier is not an argument but an adjunct. The phrase is thus
 relatively more light and thus more easily parseable.
+
+According to \citet{simpson1983}, the structure all of the examples in
+(\ref{ex:adjres}) have in common is something along the lines of what is
+illustrated by (\ref{ex:adjresstr}). This, however, is an interpretation which
+extrapolates from the article because she only gives the a-structure
+definition, but no f- and c-structures. \citet{simpson1983} explicitly likens
+the a-structure of transitive clauses with unaccusative verbs to that of
+control verbs---she analyses resultative secondary predicates in terms of
+functional control by analyzing the object of the verb as the subject of the
+resultative. My interpretation is that this suggests a structure as described
+for copula clauses (\autoref{subsec:eqs}), so there should be a \fw{null-be}
+requiring a subject and a predicative element as its arguments here as well.
+This f-structure $g$ forms an open complement of the verb in $f$, so I have
+also included an S daughter of VP as an equivalent for the \XCompl{} function.
+
+\begin{figure}
+\ex\label{ex:adjresstr}
+\begin{minipage}[t]{.5\remaining}
+\vspace{6\baselineskip}
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{...}{\ups{\Subj} \ups{\Obj} \ups{\XCompl}} \\
+	
+	\Subj	&	\[
+		\avmspan{...} \\
+	\] \\
+
+	\Obj	&	\[
+		\avmspan{...} \\
+	\] \tikzmark{adjresstr_obj} \\
+	
+	\XCompl	&	$g$: \[
+		\Subj	&	\tikzmark{adjresstr_subj2} \\
+		\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+		\Plink	&	\[
+			\avmspan{...} \\
+		\] \tikzmark{adjresstr_plink}~\enspace~\\
+	\] \tikzmark{adjresstr_xcomp}~\enspace~\\
+\]
+\end{avm}
+\end{minipage}
+\hfill
+\begin{forest} shorter edges%, for tree={s sep-=.5em,s=0}
+[IP
+	[\xbar{I}
+		[\xhead{I}]
+		[XP\tikzmark{adjresstr_XP1}]
+	]
+	[S
+		[NP]
+		[VP
+			[\tikzmark{adjresstr_NP}NP]
+			[\tikzmark{adjresstr_S}S
+				[(XP)\tikzmark{adjresstr_XP2}]
+			]
+		]
+	]
+]
+\end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:adjresstr_obj})
+	-- ++(east:5em) |- ([yshift=1ex]{pic cs:adjresstr_subj2});
+%
+\draw [-latex] ([yshift=1ex]{pic cs:adjresstr_plink})
+	to [out=east, in=south]
+	([xshift=-.5*width("XP"), yshift=-.5ex]{pic cs:adjresstr_XP1});
+%
+\draw [-latex, dashed] ([yshift=1ex]{pic cs:adjresstr_plink})
+	to [out=east, in=south]
+	([xshift=-.5*width("(XP)"), yshift=-.5ex]{pic cs:adjresstr_XP2});
+%
+\draw [-latex] ([yshift=1ex]{pic cs:adjresstr_obj})
+	to [out=east, in=west]
+	([xshift=-width(" "), yshift=1ex]{pic cs:adjresstr_NP});
+%
+\draw [-latex] ([yshift=1ex]{pic cs:adjresstr_xcomp})
+	to [out=east, in=south west]
+	([xshift=-width(" "), yshift=1ex]{pic cs:adjresstr_S});
+\end{tikzpicture}
+\xe
+\end{figure}
 
 ...
 
