@@ -12509,6 +12509,7 @@ an attribute of the f-structure containing \XCompl{}. An example is given in
 \end{figure}
 
 \subsubsection{Raising verbs}
+\label{subsubsec:raisvb}
 
 Raising verbs, like control verbs, are verbs which take a VP complement whose
 subject is shared with the subject or the object of the matrix verb. They as
@@ -13865,7 +13866,12 @@ allows for intransitive clauses with resultatives, though. Since resultative
 secondary predicates refer to objects, however, the restriction is that the
 subject of the intransitive verb be semantically a patient, that is very often,
 not in control of the action, but being acted on. This becomes evident in
-(\ref{ex:resitrns}).
+(\ref{ex:resitrns}). \rayr{tiplF}{Tipal} in (\ref{ex:resitrns_unerg}) is
+running, which is typically an action that is willingly performed and
+controlled by the runner, so that he is a typical agent. The wood in
+(\ref{ex:resitrns_unacc}), on the other hand, does not control its burning but
+is undergoing a change of state. Even if the language treats it as an agent in
+terms of case marking, it is more typically a patient in terms of semantics.
 
 \begin{figure}
 \pex\label{ex:resitrns}
@@ -13891,26 +13897,185 @@ not in control of the action, but being acted on. This becomes evident in
 \xe
 \end{figure}
 
-\rayr{tiplF}{Tipal} in (\ref{ex:resitrns_unerg}) is running, which is typically
-an action that is willingly performed and controlled by the runner, so that he
-is a typical agent. The wood in (\ref{ex:resitrns_unacc}), on the other hand,
-does not control its burning but is undergoing a change of state. Even if the
-language treats it as an agent in terms of case marking, it is more typically a
-patient in terms of semantics. It is also possible, however, to receive a
-resultative reading from (\ref{ex:resitrns_unerg}) as intended. For this
-purpose, Ayeri permits to introduce a `fake reflexive'
-\citep[145]{simpson1983}. This can be achieved by placing the reflexive clitic
-\rayr{sitNF/}{sitang-} in front of the verb, compare \autoref{subsec:reflrec}.
-An example of this is given in (\ref{ex:fakerefl}).
+Likewise, it is possible for the patient-subject of a passive verb to be
+complemented by a resultative, as in (\ref{ex:respass}). The status of the
+subject as corresponding to the object of a detransitivized verb is even more
+apparent here:
+% The examples in (\ref{ex:respass}) illustrate the change from an active
+% transitive sentence to an intransitive passive one. Note, however, that in
+% \Lfg{} passivization is not analyzed as a transformational process, but as a
+% lexical one. According to theory, there are two lexical entries for
+% \xayr{hyrF/}{hayar-}{chop} here, one active, one passive. In
+% (\ref{ex:respass_a}), the subject and the object of the verb are given with
+% the annotations [–\,o] and [–\,r] for `unobjective' and `unrestricted',
+% respectively, which are the key semantic features of these roles: subjects
+% are not complements, and objects are not restricted as to their semantic role
+% \citep[324\psqq]{bresnan2016}. If the [–\,o] argument of the verb drops out
+% in the passive version of the verb, the subject function will move up to the
+% next argument, which is [–\,r], as shown in (\ref{ex:respass_p}).
+unlike with unaccusative verbs,
+% where marking of the [–\,r] subject changes to agent,
+Ayeri retains the patient case marking for subjects of passive verbs. The
+[–\,r] marking on the passive subject refers to its thematic role in the
+argument structure as unrestricted \citep[324\psqq]{bresnan2016}.
 
-\ex\label{ex:fakerefl}\begingl
+\begin{figure}
+% \pex\label{ex:respass}
+\ex\label{ex:respass}
+% \a\label{ex:respass_a}
+% % \begin{minipage}[t]{.33\remaining}
+% \begingl
+% 	\gla Ang @ hayarye bidanjyam {} @ Briha mihanley. //
+% 	\glb ang= hayar-ye bidan-ye-yam Ø= Briha mihan-ley //
+% 	\glc \AgtT{} chop-\TsgF{} block-\Pl{}-\Dat{} \Top{}= Briha wood-\PargI{} //
+% 	\glft `Briha chops the wood into blocks.' //
+% \endgl\medskip\\
+% % \end{minipage}
+% % \hfill
+% \begin{avm}
+% \[
+% 	\Pred	&	\astruct{chop$_1$}{%
+% 		$\underset{\text{[–\,o]}}{\text{\ups{\Subj}}}$
+% 		$\underset{\text{[–\,r]}}{\text{\ups{\Obj}}}$
+% 		\ups{\XCompl}%
+% 	} \\
+%	
+% 	\Subj	&	\[
+% 		\Pred	&	`Briha' \\
+% 		\Case	&	\Aarg \\
+% 	\] \\
+%
+% 	\Obj	&	\[
+% 		\Pred	&	`wood' \\
+% 		\Case	&	\Parg \\
+% 	\] \tikzmark{respass1_obj} \\
+%
+% 	\XCompl	&	\[
+% 		\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+% 		\Subj	&	\tikzmark{respass1_subj2} \\
+% 		\Plink	&	\[
+% 			\avmspan{``blocks''} \\
+% 		\] \\
+% 	\] \\
+% \]
+% \end{avm}
+% \begin{tikzpicture}[remember picture, overlay]
+% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:respass1_obj})
+% 	-- ++(east:13em) |- ([yshift=1ex]{pic cs:respass1_subj2});
+% \end{tikzpicture}
+%
+%\a\label{ex:respass_p}
+% \begin{minipage}[t]{.33\remaining}
+\begingl
+	\gla Hayarara bidanjyam mihanley. //
+	\glb hayar-ara bidan-ye-yam mihan-ley //
+	\glc chop-\TsgI{} block-\Pl{}-\Dat{} wood-\PargI{} //
+	\glft `The wood is chopped into blocks.' //
+\endgl\medskip\\
+% \end{minipage}
+% \hfill
+\begin{avm}
+\[
+	% \Pred	&	\astruct{chop$_2$}{%
+	\Pred	&	\astruct{chop$_{\Pass}$}{%
+		$\underset{\text{[–\,r]}}{\text{\ups{\Subj}}}$
+		\ups{\XCompl}%
+	} \\
+	
+	\Subj	&	\[
+		\Pred	&	`wood' \\
+		\Case	&	\Parg \\
+	\] \tikzmark{respass2_subj1} \\
+
+	\XCompl	&	\[
+		\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+		\Subj	&	\tikzmark{respass2_subj2} \\
+		\Plink	&	\[
+			\avmspan{``blocks''} \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:respass2_subj1})
+	-- ++(east:13em) |- ([yshift=1ex]{pic cs:respass2_subj2});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+While (\ref{ex:resitrns_unerg}) was ruled out as ungrammatical, it is
+nonetheless possible to receive a resultative reading from this example as
+intended with a tweak in morphology: Ayeri permits `fake reflexives'
+\citep[145]{simpson1983} by which the subject NP is basically doubled as an
+object to which a result state can be attributed. This typically manifests as a
+reflexive clitic \rayr{sitNF/}{sitang-} in front of the verb, compare
+\autoref{subsec:reflrec}. An example of this strategy is given in
+(\ref{ex:fakerefl}).
+
+\begin{figure}
+\ex\label{ex:fakerefl}
+% \begin{minipage}[t]{.33\remaining}
+\begingl
 	\gla Sitang-nimpya pisu ang @ Tipal. //
 	\glb sitang=nimp-ya pisu ang= Tipal //
 	\glc self=run-\TsgM{} tired \Aarg{}= Tipal //
 	\glft `Tipal ran himself tired.' (Tipal made himself tired by running) //
-\endgl\xe
+\endgl\medskip\\
+% \end{minipage}
+% \hfill
+\begin{avm}
+\[
+	\Pred	&	\astruct[\ups{\Obj}]{run}{\ups{\Subj} \ups{\XCompl}} \\
+	
+	\Subj	&	\[
+		\avmspan{``Tipal$_i$''} \\
+	\] \\
 
-...
+	\Obj	&	\[
+		\Pred	&	`$pro_i$' \\
+		\Refl	&	$+$ \\
+	\] \tikzmark{fakerefl_obj} \\
+
+	\XCompl	&	\[
+		\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+		\Subj	&	\tikzmark{fakerefl_subj2} \\
+		\Plink	&	\[
+			\Pred	&	`tired' \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:fakerefl_obj})
+	-- ++(east:13em) |- ([yshift=1ex]{pic cs:fakerefl_subj2});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+The \Obj{} function in (\ref{ex:fakerefl}) has been added to the argument
+structure of the verb. As its position outside of the pointed brackets shows,
+this object---the fake reflexive---does not receive its syntactic role from the
+argument structure of the verb, so it must be athematic (compare 
+\autoref{subsubsec:raisvb}, p.~\pageref{subsubsec:raisvb}).
+\xayr{niMpF/}{nimp-}{run} is normally intransitive and thus does not
+subcategorize for an object in its argument structure, compare
+(\ref{ex:runtranswrong}). Adding the reflexive as an object has the advantage
+of being able to serve as a subject for the resultative adjective
+\rayr{pisu}{pisu} in the \XCompl{} function, however. This way, the state
+achieved by running---being tired---can be attributed indirectly to the
+controller of the reflexive, the subject \rayr{tiplF}{Tipal}.
+
+\begin{figure}
+\ex\label{ex:runtranswrong}\ljudge*\begingl
+	\glpreamble \astruct{run}{\ups{\Subj} \ups{\Obj}} //
+	\gla Sitang-nimpya ang @ Tipal. //
+	\glb sitang=nimp-ya ang= Tipal //
+	\glc self=run-\TsgM{} \Aarg{}= Tipal //
+	\glft `*Tipal ran himself.' //
+\endgl\xe
+\end{figure}
 
 \subsection{Passivization}
 \label{subsubsec:valdecr}
