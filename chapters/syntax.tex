@@ -1140,6 +1140,7 @@ such.
 \end{figure}
 
 \subsubsection{Personal pronouns}
+\label{subsubsec:perspro}
 
 The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
@@ -13686,7 +13687,11 @@ complementing the object of a transitive verb to express a result is given in
 (\ref{ex:restrns}). The sentence in (\ref{ex:restrns_pp2}) is adapted from
 \citet{christie2013}, and here the status of the PP as an argument of the verb
 is not entirely clear, probably because of the added-argument status of
-\XCompl{}s which she asserts.
+\XCompl{}s which she asserts. It may also be pointed out that in 
+(\ref{ex:restrns_np}) we can see another use of the dative, that is, to mark
+resultative NPs. A verb may thus occur exceptionally with more than one
+complement in the dative case. However, different from a regular recipient or
+goal NPs, a resultative dative NP also normally occurs after the verb.
 
 \begin{figure}
 \pex\label{ex:restrns}
@@ -13702,9 +13707,9 @@ is not entirely clear, probably because of the added-argument status of
 \a\label{ex:restrns_np}%
 	\begingl
 		\glpreamble object NP + resultative NP: //
-		\gla Ang @ visaya \textbf{nernanjyam} \textbf{kivo} {} @ Amān
+		\gla Ang @ visya \textbf{nernanjyam} \textbf{kivo} {} @ Amān
 			seygoley. //
-		\glb ang= visa-ya nernan-ye-yam kivo Ø= Amān seygo-ley //
+		\glb ang= vis-ya nernan-ye-yam kivo Ø= Amān seygo-ley //
 		\glc \AgtT{}= cut-\TsgM{} piece-\Pl{}-\Dat{} small \Top{}= Amān 
 			apple-\PargI{} //
 		\glft `Amān cuts the apple into little pieces.' //
@@ -13858,29 +13863,52 @@ $f$: \[
 So far, we have only looked at transitive clauses with resultatives. Ayeri also
 allows for intransitive clauses with resultatives, though. Since resultative
 secondary predicates refer to objects, however, the restriction is that the
-subject of the intransitive verb be semantically a patient. This becomes
-evident in (\ref{ex:resitrns}).
-% FIXME: WHICH CASE OR OTHER KIND OF MARKING SHOULD RESULTATIVE NOMINALS HAVE?
+subject of the intransitive verb be semantically a patient, that is very often,
+not in control of the action, but being acted on. This becomes evident in
+(\ref{ex:resitrns}).
 
 \begin{figure}
 \pex\label{ex:resitrns}
-\a\label{ex:resitrns_unerg}\ljudge\excl\begingl
-	\gla Nimpya pisu ang @ Tipal. //
-	\glb nimp-ya pisu ang= Tipal //
-	\glc run-\TsgM{} tired \Aarg{}= Tipal //
-	\glft `John ran tiredly.' \\
-		\textit{Intended:} `John ran tired.' (John became tired by running) //
+\a\label{ex:resitrns_unerg}\begingl
+	\glpreamble Unergative verb: //
+	\gla \excl{} @ Nimpya pisu ang @ Tipal. //
+	\glb {} nimp-ya pisu ang= Tipal //
+	\glc {} run-\TsgM{} tired \Aarg{}= Tipal //
+	\glft `Tipal ran tired(ly).' (Tipal ran in a tired fashion or while being
+		tired) \\
+		\textit{Intended:} `*Tipal ran tired.' (Tipal made himself tired by
+		running) //
 \endgl
 
 \a\label{ex:resitrns_unacc}\begingl
-	\gla Napāra mihanreng napisān.... //
-	\glb ... //
-	\glc ... //
-	\glft `...' //
+	\glpreamble Unaccusative verb: //
+	\gla Napāra maganyam mihanreng. //
+	\glb napa-ara magan-yam mihan-reng //
+	\glc burn-\TsgI{} coal-\Dat{} wood-\AargI{} //
+	\glft `The wood burns to coal.' //
 \endgl
 
 \xe
 \end{figure}
+
+\rayr{tiplF}{Tipal} in (\ref{ex:resitrns_unerg}) is running, which is typically
+an action that is willingly performed and controlled by the runner, so that he
+is a typical agent. The wood in (\ref{ex:resitrns_unacc}), on the other hand,
+does not control its burning but is undergoing a change of state. Even if the
+language treats it as an agent in terms of case marking, it is more typically a
+patient in terms of semantics. It is also possible, however, to receive a
+resultative reading from (\ref{ex:resitrns_unerg}) as intended. For this
+purpose, Ayeri permits to introduce a `fake reflexive'
+\citep[145]{simpson1983}. This can be achieved by placing the reflexive clitic
+\rayr{sitNF/}{sitang-} in front of the verb, compare \autoref{subsec:reflrec}.
+An example of this is given in (\ref{ex:fakerefl}).
+
+\ex\label{ex:fakerefl}\begingl
+	\gla Sitang-nimpya pisu ang @ Tipal. //
+	\glb sitang=nimp-ya pisu ang= Tipal //
+	\glc self=run-\TsgM{} tired \Aarg{}= Tipal //
+	\glft `Tipal ran himself tired.' (Tipal made himself tired by running) //
+\endgl\xe
 
 ...
 
