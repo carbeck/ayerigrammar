@@ -608,13 +608,13 @@
 \WithSuffix\newcommand{\anno}*[2][\updown{}]{%
 	\text{%
 		\tabulinesep = 0pt
-		\begin{tabu}[m]{c}%
+		\begin{tabu}[m]{@{} c @{}}%
 			#2\\[-0.33\baselineskip]%
 			\begin{tabular}[t]{@{} >{\smaller\smaller}c @{}}%
 				#1%
 			\end{tabular}%
 		\end{tabu}%
-	}
+	} %
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
