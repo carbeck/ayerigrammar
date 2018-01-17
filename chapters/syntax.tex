@@ -10587,9 +10587,14 @@ reference to \citet{dalrymple2004}, describes the structure of a copula clause
 with a zero-copula essentially in the following way (adapted for Ayeri):
 
 \ex\label{ex:copstruct}
-	S → \anno*[\pass{\Subj}]{XP} \anno*{VP} $\lor$ $\Bigl\{$\anno*[%
-		\ups{\Pred}~=~\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
-	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}$\Bigr\}$
+	S → \anno*[\pass{\Subj}]{XP} \anno*{VP} $\lor$ $\Biggl\{$\anno*[%
+		\ups{\Pred}~=~%
+		%\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
+		`\textit{null-be}~$\left\langle\begin{array}{@{} l @{}}
+			\text{\ups{\Subj}}\\
+			\text{\ups{\Plink}}
+		\end{array}\right\rangle$'%
+	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}$\Biggr\}$
 	$\left(\anno*[\pass{\Subj}]{XP}\right)$
 \xe
 
@@ -10919,6 +10924,89 @@ proclitic in the context of copula clauses. The same applies, \fw{mutatis
 mutandis}, to its negative counterpart \rayr{voj}{voy}. This also means that
 no modifications to the phrase structure equation in (\ref{ex:copstruct}) need
 to be made.
+
+On the other hand, it is also possible for equative statements to contain an
+adverb, for instance as in \fw{I really am his brother}. In these contexts, the
+adverb usually appears between the subject and the predicative NP, as
+(\ref{ex:copadv}) demonstrates. The permutation test in (\ref{ex:copadvperm}),
+then, attempts to establish whether a certain order of the constituents 
+\{\fw{yang}, \fw{cuyam}, \fw{netuas yana}\} is ungrammatical.
+
+\begin{figure}
+\pex\label{ex:copadv}
+\a\label{ex:copadv_1}\begingl
+	\gla Yang cuyam netuas yana. //
+	\glb yang cuyam netu-as yana //
+	\glc \Fsg{}.\Aarg{} really brother-\Parg{} \TsgM{}.\Gen{} //
+	\glft `I really am his brother.' //
+\endgl
+
+\a\label{ex:copadv_2}%
+	\fw{Yang netuas yana.}
+
+\a\label{ex:copadv_3}\ljudge*%
+	\fw{Yang cuyam.}
+
+\xe
+\end{figure}
+
+\begin{figure}
+\pex\label{ex:copadvperm}
+\a\fw{Yang cuyam netuas yana.} (preferred order)
+\a\fw{Yang netuas yana cuyam.}
+\a\fw{Cuyam yang netuas yana.}
+\a\fw{Cuyam netuas yana yang.}
+\a\fw{Netuas yana yang cuyam.}
+\a\fw{Netuas yana cuyam yang.}
+\xe
+\end{figure}
+
+Example (\autoref{ex:copadv_2}) shows that \xayr{kYuymF}{cuyam}{really} is
+optional. If it were the head of the predication, with \xayr{netu\_asF yn}
+{netuas yana}{his brother} being its complement, we would expect this sentence
+to be ungrammatical. The adverb also does not modify the pronoun \xayr{yNF}
+{yang}{I} in (\ref{ex:copadv_3}). If it were the predication, it would have to
+be nominalized as \rayr{d/kYuymF}{da-cuyam}{really so}. The permutation test in
+(\ref{{ex:copadvperm}}) reveals that all sequences are licit. Thus, I will
+assume the structure in (\ref{ex:copadvstruct}) for the example in
+(\ref{ex:copadv_1}): since copula clauses form a small clause constituent,
+S may govern more than two elements. Case marking ensures that the different
+phrases map on their intended grammatical functions.
+
+\begin{figure}
+\ex\label{ex:ex:copadvstruct}
+\begin{minipage}[t]{.5\remaining}
+\begin{avm}
+\[
+	\Pred	&	\astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\avmspan{``I''} \\
+	\]\\
+	\Plink	&	\[
+		\avmspan{``his brother''} \\
+	\] \\
+	\Adjc	&	\{\[
+		\Pred	&	`really' \\
+	\]\}
+\]
+\end{avm}
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[S
+	[{\anno[\pass{\Subj}]{DP}}
+		[Yang]
+	]
+	[{\anno[\elem{\Adjc}]{AdvP}}
+		[cuyam]
+	]
+	[{\anno[\pass{\Plink}]{NP}}
+		[{netuas yana}, roof]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
 
 \subsection{Inflectional phrases}
 \label{subsec:ips}
