@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). You can also take a look at the [most recently compiled PDF of the current working draft](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf) (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)). Ayeri is a fictional language which I have been developing since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
+This is a renewed effort, started in July 2016, to revise and to expand on what can be found on the internet as _A Grammar of Ayeri_ ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)). You can also take a look at the [most recently compiled PDF of the current working draft](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf) (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)). Ayeri is a fictional language (a "conlang") which I have been developing since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
 
 I had been leaving the earlier grammar document in a very sorry and unfinished state for over 5 years before finally returning to it, prompted by a [class on constructed languages](http://www.sfs.uni-tuebingen.de/~abuch/16ss/conlang.html) at the University of Tübingen in the summer semester of 2016, which used Ayeri as one of its objects of study. The work presented here is mostly a complete rewrite of the old grammar sketch from scratch, not merely an extention.
 
@@ -21,6 +21,19 @@ Currently working on
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
 I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
+
+Roadmap
+=======
+
+* Chapter on syntax ("Phrase structures")
+    * finish section on VPs
+    * write section on CPs
+* proofreading and correction
+    * do corrections in VP subchapter
+    * proofread and correct syntax chapter
+* maybe extend name list with etymologies
+* proofread and correct whole thing again
+* make index
 
 Table of Contents
 =================
