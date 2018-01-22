@@ -2232,7 +2232,7 @@ any countable or quantifiable noun:
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs, but also PPs; and they may
-also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{theme}) as well as
 various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
 decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
@@ -10928,23 +10928,23 @@ to be made.
 On the other hand, it is also possible for equative statements to contain an
 adverb, for instance as in \fw{I really am his brother}. In these contexts, the
 adverb usually appears between the subject and the predicative NP, as
-(\ref{ex:copadv}) demonstrates. The permutation test in (\ref{ex:copadvperm}),
+(\ref{ex:copadv2}) demonstrates. The permutation test in (\ref{ex:copadvperm}),
 then, attempts to establish whether a certain order of the constituents 
 \{\fw{yang}, \fw{cuyam}, \fw{netuas yana}\} is ungrammatical.
 
 \begin{figure}
-\pex\label{ex:copadv}
-\a\label{ex:copadv_1}\begingl
+\pex\label{ex:copadv2}
+\a\label{ex:copadv2_1}\begingl
 	\gla Yang cuyam netuas yana. //
 	\glb yang cuyam netu-as yana //
 	\glc \Fsg{}.\Aarg{} really brother-\Parg{} \TsgM{}.\Gen{} //
 	\glft `I really am his brother.' //
 \endgl
 
-\a\label{ex:copadv_2}%
+\a\label{ex:copadv2_2}%
 	\fw{Yang netuas yana.}
 
-\a\label{ex:copadv_3}\ljudge*%
+\a\label{ex:copadv2_3}\ljudge*%
 	\fw{Yang cuyam.}
 
 \xe
@@ -12126,7 +12126,7 @@ Ayeri is an indirective language, thus.
 \ex\label{ex:doubleobjfstruct}
 \begin{avm}
 \[
-	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\Obj} \ups{\SObjc{recip}}} \\
+	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\SObjc{theme} \ups{\Obj}}} \\
 
 	\Top	&	\[
 		\Pred	&	`Apan' \\
@@ -12207,10 +12207,10 @@ this proposal as a c-structure tree.
 		]
 		[\anno{VP}
 			[\anno{\xbar{V}}
-				[{\anno[\pass{\Obj}]{NP}}
+				[{\anno[\pass{\SObjc{theme}}]{NP}}
 					[koyās]
 				]
-				[{\anno[\pass{\SObjc{recip}}]{NP}}
+				[{\anno[\pass{\Obj}]{NP}}
 					[{yam Diya}, roof]
 				]
 			]
@@ -14171,6 +14171,153 @@ allows recipients in ditransitive constructions to be passivized, or even
 oblique arguments of verbs such as the recipient of \xayr{nr/}{nara-}{speak},
 which in Ayeri appears in the locative case, or its theme, which appears in the
 genitive case.
+
+In \Lfg{}, the mapping between argument structure and syntactic structure (the
+$\alpha$ function) is handled by the `lexical mapping theory'
+\citep[324\psqq]{bresnan2016}. According to this theory, the main argument
+functions decompose into the feature set displayed in
+(\ref{ex:argfunctfeat_1}). Here, [±\,o] stands for `(non)objective', and [±\,r]
+stands for `(un)restricted'. The former refers to the ability (or its lack) of
+complementing intransitive predicators, the latter refers to restriction (or
+its lack) to a certain semantic role. In the following, the different semantic
+features will be referred to by a singleton feature rather than a pair; the
+abbreviations are given in (\ref{ex:argfunctfeat_2}).
+
+\begin{figure}
+\pex\label{ex:argfunctfeat}
+\a\label{ex:argfunctfeat_1}%
+	\begin{tabu}[t]{>{\bfseries}l c c}
+	%
+	& \textbf{–\,r}
+	& \textbf{+\,r}
+	\\
+
+	\midrule
+
+	–\,o
+	& \Subj
+	& \Oblique
+	\\
+
+	+\,o
+	& \Obj
+	& \SObj
+	\\
+
+	\bottomrule
+	\end{tabu}
+
+\a\label{ex:argfunctfeat_2}%
+	\begin{tabular}[t]{@{} l @{\quad$\mapsto$\quad} l}
+	–\,o	&	\Subj\\
+	–\,r	&	\Obj(, \Subj)\\
+	+\,r	&	\Oblique\\
+	+\,o	&	\SObj\\
+	\end{tabular}
+\xe
+\end{figure}
+
+The \Subj{} function may embody either [–\,o] or [–\,r]: for instance, the
+syntactic subject of an unergative verb is non-objective [–\,o] since it acts
+like a typical logical subject, whereas the syntactic subject of an
+unaccusative verb is patient-like \mbox{[–\,r]}---the same goes for the
+subject of a passive. Other semantic roles are annotated [–\,o] as well. The roles in (\ref{ex:argfunctfeat}) map to the closest available role
+in the thematic hierarchy (\ref{ex:themhier}) \citep[329]{bresnan2016}.
+
+\begin{figure}[ht]
+\ex\label{ex:themhier}%
+	agent > beneficiary > experiencer/goal > instrument > patient/theme >
+	locative
+\xe
+\end{figure}
+
+A typical transitive English sentence like \fw{John eats a sandwich} assigns
+the agent, \fw{John}, with the most prominent semantic role (\thetahat), which
+is [–\,o]. If initial in a-structure, [–\,o] is mapped onto the \Subj{}
+function. The object of John's eating, \fw{a sandwich}, is assigned [–\,r], and
+thus maps to the \Obj{} function. This is shown in (\ref{ex:engactive}).
+
+\begin{figure}[ht]
+\ex\label{ex:engactive}
+\begin{tabular}[t]{l >{\itshape}l l c c r}
+a-structure:
+	& eat₁
+	& ⟨
+	& \textsc{agent}
+	& \textsc{patient}
+	& ⟩
+	\\
+%
+	& %
+	& %
+	& [–\,o]
+	& [–\,r]
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& |
+	& %
+	\\
+
+f-structure:
+	& %
+	& %
+	& \Subj
+	& \Obj
+	& %
+	\\
+\end{tabular}
+\xe
+\end{figure}
+
+According to lexical mapping theory, negative/unmarked roles may be suppressed
+as arguments, that is, [–\,o] and [–\,r]. Thus, according to \Lfg{} theory,
+what happens in passivization is a manipulation of the lexical entry for a verb
+by which the [–\,o] argument of the active version of the verb is suppressed to
+form its passive counterpart. The \Subj{} function is then assigned to the next
+available semantic role, that is, [–\,r]. The equivalent passive counterpart to
+the previous example is given in (\ref{ex:engpassive}).
+
+\begin{figure}[ht]
+\ex\label{ex:engpassive}
+\begin{tabular}[t]{l >{\itshape}l l c c r}
+a-structure:
+	& eat₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{patient}
+	& ⟩
+	\\
+%
+	& %
+	& %
+	& [–\,o]
+	& [–\,r]
+	& %
+	\\
+
+%
+	& %
+	& %
+	& Ø
+	& |
+	& %
+	\\
+
+f-structure:
+	& %
+	& %
+	& %
+	& \Subj
+	& %
+	\\
+\end{tabular}
+\xe
+\end{figure}
 
 ...
 
