@@ -14220,16 +14220,17 @@ abbreviations are given in (\ref{ex:argfunctfeat_2}).
 The \Subj{} function may embody either [–\,o] or [–\,r]: for instance, the
 syntactic subject of an unergative verb is non-objective [–\,o] since it acts
 like a typical logical subject, whereas the syntactic subject of an
-unaccusative verb is patient-like \mbox{[–\,r]}---the same goes for the
-subject of a passive. Other semantic roles are annotated [–\,o] as well. The roles in (\ref{ex:argfunctfeat}) map to the closest available role
-in the thematic hierarchy (\ref{ex:themhier}) \citep[329]{bresnan2016}.
+unaccusative verb is patient-like \mbox{[–\,r]}---the same goes for the subject
+of a passive. Other semantic roles are annotated [–\,o] as well. The roles in
+(\ref{ex:argfunctfeat}) map to the closest available role in the thematic
+hierarchy (\ref{ex:themhier}) \citep[329]{bresnan2016}.
 
-\begin{figure}[ht]
+%\begin{figure}[ht]
 \ex\label{ex:themhier}%
 	agent > beneficiary > experiencer/goal > instrument > patient/theme >
 	locative
 \xe
-\end{figure}
+%\end{figure}
 
 A typical transitive English sentence like \fw{John eats a sandwich} assigns
 the agent, \fw{John}, with the most prominent semantic role (\thetahat), which
@@ -14318,6 +14319,261 @@ f-structure:
 \end{tabular}
 \xe
 \end{figure}
+
+\subsubsection{Passives of transitive verbs}
+
+As noted initially, Ayeri permits transitive verbs to be detransitivized by
+making them passive. We have already seen how \Lfg{} handles passivization
+according to \citet{bresnan2016}. Example (\ref{ex:passzn_act}) shows a regular
+statement in active voice,\footnote{The topicalized argument is also marked
+with an asterisk. This is non-standard, however.} (\ref{ex:passzn_pass}) shows
+the corresponding passive version of the sentence.
+
+\begin{figure}
+\pex\label{ex:passzn}
+\a\label{ex:passzn_act}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Ang @ konja {} @ Niyas disuley. //
+	\glb ang= kond-ya Ø= Niyas disu-ley //
+	\glc \AgtT{}= eat-\TsgM{} \Top{}= Niyas banana-\PargI{} //
+	\glft `Niyas eats a banana.' //
+\endgl
+\end{minipage}
+~
+\begin{tabular}[t]{>{\itshape}l l c c r}
+eat₁
+	& ⟨
+	& \textsc{agent}
+	& \textsc{patient}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \Subj*
+	& \Obj
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \fw{Niyas}
+	& \fw{banana}
+	& %
+	\\
+\end{tabular}
+
+\a\label{ex:passzn_pass}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Kondara disuley. //
+	\glb kond-ara disu-ley //
+	\glc eat-\TsgI{} banana-\PargI{} //
+	\glft `A banana is eaten.' //
+\endgl
+\end{minipage}
+~
+\begin{tabular}[t]{>{\itshape}l l c c r}
+eat₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{patient}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& %
+	\\
+
+%
+	& %
+	& Ø
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \Subj
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \fw{banana}
+	& %
+	\\
+\end{tabular}
+
+\xe
+\end{figure}
+
+Just as in the English example in (\ref{ex:engactive}), \rayr{niysF}{Niyas} in
+(\ref{ex:passzn_act}) is identified as corresponding to the agent argument the
+verb \xayr{koMdF/}{kond-}{eat} subcategorizes. The agent argument qualifies for
+[–\,o], so this is also our subject. The banana, \rayr{disu}{disu}, then, is
+identified as corresponding to the patient argument and is thus assigned
+[–\,r], forming the object. The fact that it is an unmarked role is affirmed by
+its ability to be suppressed: \xayr{koMdY ANF niysF}{Konja ang Niyas}{Niyas
+eats} is a full, grammatical sentence. Since \rayr{niysF}{Niyas} is specified
+as [–\,o], it is eligible for dropping as well, however, forming the passive
+sentence presented in (\ref{ex:passzn_pass}). Since there is no [–\,o] to
+assign the subject function to, the argument specified as [–\,r] is mapped onto
+this function. While in languages like English the former object appears in the
+nominative case, Ayeri nonetheless keeps the patient marking and the verb
+agrees with the patient subject.
+
+Also unlike in English, it is not possible to have the verb agree with the
+patient subject and to reintroduce the agent as an oblique argument in either
+the agent or the instrumental case (\ref{ex:passzn2_inst}). Instead, one may
+rather keep the active phrasing and choose to topicalize the patient argument
+as illustrated in (\ref{ex:passzn2_pt}).
+
+\begin{figure}
+\pex\label{ex:passzn2}
+\a\label{ex:passzn2_inst}%
+\ljudge*%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Kondara disuley ang/ri @ Niyas. //
+	\glb kond-ara disu-ley ang=/ri= Niyas //
+	\glc eat-\TsgI{} banana-\PargI{} \Aarg{}=/\Ins{}= Niyas //
+	\glft \textit{Intended:} `A banana is eaten by Niyas.' //
+\endgl
+\end{minipage}
+~
+\begin{tabular}[t]{>{\itshape}l l c r c}
+eat₂
+	& ⟨
+	& \textsc{patient}
+	& ⟩
+	& \textsc{agent}
+	\\
+%
+	& %
+	& [–\,r]
+	& %
+	& [–\,o]
+	\\
+
+%
+	& %
+	& |
+	& %
+	& |
+	\\
+
+%
+	& %
+	& \Subj
+	& %
+	& \Oblq{agt}
+	\\
+
+%
+	& %
+	& |
+	& %
+	& |
+	\\
+
+%
+	& %
+	& \fw{banana}
+	& %
+	& \fw{Niyas}
+	\\
+\end{tabular}
+
+\a\label{ex:passzn2_pt}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Le @ konja ang @ Niyas disu. //
+	\glb le= kond-ya ang= Niyas disu-Ø //
+	\glc \PatT{}= eat-\TsgM{} \Aarg{}= Niyas banana-\Top{} //
+	\glft `The banana, Niyas eats it.' //
+\endgl
+\end{minipage}
+~
+\begin{tabular}[t]{>{\itshape}l l c c r}
+eat₁
+	& ⟨
+	& \textsc{agent}
+	& \textsc{patient}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \Subj
+	& \Obj*
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \fw{Niyas}
+	& \fw{banana}
+	& %
+	\\
+\end{tabular}
+
+\xe
+\end{figure}
+
+\subsubsection{Passives of ditransitive verbs}
 
 ...
 
