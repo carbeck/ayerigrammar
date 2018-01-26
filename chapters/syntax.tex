@@ -14623,7 +14623,7 @@ tell₁
 
 %
 	& %
-	& \Subj
+	& \Subj*
 	& \SObj
 	& \Obj
 	& %
@@ -14645,6 +14645,384 @@ tell₁
 	& %
 	\\
 \end{tabular}
+\xe
+\end{figure}
+
+The question here is which of the arguments of a ditransitive verb can be
+passivized. According to \citet{bresnan2016}, in English, the subject function
+as the syntactic equivalent of [–\,o] may be dropped and the [–\,r] role, that
+is, the recipient or beneficiary, becomes the new subject while the patient or
+theme remains as a secondary object [+\,o]. Example (\ref{ex:engditrpass})
+illustrates this using the example sentence from (\ref{ex:ditrorder}).
+
+\begin{figure}
+\pex\label{ex:engditrpass}
+\a\label{ex:engditrpass_act}%
+\fw{John tells Mary the news.}\medskip \\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₁
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \Subj
+	& \Obj
+	& \SObj
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \fw{John}
+	& \fw{Mary}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+
+\a\label{ex:engditrpass_pass1}%
+\fw{Mary is told the news.}\medskip \\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& Ø
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \Subj
+	& \SObj
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \fw{Mary}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+
+\a\label{ex:engditrpass_pass2}%
+\ljudge*\fw{The news is told Mary.}\medskip \\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& Ø
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \Obj
+	& \Subj
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \fw{Mary}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+\xe
+\end{figure}
+
+German, on the other hand, appears to work a little different from English at
+least for the verb \fw{berichten} `tell, report, relate'. This is illustrated
+by the example sentences in (\ref{ex:gerditrpass}). In
+(\ref{ex:gerditrpass_act}), the agent is marked by the nominative case, the
+recipient by the dative case, and the theme by the accusative case. As in
+English, the recipient may be dropped, so I am assuming here that it must be
+[–\,r]. As in the English example (\ref{ex:engditrpass_pass1}) above,
+(\ref{ex:gerditrpass_pass1}) drops the agent. Passive voice is expressed by the
+auxiliary \fw{werden} `become' with the content verb appearing as a past
+participle. However, if we assign the subject---and thus nominative case---to
+the recipient and let the theme remain in the accusative, this leads to an
+ungrammatical outcome. The correct reading is instead achieved in
+(\ref{ex:gerditrpass_pass2}), whose English equivalent
+(\ref{ex:engditrpass_pass2}) is ungrammatical. Here, \fw{Anna} is singular, but
+the verb \fw{werden} has plural agreement, which can only be with \fw{die
+Neuigkeiten}. We have to assume, thus, that the theme receives the subject role
+with nominative case, while the recipient remains in the dative and appears at
+the front of the clause as a topic.
+
+Names in German are only marked for genitive case, but replacing \fw{Anna} with
+a pronoun makes case marking more clear. If we replace \fw{Anna} with the
+corresponding nominative singular pronoun \fw{sie} `she' in 
+(\ref{ex:gerditrpass_pass1}), the sentence is still wrong. Using the dative
+singular pronoun \fw{ihr} `(to) her' in (\ref{ex:gerditrpass_pass2}), however,
+equally results in a grammatically correct result.
+
+\begin{figure}
+\pex\label{ex:gerditrpass}
+\a\label{ex:gerditrpass_act}%
+%\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Thomas berichtet Anna die Neuigkeiten. //
+	\glb Thomas bericht-et Anna die Neuigkeit-en //
+	\glc Thomas.\Nom{} tell-\Tsg{}.\Prs{} Anna.\Dat{} \Def{}.\Acc{}.\Pl{}
+		news-\Pl{} //
+	\glft `Thomas tells Anna the news.' //
+\endgl
+%\end{minipage}
+%\hfill
+\medskip\\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₁
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \Subj
+	& \Obj
+	& \SObj
+	& %
+	\\
+
+%
+	& %
+	& |
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& \fw{Thomas}
+	& \fw{Anna}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+
+\a\label{ex:gerditrpass_pass1}%
+%\begin{minipage}[t]{.4\remaining}
+\ljudge*\begingl
+	\gla Anna wird die Neuigkeiten berichtet. //
+	\glb Anna wird die Neuigkeit-en bericht-et //
+	\glc Anna.\Nom{} become-\Tsg{}.\Prs{} \Def{}.\Acc{}.\Pl{} news-\Pl{}
+		tell-\Pst{}.\Ptcp{} //
+	\glft \textit{Intended:} `Anna is told the news.' //
+\endgl
+%\end{minipage}
+%\hfill
+\medskip\\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& Ø
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \Subj
+	& \Obj
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \fw{Anna}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+
+\a\label{ex:gerditrpass_pass2}%
+%\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Anna werden die Neuigkeiten berichtet. //
+	\glb Anna werd-en die Neuigkeit-en bericht-et //
+	\glc Anna.\Dat{} become-\Tpl{}.\Prs{} \Def{}.\Nom{}.\Pl{} news-\Pl{}
+		tell-\Pst{}.\Ptcp{} //
+	\glft `Anna is told the news.' //
+\endgl
+%\end{minipage}
+%\hfill
+\medskip\\
+\begin{tabular}[t]{@{} >{\itshape}l l c c c r}
+tell₂
+	& ⟨
+	& \textsc{agent}
+	& \textsc{recipient}
+	& \textsc{theme}
+	& ⟩
+	\\
+%
+	& %
+	& [–\,o]
+	& [–\,r]
+	& [+\,o]
+	& %
+	\\
+
+%
+	& %
+	& Ø
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \Obj*
+	& \Subj
+	& %
+	\\
+
+%
+	& %
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& %
+	& %
+	& \fw{Anna}
+	& \fw{news}
+	& %
+	\\
+\end{tabular}
+
 \xe
 \end{figure}
 
