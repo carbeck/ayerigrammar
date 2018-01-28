@@ -13724,6 +13724,7 @@ end of the phrase as a result of being modified by a relative clause.
 \end{figure}
 
 \subsubsection{Resultatives}
+\label{subsubsec:res}
 
 \citet{simpson1983} comes to the conlusion that resultatives always modify
 objects, whether they are surface objects or `underlying objects' (like the
@@ -15336,7 +15337,7 @@ tell₁
 \begingl
 	\gla Ningya yam @ Ajān. //
 	\glb ning-ya yam= Ajān //
-	\glc tell-\TsgF{} \Top{}= Gada \Dat{}= Ajān //
+	\glc tell-\TsgF{} \Dat{}= Ajān //
 	\glft `Ajān is told.' //
 \endgl
 \end{minipage}
@@ -15452,9 +15453,119 @@ tell₂
 \xe
 \end{figure}
 
-\subsubsection{Passive and subordinating verbs}
+\subsubsection{Interactions between raising verbs and passive voice}
 
-...
+Raising verbs provide an argument to the matrix predicate which is not licensed
+by its semantics. It is thus interesting to explore the interplay between
+Ayeri's possibly only raising verb, \xayr{surFpF/}{surp-}{seem}, and passive
+voice. \citet{bresnan2016} give the argument structure for English \fw{seem} as
+in (\ref{ex:engseemastruct}). They note that \fw{seem} cannot be put into
+passive voice. As we have seen before, \rayr{surFpF/}{surp-}, just like its
+English counterpart, assigns the subject function to an external argument
+(compare \autoref{subsubsec:raisvb}, p.~\pageref{subsubsec:raisvb}). That is,
+the syntactic subject of \fw{seem} is not its logical subject, hence this
+argument is given as [–\,r] instead of [–\,o]. This annotation is instead
+chosen for the experiencer, which is realized in English as a PP, and as a
+dative NP in Ayeri. Since complements are an `other' function, they also
+receive [–\,o] annotation.
+
+\begin{figure}
+\ex\label{ex:engseemastruct}
+\begin{tabular}[t]{@{} >{\itshape}l c l c c r}
+seem
+	& \_
+	& ⟨
+	& \textsc{experiencer}
+	& \textsc{proposition}
+	& ⟩
+	\\
+%
+	& [–\,r]
+	& %
+	& [–\,o]
+	& [–\,o]
+	& %
+	\\
+
+%
+	& |
+	& %
+	& |
+	& |
+	& %
+	\\
+
+%
+	& \Subj
+	& %
+	& \Oblq{exp}
+	& \XCompl
+	& %
+	\\
+\end{tabular}
+
+\xe
+\end{figure}
+
+It makes no sense in English to put \fw{seem} into the passive voice with the
+experiencer becoming the subject (*\fw{I am seemed}). Since Ayeri does not
+permit dative NPs to be subjects of passive verbs, this is not possible in
+Ayeri either. The question is, however, whether it is possible to passivize the
+subordinate verb in order to raise its passive subject. An attempt to construct
+such a statement is given in (\ref{ex:passraise}).
+
+\begin{figure}
+\pex\label{ex:passraise}
+\a\label{ex:passraise_1}\begingl
+	\gla Surpreng, valyara umangley. //
+	\glb surp=reng valy-ara umang-ley //
+	\glc seem=\TsgI{}.\Aarg{} enjoy-\TsgI{} beach-\PargI{} //
+	\glft `It seems that the beach is enjoyed.' //
+\endgl
+
+\a\label{ex:passraise_2}\ljudge*\begingl
+	\gla Surpara umangley valyyam. //
+	\glb surp-ara umang-ley valy-yam //
+	\glc seem-\TsgI{} beach-\PargI{} enjoy-\Ptcp{} //
+	\glft \textit{Intended:} `The beach seems to be enjoyed.' //
+\endgl
+
+\a\label{ex:passraise_3}\ljudge*\begingl
+	\gla Surpara valyyam umangley. //
+	\glb surp-ara valy-yam umang-ley //
+	\glc seem-\TsgI{} enjoy-\Ptcp{} beach-\PargI{} //
+	\glft \textit{Intended:} `The beach seems to be enjoyed.' //
+\endgl
+\xe
+\end{figure}
+
+While it is entirely unproblematic for the complement clause in
+(\ref{ex:passraise_1}) to be in passive voice, raising the patient subject in
+(\ref{ex:passraise}bc) does not yield an acceptable result. This may be due to
+Ayeri making no morphological distinction between active and passive verb
+forms---the difference is instead in the case marking of the subject argument.
+At least the verb \xayr{vlYymF}{valyyam} in (\ref{ex:passraise_2}b) is thus not
+readily recognizable as a passive form. Both sentences are odd in that 
+\xayr{surFpF/}{surp-}{surp-} is complemented by a patient subject. This is
+comparable to *\fw{The beach is seemed to be enjoyed} in English.
+
+Moreover, \rayr{surFpF/}{surp-} does not subcategorize for a patient argument,
+so it would seem odd for it to take a patient subject that makes it look as
+though it were passivized. There is also a certain structural similarity to
+unaccusative verbs (compare \autoref{subsubsec:res},
+p.~\pageref{subsubsec:res}). Here, the subject is specified as [–\,r] as well,
+but yet it appears in the agent case. The closest grammatically permissible way
+to express the intended statement in (\ref{ex:passraise}bc) is to topicalize
+the patient argument of the subordinate verb, as shown in (\ref{ex:raisept}).
+
+\begin{figure}
+\ex\label{ex:raisept}\begingl
+	\gla Le @ surptang valyyam umang. //
+	\glb le= surp=tang valy-yam umang-Ø //
+	\glc \PatTI{}= seem=\TplM.\Aarg{} enjoy-\Ptcp{} beach-\Top{} //
+	\glft `The beach, they seem to enjoy it.' //
+\endgl\xe
+\end{figure}
 
 \subsubsection{Passivization of adjuncts}
 
