@@ -2232,7 +2232,7 @@ any countable or quantifiable noun:
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs, but also PPs; and they may
-also form various core arguments (\Subj{}, \Obj{}, \SObjc{theme}) as well as
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
 various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
 decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
@@ -12126,7 +12126,7 @@ Ayeri is an indirective language, thus.
 \ex\label{ex:doubleobjfstruct}
 \begin{avm}
 \[
-	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\SObjc{theme} \ups{\Obj}}} \\
+	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\Objc} \ups{\SObj{recip}}}} \\
 
 	\Top	&	\[
 		\Pred	&	`Apan' \\
@@ -12207,10 +12207,10 @@ this proposal as a c-structure tree.
 		]
 		[\anno{VP}
 			[\anno{\xbar{V}}
-				[{\anno[\pass{\SObjc{theme}}]{NP}}
+				[{\anno[\pass{\Obj}]{NP}}
 					[koyās]
 				]
-				[{\anno[\pass{\Obj}]{NP}}
+				[{\anno[\pass{\SObjc{recip}}]{NP}}
 					[{yam Diya}, roof]
 				]
 			]
@@ -15049,14 +15049,14 @@ eat₁
 
 \subsubsection{Passive of ditransitive verbs}
 
-Ditransitive verbs add a third role to the argument structure of a verb. Since
-Ayeri allows the recipient or beneficiary (R) to be dropped, this argument must
-be negatively specified as [–\,r], just as in English \citep[338]{bresnan2016}.
-The R thus is mapped to the function of the object, in spite of being marked by
-dative case, while the patient or theme (T) of a ditransitive verb is mapped to
-the function of the secondary object, [+\,o]. Yet, however, Ayeri puts the
-complements of a ditransitive verb in the order \Obj{}---\SObj{}. An example of
-an active ditransitive sentence is given in (\ref{ex:ditrorder}).
+Ditransitive verbs add a third role to the argument structure of a verb. This
+means that the direct object---marked with the patient case since it is a
+patient or a theme---is mapped to [–\,r], while the indirect/secondary
+object---marked with the dative case since it is a recipient or
+beneficiary---is mapped to [+\,o]. In contrast to English ditransitive clauses
+with dative movement (\fw{x gives y the z}), object and secondary object appear
+in the order \Obj{}---\SObj{}. An example of an active ditransitive sentence
+is given in (\ref{ex:ditrorder}).
 
 \begin{figure}
 \ex\label{ex:ditrorder}
@@ -15080,8 +15080,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15096,8 +15096,8 @@ tell₁
 %
 	& %
 	& \Subj*
-	& \SObj
 	& \Obj
+	& \SObj
 	& %
 	\\
 
@@ -15142,8 +15142,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15158,8 +15158,8 @@ tell₁
 %
 	& %
 	& \Subj
-	& \Obj
 	& \SObj
+	& \Obj
 	& %
 	\\
 
@@ -15193,8 +15193,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15210,7 +15210,7 @@ tell₂
 	& %
 	& %
 	& \Subj
-	& \SObj
+	& \Obj
 	& %
 	\\
 
@@ -15232,7 +15232,7 @@ tell₂
 \end{tabular}
 
 \a\label{ex:engditrpass_pass2}%
-\ljudge*\fw{The news are told Mary.}\medskip \\
+\ljudge*\fw{The news is told Mary.}\medskip \\
 \begin{tabular}[t]{@{} >{\itshape}l l c c c r}
 tell₂
 	& ⟨
@@ -15244,8 +15244,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15260,7 +15260,7 @@ tell₂
 %
 	& %
 	& %
-	& \Obj
+	& \SObj
 	& \Subj
 	& %
 	\\
@@ -15289,9 +15289,7 @@ least for the verb \fw{berichten} `tell, report, relate'.\footnote{The typical
 ditransitive verb, \fw{geben} `give', works this way as well.} This is
 illustrated by the example sentences in (\ref{ex:gerditrpass}). In
 (\ref{ex:gerditrpass_act}), the agent is marked by the nominative case, the
-recipient by the dative case, and the theme by the accusative case. As in
-English, the recipient may be dropped, so I am assuming here that it must be
-[–\,r].
+recipient by the dative case, and the theme by the accusative case.
 
 As in the English example (\ref{ex:engditrpass_pass1}) above,
 (\ref{ex:gerditrpass_pass1}) drops the agent. Passive voice is expressed by the
@@ -15340,8 +15338,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15356,8 +15354,8 @@ tell₁
 %
 	& %
 	& \Subj
-	& \Obj
 	& \SObj
+	& \Obj
 	& %
 	\\
 
@@ -15401,8 +15399,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15462,8 +15460,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [–\,r]
 	& [+\,o]
+	& [–\,r]
 	& %
 	\\
 
@@ -15534,8 +15532,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15550,7 +15548,7 @@ tell₂
 %
 	& %
 	& %
-	& \SObj
+	& \Obj
 	& \Subj*
 	& %
 	\\
@@ -15593,8 +15591,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15634,7 +15632,7 @@ tell₂
 \end{figure}
 
 In analogy to the previous examples in this section, (\ref{ex:ditrpass_pass1})
-attempts to construct the sentence in (\ref{ex:ditrorder}) with the [–\,r]
+attempts to construct the sentence in (\ref{ex:ditrorder}) with the [+\,o]
 argument as a subject. Parallel to how Ayeri forms passives of monotransitive
 verbs, this example sentence keeps the dative case marking on what it attempts
 to construct as a subject: the verb shows agreement with a third person
@@ -15667,9 +15665,9 @@ or the passive version, it will fail. Suppressions may apply only to unmarked
 roles, i.e. those that are negatively specified}. The example sentences in
 (\ref{ex:intrnzn_act}) and (\ref{ex:intrnzn_pass}) accordingly try removing one
 of the objects in active voice (\ref{ex:intrnzn_act}) and in passive voice
-(\ref{ex:intrnzn_pass}). Suppressing the recipient as a [–\,r] argument
+(\ref{ex:intrnzn_pass}). Suppressing the recipient as a [+\,o] argument
 produces a grammatically correct result in both cases; suppressing the theme as
-a [+\,o] argument yields a `questionable' (\ref{ex:intrnzn_act_1}) and an
+a [–\,r] argument yields a `questionable' (\ref{ex:intrnzn_act_1}) and an
 ungrammatical (\ref{ex:intrnzn_pass_1}) result. The sentence in
 (\ref{ex:intrnzn_act_1}) is not quite grammatical only insofar as the statement
 cannot be without context. If read as elliptical, it becomes acceptable. The
@@ -15699,8 +15697,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15758,8 +15756,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15823,8 +15821,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15882,8 +15880,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
