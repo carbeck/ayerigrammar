@@ -12126,7 +12126,7 @@ Ayeri is an indirective language, thus.
 \ex\label{ex:doubleobjfstruct}
 \begin{avm}
 \[
-	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\Objc} \ups{\SObj{recip}}}} \\
+	\Pred	&	\astruct{give}{\ups{\Subj} \ups{\Obj} \ups{\SObjc{recip}}} \\
 
 	\Top	&	\[
 		\Pred	&	`Apan' \\
@@ -12142,7 +12142,7 @@ Ayeri is an indirective language, thus.
 		\Anim	&	$+$ \\
 	\] \\
 
-	\SObj{recip}	&	\[
+	\SObjc{recip}	&	\[
 		\Pred	&	`Diya' \\
 		\Case	&	\Dat \\
 	\] \\
@@ -15055,8 +15055,19 @@ patient or a theme---is mapped to [–\,r], while the indirect/secondary
 object---marked with the dative case since it is a recipient or
 beneficiary---is mapped to [+\,o]. In contrast to English ditransitive clauses
 with dative movement (\fw{x gives y the z}), object and secondary object appear
-in the order \Obj{}---\SObj{}. An example of an active ditransitive sentence
-is given in (\ref{ex:ditrorder}).
+in the order \Obj{}---\SObj{}.\footnote{The example with `cook-for' in \citet
+[338--339]{bresnan2016} is confusing insofar as they chose to analyze \fw{cook
+sth. for sb.} as having the argument structure 
+\astruct{cook-for}{\textsc{agent}\tsub{[–\,o]}
+\textsc{beneficiary}\tsub{[–\,r]} \textsc{patient}\tsub{[+\,o]}} with the
+beneficiary as a primary object rather than as an secondary object as one might
+expect. At least in the German \fw{Sie kochen den Kindern Mittagessen} `They
+cook lunch for the children', where the verb could arguably be given as
+`cook-for' in English translation, \fw{den Kindern} `for the children' is
+realized as an indirect/secondary object in the dative. On the other hand,
+compare (\ref{ex:engditrpass_pass1}) below, where \fw{Mary}, the recipient,
+needs to be [–\,r] in order to be a passive subject.} An example of an active
+ditransitive sentence is given in (\ref{ex:ditrorder}).
 
 \begin{figure}
 \ex\label{ex:ditrorder}
@@ -15142,8 +15153,8 @@ tell₁
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15193,8 +15204,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
@@ -15244,8 +15255,8 @@ tell₂
 %
 	& %
 	& [–\,o]
-	& [+\,o]
 	& [–\,r]
+	& [+\,o]
 	& %
 	\\
 
