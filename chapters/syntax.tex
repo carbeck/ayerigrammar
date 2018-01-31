@@ -15053,21 +15053,11 @@ Ditransitive verbs add a third role to the argument structure of a verb. This
 means that the direct object---marked with the patient case since it is a
 patient or a theme---is mapped to [–\,r], while the indirect/secondary
 object---marked with the dative case since it is a recipient or
-beneficiary---is mapped to [+\,o]. In contrast to English ditransitive clauses
-with dative movement (\fw{x gives y the z}), object and secondary object appear
-in the order \Obj{}---\SObj{}.\footnote{The example with `cook-for' in \citet
-[338--339]{bresnan2016} is confusing insofar as they chose to analyze \fw{cook
-sth. for sb.} as having the argument structure 
-\astruct{cook-for}{\textsc{agent}\tsub{[–\,o]}
-\textsc{beneficiary}\tsub{[–\,r]} \textsc{patient}\tsub{[+\,o]}} with the
-beneficiary as a primary object rather than as an secondary object as one might
-expect. At least in the German \fw{Sie kochen den Kindern Mittagessen} `They
-cook lunch for the children', where the verb could arguably be given as
-`cook-for' in English translation, \fw{den Kindern} `for the children' is
-realized as an indirect/secondary object in the dative. On the other hand,
-compare (\ref{ex:engditrpass_pass1}) below, where \fw{Mary}, the recipient,
-needs to be [–\,r] in order to be a passive subject.} An example of an active
-ditransitive sentence is given in (\ref{ex:ditrorder}).
+beneficiary---is mapped to [+\,o]. As in English ditransitive clauses with
+dative movement (\fw{x gives y the z}), object and secondary object appear in
+the order \Obj{}---\SObj{}. However, Ayeri differs from English in its mapping
+of semantic roles according to the [±\,o, ±\,r] scheme introduced above. An
+example of an active ditransitive sentence is given in (\ref{ex:ditrorder}).
 
 \begin{figure}
 \ex\label{ex:ditrorder}
@@ -15140,7 +15130,7 @@ illustrates this using the example sentence from (\ref{ex:ditrorder}). It needs
 to be duly noted, however, that English behaves a little irregularly here due
 conflating accusative and dative case into one objective case. This will be
 especially apparent in comparing English to German---and Ayeri. As
-\citet{kibort2007} explains:
+\citet{kibort2007} explains (compare (\ref{ex:engdatmov})):
 
 \blockcquote[260]{kibort2007}{English has lost the morphological means to
 distinguish [the beneficiary] from the primary object and hence base predicates
@@ -15151,6 +15141,170 @@ operation on argument structure which alters the mapping of the semantic
 participants of the predicate onto argument positions by remapping the
 beneficiary onto the primary object position, and \enquote{downgrading} the
 theme to the secondary object position.}
+
+\begin{figure}
+\ex\label{ex:engdatmov}%
+\begin{tabular}[t]{@{} c c c c c l}
+$x$
+	& gives
+	& $y$
+	& to
+	& $z$
+	& %
+	\medskip\\
+
+\textsc{agent}
+	& %
+	& \textsc{theme}
+	& %
+	& \textsc{beneficiary}
+	& %
+	\\
+
+[–\,o]
+	& %
+	& [–\,r]
+	& %
+	& [+\,r]
+	& %
+	\\
+
+\Subj
+	& %
+	& \Obj
+	& %
+	& \Oblq{ben}
+	& %
+	\\
+
+\tikzmark{engdatmov_x1}
+	& %
+	& \tikzmark{engdatmov_y1}
+	& %
+	& \tikzmark{engdatmov_z1}
+	& %
+	\\
+
+%
+	& %
+	& %
+	& %
+	& %
+	& \emph{dative shift}
+	\\
+
+\tikzmark{engdatmov_x2}
+	& %
+	& \tikzmark{engdatmov_z2}
+	& %
+	& \tikzmark{engdatmov_y2}
+	& %
+	\\
+
+$x$
+	& gives
+	& $z$
+	& %
+	& $y$
+	& %
+	\medskip\\
+
+\textsc{agent}
+	& %
+	& \textsc{beneficiary}
+	& %
+	& \textsc{theme}
+	& %
+	\\
+
+[–\,o]
+	& %
+	& [–\,r]
+	& %
+	& [+\,o]
+	& %
+	\\
+
+\Subj
+	& %
+	& \Obj
+	& %
+	& \SObj
+	& %
+	\\
+
+% \tikzmark{engdatmov_x3}
+% 	& %
+% 	& \tikzmark{engdatmov_z3}
+% 	& %
+% 	& \tikzmark{engdatmov_y3}
+% 	& %
+% 	\\
+
+% %
+% 	& %
+% 	& %
+% 	& %
+% 	& %
+% 	& \emph{passivization}
+% 	\\
+
+% \tikzmark{engdatmov_z4}
+% 	& %
+% 	& \tikzmark{engdatmov_y4}
+% 	& %
+% 	& \tikzmark{engdatmov_x4}
+% 	& %
+% 	\\
+
+% $z$
+% 	& is given
+% 	& $y$
+% 	& by
+% 	& $x$
+%	& %
+% 	\medskip\\
+
+% \textsc{recipient}
+% 	& %
+% 	& \textsc{theme}
+% 	& %
+% 	& \textsc{agent}
+%	& %
+% 	\\
+
+% [–\,r]
+% 	& %
+% 	& [+\,o]
+% 	& %
+% 	& [+\,r]
+%	& %
+% 	\\
+
+% \Subj
+% 	& %
+% 	& \SObj
+% 	& %
+% 	& \Oblq{agt}
+%	& %
+% 	\\
+\end{tabular}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex]
+	([yshift=1ex]{pic cs:engdatmov_x1}) -- ({pic cs:engdatmov_x2});
+\draw [-latex]
+	([yshift=1ex]{pic cs:engdatmov_y1}) -- ({pic cs:engdatmov_y2});
+\draw [-latex]
+	([yshift=1ex]{pic cs:engdatmov_z1}) -- ({pic cs:engdatmov_z2});
+% \draw [-latex]
+% 	([yshift=1ex]{pic cs:engdatmov_x3}) -- ({pic cs:engdatmov_x4});
+% \draw [-latex]
+% 	([yshift=1ex]{pic cs:engdatmov_y3}) -- ({pic cs:engdatmov_y4});
+% \draw [-latex]
+% 	([yshift=1ex]{pic cs:engdatmov_z3}) -- ({pic cs:engdatmov_z4});
+\end{tikzpicture}
+\xe
+\end{figure}
 
 \begin{figure}
 \pex\label{ex:engditrpass}
