@@ -4996,7 +4996,7 @@ proper semantic macrorole (\textit{loc}, \textit{src} or \textit{goal}).
 \tl\quad Postpositions:\medskip
 
 \begin{forest} shorter edges,
-[{\anno[\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
+[{\anno[\{\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
 %	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[{\anno[{\{%
@@ -16526,7 +16526,7 @@ take₂
 While passives delete one or more arguments, causative constructions add one:
 the causer. This function has control over an action as a force which motivates
 or forces the actor of the plain sentence to act. As we have seen before, Ayeri
-behaves untypically in not making causers subjects
+behaves in an untypical way in not making causers subjects
 (\autoref{subsubsec:causative}, p.~\pageref{subsubsec:causative}).
 \citet[342]{bresnan2016} give the annotation for causers as
 Ø~→~\thetaroof\tsub{causer}: a primary causer-subject is added to the argument
@@ -16683,6 +16683,91 @@ agent on whose behalf the primary agent acts.
 \section{Complementizer phrases}
 \label{sec:cps}
 
+Various phrase types, verbs especially, can take complements or adjuncts which
+are themselves clauses and form subordinate clauses dependent on the main
+clause. Most notably, these are complement clauses and relative clauses.
+Another common type of dependent clause is the conditional clause. As before,
+this section will describe their structure and function.
+
+\ex\label{ex:cpstruct}%
+CP → $\left(\anno*{\xhead{C}}\right)$ \anno*{XP}
+\xe
+
+\begin{figure}
+\ex\label{ex:cpcstruct}
+\begin{forest} shorter edges,
+[{\anno[\{\pass{\Compl}\\ |~\pass{\XCompl}\\ |~\pass{\Adjc}\}]{CP}}
+%	[\anno{\xbar{C}}
+		[{$\left(\anno{\xhead{C}}\right)$}]
+		[{\anno{XP}}]
+%	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+% \begin{figure}
+% \begin{morphlex}
+% \ex\label{ex:cmorphlex}%
+% \adjustbox{valign=t}{%
+% 	\begin{tabu} {\usetabu{morphlexnarrow}}
+% 	...
+% 		& C
+% 		& \begin{tabular}[t]{l l l}
+% 			\ups{\Pred} & = & `...' \\
+% 		\end{tabular}
+% 	\end{tabu}%
+% }
+% \xe
+% \end{morphlex}
+% \end{figure}
+
+As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
+complementizer phrase is formed by a conjunction, \xhead{C}, which also can be
+empty and is for some basic purposes in Ayeri. At least in Ayeri, conjunctions
+cannot be modified, so neither phrase-structure diagram includes a \xbar{C} to
+attach an adjunct to. The complement of a \xhead{C} is formed by a verbal
+phrase type---IP or a VP, but also plain S. This means that the complement
+clause may be finite or infinite. The CP itself may fulfill different
+grammatical functions: open or closed complement, as well as adjunct. Ayeri is
+rather sparse about conjunctions, compare \autoref{subsubsec:conjadv} 
+(p.~\pageref{subsubsec:conjadv}). The conjunction corresponding to English 
+\fw{that} is zero, so that simple complement clauses are simply juxtaposed.
+Examples of complement clauses are provided in (\ref{ex:complcls}).
+
+\begin{figure}
+\pex\label{ex:complcls}
+\a\label{ex:complcls_1}\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+
+\a\label{ex:complcls_2}\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+
+\a\label{ex:complcls_3}\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+
+\a\label{ex:complcls_4}\begingl
+	\gla ... //
+	\glb ... //
+	\glc ... //
+	\glft `...' //
+\endgl
+
+\xe
+\end{figure}
+
 ...
 
 \subsection{Complement clauses}
@@ -16697,15 +16782,5 @@ agent on whose behalf the primary agent acts.
 
 \subsection{Conditional clauses}
 \label{subsec:condcs}
-
-...
-
-\subsection{Final clauses}
-\label{subsec:fincs}
-
-...
-
-\subsection{Other types}
-\label{subsec:cps_other}
 
 ...
