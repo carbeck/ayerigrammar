@@ -17,6 +17,7 @@ Currently working on
     2. Adjective and adverb phrases
     3. Adpositional phrases
     4. Inflectional and verb phrases
+    5. Complementizer phrases
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
@@ -26,10 +27,9 @@ Roadmap
 =======
 
 * Chapter on syntax ("Phrase structures")
-    * finish section on VPs
-    * write section on CPs
+    * write subchapter on CPs
 * proofreading and correction
-    * do corrections in VP subchapter
+    * do corrections in VP subchapter (raising and control regarding syntactic alignment)
     * proofread and correct syntax chapter
 * maybe extend name list with etymologies
 * proofread and correct whole thing again
