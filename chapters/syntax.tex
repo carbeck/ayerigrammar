@@ -16960,13 +16960,14 @@ control. Functionally, the relative pronoun constitutes a topic which is
 connected to one of the arguments of the verbs inside the relative clause
 \parencites[56--58]{butt1999}[400--405]{dalrymple2001}[161--165]
 {falk2001}.\footnote{These textbooks deal mainly or exclusively with English
-relative clauses; \cite{bresnan2016} do not say anything about the f-structure
+relative clauses; \citet{bresnan2016} do not say anything about the f-structure
 of relative clauses.} This topic is not marked on the verb as such, though, but
 a different argument of the verb often is. In order to indicate the kind of
 pronoun I will use the \Prontype{} feature for consistency with other kinds of
 pronouns discussed previously. The general morpholexical specification for
 relative pronouns is given in (\ref{ex:relpromorphlex}).
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:relpromorphlex}
 \adjustbox{valign=t}{%
@@ -16975,10 +16976,12 @@ relative pronouns is given in (\ref{ex:relpromorphlex}).
 	& D
 	& \begin{tabular}[t]{l l l l l}
 		  & \ups{\Pred} & = & `$pro$' \\
-		  & \ups{\Prontype} & = & $rel$ \\
+		  & \ups{\Prontype} & = & $rel$\smallskip \\
+
 		( & \uncertain{\GF{} \Adjc}{\Case} & \req & \{\Aarg{}, \Parg{}, 
 			\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} & ) \\
-		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & ) \\
+		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & )\smallskip \\
+		
 		( & \ups{\Anim} & = & $\pm$ & ) \\
 		( & \ups{\Case} & = & \{\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} 
 			& ) \\
@@ -16987,6 +16990,7 @@ relative pronouns is given in (\ref{ex:relpromorphlex}).
 }
 \xe
 \end{morphlex}
+\end{figure}
 
 According to the definitions in (\ref{ex:relpromorphlex}), a relative pronoun's
 agreement with an \emph{external} entity is conceptualized as a constraining
