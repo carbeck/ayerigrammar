@@ -12225,6 +12225,7 @@ this proposal as a c-structure tree.
 \end{figure}
 
 \subsubsection{Control verbs}
+\label{subsubsec:ctrlvb}
 
 Control verbs have already been touched on in \autoref{subsubsec:control}
 (p.~\pageref{subsubsec:control}) in order to compare Ayeri to Tagalog in terms
@@ -14699,11 +14700,27 @@ definite difference between arguments and adjuncts}.
 \begin{tabu} to \linewidth {>{\bfseries}l X[c] X[c] X[c] X[c] X[c]}
 \tableheaderfont\toprule
 %
-	& \rotatebox[origin=l]{90}{\fw{sara-} `go'}
-	& \rotatebox[origin=l]{90}{\fw{mit-} `live'}
-	& \rotatebox[origin=l]{90}{\fw{tapy-} `put'}
-	& \rotatebox[origin=l]{90}{\fw{nara-} `speak'}
-	& \rotatebox[origin=l]{90}{\fw{tiya-} `make'}
+	& \rotatebox[origin=l]{90}{\makecell[l]{%
+		\fw{sara-} `go'\\
+		+\,\textsc{location}%
+		}}
+	& \rotatebox[origin=l]{90}{\makecell[l]{%
+		\fw{mit-} `live'\\
+		+\,\textsc{location}%
+		}}
+	& \rotatebox[origin=l]{90}{\makecell[l]{%
+		\fw{tapy-} `put'\\
+		+\,\textsc{location}%
+		}}
+	& \rotatebox[origin=l]{90}{\makecell[l]{%
+		\fw{nara-} `speak'\\
+		+\,\textsc{recipient}\\
+		+\,\textsc{theme}\\
+		}}
+	& \rotatebox[origin=l]{90}{\makecell[l]{%
+		\fw{tiya-} `make'\\
+		+\,\textsc{instrument}%
+		}}
 	\\
 
 \toprule
@@ -14814,16 +14831,17 @@ be freely conjoined with another \fw{wh}-word, which is another typical trait
 of complements. The score is thus 6 to 2 in favor of complementhood.
 
 The verbs \xayr{nr/}{nara-}{speak} and \xayr{tiy/}{tiya-}{make} differ from
-\xayr{sr/}{sara-} in their behavior in that they may be modified by a locative
-and an instrumental NP, respectively. This means that there are no prepositions
-involved which could provide any contentful information, however, the case
-markers for these adverbials themselves are to be taken literally as expressing
-a location and a material or means. There is no free choice about these case
-markers, even though the degree of grammaticalization of these adverbial cases
-is maybe not as high as with the core cases---although it was noted before how
-Ayeri's core cases do not just express function, but that semantics still need
-to be factored in. The degree of grammaticalization is definitely higher than
-that of a free PP adjunct. The score is also 6 to 2 in favor of complementhood.
+\xayr{sr/}{sara-}{go} in their behavior in that they may be modified by a
+locative and an instrumental NP, respectively. This means that there are no
+prepositions involved which could provide any contentful information, however,
+the case markers for these adverbials themselves are to be taken literally as
+expressing a location and a material or means. There is no free choice about
+these case markers, even though the degree of grammaticalization of these
+adverbial cases is maybe not as high as with the core cases---although it was
+noted before how Ayeri's core cases do not just express function, but that
+semantics still need to be factored in. The degree of grammaticalization is
+definitely higher than that of a free PP adjunct. The score is also 6 to 2 in
+favor of complementhood.
 
 If we treat the PPs, locative NPs, and instrumental NPs as complements, we need
 to categorize them as oblique functions \Oblique{}, with the `θ' subscript
@@ -16689,14 +16707,16 @@ clause. Most notably, these are complement clauses and relative clauses.
 Another common type of dependent clause is the conditional clause. As before,
 this section will describe their structure and function.
 
+% \begin{figure}
 \ex\label{ex:cpstruct}%
 CP → $\left(\anno*{\xhead{C}}\right)$ \anno*{XP}
 \xe
+% \end{figure}
 
 \begin{figure}
 \ex\label{ex:cpcstruct}
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\Compl}\\ |~\pass{\XCompl}\\ |~\pass{\Adjc}\}]{CP}}
+[{\anno[\{\pass{\Compl}\\ |~\pass{\Adjc}\}]{CP}}
 %	[\anno{\xbar{C}}
 		[{$\left(\anno{\xhead{C}}\right)$}]
 		[{\anno{XP}}]
@@ -16729,23 +16749,25 @@ cannot be modified, so neither phrase-structure diagram includes a \xbar{C} to
 attach an adjunct to. The complement of a \xhead{C} is formed by a verbal
 phrase type---IP or VP, but also plain S in the case of a copula clause. This
 means that the complement clause may be finite or infinite. The CP itself may
-fulfill different grammatical functions: open or closed complement, as well as
+fulfill different grammatical functions: closed complement as well as
 adjunct. Ayeri is rather sparse about conjunctions, compare
 \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The conjunction
 corresponding to English \fw{that} is zero, so that simple complement clauses
 are simply juxtaposed. Examples of complement clauses are provided in
 (\ref{ex:complcls}).
 
-\begin{figure}
+%\begin{figure}
 \pex\label{ex:complcls}
 \a\label{ex:complcls_1}\begingl
+	\glpreamble finite complement clause: //
 	\gla Tunyang, yomongyeng edaya. //
 	\glb tun=yang yoma-ong=yeng edaya //
-	\glc wish=\Fsg{}.\Aarg{} be-\Irr{}=\Fsg{}.\Aarg{} here //
+	\glc wish=\Fsg{}.\Aarg{} exist-\Irr{}=\Fsg{}.\Aarg{} here //
 	\glft `I wish (that) she were here.' //
 \endgl
 
 \a\label{ex:complcls_2}\begingl
+	\glpreamble non-finite complement clause: //
 	\gla Korontang briyyam. //
 	\glb koron=tang briy-yam //
 	\glc know=\TplM{}.\Aarg{} celebrate-\Ptcp{} //
@@ -16753,6 +16775,7 @@ are simply juxtaposed. Examples of complement clauses are provided in
 \endgl
 
 \a\label{ex:complcls_3}\begingl
+	\glpreamble final clause: //
 	\gla Garayāng kadāre sahanang yoming. //
 	\glb gara=yāng kadāre saha=nang yoming //
 	\glc call=\TsgM{}.\Aarg{} so.that come-\Fpl{}.\Aarg{} maybe //
@@ -16760,6 +16783,7 @@ are simply juxtaposed. Examples of complement clauses are provided in
 \endgl
 
 \a\label{ex:complcls_4}\begingl
+	\glpreamble conditional clause: //
 	\gla Vāng larau, le @ tavvāng pasan. //
 	\glb vāng larau le= tav=vāng pasan-Ø //
 	\glc \Second{}.\Aarg{} nice \PatT{}= get=\Second{}.\Aarg{} candy-\Top{} //
@@ -16767,6 +16791,7 @@ are simply juxtaposed. Examples of complement clauses are provided in
 \endgl
 
 \a\label{ex:complcls_5}\begingl
+	\glpreamble relative clause: //
 	\gla Ang @ koronay adaley si mirayang. //
 	\glb ang= koron=ay.Ø ada-ley si mira=yang //
 	\glc \AgtT{}= know=\Fsg{}.\Top{} that-\PargI{} \Rel{} do=\Fsg{}.\Aarg{} //
@@ -16774,12 +16799,154 @@ are simply juxtaposed. Examples of complement clauses are provided in
 \endgl
 
 \xe
-\end{figure}
-
-...
+%\end{figure}
 
 \subsection{Complement clauses}
 \label{subsec:complcs}
+
+Complement clauses like those in (\ref{ex:complcls}a–c) are very commonly
+occurring clausal complements or adjuncts of verbs. The respective c- and
+f-structures of the sentences in (\ref{ex:complcls_1}) and
+(\ref{ex:complcls_3}) are charted in (\ref{ex:fincclstruct}). Since
+(\ref{ex:complcls_1}) has a plain clausal complement $g$, the \xhead{C}
+position in (\ref{ex:fincclstruct}) is empty. Example (\ref{ex:complcls_2}),
+on the other hand, contains a final clause $g$ as an adjunct of the verb in
+$f$---the purpose is not required information here. The conjunction, however,
+marks the subordinate clause $g$ as providing a purpose. In this case, the
+\xhead{C} position is filled with the conjunction. Both subclauses $g$ form
+independent f-structure cores: the verb as a predicator does not contain
+arguments controlled by the superordinate clause $f$ in its a-structure.
+
+\begin{figure}
+\pex\label{ex:fincclstruct}
+\a\label{ex:fincclstruct_1}%
+\begin{minipage}[t]{.4\remaining}
+\begin{forest} narrower nodes, shorter edges, italic leaves
+[IP$_f$
+	[\anno{\xhead{I}}
+		[Tunyang]
+	]
+	[{\anno[\pass{\Compl}]{CP}}
+		[\anno{IP$_g$}
+			[\anno{\xhead{I}}
+				[yomongyeng]
+			]
+			[{\anno[\pass{\Oblq{loc}}]{AdvP}}
+				[edaya]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{wish}{\ups{\Subj} \ups{\Compl}} \\
+	\Subj	&	\[
+		\avmspan{``I''} \\
+	\] \\
+	\Compl	&	$g:$ \[
+		\Pred	&	\astruct{exist}{\ups{\Subj} \ups{\Oblq{loc}}} \\
+		\Mood	&	\Irr \\
+		\Subj	&	\[
+			\avmspan{``she''} \\
+		\] \\
+		\Oblq{loc}	&	\[
+			\Pred	&	`here' \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+
+\a\label{ex:fincclstruct_2}%
+\begin{minipage}[t]{.4\remaining}
+\vspace{1\baselineskip}
+\begin{forest} narrower nodes, shorter edges, italic leaves
+[IP$_f$
+	[\anno{\xhead{I}}
+		[Garayāng]
+	]
+	[{\anno[\elem{\Adjc}]{CP}}
+		[\anno{\xhead{C}}
+			[kadāre]
+		]
+		[\anno{IP$_g$}
+			[\anno{\xhead{I}}
+				[sahanang]
+			]
+			[{\anno[\elem{\Adjc}]{AdvP}}
+				[yoming]
+			]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{call}{\ups{\Subj}} \\
+	\Subj	&	\[
+		\avmspan{``he''} \\
+	\] \\
+	\Adjc	&	\{ $g:$ \[
+		\Conj	&	\textit{so that} \\
+		\Pred	&	\astruct{come}{\ups{\Subj}} \\
+		\Subj	&	\[
+			\avmspan{``we''} \\
+		\] \\
+		\Adjc	&	\{\[
+			\Pred	&	`maybe' \\
+		\]\} \\
+	\]\} \\
+\]
+\end{avm}
+\xe
+\end{figure}
+
+The non-finite complement clause in (\ref{ex:complcls_2}) is special in that
+the subordinate clause is formed by a participle. Even if there is a
+superficial similarity to control and raising verbs (compare 
+\autoref{subsubsec:ctrlvb}, pp.~\pageref{subsubsec:ctrlvb} and 
+\pageref{subsubsec:raisvb}), this construction is structurally and functionally
+different, as shown in (\ref{ex:infcclstruct}). The thing which is known is a
+closed complement subcategorized for by the verb in $f$; the predicator of the
+complement $g$, however, is an intransitive non-finite form and hence there is
+neither subject nor object. The a-structure of the verb is thus simply
+indicated as $null$ in this particular case. Non-finite verbs are not precluded
+from having objects otherwise.
+
+\begin{figure}
+\ex\label{ex:infcclstruct}
+\begin{minipage}[t]{.4\remaining}
+\begin{forest} shorter edges, italic leaves
+[IP$_f$
+	[\anno{\xhead{I}}
+		[Korontang]
+	]
+	[{\anno[\pass{\Compl}]{CP}}
+		[\anno{VP$_g$}
+			[briyyam]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\hfill
+\begin{avm}
+$f$: \[
+	\Pred	&	\astruct{know}{\ups{\Subj} \ups{\Compl}} \\
+	\Subj	&	\[
+		\avmspan{``they''} \\
+	\] \\
+	\Compl	&	$g:$ \[
+		\Pred	&	\astruct{celebrate}{$null$} \\
+	\] \\
+\]
+\end{avm}
+\xe
+\end{figure}
 
 ...
 
