@@ -370,16 +370,16 @@ diacritics; and then, lastly, superscript diacritics.
 \afterpage{%
 \clearpage%
 \begin{landscape}\centering
-\mbox{}\vfill
-\captionof{table}{Bottom-attaching diacritics}\vspace{-1\baselineskip}~\\
-\begin{longtabu} to \linewidth{>{\Tagati\huge}X[1] X[8l] X[18l] X[10l]}
+\begin{table}[p]
+\caption{Bottom-attaching diacritics}
+\begin{tabu} to \linewidth {>{\Tagati\huge}X[1] X[8l] X[18l] X[10l]}
 \toprule
 \tableheaderfont
 
 	& Native name
 	& Function
 	& Example
-	\\\endhead
+	\\
 	
 \toprule
 
@@ -460,9 +460,9 @@ diacritics; and then, lastly, superscript diacritics.
 	\\
 
 \bottomrule
-\end{longtabu}
+\end{tabu}
 \label{tab:thdiabot}
-\mbox{}\vfill
+\end{table}
 \end{landscape}
 \clearpage%
 }%

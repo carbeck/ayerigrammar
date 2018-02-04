@@ -19,11 +19,9 @@ stress patterns and intonation will close the chapter.
 % \begin{sidewaysfigure}[p]
 \afterpage{%
 \clearpage% Flush earlier floats (otherwise order might not be correct)
-\begin{landscape}\centering
-\mbox{}\vfill
-\captionof{table}[Consonant inventory]{Consonant inventory (divergent 
-orthography in pointed brackets)}
-~\\
+\begin{landscape}
+\begin{table}[p]\centering
+\caption{Consonant inventory (divergent orthography in pointed brackets)}
 \begin{tabu} to \linewidth {H[2l] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \toprule\tableheaderfont
 	%
@@ -103,7 +101,7 @@ Approximant
 \bottomrule
 \end{tabu}
 \label{tab:consonants}
-\mbox{}\vfill
+\end{table}
 \end{landscape}
 \clearpage
 }
@@ -572,11 +570,10 @@ few examples for each number of syllables per word:
 %\begin{sidewaystable}[pt]\centering
 \afterpage{%
 \clearpage% Flush earlier floats (otherwise order might not be correct)
-\begin{landscape}\centering
-\mbox{}\vfill
-\captionof{table}[Frequency of syllable types per word]{Frequency of syllable 
-types per word (n\,=\,5500)}
-~\\
+\begin{landscape}
+\begin{table}[p]\centering
+\caption[Frequency of syllable types per word]{Frequency of syllable types per
+word (n\,=\,5500)}
 \begin{tabu} to \linewidth{H X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c] X[c]}
 \tableheaderfont\toprule
 Type
@@ -719,7 +716,7 @@ Total
 \bottomrule
 \end{tabu}
 \label{tab:syltype}
-\mbox{}\vfill
+\end{table}
 %\end{sidewaystable}
 \end{landscape}
 \clearpage% Flush page
@@ -3481,10 +3478,9 @@ operation, consider the list above (p.~\pageref{2sylsumm}).
 %\begin{sidewaysfigure}[p]
 \afterpage{%
 \clearpage%
-\begin{landscape}\centering
-\mbox{}\vfill
-\captionof{table}{Examples of stress patterns in compounds}
-~\\
+\begin{landscape}
+\begin{table}[p]\centering
+\caption{Examples of stress patterns in compounds}
 \begin{tabu} to \linewidth {I[2] X X[2] I X X I X X}
 \tableheaderfont\toprule
 Word
@@ -3598,7 +3594,7 @@ sapayyila
 \bottomrule
 \end{tabu}
 \label{tab:compounds}
-\mbox{}\vfill
+\end{table}
 \end{landscape}
 \clearpage%
 }
