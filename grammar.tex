@@ -399,13 +399,16 @@
 % Calculate remaining space in line for ex and pex,
 % cf. https://tex.stackexchange.com/a/376534
 \newlength{\remaining}
+\newlength{\exoffset}
 \newcommand{\remainpex}{%
    \setlength{\remaining}{\linewidth-\lingtextoffset-\linglabelwidth-
       \lingnumoffset-\linglabeloffset-\widthof{\exnoprint}}%
+   \setlength{\exoffset}{\linewidth-\remaining}
 }
 \newcommand{\remainex}{%
    \setlength{\remaining}{\linewidth-\lingnumoffset-
       \lingtextoffset-\widthof{\exnoprint}}%
+   \setlength{\exoffset}{\linewidth-\remaining}
 }
 \pretocmd{\pex}{\remainpex}{}{}
 \pretocmd{\ex}{\remainex}{}{}
