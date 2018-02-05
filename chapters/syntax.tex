@@ -16994,13 +16994,13 @@ specification for relative pronouns is given in (\ref{ex:relpromorphlex}).
 \end{figure}
 
 According to the definitions in (\ref{ex:relpromorphlex}), a relative pronoun's
-agreement with an \emph{external} entity is conceptualized as a constraining
-equation where the relative pronoun requires being included in the \Adjc{} of a
-\GF{} which contains \Case{} and \Anim{} features set to the values the
-relative pronoun specifies. Any roles which the relative pronoun receives from
-an \emph{internal} predicator are realized by the \Case{} and \Anim{} feature.
-Internal additional case marking is limited to those grammatical functions
-which are not subject or object.
+agreement with an \emph{external} controller is conceptualized as a
+constraining equation where the relative pronoun requires being included in the
+\Adjc{} of a \GF{} which contains \Case{} and \Anim{} features set to the
+values the relative pronoun specifies. Any roles which the relative pronoun
+receives from an \emph{internal} predicator are realized by the \Case{} and
+\Anim{} feature. Internal additional case marking is limited to those
+grammatical functions which are not subject or object.
 
 \begin{figure}
 \ex\label{ex:relc_si}
@@ -17191,6 +17191,77 @@ from the previous one, however, the relativizer has been changed to
 the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
 holds information about the relativizer has gained a \Case{} feature with the
 attribute \Gen{} to reflect internal casemarking of the relativizer.
+Essentially, the relative pronoun reflects the role of the internal grammatical
+function it links to as a topic.
+
+\begin{figure}
+\ex\label{ex:relc_cop}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla koyās si hagin //
+	\glb koya-as si hagin //
+	\glc book-\Parg{} \Rel{} heavy //
+	\glft `the book which is heavy' //
+\endgl
+\medskip
+\vspace{2em}
+%\lapbox[\width]{-\exoffset}{%
+\begin{avm}
+\[
+	\Pred	&	`book$_i$' \\
+	\Num	&	\Sg \\
+	\Case	&	\Parg \\
+	\Anim	&	$+$ \\
+
+	\Adjc	&	\{\[
+		\Top	&	\[
+			\Pred	&	`$pro_i$' \\
+			\Prontype	&	$rel$ \\
+		\] \tikzmark{relccop_top}\\
+
+		\Pred   &   \astruct{null-be}{\ups{\Subj} \ups{\Plink}} \\
+		\Subj	&	\tikzmark{relccop_subj} \\
+
+		\Plink	&	\[
+			\Pred	&	`heavy' \\
+		\] \\
+	\]~\hspace{1em}~\} \\
+\]
+\end{avm}
+%}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:relccop_top})
+	-- ++(east:6em) |- ([yshift=1ex]{pic cs:relccop_subj});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{forest} narrower nodes, shorter edges, italic leaves,
+[{\anno[\pass{\Obj}]{NP}}
+	[\anno{\xhead{N}}
+		[koyās]
+	]
+	[{\anno[\elem{\Adjc}]{CP}}
+		[{\anno[\pass{\Top}]{\xhead{C}}}
+			[si]
+		]
+		[\anno{S}
+			[{\anno[\pass{\Plink}]{AP}}
+				[hagin]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+It has been mentioned before that complement clauses may also have S
+complements. This is the case with a copula clause complementing the relative
+pronoun, as in (\ref{ex:relc_cop}). Here, the relativizer substitutes its
+external controller \xayr{koyaasF}{koyās}{book}, which is a patient form, as
+the copula clause's subject to which the quality \xayr{hginF}{hagin}{heavy} is
+attributed. Since there is no other NP which could be a secondary topic, the
+topic in (\ref{ex:relc_cop}) is not given as a list of attributes.
 
 ...
 
