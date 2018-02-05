@@ -16962,7 +16962,7 @@ connected to one of the arguments of the verbs inside the relative clause
 {falk2001}.\footnote{These textbooks deal mainly or exclusively with English
 relative clauses; \citet{bresnan2016} do not say anything about the f-structure
 of relative clauses.} This topic is not marked on the verb as such, though, but
-a different argument of the verb often is.\footnote{Compare \cite[70--71]
+a different argument of the verb often is.\footnote{Compare \citet[70--71]
 {bresnan2016} for an example of set-valued topics in Russian.} In order to
 indicate the kind of pronoun I will use the \Prontype{} feature for consistency
 with other kinds of pronouns discussed previously. The general morpholexical
@@ -17028,11 +17028,12 @@ which are not subject or object.
 				\Prontype	&	$rel$ \\
 			\] \tikzmark{relcsi_top1}\\
 			\[
-				\Pred	&	`$pro_j$' \\
-				\Pers	&	\First \\
-				\Num	&	\Sg \\
-				\Anim	&	$+$ \\
-				\Case	&	\Aarg \\
+				% \Pred	&	`$pro_j$' \\
+				% \Pers	&	\First \\
+				% \Num	&	\Sg \\
+				% \Anim	&	$+$ \\
+				% \Case	&	\Aarg \\
+				\avmspan{``I''} \\
 			\] \tikzmark{relcsi_top2} \\
 		\} \\
 
@@ -17041,9 +17042,10 @@ which are not subject or object.
 		\Obj	&	\tikzmark{relcsi_obj} \\
 
 		\SObjc{ben}	&	\[
-			\Pred	&	`$pro$' \\
-			\Pers	&	\Second \\
-			\Anim	&	$+$ \\
+			% \Pred	&	`$pro$' \\
+			% \Pers	&	\Second \\
+			% \Anim	&	$+$ \\
+			\avmspan{``you''} \\
 			\Case	&	\Dat \\
 		\] \\
 	\]~\hspace{1em}~\} \\
@@ -17054,7 +17056,7 @@ which are not subject or object.
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:relcsi_top1})
 	-- ++(east:6em) |- ([yshift=1ex]{pic cs:relcsi_obj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:relcsi_top2})
-	-- ++(east:7em) |- ([yshift=1ex]{pic cs:relcsi_subj});
+	-- ++(east:11em) |- ([yshift=1ex]{pic cs:relcsi_subj});
 \end{tikzpicture}
 \end{minipage}
 \hfill
@@ -17093,6 +17095,102 @@ clause. Since we defined case marking for the external head as an effect of
 agreement, the f-structure would not change if the relativizer were \rayr{ssF}
 {sas}, that is, marked for an animate-patient controller outside of the
 relative clause.
+
+\begin{figure}
+\ex\label{ex:relc_siintcase}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla koyās sinā ang @ ningay vayam //
+	\glb koya-as si-Ø-na ang= ning=ay.Ø vayam //
+	\glc book-\Parg{} \Rel{}-\Parg{}-\Gen{} \AgtT{}= tell=\Fsg{}.\Top{} 
+		\Second{}.\Dat{} //
+	\glft `the book which I told you about' //
+\endgl
+\medskip
+\vspace{2em}
+\lapbox[\width]{-\exoffset}{%
+\begin{avm}
+\[
+	\Pred	&	`book$_i$' \\
+	\Num	&	\Sg \\
+	\Case	&	\Parg \\
+	\Anim	&	$+$ \\
+
+	\Adjc	&	\{\[
+		\Top	&	\{
+			\[
+				\Pred	&	`$pro_i$' \\
+				\Prontype	&	$rel$ \\
+				\Case	&	\Gen \\
+			\] \tikzmark{relcsiintcase_top1}\\
+			\[
+				% \Pred	&	`$pro_j$' \\
+				% \Pers	&	\First \\
+				% \Num	&	\Sg \\
+				% \Anim	&	$+$ \\
+				% \Case	&	\Aarg \\
+				\avmspan{``I''} \\
+			\] \tikzmark{relcsiintcase_top2} \\
+		\} \\
+
+		\Pred   &   \astruct{tell}{\ups{\Subj} \ups{\SObjc{ben}}
+			\ups{\Oblq{theme}}} \\
+		\Subj	&	\tikzmark{relcsiintcase_subj} \\
+
+		\SObjc{ben}	&	\[
+			% \Pred	&	`$pro$' \\
+			% \Pers	&	\Second \\
+			% \Anim	&	$+$ \\
+			\avmspan{``you''} \\
+			\Case	&	\Dat \\
+		\] \\
+
+		\Oblq{theme}	&	\tikzmark{relcsiintcase_obl} \\
+	\]~\hspace{1em}~\} \\
+\]
+\end{avm}
+}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:relcsiintcase_top1})
+	-- ++(east:7.5em) |- ([yshift=1ex]{pic cs:relcsiintcase_obl});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:relcsiintcase_top2})
+	-- ++(east:12.5em) |- ([yshift=1ex]{pic cs:relcsiintcase_subj});
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{forest} narrower nodes, shorter edges, italic leaves,
+[{\anno[\pass{\Obj}]{NP}}
+	[\anno{\xhead{N}}
+		[koyās]
+	]
+	[{\anno[\elem{\Adjc}]{CP}}
+		[{\anno[\elem{\Top}]{\xhead{C}}}
+			[sinā]
+		]
+		[\anno{IP}
+			[\anno{\xhead{I}}
+				[{ang ningay}, roof]
+			]
+%			[\anno{S}
+%				[\anno{VP}
+					[{\anno[\pass{\SObjc{ben}}]{DP}}
+						[vayam]
+					]
+%				]
+%			]
+		]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+At first glance, the example in (\ref{ex:relc_siintcase}) is not much different
+from the previous one, however, the relativizer has been changed to
+\rayr{sinaa}{sinā} in order to mark that the controller of the relativizer is
+the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
+holds information about the relativizer has gained a \Case{} feature with the
+attribute \Gen{} to reflect internal casemarking of the relativizer.
 
 ...
 
