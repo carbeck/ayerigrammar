@@ -12,13 +12,12 @@
 	oldfontcommands, % Compatibility with expex, which still uses \rm
 ]{memoir}
 
-% % Setup for 'U.S. trade paperback' (6x9 in). Tables are all formatted wrong 
-% % and some examples are also problematic. Use option 'showtrims' in document 
-% % class declaration above to show trim marks for where to cut the stock paper.
-% \setstocksize{9in}{6in}
-% \settrimmedsize{9in}{6in}{*}
-% \setulmarginsandblock{1in}{*}{*}
-% \setlrmarginsandblock{*}{0.75in}{1.0}
+% % Lulu.com's "Royal" format
+% \setstocksize{233.9mm}{155.9mm}
+% \settrimmedsize{233.9mm}{155.9mm}{*}
+% \setulmarginsandblock{.111\paperheight}{*}{1.0}
+% \setlrmarginsandblock{.111\paperwidth}{*}{1.0}
+% \setheaderspaces{*}{\onelineskip}{*}
 % \checkandfixthelayout
 
 \author{Carsten Becker}
@@ -45,8 +44,8 @@
 % Layout for running page titles
 \nouppercaseheads
 % \copypagestyle{sfheaders}{headings}
-% \makeevenhead{sfheaders}{\sffamily\bfseries\thepage}{}{\sffamily\itshape\leftmark}
-% \makeoddhead{sfheaders}{\sffamily\itshape\rightmark}{}{\sffamily\bfseries\thepage}
+% \makeevenhead{sfheaders}{\sffamily{\bfseries\thepage}\quad{\itshape\leftmark}}{}{}
+% \makeoddhead{sfheaders}{}{}{\sffamily{\itshape\rightmark}\quad\bfseries\thepage}
 % \makeheadrule{headings}{\textwidth}{0.3pt}
 % \pagestyle{sfheaders}
 
@@ -58,11 +57,6 @@
 % \setcounter{secnumdepth}{2} % doesn't work for some reason
 \setsecnumdepth{subsection}
 \settocdepth{subsection}
-
-% Disemulate setspace
-% \DisemulatePackage{setspace}
-% \usepackage{setspace}
-% \onehalfspacing
 
 % Space requirements
 \usepackage{needspace}
