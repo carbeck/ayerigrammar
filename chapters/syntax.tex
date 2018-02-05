@@ -16962,10 +16962,11 @@ connected to one of the arguments of the verbs inside the relative clause
 {falk2001}.\footnote{These textbooks deal mainly or exclusively with English
 relative clauses; \citet{bresnan2016} do not say anything about the f-structure
 of relative clauses.} This topic is not marked on the verb as such, though, but
-a different argument of the verb often is. In order to indicate the kind of
-pronoun I will use the \Prontype{} feature for consistency with other kinds of
-pronouns discussed previously. The general morpholexical specification for
-relative pronouns is given in (\ref{ex:relpromorphlex}).
+a different argument of the verb often is.\footnote{Compare \cite[70--71]
+{bresnan2016} for an example of set-valued topics in Russian.} In order to
+indicate the kind of pronoun I will use the \Prontype{} feature for consistency
+with other kinds of pronouns discussed previously. The general morpholexical
+specification for relative pronouns is given in (\ref{ex:relpromorphlex}).
 
 \begin{figure}
 \begin{morphlex}
@@ -16973,7 +16974,7 @@ relative pronouns is given in (\ref{ex:relpromorphlex}).
 \adjustbox{valign=t}{%
 \begin{tabu} {\usetabu{morphlexnarrow}}
 ...
-	& D
+	& C
 	& \begin{tabular}[t]{l l l l l}
 		  & \ups{\Pred} & = & `$pro$' \\
 		  & \ups{\Prontype} & = & $rel$\smallskip \\
@@ -16982,9 +16983,9 @@ relative pronouns is given in (\ref{ex:relpromorphlex}).
 			\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} & ) \\
 		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & )\smallskip \\
 		
-		( & \ups{\Anim} & = & $\pm$ & ) \\
 		( & \ups{\Case} & = & \{\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} 
 			& ) \\
+		( & \ups{\Anim} & = & $\pm$ & ) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -17070,13 +17071,13 @@ which are not subject or object.
 			[\anno{\xhead{I}}
 				[{ang telbāy}, roof]
 			]
-			[\anno{S}
-				[\anno{VP}
+%			[\anno{S}
+%				[\anno{VP}
 					[{\anno[\pass{\SObjc{ben}}]{DP}}
 						[vayam]
 					]
-				]
-			]
+%				]
+%			]
 		]
 	]
 ]
