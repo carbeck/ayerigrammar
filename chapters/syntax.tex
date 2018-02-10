@@ -302,9 +302,6 @@ however, will not be treated as targets of syntactic operations, since \Lfg{}
 follows the approach of lexical integrity. Thus, bound elements like affixes
 and clitics are assumed not to be reflected or affected by syntax itself. The
 phrase structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
-The asterisk in (\ref{ex:npstruct_Adj}) is the Kleene star and indicates zero
-or more instances of the element. Elements which may be omitted or occur once
-are in brackets.
 
 \begin{figure}
 \pex\label{ex:npstruct}
@@ -312,7 +309,7 @@ are in brackets.
 \a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
 \a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{NP}
 \a\label{ex:npstruct_Adj}%
-	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP*}
+	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP}
 \xe
 \end{figure}
 
@@ -325,7 +322,7 @@ are in brackets.
 			[\anno{\xbar{N}}
 				[\anno{\xbar{N}}
 					[\anno{\xhead{N}}]
-					[{\anno[\elem{\Adjc}]{AP*}}]
+					[{\anno[\elem{\Adjc}]{AP}}]
 				]
 				[{\anno[\pass{\Compl}]{XP}}]
 			]
@@ -538,7 +535,7 @@ than all the things inside the relative clause. The following example
 				[nā]
 			]
 		]
-		[{\anno[\pass{\Comp}]{CP}}
+		[{\anno[\elem{\Adjc}]{CP}}
 			[{si ang mica ...}, roof]
 		]
 %	]
@@ -547,20 +544,22 @@ than all the things inside the relative clause. The following example
 \xe
 \end{figure}
 
-As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers
+The c-structure tree in (\ref{ex:nounmodord}) shows that Ayeri prefers
 head--dependent word order with exceeding consistency. As illustrated by
 previous examples, both adjuncts and complements are, for the most part,
 consistently appended to the right of their heads, which means that Ayeri may
 be classified as a rather consistently right-branching language. However, a
 certain number of postpositions form an exception to this classification
 (\autoref{subsec:postpos}). In the light of word order typology, we can
-formulate the following generalizations:
+state the generalizations listed in (\ref{ex:nptyp}).
 
-\pex
+\begin{figure}
+\pex\label{ex:nptyp}
 \a Order of noun and adjective: N Adj
 \a Order of noun and genitive: N Gen
 \a Order of noun and relative clause: N Rel
 \xe
+\end{figure}
 
 As described before (\autoref{subsec:clitics}), nouns can also be modified
 by a number of clitics which are not represented through syntax. Since it is
