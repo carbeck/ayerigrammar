@@ -11,26 +11,26 @@
 While the previous chapter dealt largely with the various parts of speech and
 their various distributive and inflectional properties, the present chapter
 will elaborate on how these words combine into syntactic phrases.\footnote{It
-should be noted that, since trees are large, a number of regularly numbered
-examples in this chapter will appear not in place but floated, like tables and
-figures in the previous chapters.} Since Ayeri is a verb-initial language, it
-is probably most comfortably analyzed in terms of Lexical-Functional Grammar
-(\cite{bresnan1982}~ff.; more recently \cite{bresnan2016};
-\cite{dalrymple2001}), since \Lfg{} does not require complicated derivations
-behind the surface structure of sentences.\footnote{Passivization, for
-instance, is assumed to be a lexically motivated alternation in predicate
-structure (\Subj{} is prohibited, so the nominative is assigned to \Obj{}, and
-the original \Subj{} is expressed  by an \Adjc{}), rather than an internal
-derivational process \citep[23\psqq]{bresnan2016}.} It will be assumed here
-that, even though Ayeri is basically VSO with predicate and predication not
-adjacent to each other, it is configurational in that there is a VP which
-c-commands a number of other constituents as complements in transitive
-sentences.
+should be noted that, since trees and tableaus are large, a number of regularly
+numbered examples in this chapter will appear not in place but floated, like
+tables and figures in the previous chapters.} Since Ayeri is a verb-initial
+language, it is probably most comfortably analyzed in terms of
+Lexical-Functional Grammar (\cite{bresnan1982}~ff.; more recently
+\cite{bresnan2016}; \cite{dalrymple2001}; \cite{falk2001}), since \Lfg{} does
+not require complicated derivations behind the surface structure of
+sentences.\footnote{Passivization, for instance, is assumed to be a lexically
+motivated alternation in predicate structure (\Subj{} is prohibited, so the
+nominative is assigned to \Obj{}, and the original \Subj{} is expressed by an
+\Oblq{agt}), rather than an internal derivational process
+\citep[23\psqq]{bresnan2016}.} It will be assumed here that, even though Ayeri
+is basically VSO with predicate and predication not adjacent to each other, it
+is configurational in that there is a VP which c-commands a number of other
+constituents as complements in transitive sentences.
 
-In principle, \Lfg{} assumes that grammar operates on different structural 
-levels: mainly, these are a(rgument) structure, c(onstituent) structure, and 
-f(unctional) structure; other layers have been proposed by different 
-researchers for different purposes \citep[862--865]{buttking2015}. 
+In principle, \Lfg{} assumes that grammar operates on different structural
+levels in parallel: mainly, these are a(rgument) structure, c(onstituent)
+structure, and f(unctional) structure; other layers have been proposed by
+different researchers for different purposes \citep[862--865]{buttking2015}.
 \citet{bresnan2016} define three core design principles for \Lfg{}:
 
 \begin{description}
@@ -52,9 +52,9 @@ The principle of economy of expression furthermore dictates that essentially,
 trees be pruned of empty terminal nodes and non-branching preterminal nodes,
 since these do not provide structurally or semantically relevant information
 \citep[119--128]{bresnan2016}. Thus, for instance, in a rule like XP →
-\xhead{X} YP, YP is not necesssarily XP's complement. Functional annotations on
-nodes will clarify their status instead of their position in a c-structure
-tree.}
+\xhead{X} YP, YP does not necesssarily appear as XP's complement in the tree if
+one were to follow plain X-bar theory rules. Nodes are defined in their status
+by functional annotations rather than by position in the c-structure tree.}
 
 \item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality
 states that \emph{internal structures are largely invariant across languages}.
@@ -62,10 +62,10 @@ The formal model of internal structure in \Lfg{} is the \emph{f-structure},
 which stands for \enquote{functional structure}}. The f-structure is depicted
 as an argument-value matrix (\Avm{}) which maps the relations between `subject'
 (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
-abstractions of NP, VP, V, etc.\ \citep[42]{bresnan2016}. Verbs are also
-presented with their \fw{a-structure} spelled out. That is, which arguments a
-verb has relations to is formally stated \citep[15]{bresnan2016}. The
-f-structure collates semantic features associated with heads of grammatical
+abstractions of NP, VP, \xhead{V}, etc.\ \citep[42]{bresnan2016}. Verbs are
+also presented with their \fw{a-structure} spelled out. That is, the
+arguments a verb governs are formally stated \citep[15]{bresnan2016}.
+The f-structure collates semantic features associated with heads of grammatical
 functions (GFs), such as case (\Case{}), person (\Pers{}), number (\Num{}),
 which are abstract features and as such need not have morphological realization
 \citep[43]{bresnan2016}.
@@ -148,9 +148,10 @@ to which part of the f-structure.
 % consistency with the above I will use `\Subj{}' in the following. I will also
 % divergently use \Compl{} and \XCompl{} for \textsc{(x)comp}, since
 % \textsc{comp} has already been used for `comparative' above.}
-Regarding the different functions distinguished, \Lfg{} 
-assumes the following hierarchies \citep[97, 100]{bresnan2016}:
+Regarding the different functions distinguished, \Lfg{} assumes the functional
+hierarchies given in (\ref{ex:functions}) \citep[97, 100]{bresnan2016}:
 
+\begin{figure}
 \pex\label{ex:functions}
 \a\label{ex:gfs} Grammatical functions (\GF{}s):\\
 	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{\text{core}} > 
@@ -166,52 +167,84 @@ assumes the following hierarchies \citep[97, 100]{bresnan2016}:
 	\underbrace{\Obj{}\: \SObj{}\: \Oblique{}\: \XCompl{}\: \Compl{}\: 
 		\Adjc{}}_{\text{non-d-fns}}$
 \xe
+\end{figure}
 
-The elements listed in (\ref{ex:functions}) will also appear in
+The functions listed in (\ref{ex:functions}) will also appear in
 phrase-structure rules and c-structure trees together with arrows. These arrows
 symbolize inheritance of feature information from the current level (↓) of the
-tree to the next (↑), so for instance, `\pass{\Subj}' means that the information
-subsumed by the current node (`down') is passed on as the subject function of
-the next higher node (`up') in the tree. Concise information on notational
-formalisms of \Lfg{} can be found, for instance, in \citet{buttking2015}.
+tree to the next (↑), so for instance, `\pass{\Subj}' means that the
+information subsumed by the current node (`down') is passed on as the subject
+function of the next higher node (`up') in the tree. Concise information on
+notational formalisms of \Lfg{} can be found, for instance, in
+\citet{buttking2015}.
 
 \section{Noun and determiner phrases}
 \label{sec:nps-dps}
 
-Noun phrases (NPs), and determiner phrases (DPs) as their functional 
-counterpart, fulfill the functions of subject (\Subj{}), object (\Obj{}), 
+Noun phrases (NPs), and determiner phrases (DPs) as their functional
+counterpart, fulfill the functions of subject (\Subj{}), object (\Obj{}),
 secondary object (\SObj{}), as well as various oblique constituents (\Oblique;
-see (\ref{ex:dpnpcasemap}) below), and they can also form adjuncts (\Adjc{}).
-DPs and NPs can also constitute topics (\Top{}). Which DP or NP receives which 
-function is selected by the a-structure of the verb---this also has 
-repercussions on case- and topic marking.
+see (\ref{ex:dpnpcasemap}) below). They can also form adjuncts (\Adjc{}), as
+well as constitute topics (\Top{}). Which DP or NP receives which function is
+selected by the a-structure of the verb---this also has repercussions on case-
+and topic marking, compare \autoref{subsec:comptr}.
 
-Since the constituent containing the various non-verbal elements in Ayeri is 
-likely exocentric and constituents may move around within it in a restricted 
-way, we have to assume that not constituent structure, but case marking 
-identifies the grammatical functions of the various arguments of verbs. Thus, 
-the following lexicocentric conditions operate on both DP and NP as exponents 
-of case:
+Even though Ayeri is configurational and case is in part assigned on the
+grounds of constituent structure, semantic aslo play a part in case assignment.
+Taking the opposite perspective, we may also say that case marking provides
+information on both the semantics and function of NPs/DPs, as depicted in
+(\ref{ex:dpnpcasemap}).
 
 \ex\label{ex:dpnpcasemap}\labels
 \begin{tabular}[t]{@{} l @{\quad} l @{ $\implies$ } l}
-\tl\quad & \downs{\Case} = \Aarg	& \pass{\Subj} \\
-\tl\quad & \downs{\Case} = \Parg	& \pass{\Obj} \\
-\tl\quad & \downs{\Case} = \Dat		& \pass{\SObj} \logor{}
-%	\pass{\Oblq{goal}} \\
-	\ups{\PCase} = \Oblq{goal} \\
-\tl\quad & \downs{\Case} = \Gen		& \pass{\Possr} \logor{} 
-%	\pass{\Oblq{src}} \\
-	\ups{\PCase} = \Oblq{src} \\
-\tl\quad & \downs{\Case} = \Loc		& \pass{\Oblq{loc}} \logor{}
-	\ups{\PCase} = \Oblq{loc} \\
-\tl\quad & \downs{\Case} = \Caus	& \pass{\Oblq{caus}} \\
-\tl\quad & \downs{\Case} = \Ins		& \pass{\Oblq{ins}} \\
+\tl\quad
+	& \downs{\Case} = \Aarg
+	& \pass{\Subj}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Parg
+	& \pass{\Obj}
+		\logor{} \pass{\Subj}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Dat	
+	& \pass{\SObjc{recip}}
+		\logor{} \pass{\Oblq{exp}}
+		\logor{} \ups{\PCase} = \Oblq{goal}
+		\logor{} \ups{\PCase} = \Oblq{dir}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Gen	
+	& \pass{\Possr}
+		\logor{} \pass{\Oblq{theme}}
+		\logor{} \ups{\PCase} = \Oblq{src}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Loc	
+	& \pass{\Oblq{dir}}
+		\logor{} \ups{\PCase} = \Oblq{loc}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Caus
+	& \pass{\Oblq{caus}}
+	\\
+
+\tl\quad
+	& \downs{\Case} = \Ins	
+	& \pass{\Oblq{ins}}
+		\logor{} \pass{\Oblq{manner}}
+		\logor{} \elem{\Adjc}
+	\\
 \end{tabular}
 \xe
 
-The rules in (\ref{ex:dpnpcasemap}) determine the typical mappings between case
-marking and grammatical functions, which are not always unambiguous. As
+The rules in (\ref{ex:dpnpcasemap}) illustrate the typical mappings between
+case marking and grammatical functions, which are not always unambiguous. As
 explained above (compare \autoref{subsec:case}), the dative case does not only
 indicate that something is done to this referent or to their benefit, but it
 may also indicate motion towards this referent. Likewise, the genitive case
@@ -220,11 +253,11 @@ referent. Nominal adjuncts to nouns which specify what the noun consists also
 appear in the instrumental case, besides the instrumental being used to
 indicate the means or the circumstance by which an action comes about.
 Moreover, DPs or NPs may also lack case marking, which indicates that the
-respective phrase is a part of the topic of the verb, which is what
+respective phrase is (a part of) the topic of the verb, which is what
 (\ref{ex:topicrule}) describes:
 
 \ex\label{ex:topicrule}
-¬\,\downs{\Case} $\implies$ \elem{\Top}
+¬\,\downs{\Case} $\implies$ \pass{\Top} \logor{} \elem{\Top}
 \xe
 
 Instead of case marking on the DP or NP, there is a marker in front of the verb
@@ -232,20 +265,21 @@ which provides information on the case and, if \AgtT{} or \PatT{}, also about
 the animacy of the topicalized phrase. This means that grammatical information
 about the topic of a phrase is spread over two discontinuous locations. This
 issue does not pose a problem to an \Lfg{}-based analysis, however, since both
-locations unify their information content in the f-structure feature \Top{}.
-Since information located in multiple places is jointly feeding this feature, I
-am using the annotation `\elem{\Top}' for each location rather than simple
-`\pass{\Top}'. Note that only one NP among the arguments of a verb may be the
-topic of the phrase, and a topic can only be marked if the verb is finite and
-the number of arguments to the verb is greater than one.
+locations unify their information content in the f-structure feature \Top{}. I
+am normally using the annotation `\pass{\Top}' for topics; `\elem{\Top}' only
+finds application with relative caluses, since these may have secondary topics
+in addition to the relativized NP. Note that otherwise, only one NP among the
+arguments of a verb may be the topic of the clause. Moreover, a topic can only
+be marked if the verb is finite and the number of case-marked arguments of the
+verb is greater than one.
 
 \subsection{Noun phrases}
 \label{subsec:nps}
 
 \subsubsection{Constituent order within noun phrases}
 
-Nouns are one of the main parts of speech of Ayeri, and nouns can be modified
-by a number of other free elements, as we have seen previously---adjectives,
+Nouns are one of the main parts of speech of Ayeri, and can be modified by a
+number of other free elements, as we have seen previously---adjectives,
 possessive adjectives, as well as relative clauses and nominal adjuncts. These
 typically follow nouns. It was also described before that Ayeri's nouns may
 host a number of clitics, among which are deictic prefixes and quantifiers, as
@@ -258,24 +292,18 @@ The asterisk in (\ref{ex:npstruct_Adj}) is the Kleene star and indicates zero
 or more instances of the element. Elements which may be omitted or occur once
 are in brackets.
 
+\begin{figure}
 \pex\label{ex:npstruct}
-\a NP → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{CP}\right)$
-\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Possr}]
-	{\{NP | DP\}}\right)$
-\a \xbar{N} → \anno*{\xbar{N}} $\left(\anno*[\pass{\Compl}]{NP}\right)$
+\a NP → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{CP}
+\a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
+\a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{NP}
 \a\label{ex:npstruct_Adj}%
 	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP*}
 \xe
-
-This rule defines that NPs have a lexical head which is on the left side,
-followed optionally by modifiers which may have various relationships to the
-noun: complement (instrumental nominal, NP/DP), adjunct (adjective phrase, AP),
-possessor (genitive NP/DP), relative clause (forming a complementizer phrase,
-CP). This can be represented as a constituent-structure tree in the way
-described in (\ref{ex:npcstruct}).
+\end{figure}
 
 \begin{figure}
-\ex\label{ex:npcstruct}\labels
+\ex\label{ex:npcstruct}
 \begin{forest} shorter edges,
 [{\anno[\{\pass{\DF} | \pass{\GF}\}]{NP}}
 %	[\anno{\xbar{N}}
@@ -285,19 +313,23 @@ described in (\ref{ex:npcstruct}).
 					[\anno{\xhead{N}}]
 					[{\anno[\elem{\Adjc}]{AP*}}]
 				]
-				[{$\left(\anno[\pass{\Compl}]{XP}\right)$}]
+				[{\anno[\pass{\Compl}]{XP}}]
 			]
-			[{$\left(\anno[\pass{\Possr}]{\{NP | DP\}}\right)$}]
+			[{\anno[\pass{\Possr}]{XP}}]
 		]
-		[{$\left(\anno[\pass{\Compl}]{CP}\right)$}]
+		[{\anno[\elem{\Adjc}]{CP}}]
 %	]
 ]
 \end{forest}
 \xe
 \end{figure}
 
-In (\ref{ex:npcstruct}) as well, we can see a nominal head on the left which
-may be modified by phrases of various types. The maximal projection of
+The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which
+is on the left side, followed optionally by modifiers which may have various
+relationships to the noun: complement (instrumental nominal, NP/DP), adjunct
+(adjective phrase, AP), possessor (genitive NP/DP), relative clause (forming a
+complementizer phrase, CP). This can be represented as a constituent-structure
+tree in the way described in (\ref{ex:npcstruct}). The maximal projection of
 \xhead{N} (that is, NP) is annotated very generally for the function of the
 NP---basically, an NP can act as either a discourse function (\DF{}) or a
 grammatical function (\GF{}). (\ref{ex:nounmods}) gives an example of each kind
@@ -317,18 +349,26 @@ function in these examples.
 	\endgl
 	\end{minipage}
 	~
-	\begin{forest} shorter edges, italic leaves,
-	[NP
-%		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[{ningan}]
-			]
-			[{\anno[\elem{\Adjc}]{AP}}
-				[hiro]
-			]
-%		]
-	]
-	\end{forest}
+% 	\begin{forest} shorter edges, italic leaves,
+% 	[NP
+% %		[\anno{\xbar{N}}
+% 			[\anno{\xhead{N}}
+% 				[{ningan}]
+% 			]
+% 			[{\anno[\elem{\Adjc}]{AP}}
+% 				[hiro]
+% 			]
+% %		]
+% 	]
+% 	\end{forest}
+	\begin{avm}
+	\[
+		\Pred	&	`story' \\
+		\Adjc	&	\{\[
+			\Pred	&	`new' \\
+		\]\} \\
+	\]
+	\end{avm}
 
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -341,18 +381,27 @@ function in these examples.
 	\endgl
 	\end{minipage}
 	~
-	\begin{forest} shorter edges, italic leaves,
-	[NP
-%		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[{kegan}]
-			]
-			[{\anno[\pass{\Possr}]{NP}}
-				[ayonena]
-			]
-%		]
-	]
-	\end{forest}
+% 	\begin{forest} shorter edges, italic leaves,
+% 	[NP
+% %		[\anno{\xbar{N}}
+% 			[\anno{\xhead{N}}
+% 				[{kegan}]
+% 			]
+% 			[{\anno[\pass{\Possr}]{NP}}
+% 				[ayonena]
+% 			]
+% %		]
+% 	]
+% 	\end{forest}
+	\begin{avm}
+	\[
+		\Pred	&	\astruct{hat}{\ups{\Possr}} \\
+		\Possr	&	\{\[
+			\Pred	&	`man' \\
+			\Case	&	\Gen \\
+		\]\} \\
+	\]
+	\end{avm}
 
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -365,18 +414,27 @@ function in these examples.
 	\endgl
 	\end{minipage}
 	~
-	\begin{forest} shorter edges, italic leaves,
-	[NP
-%		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[{kasu}]
-			]
-			[{\anno[\pass{\Compl}]{NP}}
-				[bariri]
-			]
-%		]
-	]
-	\end{forest}
+% 	\begin{forest} shorter edges, italic leaves,
+% 	[NP
+% %		[\anno{\xbar{N}}
+% 			[\anno{\xhead{N}}
+% 				[{kasu}]
+% 			]
+% 			[{\anno[\pass{\Compl}]{NP}}
+% 				[bariri]
+% 			]
+% %		]
+% 	]
+% 	\end{forest}
+	\begin{avm}
+	\[
+		\Pred	&	\astruct{basket}{\ups{\Compl}} \\
+		\Compl	&	\[
+			\Pred	&	`meat' \\
+			\Case	&	\Ins \\
+		\] \\
+	\]
+	\end{avm}
 
 \a %
 	\begin{minipage}[t]{.5\remaining}
@@ -389,23 +447,108 @@ function in these examples.
 	\endgl
 	\end{minipage}
 	~
-	\begin{forest} shorter edges, italic leaves,
-	[NP
-%		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[{nanga}]
-			]
-			[{\anno[\pass{\Compl}]{CP}}
-				[{si incāng}, roof]
-			]
-%		]
-	]
-	\end{forest}
+% 	\begin{forest} shorter edges, italic leaves,
+% 	[NP
+% %		[\anno{\xbar{N}}
+% 			[\anno{\xhead{N}}
+% 				[{nanga}]
+% 			]
+% 			[{\anno[\pass{\Compl}]{CP}}
+% 				[{si incāng}, roof]
+% 			]
+% %		]
+% 	]
+% 	\end{forest}
+	\begin{avm}
+	\[
+		\Pred	&	`house' \\
+		\Adjc	&	\{\[
+			\avmspan{``which he bought''} \\
+		\]\} \\
+	\]
+	\end{avm}
 
 \xe
 \end{figure}
 
-As described before (compare \autoref{subsec:clitics}), nouns can be modified
+Of course, it is also possible to combine the nominal modifiers listed in
+(\ref{ex:nounmods}). In this case, there is a certain hierarchy, presumably
+based on Behaghel's first law, \textquote{Das oberste Gesetz ist dieses, daß
+das geistig eng Zusammengehörige auch eng zusammengestellt wird}
+(\cite[4]{behaghel1932}; `The supreme law is such that the mentally closely
+related is also arranged in close proximity.'), and also grammatical weight
+\citep{wasow1997}:
+
+\begin{enumerate}[noitemsep]
+	\item APs (also cardinals) and other NPs describing attributes,
+	\item instrumental NP indicating what the head consists of,
+	\item possessive genitive NPs,
+	\item relative clauses.
+\end{enumerate}
+
+\citet{wasow1997} writes that \textcquote[102]{wasow1997}{[i]t is very hard to
+distinguish among various structural weight measures as predictors of weight
+effects. Counting words, nodes, or phrasal nodes all work well}, which means
+that no single metric can be used to describe the order of constituents in a
+phrase. However, for instance, relative clauses trail whenever possible
+presumably since they tend to contain whole subclauses and thus a lot of
+information. It seems advisable not to put an element with much less
+information content after them, especially when it refers to a different head
+than all the things inside the relative clause. The following example
+(\ref{ex:nounmodord}) illustrates the unmarked order of modifiers.
+
+\begin{figure}
+\pex\label{ex:nounmodord}
+\a\begingl
+	\gla diranang caban nā si ang mica ya @ Kārvisam //
+	\glb diran-ang caban nā si ang mit=ya.Ø ya= Kārvisam //
+	\glc uncle-\Aarg{} favorite \Fsg{}.\Gen{} \Rel{} \AgtT{} 
+		live=\TsgM{}.\Top{} \Loc{}= Kārvisam //
+	\glft `my favorite uncle who lives in Kārvisam' //
+\endgl
+\medskip
+
+\a\begin{forest} shorter edges, narrower nodes, italic leaves,
+[{\anno[\pass{\Subj}]{NP}}
+%	[\anno{\xbar{N}}
+		[\anno{\xbar{N}}
+			[\anno{\xbar{N}}
+				[\anno{\xhead{N}}
+					[{diranang}]
+				]
+				[{\anno[\elem{\Adj}]{AP}}
+					[caban]
+				]
+			]
+			[{\anno[\pass{\Possr}]{DP}}
+				[nā]
+			]
+		]
+		[{\anno[\pass{\Comp}]{CP}}
+			[{si ang mica ...}, roof]
+		]
+%	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers
+head--dependent word order with exceeding consistency. As illustrated by
+previous examples, both adjuncts and complements are, for the most part,
+consistently appended to the right of their heads, which means that Ayeri may
+be classified as a rather consistently right-branching language. However, a
+certain number of postpositions form an exception to this classification
+(\autoref{subsec:postpos}). In the light of word order typology, we can
+formulate the following generalizations:
+
+\pex
+\a Order of noun and adjective: N Adj
+\a Order of noun and genitive: N Gen
+\a Order of noun and relative clause: N Rel
+\xe
+
+As described before (\autoref{subsec:clitics}), nouns can also be modified
 by a number of clitics which are not represented through syntax. Since it is
 not possible for these clitic elements to be divided from their phonological
 hosts, they should be treated as being an integral part of the word they attach
@@ -452,7 +595,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 		[\anno{\xhead{N}}
 			[nangās]
 		]
-		[\anno{Cl}
+		[{\anno[\elem{\Adjc}]{Cl}}
 			[-ikan]
 		]
 	]
@@ -483,82 +626,6 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 \xe
 \end{figure}
 
-Of course, it is also possible to combine these nominal modifiers. In this
-case, there is a certain hierarchy, presumably based on Behaghel's first law,
-\textquote{Das oberste Gesetz ist dieses, daß das geistig eng Zusammengehörige 
-auch eng zusammengestellt wird} (\cite[4]{behaghel1932}; `The supreme law is
-such that the mentally closely related is also arranged in close proximity.'), 
-and also grammatical weight \citep{wasow1997}:
-
-\begin{enumerate}[noitemsep]
-	\item instrumental NP indicating what the head consists of,
-	\item APs (also cardinals) and other NPs describing attributes,
-	\item possessive genitive NPs,
-	\item relative clauses.
-\end{enumerate}
-
-\citet{wasow1997} writes that \textcquote[102]{wasow1997}{[i]t is very hard to
-distinguish among various structural weight measures as predictors of weight
-effects. Counting words, nodes, or phrasal nodes all work well}, which means
-that no single metric can be used to describe the order of constituents in a
-phrase. However, for instance, relative clauses trail whenever possible
-presumably since they tend to contain whole subclauses and thus a lot of
-information. It seems advisable not to put an element with much less
-information content after them, especially when it refers to a different head
-than all the things inside the relative clause. The following example
-(\ref{ex:nounmodord}) illustrates the unmarked order of modifiers.
-
-\begin{figure}
-\pex\label{ex:nounmodord}
-\a\begingl
-	\gla diranang caban nā si ang mica ya @ Kārvisam //
-	\glb diran-ang caban nā si ang mit=ya.Ø ya= Kārvisam //
-	\glc uncle-\Aarg{} favorite \Fsg{}.\Gen{} \Rel{} \AgtT{} 
-		live=\TsgM{}.\Top{} \Loc{}= Kārvisam //
-	\glft `my favorite uncle who lives in Kārvisam' //
-\endgl
-\medskip
-
-\a\begin{forest} shorter edges, narrower nodes, italic leaves,
-[{\anno[\pass{\Subj}]{NP}}
-%	[\anno{\xbar{N}}
-		[\anno{\xbar{N}}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}
-					[{diranang}]
-				]
-				[{\anno[\pass{\Adj}]{AP}}
-					[caban]
-				]
-			]
-			[{\anno[\pass{\Possr}]{DP}}
-				[nā]
-			]
-		]
-		[{\anno[\pass{\Comp}]{CP}}
-			[{si ang mica ...}, roof]
-		]
-%	]
-]
-\end{forest}
-\xe
-\end{figure}
-
-As the c-structure tree in (\ref{ex:nounmodord}) shows, Ayeri prefers
-head--dependent word order with exceeding consistency. As illustrated by
-previous examples, both adjuncts and complements are, for the most part,
-consistently appended to the right of their heads, which means that Ayeri may
-be classified as a rather consistently right-branching language. However, a
-certain number of postpositions form an exception to this classification
-(\autoref{subsec:postpos}). In the light of word order typology, we can
-formulate the following generalizations:
-
-\pex
-\a Order of noun and adjective: N Adj
-\a Order of noun and genitive: N Gen
-\a Order of noun and relative clause: N Rel
-\xe
-
 More important to \Lfg{} than c-structure trees, however, are
 function-structure matrices which gather all information in a given utterance
 and gather potentially disparate information into semantically coherent units
@@ -572,6 +639,7 @@ provide (also compare \autoref{sec:nouns}). These also form the basis for
 f-structure matrices of the kind already shown in (\ref{ex:clitics_43}),
 \autoref{clitics_postverb_person}, p.~\pageref{ex:clitics_43}.
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:nounmorphlex}%
 \adjustbox{valign=t}{%
@@ -592,12 +660,6 @@ f-structure matrices of the kind already shown in (\ref{ex:clitics_43}),
 \xe
 \end{morphlex}
 
-Nouns generally imply a third-person reference; they distinguish number, gender
-and animacy, as well as case. Clitics, however, may also add information about
-deixis (\ref{ex:deixisfeat}); likeness and quantity might be interpreted
-conveniently as adding to the list of a noun's \Adjc{} feature 
-(\ref{ex:nounqadj}).
-
 \begin{morphlex}
 \ex\label{ex:deixisfeat}
 \adjustbox{valign=t}{%
@@ -611,6 +673,13 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 }
 \xe
 \end{morphlex}
+\end{figure}
+
+Nouns generally imply a third-person reference; they distinguish number, gender
+and animacy, as well as case. Clitics, however, may also add information about
+deixis (\ref{ex:deixisfeat}); likeness and quantity might be interpreted
+conveniently as adding to the list of a noun's \Adjc{} feature 
+(\ref{ex:nounqadj}).
 
 \begin{figure}
 \pex\label{ex:nounqadj}
@@ -695,14 +764,14 @@ agree with the lexical head they attach to. An example of this is given in
 \end{figure}
 
 Example (\ref{ex:animcaseagr}a) shows a well-formed construction: the noun,
-\xayr{gnF}{gan}{child}, is animate, hence the case particle also needs to be 
-animate---the case particle must thus be \rayr{/As}{-ang} to be coherent. In
+\xayr{gnF}{gan}{child}, is animate, hence the case marker also needs to be 
+animate---the case marker must thus be \rayr{/As}{-ang} to be coherent. In
 contrast to this, example (\ref{ex:animcaseagr}b) is not well-formed in that
-the noun is animate but the case particle, \rayr{/reNF}{-reng}, signals that it
+the noun is animate but the case marker, \rayr{/reNF}{-reng}, signals that it
 is inanimate: the \Anim{} values of the noun stem and its suffix clash and
 cannot be conclusively unified for \xhead{N} itself. The same principle of
 coherence is, of course, also true for proper nouns, which receive a
-case-marking particle, as illustrated by (\ref{ex:animcaseagrname}).
+case-marking proclitic, as illustrated by (\ref{ex:animcaseagrname}).
 
 \begin{figure}
 \ex\label{ex:animcaseagrname}\labels
@@ -770,7 +839,7 @@ of the presence of a numeral, for instance as in (\ref{ex:plovermkg}).
 
 Here, the noun \xayr{kejnmF}{keynam}{people} is marked additionally for plural
 by the nominal plural suffix \rayr{/ye}{-ye} in spite of being a \fw{plurale
-tantum} and in spite of the presence of the numeral \rayr{menNF}{menang}
+tantum} and in spite of the presence of the numeral \xayr{menNF}{menang}
 {hundred}. Without plural morphology, the meaning of \rayr{kejnmF menNF}{keynam
 menang} would be `a hundred people', not generic `hundreds'.
 
