@@ -26,14 +26,11 @@ I will tag a release (basically "first edition") only when everything is as comp
 Roadmap
 =======
 
-* Chapter on syntax ("Phrase structures")
-    * write subchapter on CPs
-* proofreading and correction
-    * do corrections in VP subchapter (raising and control regarding syntactic alignment)
-    * proofread and correct syntax chapter
+* proofreading and correction of the syntax chapter
 * maybe extend name list with etymologies
 * proofread and correct whole thing again
 * make index
+* look into print-on-demand options
 
 Table of Contents
 =================
