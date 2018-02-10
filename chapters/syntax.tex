@@ -195,53 +195,67 @@ Taking the opposite perspective, we may also say that case marking provides
 information on both the semantics and function of NPs/DPs, as depicted in
 (\ref{ex:dpnpcasemap}).
 
-\ex\label{ex:dpnpcasemap}\labels
+\begin{figure}
+\ex\labels\label{ex:dpnpcasemap}
 \begin{tabular}[t]{@{} l @{\quad} l @{ $\implies$ } l}
 \tl\quad
 	& \downs{\Case} = \Aarg
 	& \pass{\Subj}
+	\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Parg
-	& \pass{\Obj}
-		\logor{} \pass{\Subj}
+	& \makecell[tl]{%
+		\pass{\Obj} \\
+		\quad\logor{} \pass{\Subj}%
+		}\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Dat	
-	& \pass{\SObjc{recip}}
-		\logor{} \pass{\Oblq{exp}}
-		\logor{} \ups{\PCase} = \Oblq{goal}
-		\logor{} \ups{\PCase} = \Oblq{dir}
+	& \makecell[tl]{%
+		\pass{\SObjc{recip}} \\
+		\quad\logor{} \pass{\Oblq{exp}} \\
+		\quad\logor{} \ups{\PCase} = \Oblq{goal} \\
+		\quad\logor{} \ups{\PCase} = \Oblq{dir}%
+		}\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Gen	
-	& \pass{\Possr}
-		\logor{} \pass{\Oblq{theme}}
-		\logor{} \ups{\PCase} = \Oblq{src}
+	& \makecell[tl]{%
+		\pass{\Possr} \\
+		\quad\logor{} \pass{\Oblq{theme}} \\
+		\quad\logor{} \ups{\PCase} = \Oblq{src}%
+		}\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Loc	
-	& \pass{\Oblq{dir}}
-		\logor{} \ups{\PCase} = \Oblq{loc}
+	& \makecell[tl]{%
+		\pass{\Oblq{dir}} \\
+		\quad\logor{} \ups{\PCase} = \Oblq{loc}%
+		}\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Caus
 	& \pass{\Oblq{caus}}
+	\medskip
 	\\
 
 \tl\quad
 	& \downs{\Case} = \Ins	
-	& \pass{\Oblq{ins}}
-		\logor{} \pass{\Oblq{manner}}
-		\logor{} \elem{\Adjc}
+	& \makecell[tl]{%
+		\pass{\Oblq{ins}} \\
+		\quad\logor{} \pass{\Oblq{manner}} \\
+		\quad\logor{} \elem{\Adjc}%
+		}
 	\\
-\end{tabular}
+\end{tabular}%
 \xe
+\end{figure}
 
 The rules in (\ref{ex:dpnpcasemap}) illustrate the typical mappings between
 case marking and grammatical functions, which are not always unambiguous. As
