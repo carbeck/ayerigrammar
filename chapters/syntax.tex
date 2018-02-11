@@ -654,8 +654,8 @@ f-structure matrices of the kind already shown in (\ref{ex:clitics_43}),
 
 \begin{figure}
 \begin{morphlex}
-\ex\label{ex:nounmorphlex}%
-\adjustbox{valign=t}{%
+\pex\label{ex:nounmorphlex}%
+\a\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& N
@@ -670,11 +670,8 @@ f-structure matrices of the kind already shown in (\ref{ex:clitics_43}),
 		\end{tabular}
 	\end{tabu}%
 }
-\xe
-\end{morphlex}
 
-\begin{morphlex}
-\ex\label{ex:deixisfeat}
+\a\label{ex:deixisfeat}
 \adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	\hphantom{...}
@@ -712,7 +709,7 @@ conveniently as adding to the list of a noun's \Adjc{} feature
 					\Adjc	&	\{
 									\[
 										\Pred	&	`all' \\
-									\], \\
+									\] \\
 									\[
 										\Pred	&	`happy' \\
 									\] \\
@@ -866,12 +863,14 @@ among them \citep[208--211]{carnie2013}. Ayeri, however, probably does not
 possess articles as such. The preposed case markers of proper nouns bear a
 superficial similarity to cased articles like in German (\ref{ex:artcasesimil})
 and the suffixed case markers look superficially similar to suffixed articles
-in Romanian (\ref{ex:artcasesimilsfx}). The presence or absence of case markers
-in Ayeri is moreover morphosyntactically controlled by topicalization and thus
-also interacts with definiteness. However, as we will see below, the
-distribution of these case particles differs from that of articles in languages
-like English or German.
+in Romanian (\ref{ex:artcasesimilsfx}) or the Scandinavian languages. The
+presence or absence of case markers in Ayeri is moreover morphosyntactically
+controlled by topicalization and thus also interacts with definiteness (compare
+\autoref{subsubsec:topic}, p.~\pageref{subsubsec:topic}). However, as we will
+see below, the distribution of these case particles differs from that of
+articles in languages like English or German.
 
+\begin{figure}
 \pex\label{ex:artcasesimil}
 \a \begin{tabular}[t]{@{} l >{\itshape\bfseries}l @{~} >{\itshape}l l}
 \Aarg
@@ -987,97 +986,110 @@ Romanian (adapted from \cite[75]{lyons1999}):\medskip\\ %
 	\\
 \end{tabular}
 \xe
+\end{figure}
 
-While in German an article and a demonstrative pronoun, or also a possessive
-pronoun, cannot co-occur, this appears not to be a problem in Ayeri. As argued
-in \autoref{subsec:clitics}, both case markers and deictic/demonstrative
-prefixes in Ayeri are clitics; the similarity between possessive pronouns and
-adjectives has also been noted in \autoref{phsec:possadj}
-(p.~\pageref{phsec:possadj}). Furthermore, the preposed case markers of nouns
-are an exception compared to the much more frequent occurrence of case-marking
-suffixes on generic nouns. It thus does not seem straightforward to analyze the
-case markers as heads of DPs.
+While in modern Standard German an article and a demonstrative pronoun, or also
+a possessive pronoun, cannot co-occur, this appears not to be a problem in
+Ayeri. As argued in \autoref{subsec:clitics}, both case markers and
+deictic/demonstrative prefixes in Ayeri are clitics; the similarity between
+possessive pronouns and adjectives has also been noted in
+\autoref{phsec:possadj} (p.~\pageref{phsec:possadj}). Furthermore, the preposed
+case markers of nouns are an exception compared to the much more frequent
+occurrence of case-marking suffixes on generic nouns. It thus does not seem
+straightforward to analyze the case markers as heads of DPs.
 
 \begin{figure}
-\pex\label{ex:germandetdist}
-	\a German:\medskip \\
-	\begingl
+\ex\labels\label{ex:germandetdist}%
+German:\medskip\\
+\begin{minipage}[t]{.4\remaining}
+	\tl\quad\begingl
+		\glpreamble article + noun: //
 		\gla das Haus //
 		\glb das Haus //
 		\glc \Def{}.\Nom{}.\Sg{}.\N{} house //
 		\glft `the house' //
-	\endgl
+	\endgl\medskip
 
-	\a\begingl
+	\tl\quad\begingl
+		\glpreamble demonstrative + noun: //
 		\gla dieses Haus //
 		\glb dies-es Haus //
 		\glc this-\Nom{}.\Sg{}.\N{}.\St{} Haus //
 		\glft `this house' //
-	\endgl
+	\endgl\medskip
 
-	\a\begingl
+	\tl\quad\begingl
+		\glpreamble possessive + noun: //
 		\gla mein Haus //
 		\glb mein-Ø Haus //
 		\glc \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\St{} house //
 		\glft `my house' //
 	\endgl
+\end{minipage}
+~
+\begin{minipage}[t]{.6\remaining}
+	\tl\quad\begingl
+		\glpreamble article + demonstrative + noun: //
+		\gla * @ das diese Haus //
+		\glb {} das dies-e Haus //
+		\glc {} \Def{}.\Nom{}.\Sg{}.\N{} this-\Nom{}.\Sg{}.\N{}.\Wk{} house //
+		\glft \hphantom{*}`the this house' //
+	\endgl\medskip
 
-	\a\ljudge*\begingl
-		\gla das diese Haus //
-		\glb das dies-e Haus //
-		\glc \Def{}.\Nom{}.\Sg{}.\N{} this-\Nom{}.\Sg{}.\N{}.\Wk{} house //
-		\glft `the this house' //
-	\endgl
-
-	\a\ljudge*\begingl
-		\gla das meine Haus //
-		\glb das mein-e Haus //
-		\glc \Def{}.\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} 
+	\tl\quad\begingl
+		\glpreamble article + possessive (weak decl.) + noun: //
+		\gla * @ das meine Haus //
+		\glb {} das mein-e Haus //
+		\glc {} \Def{}.\Nom{}.\Sg{}.\N{} \Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} 
 			house //
-		\glft `the my house' //
-	\endgl
+		\glft \hphantom{*}`the my house' //
+	\endgl\medskip
 
-	\a\ljudge*\label{ex:germandemposswk}\begingl
-		\gla dieses meine Haus //
-		\glb dies-es mein-e Haus //
-		\glc this-\Nom{}.\Sg{}.\N{}.\St{} 
+	\tl\quad\label{ex:germandemposswk}\begingl
+		\glpreamble demonstrative + possessive (weak decl.) + noun: //
+		\gla * @ dieses meine Haus //
+		\glb {} dies-es mein-e Haus //
+		\glc {} this-\Nom{}.\Sg{}.\N{}.\St{} 
 			\Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\Wk{} house //
-		\glft `this my house' //
-	\endgl
+		\glft \hphantom{*}`this my house' //
+	\endgl\medskip
 
-	\a\ljudge\hash\label{ex:germandemposs}\begingl
-		\gla dieses mein Haus //
-		\glb dies-es mein-Ø Haus //
-		\glc this-\Nom{}.\Sg{}.\N{}.\St{} 
+	\tl\quad\label{ex:germandemposs}\begingl
+		\glpreamble demonstrative + possessive (strong decl.) + noun: //
+		\gla \hash{} @ dieses mein Haus //
+		\glb {} dies-es mein-Ø Haus //
+		\glc {} this-\Nom{}.\Sg{}.\N{}.\St{} 
 			\Fsg{}.\Gen{}-\Nom{}.\Sg{}.\N{}.\St{} house //
-		\glft `this house of mine' //
+		\glft \hphantom{\hash}`this house of mine' //
 	\endgl
+\end{minipage}
 \xe
 \end{figure}
 
-The examples in (\ref{ex:germandetdist}) show that determining elements such as
-a definite article (\fw{der} `the'), a demonstrative pronoun (\fw{dieser}
-`this') and a possessive pronoun (\fw{mein} `my') are in complementary
-distribution for some combinations. The only exception to this is the
-combination of demonstrative and possessive in (\ref{ex:germandemposs}), which
-is grammatically marked, however.\footnote{Example (\ref{ex:germandemposswk})
-differs from (\ref{ex:germandemposs}) in the declension paradigm of the
-adjective: (\ref{ex:germandemposswk}) uses the `weak' (\Wk) declension
-regularly, since a determiner with strong (\St) declension precedes.
-(\ref{ex:germandemposs}) appears to be an exception in permitting two
-determiners of the strong declension. \citet[160--161, 203--205]{demske2001}
-notes that, according to \citet{plank1992}, possessive pronouns may apparently
-still act as modifiers, not only determiners, under certain circumstances. In
-modern Standard German, this construction is strongly marked, however. It is
-probably a remnant of earlier stages of German where there was no such
-restriction on the co-ocurrence of demonstrative and possessive pronouns yet
-\citep[173]{demske2001}.} On this phenomenon of complementary distribution of
-determiners, which also holds true for English, \citet[208]{carnie2013} writes,
-\textquote{One thing to note about determiners is that they are typically
-heads. Normally, there can only be one of them in an NP,} at least in English
-(and German). \citet[9--22]{demske2001} elaborates on this point for German as
-well. Regarding the examples in (\ref{ex:romdecl}), \citet{dindelegan2013}
-states about Romanian that
+The German examples in (\ref{ex:germandetdist}) show that determining elements
+such as a definite article (\fw{der} `the'), a demonstrative pronoun
+(\fw{dieser} `this') and a possessive pronoun (\fw{mein} `my') are in
+complementary distribution for most combinations. The only exception to this is
+the combination of demonstrative and possessive in (\ref{ex:germandemposs}),
+which is grammatically marked, however.\footnote{Example
+(\ref{ex:germandemposswk}) differs from (\ref{ex:germandemposs}) in the
+declension paradigm of the possessive: (\ref{ex:germandemposswk}) uses the
+`weak' (\Wk) adjective declension regularly, since a determiner with strong
+(\St) declension precedes. (\ref{ex:germandemposs}) appears to be an exception
+in permitting two determiners of the strong declension. \citet[160--161,
+203--205]{demske2001} notes that, according to \citet{plank1992}, possessive
+pronouns may apparently still act as modifiers, not only determiners, under
+certain circumstances. In modern Standard German, this construction is strongly
+marked, however. It is probably a remnant of earlier stages of German where
+there was no such restriction on the co-ocurrence of demonstrative and
+possessive pronouns yet \citep[173]{demske2001}.} On this phenomenon of
+complementary distribution of determiners---which also holds true for
+English---\citet{carnie2013} writes, \textcquote[208]{carnie2013}{One thing to
+note about determiners is that they are typically heads. Normally, there can
+only be one of them in an NP}, at least in English (and German).
+\citet[9--22]{demske2001} elaborates on this point for German as well.
+Regarding the examples of suffixed definite articles in (\ref{ex:romdecl}),
+\citet{dindelegan2013} states that
 
 \blockcquote[297]{dindelegan2013}{Prenominal demonstrative \sic{} take a
 determinerless (articleless) head-noun complement [...] while postnominal
@@ -1085,22 +1097,23 @@ demonstratives obligatorily occur in DPs with article-bearing noun heads [...]
 The postnominal construction is thus a polydefinite structure, since
 definiteness is realized twice [...], by the article and by the demonstrative.}
 
-\citet[297]{dindelegan2013} gives the following examples for these two
-placement variants (glosses extended based on further information in the
-grammar):\footnote{In declension charts, \citet{dindelegan2013} indicates the
-cases as `$\Nom{}\equiv\Acc{}$' and `$\Dat{}\equiv\Gen{}$' where
+\citet{dindelegan2013} furthermore gives the examples in (\ref{ex:romdef}) for
+these two placement variants (glosses extended based on further information in
+the grammar).\footnote{In declension charts, \citet{dindelegan2013} indicates
+the cases as `$\Nom{}\equiv\Acc{}$' and `$\Dat{}\equiv\Gen{}$' where
 \citet{lyons1999} uses \Pri{} and \Obl{}.}
 
-\pex
-	\a \rc{Romanian}%
-	\begingl
+\begin{figure}
+\pex\label{ex:romdef}
+	Romanian \citep[297]{dindelegan2013}:
+	\a\begingl
 		\gla acest om //
 		\glb acest-Ø om-Ø //
 		\glc this-\Nom{}+\Acc{}.\Sg{}.\M{} man-\Sg{} //
 		\glft `this man' //
 	\endgl
 
-	\a \begingl
+	\a\begingl
 		\gla omul acesta //
 		\glb om-ul acest-a //
 		\glc man-\Def{}.\Nom{}+\Acc{}.\Sg{}.\M{} 
@@ -1108,102 +1121,113 @@ cases as `$\Nom{}\equiv\Acc{}$' and `$\Dat{}\equiv\Gen{}$' where
 		\glft `\emph{this} man' //
 	\endgl
 \xe
+\end{figure}
 
-Ayeri, however, behaves differently than either German or Romanian in treating
+Ayeri, however, behaves different from either German or Romanian in treating
 case markers and demonstrative elements as clitics. The case marker is always
-present for untopicalized NPs, whether there is modification by a demonstrative
-clitic or not. The demonstrative clitic merges with the head noun to the point
-where it is not certain whether it is still a clitic or already an inflectional
-prefix (\autoref{clitics_prenoun_dem}), that is, they do not have phrasal
-status like the postnominal determiners of Romanian, but they are not heads of
-DP like the prenominal determiners of Romanian either 
+present for untopicalized NPs, whether a demonstrative clitic is present as a
+modifier or not. The demonstrative clitic merges with the head noun to the
+point where it is not certain whether it is still a clitic or already an
+inflectional prefix (\autoref{clitics_prenoun_dem}), that is, they do not have
+phrasal status like the postnominal determiners of Romanian, but they are not
+heads of DP like the prenominal determiners of Romanian either
 \citep[299]{dindelegan2013}, due to their status as clitics.
 
-\pex\label{ex:ayericasenoart}
-	\a
-	\begingl
+\begin{figure}
+\ex\labels\label{ex:ayericasenoart}%
+\begin{minipage}[t]{.5\remaining}%
+	\tl\quad\begingl
 		\gla ang @ Sān //
 		\glb ang= Sān //
 		\glc \Aarg{}= Sān //
 		\glft `Sān' //
-	\endgl
+	\endgl\medskip
 
-	\a\begingl
+	\tl\quad\begingl
 		\gla ang @ eda- @ Sān //
 		\glb ang= eda= Sān //
 		\glc \Aarg{}= this= Sān //
 		\glft `this Sān' //
 	\endgl
-
-	\a\label{ex:naaadj}\begingl
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}%
+	\tl\quad\label{ex:naaadj}\begingl
 		\gla ang @ Sān nā //
 		\glb ang= Sān nā //
 		\glc \Aarg{}= Sān \Fsg{}.\Gen{} //
 		\glft `my Sān' //
-	\endgl
+	\endgl\medskip
 
-	\a\ljudge\ques\begingl
+	\tl\quad\ljudge\ques\begingl
 		\gla ang @ eda- @ Sān nā //
 		\glb ang= eda= Sān nā //
 		\glc \Aarg{}= this= Sān nā //
 		\glft `this Sān of mine' //
 	\endgl
+\end{minipage}
 \xe
+\end{figure}
 
 In all cases listed in (\ref{ex:ayericasenoart}), the case marker is present
 and marks the NP simply for agent case, irrespective of other elements.
 Characteristically, neither the demonstrative prefixes, nor the possessive
 pronoun/adjective in Ayeri mark case, while they do in German. The case marker
-thus cannot be simply left out, because the information it provides is not
+thus cannot simply be left out, because the information it provides is not
 redundant, strictly speaking. Where it \emph{is} left out, it marks the NP as
 topicalized and it is required, then, that the verb mark the topicalized NP's
-case. The same is also true of generic nouns:
+case. The same is also true of generic nouns, as shown in
+(\ref{ex:suffixcase}).
 
-\pex
-	\a
-	\begingl
+\begin{figure}
+\ex\labels\label{ex:suffixcase}%
+\begin{minipage}[t]{.5\remaining}%
+	\tl\quad\begingl
 		\gla veneyang //
 		\glb veney-ang //
 		\glc dog-\Aarg{} //
 		\glft `a/the dog' //
-	\endgl
+	\endgl\medskip
 
-	\a\begingl
+	\tl\quad\begingl
 		\gla eda- @ veneyang //
 		\glb eda= veney-ang //
 		\glc this= dog-\Aarg{} //
 		\glft `this dog' //
 	\endgl
-
-	\a\begingl
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}%
+	\tl\quad\begingl
 		\gla veneyang nā //
 		\glb veney-ang nā //
 		\glc dog-\Aarg{} \Fsg{}.\Gen{} //
 		\glft `my dog' //
-	\endgl
+	\endgl\medskip
 
-	\a\begingl
+	\tl\quad\begingl
 		\gla eda- @ veneyang nā //
 		\glb eda= veney-ang nā //
 		\glc this= dog-\Aarg{} \Fsg{}.\Gen{} //
 		\glft `this dog of mine' //
 	\endgl
+\end{minipage}
 \xe
+\end{figure}
 
 While it has been argued that Ayeri does not possess articles, it does possess
 a large variety of pronouns. These, as pro-forms, appear in complementary
 distribution with NPs. Since they encode morphosyntactic functions rather than
 semantic content, they are ideal candidates for heads of DP. DPs can be
-modified by those phrases which can modify nouns as well: NPs, APs and CPs,
-collectively referred to as XP below. The phrase structure of DPs should thus
-look as illustrated in (\ref{ex:dpstruct}) and (\ref{ex:dpcstruct}). The XP
-constituent is in brackets in both cases since it is optional, that is, it is
-an adjunct rather than a complement. The functional annotation identifies it as
-such.
+modified by APs and CPs, collectively referred to as XP in (\ref{ex:dpstruct}),
+which gives the phrase structure of DPs. The constituent structure resulting
+from this phrase structure definition is given in (\ref{ex:dpcstruct}). The XP
+constituent occurs optionally, that is, it is an adjunct rather than a
+complement. The functional annotation identifies it as such.
 
 \begin{figure}
-\pex\label{ex:dpstruct}
-\a DP → \anno*{\xhead{D}} $\left(\anno*[{\elem{\Adjc}}]{XP}\right)$
+\ex\label{ex:dpstruct}
+DP → \anno*{\xhead{D}} \anno*[{\elem{\Adjc}}]{XP}
 \xe
 
 \ex~\label{ex:dpcstruct}
@@ -1211,9 +1235,7 @@ such.
 [{\anno[\{\pass{\DF} | \pass{\GF}\}]{DP}}
 %	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}]
-		[{$\left(\anno[{%
-				\elem{\Adjc}%
-			}]{XP}\right)$
+		[{\anno[{\elem{\Adjc}}]{XP}
 		}]
 %	]
 ]
@@ -1673,7 +1695,7 @@ would be acceptable:
 					\[
 						\Pred	&	\normalfont{`$pro$'}\\
 						\Deix	&	$such$ \\
-					\],\\
+					\]\\
 					\[
 						\Pred	&	\normalfont{`red'}\\
 					\]
@@ -2201,7 +2223,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 					\Adjc	&	\{
 									\[
 										\Pred	&	`famous' \\
-									\], \\
+									\] \\
 									\[
 										\Pred		&	`$pro$' \\
 										\Prontype	&	$wh$ \\
@@ -2272,7 +2294,7 @@ occupies the final position in the NP, that is, the first adjunct to \xbar{N}:
 					\Adjc	&	\{
 									\[
 										\Pred	&	`beautiful' \\
-									\], \\
+									\] \\
 									\[
 										\Pred		&	`$pro$' \\
 										\Prontype	&	$wh$ \\
@@ -2544,7 +2566,7 @@ reciprocal pronoun could look like.
 												\Gend	&	\M \\
 												\Num	&	\Sg \\
 											\] \\
-							\],
+							\]
 							\[
 								\Pred	&	`Maha' \\
 								\Anim	&	$+$ \\
@@ -3107,7 +3129,7 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 					\Adjc	&	\{
 									\[
 										\Pred	&	`diligent' \\
-									\], \\
+									\] \\
 									\[
 										\Pred	&	`like' \\
 									\] \\
@@ -3392,7 +3414,7 @@ marking.
 					\Adjc	&	\{
 									\[
 										\Pred	&	`many' \\
-									\], \\
+									\] \\
 									\[
 										\Pred	&	`good' \\
 									\]
@@ -4386,7 +4408,7 @@ constructed in analogy to the one for an adjective modified by
 	\Adjc	&	\{
 					\[
 						\Pred	&	`many' \\
-					\],\\
+					\]\\
 					\[
 						\Pred	&	`drunk' \\
 						\Adjc	&	\{\[
@@ -4460,7 +4482,7 @@ constructed in analogy to the one for an adjective modified by
 					\Pred	&	`surprisingly' \\
 				\]\} \\
 			\]\} \\
-		\],\\
+		\]\\
 		\[
 			\Pred	&	`drunk' \\
 		\]\} \\
@@ -4578,10 +4600,10 @@ identified as modifying \rayr{/IknF}{-ikan} on the grounds of word order.
 		\Adjc	&	\{
 			\[
 				\Pred	&	`many' \\
-			\],\\
+			\]\\
 			\[
 				\Pred	&	`far too' \\
-			\],\\
+			\]\\
 			\[
 				\Pred	&	`drunk' \\
 			\]
@@ -6628,6 +6650,7 @@ languages have subjects, which goes counter to
 universal \citep[330--331]{bresnan2016}.
 
 \subsubsection{Topic}
+\label{subsubsec:topic}
 
 The notion of \textbf{topic} refers essentially to who or what a longer stretch
 of conversation is about. \citet{givon1983} defines the topic of a `thematic
@@ -6651,16 +6674,17 @@ possibilities \citep[174]{dixon2010a}.
 Topicality also interfaces with definiteness in that chain-initial topics may
 be definite (already introduced into discourse) or indefinite (newly introduced
 into discourse), while chain-medial topics and chain-final topics are always
-expected to be definite \citep[10]{givon1983}. \citet[171]{dixon2010a} adds that
-topic NPs are coreferential with arguments of clauses immediately preceding or
-following the current clause. Moreover, the strategy of passivization (in
-\Nom{}--\Acc{} languages) or of antipassivization (in \Erg{}--\Abs{} languages)
-exists, among others, in order to keep a certain discourse item persistent in
-the highly topical subject position even if it would otherwise be the object of
-the clause. This is related in turn to the notion of syntactic pivot in clause
-coordination \citep[172]{dixon2010a}.
+expected to be definite \citep[10]{givon1983}. \citet[171]{dixon2010a} adds
+that topic NPs are coreferential with arguments of clauses immediately
+preceding or following the current clause. Moreover, the strategy of
+passivization (in \Nom{}--\Acc{} languages) or of antipassivization (in 
+\Erg{}--\Abs{} languages) exists, among others, in order to keep a certain
+discourse item persistent in the highly topical subject position even if it
+would otherwise be the object of the clause. This is related in turn to the
+notion of syntactic pivot in clause coordination \citep[172]{dixon2010a}.
 
 \subsubsection{Focus}
+\label{subsubsec:focus}
 
 Regarding the definition of \textbf{focus}, \citet[174]{dixon2010a} only
 mentions contrastive focus, which basically raises the prominence of a certain
@@ -11546,7 +11570,7 @@ regular adverbs do (\ref{ex:verbintfstr}).
 	\Adjc	&	\{
 		\[
 			\Pred	&	`almost' \\
-		\],\\
+		\]\\
 		\[
 			\Pred	&	`fear' \\
 			\Case	&	\Caus \\
@@ -13511,6 +13535,7 @@ point of view of Head-driven Phrase-Structure Grammar (\textsc{hpsg};
 his analyses informed the below discussion of depictives.
 
 \subsubsection{Depictives}
+\label{subsubsec:depict}
 
 English examples of depictive adjectives were given in (\ref{ex:engsecpred}ab);
 moreover, NPs can also be depictive predicates in English, for instance in 
