@@ -13,10 +13,10 @@ Currently working on
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently being worked on:
 
 * Phrase structures (`chapters/syntax.tex`)
-    2. Adjective and adverb phrases
-    3. Adpositional phrases
-    4. Inflectional and verb phrases
-    5. Complementizer phrases
+    1. Adjective and adverb phrases
+    2. Adpositional phrases
+    3. Inflectional and verb phrases
+    4. Complementizer phrases
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
