@@ -2551,12 +2551,13 @@ no problems arise in finding the correct form for antecedents with differing
 person features. Example (\ref{ex:recpromorphlex}) shows the functional
 properties of the reciprocal pronoun.
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:recpromorphlex}
 	\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlex}}
 	\rayr{\larger sitnY}{sitanya}
-		& N
+		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `$pro$' \\
 			\ups{\Anim} & = & $\pm$ \\
@@ -2568,6 +2569,7 @@ properties of the reciprocal pronoun.
 	}
 \xe
 \end{morphlex}
+\end{figure}
 
 It is notable that \rayr{sitnY}{sitanya} cannot appear in agent case, since
 `each other' basically expresses that each entity is acted on by the other in
@@ -2576,12 +2578,12 @@ annotation by defining \Prontype{} as $recip$. Example
 (\ref{ex:eachotheravm}) illustrates what the \Avm{} for a sentence with a
 reciprocal pronoun could look like.
 
-\begin{figure}[htp]
+\begin{figure}
 \ex\label{ex:eachotheravm}
 \begingl
-	\gla Ang silvyan {} Kan nay Maha sitanyās. //
-	\glb ang silv-yan {} Kan nay Maha sitanya-as //
-	\glc \AgtT{} see-\TplM{} \Top{} Kan and Maha each.other-\Parg{} //
+	\gla Ang @ silvyan {} Kan nay Maha sitanyās. //
+	\glb ang= silv-yan Ø= Kan nay Maha sitanya-as //
+	\glc \AgtT{}= see-\TplM{} \Top{}= Kan and Maha each.other-\Parg{} //
 	\glft `Kan and Maha see each other.' //
 \endgl\medskip
 
@@ -2635,29 +2637,31 @@ reciprocal pronoun could look like.
 \xe
 \end{figure}
 
-In (\ref{ex:eachotheravm}), we have the case that the two coordinated subject
-NPs do not share the same features for \Gend{}, since \rayr{knF}{Kan} is a male
-name and \rayr{mh}{Maha} is a female name; the verb form \xayr{silFvFynF}
-{silvyan}{sees} resolves the conflicting values to \M{}. Furthermore, number is
-resolved to \Pl{} from two \Sg{} entities being combined. Resolution in verb
-agreement will be discussed in more detail in \autoref{sec:ips-vps}.
+In (\ref{ex:eachotheravm}), the two coordinated subject NPs do not share the
+same features for \Gend{}, since \rayr{knF}{Kan} is a male name and
+\rayr{mh}{Maha} is a female name; the verb form \xayr{silFvFynF}
+{silvyan}{sees} resolves the conflicting values to masculine. Furthermore,
+number is resolved to plural from two singular entities being combined.
+Resolution in verb agreement will be discussed in more detail in
+\autoref{sec:ips-vps}.
 
 \subsubsection{Resolution in third-person pronouns}
 
 % Mixed-gender coordinated NPs
 
-It may happen occasionally that a pronominal reference is to third persons of
-mixed genders. English has no problem here since it does not distinguish gender
-in plural, so both `John' and `Mary' in (\ref{ex:mfengl}) can simply be
-referred to by the pronoun \fw{them}, which is indifferent to gender (number
-resolution occurs). Since Ayeri's personal pronouns distinguish gender in the
-plural as well as in the singular, however, there needs to be a way to deal
-with groups whose person features cannot easily be unified, which an example is
-given of in (\ref{ex:mfayeri}). In addition to this, Ayeri has a two-tier
-system where three genders---masculine, feminine, neuter---are grouped together
-as animate, which is in opposition to inanimate gender, compare
-(\ref{ex:gramgend2}).
+As alluded to above, it may happen occasionally that a pronominal reference is
+to third persons of mixed genders. English has no problem here since it does
+not distinguish gender in plural, so both `John' and `Mary' in
+(\ref{ex:mfengl}) can simply be referred to by the pronoun \fw{them}, which is
+indifferent to gender (number resolution occurs). Since Ayeri's personal
+pronouns distinguish gender in the plural as well as in the singular, however,
+there needs to be a way to deal with groups whose person features cannot easily
+be unified, which an example is given of in (\ref{ex:mfayeri}). In addition to
+this, Ayeri has a two-tier system where three genders---masculine, feminine,
+neuter---are grouped together as animate, which is in opposition to inanimate
+gender, compare (\ref{ex:gramgend2}).
 
+\begin{figure}
 \pex
 \a\label{ex:mfengl}%
 	\textsc{context:} John and Mary \medskip \\
@@ -2667,15 +2671,17 @@ as animate, which is in opposition to inanimate gender, compare
 \a\label{ex:mfayeri}%
 	\textsc{context:} Ajān and Pila \medskip \\
 	\begingl
-	\gla Le ilyang tinkayye \textbf{cam}. //
-	\glb le il=yang tinkay-ye-Ø cam //
-	\glc \PatTI{} give=\Fsg{}.\Aarg{} key-\Pl{}-\Top{} \TplM{}.\Dat{} //
+	\gla Le @ ilyang tinkayye \textbf{cam}. //
+	\glb le= il=yang tinkay-ye-Ø cam //
+	\glc \PatTI{}= give=\Fsg{}.\Aarg{} key-\Pl{}-\Top{} \TplM{}.\Dat{} //
 	\glft `I give them the keys.' 
 	\hfill \{\M{},~\Sg{}\} $\cup$ \{\F{},~\Sg{}\} $\implies$ \{\M, \Pl\} //
 	\endgl
 \xe
+\end{figure}
 
-\ex~\label{ex:gramgend2}
+\begin{figure}
+\ex\label{ex:gramgend2}
 \begin{forest}
 [{[\Gend{}]}
 	[{[\Anim{} $+$]}
@@ -2689,15 +2695,15 @@ as animate, which is in opposition to inanimate gender, compare
 ]
 \end{forest}
 \xe
+\end{figure}
 
 If the group referred to has already served as the controller of verb
 agreement, it is to be expected that the person features of whatever the verb
 agreement indicates is simply carried through the conversation, if the
-resolution is justifiable. Otherwise, a speaker will have to decide on which
-object or oblique pronoun to use. In either case, an animacy hierarchy operates
-in that animate referents outweigh inanimate ones. Mixed animate groups often
-default to masculine, though not in all cases. The rules which operate are the
-following:
+resolution is justifiable. Otherwise, a speaker will have to decide which
+pronoun to use. In either case, an animacy hierarchy operates in that animate
+referents outweigh inanimate ones. Mixed animate groups often default to
+masculine, though not in all cases. The rules which operate are the following:
 
 \begin{enumerate}
 \item If the conjuncts are of the same grammatical gender, use that. No
@@ -2766,7 +2772,7 @@ apparent gender.
 \citet{corbett2006} quotes the Russian word {\FS врач}
 \fw{vrač} `(woman) doctor', which is masculine at the level of syntax, but can
 be used to refer to female doctors alike at the level of semantics, hence
-triggering feminine agreement in more than half of examined relevant cases
+triggering feminine agreement in more than half of the examined relevant cases
 \citep[158]{corbett2006}. Another example is German \fw{Mädchen} `girl',
 which is syntactically neuter, but semantically feminine.\footnote{The same
 goes for the German neuter \fw{Weib} \parencite[compare][165--166]
@@ -2804,18 +2810,21 @@ Of nouns referring to living beings of both sexes, there are \xayr{bjhi}{bayhi}
 \xayr{lyYaaj}{lajāy}{student}, \xayr{lednF}{ledan}{friend}, and
 \xayr{soby}{sobaya}{teacher}, for instance. All of these should be treated as
 animate neuters, factually, however, agreement is usually semantic in these
-cases, if justified:
+cases, if justified---compare (\ref{ex:childsem}).
 
+\begin{figure}
 \ex\label{ex:childsem}\begingl
-	\gla Yam il-ilya badanang gan$_i$ ajamley yena$_i$. //
-	\glb yam il\til{}il-ya badan-ang gan-Ø ajam-ley yena //
-	\glc \DatT{} \Iter{}\til{}give-\TsgM{} father-\Aarg{} child-\Top{}
+	\gla Yam @ il-ilya badanang gan$_i$ ajamley yena$_i$. //
+	\glb yam= il\til{}il-ya badan-ang gan-Ø ajam-ley yena //
+	\glc \DatT{}= \Iter{}\til{}give-\TsgM{} father-\Aarg{} child-\Top{}
 		toy-\PargI{} \TsgF{}.\Gen{} //
-	\glft `The child, the father gives her her toy back.' //
+	\glft \textit{Literally:} `The child, the father gives her her toy 
+		back.' //
 \endgl\xe
+\end{figure}
 
-The English translation of (\ref{ex:childsem}) is slightly odd in that `child'
-is resumed by `her', but in Ayeri \xayr{gnF}{gan}{child} is permissible as the
+The English translation of this example is slightly odd in that `child' is
+resumed by `her', but in Ayeri \xayr{gnF}{gan}{child} is permissible as the
 referent of \xayr{yen}{yena}{her}. Since \xayr{bdnF}{badan}{father} denotes a
 male person, it would be odd for the feminine pronoun to be covariant with
 \rayr{bdnF}{badan}---the only other permissible reading is that \rayr{yen}
@@ -2847,24 +2856,26 @@ denoted by the word as such is taken as the unit of reference. This is
 illustrated by (\ref{ex:ayrcommitteenoun}). The canonical gender of the words
 is thus also animate neuter.
 
+\begin{figure}
 \ex\label{ex:ayrcommitteenoun}\begingl
-	\gla Ang menuyo pandaha pandāpanas yona. //
-	\glb ang menu-yo pandaha-Ø pandāpan-as yona //
-	\glc \AgtT{} visit-\TsgN{} family-\Top{} relatives-\Parg{} 
+	\gla Ang @ menuyo pandaha pandāpanas yona. //
+	\glb ang= menu-yo pandaha-Ø pandāpan-as yona //
+	\glc \AgtT{}= visit-\TsgN{} family-\Top{} relatives-\Parg{} 
 		\TsgN{}.\Gen{} //
 	\glft `The family is visiting its relatives.' //
 \endgl\xe
+\end{figure}
 
-Here we have animate neuter singular agreement on the verb, as well as on the
-possessive pronoun: both agree syntactically with \xayr{pMdh}{pandaha}{family}
-as expected. However, \citet{corbett2006} points out that cross-linguistically,
-there is a likelihood of semantic agreement creeping in, and that different
-constituents are differently affected by this, so that he arrives with the
-gradient described in (\ref{ex:agrhier})---the agreement hierarchy.
+Example (\ref{ex:ayrcommitteenoun}) displays animate neuter singular agreement
+on the verb, as well as on the possessive pronoun: both agree syntactically
+with \xayr{pMdh}{pandaha}{family} as expected. However, \citet{corbett2006}
+points out that cross-linguistically, there is a likelihood of semantic
+agreement to creep in, and that different constituents are differently affected
+by this, so that he arrives with the gradient described in
+(\ref{ex:agrhier})---the agreement hierarchy.
 
 \ex\label{ex:agrhier}%
-	Agreement hierarchy \citep[206\psqq]{corbett2006}:\medskip
-
+	Agreement hierarchy \citep[206\psqq]{corbett2006}:\medskip\\
 	attribute $>$ predicate $>$ relative pronoun $>$ personal pronoun
 \xe
 
@@ -2876,14 +2887,16 @@ intervening decrease)}. That is, agreement of a target according to the
 syntactic features of its agreement controller are becoming increasingly likely
 as we go from right to left, whereas agreement according to a controller's
 semantic features become increasingly likely as we go from left to right.
-\citet{fleischer2012} also finds that at least with regards to agreement
+\citet{fleischer2012} also finds that, at least with regards to agreement
 triggered by the German lexical hybrid \fw{Weib} `woman' as surveyed under a
-diachronic perspective that the distance between a controller and its target
+diachronic perspective, the distance between a controller and its target
 also plays some role in semantic agreement being triggered. This effect is also
 to be expected in Ayeri, and, according to \citet{corbett2006}'s agreement
 hierarchy, especially so for personal pronouns, which we have discussed in this
-subsection. Thus, (\ref{ex:ayrcommitteenoun}) might be followed up with:
+subsection. Thus, (\ref{ex:ayrcommitteenoun}) might be followed up with the
+sentence in (\ref{ex:ayrcommitteenoun_2}).
 
+\begin{figure}
 \ex\label{ex:ayrcommitteenoun_2}\begingl
 	\gla Tang mino tadayya si girendtang panca. //
 	\glb tang mino taday-ya si girend=tang panca //
@@ -2891,24 +2904,23 @@ subsection. Thus, (\ref{ex:ayrcommitteenoun}) might be followed up with:
 		finally //
 	\glft `They are happy when they finally arrive.' //
 \endgl\xe
+\end{figure}
 
-In (\ref{ex:ayrcommitteenoun_2}), suddenly, anaphora relating to \xayr{pMdh}
-{pandaha}{family} before---the subject pronoun \xayr{tNF}{tang}{they} as well
-as the pronominal suffix of the verb \xayr{gireMdFtNF}{girendtang}{they
-arrive}---switch to animate masculine plural; semantic agreement has been
-triggered, and gender and number resolution thus occur. The pronoun of choice
-is masculine, since this is the default gender for mixed-gender groups of
-living beings, and plural, since \rayr{pMdh}{pandaha} denotes a group of
-people.
-
-However, no statistics for Ayeri have been compiled on this issue to date, and
-least of all across a variety of literary genres and across different simulated
-historical stages of the language. Another difficulty in this regard is that
-all existing texts in Ayeri are translations from English or German, and
-conceived as more or less carefully crafted written texts. Any statistics on
-the effect of distance on semantic agreement (if it can at all be found) will
-thus likely be skewed as compared to the output of native speakers, both
-written and spoken.
+Here, suddenly, anaphora relating to \xayr{pMdh}{pandaha}{family} before---the
+subject pronoun \xayr{tNF}{tang}{they} as well as the pronominal suffix of the
+verb \xayr{gireMdFtNF}{girendtang}{they arrive}---switch to animate masculine
+plural; semantic agreement has been triggered, and gender and number resolution
+thus occur. The pronoun of choice is masculine, since this is the default
+gender for mixed-gender groups of living beings, and plural, since
+\rayr{pMdh}{pandaha} denotes a group of people. However, no statistics for
+Ayeri have been compiled on this issue to date, and least of all across a
+variety of literary genres and across different (simulated) historical stages
+of the language.\footnote{Another difficulty in this regard is that all
+existing texts in Ayeri are translations from English or German, and conceived
+as more or less carefully crafted written texts. Any statistics on the effect
+of distance on semantic agreement (if it can at all be found) will thus likely
+be skewed as compared to the output of native speakers, both written and
+spoken.}
 
 \subsection{Nominal clitics}
 \label{subsec:nomcl}
