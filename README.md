@@ -13,7 +13,6 @@ Currently working on
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently being worked on:
 
 * Phrase structures (`chapters/syntax.tex`)
-    1. Noun and determiner phrases
     2. Adjective and adverb phrases
     3. Adpositional phrases
     4. Inflectional and verb phrases
@@ -52,6 +51,8 @@ The table of contents encompasses the following topics so far; the LaTeX source 
    6. Adverbs
    7. Numerals
    8. Conjunctions
+5. Phrase structures (`chapters/syntax.tex`)
+   1. Noun and determiner phrases
 
 Compiling
 =========
