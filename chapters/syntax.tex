@@ -2362,7 +2362,7 @@ shown in (\ref{ex:sikanadj}).
 \subsubsection{Indefinite pronouns}
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
-phrases and semantic roles: they may substitute NPs, but also PPs; and they may
+phrases and semantic roles: they may substitute NPs, but also PPs. They may
 also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
 various oblique arguments (\Possr, \Oblq{loc}, \Oblq{ins}, \Oblq{caus}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
@@ -2370,8 +2370,8 @@ decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
 and \textsc{reason} are invariant. Thus, \xayr{EnY}{enya}{everyone/%
 \mbox{-thing}}, \xayr{ArilinY}{arilinya}{somebody/\mbox{-thing}}, and
 \xayr{rnY}{ranya} {nobody/\mbox{-thing}} can be declined for all cases, while
-the groups around \xayr{ynenF}{yanen}{everywhere} and \xayr{tdyen}{tadayen}
-{everytime} always imply location (=\,\Loc{}), the group around
+the groups around \xayr{ynenF}{yanen}{everywhere} and \xayr{tdyenF}{tadayen}
+{everytime} always imply location (=\,\Loc{}); the group around
 \xayr{AreenF}{arēn}{in every way} implies a manner (=\,\Ins{}), and
 \xayr{yaarilF}{yāril}{for some reason} implies a reason (=\,\Caus{}).
 
@@ -2380,18 +2380,18 @@ Regarding the functional definition of indefinite pronouns, at least
 not transcribe them as [\Pred{} `$pro$'] with additional functional annotations
 from which the surface form arises, but simply like [\Pred{} `somebody']. Since
 indefinite pronouns are not composed in a systematic way, I will treat them as
-lexical items proper here as well. For a discussion of a few regularities that
-nonetheless exist, see \autoref{indefprocomp} (p.~\pageref{indefprocomp}).
-Example (\ref{ex:indefprostruct}) attempts to model the c- and f-structure of a
-sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
-{yanen}{everywhere}.
+lexical items proper here as well. For a discussion of a few regularities in
+word composition that nonetheless exist, see \autoref{indefprocomp}
+(p.~\pageref{indefprocomp}). Example (\ref{ex:indefprostruct}) attempts to
+model the c- and f-structure of a sentence containing an indefinite pronoun
+indicating place, \xayr{ynenF} {yanen}{everywhere}.
 
 \begin{figure}[htp]
 \ex\label{ex:indefprostruct}
 \begingl
-	\gla Balangya yanen ang Amān. //
-	\glb balang-ya yanen ang Amān //
-	\glc search-\TsgM{} everywhere \Aarg{} Amān //
+	\gla Balangya yanen ang @ Amān. //
+	\glb balang-ya yanen ang= Amān //
+	\glc search-\TsgM{} everywhere \Aarg{}= Amān //
 	\glft `Amān searched everywhere.' //
 \endgl\medskip
 
@@ -2442,21 +2442,22 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 
 The annotation in example (\ref{ex:indefprostruct}) assumes that by its lexical
 meaning alone, \xayr{ynenF}{yanen}{everywhere} is identified as the locative
-adverbial stated in the verb's a-structure (a possible \Obj{} has been
-dropped from the example). \rayr{ANF AmaanF}{ang Amān} itself does not mark
-\TsgM{}, but the \Subj{} relation gets this information through unison with the
-respective marking on the verb with which the subject NP proper coheres. The
-relevant information is implicitly contained in the NP's \Index{} feature
-\citep[186--192]{bresnan2016}, which is not shown in the example above. Example
-(\ref{ex:indefpromorphlex}) gives a generalized list of features which
+adverbial stated in the verb's a-structure (a possible \Obj{} has been dropped
+from the example). \rayr{ANF AmaanF}{ang Amān} itself does not mark
+\TsgM{}, but the \Subj{} relation receives this information through unification
+with the respective marking on the verb with which the subject NP proper
+coheres. The relevant information is implicitly contained in the NP's \Index{}
+feature \citep[186--192]{bresnan2016}, which is not shown in the example above.
+Example (\ref{ex:indefpromorphlex}) gives a generalized list of features which
 indefinite pronouns may encode.
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:indefpromorphlex}
 	\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
-		& N
+		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
 			(\ups{\Anim} & = & $\pm$) \\
@@ -2467,30 +2468,38 @@ indefinite pronouns may encode.
 	}
 \xe
 \end{morphlex}
+\end{figure}
 
 As noted above, only those indefinite pronouns referring to persons or things
-decline for case, and thus also for animacy for agents and patients; for other
-indefinite pronouns, functional information is provided by the lexicon, as
-described for \rayr{ynenF}{yanen} in (\ref{ex:indefprostruct}). Regarding their
-distribution, indefinite pronouns behave like personal pronouns in that it is
-not possible for them to be modified by nominal or adjectival adjuncts, at
-least formally:
+decline for case, and thus also for animacy with agent and patient antecedents;
+for other indefinite pronouns, functional information is provided by the
+lexicon, as described for \rayr{ynenF}{yanen} in (\ref{ex:indefprostruct}).
+Regarding their distribution, indefinite pronouns behave like personal pronouns
+in that it is not possible for them to be modified by nominal or adjectival
+adjuncts, at least formally, as illustrated in (\ref{ex:indefproadj}).%
+\footnote{However, \xayr{leno}{leno}{blue} in (\ref{ex:indefproadj_1}) may be
+analyzed as a depictive secondary predicate referring to \xayr{EnYlej}{enyaley}
+{everything}, compare \autoref{subsubsec:depict}
+(p.~\pageref{subsubsec:depict}). The example is marked ungrammatical here since
+this is not the intended reading.}
 
+\begin{figure}
 \pex\label{ex:indefproadj}
-\a\ljudge*\begingl
-	\gla Ang vacye enyaley leno //
-	\glb ang vac=ye.Ø enya-ley leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} blue //
+\a\label{ex:indefproadj_1}\ljudge*\begingl
+	\gla Ang @ vacye enyaley leno //
+	\glb ang= vac=ye.Ø enya-ley leno //
+	\glc \AgtT{}= like=\TsgF{}.\Top{} everything-\PargI{} blue //
 	\glft `She likes everything blue.' //
 \endgl
 
-\a\ljudge*\begingl
-	\gla Ang sarayan yāril agon. //
-	\glb ang sara=yan.Ø yāril agon //
-	\glc \AgtT{} go=\TplM{}.\Top{} somewhere foreign //
+\a\label{ex:indefproadj_2}\ljudge*\begingl
+	\gla Ang @ sarayan yāril agon. //
+	\glb ang= sara=yan.Ø yāril agon //
+	\glc \AgtT{}= go=\TplM{}.\Top{} somewhere foreign //
 	\glft `They are going somewhere foreign.' //
 \endgl
 \xe
+\end{figure}
 
 Instead, it is necessary to modify the indefinite pronoun with a relative
 clause as illustrated by (\ref{ex:indefproadjpc}). Alternatively, it is
@@ -2499,37 +2508,39 @@ possible to use a generic noun instead of the indefinite pronoun, like
 {yano}{place} instead of \xayr{yaarilF}{yāril}{somewhere} in
 (\ref{ex:indefproadjgennoun}).
 
+\begin{figure}
 \pex\label{ex:indefproadjpc}
 \a\begingl
-	\gla Ang vacye enyaley si leno //
-	\glb ang vac=ye.Ø enya-ley si leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} everything-\PargI{} \Rel{} blue //
+	\gla Ang @ vacye enyaley si leno //
+	\glb ang= vac=ye.Ø enya-ley si leno //
+	\glc \AgtT{}= like=\TsgF{}.\Top{} everything-\PargI{} \Rel{} blue //
 	\glft `She likes everything that is blue.' //
 \endgl
 
 \a\begingl
-	\gla Ang sarayan yāril si agon. //
-	\glb ang sara=yan.Ø yāril si agon //
-	\glc \AgtT{} go=\TplM{}.\Top{} somewhere \Rel{} foreign //
+	\gla Ang @ sarayan yāril si agon. //
+	\glb ang= sara=yan.Ø yāril si agon //
+	\glc \AgtT{}= go=\TplM{}.\Top{} somewhere \Rel{} foreign //
 	\glft `They are going somewhere that is foreign.' //
 \endgl
 \xe
 
 \pex~\label{ex:indefproadjgennoun}
 \a\begingl
-	\gla Ang vacye linyayeley leno //
-	\glb ang vac=ye.Ø linya-ye-ley leno //
-	\glc \AgtT{} like=\TsgF{}.\Top{} thing-\Pl{}-\PargI{} blue //
+	\gla Ang @ vacye linyayeley leno //
+	\glb ang= vac=ye.Ø linya-ye-ley leno //
+	\glc \AgtT{}= like=\TsgF{}.\Top{} thing-\Pl{}-\PargI{} blue //
 	\glft `She likes all blue things.' //
 \endgl
 
 \a\begingl
-	\gla Ang sarayan yanoya agon. //
-	\glb ang sara=yan.Ø yano-ya agon //
-	\glc \AgtT{} go=\TplM{}.\Top{} place-\Loc{} foreign //
+	\gla Ang @ sarayan yanoya agon. //
+	\glb ang= sara=yan.Ø yano-ya agon //
+	\glc \AgtT{}= go=\TplM{}.\Top{} place-\Loc{} foreign //
 	\glft `They are going to a foreign place.' //
 \endgl
 \xe
+\end{figure}
 
 \subsubsection{Reciprocal pronoun}
 
