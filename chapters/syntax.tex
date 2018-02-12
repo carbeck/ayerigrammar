@@ -1248,55 +1248,57 @@ DP → \anno*{\xhead{D}} \anno*[{\elem{\Adjc}}]{XP}
 
 The morpholexic specifications for personal pronouns are given in
 (\ref{ex:perspromorphlex}). Personal pronouns, as a functional category, are a
-closed class of words; the chart of personal pronouns in Ayeri is given in
+closed class of words. The chart of personal pronouns in Ayeri is given in
 \autoref{subsec:perspro}. Since personal pronouns are pro-forms, they do not
 have lexical content for a predicator, but only `$pro$'. Pronouns distinguish
-all grammatical categories of nouns---number, gender and animacy, and case;
+all grammatical categories of nouns---number, gender, animacy, and case;
 they agree with their antecedents in number, gender, and animacy. In addition
 to these person features, pronouns of course also encode person as a deictic
 category. The reflexive clitic \rayr{sitNF/}{sitang-} also redefines the
 personal pronoun as reflexive.
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:perspromorphlex}
 \adjustbox{valign=t}{%
 \begin{tabu} {\usetabu{morphlexnarrow}}
 ...
-	& N
-	& \begin{tabular}[t]{l l l}
-		\ups{\Pred} & = & `$pro$' \\
-		\ups{\Anim} & = & $\pm$ \\
-		\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, \Ins{}, 
-			\Caus{}\} \\
-		\ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
-		\ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
-		\ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		(\ups{\Prontype} & = & \Refl) \\
+	& D
+	& \begin{tabular}[t]{l l l l l}
+		  & \ups{\Pred} & = & `$pro$' \\
+		  & \ups{\Anim} & = & $\pm$ \\
+		  & \ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, \Loc{}, 
+		  	\Ins{}, \Caus{}\} \\
+		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
+		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+		( & \ups{\Prontype} & = & \Refl) & ) \\
 	\end{tabular}
 \end{tabu}%
 }
 \xe
 \end{morphlex}
+\end{figure}
 
-Personal pronouns, as an exception to the phrase-structure definition in 
-(\ref{ex:dpstruct}), cannot be modified by adjectives and nominal adjuncts,
-however, they may still be modified by relative clauses as well as clitic
-quantifiers. Modification by a quantifier clitic is only possible for personal
-pronouns when they are free morphemes, though; modification of pronominal
-suffixes by quantifiers is not possible, as described in
-\autoref{subsec:reflrec}---a reflexive particle is needed here to attach the
-quantifier to. The examples in (\ref{ex:nonounmods}) show what is not possible
-as compared to nouns.
+Personal pronouns, as an exception to the phrase-structure definition in
+(\ref{ex:dpstruct}), cannot be modified by adjectives, however, they may still
+be modified by relative clauses as well as clitic quantifiers. Modification by
+a quantifier clitic is only possible for personal pronouns when they are free
+morphemes. Modification of pronominal suffixes by quantifiers is not possible,
+as described in \autoref{subsec:reflrec}---a reflexive particle is needed here
+to attach the quantifier to. The examples in (\ref{ex:nonounmods}) show what is
+not possible as compared to nouns.
 
+\begin{figure}
 \pex\label{ex:nonounmods}
-\a\ljudge* %
+\a%
 	\begin{minipage}[t]{.5\linewidth}
 	\begingl
 		\glpreamble pronoun + adjective: //
-		\gla yāng hiro //
-		\glb yāng hiro //
-		\glc \TsgM{}.\Aarg{} new //
-		\glft `new he' //
+		\gla * @ yāng hiro //
+		\glb {} yāng hiro //
+		\glc {} \TsgM{}.\Aarg{} new //
+		\glft \hphantom{*}`new he' //
 	\endgl
 	\end{minipage}
 	% ~
@@ -1313,14 +1315,14 @@ as compared to nouns.
 	% ]
 	% \end{forest}
 
-\a\ljudge* %
+\a%
 	\begin{minipage}[t]{.5\linewidth}
 	\begingl
 		\glpreamble pronoun + possessor: //
-		\gla reng ayonena //
-		\glb reng ayon-ena //
-		\glc \TsgI{}.\Aarg{} man-\Gen{} //
-		\glft `the man's it' //
+		\gla * @ reng ayonena //
+		\glb {} reng ayon-ena //
+		\glc {} \TsgI{}.\Aarg{} man-\Gen{} //
+		\glft \hphantom{*}`the man's it' //
 	\endgl
 	\end{minipage}
 	% ~
@@ -1337,14 +1339,14 @@ as compared to nouns.
 	% ]
 	% \end{forest}
 
-\a\ljudge* %
+\a%
 	\begin{minipage}[t]{.5\linewidth}
 	\begingl
 		\glpreamble pronoun + instrumental complement: //
-		\gla nang bariri //
-		\glb nang bari-ri //
-		\glc \Fpl{}.\Aarg{} meat-\Ins{} //
-		\glft `we of meat' //
+		\gla * @ nang bariri //
+		\glb {} nang bari-ri //
+		\glc {} \Fpl{}.\Aarg{} meat-\Ins{} //
+		\glft \hphantom{*}`we of meat' //
 	\endgl
 	\end{minipage}
 	% ~
@@ -1362,6 +1364,7 @@ as compared to nouns.
 	% \end{forest}
 
 \xe
+\end{figure}
 
 As mentioned above, it is possible for pronouns to be modified by relative
 clauses, which is illustrated by (\ref{ex:pronounrelc}). In this example, the
@@ -1406,12 +1409,13 @@ why the feature definitions in (\ref{ex:dempromorphlex}) list a \Deix{} feature
 encoding $this$, $that$, and $such$, rather than a binary \Prox{} or \Dist{}
 feature.
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:dempromorphlex}
 \adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
-		& N
+		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `$pro$' \\
 			\ups{\Deix} & = & \{$this$, $that$, $such$\} \\
@@ -1419,11 +1423,13 @@ feature.
 			\ups{\Anim} & = & $\pm$ \\
 			\ups{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
+			\ups{\Prontype} & = & $dem$ \\
 		\end{tabular}
 	\end{tabu}%
 }
 \xe
 \end{morphlex}
+\end{figure}
 
 Regarding the ability of demonstrative pronouns to be modified, it is
 necessary to distinguish the proximal \rayr{Ed/}{eda-} and distal
@@ -1436,55 +1442,58 @@ which is why I will keep `indefinite' here.} The issue at hand here is that the
 proximal and distal demonstrative pronouns proper are not usually modified,
 while the indefinite one can be, as demonstrated in \autoref{subsec:dempro};
 example (\ref{ex:danyatop}) from this section is repeated here as
-(\ref{ex:danyatop2}) for convenience:
+(\ref{ex:danyatop2}) for convenience.
 
+\begin{float}
 \pex
 \a\ljudge\ques\begingl
-	\gla Sa noyang edanya tuvo. //
-	\glb sa no=yang edanya-Ø tuvo //
-	\glc \PatT{} want=\Fsg{}.\Aarg{} this.one-\Top{} red //
+	\gla Sa @ noyang edanya tuvo. //
+	\glb sa= no=yang edanya-Ø tuvo //
+	\glc \PatT{}= want=\Fsg{}.\Aarg{} this.one-\Top{} red //
 	\glft `I want this red one.' //
 \endgl
 
 \a\ljudge\ques\begingl
-	\gla Sa noyang adanya tuvo. //
-	\glb sa no=yang adanya-Ø tuvo //
-	\glc \PatT{} want=\Fsg{}.\Aarg{} that.one-\Top{} red //
+	\gla Sa @ noyang adanya tuvo. //
+	\glb sa= no=yang adanya-Ø tuvo //
+	\glc \PatT{}= want=\Fsg{}.\Aarg{} that.one-\Top{} red //
 	\glft `I want that red one.' //
 \endgl
 
 \a\label{ex:danyatop2}\begingl
-	\gla Sa noyang danya tuvo. //
-	\glb sa no=yang danya-Ø tuvo //
-	\glc \PatT{} want=\Fsg{}.\Aarg{} such-\Top{} red //
+	\gla Sa @ noyang danya tuvo. //
+	\glb sa= no=yang danya-Ø tuvo //
+	\glc \PatT{}= want=\Fsg{}.\Aarg{} such-\Top{} red //
 	\glft `I want the red one.' //
 \endgl
 \xe
+\end{float}
 
-Related to the ability of indefinite demonstrative pronouns to be modified by
-adjuncts is also the formation of complex demonstratives which incorporate an
-adjective, both generic and possessive. To repeat (\ref{ex:redone}) from 
-\autoref{subsec:dempro} for illustration:
+In relation to the ability of indefinite demonstrative pronouns to be modified
+by adjuncts, it is also possible to form complex demonstratives which
+incorporate an adjective, both generic and possessive. To repeat
+(\ref{ex:redone}) from \autoref{subsec:dempro} for illustration:
 
 \ex\label{ex:redone2}\begingl
-	\gla Sa noyang da-tuvo. //
-	\glb sa no=yang da=tuvo.Ø //
-	\glc \PatT{} want=\Fsg{}.\Aarg{} such=red.\Top{} //
+	\gla Sa @ noyang da-tuvo. //
+	\glb sa= no=yang da=tuvo.Ø //
+	\glc \PatT{}= want=\Fsg{}.\Aarg{} such=red.\Top{} //
 	\glft `I want the red one.' //
 \endgl\xe
 
 It has been argued in \autoref{clitics_preadj_da} that \rayr{d/}{da-} in this
 case is a simple clitic, as it appears in the same position as the full form
-\rayr{dnY}{danya}; the result is complex demonstrative form which is
+\rayr{dnY}{danya}; the result is a complex demonstrative form which is
 inflectable for case. How to represent this in terms of a feature matrix,
 though? For one, the adjective loses its ability to carry comparison morphology
 (whether it is interpreted as inflectional or clitic) when being incorporated
 into a demonstrative form, so it is not possible to say
-(\ref{ex:demadjsupl1_2}) and the effective meaning of (\ref{ex:demadjsupl2_2})
+(\ref{ex:demadjsupl1_2}), and the effective meaning of (\ref{ex:demadjsupl2_2})
 differs from what is intended, since \rayr{-vaa}{-vā} is interpreted in its
 regular, non-grammaticalized meaning here. Thus, in these cases, the
 demonstrative must be used in the full form (\ref{ex:demfreeadjsupl}).
 
+\begin{figure}
 \pex
 \a\label{ex:demadjsupl1_2}\ljudge*\begingl
 	\gla da-tuvo-vāas //
@@ -1508,6 +1517,7 @@ demonstrative must be used in the full form (\ref{ex:demfreeadjsupl}).
 	\glft `the reddest one' //
 \endgl
 \xe
+\end{figure}
 
 The form with the incorporated adjective is basically the same as that of a
 noun modified by \rayr{d/}{da-}, so it was assumed previously that the
@@ -1519,7 +1529,7 @@ to a noun together with the root adjective in the way it is possible, for
 example, in German to form the deadjectival nouns \fw{das Große} `what is
 big/great' (for instance, \fw{im Großen} `on a large scale') and \fw{das
 Größte} `the greatest thing' from the adjective \fw{groß} `big, large, great'
-and its superlative form \fw{größt-} `biggest, greatest'; the superlative
+and its superlative form \fw{größt-} `biggest, greatest', the superlative
 suffix being \fw{-(e)st}. Both c- and f-structure should thus look different
 for the unincorporated and the incorporated adjective, respectively. Example
 (\ref{ex:danyaastuvo}) illustrates what the c- and f-structure for the
@@ -1549,7 +1559,7 @@ unincorporated adjective looks like.
 			\Pred	& `$pro$' \\
 			\Anim	& $+$ \\
 			\Case	& \Parg \\
-			\Deix	& $such$ \\
+			\Prontype	& $dem$ \\
 			\Adjc	& \{\[
 						\Pred	& `red' \\
 					\]\} \\
@@ -1571,6 +1581,7 @@ fact that the gender of the compound depends on that of the referred-to entity
 homophones---like \xayr{tuvo} {tuvo}{red}---the correct interpretation is
 dependent on context.
 
+\begin{figure}
 \pex\label{ex:danoungender}
 \a\begingl
 	\glpreamble \textsc{context:} an apple (\rayr{sejgo}{seygo}, \An{}): //
@@ -1588,6 +1599,7 @@ dependent on context.
 	\glft `... the red one' // 
 \endgl
 \xe
+\end{figure}
 
 If we stay with the analysis that \rayr{d/}{da-} is a simple clitic and thus
 equivalent to the full form \rayr{dnY}{danya} (albeit restricted in its use),
@@ -1632,7 +1644,7 @@ see.
 \begin{avm}
 \[\Obj & \[
 			\Pred	& `$pro$' \\
-			\Deix	& $such$ \\
+			\Prontype	& $dem$ \\
 			\Adjc	& \{\[
 						\Pred	& `red' \\
 						\Anim	& $-$ \\
@@ -1645,14 +1657,14 @@ see.
 \xe
 \end{figure}
 
-One question is, whether the \Avm{} in this case should look like the one in
-(\ref{ex:danyaastuvoavm}), since now it is the adjective which carries the
-nominal inflections. Strictly speaking, the functional annotation for the
-case marker should appear along with the adjective's \Pred{} under the
-\Adjc{} relation (\ref{ex:daadjcaseavm}b). Since \Lfg{} postulates that all
-semantic information is inherited upwards with an intersection operation
-applied at each node in a syntactic tree, DP will still contain all the
-relevant information in a consistent manner.
+One question with regards to this is, whether the \Avm{} in this case should
+look like the one in (\ref{ex:danyaastuvoavm}), since now it is the adjective
+which carries the nominal inflections. Strictly speaking, the functional
+annotation for the case marker should appear along with the adjective's \Pred{}
+under the \Adjc{} relation (\ref{ex:daadjcaseavm}b). Since \Lfg{} postulates
+that all semantic information is inherited upwards with an intersection
+operation applied at each node in a syntactic tree, DP will still contain all
+the relevant information in a consistent manner.
 
 Another question is where in the tree \rayr{d/}{da-} should appear as a clitic.
 A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
@@ -1667,10 +1679,11 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 {da-tuvoley} as a portmanteau item with two \Pred{} values, like
 (\ref{ex:doublepred}).
 
+\begin{figure}
 \ex\label{ex:doublepred} *\begin{avm}
 \[\Obj{}	& \[
 				\Pred	&	\{
-								\normalfont{`$pro$'},\\
+								\normalfont{`$pro$'}\\
 								\normalfont{`red'}\\
 							\}\\
 				\Anim	& $-$ \\
@@ -1680,21 +1693,24 @@ wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
 \]
 \end{avm}
 \xe
+\end{figure}
 
-\noindent The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness
-condition, though: \textcquote[45]{bresnan2016}{Every attribute has a unique
-value}, that is, no attribute may have more than one value assigned to it, but
-we just did this for \Pred{} by assigning both `$pro$' and `red' to it. Thus,
-in order not to violate this principle, the question is whether a list of
-\Pred{} attributes (like \Adjc{} lists, or whenever coordination is involved)
-would be acceptable:
+The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness condition, though:
+\textcquote[45]{bresnan2016}{Every attribute has a unique value}, that is, no
+attribute may have more than one value assigned to it, but we just did this for
+\Pred{} by assigning both `$pro$' and `red' to it. Thus, in order not to
+violate this principle, the question is whether a list of \Pred{} attributes of
+the kind seen in \Adjc{} lists or whenever coordination is involved, would be
+acceptable, compare (\ref{ex:demadjcomppred}).
 
-\ex \ques\begin{avm}
+\begin{figure}
+\ex\label{ex:demadjcomppred}%
+\ques\begin{avm}
 \[\Obj{}	& \[\avmspan{%
 				\{
 					\[
 						\Pred	&	\normalfont{`$pro$'}\\
-						\Deix	&	$such$ \\
+						\Prontype	&	$dem$ \\
 					\]\\
 					\[
 						\Pred	&	\normalfont{`red'}\\
@@ -1706,27 +1722,30 @@ would be acceptable:
 \]
 \end{avm}
 \xe
+\end{figure}
 
 Another way to look at this problem is to analyze \rayr{d/tuvolej}{da-tuvoley}
 by means of inside-out functional uncertainty.\footnote{To come back to our
 analogy with \textsc{html} et al., inside-out functional uncertainty is similar
 to traversing the \textsc{dom} tree upwards in jQuery with
-\texttt{\$(this).parent($selector$).attr($key$)}.} \citet[144] {dalrymple2001}
-gives an example from Warlpiri (from \cite[136]{nordlinger1998}, attributed to
-\cite{simpson1991}) which contains a noun with double case marking. This
-example may serve as a template for a solution to our question, since here as
-well one lexeme, \fw{pirli-ngka-rlu}, unites two instances of the same feature.
+\texttt{\$(this).parent($selector$).attr($key$)}.} \citet[144]{dalrymple2001}
+gives an example from Warlpiri which contains a noun with double case marking.
+This example may serve as a template for a solution to our question, since here
+as well one lexeme, \fw{pirli-ngka-rlu}, unites two instances of the same
+feature, compare (\ref{ex:warldblcase}). She explains that the stacked case
+marking in \fw{pirli-ngka-rlu} `rock-\Loc {}-\Erg{}', according to
+\citet{nordlinger1998}, can be represented in f-structure in the way described
+in (\ref{ex:warldblcaseavm}).
 
+\begin{figure}
 \ex\label{ex:warldblcase}
-\begingl\rc{Warlpiri}
+\begingl
+	\glpreamble Warlpiri (\cite[136]{nordlinger1998}, from \cite{simpson1991}):
 	\gla Japanangka-rlu luwa-rnu marlu pirli-ngka-rlu //
 	\glb Japanangka-\Erg{} shoot-\Pst{} kangaroo rock-\Loc{}-\Erg{} //
 	\glft `Japanangka shot the kangaroo on the rock.' //
 \endgl\xe
-
-She explains that the stacked case marking in \fw{pirli-ngka-rlu} `rock-\Loc
-{}-\Erg{}', according to \citet{nordlinger1998}, can be represented in
-f-structure in the way described in (\ref{ex:warldblcaseavm}).
+\end{figure}
 
 \begin{figure}
 \pex\label{ex:warldblcaseavm}
@@ -1761,20 +1780,20 @@ f-structure in the way described in (\ref{ex:warldblcaseavm}).
 
 What the lexical annotations in (\ref{ex:warllex}) mean, according to \citet
 [145--146]{dalrymple2001}, is that there is a word with `rock' for its \Pred{},
-and which has \Loc{} for its \Case{} value. The third line states that there is
+which has \Loc{} for its \Case{} value. The third line states that there is
 a superordinate f-structure containing an attribute \Oblq{loc} (we know from
 the \Loc{} case marking in $g$ that the value of the \Oblq{loc} feature is $g$
 itself) which has a \Case{} feature with the value \Erg{}. The fourth line
 states that again, a superordinate f-stucture must exist, and that the
 f-structure containing the \Oblq{loc} attribute (that is, $f$) is the value of
-its \Subj{} feature, since \Erg{} case identifies the NP as the subject.
+its \Subj{} function, since ergative case identifies the NP as the subject.
 
 So how can we transfer this to our composite demonstrative \xayr{d/tuvolej}
 {da-tuvoley}{a/the red one}? We know that there is a lexical base which is an
-adjective \rayr{tuvo}{tuvo} which has `red' for \Pred{}. This is embedded as
+adjective \rayr{tuvo}{tuvo} which has `red' for a \Pred{}. This is embedded as
 the \Adjc{} to a functional head with deictic features (formerly \rayr{dnYlej}
 {danyaley}, now reduced to a simple clitic \rayr{d/}{da-}). The whole compound
-is marked for \Parg{} case, which identifies it as an \Obj{}. Thus, I propose
+is marked for patient case, which identifies it as an object. Thus, I propose
 the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 
 \begin{figure}
@@ -1785,7 +1804,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 					\Pred	&	`$pro$' \\
 					\Anim	&	$-$ \\
 					\Case	&	\Parg \\
-					\Deix	&	$such$ \\
+					\Prontype	&	$dem$ \\
 					\Adjc	&	$g$: \{\[
 									\Pred	& `red' \\
 								\]\} \\
@@ -1801,7 +1820,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `red' \\
 			\uncertain{\Obj{}}{\Pred} & = & `$pro$' \\
-			\uncertain{\Obj{}}{\Deix} & = & $such$ \\
+			\uncertain{\Obj{}}{\Prontype} & = & $dem$ \\
 			\uncertain{\Obj{}}{\Case} & = & \Parg \\
 			(\Obj{} \Adjc{}~↑) \\
 		\end{tabular}
