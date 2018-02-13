@@ -3594,9 +3594,10 @@ dissimilarities between the two, as well as their distribution as morphemes.
 \label{subsec:adjps}
 
 As described in the previous section, APs are usually found as adjuncts of NPs
-or DPs, where they describe properties of these nominal elements. Adjectives
-are likewise commonly found as \Plink{} in copula clauses, which will be dealt
-with in \autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
+or certain kinds of DPs (demonstratives, notably), where they describe
+properties of these nominal elements. Adjectives are likewise commonly found as
+predicative complements (\Plink{}) in copula clauses, which will be dealt with
+in \autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
 modifiers as well, though they are probably still better classified as DP
 heads, since they are functional morphemes. Possessive adjectives thus also do
 not share all the morphological properties of adjectives, for instance, they
@@ -3608,19 +3609,18 @@ the c-structure tree in (\ref{ex:adjpcstruct}) show how an AP is constructed.
 
 \begin{figure}
 \pex\label{ex:adjpstruct}
-\a AP → \anno*{\xhead{A}} $\left(\anno*[{\pass{\GF}}]{XP}\right)$
+\a AP → \anno*{\xbar{A}} \anno*[\pass{\GF}]{XP}
+\a \xbar{A} → \anno*{\xhead{A}} \anno*[\elem{\Adjc}]{AdvP}
 \xe
 
-\ex~\label{ex:adjpcstruct}\labels
+\ex~\label{ex:adjpcstruct}
 \begin{forest}
 [{\anno[\{\elem{\Adjc} | \pass{\Plink}\}]{AP}}
-%	[\anno{\xbar{A}}
+	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
-		[{$\left(\anno[{%
-				\pass{\GF}%
-			}]{XP}\right)$%
-		}]
-%	]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
+	]
+	[{\anno[\pass{\GF}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -3630,22 +3630,22 @@ Adjective phrases have an adjective as their lexical head. This head may be
 extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
 of multiple modifiers. Since modifiers follow their heads here as well, APs are
 also a right-branching constituent. Modifiers of adjectives are subsumed under
-the label XP here, which here stands for AdvP, NP, DP, and CP. An example of
-each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and 
-(\ref{ex:adjmod2}).
+the label XP in the phrase structure rules, which here stands for NP, DP, and
+CP. An example of each phrase type modifying an adjective is given in
+(\ref{ex:adjmod}) and (\ref{ex:adjmod2}).
 
 \begin{figure}
 \pex\label{ex:adjmod}
 \a\label{ex:adjmod_adv}%
-	\begin{minipage}[t]{.667\remaining}%
+	\begin{minipage}[t]{.5\remaining}%
 	\begingl
 		\glpreamble adjective + AdvP adjunct: //
 		\gla Adareng bisuayas sadayo kalam. //
 		\glb ada-reng bisuay-as sadayo kalam //
 		\glc that-\AargI{} idea-\Parg{} crazy truly //
 		\glft `That is a truly crazy idea.' //
-	\endgl~\\
-
+	\endgl\medskip
+	
 	\begin{avm}
 	\[
 		\Obj	&	\[
@@ -3662,7 +3662,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	\]
 	\end{avm}
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Obj}]{NP}}
 %		[\anno{\xbar{N}}
@@ -3681,22 +3681,22 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 			]
 %		]
 	]
-	\end{forest}\medskip
+	\end{forest}
 
 \a\label{ex:adjmod_np}%
-	\begin{minipage}[t]{.667\remaining}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + NP complement: //
 		\gla Yang mino yanena nā. //
 		\glb yang mino yan-ena nā //
 		\glc \Fsg{}.\Aarg{} happy son-\Gen{} \Fsg{}.\Gen{} //
 		\glft `I am happy about my son.' //
-	\endgl~\\
+	\endgl\medskip
 
 	\begin{avm}
 	\[
 		\Plink	&	\[
-			\Pred		&	\astruct{happy}{\Oblq{src}} \\
+			\Pred		&	\astruct{happy}{\ups{\Oblq{theme}}} \\
 			\Oblq{src}	&	\[
 				\Pred	&	`son' \\
 				\Case	&	\Gen \\
@@ -3712,14 +3712,14 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	\]
 	\end{avm}
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
 %		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
 			]
-			[{\anno[\pass{\Oblq{src}}]{NP}}
+			[{\anno[\pass{\Oblq{theme}}]{NP}}
 				[{yanena nā}, roof]
 			]
 %		]
@@ -3731,20 +3731,20 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 \begin{figure}
 \pex\label{ex:adjmod2}
 \a\label{ex:adjmod_dp}%
-	\begin{minipage}[t]{.667\remaining}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + DP complement: //
 		\gla Yang mino yayam. //
 		\glb yang mino yayam //
 		\glc \Fsg{}.\Aarg{} happy \TsgM{}.\Dat{} //
 		\glft `I am happy for him.' //
-	\endgl~\\
+	\endgl\medskip
 
 	\begin{avm}
 	\[
 		\Plink	&	\[
-			\Pred	&	\astruct{happy}{\ups{\Oblq{goal}}} \\
-			\Oblq{goal}	&	\[
+			\Pred	&	\astruct{happy}{\ups{\Oblq{ben}}} \\
+			\Oblq{ben}	&	\[
 				% \Pred	&	`$pro$' \\
 				% \Case	&	\Dat \\
 				% \Num	&	\Sg \\
@@ -3755,29 +3755,29 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	\]
 	\end{avm}
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
 %		[\anno{\xbar{A}}
 			[\anno{\xhead{A}}
 				[mino]
 			]
-			[{\anno[\pass{\Oblq{goal}}]{DP}}
+			[{\anno[\pass{\Oblq{ben}}]{DP}}
 				[yayam]
 			]
 %		]
 	]
-	\end{forest}\medskip
+	\end{forest}
 
 \a\label{ex:adjmod_cp}%
-	\begin{minipage}[t]{.667\remaining}
+	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + CP complement: //
 		\gla Yang valuy yomavāng edaya. //
 		\glb yang valuy yoma=vāng edaya //
 		\glc \Fsg{}.\Aarg{} glad exist=\Second.\Aarg{} here //
 		\glft `I am glad you are here.' //
-	\endgl~\\
+	\endgl\medskip
 
 	\begin{avm}
 	\[
@@ -3792,7 +3792,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 	\]
 	\end{avm}
 	\end{minipage}
-	~
+	\hfill
 	\begin{forest} narrower nodes, shorter edges, italic leaves,
 	[{\anno[\pass{\Plink}]{AP}}
 %		[\anno{\xbar{A}}
@@ -3804,7 +3804,7 @@ each phrase type modifying an adjective is given in (\ref{ex:adjmod}) and
 			]
 %		]
 	]
-	\end{forest}\medskip
+	\end{forest}
 
 \xe
 \end{figure}
@@ -3817,12 +3817,13 @@ adjective--adverb combination can be complemented by an NP, as shown in
 (\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
 complements where English would use prepositions. Thus, in
 (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
-the genitive case: the NP complement expresses the source by which the
+the genitive case: the NP complement expresses oblique theme about which the
 experiencing subject becomes happy. This, however, should not be conflated with
 a possessor, \Possr{}, but should be labeled separately as an oblique
-complement, \Oblq{src}. Similarly, the recipient of the subject's happiness
+complement, \Oblq{theme}. Similarly, the recipient of the subject's happiness
 appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
-Instrumental and causative NP complements instead of PPs may be found as well.
+Instrumental and causative NP complements instead of PPs may be found as well 
+(compare \autoref{subsubsec:valincr}, p.~\pageref{subsubsec:valincr}).
 
 Since in \Lfg{}, empty \xbar{X} nodes are collapsed, \Lfg{}'s version of X-bar
 theory does not strictly distinguish between complements and adjuncts
@@ -3867,8 +3868,7 @@ is a sister to the head whereas an adjunct is its cousin, so to speak, compare
 \xe
 \end{figure}
 
-How does this hypothesis fare when applying constituency tests, though? With
-regards to complements and adjuncts to NP, \citet{carnie2013} explains,
+With regards to complements and adjuncts to NP, \citet{carnie2013} explains,
 \textcquote[182]{carnie2013}{Since complements are sisters to X and not Xʹ,
 they cannot stand next to the word \fw{one}. Adjuncts, by definition, can}. To
 target \xbar{A} nodes, we need something corresponding to English \fw{so},
@@ -3932,14 +3932,7 @@ Continuing this replacement test for the other example sentences from
 (\ref{ex:adjmod}), we can see that the outcomes are ungrammatical; the NPs are
 dependent on their lexical head, which cannot be omitted or replaced by a
 pro-form. The idiomatic English translations in (\ref{ex:soreplacement_2})
-somewhat conceal this.\footnote{At least to me, as a non-native speaker of
-English, these translations do not sound too odd if context is taken into
-consideration. \citet[181]{carnie2013} gives an example *\fw{the one of poems
-with a red cover}, referring to a book. His point is that \fw{of poems} is a
-complement of \fw{the book}, so \fw{the book} cannot be replaced by a pro-form
-like \fw{one}. However, he notes that at least some native English speakers
-find this example acceptable. Personally, I do not take offense either, but I
-am not a native speaker.} The literal translations try to show that the
+somewhat conceal this. The literal translations try to show that the
 complements are more tightly integrated into the sentence in Ayeri than in the
 idiomatic translations in an attempt to convey how they must seem non-sensical
 to an Ayeri speaker.
@@ -3975,10 +3968,10 @@ to an Ayeri speaker.
 
 Further complications arise with regards to complementation in that non-clitic
 quantifiers like \xayr{AMkYu}{ankyu}{really} usurp the complement position so
-that an adjective's complement XP appears as an adjunct. This is possibly due
-to syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant})
-attempts to illustrate the c-structure for a displaced CP; the arrow shows the
-apparent movement from complement to adjunct.
+that an adjective's complement XP seems to appear in the position of an
+adjunct. This is possibly due to syntactic weight \citep{wechsler2009}. Example
+(\ref{ex:intrusivequant}) attempts to illustrate the c-structure for a
+displaced CP; the arrow shows the apparent movement from complement to adjunct.
 
 \begin{figure}
 \ex\label{ex:intrusivequant}%
@@ -4028,7 +4021,7 @@ structure is what creates a sense of cohesion. Thus, even though the CP
 in (\ref{ex:intrusivequant}) appears dislocated, the information is still found
 in the `right' place in f-structure independent of the diverging c-structure,
 compare the \Avm{} in (\ref{ex:intrusivequant_fstruct}), where the adjective
-is given as having an oblique nominal complement, and what surfaces as the CP
+is given as having an oblique nominal complement. What surfaces as the CP
 adjunct is annotated accordingly as \Compl{}, not as \Adjc{}, even though in
 c-structure it appears in the position of an adjunct.
 % FIXME: Gahd, I *hope* this paragraph makes sense ...
@@ -4070,7 +4063,10 @@ both regards, comparison and polarity, and are morphologically unmarked in
 these cases. \Degdim{} also does not play a role here, since there are only
 clitics for positive comparison, and negative comparison is achieved by
 negating the adjective with the regular negative suffix \rayr{/Oj}{-oy}.
+Examples of the different ways an adjective may be morphologically marked and
+their respective representation as an \Avm{} are given in (\ref{ex:adjmorph}).
 
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:adjmorphlex}%
 \adjustbox{valign=t}{%
@@ -4087,10 +4083,9 @@ negating the adjective with the regular negative suffix \rayr{/Oj}{-oy}.
 }
 \xe
 \end{morphlex}
+\end{figure}
 
-Examples of the different ways an adjective may be morphologically marked and
-their respective representation as an \Avm{} are given in (\ref{ex:adjmorph}).
-
+\begin{figure}
 \pex\label{ex:adjmorph}
 \a\label{ex:adjmorph_compar}
 \begin{minipage}[t]{.5\remaining}
@@ -4145,9 +4140,10 @@ their respective representation as an \Avm{} are given in (\ref{ex:adjmorph}).
 \end{avm}
 
 \xe
+\end{figure}
 
-As described before (\autoref{subsec:adjcomp}), the morphemes used for
-synthetic comparison of adjectives are grammaticalized clitics literally
+We have already seen above (\autoref{subsec:adjcomp}) that the morphemes used
+for synthetic comparison of adjectives are grammaticalized clitics literally
 meaning `rather, more' (\rayr{/ENF}{-eng}) and `most' (\rayr{/vaa}{-vā}) as
 lexical quantifiers. With adjectives, there is no clear-cut line between their
 functional and their lexical use. I have analyzed them here as functional,
@@ -4155,8 +4151,10 @@ since they may be interpreted as such, depending on context. As we have
 observed before (\autoref{subsec:quantifiers}), quantifier clitics may modify
 adjectives like any other adverbial modifiers, except that their surface form
 is clitic rather than free. Quantifying adverbs, both enclitic and free, thus
-also find themselves in \Adjc{}.
+also find themselves in \Adjc{}. An example of this is given in
+(\ref{ex:adjquant3}).
 
+\begin{figure}
 \pex\label{ex:adjquant3}
 \a
 \begin{minipage}[t]{.5\remaining}
@@ -4197,6 +4195,7 @@ also find themselves in \Adjc{}.
 \end{avm}
 
 \xe
+\end{figure}
 
 \subsection{Adverb phrases}
 \label{subsec:advps}
