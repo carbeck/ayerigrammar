@@ -5409,6 +5409,108 @@ example sentences for all configurations.
 \label{tab:updowncompl}
 \end{table}
 
+\begin{figure}\centering
+\begin{tikzpicture}[every node/.style={font=\footnotesize\sffamily}]
+% Rectangle at bottom
+\draw (0,0) rectangle (9,1);
+
+% Rectangle at top
+\draw (2.5,2.5) rectangle (6.5,3);
+
+% Ceiling
+\draw [line width=.5ex] (0,5) -- (9,5);
+
+% Floor
+\draw [line width=.5ex] (0,0) -- (9,0);
+
+% Nodes at bottom, centered over constituent squares
+\node (b1) at ($(0,1)!0.5!(1,1)$) {};
+\node (b2) at ($(4,1)!0.5!(5,1)$) {};
+\node (b3) at ($(8,1)!0.5!(9,1)$) {};
+
+% Nodes at top, centered over constituent squares
+\node (t1) at ($(3,3)!0.5!(4,3)$) {};
+\node (t2) at ($(4,3)!0.5!(5,3)$) {};
+\node (t3) at ($(5,3)!0.5!(6,3)$) {};
+
+% Nodes yonder (top/bottom)
+\node (yt)  at ($(0,5)!0.5!(1,5)$) {};
+\node (yt2) at ($(-1,6)!0.5!(0,6)$) {};
+\node (yb)  at ($(7,0)!0.5!(8,0)$) {};
+\node (yb2) at ($(9,-1)!0.5!(10,-1)$) {};
+
+\begin{scope}[nodes={circle, anchor=south, minimum size=2em}]
+% Circles on bottom
+\node [draw, dashed] (B1) at (b1) {};
+\node [fill]         (B2) at (b2) {};
+\node [fill]         (B3) at (b3) {};
+
+% Circles on top
+\node [fill]         (T1) at (t1) {};
+\node [fill]         (T2) at (t2) {};
+\node [draw, dashed] (T3) at (t3) {};
+
+% Squares yonder
+\node [rectangle, fill] (Y1) at (yt) {};
+\node [rectangle, fill] (Y2) [anchor=north] at (yb) {};
+\end{scope}
+
+% Arrows from B1
+\draw [-{latex[sep=2pt]}] (B1) to [out=north, in=north]
+	node [align=center, sloped, above]
+		{\fw{manga ling}\\ +\,\Loc}
+	(T1);
+
+\draw [-{latex[sep=1em]}] (B1) to [out=north, in=south]
+	node [align=center, sloped, above]
+		{\fw{manga ling} + \Dat}
+	(yt);
+
+\draw [-latex] (B1) to [out=north west, in=south]
+	node [align=center, sloped, below]
+		{\fw{ling} + \Dat}
+	(yt2);
+
+% Arrows from T3
+\draw [-{latex[sep=2pt]}] (T3) to [out=north east, in=north]
+	node [align=center, sloped, above]
+		{\fw{manga avan}\\ +\,\Loc}
+	(B3);
+
+\draw [-{latex[sep=1em]}] (T3) to [out=north east, in=north]
+	node [align=center, sloped, above, pos=.6]
+		{\fw{manga avan} + \Dat}
+	(yb);
+
+\draw [-latex] (T3) to [out=north east, in=north, min distance=10em]
+	node [align=center, sloped, above, pos=.7]
+		{\fw{avan} + \Dat}
+	(yb2);
+
+%% Labels %%
+
+% From bottom
+\node [align=left] (B1t) at (B1) [right=.5ex of B1]
+	{\fw{avan}\\ +\,\Gen};
+
+% At bottom
+\node [align=center] (B2t) at (B2) [below=.5ex of B2]
+	{\fw{avan}\\ +\,\Loc};
+
+% From top
+\node [align=center] (T3t) at (T3) [above=1ex of T3]
+	{\fw{ling}\\ +\,\Gen};
+
+% At top
+\node [align=center] (T2t) at (T2) [above=1ex of T2]
+	{\fw{ling}\\ +\,\Loc};
+
+\end{tikzpicture}
+\caption{Visualization of case alternations of \rayr{liNF}{ling} and 
+	\rayr{AvnF}{avan}}
+\label{fig:updowncompl}
+\end{figure}
+
 \pex\label{ex:dirtel}
 \a\label{ex:dirtel_loc_tel}
 \begin{minipage}[t]{.667\remaining}
