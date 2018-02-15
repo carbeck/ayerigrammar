@@ -3245,6 +3245,7 @@ Regarding functional annotations---as already suggested by
 (\ref{ex:postkucstruct})---for the two kinds of \rayr{ku}{ku} we can posit the
 definitions in (\ref{ex:kumorphlex}).
 
+\begin{figure}
 \begin{morphlex}
 \pex\label{ex:kumorphlex}%
 \a\label{ex:prekumorphlex}\adjustbox{valign=t}{%
@@ -3269,6 +3270,7 @@ definitions in (\ref{ex:kumorphlex}).
 }
 \xe
 \end{morphlex}
+\end{figure}
 
 Proclitic \rayr{ku/}{ku-} in (\ref{ex:prekumorphlex}) has a straightforward
 definition: an instance of [\Pred{} `like'] is added to the current phrase's
@@ -4941,49 +4943,38 @@ instead finds itself cliticized to the preceding head, compare
 \label{sec:pps}
 
 As described in the section on the morphology of adpositions
-(\autoref{sec:adpositions}), Ayeri employs both prepositions and postpositions,
-though the former are a lot more common and basic than the latter. Thus, PPs
-are an exceptional domain in that very limited left-branching is possible in
-that the complement of a postpositions precedes its head, the postposition. The
-complement is again right-branching, however. Since the label `AP' for a more
-general `adpositional phrase' has already been used for `adjective phrase', I
-will use the common label `PP' to refer to both prepositional and
-postpositional phrases, with their respective heads referred to as `\xhead{P}'.
-As described earlier, there is no morphological difference between prepositions
-and postpositions; head placement is a syntactic issue and the preference of
-placement is rooted in the lexical entry for each adposition, albeit
+(\autoref{sec:adpositions}), Ayeri possesses both prepositions and
+postpositions, though the former are a lot more common and basic than the
+latter. Thus, PPs are an exceptional domain in that very limited left-branching
+is possible insofar as the complement of a postposition precedes its head. The
+complement of a postposition is, in itself, right-branching again, however.
+Since the label `AP' for a more general `adpositional phrase' has already been
+used for `adjective phrase', I will use the common label `PP' to refer to both
+prepositional and postpositional phrases, with their respective heads referred
+to as `\xhead{P}'. As described earlier, there is no morphological difference
+between prepositions and postpositions; head placement is a syntactic issue and
+the preference of placement is rooted in the lexical entry for each adposition.
 \citet{pargram} does not list a feature to distinguish between preposition and
 postposition, probably because it does not have any relevance to semantics.
 
-\Lfg{} categorizes the object of an adposition as \Oblique{}, where $\theta$
-stands for the thematic role of the embedded phrase \citep[9--10]
-{dalrymple2001}. As we have seen in the previous chapter, adpositions in Ayeri
-usually allow adpositional objects to mark one of three cases:
+\Lfg{} categorizes the object of an adposition as an oblique argument 
+\Oblique{}, where $\theta$ stands for the thematic role of the embedded phrase
+\citep[9--10] {dalrymple2001}. As we have seen in the previous chapter,
+adpositions in Ayeri usually allow adpositional objects to be either marked for
+locative or dative case:
 
 \begin{description}
-	\item[Locative:] Standard case for prepositional objects, indicates a
+	\item[Locative:] Standard case for adpositional objects, indicates a
 	location (\textsc{location}). It usually corresponds to English `at', `in'.
+	It is also used for the goal (\textsc{goal}) of verbs of motion when they
+	are directed, such as \xayr{sr/}{sara-}{go}, and for the addressee of verbs
+	of speaking like \xayr{nr/}{nara}{speak}. Thus, limitedly, it may also
+	express `to'.
 
-	\item[Dative:] Indicates motion towards the direction the adposition
-	indicates (\textsc{goal}, \textsc{direction}) in cases where just locative
-	marking would be ambiguous, for instance, `up to' instead of `onto', since
-	\rayr{mN liNF}{manga ling} can mean both, by itself. It usually corresponds
-	to English `to', `for'.
-
-	\item[Genitive:] Indicates motion from the direction the adposition
-	indicates (\textsc{source}, \textsc{origin}) in cases where just locative
-	marking would be ambiguous, for instance, `down from' instead of `to the
-	bottom', since  \rayr{mN AvnF}{manga avan} can mean both, by itself. It
-	usually corresponds to English `of', `from'.
+	\item[Dative:] Indicates motion along a path towards the direction the
+	adposition indicates (\textsc{goal}, \textsc{direction}). It usually
+	corresponds to English `to', `for'.
 \end{description}
-
-Ayeri does not make use of verbs which take a transitive PP as a complement, so
-there are no cases where an adpositional object is a required part of a verb's
-argument structure as in English \fw{talk to someone}; the semantic role of the
-PP complement is encoded by the \PCase{} attribute. The complement is also
-presented as not governing a prepositional object, but the preposition is
-purely functional \citep[151--153]{dalrymple2001}. The case for English is
-illustrated by (\ref{ex:talkcstruct}).
 
 \begin{figure}
 \ex\label{ex:talkcstruct}%
@@ -5045,19 +5036,24 @@ John talks to Mary. \\
 \xe
 \end{figure}
 
-Ayeri, in contrast to English, often uses an NP complement marked with one of
-the cases in the list above, compare (\ref{ex:naracstruct}). In the case of
-\xayr{nr/}{nara-}{speak, talk}, the complement thus appears in the locative
-case, but as an NP, not as a PP. Thus, there is no \PCase{} attribute necessary
-here, since there is no preposition to indicate the relation of the complement
-to the verb because case marking accomplishes this function. Which oblique case
-the complement appears in is determined by the a-structure of the verb, not by
-the semantics of the complement. Since the dative is also used for the
+Where English uses a preposition together with the verb to mark an oblique
+argument, Ayeri usually uses case. The case
+for English is illustrated by (\ref{ex:talkcstruct}). Ayeri, in contrast to
+English, often uses an NP complement marked with one of the cases in the list
+above, compare (\ref{ex:naracstruct}). In the case of \xayr{nr/}{nara-}{speak,
+talk}, the complement appears in the locative case, but as an NP, not as a PP.
+Thus, there is no \PCase{} attribute necessary here, since there is no
+preposition to indicate the relation of the complement to the verb because case
+marking accomplishes this function.
+
+Which oblique case the complement appears in is determined by the a-structure
+of the verb, not by the semantics of the complement (compare 
+\autoref{subsec:comptr}). Since the dative is also used for the
 \textsc{beneficiary} role, the argument expressing the direction of the talking
 appears exceptionally in the locative here. In (\ref{ex:naracstruct}) it may
-seem as though \rayr{y}{ya} is a preposition---which is likely accurate
-historically---however, it has been established previously that preposed case
-markers are proclitics (see \autoref{clitics_prenoun_case}, 
+seem as though \rayr{y}{ya} is a preposition---which is a reasonable assumption
+about its history. However, it has been established previously that preposed
+case markers are proclitics (see \autoref{clitics_prenoun_case}, 
 p.~\pageref{clitics_prenoun_case}). \rayr{y}{ya} is a case marker, not a
 preposition; `at/to Pila' is thus \rayr{y pil}{ya Pila}, not *\rayr{y pily}{*ya
 Pilaya} with additional locative marking on the noun.
@@ -5065,9 +5061,9 @@ Pilaya} with additional locative marking on the noun.
 \begin{figure}
 \ex\label{ex:naracstruct}%
 \begingl
-\gla Ang naraya {} Ajān ya Pila. //
-\glb ang nara-ya Ø Ajān ya Pila //
-\glc \AgtT{} talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
+\gla Ang @ naraya {} Ajān ya Pila. //
+\glb ang= nara-ya Ø Ajān ya Pila //
+\glc \AgtT{}= talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
 \glft `Ajān talks to Pila.' //
 \endgl\medskip
 
@@ -5123,31 +5119,34 @@ Pilaya} with additional locative marking on the noun.
 \xe
 \end{figure}
 
-In Ayeri, PPs proper may either be locative complements of the verb or locative
-adverbials ungoverned by the verb, though the number of verbs taking PP
-complements is smaller than in English due to case marking, as described above.
-As mentioned initially, Ayeri possesses prepositions as well as postpositions.
-With regards to word order typology, we can thus note:
+In Ayeri, PPs proper may either be locative complements of the verb as in (
+\ref{ex:naracstruct}) or free locative adverbials, ungoverned by the verb,
+though the number of verbs taking PP complements is smaller than in English due
+to case marking, as described above. As mentioned initially, Ayeri possesses
+prepositions as well as postpositions. With regards to word order typology, we
+can thus note:
 
 \ex
 Order of noun and adposition: Adp N, N Adp
 \xe
 
 The fact that Ayeri has both prepositions and postpositions is also reflected
-in the phrase structure rules given in (\ref{ex:pppstruct}). Here, the
-\xhead{P}'s in brackets are supposed to mean that such an element can appear in
-either position. Since there are no circumpositions in Ayeri, only ever one
-site is occupied. XP is used again as a catch-all term for various phrase types
-which form complements of semantic adpositions in the form of NPs and DPs, but
-especially the postposition \xayr{pesnF}{pesan}{until} may also have a CP
-complement, that is, a whole complement clause. The nominal complements are
-objects governed by the adposition.
+in the phrase structure rules given in (\ref{ex:pppstruct}). Here, the comma
+indicates that the two phrases joined by it can occur in either order. Since
+there are no circumpositions in Ayeri, only ever one site is occupied. XP is
+used again as a catch-all term for various phrase types which form complements
+of semantic adpositions in the form of NPs and DPs, but especially the
+postposition \xayr{pesnF}{pesan}{until} may also have a CP complement, that is,
+a whole complement clause. The nominal complements are objects governed by the
+adposition.
 
 \begin{figure}
 \pex\label{ex:pppstruct}
-\a PP → \anno*{\xbar{P}} $\left(\anno*[\elem{\Adjc}]{AdvP}\right)$
-\a \xbar{P} → $\left(\anno*{\xhead{P}}\right)$ \anno*[\{\pass{\Obj{}} |
-\pass{\Compl{}}\}]{XP} $\left(\anno*{\xhead{P}}\right)$
+\a PP → \anno*{\xbar{P}} \anno*[\elem{\Adjc}]{AdvP}
+\a \xbar{P} → \anno*{\xhead{P}}, \anno*[\{%
+	\pass{\Obj{}}
+	| \pass{\Compl{}}%
+	\}]{XP}
 \xe
 \end{figure}
 
@@ -5160,9 +5159,10 @@ instance, in cases like \fw{Mary puts the book {\normalfont [\tsub{PP}~[
 \tsub{P}} on {\normalfont]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP
 \fw{on the pile} is not an adjunct here because \fw{She does so on the pile}
 makes no sense; the PP must be an argument of the verb in this case, not
-additional, optional information. Ayeri behaves the same way in this regard.
-These governed PPs are categorized as \Oblique{} with $\theta$ replaced by the
-proper semantic macrorole (\textit{loc}, \textit{src} or \textit{goal}).
+additional, optional information (again, compare \autoref{subsec:comptr}).
+Ayeri behaves the same way in this regard. These governed PPs are categorized
+as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
+(\textit{loc}, \textit{src} or \textit{goal}).
 
 \begin{figure}
 \ex\label{ex:ppcstruct}\labels
@@ -5180,7 +5180,7 @@ proper semantic macrorole (\textit{loc}, \textit{src} or \textit{goal}).
 				\}}]{XP}
 			}]
 		]
-		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
 %	]
 ]
 \end{forest}\medskip
@@ -5200,7 +5200,7 @@ proper semantic macrorole (\textit{loc}, \textit{src} or \textit{goal}).
 			}]
 			[\anno{\xhead{P}}]
 		]
-		[{$\left(\anno[\elem{\Adjc}]{AdvP}\right)$}]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
 %	]
 ]
 \end{forest}
@@ -5212,12 +5212,13 @@ With regards to functional structure, the difference between preposition and
 postposition does not matter, so the \Avm{} in (\ref{ex:adpmorphlex}) does not
 make a formal distinction between prepositions and postpositions. As described
 in \autoref{clitics_prep_dyn} (p.~\pageref{clitics_prep_dyn}) and 
-\autoref{sec:adpositions}, there is a particle \rayr{mN}{manga}, which has been
+\autoref{sec:adpositions}, there is a particle \rayr{mN}{manga} which has been
 analyzed as a clitic. This particle indicates that an adposition has a
 directional reading (specifically, into the direction of the preposition). This
 is encoded by the feature \PSem{}, which is represented morphologically by said
 particle and hence not generally present.
 
+\begin{figure}
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
 \a\adjustbox{valign=t}{%
@@ -5244,6 +5245,7 @@ particle and hence not generally present.
 }
 \xe
 \end{morphlex}
+\end{figure}
 
 \footnotetext{This lexical rule goes for all adpositions except \rayr{liNF}
 {ling} and \rayr{AvnF}{avan}, which require special treatment with regards to
@@ -5257,8 +5259,8 @@ whereas \fw{auf den Tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
 table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
 \fw{an} `at') as:
 
-\ex\rc{German}%
-\begin{tabular}[t]{l @{ $\implies$ } l}
+\ex German \citep{butt2005}:\medskip\\
+\begin{tabular}[t]{@{} l @{ $\implies$ } l}
 \PSem{} $dir$ & \ups{\Obj{} \Case{}} \req{} \Acc{} \\
 \PSem{} $loc$ & \ups{\Obj{} \Case{}} \req{} \Dat{} \\
 \end{tabular}
@@ -5268,20 +5270,21 @@ The \PSem{} attribute thus governs the case of the prepositional object by a
 requirement that its case be either \Acc{} or \Dat{}, depending on its value.
 Since nouns in German always carry case, the \PSem{} attribute needs to be
 present in the lexical rules for all prepositions which show the \Acc{}/\Dat{}
-alternation (%
-\fw{an},
-\fw{auf},
-\fw{hinter},
-\fw{in},
-\fw{neben},
-\fw{über},
-\fw{unter},
-\fw{vor},
-\fw{zwischen}%
-). In Ayeri, however, the particle \rayr{mN}{manga} alternates with nothing, so
+alternation. %\footnote{These are: 
+%\fw{an},
+%\fw{auf},
+%\fw{hinter},
+%\fw{in},
+%\fw{neben},
+%\fw{über},
+%\fw{unter},
+%\fw{vor},
+%\fw{zwischen}%
+%}
+In Ayeri, however, the particle \rayr{mN} {manga} alternates with nothing, so
 the absence of marking $dir$ indicates a locational reading. Since the \PSem{}
 attribute finds no overt realization in the absence of the morphological
-marker, however, it may as well be omitted. Different than in German, the
+marker, however, we may prefer to simply omit it. Different than in German, the
 presence or absence of directionality marking also does not influence the case
 of the adpositional object.
 
@@ -5293,6 +5296,7 @@ between a bare adposition and one modified by \rayr{mN}{manga}:
 `in' and directional `into' is represented. The case of the \Obj{} is \Loc{} in
 both cases.
 
+\begin{figure}
 \pex\label{ex:mangaaltern}
 \a\label{ex:mangaaltern_bare}
 \begin{minipage}[t]{.5\remaining}
@@ -5303,7 +5307,7 @@ both cases.
 	\glft `in the house' //
 \endgl
 \end{minipage}
-~
+\hfill
 \begin{avm}
 \[\Adjc	&	\{\[
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
@@ -5324,7 +5328,7 @@ both cases.
 	\glft `into the house' //
 \endgl
 \end{minipage}
-~
+\hfill
 \begin{avm}
 \[\Adjc	&	\{\[
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
@@ -5339,30 +5343,31 @@ both cases.
 \end{avm}
 
 \xe
+\end{figure}
 
 With the prepositions \xayr{liNF}{ling}{on top of} and \xayr{AvnF}{avan}{at the
 bottom of} there is another alternation, based on case, for verbs which do not
 encode direction. This is rooted in the etymology of these words:
 \rayr{liNF}{ling} as a noun means `top', \rayr{AvnF}{avan} means `ground,
 bottom'. The directional variants of these prepositions mean `to the top, onto'
-and `to the bottom'. These are telic in that they express arriving
-at the destination specified by the adpositional object. However, Ayeri does
-not possess separate adpositions to express `up' and `down' as atelic concepts,
-that is, without referring to arriving at a destination.\footnote{I concede
-that the chosen terminology is slightly problematic since, strictly speaking,
-`up' and `down' are also directions rather than locations. Moreover, whether
-`up to' and `down from' qualify as atelic is probably debatable, since they as
-well suggest arriving at a destination eventually.} Instead,
-\rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up' and `down' with dative
-complements, respectively, to mark the difference, compare 
-\autoref{tab:updowncompl}. Note, however, that Ayeri does not possess
-intransitive adpositions, with the exception of a few verbs where the
-adposition is a lexicalized part of the expression, for instance,
-\xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with the fossilized, now
-defunct preposition \xayr{djrinF}{dayrin}{beside, next to} (modern \rayr{kjvo}
-{kayvo}). `Up' and `down' thus refer to their transitive uses as in \fw{up the
-stairs} and \fw{down the hill}, respectively. (\ref{ex:dirtel}) provides
-example sentences for all configurations.
+and `to the bottom'. These are essentially telic in that they express the
+possibility of arriving at the destination specified by the adpositional
+object. However, Ayeri does not possess separate adpositions to express `up'
+and `down' as atelic concepts, that is, without referring to arriving at a
+destination.\footnote{I concede that the chosen terminology is slightly
+problematic since, strictly speaking, `up' and `down' are also directions
+rather than locations. Moreover, whether `up to' and `down from' qualify as
+`atelic' is probably debatable, since they as well suggest arriving at a
+destination eventually.} Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan}
+double for `up' and `down' with dative complements, respectively, to mark the
+difference, compare \autoref{tab:updowncompl} and \autoref{fig:updowncompl}.
+Note, however, that Ayeri does not possess intransitive adpositions, with the
+exception of a few verbs where the adposition is a lexicalized part of the
+expression, for instance, \xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with
+the fossilized, now defunct preposition \xayr{djrinF}{dayrin}{beside, next to}
+(modern \rayr{kjvo} {kayvo}). `Up' and `down' thus refer to their transitive
+uses as in \fw{up the stairs} and \fw{down the hill}, respectively.
+(\ref{ex:dirtel}) provides example sentences for all configurations.
 
 \begin{table}\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
@@ -5503,17 +5508,18 @@ example sentences for all configurations.
 \label{fig:updowncompl}
 \end{figure}
 
+\begin{figure}
 \pex\label{ex:dirtel}
 \a\label{ex:dirtel_loc_tel}
 \begin{minipage}[t]{.667\remaining}
 \begingl
-	\gla Ang lampyo paray ling nayingya. //
-	\glb ang lamp-yo paray-Ø ling naying-ya //
-	\glc \AgtT{} walk-\TsgN{} cat-\Top{} top.of roof-\Loc //
+	\gla Ang @ lampyo paray ling nayingya. //
+	\glb ang= lamp-yo paray-Ø ling naying-ya //
+	\glc \AgtT{}= walk-\TsgN{} cat-\Top{} top.of roof-\Loc //
 	\glft `The cat is walking on the roof' //
 \endgl
 \end{minipage}
-~
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
@@ -5530,13 +5536,13 @@ example sentences for all configurations.
 \a\label{ex:dirtel_dir_tel}
 \begin{minipage}[t]{.667\remaining}
 \begingl
-	\gla Ang puco paray manga ling mehirya. //
-	\glb ang puk-yo paray-Ø manga ling mehir-ya //
-	\glc \AgtT{} jump-\TsgN{} cat-\Top{} \Dir{} top.of tree-\Loc{} //
+	\gla Ang @ puco paray manga @ ling mehirya. //
+	\glb ang= puk-yo paray-Ø manga= ling mehir-ya //
+	\glc \AgtT{}= jump-\TsgN{} cat-\Top{} \Dir{}= top.of tree-\Loc{} //
 	\glft `The cat jumps onto the tree.' //
 \endgl
 \end{minipage}
-~
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
@@ -5553,13 +5559,13 @@ example sentences for all configurations.
 \a\label{ex:dirtel_loc_atel}
 \begin{minipage}[t]{.667\remaining}
 \begingl
-	\gla Ang nimpyan ganye ling turayyam. //
-	\glb ang nimp-yan gan-ye-Ø ling turay-yam //
-	\glc \AgtT{} run-\TplM{} child-\Pl{} top.of hill-\Dat{} //
+	\gla Ang @ nimpyan ganye ling turayyam. //
+	\glb ang= nimp-yan gan-ye-Ø ling turay-yam //
+	\glc \AgtT{}= run-\TplM{} child-\Pl{} top.of hill-\Dat{} //
 	\glft `The children are running up the hill.' //
 \endgl
 \end{minipage}
-~
+\hfill
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
@@ -5576,9 +5582,9 @@ example sentences for all configurations.
 \a\label{ex:dirtel_dir_atel}
 \begin{minipage}[t]{.667\remaining}
 \begingl
-	\gla Ang saraya jarmaya manga ling pelangyam. //
-	\glb ang sara-ya jarmaya-Ø manga ling pelang-yam //
-	\glc \AgtT{} go-\Loc{} pilgrim-\Top{} \Dir{} top.of castle-\Dat{} //
+	\gla Ang @ saraya jarmaya manga @ ling pelangyam. //
+	\glb ang= sara-ya jarmaya-Ø manga= ling pelang-yam //
+	\glc \AgtT{}= go-\Loc{} pilgrim-\Top{} \Dir{}= top.of castle-\Dat{} //
 	\glft `The pilgrim goes up to the castle.' //
 \endgl
 \end{minipage}
@@ -5597,6 +5603,7 @@ example sentences for all configurations.
 \end{avm}
 
 \xe
+\end{figure}
 
 As we can see from these examples, there is an alternation in case similar to
 the one in German described above. The distinction in Ayeri is not between
@@ -5608,9 +5615,10 @@ rules given for adpositions more generally in (\ref{ex:adpmorphlex}), there is
 an additional feature \Tel{}, which may be positive or negative depending on
 context, and an accompanying rule which determines the case of the complement
 for `atelic' uses of the preposition. An addtional rule is operating for both
-prepositions which determines that if the preposition is `atelic', put the
-prepositional object in the dative case.
+prepositions which determines that if the preposition is `atelic', the
+prepositional object is to be put in the dative case.
 
+\begin{figure}
 \begin{morphlex}
 \pex\label{ex:lingavanmorphlex}%
 \a\adjustbox{valign=t}{%
@@ -5650,9 +5658,10 @@ prepositional object in the dative case.
 \Dat{}
 \xe
 \end{morphlex}
+\end{figure}
 
 English verbs use prepositions heavily, whether they are idiomatic and part of
-the lexical entry of the word (\fw{clean up}, \fw{give in}, \fw{sign up}) or
+the lexical entry of the word (\fw{clean up}, \fw{give in}, \fw{come on}) or
 actually meaningful in connecting complements to the verb (\fw{come from}, 
 \fw{look at}, \fw{talk to}). As we have seen above, Ayeri behaves quite the
 opposite way in mostly using case for marking verbal complements, and having
@@ -5666,9 +5675,9 @@ p.~\pageref{tab:prepos}). A phrase like \fw{out from under} may thus be
 rendered as in (\ref{ex:nostackprep}).
 
 \ex\label{ex:nostackprep}\begingl
-	\gla Yam cacang (agonan) eyranena prihinena. //
-	\glb yam cat-yang agonan eyran-ena prihin-ena //
-	\glc \DatT{} crawl-\TsgM{}.\Aarg{} outside-\Top{} underside-\Gen{}
+	\gla Yam @ cacang $($agonan$)$ eyranena prihinena. //
+	\glb yam= cat-yang agonan eyran-ena prihin-ena //
+	\glc \DatT{}= crawl-\TsgM{}.\Aarg{} outside-\Top{} underside-\Gen{}
 		table-\Gen{} //
 	\glft `He crawls (to the outside) from the underside of the table.' //
 \endgl\xe
@@ -5683,7 +5692,7 @@ grammaticalization process similar to that of \fw{inside of the X} to
 moreover as a result is the functionalization of the triad
 \Loc{}--\Dat{}--\Gen{} to indicate $loc$, $goal$, and $src$ also with
 adpositions in general, either with \rayr{mN}{manga} grammaticalizing further
-to then solely mark direction, necessitating an obligatory \Dat{}/\Gen{}
+to then solely marking direction, necessitating an obligatory \Dat{}/\Gen{}
 complement to indicate which way around, or with \rayr{mN}{manga} withering to
 zero, since the cases are already enough to mark direction.
 %
@@ -5700,7 +5709,7 @@ zero, since the cases are already enough to mark direction.
 The way to express the difference between \fw{top/up} and \fw{bottom/down}
 would have to change for obvious reasons, though \rayr{riNF}{ring} from 
 \xayr{riNF/}{ring-}{rise, lift} and \rayr{les}{lesa} from \xayr{les/}{lesa-}
-{fall}, or \rayr{rot}{rota} from \xayr{rot/}{rot-}{heave (up)} and
+{fall}, or \rayr{rot}{rota} from \xayr{rotF/}{rot-}{heave (up)} and
 \rayr{kos}{kosa} from \xayr{kos/}{kosa-}{drop (down)} would be good candidates
 from which to generate new adpositions. Alternatively, \rayr{sh}{saha} could
 become an equivalent of \rayr{mN}{manga} to indicate direction \fw{from} the
@@ -5728,7 +5737,7 @@ Like adjectives, adpositions may be modified by adverbs, for instance, for
 intensification. This means that items from the class of adverbs categorized as
 quantifiers (\autoref{subsec:quantifiers}) are likely to occur. As we have seen
 previously, the most common such expressions are enclitic, that is, they merge
-with \xhead{P} rather than be adjuncts to \xbar{P}. An analysis of the c- and
+with \xhead{P} rather than be adjuncts at \xbar{P}. An analysis of the c- and
 f-structure of adpositional phrases with adverbial modifiers is shown in 
 (\ref{ex:adpadv}).
 
@@ -5736,9 +5745,9 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 \pex\label{ex:adpadv}
 \a\label{ex:adpadv_pre}
 \begingl
-	\gla Ang nimpya {} Tapan manga kong nangaya sirimang. //
-	\glb ang nimp-ya Ø Tapan manga kong nangaya sirimang //
-	\glc \AgtT{} run-\TsgM{} \Top{} Tapan \Dir{} inside house-\Loc{} 
+	\gla Ang @ nimpya {} Tapan manga @ kong nangaya sirimang. //
+	\glb ang= nimp-ya Ø Tapan manga= kong nangaya sirimang //
+	\glc \AgtT{}= run-\TsgM{} \Top{} Tapan \Dir{}= inside house-\Loc{} 
 		straight //
 	\glft `Tapan is running straight into the house.' //
 \endgl\medskip\\
@@ -5786,9 +5795,9 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 
 \a\label{ex:adppadv_post}
 \begingl
-	\gla Ang galamyan panganya pesan-hen. //
-	\glb ang galam=yan.Ø pangan-ya pesan=hen //
-	\glc \AgtT{} wait=\TplM{}.\Top{} end-\Loc{} until=all //
+	\gla Ang @ galamyan panganya pesan-hen. //
+	\glb ang= galam=yan.Ø pangan-ya pesan=hen //
+	\glc \AgtT{}= wait=\TplM{}.\Top{} end-\Loc{} until=all //
 	\glft `They waited until the very end.' //
 \endgl
 
@@ -5858,9 +5867,9 @@ structures may lead to the same outcome on the surface.
 				[\fw{marin} [marin, tier=word, edge=dotted]]
 			]
 			[{\anno[\pass{\Obj}]{NP}}
-				[\anno{\xhead{N}}
+%				[\anno{\xhead{N}}
 					[\fw{altanya} [altanya, tier=word, edge=dotted]]
-				]
+%				]
 			]
 		]
 		[{\anno[\elem{\Adjc}]{AdvP}}
@@ -5875,14 +5884,14 @@ structures may lead to the same outcome on the surface.
 			[\fw{marin} [marin, tier=word, edge=dotted]]
 		]
 		[{\anno[\pass{\Obj}]{NP}}
-			[\anno{\xbar{N}}
+%			[\anno{\xbar{N}}
 				[\anno{\xhead{N}}
 					[\fw{altanya} [altanya, tier=word, edge=dotted]]
 				]
 				[{\anno[\elem{\Adjc}]{AP}}
 					[\fw{baras} [baras, tier=word, edge=dotted]]
 				]
-			]
+%			]
 		]
 %	]
 ]
@@ -5942,6 +5951,7 @@ used for this purpose is given in \autoref{tab:temppos}. Essentially, a subset
 of spatial prepositions can be used metaphorically to refer to time, just as in
 English.
 
+\begin{figure}
 \ex\label{ex:adptime}\begingl
 	\gla Gamaryang marin sa-sahaye ang Sipra. //
 	\glb gamar=yang marin sa\til{}saha-ye ang Sipra //
@@ -5949,6 +5959,7 @@ English.
 		Sipra //
 	\glft `I'll get it done before Sipra returns.' //
 \endgl\xe
+\end{figure}
 
 Both \rayr{gmrFyNF}{gamaryang} `I manage (it), I get (it) done' and
 \rayr{s/shye ANF sipFr}{sa-sahaye ang Sipra} `Sipra returns' in
@@ -5959,6 +5970,7 @@ state which serves as the background for the action expressed by the matrix
 clause. The corresponding constituent structure of the PP is shown in
 (\ref{ex:adptimecstruct}).
 
+\begin{figure}
 \ex\label{ex:adptimecstruct}
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
@@ -5989,14 +6001,16 @@ clause. The corresponding constituent structure of the PP is shown in
 ]
 \end{forest}
 \xe
+\end{figure}
 
-In cases like (\ref{ex:adptimecstruct}), an adverbial modifier in the fashion
-of (\ref{ex:adpadv}) would attach in the adjunct position as well, following
+In cases like (\ref{ex:adptimecstruct}), a free adverbial modifier in the
+fashion
+of (\ref{ex:adpadv}) would attach in the adjunct position, following
 the clausal complement. For the example above, this is not very awkward,
 because the embedded clause is very short and does not branch too deeply. For
 cases where the length or depth of the CP does produce an awkward result,
-however, it is possible to extrapose it with \rayr{d/}{da-} on the phrase's
-head representing the missing complement, altogether structurally similar to 
+however, it is possible to extrapose it with \rayr{d/}{da-} on the preposition
+representing the missing complement, altogether structurally similar to 
 (\ref{ex:intrusivequant}). An example of this strategy is given in 
 (\ref{ex:cpextrapos}).
 
@@ -6004,10 +6018,10 @@ head representing the missing complement, altogether structurally similar to
 \ex\label{ex:cpextrapos}
 \begin{minipage}[t]{.5\remaining}
 \begingl
-	\gla Gamaryāng da-marin sirimang sa-sahaye ang Sipra. //
-	\glb gamar=yāng da=marin sirimang sa\til{}saha-ye ang Sipra //
+	\gla Gamaryāng da-marin sirimang sa-sahaye ang @ Sipra. //
+	\glb gamar=yāng da=marin sirimang sa\til{}saha-ye ang= Sipra //
 	\glc manage=\Fsg{}.\Aarg{} such=before straight \Iter{}\til{}come-\TsgF{} 
-		\Aarg{} Sipra //
+		\Aarg{}= Sipra //
 	\glft `I will do it right before Sipra returns.' //
 \endgl
 \end{minipage}
