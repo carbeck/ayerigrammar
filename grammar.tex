@@ -527,6 +527,11 @@
 \AtBeginEnvironment{quote}{\noindent\smaller}
 \AtBeginEnvironment{quotation}{\smaller}
 
+% Check if figure contains an example
+\AtBeginEnvironment{figure}{%
+\lingset{exskip=0pt}%
+}
+
 % Macros
 \newcommand{\CB}{\textsc{cb}} % `CB' to mark author's comments in quotes
 \newcommand{\chk}{\FS ✓} % Check mark
