@@ -11724,9 +11724,11 @@ Welsh does according to existing analyses in the \Lfg{} framework, compare
 a governing category for the subject NP and VP, since in place of VP, one may
 also put a range of other categories---NP, AP, or PP. As we have seen above in
 (\ref{ex:ipcstruct}), this is also permitted in Ayeri, though with the
-restriction that XP can only appear if \Subj{} consists of a pronominal clitic
-on the verb in \xhead{I}. \citet{bresnan2016} also note that VP may be fronted
-as a unit, as in (\ref{ex:welshvpfr}).
+restriction that XP can only appear with intransitive verbs if \Subj{} is a
+full NP (then the subject NP will take this place) or with transitive verbs if
+\Subj{} consists of a pronominal clitic on the verb in \xhead{I}.
+\citet{bresnan2016} also note that VP may be fronted as a unit, as in
+(\ref{ex:welshvpfr}).
 
 \begin{figure}[h]
 \ex\label{ex:welshvpfr}\begingl
@@ -11902,7 +11904,8 @@ an adjunct of VP is also possible.}
 \begin{figure}
 \pex\labels\label{ex:advoradj}
 \begin{minipage}[t]{.5\remaining}
-\tl\begin{forest} shorter edges, italic leaves,
+\tl\quad\ljudge\ques%
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\xbar{I}
 		[\fw{...} [..., tier=words, edge=dotted]]
@@ -11920,7 +11923,8 @@ an adjunct of VP is also possible.}
 \end{minipage}
 ~
 \begin{minipage}[t]{.5\remaining}
-\tl\begin{forest} shorter edges, italic leaves,
+\tl\quad%
+\begin{forest} shorter edges, italic leaves,
 [IP
 	[\fw{...} [..., tier=words, edge=dotted]]
 %	[S
