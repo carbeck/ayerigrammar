@@ -6550,7 +6550,7 @@ subject,\footnote{\citet{cowan1995}'s sketch may be based on
 \citet{kroeger1991} at all, nor does he refer to any other research more recent
 than 1985. The reason may be that Schachter retired in the early 1990s, as the
 UCLA linguistics department's \citet{uclalingdepthist} suggests. It may also be
-noted that \citet{schachter2005} was apparently published posthumously.}
+noted that \citet{schachter2015} was apparently published posthumously.}
 \citet{kroeger1991} reaches the opposite conclusion by performing further tests
 and taking a functionalist rather than purely structuralist perspective. Thus,
 he concludes:
@@ -11548,20 +11548,22 @@ intended grammatical functions.
 
 Copula clauses are probably the most basic kind of sentence possible to form in
 Ayeri. They do not contain a verb, but form a small clause. As we have seen
-above, Ayeri is very consistently verb-first apart from these small clauses, so
-let us assume that there is an XP governing both a phrase containing a verb and
-optionally an S, which in turn contains the arguments of the verb---at least
-the subject, if this is a free nominal (NP or DP). Since the main verb in a
-clause is obligatorily finite, I will interpret this XP as an IP---an
-inflectional phrase. The phrase structure for an IP will thus look like in
-(\ref{ex:ippstruct}), with its translation as a c-structure trees in
-(\ref{ex:ipcstruct}). XP here refers to one of NP, DP, AP, PP, and CP as an
-alternative of the usual S. The categories verbs can inflect for are listed in
-(\ref{ex:inflmorphlex}).
+above, Ayeri is very consistently verb-first apart from these small clauses. We
+have also seen above (\autoref{sec:verbtypo}) that in Welsh---which is also a
+VSO language---the pattern for transitive clauses is such that there is an IP
+which governs the verb as an extended head of VP, and a small clause which
+contains the subject and a headless VP which in turn carries the verb's
+objects. Since Ayeri can use pronominal clitics for subjects, however, it does
+not always make sense for the S to be there, so essentially, there are two
+possible c-structure plans for IP (or, depending on your version of X-bar
+theory, three). The phrase structure rules for IPs are listed in
+(\ref{ex:ippstruct}), the corresponding c-structure is given in
+(\ref{ex:ipcstruct}), and the general morpholexical rule set for finite verbs
+is given in (\ref{ex:inflmorphlex}).
 
-\begin{figure}
-\pex\label{ex:ippstruct}
-\a IP → \anno*{\xbar{I}} \anno*{S} $\vee$ \anno*[\pass{\GF}]{XP}
+\begin{figure}[h]
+\pex\label{ex:ippstruct}%
+\a IP → \anno*{\xbar{I}} \anno*[\pass{\GF}]{XP} $\vee$ \anno*{S}
 \a \xbar{I} → \anno*{\xbar{I}} \anno*[\ups{\XCompl}]{VP}
 \a \xbar{I} → \anno*{\xhead{I}} \anno*[\ups{\Adjc}]{AdvP}
 \a \xhead{I} → \anno*{Cl*} \anno*{\xhead{I}} \anno*{Cl*}
@@ -11569,9 +11571,8 @@ alternative of the usual S. The categories verbs can inflect for are listed in
 \end{figure}
 
 \begin{figure}
-\ex\labels\label{ex:ipcstruct}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest} shorter edges,
+\ex\label{ex:ipcstruct}
+\begin{forest} shorter edges,
 [IP
 	[\anno{\xbar{I}}
 		[\anno{\xbar{I}}
@@ -11586,19 +11587,26 @@ alternative of the usual S. The categories verbs can inflect for are listed in
 		]
 		[{\anno[\ups{\XCompl}]{VP}}]
 	]
-	[\anno{S}]
-]
-\end{forest}
-\end{minipage}
-~
-\tl\quad\begin{forest} shorter edges,
-[IP
-	[\anno{\xhead{I}}]
-	[{\anno[\pass{\GF}]{XP}}]
+	[{\anno[\pass{\GF}]{XP} $\vee$ \anno{S}}]
 ]
 \end{forest}
 \xe
 \end{figure}
+
+In (\ref{ex:ippstruct}), we can see that the first node branching off IP on the
+right can either be an XP annotated for some grammatical function \GF{} or a
+small clause S. These are mutually exclusive. The XP rule is applied firstly
+when the subject consists of a pronominal clitic. In this case, XP stands for
+the complement of the verb, so the phrase type may be one of NP, DP, AP, PP, or
+CP, annotated for the respective complement function \CF{}. This means that all
+\AF{}s are permitted here, except \Subj{}, compare (\ref{ex:functions}) at the
+beginning of this chapter. Secondly, XP is available to the subject of an
+intransitive verb---here, it is a specifier, though.\footnote{In stricter
+versions of X-bar theory, thus, the subject and object XP are different
+branches.} In this second case, XP may be NP or DP annotated for the subject
+function, \Subj{}. In all other cases, the rule with S is applied, where S is
+probably also in the position of a specifier: S cannot be applied recursively
+and does not coordinate with anything \xbar{I} might contain.
 
 \begin{figure}
 \begin{morphlex}
@@ -11649,7 +11657,7 @@ clitics, they can also be listed in terms of a feature \Mod\textsc{ality}
 obligatorily marked for the case and animacy of the clause's topic. Ayeri also
 uses a system of verb agreement which alternates between agreement with full
 third-person NPs and pronominal clitic. For this reason, the feature 
-\ups{\Subj{} \Pred} appears in brackets in (\ref{ex:inflmorphlex}: it is only
+\ups{\Subj{} \Pred} appears in brackets in (\ref{ex:inflmorphlex}): it is only
 defined for pronominal clitics (sections \ref{clitics_postverb_person},
 p.~\pageref{clitics_postverb_person}, and \ref{subsec:persnumagr}). Absence of
 tense, mood, and aspect marking specifies that the verb is in the contextually
@@ -11662,6 +11670,11 @@ a nominal fulfilling the role of a predicate. Since VP carries the non-\Subj{}
 arguments of a verb, making a clause transitive, I want to defer the discussion
 of VP's setup to the next section, \ref{subsec:vps}. This means, we will mainly
 be dealing with intransitive clauses (headed by finite verbs) in this section.
+Besides the VP in S which is not listed in the chart in (\ref{ex:ipcstruct}),
+there is a VP indicated in this chart, functioning as an \XCompl{}. This slot
+exists for the purpose of control and raising verbs, whose syntax will be
+discussed in \autoref{subsubsec:ctrlvb}, pp.~\pageref{subsubsec:ctrlvb} and 
+\pageref{subsubsec:raisvb}.
 
 \begin{figure}
 \ex Welsh \citep[adapted from][134]{bresnan2016}:\label{ex:welshcstruct2}%
@@ -11726,21 +11739,21 @@ also put a range of other categories---NP, AP, or PP. As we have seen above in
 (\ref{ex:ipcstruct}), this is also permitted in Ayeri, though with the
 restriction that XP can only appear with intransitive verbs if \Subj{} is a
 full NP (then the subject NP will take this place) or with transitive verbs if
-\Subj{} consists of a pronominal clitic on the verb in \xhead{I}.
-\citet{bresnan2016} also note that VP may be fronted as a unit, as in
-(\ref{ex:welshvpfr}).
+\Subj{} consists of a pronominal clitic on the verb in \xhead{I} (then the
+complement(s) of the verb will take this place). \citet{bresnan2016} note that
+in Welsh, the VP in S may be fronted as a unit.%, as in (\ref{ex:welshvpfr}).
 
-\begin{figure}[h]
-\ex\label{ex:welshvpfr}\begingl
-	\glpreamble Welsh (\cite[131]{bresnan2016}, from
-		\cite[245]{tallerman1998}): //
-	\gla $[$\tsub{VP} adeiladu tai ym Mangor $]$ a wnaeth o //
-	\glb {} build house.\Pl{} in Bangor {} \Ptcl{} do.\Pst{}.\Tsg{} he //
-	\glft `He \emph{built houses in Bangor}.' //
-\endgl\xe
-\end{figure}
+% \begin{figure}[h]
+% \ex\label{ex:welshvpfr}\begingl
+% 	\glpreamble Welsh (\cite[131]{bresnan2016}, from
+% 		\cite[245]{tallerman1998}): //
+% 	\gla \textup{[\tsub{VP}} adeiladu tai ym Mangor \textup{]} a wnaeth o //
+% 	\glb {} build house.\Pl{} in Bangor {} \Ptcl{} do.\Pst{}.\Tsg{} he //
+% 	\glft `He \emph{built houses in Bangor}.' //
+% \endgl\xe
+% \end{figure}
 
-Fronting things this way is possible in Ayeri, however, it is possible to
+Fronting things this way is not possible in Ayeri, however, it is possible to
 reverse the order of the subject and its complement, for instance, when a
 relative clause modifies the subject, as in (\ref{ex:ayrsinv}). Here, the
 subject, \rayr{runj si petigojnNF tml}{runay si petigoynang tamala} follows the
@@ -11756,76 +11769,12 @@ object \rayr{Agu\_asF}{aguas}.
 \endgl\xe
 \end{figure}
 
-Moreover, according to \citep{carnie2013}, the specifier rule is not recursive,
-so a subject NP must not be modified by another NP. If the analysis of Ayeri's
-NP in \autoref{subsec:nps} is correct, however, Ayeri permits this in
-constructions like in (\ref{ex:subjnprec}), where an NP is modified by another
-NP in the instrumental case. Since Ayeri does not possess articles, and
-possessive pronouns work similar to adjectives, there is no reason to assume
-that there is a DP for an NP to be embedded in, so a subject containing such an
-NP--NP construction does not qualify as a specifier.
-
-\begin{figure}[h]
-\ex\label{ex:subjnprec}\begingl
-	\gla ayon tiganeri //
-	\glb ayon tigan-eri //
-	\glc man honor-\Ins{} //
-	\glft `a man of honor' //
-\endgl\xe
-\end{figure}
-
-As described in the previous section, \ref{subsec:eqs}, Ayeri's copula clauses
-basically take the structure NP---XP where XP may consist of a range of phrase
-types and the juxtaposition of a subject and its predicative complement is
-already enough to establish a predication structure in absence of a verb. If we
-assumed that in clauses with verbs the subject were the specifier of VP we
-would also need two distinct building plans for clauses. A correction to the
-phrase structure rules in (\ref{ex:ippstruct}) for clauses with verbs would be
-necessary, accordingly:
-
-\ex\ljudge\ques%
-IP → \anno*{\xbar{I}} \anno*{VP}
-\xe
-
-VP would then have to be defined in a way that permitted the subject NP in
-Spec,VP to appear on either side of the head in the same way the subject NP
-in S can appear on either side of the predicate in (\ref{ex:copstruct}). Such
-an analysis would come at the benefit of a simpler phrase structure rule for S,
-since VP would not be able to occur in this context, compare (\ref{ex:xpyp}).
-
-\begin{figure}[h]
-\ex\label{ex:xpyp}\ljudge\ques%
-S → \anno*[\pass{\Subj}]{XP} \anno*[%
-		\ups{\Pred}~=~%
-		\astruct{null-be}{\ups{\Subj} \ups{\Plink}}%
-		% `\textit{null-be}~$\left\langle\begin{array}{@{} l @{}}
-		% 	\text{\ups{\Subj}}\\
-		% 	\text{\ups{\Plink}}
-		% \end{array}\right\rangle$'%
-	]{$\epsilon$} \anno*[\pass{\Plink}]{YP}
-\xe
-\end{figure}
-
-If we analysed Ayeri's clause structure as in (\ref{ex:welshcstruct2}),
-however, VP very conveniently would be just another phrase type permitted as a
-complement of the subject NP and copular clauses would be a subtype of the
-general clause structure instead. Since there is no overt verb in copular
-clauses, the difference for copular clauses would only be that there were no
-\xhead{I} and its associated maximal projection, IP, for S to be embedded in.
-This is another reason I favor the analysis of S as a complement of IP for
-clauses with verbs---although AdvPs will, like adjectives, follow the head
-directly in spite of being adjuncts rather than complements and the complement
-becomes essentially extraposed, as illustrated in
-(\ref{ex:ayradvorder}).\footnote{An analysis of the constituent structure in
-(\ref{ex:ayradvorder_1}) and (\ref{ex:advoradj}) in which \rayr{mino}{mino} is
-an adjunct of VP is also possible.}
-
 \begin{figure}
 \pex\label{ex:ayradvorder}
 \a\label{ex:ayradvorder_1}%
 \begin{minipage}[t]{.5\remaining}
 \begingl
-	\glpreamble Expected: //
+	\glpreamble Possibly expected: //
 	\gla \textup{\ques{}} @ Apaya ang @ Amān mino. //
 	\glb {} apa-ya ang= Amān mino //
 	\glc {} laugh-\TsgM{} \Aarg{}= Amān happily //
@@ -11951,17 +11900,16 @@ complement in order to avoid ambiguity in its modification relationship: in
 (\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the adverb
 to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān}, since
 adverbs and adjectives are not strictly distinguished by means of morphology,
-as (\ref{ex:advoradj}) illustrates.\footnote{S cannot be applied recursively
-and does not coordinate with anything \xbar{I} might contain. Assuming that
-specifiers in Ayeri also branch off to the right and that S is indeed in
-Spec,IP for the reasons mentioned, the interpretation in (\ref{ex:advoradj}a)
-is not licensed. S would have to be the right-most node in IP---which it
-normally is.} Due to \Lfg{}'s functional approach, however, both c-structures
-in (\ref{ex:ayradvorder}ab) map to the f-structure shown in
-(\ref{ex:ayradvorderfstr}) regardless of their individual constituent order.
-Whatever the actual c-structure realization looks like, coherence is thought to
-be created by unifying semantic information provided by the individual words
-at f-structure level.
+as (\ref{ex:advoradj}) illustrates.\footnote{Assuming that specifiers in Ayeri
+also branch off to the right and that either the subject NP or S are indeed
+located in Spec,IP for the reasons mentioned, the interpretation in
+(\ref{ex:advoradj}a) is not licensed. \Subj{} or S would have to be the
+right-most node in IP---which they normally are.} Due to \Lfg{}'s functional
+approach, however, both c-structures in (\ref{ex:ayradvorder}ab) map to the
+f-structure shown in (\ref{ex:ayradvorderfstr}) regardless of their individual
+constituent order. Whatever the actual c-structure realization looks like,
+coherence is thought to be created by unifying semantic information provided by
+the individual words at f-structure level.
 
 Quantifier suffixes work with verbs as well, except that they have an
 grading or intensifying rather than quantifying meaning in this context,
