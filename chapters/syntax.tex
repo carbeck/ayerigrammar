@@ -11917,12 +11917,11 @@ constituent order. Whatever the actual c-structure realization looks like,
 coherence is thought to be created by unifying semantic information provided by
 the individual words at f-structure level.
 
-Quantifier suffixes work with verbs as well, except that they have an
-grading or intensifying rather than quantifying meaning in this context,
-compare \autoref{tab:quantifiers} (p.~\pageref{tab:quantifiers}). An example is
-given in (\ref{ex:verbint}). The suffix is an enclitic with an adverbial
-meaning. It thus feeds into the \Adjc{} function at clause level in the way
-regular adverbs do (\ref{ex:verbintfstr}).
+Quantifier suffixes work with verbs as well, except that they have a grading or
+intensifying meaning in this context, compare \autoref{tab:quantifiers}
+(p.~\pageref{tab:quantifiers}). An example is given in (\ref{ex:verbint}). The
+suffix is an enclitic with an adverbial meaning. It thus feeds into the \Adjc{}
+function at clause level in the way regular adverbs do (\ref{ex:verbintfstr}).
 
 \begin{figure}
 \pex
@@ -13071,7 +13070,8 @@ an attribute of the f-structure containing \XCompl{}. An example is given in
 	\glft `The roof, Mican tries to repair it.' //
 \endgl\medskip
 
-\begin{forest} narrower nodes, shorter edges, italic leaves,
+\begin{minipage}[t]{.45\remaining}
+\begin{forest} shorter edges, italic leaves, for tree={s sep-=2em,s=0},
 [IP
 	[\anno{\xbar{I}}
 			[\anno{\xhead{I}}
@@ -13094,8 +13094,9 @@ an attribute of the f-structure containing \XCompl{}. An example is given in
 		]
 	]
 ]
-\end{forest}\medskip
-
+\end{forest}%\medskip
+\end{minipage}
+~
 \begin{avm}
 \[
 	\Pred	&	\astruct{try}{\ups{\Subj} \ups{\XCompl}} \\
@@ -13117,9 +13118,9 @@ an attribute of the f-structure containing \XCompl{}. An example is given in
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlinc_top})
-	-- ++(east:12em) |- ([yshift=1ex]{pic cs:ctrlinc_obj});
+	-- ++(east:11.5em) |- ([yshift=1ex]{pic cs:ctrlinc_obj});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:ctrlinc_subj1})
-	-- ++(east:10.5em) |- ([yshift=1ex]{pic cs:ctrlinc_subj2});
+	-- ++(east:10.25em) |- ([yshift=1ex]{pic cs:ctrlinc_subj2});
 \end{tikzpicture}
 \xe
 \end{figure}
@@ -13732,7 +13733,7 @@ thus, to generate the adjective as a complement of \xhead{I}.
 \endgl\medskip
 
 \begin{minipage}[t]{.5\remaining}
-\begin{forest} shorter edges, italic leaves,
+\begin{forest} shorter edges, italic leaves, for tree={s sep-=1.5em,s=0}
 [IP
 	[\anno{\xbar{I}}
 		[\anno{\xhead{I}}
@@ -13757,7 +13758,7 @@ thus, to generate the adjective as a complement of \xhead{I}.
 ]
 \end{forest}
 \end{minipage}
-
+~
 \begin{avm}
 \[
 	\Pred	&	\astruct{be}{\ups{\Subj} \ups{\Plink}} \\
