@@ -11563,10 +11563,12 @@ is given in (\ref{ex:inflmorphlex}).
 
 \begin{figure}[h]
 \pex\label{ex:ippstruct}%
-\a IP → \anno*{\xbar{I}} \anno*[\pass{\GF}]{XP} $\vee$ \anno*{S}
-\a \xbar{I} → \anno*{\xbar{I}} \anno*[\ups{\XCompl}]{VP} $\vee$
-	\anno*[\pass{\Plink}]{AP}
-\a \xbar{I} → \anno*{\xhead{I}} \anno*[\ups{\Adjc}]{AdvP}
+\a IP → \anno*{\xbar{I}} \anno*[\pass{\GF}]{XP}
+	$\vee$ \anno*{S}
+\a \xbar{I} → \anno*{\xbar{I}} \anno*[\pass{\XCompl}]{VP}
+	$\vee$ \anno*[\pass{\Plink}]{AP}
+\a \xbar{I} → \anno*{\xhead{I}} \anno*[\elem{\Adjc}]{AdvP}
+	$\vee$ \anno*[\elem{\Adjc}]{AP}
 \a \xhead{I} → \anno*{Cl*} \anno*{\xhead{I}} \anno*{Cl*}
 \xe
 \end{figure}
@@ -11584,9 +11586,9 @@ is given in (\ref{ex:inflmorphlex}).
 					[\anno{Cl*}]
 				]
 			]
-			[{\anno[\elem{\Adjc}]{AdvP}}]
+			[{\anno[\elem{\Adjc}]{AdvP} $\vee$ \anno[\elem{\Adjc}]{AP}}]
 		]
-		[{\anno[\ups{\XCompl}]{VP} $\vee$ \anno[\pass{\Plink}]{AP}}]
+		[{\anno[\pass{\XCompl}]{VP} $\vee$ \anno[\pass{\Plink}]{AP}}]
 	]
 	[{\anno[\pass{\GF}]{XP} $\vee$ \anno{S}}]
 ]
@@ -11675,7 +11677,9 @@ Besides the VP in S which is not listed in the chart in (\ref{ex:ipcstruct}),
 there is a VP indicated in this chart, functioning as an \XCompl{}. This slot
 exists for the purpose of control and raising verbs, whose syntax will be
 discussed in \autoref{subsubsec:ctrlvb}, pp.~\pageref{subsubsec:ctrlvb} and 
-\pageref{subsubsec:raisvb}.
+\pageref{subsubsec:raisvb}. The AP with which it alternates exists for the
+similar construction with secondary predicates, discussed in 
+\autoref{subsec:secpred}; the same goes for the AP adjunct position.
 
 \begin{figure}
 \ex Welsh \citep[adapted from][134]{bresnan2016}:\label{ex:welshcstruct2}%
