@@ -13850,14 +13850,15 @@ thus, to generate the adjective as a complement of \xhead{I}.
 \endgl\medskip
 
 \begin{minipage}[t]{.45\remaining}
-\vspace{1\baselineskip}
+%\vspace{1\baselineskip}
+\lapbox[\width]{-\exoffset}{%
 \begin{forest} shorter edges, italic leaves, for tree={s sep-=1.5em,s=0}
 [IP
 	[\anno{\xbar{I}}
 		[\anno{\xhead{I}}
 			[{Ang engye}, roof]
 		]
-		[{\anno[\ups{\Plink}]{AP}}% \tikzmark{compcstruct_par}
+		[{\anno[\pass{\Plink}]{AP}}% \tikzmark{compcstruct_par}
 			[para]
 		]
 	]
@@ -13866,7 +13867,7 @@ thus, to generate the adjective as a complement of \xhead{I}.
 			[Cisu]
 		]
 		[\anno{VP}
-			[{\anno[\ups{\Plink}]{AP}}% \tikzmark{compcstruct_ap}
+			[{\anno[\pass{\Plink}]{AP}}% \tikzmark{compcstruct_ap}
 				[{\anno[\pass{\Compl}]{NP}}% \tikzmark{compcstruct_kam}
 					[{sa Kaman}, roof]
 				]
@@ -13874,7 +13875,7 @@ thus, to generate the adjective as a complement of \xhead{I}.
 		]
 	]
 ]
-\end{forest}
+\end{forest}}
 \end{minipage}
 \hfill
 \begin{avm}
