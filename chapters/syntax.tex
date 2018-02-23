@@ -13439,6 +13439,80 @@ function of the superior f-structure which specifies \XCompl{}.
 
 ...
 
+\begin{figure}
+\begin{minipage}[t]{.67\remaining}
+\ex\label{ex:expsitang}\begingl
+	\gla Le @ cānnang sitang-ikan kondan. //
+	\glb le= cān=nang sitang=ikan kondan-Ø //
+	\glc \PatTI{}= love=\Fpl{}.\Aarg{} self=many food-\Top{} //
+	\glft `Food, many of us love it.' //
+\endgl\medskip
+
+\begin{forest} shorter edges, italic leaves,
+[IP
+	[\xhead{I} % \anno{\xhead{I}}
+		[\xhead{I} % \anno{\xhead{I}}
+			[{Le cān}, roof]
+		]
+		[Cl \tikzmark{expsitang_nan} % \anno{Cl}
+			[-nang$_i$]
+		]
+	]
+	[S % \anno{S}
+		[DP\tikzmark{expsitang_DP} \tikzmark{expsitang_sit}
+			% {\anno[\pass{\Subj}]DP}
+%			[\xhead{D} % \anno{\xhead{D}}
+				[\xhead{D} % \anno{\xhead{D}}
+					[sitang$_i$]
+				]
+				[Cl \tikzmark{expsitang_ika} % {\anno[\elem{\Adjc}]{Cl}}
+					[-ikan]
+				]
+%			]
+		]
+		[NP % {\anno[\pass{\Obj}]{NP}}
+			[\xhead{N} % \anno{\xhead{N}}
+				[kondan]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+\end{minipage}
+\hfill
+{\smaller%
+\begin{avm}
+\[
+	... \\
+
+	\Subj	&	\tikzmark{expsitang_subj} \[
+		\Pred	&	`$pro$' \\
+		\Pers	&	\First \\
+		\Num	&	\Pl \\
+		\Case	&	\Aarg \\
+		\Anim	&	$+$ \\
+
+		\Adjc	&	\tikzmark{expsitang_adj} \{\[
+			\Pred	&	`many' \\
+		\]\}
+	\] \\
+
+	... \\
+\]
+\end{avm}}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [-latex] ([yshift=1ex]{pic cs:expsitang_nan})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:expsitang_subj});
+\draw [-latex] ([yshift=1ex]{pic cs:expsitang_sit})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:expsitang_subj});
+\draw [-latex] ([yshift=1ex]{pic cs:expsitang_ika})
+	to [out=east, in=west] ([yshift=1ex]{pic cs:expsitang_adj});
+\end{tikzpicture}
+\end{figure}
+
+...
+
 \subsection{Existential statements}
 \label{subsec:exs}
 
