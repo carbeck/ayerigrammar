@@ -17377,40 +17377,40 @@ clause. Most notably, these are complement clauses and relative clauses.
 Another common type of dependent clause is the conditional clause. As before,
 this section will describe their structure and function.
 
-% \begin{figure}
+\begin{figure}[h]
 \ex\label{ex:cpstruct}%
-CP → $\left(\anno*{\xhead{C}}\right)$ \anno*{XP}
+CP → \anno*{\xhead{C}} \anno*{XP}
 \xe
-% \end{figure}
+\end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \ex\label{ex:cpcstruct}
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\Compl}\\ |~\pass{\Adjc}\}]{CP}}
+[{\anno[\{\pass{\Compl} | \pass{\Adjc}\}]{CP}}
 %	[\anno{\xbar{C}}
-		[{$\left(\anno{\xhead{C}}\right)$}]
-		[{\anno{XP}}]
+		[\anno{\xhead{C}}]
+		[\anno{XP}]
 %	]
 ]
 \end{forest}
 \xe
 \end{figure}
 
-% \begin{figure}
-% \begin{morphlex}
-% \ex\label{ex:cmorphlex}%
-% \adjustbox{valign=t}{%
-% 	\begin{tabu} {\usetabu{morphlexnarrow}}
-% 	...
-% 		& C
-% 		& \begin{tabular}[t]{l l l}
-% 			\ups{\Pred} & = & `...' \\
-% 		\end{tabular}
-% 	\end{tabu}%
-% }
-% \xe
-% \end{morphlex}
-% \end{figure}
+\begin{figure}[h]
+\begin{morphlex}
+\ex\label{ex:cmorphlex}%
+\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& C
+		& \begin{tabular}[t]{l l l}
+			\ups{\Conj} & = & `...' \\
+		\end{tabular}
+	\end{tabu}%
+}
+\xe
+\end{morphlex}
+\end{figure}
 
 As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
 complementizer phrase is formed by a conjunction, \xhead{C}, which also can be
@@ -17420,13 +17420,9 @@ attach an adjunct to. The complement of a \xhead{C} is formed by a verbal
 phrase type---IP or VP, but also plain S in the case of a copula clause. This
 means that the complement clause may be finite or infinite. The CP itself may
 fulfill different grammatical functions: closed complement as well as
-adjunct. Ayeri is rather sparse about conjunctions, compare
-\autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The conjunction
-corresponding to English \fw{that} is zero, so that simple complement clauses
-are simply juxtaposed. Examples of complement clauses are provided in
-(\ref{ex:complcls}).
+adjunct.
 
-%\begin{figure}
+\begin{figure}
 \pex\label{ex:complcls}
 \a\label{ex:complcls_1}\begingl
 	\glpreamble finite complement clause: //
@@ -17469,7 +17465,17 @@ are simply juxtaposed. Examples of complement clauses are provided in
 \endgl
 
 \xe
-%\end{figure}
+\end{figure}
+
+Since conjunctions do not inflect, the morpholexical specification in
+(\ref{ex:cmorphlex}) simply lists a \Conj{} feature which takes the conjunction
+as a value, for instance, $and$, $or$, $if$, etc. Relativizers form an
+exception to this rule, however, so for additional rules for relative pronouns,
+see below. Ayeri is rather sparse about different conjunction types, however,
+compare \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The
+conjunction corresponding to English \fw{that} is zero, so that simple
+complement clauses are simply juxtaposed. Examples of complement clauses are
+provided in (\ref{ex:complcls}).
 
 \subsection{Complement clauses}
 \label{subsec:complcs}
@@ -17479,13 +17485,15 @@ occurring clausal complements or adjuncts of verbs. The respective c- and
 f-structures of the sentences in (\ref{ex:complcls_1}) and
 (\ref{ex:complcls_3}) are charted in (\ref{ex:fincclstruct}). Since
 (\ref{ex:complcls_1}) has a plain clausal complement $g$, the \xhead{C}
-position in (\ref{ex:fincclstruct}) is empty. Example (\ref{ex:complcls_2}),
-on the other hand, contains a final clause $g$ as an adjunct of the verb in
-$f$---the purpose is not required information here. The conjunction, however,
-marks the subordinate clause $g$ as providing a purpose. In this case, the
-\xhead{C} position is filled with the conjunction. Both subclauses $g$ form
-independent f-structure cores: the verb as a predicator does not contain
-arguments controlled by the superordinate clause $f$ in its a-structure.
+position in (\ref{ex:fincclstruct_1}) is empty. Example
+(\ref{ex:fincclstruct_2}), on the other hand, contains a final clause $g$ as an
+adjunct of the verb in $f$---the purpose is not required information here. The
+conjunction, however, marks the subordinate clause $g$ as providing a purpose.
+In this case, the \xhead{C} position is filled with the conjunction, 
+\xayr{kdaare}{kadāre}{so that}. The subclauses $g$ of both examples in
+(\ref{ex:fincclstruct}) form independent f-structure cores: the verb as a
+predicator does not contain arguments controlled by the respective
+superordinate clause $f$ in its a-structure.
 
 \begin{figure}
 \pex\label{ex:fincclstruct}
@@ -17578,14 +17586,14 @@ $f$: \[
 The non-finite complement clause in (\ref{ex:complcls_2}) is special in that
 the subordinate clause is formed by a participle. Even if there is a
 superficial similarity to control and raising verbs (compare 
-\autoref{subsubsec:ctrlvb}, pp.~\pageref{subsubsec:ctrlvb} and 
-\pageref{subsubsec:raisvb}), this construction is structurally and functionally
-different, as shown in (\ref{ex:infcclstruct}). The thing which is known is a
-closed complement subcategorized for by the verb in $f$; the predicator of the
-complement $g$, however, is an intransitive non-finite form and hence there is
-neither subject nor object. The a-structure of the verb is thus simply
-indicated as $null$ in this particular case. Non-finite verbs are not precluded
-from having objects otherwise.
+\autoref{subsubsec:ctrlvb}, pp.~\pageref{subsubsec:ctrlvb}~ff.), this
+construction is structurally and functionally different, as shown in
+(\ref{ex:infcclstruct}). The thing which is known is a closed complement
+subcategorized for by the verb in $f$; the predicator of the complement $g$,
+however, is an intransitive non-finite form and hence there is neither a
+subject nor an object. The a-structure of the verb is thus simply indicated as
+$null$ in this particular case. Non-finite verbs are not precluded from having
+arguments and adjuncts otherwise, compare \autoref{subsec:vps}.
 
 \begin{figure}
 \ex\label{ex:infcclstruct}
@@ -17621,9 +17629,9 @@ $f$: \[
 \subsection{Relative clauses}
 \label{subsec:relcs}
 
-Relative clauses are clausal adjuncts of nouns. Relative clauses in Ayeri are
-typically headed by a relative pronoun which may agree with its head in case
-and animacy as well as inflect for its role in the relative clause, compare
+Relative clauses are clausal adjuncts of nouns. In Ayeri, they are typically
+headed by a relative pronoun which may agree with its head in case and animacy
+as well as inflect for its role within the relative clause, compare
 \autoref{subsec:relpro}. As a pronoun, the relativizer underlies anaphoric
 control. Functionally, the relative pronoun constitutes a topic which is
 connected to one of the arguments of the verbs inside the relative clause
@@ -17633,9 +17641,10 @@ relative clauses; \citet{bresnan2016} do not say anything about the f-structure
 of relative clauses.} This topic is not marked on the verb as such, though, but
 a different argument of the verb often is.\footnote{Compare \citet[70--71]
 {bresnan2016} for an example of set-valued topics in Russian.} In order to
-indicate the kind of pronoun I will use the \Prontype{} feature for consistency
-with other kinds of pronouns discussed previously. The general morpholexical
-specification for relative pronouns is given in (\ref{ex:relpromorphlex}).
+indicate the type of pronoun which the relativizer constitutes, I will use the
+\Prontype{} feature for consistency with other kinds of pronouns discussed
+previously. The general morpholexical specification for relative pronouns is
+given in (\ref{ex:relpromorphlex}).
 
 \begin{figure}
 \begin{morphlex}
@@ -17665,7 +17674,7 @@ specification for relative pronouns is given in (\ref{ex:relpromorphlex}).
 According to the definitions in (\ref{ex:relpromorphlex}), a relative pronoun's
 agreement with an \emph{external} controller is conceptualized as a
 constraining equation where the relative pronoun requires being included in the
-\Adjc{} of a \GF{} which contains \Case{} and \Anim{} features set to the
+\Adjc{} of a \GF{} which contains \Case{} and \Anim{} features which equal the
 values the relative pronoun specifies. Any roles which the relative pronoun
 receives from an \emph{internal} predicator are realized by the \Case{} and
 \Anim{} feature. Internal additional case marking is limited to those
@@ -17859,7 +17868,7 @@ from the previous one, however, the relativizer has been changed to
 \rayr{sinaa}{sinā} in order to mark that the controller of the relativizer is
 the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
 holds information about the relativizer has gained a \Case{} feature with the
-attribute \Gen{} to reflect internal casemarking of the relativizer.
+attribute \Gen{} to reflect internal case marking of the relativizer.
 Essentially, the relative pronoun reflects the role of the internal grammatical
 function it links to as a topic.
 
@@ -17924,7 +17933,7 @@ function it links to as a topic.
 \xe
 \end{figure}
 
-It has been mentioned before that complement clauses may also have S
+It has been mentioned initially that complement clauses may also have S
 complements. This is the case with a copula clause complementing the relative
 pronoun, as in (\ref{ex:relc_cop}). Here, the relativizer substitutes its
 external controller \xayr{koyaasF}{koyās}{book}, which is a patient form, as
@@ -18034,12 +18043,12 @@ use a resumptive pronoun. The relativizer's controller is \xayr{AyonsF}
 occupied by a resumptive pronoun in addition, however, which appears as
 topicalized in the example. As we have seen previously, it is grammatical in
 Ayeri to make a possessor the topic of its superior f-structure, so a
-construction using \rayr{sinaa}{sinā} as in (\ref{ex:relc_siintcase}) should
-not be a problem. However, since the genitive case may mark both possessors and
-oblique themes and the latter is is well within the scope of possible arguments
-of \xayr{ly/}{laya-}{read}, the construction with the resumptive pronoun may be
-used as a way to disambiguate between reading someone's book and reading a book
-about someone.
+construction using \xayr{sinaa}{sinā}{whose} as in (\ref{ex:relc_siintcase})
+should not be a problem. However, since the genitive case may mark both
+possessors and oblique themes, and the latter is is well within the scope of
+possible arguments of \xayr{ly/}{laya-}{read}, the construction with the
+resumptive pronoun may be used as a way to disambiguate between reading
+someone's book and reading a book about someone.
 
 All of the relative clauses exemplified here so far have been externally
 headed, however, English at least also allows headless relative clauses. These
@@ -18055,7 +18064,7 @@ provided with a head in the way of `that which'. Also note that Ayeri does not
 distinguish between restricted and unrestricted relative clauses the way
 English does.
 
-\begin{figure}
+\begin{figure}[h]
 \ex\label{ex:relcheadless}%
 \ljudge\ques\begingl
 	\gla Si ang @ sungyan prihinya, bituayley disaeri. //
@@ -18096,14 +18105,14 @@ word order inversion to mark the construction as conditional.
 	\glb ang= kond=vāng nihaga-ye-ley kada div=vāng sapin //
 	\glc \AgtT{}= eat=\Second.\Aarg{} vegetable-\Pl{}-\PargI{} then
 		stay=\Second{}.\Aarg{} healthy //
-	\glft `Eat your vegetables, then you will stay healthy.' //
+	\glft `If you eat your vegetables, you will stay healthy.' //
 \endgl
 
 \a\label{ex:condcs_3}\begingl
 	\gla Sa @ ripavāng ay, ang @ gumay vayam. //
 	\glb sa= ripa=vāng ay.Ø ang= gum=ay.Ø vayam //
 	\glc \PatT{}= pay=\Second{}.\Aarg{} \Fsg{}.\Top{} \Aarg{}=
-		work=\Fsg{}.\Aarg{} \Second{}.\Ben{} //
+		work=\Fsg{}.\Aarg{} \Second{}.\Dat{} //
 	\glft `You pay me, I will work for you.' //
 \endgl
 
@@ -18117,7 +18126,7 @@ to express a counterfactual conditional, the irrealis mood is used, as in
 (\ref{ex:condcntfact}). Ayeri does not distinguish between subjunctive and
 conditional moods; irrealis covers both.
 
-\begin{figure}
+\begin{figure}[h]
 \ex\label{ex:condcntfact}\begingl
 	\gla Yomongyang adaya, sa @ nelongyang va. //
 	\glb yoma-ong=yang adaya sa= nel-ong=yang va.Ø //
@@ -18129,12 +18138,13 @@ conditional moods; irrealis covers both.
 
 Since Ayeri uses a zero-copula, there is no verb to mark for irrealis in
 conditions containing a copula clause. An adverb expressing a potential action
-like \xayr{yomiNF}{yoming}{maybe, perhaps} may be used in these cases or
+like \xayr{yomiNF}{yoming}{maybe, perhaps} may be used in these cases, or
 no marker at all. Both options are illustrated in (\ref{ex:copcond}).
 
-\begin{figure}
+\begin{figure}[h]
 \ex\label{ex:copcond}\begingl
-	\gla Yang ijan (yoming), sa @ intongyang koya-hen si vacyang. //
+	\gla Yang ijan \textup{(}yoming\textup{)}, sa @ intongyang koya-hen si
+		vacyang. //
 	\glb yang ijan (yoming) sa= int-ong=yang koya-Ø=hen si vac=yang //
 	\glc \Fsg{}.\Aarg{} rich (maybe) \PatT{}= buy-\Irr{}=\Fsg{}.\Aarg{}
 		book-\Top{}=all \Rel{} like=\Fsg{}.\Aarg{} //
@@ -18149,7 +18159,7 @@ dedicated conjunction expressing `unless', however, it has \rayr{naarY}{nārya}
 as a general-purpose negative conjunction. It may also use negation as a
 morphological means to mark a negative condition.
 
-\begin{figure}
+\begin{figure}[h]
 \pex
 \a\label{ex:unlessnaarya}\begingl
 	\gla Sa-sahoyyang, nārya bengyāng, simalyāng. //
