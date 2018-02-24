@@ -12,8 +12,12 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently being worked on:
 
-* Phrase structures (`chapters/syntax.tex`)
-    1. Complementizer phrases
+* Preface
+* Introduction
+* Phonology (`chapters/phonology.tex`)
+   1. Phoneme Inventory
+   2. Phonotactics
+   3. Notes on Prosody
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
@@ -22,9 +26,8 @@ I will tag a release (basically "first edition") only when everything is as comp
 Roadmap
 =======
 
-* proofreading and correction of the syntax chapter
-* maybe extend name list with etymologies
 * proofread and correct *whole* thing again
+* maybe extend name list with etymologies
 * make index
 * look into print-on-demand options
 
