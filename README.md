@@ -10,18 +10,18 @@ I hope that by using LaTeX and GitHub, the whole process of editing will be more
 Currently working on
 ====================
 
-**WARNING**: This is work heavily in progress! Things may still be a little rough around the edges, especially the parts currently being worked on:
+**WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time:
 
-* Preface
-* Introduction
+* Preface (`chapters/preface.tex`)
+* Introduction (`chapters/introduction.tex`)
 * Phonology (`chapters/phonology.tex`)
    1. Phoneme Inventory
    2. Phonotactics
    3. Notes on Prosody
 
-The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes occasionally if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
+The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
-I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Notably, the section on syntax—discussing the various constituent types (NP, VP, PP, ...) and how to put them together to form valid sentences—is incomplete so far, since my approach is to go from the smallest to the largest units.
+I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment.
 
 Roadmap
 =======
@@ -56,6 +56,7 @@ The table of contents encompasses the following topics so far; the LaTeX source 
    2. Adjective and adverb phrases
    3. Adpositional phrases
    4. Inflectional and verb phrases
+   5. Complementizer phrases
 
 Compiling
 =========
