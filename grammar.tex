@@ -6,19 +6,30 @@
 
 \documentclass[
 	a4paper,
-	12pt,
+	11pt,
 	openany,
 	twoside,
 	oldfontcommands, % Compatibility with expex, which still uses \rm
+%	showtrims
 ]{memoir}
 
-% % Lulu.com's "Royal" format
-% \setstocksize{233.9mm}{155.9mm}
-% \settrimmedsize{233.9mm}{155.9mm}{*}
-% \setulmarginsandblock{.111\paperheight}{*}{1.0}
-% \setlrmarginsandblock{.111\paperwidth}{*}{1.0}
-% \setheaderspaces{*}{\onelineskip}{*}
-% \checkandfixthelayout
+% Helps alleviate \write limit problems
+\usepackage{scrwfile}
+
+% Lulu.com's "Royal" format
+% h = 233.9 mm
+% φh = 144.6 mm
+% h – φh = 89.3 mm
+% w = 155.9 mm
+% φw = 96.4 mm
+% w – φw = 59.5 mm
+\setstocksize{233.9mm}{155.9mm}
+\settrimmedsize{233.9mm}{155.9mm}{*}
+\setulmarginsandblock{.111\paperheight}{*}{1.0}
+\setlrmarginsandblock{.111\paperwidth}{*}{1.0}
+\setheaderspaces{*}{\onelineskip}{*}
+\checkandfixthelayout
+% \sloppybottom % Occasionally produces an extra line to avoid an orphan/widow
 
 \author{Carsten Becker}
 \title{A Grammar of Ayeri: Documenting a Fictional Language}
@@ -35,19 +46,20 @@
 {\Large\scshape Documenting a Fictional Language}\\[\baselineskip]
 {\large\itshape by Carsten Becker}\\[\baselineskip]
 \vfill
-\rule{0.4\textwidth}{0.4pt}\\[\baselineskip]
-{\large\itshape Benung.~The Ayeri Language Resource}\par
+{\large\itshape Benung.~The Ayeri Language Resource}\\
+\rule{0.33\textwidth}{0.4pt}\smallskip\\
+{Marburg · 2018}\par
 \vspace*{\drop}
 \endgroup}
 \makeatother
 
 % Layout for running page titles
 \nouppercaseheads
-% \copypagestyle{sfheaders}{headings}
-% \makeevenhead{sfheaders}{\sffamily{\bfseries\thepage}\quad{\itshape\leftmark}}{}{}
-% \makeoddhead{sfheaders}{}{}{\sffamily{\itshape\rightmark}\quad\bfseries\thepage}
+\copypagestyle{sfheaders}{headings}
+\makeevenhead{sfheaders}{\sffamily{\bfseries\thepage}\quad{\itshape\leftmark}}{}{}
+\makeoddhead{sfheaders}{}{}{\sffamily{\itshape\rightmark}\quad\bfseries\thepage}
 % \makeheadrule{headings}{\textwidth}{0.3pt}
-% \pagestyle{sfheaders}
+\pagestyle{sfheaders}
 
 % Layout for chapter headers
 \chapterstyle{southall}
@@ -239,8 +251,8 @@
 \newcolumntype{C}{>{\scshape}X}
 
 % Table header font
-\newcommand{\tableheaderfont}{\rowfont{\upshape\bfseries\footnotesize}}
-\newcommand{\tablesubheaderfont}{\rowfont{\upshape\bfseries\tiny}}
+\newcommand{\tableheaderfont}{\rowfont{\upshape\bfseries}}
+\newcommand{\tablesubheaderfont}{\rowfont{\upshape\bfseries\footnotesize}}
 
 % Clickable links in footnotes, TOC, etc.
 \usepackage[
@@ -416,7 +428,7 @@
 \pretocmd{\ex}{\remainex}{}{}
 
 % Glossing abbreviations
-\usepackage{leipzig}
+\usepackage[glosses]{leipzig}
 
 \newleipzig{AgtT}{at}{agent topic}
 \newleipzig{PatT}{pt}{patient topic}
@@ -467,41 +479,43 @@
 \newleipzig{Sat}{sat}{satellite}
 \newleipzig{Vb}{vb}{verb}
 
-\newleipzig{AF}{af}{argument function}
-\newleipzig{CF}{cf}{complement function}
-\newleipzig{DF}{df}{discourse function}
-\newleipzig{GF}{gf}{grammatical function}
-\newleipzig{Adjc}{adj}{adjunct}
-\newleipzig{Anim}{anim}{animacy}
-\newleipzig{Asp}{asp}{aspect}
-\newleipzig{Case}{case}{case}
-\newleipzig{Deg}{deg}{degree}
-\newleipzig{Degdim}{deg-dim}{degree polarity}
-\newleipzig{Compl}{comp}{complement}
-\newleipzig{Conj}{conj}{conjunction}
-\newleipzig{Deix}{deix}{deixis}
-\newleipzig{Gend}{gend}{gender}
-\newleipzig{Index}{index}{index}
-\newleipzig{Mod}{mod}{modality}
-\newleipzig{Mood}{mood}{mood}
-\newleipzig{Num}{num}{number}
-\newleipzig{Obj}{obj}{object}
-\newleipzig{SObj}{obj\fakesubscript{\normalfont\itshape θ}}{secondary object}
-\newleipzig{Oblique}{obl\fakesubscript{\normalfont\itshape θ}}{oblique constituent}
-\newleipzig{PCase}{pcase}{prepositional case}
-\newleipzig{Pers}{pers}{person}
-\newleipzig{Possr}{poss}{possessor}
-\newleipzig{Pred}{pred}{predicator}
-\newleipzig{Plink}{predlink}{predicative complement}
-\newleipzig{Prontype}{prontype}{pronoun type}
-\newleipzig{PSem}{psem}{prepositional semantics}
-\newleipzig{Simp}{simp}{simple aspect}
-\newleipzig{Spec}{spec}{specificity}
-\newleipzig{Subj}{subj}{subject}
-\newleipzig{Tel}{tel}{telic}
-\newleipzig{Tense}{tense}{tense}
-\newleipzig{XCompl}{xcomp}{open complement}
-\newleipzig{VType}{vtype}{verb type}
+% LFG
+\newglossary[alg]{lfg}{ald}{adn}{}
+\newleipzig[type=lfg]{AF}{af}{argument function}
+\newleipzig[type=lfg]{CF}{cf}{complement function}
+\newleipzig[type=lfg]{DF}{df}{discourse function}
+\newleipzig[type=lfg]{GF}{gf}{grammatical function}
+\newleipzig[type=lfg]{Adjc}{adj}{adjunct}
+\newleipzig[type=lfg]{Anim}{anim}{animacy}
+\newleipzig[type=lfg]{Asp}{asp}{aspect}
+\newleipzig[type=lfg]{Case}{case}{case}
+\newleipzig[type=lfg]{Deg}{deg}{degree}
+\newleipzig[type=lfg]{Degdim}{deg-dim}{degree polarity}
+\newleipzig[type=lfg]{Compl}{comp}{complement}
+\newleipzig[type=lfg]{Conj}{conj}{conjunction}
+\newleipzig[type=lfg]{Deix}{deix}{deixis}
+\newleipzig[type=lfg]{Gend}{gend}{gender}
+\newleipzig[type=lfg]{Index}{index}{index}
+\newleipzig[type=lfg]{Mod}{mod}{modality}
+\newleipzig[type=lfg]{Mood}{mood}{mood}
+\newleipzig[type=lfg]{Num}{num}{number}
+\newleipzig[type=lfg]{Obj}{obj}{object}
+\newleipzig[type=lfg]{SObj}{obj$_\theta$}{secondary object}
+\newleipzig[type=lfg]{Oblique}{obl$_\theta$}{oblique constituent}
+\newleipzig[type=lfg]{PCase}{pcase}{prepositional case}
+\newleipzig[type=lfg]{Pers}{pers}{person}
+\newleipzig[type=lfg]{Possr}{poss}{possessor}
+\newleipzig[type=lfg]{Pred}{pred}{predicator}
+\newleipzig[type=lfg]{Plink}{predlink}{predicative complement}
+\newleipzig[type=lfg]{Prontype}{prontype}{pronoun type}
+\newleipzig[type=lfg]{PSem}{psem}{prepositional semantics}
+\newleipzig[type=lfg]{Simp}{simp}{simple aspect}
+\newleipzig[type=lfg]{Spec}{spec}{specificity}
+\newleipzig[type=lfg]{Subj}{subj}{subject}
+\newleipzig[type=lfg]{Tel}{tel}{telic}
+\newleipzig[type=lfg]{Tense}{tense}{tense}
+\newleipzig[type=lfg]{XCompl}{xcomp}{open complement}
+\newleipzig[type=lfg]{VType}{vtype}{verb type}
 
 \makeglossaries
 
@@ -530,7 +544,7 @@
 \AtBeginEnvironment{quote}{\noindent\smaller}
 \AtBeginEnvironment{quotation}{\smaller}
 
-% No extra space around expex examples in figures
+% Check if figure contains an example
 \AtBeginEnvironment{figure}{%
 \lingset{exskip=0pt}%
 }
@@ -652,11 +666,18 @@
 \clearpage
 \listoftables
 \chapter{List of Abbreviations}
-\begin{multicols}{2}
-\printglossary[style=mysuper,type=\leipzigtype]
+\begingroup\multicolsep=0pt
+\begin{multicols}{2}[\section*{Glossing abbreviations}]
+\printglossary[style=mysuper,type=leipzig]
 \end{multicols}
+
+\begin{multicols}{2}[\section*{\Lfg{}-specific abbreviations}]
+\printglossary[style=mysuper,type=lfg]
+\end{multicols}
+\endgroup
 \bigskip
 
+\section*{Grammaticality judgements}
 \noindent \begin{tabular}[t]{@{} l l}
 *		& ungrammatical or undocumented \\
 \ques	& questionable \\
@@ -710,6 +731,9 @@
 
 \backmatter
 \printindex
+\pagebreak
+\pagestyle{empty}
+\phantom{x}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
