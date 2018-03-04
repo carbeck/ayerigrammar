@@ -13,7 +13,7 @@ Currently working on
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time:
 
 * Grammatical Categories (`chapters/gramcat.tex`)
-   1. Nouns
+   * Pronouns
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
