@@ -37,9 +37,9 @@ Quantifier/Intensifier tests
          house small extremely and my
          Intended: ‘*my and extremely small house’
 
-(4) a. nanga kivo  kay-hen
-       house small three=all
-       ‘all three houses’
+(4) a. nanga kivo  malan diring
+       house small dozen several
+       ‘several dozen small houses’
 
     b. nanga-ikan patu         kivo
        house=many surprisingly small
@@ -60,48 +60,51 @@ Quantifier/Intensifier tests
    *extremelier, *extremeliest)
 => Qs must form a phrase with Q as a head (whether that is a free morpheme or
    expressed by a clitic) because they can be modified
-=> Qs can't iterate and are not recursive, so: specifiers
+=> Qs can't iterate but apparently can be recursive, so not specifiers
    => Qs and possessives can cooccur while specifiers don't allow recursiveness
-   => Q not modifying possessor, but Q part of the NP complement of DP?
 
 So possibly like this, then?
 
-               DP
-          ,----+-----,
-          |          |
-          NP         D
-     ,----+----,     |
-     |         |     |
-     N'        DP    |
-  ,--+--,      |     |
-  |     |      D     |
-  N    AdjP    |     |
-  |     |      |     |
-  |    Adj     |     |
-  |     |      |     |
-nanga  kivo  diring  nā
-house  small several my
+                   DP
+           ,-------+-------,
+           |               |
+           DP              D
+     ,-----+------,        |
+     |            |        |
+     NP           D'       |
+  ,--+--,      ,--+--,     |
+  |     |      |     |     |
+  N    AdjP    D     DP    |
+  |     |      |     |     |
+  |    Adj     |     D     |
+  |     |      |     |     |
+nanga  kivo  malan diring  nā
+house  small dozen several my
 
-+-                               -+
-| PRED  'house <(↑POSS)>'         |
-|                                 |
-|       +-                     -+ |
-|       | PRED  pro             | |
-| POSS  | PERS  1               | |
-|       | NUM   SG              | |
-|       | CASE  GEN             | |
-|       +-                     -+ |
-|                                 |
-|       +-                     -+ |
-| QUANT | PRED 'several'        | |
-|       +-                     -+ |
-|                                 |
-| NUM   PL                        |
-|         _                   _   |
-|        | +-               -+ |  |
-| ADJ   <  | PRED 'small'    |  > |
-|        |_+-               -+_|  |
-+-                               -+
++-                                  -+
+| PRED  'house <(↑POSS)>'            |
+|                                    |
+|       +-                        -+ |
+|       | PRED  pro                | |
+| POSS  | PERS  1                  | |
+|       | NUM   SG                 | |
+|       | CASE  GEN                | |
+|       +-                        -+ |
+|                                    |
+|       +-                        -+ |
+| QUANT | PRED 'dozen'             | |
+|       |                          | |
+|       |       +-              -+ | |
+|       | QUANT | PRED 'several' | | |
+|       |       +-              -+ | |
+|       +-                        -+ |
+|                                    |
+| NUM   PL                           |
+|         _                      _   |
+|        | +-                  -+ |  |
+| ADJ   <  | PRED 'small'       |  > |
+|        |_+-                  -+_|  |
++-                                  -+
 
 => "Complements of functional categories are f-structure coheads" (Bresnan et
    al. 2016: 105), so N is a co-head of D, which means N and D share the same
