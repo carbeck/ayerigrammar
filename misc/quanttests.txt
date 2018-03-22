@@ -92,9 +92,9 @@ house  small dozen several my
 |       +-                        -+ |
 |                                    |
 |       +-                        -+ |
-| QUANT | PRED 'dozen'             | |
+|       | PRED 'dozen'             | |
 |       |                          | |
-|       |       +-              -+ | |
+| QUANT |       +-              -+ | |
 |       | QUANT | PRED 'several' | | |
 |       |       +-              -+ | |
 |       +-                        -+ |
