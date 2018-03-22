@@ -64,17 +64,16 @@ Quantifier/Intensifier tests
    => Qs and possessives can cooccur while specifiers don't allow recursiveness
    => Q not modifying possessor, but Q part of the NP complement of DP?
 
-
-Possibly like this, then?
+So possibly like this, then?
 
                DP
-          .----+-----.
+          ,----+-----,
           |          |
           NP         D
-     .----+----.     |
+     ,----+----,     |
      |         |     |
      N'        DP    |
-  .--+--.      |     |
+  ,--+--,      |     |
   |     |      D     |
   N    AdjP    |     |
   |     |      |     |
@@ -94,7 +93,7 @@ house  small several my
 |       +-                     -+ |
 |                                 |
 |       +-                     -+ |
-| QUANT | PRED "several"        | |
+| QUANT | PRED 'several'        | |
 |       +-                     -+ |
 |                                 |
 | NUM   PL                        |
@@ -106,4 +105,4 @@ house  small several my
 
 => "Complements of functional categories are f-structure coheads" (Bresnan et
    al. 2016: 105), so N is a co-head of D, which means N and D share the same
-   functional core, thus not 'my <(↑OBJ)>' but normal 'house <(↑POSS)>'?
+   functional core, thus not 'my <(↑OBJ)>' but normal 'house <(↑POSS)>', because "my" as a functional head modifies "house" as a lexical head.
