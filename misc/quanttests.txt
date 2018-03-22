@@ -61,7 +61,7 @@ Quantifier/Intensifier tests
    can't be compared (*basicallier, *basicalliest).
 => Qs must form a phrase with Q as a head (whether that is a free morpheme or
    expressed by a clitic) because they can be modified
-=> Qs can't iterate but apparently can be recursive, so not specifiers
+=> Qs can't iterate but apparently can be recursive, so not specifiers?
 
 So possibly like this, then?
 
@@ -69,8 +69,6 @@ So possibly like this, then?
                ,-----+-----,
                |           |
                DP          D
-               |           |
-               D'          |
           ,----+-----,     |
           |          |     |
           D'         DP    |
