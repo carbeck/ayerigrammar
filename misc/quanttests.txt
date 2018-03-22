@@ -105,4 +105,5 @@ house  small several my
 
 => "Complements of functional categories are f-structure coheads" (Bresnan et
    al. 2016: 105), so N is a co-head of D, which means N and D share the same
-   functional core, thus not 'my <(↑OBJ)>' but normal 'house <(↑POSS)>', because "my" as a functional head modifies "house" as a lexical head.
+   functional core, thus not 'my <(↑OBJ)>' but normal 'house <(↑POSS)>',
+   because "my" as a functional head modifies "house" as a lexical head.
