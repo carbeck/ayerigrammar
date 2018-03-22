@@ -1,0 +1,65 @@
+Quantifier/Intensifier tests
+============================
+
+(1)	a.	  nanga	kivo	ipan/ekeng
+		  house	small	extremely/too
+		  ‘extremely/too small house’
+
+	b.	* nanga	kivo	nay	ipan
+		  house	small	and	extremely
+		  Intended: ‘*extremely and small house’
+
+	c.	* nanga	kivo	ipan		nay	ekeng
+		  house	small	extremely	and	too
+		  Intended: ‘*extremely and too small house’
+
+(2)	a.	nanga	kivo	kay/diring
+		house	small	three/several
+		‘three/several small houses’
+		
+	b.	* nanga	kivo	nay	kay
+		  house	small	and	three
+		  Intended: ‘*small and three houses’
+		
+	c.	* nanga	kivo	kay		nay	diring
+		  house	small	three	and	several
+		  Intended: ‘*three and several small houses’
+
+(3)	a.	  nanga	kivo	(ipan)		nā
+		  house	small	extremely	my
+		  ‘my (extremely) small house’
+
+	b.	* nanga	kivo	nay	nā
+		  house	small	and	my
+		  Intended: ‘*my and small house’
+
+	c.	* nanga kivo	ipan		nay	nā
+		  house small	extremely	and	my
+		  Intended: ‘*my and extremely small house’
+
+(4)	a.	nanga	kivo	kay-hen
+		house	small	three=all
+		‘all three houses’
+
+	b.	nanga-ikan	patu			kivo
+		house=many	surprisingly	small
+		‘surprisingly many small houses’
+
+	c.	nanga	kivo	sam/diring	nā
+		house	small	two/several	my
+		‘several of my/my two small houses’
+
+* Qs cannot be coordinated with adjectives, adverbs or possessive determiners
+* Qs cannot be coordinated with each other
+* Qs can be modified by adverbs
+* Qs and possessives can cooccur
+
+=> Qs are not ADJs, just like possessives aren't
+=> Qs are not adverbs, just like possessives aren't adjectives
+=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest; 
+   *extremelier, *extremeliest)
+=> Qs must form a phrase with Q as a head (whether that is a free morpheme or
+   expressed by a clitic) because they can be modified
+=> Qs can't iterate and are not recursive, so: specifiers
+   => Qs and possessives can cooccur while specifiers don't allow recursiveness
+   => Q not modifying possessor, but Q part of the NP complement of DP?
