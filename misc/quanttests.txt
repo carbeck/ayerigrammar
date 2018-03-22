@@ -56,7 +56,9 @@ Quantifier/Intensifier tests
 
 => Qs are not ADJs, and neither are possessives
 => Qs are not adverbs, just like possessives aren't adjectives
-=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest)
+=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest; 
+   *veryer, *veryest), unlike descriptive adverbs. OTOH, sentence adverbs also 
+   can't be compared (*basicallier, *basicalliest).
 => Qs must form a phrase with Q as a head (whether that is a free morpheme or
    expressed by a clitic) because they can be modified
 => Qs can't iterate but apparently can be recursive, so not specifiers
