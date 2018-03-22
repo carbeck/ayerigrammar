@@ -65,18 +65,22 @@ Quantifier/Intensifier tests
 
 So possibly like this, then?
 
-                   DP
-           ,-------+-------,
-           |               |
-           DP              D
-     ,-----+------,        |
-     |            |        |
-     NP           D'       |
-  ,--+--,      ,--+--,     |
+                    DP
+               ,-----+-----,
+               |           |
+               DP          D
+               |           |
+               D'          |
+          ,----+-----,     |
+          D'         DP    |
+     ,----+----,     |     |
+     |         |     D     |
+     NP        |     |     |
+  ,--+--,      |     |     |
   |     |      |     |     |
-  N    AdjP    D     DP    |
+  N    AdjP    |     |     |
   |     |      |     |     |
-  |    Adj     |     D     |
+  |    Adj     D     |     |
   |     |      |     |     |
 nanga  kivo  malan diring  nā
 house  small dozen several my
