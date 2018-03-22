@@ -51,17 +51,15 @@ Quantifier/Intensifier tests
 
 * Qs cannot be coordinated with adjectives, adverbs or possessive determiners
 * Qs cannot be coordinated with each other
-* Qs can be modified by adverbs
+* Qs can be modified by adverbs and other Qs
 * Qs and possessives can cooccur
 
-=> Qs are not ADJs, just like possessives aren't
+=> Qs are not ADJs, and neither are possessives
 => Qs are not adverbs, just like possessives aren't adjectives
-=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest; 
-   *extremelier, *extremeliest)
+=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest)
 => Qs must form a phrase with Q as a head (whether that is a free morpheme or
    expressed by a clitic) because they can be modified
 => Qs can't iterate but apparently can be recursive, so not specifiers
-   => Qs and possessives can cooccur while specifiers don't allow recursiveness
 
 So possibly like this, then?
 
