@@ -196,14 +196,13 @@ Quantifier/Intensifier tests
          nanga-ikan kagan   kivo
          house=many=far.too small
 
-    b. ?                NP
+    b. ?                 NP
                   ,------+-------,
                   |              |
-                  |             AdjP
-                  |              |
-                  NP            Adj
-              ,---+--,           |
-              |      DP          |
+                  NP            AdjP
+              ,---+---,          |
+              |       |         Adj
+              |       DP         |
               |     ,-+-,        |
               |     |   |        |
               |     D   DP       |
