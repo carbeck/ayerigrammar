@@ -37,79 +37,194 @@ Quantifier/Intensifier tests
          house small extremely and my
          Intended: ‘*my and extremely small house’
 
-(4) a. nanga kivo  malan diring
-       house small dozen several
-       ‘several dozen small houses’
+(4) a.   nanga kivo  malan diring
+         house small dozen several
+         ‘several dozen small houses’
 
-    b. nanga-ikan patu         kivo
-       house=many surprisingly small
-       ‘surprisingly many small houses’
+         → malan ‘dozen’ is a numeral, though!
 
-    c. nanga kivo  sam/diring  nā
-       house small two/several my
-       ‘several of my/my two small houses’
+    b. * nanga kivo  diring  menikaneng
+         house small several another
+         Intended: ‘another several small houses’
+
+    b.   nanga-ikan patu         kivo
+         house=many surprisingly small
+         ‘surprisingly many small houses’
+
+    c.   nanga kivo  sam/diring  nā
+         house small two/several my
+         ‘several of my/my two small houses’
 
 * Qs cannot be coordinated with adjectives, adverbs or possessive determiners
 * Qs cannot be coordinated with each other
-* Qs can be modified by adverbs and other Qs
+* Qs can be modified by adverbs, but not by other Qs
 * Qs and possessives can cooccur
 
 => Qs are not ADJs, and neither are possessives
 => Qs are not adverbs, just like possessives aren't adjectives
-=> Qs logically can't be compared (*severaler, *severalest; *twoer, *twoest; 
-   *veryer, *veryest), unlike descriptive adverbs. OTOH, sentence adverbs also 
-   can't be compared (*basicallier, *basicalliest).
+=> Qs logically can't be compared (*severaler, *severalest; *veryer, veryest),
+   unlike descriptive adverbs. OTOH, sentence adverbs also can't be compared
+   (*basicallier, *basicalliest).
 => Qs must form a phrase with Q as a head (whether that is a free morpheme or
    expressed by a clitic) because they can be modified
-=> Qs can't iterate but apparently can be recursive, so not specifiers?
+=> Qs can't iterate and probably can't be recursive, so specifiers?
+=> So possibly like (5), then?
 
-So possibly like this, then?
-
-                     DP
-               ,-----+-----,
-               |           |
-               DP          D
-          ,----+-----,     |
-          |          |     |
-          D'         DP    |
-     ,----+----,     |     |
-     |         |     D     |
-     NP        D     |     |
-  ,--+--,      |     |     |
-  |     |      |     |     |
-  N    AdjP    |     |     |
-  |     |      |     |     |
-  |    Adj     |     |     |
-  |     |      |     |     |
-nanga  kivo  malan diring  nā
-house  small dozen several my
-
-+-                                  -+
-| PRED  'house <(↑POSS)>'            |
-|                                    |
-|       +-                        -+ |
-|       | PRED  pro                | |
-| POSS  | PERS  1                  | |
-|       | NUM   SG                 | |
-|       | CASE  GEN                | |
-|       +-                        -+ |
-|                                    |
-|       +-                        -+ |
-|       | PRED 'dozen'             | |
-|       |                          | |
-| QUANT |       +-              -+ | |
-|       | QUANT | PRED 'several' | | |
-|       |       +-              -+ | |
-|       +-                        -+ |
-|                                    |
-| NUM   PL                           |
-|         _                      _   |
-|        | +-                  -+ |  |
-| ADJ   <  | PRED 'small'       |  > |
-|        |_+-                  -+_|  |
-+-                                  -+
+(5) a.                DP
+                 ,----+-----,
+                 |          |
+                 NP         D
+            ,----+----,     |
+            |         |     |
+            N'        DP    |
+         ,--+--,      |     |
+         |     |      D     |
+         |   AdjP     |     |
+         |     |      |     |
+         N    Adj     |     |
+         |     |      |     |
+       nanga  kivo  diring  nā
+       house  small several my
+       
+    b. +-                                  -+
+       | PRED  'house <(↑POSS)>'            |
+       |                                    |
+       |       +-                        -+ |
+       |       | PRED  pro                | |
+       | POSS  | PERS  1                  | |
+       |       | NUM   SG                 | |
+       |       | CASE  GEN                | |
+       |       +-                        -+ |
+       |                                    |
+       |       +-                        -+ |
+       | QUANT | PRED 'several'           | |
+       |       +-                        -+ |
+       |                                    |
+       | NUM   PL                           |
+       |         _                      _   |
+       |        | +-                  -+ |  |
+       | ADJ   <  | PRED 'small'       |  > |
+       |        |_+-                  -+_|  |
+       +-                                  -+
 
 => "Complements of functional categories are f-structure coheads" (Bresnan et
    al. 2016: 105), so N is a co-head of D, which means N and D share the same
    functional core, thus not 'my <(↑OBJ)>' but normal 'house <(↑POSS)>',
    because "my" as a functional head modifies "house" as a lexical head.
+
+* On the other hand, what to do with clitic quantifiers which are modified by 
+  adverbs (?) in place
+
+(6) a.   nanga kivo  kagan
+         house small far.too
+         ‘far too small house’
+
+    b. ? nanga kivo-ikan  kagan
+         house small=very far.too
+         ‘?far too very small house’
+
+    c. ! nanga-ikan kivo  kagan
+         house=many small far.too
+         ‘many far too small houses’
+         Intended: ‘far too many small houses’
+
+    d.   nanga-ikan kagan   kivo
+         house=many far.too small
+         ‘far too many small houses’
+
+=> (6d) should be clear functionally: more or less like in (7)
+=> Except: is ‘far too’ an adverb here?
+   => if words like ‘far too’ are also determiners, ‘many’ as a determiner
+      can't be Spec (because Spec doesn't allow recursion).
+   => adjectives like in (6ac) are normally modified by adverbs AFAIK
+   => ‘far too overly many’ is kind of weird, so ‘far too’ in SpecDP there, 
+      since no iteration? It's not a complement of ‘many’, anyway.
+
+(7) +-                                   -+
+    | PRED  'house'                       |
+    |                                     |
+    |       +-                         -+ |
+    |       | PRED  'many'              | |
+    |       |                           | |
+    | QUANT |        +-              -+ | |
+    |       | ?SPEC  | PRED 'far too' | | |
+    |       |        +-              -+ | |
+    |       +-                         -+ |
+    |                                     |
+    | NUM   PL                            |
+    |         _                       _   |
+    |        | +-                   -+ |  |
+    | ADJ   <  | PRED 'small'        |  > |
+    |        |_+-                   -+_|  |
+    +-                                   -+
+
+* How would one draw this as a tree-diagram, though, assuming that ‘far too
+  many’ is in SpecNP, and not assuming traces?
+* Maybe kagan ‘far too’ could be analyzed as a clitic in this case, since
+  clitics tend to cluster?
+* We have already seen that the order of kagan and kivo is not arbitrary, but 
+  this actually is due to scope effects, cf. (6c).
+
+(8) a. ? nanga-ikan, naratang, kagan   kivo
+         house=many  say=3PL.A far.too small
+         ‘far too, they say, many small houses’
+
+    b. * nanga-ikan kagan   nay kivo
+         house=many far.too and small
+         Intended: ‘*many houses, far too and small’
+
+    c.   nanga-ikan kivo  nay giro
+         house=many small and cute
+         ‘many small and cute houses’
+
+* It is weird interrupting -ikan kagan with stuff.
+  => That could also be because kagan is in SpecDP of the empty D node which
+     would otherwise hold the quantifier if it weren't cliticized to N.
+* Kagan and kivo do not coordinate in (8b). This is expected, since kagan
+  isn't an adjective modifying nanga such as both kivo and giro in (8c).
+* Alternatively, if kagan is not a clitic there (9a), maybe there's some kind
+  of small clause (9b) or we have to assume that NPs is permitted to have a
+  flat structure, at least under certain circumstances (9c) (mutatis mutandis 
+  verbs?)
+  => Can clitics modify other clitics?
+
+(9) a. ?               NP
+                 ,-----+-----,
+                 |           |
+                 N          Adj
+                 |           |
+         nanga-ikan kagan   kivo
+         house=many=far.too small
+
+    b. ?                NP
+                  ,------+-------,
+                  |              |
+                  |             AdjP
+                  |              |
+                  NP            Adj
+              ,---+--,           |
+              |      DP          |
+              |     ,-+-,        |
+              |     |   |        |
+              |     D   DP       |
+              |     |   |        |
+              N     |   D        |
+              |     |   |        |
+         nanga-ikan ɛ   kagan   kivo
+         house=many .   far.too small
+                ↑   ·
+                '···'
+
+    c. ?                 NP
+              ,----------+----------,
+              |          |          |
+              N          DP        AdjP 
+              |        ,-+-,        |
+              |        D   DP      Adj
+              |        |   |        |
+              |        |   D        |
+              |        |   |        |
+         nanga-ikan    ɛ   kagan   kivo
+         house=many    .   far.too small
+                ↑      ·
+                '······'
