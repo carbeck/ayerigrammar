@@ -252,3 +252,20 @@ Quantifier/Intensifier tests
               '···'
 
 => Would that maybe actually imply non-configurationality of NP?
+
+* LFG conveniently also permits "non-projecting words" (Bresnan et al. 2016:
+  116), where X ⟶ X, Ŷ. The example above could thus be analyzed as in (11),
+  with kagan as a non-projecting word, D̄.
+* Kagan would not be able to be modified then, though!
+
+(11) ?               NP
+                ,----+-----,
+                |          |
+                N         AdjP
+                |          |
+            ,---+---,     Adj
+            |       |      |
+            N       D̄      |
+            |       |      |
+       nanga-ikan kagan   kivo
+       house=many far.too small       
