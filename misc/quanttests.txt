@@ -140,23 +140,23 @@ Quantifier/Intensifier tests
    => ‘far too overly many’ is kind of weird, so ‘far too’ in SpecDP there, 
       since no iteration? It's not a complement of ‘many’, anyway.
 
-(7) +-                                   -+
-    | PRED  'house'                       |
-    |                                     |
-    |       +-                         -+ |
-    |       | PRED  'many'              | |
-    |       |                           | |
-    | QUANT |        +-              -+ | |
-    |       | ?SPEC  | PRED 'far too' | | |
-    |       |        +-              -+ | |
-    |       +-                         -+ |
-    |                                     |
-    | NUM   PL                            |
-    |         _                       _   |
-    |        | +-                   -+ |  |
-    | ADJ   <  | PRED 'small'        |  > |
-    |        |_+-                   -+_|  |
-    +-                                   -+
+(7) +-                                  -+
+    | PRED  'house'                      |
+    |                                    |
+    |       +-                        -+ |
+    |       | PRED 'many'              | |
+    |       |                          | |
+    | QUANT |       +-              -+ | |
+    |       | ???   | PRED 'far too' | | |
+    |       |       +-              -+ | |
+    |       +-                        -+ |
+    |                                    |
+    | NUM   PL                           |
+    |         _                      _   |
+    |        | +-                  -+ |  |
+    | ADJ   <  | PRED 'small'       |  > |
+    |        |_+-                  -+_|  |
+    +-                                  -+
 
 * How would one draw this as a tree-diagram, though, assuming that ‘far too
   many’ is in SpecNP, and not assuming traces?
@@ -205,9 +205,9 @@ Quantifier/Intensifier tests
               |       DP         |
               |     ,-+-,        |
               |     |   |        |
-              |     D   DP       |
+              |     D   ?P       |
               |     |   |        |
-              N     |   D        |
+              N     |   ?        |
               |     |   |        |
          nanga-ikan ɛ   kagan   kivo
          house=many .   far.too small
@@ -220,9 +220,9 @@ Quantifier/Intensifier tests
               N          DP        AdjP 
               |        ,-+-,        |
               |        |   |       Adj
-              |        D   DP       |
+              |        D   ?P       |
               |        |   |        |
-              |        |   D        |
+              |        |   ?        |
               |        |   |        |
          nanga-ikan    ɛ   kagan   kivo
          house=many    .   far.too small
@@ -242,9 +242,9 @@ Quantifier/Intensifier tests
             N        DP        |
             |     ,--+--,      |
             |     |     |      |
-            |     D     DP     |
+            |     D     ?P     |
             |     |     |      |
-            |     |     D      |
+            |     |     ?      |
             |     |     |      |
        nanga-ikan ɛ   kagan   kivo
        house=many .   far.too small
