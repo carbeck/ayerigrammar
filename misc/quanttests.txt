@@ -183,7 +183,7 @@ Quantifier/Intensifier tests
 * Kagan and kivo do not coordinate in (8b). This is expected, since kagan
   isn't an adjective modifying nanga such as both kivo and giro in (8c).
 * Alternatively, if kagan is not a clitic there (9a), maybe there's some kind
-  of small clause (9b) or we have to assume that NPs is permitted to have a
+  of small clause (9b) or we have to assume that NPs are permitted to have a
   flat structure, at least under certain circumstances (9c) (mutatis mutandis 
   verbs?)
   => Can clitics modify other clitics?
@@ -219,7 +219,8 @@ Quantifier/Intensifier tests
               |          |          |
               N          DP        AdjP 
               |        ,-+-,        |
-              |        D   DP      Adj
+              |        |   |       Adj
+              |        D   DP       |
               |        |   |        |
               |        |   D        |
               |        |   |        |
@@ -227,3 +228,27 @@ Quantifier/Intensifier tests
          house=many    .   far.too small
                 ↑      ·
                 '······'
+
+* Or, the order of modifiers is simply variable and just like adjectives can
+  take the position right after the noun and push complements further to the
+  right, quantifiers can displace adjectives under certain circumstances:
+
+(10) ?                 NP
+                ,------+-------,
+                |              |
+                N'            AdjP
+            ,---+----,         |
+            |        |        Adj
+            N        DP        |
+            |     ,--+--,      |
+            |     |     |      |
+            |     D     DP     |
+            |     |     |      |
+            |     |     D      |
+            |     |     |      |
+       nanga-ikan ɛ   kagan   kivo
+       house=many .   far.too small
+              ↑   ·
+              '···'
+
+=> Would that maybe actually imply non-configurationality of NP?
