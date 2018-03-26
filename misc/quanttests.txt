@@ -322,8 +322,14 @@ Quantifier/Intensifier tests
 * The complements are extraposed here (that's what the arrows are for).
 * Not quite sure if this doesn't violate annotation rules in Bresnan et al.
   (2016: 106–107), however, since a phrase adjoined to a phrase is not an
-  argument function (leaves TOP, FOC, ADJ). But as a complement of N₁, NP₂ is
-  an argument of N₁, or not?
+  argument function (leaves TOP, FOC, ADJ, compare Bresnan et al. 2016: 100).
+  But as a complement of N₁, NP₂ is an argument of N₁, or not (should be COMP)?
+  => Yes, but NP₁ is just plain old ↑ = ↓, so no problem there, since
+
+         XP → XP  ,     YP
+              ↑=↓   ((↑ĀF̄) = ↓)
+
+     is explicitly allowed by Bresnan et al. (2016: 107).
 * From (12) we also get (14) instead of (5a) for consistency:
 
 (14)                  DP
