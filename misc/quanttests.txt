@@ -1,6 +1,10 @@
 Quantifier/Intensifier tests
 ============================
 
+Some hypothesizing about the structure of NPs with regards to quantifiers. Much
+of it is probably different degrees of mental diarrhea. Learning stuff on your
+own consists of a lot of trial and error, unfortunately.
+
 (1) a.   nanga kivo  ipan/ekeng
          house small extremely/too
          ‘extremely/too small house’
