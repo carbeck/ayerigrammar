@@ -147,7 +147,7 @@ Quantifier/Intensifier tests
     |       | PRED 'many'              | |
     |       |                          | |
     | QUANT |       +-              -+ | |
-    |       | ???   | PRED 'far too' | | |
+    |       | ?SPEC | PRED 'far too' | | |
     |       |       +-              -+ | |
     |       +-                        -+ |
     |                                    |
@@ -217,7 +217,7 @@ Quantifier/Intensifier tests
     c. ?                 NP
               ,----------+----------,
               |          |          |
-              N          DP        AdjP 
+              N          DP        AdjP
               |        ,-+-,        |
               |        |   |       Adj
               |        D   ?P       |
@@ -268,4 +268,55 @@ Quantifier/Intensifier tests
             N       D̄      |
             |       |      |
        nanga-ikan kagan   kivo
-       house=many far.too small       
+       house=many far.too small
+
+* Given the DP hypothesis for articles and such (articles are D heads, NP is a 
+  complement of D), another way to solve this might be the following:
+
+(12) ?                DP₁
+                  ,----+-----,
+                  |          |
+                 DP₂        AdjP
+               ,--+---,      |
+               |      |     Adj
+              D₂'     D₃     |
+               |      |      |
+            ,--+--,   |      |
+            |     |   |      |
+            NP    D₂  |      |
+            |     |   |      |
+            N     |   |      |
+            |     |   |      |
+       nanga-ikan ɛ kagan   kivo
+       house=many   far.too small
+
+* NP is realized here as the complement of an empty determiner D₂ 
+  (for ɛ: ((x↑) QUANT) = ↑)
+* Modifier of D₂ can be realized as a D as well (in Spec?)
+  - *nanga da-kagan 'far too so house(s)' is ungrammatical in any case
+* This has the benefit of:
+  - being consistent with the DP hypothesis (I suppose)
+  - the quantifier DP permits modification by other DPs
+  - head and complement aren't expected to coordinate; neither are D₂ and D₃,
+    nor D₃ and Adj, which is a correct prediction
+  - DP doesn't need to be redefined as DP → D , XP but head stays on left
+
+=> The stacked XP analysis is also preferable for nouns and adjectives with
+   regards to adjectives preceding complements of nouns; ditto for verbs. This
+   way, complements and adjuncts don't have to swap positions within the same
+   phrase, which goes against X-bar theory (comp = sister of head). S would 
+   also more correctly remain the *complement* of the verb, I suppose.
+
+(13) a.         DP       b.          IP₁
+             ,--+---,            ,---+---,
+             |      |            |       |
+            NP₁    NP₂          IP₂      S
+          ,--+--,   |         ,--+--,    |
+          |     |   |         |     |    |
+         N₁'   AdjP |        I₂'   AdvP  |
+          |     |   |         |     |    |
+        ,-+-,   |   |       ,-+-,   |    |
+        |   |   |   |       |   |   |    |
+        N₁  ɛ  Adj  N₂      I₂  ɛ  Adv  ...
+            ·       ↑           ·        ↑
+            '·······'           '········'
