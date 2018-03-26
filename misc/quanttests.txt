@@ -255,17 +255,16 @@ Quantifier/Intensifier tests
 
 * LFG conveniently also permits "non-projecting words" (Bresnan et al. 2016:
   116), where X ⟶ X, Ŷ. The example above could thus be analyzed as in (11),
-  with kagan as a non-projecting word, D̄.
+  with kagan as a non-projecting word, D̂.
 * Kagan would not be able to be modified then, though!
 
 (11) ?               NP
                 ,----+-----,
                 |          |
                 N         AdjP
-                |          |
-            ,---+---,     Adj
-            |       |      |
-            N       D̄      |
+            ,---+---,      |
+            |       |     Adj
+            N       D̂      |
             |       |      |
        nanga-ikan kagan   kivo
        house=many far.too small
@@ -280,7 +279,6 @@ Quantifier/Intensifier tests
                ,--+---,      |
                |      |     Adj
               D₂'     D₃     |
-               |      |      |
             ,--+--,   |      |
             |     |   |      |
             NP    D₂  |      |
@@ -295,11 +293,12 @@ Quantifier/Intensifier tests
 * Modifier of D₂ can be realized as a D as well (in Spec?)
   - *nanga da-kagan 'far too so house(s)' is ungrammatical in any case
 * This has the benefit of:
-  - being consistent with the DP hypothesis (I suppose)
-  - the quantifier DP permits modification by other DPs
+  - the quantifier DP permits modification by other Ds
   - head and complement aren't expected to coordinate; neither are D₂ and D₃,
     nor D₃ and Adj, which is a correct prediction
-  - DP doesn't need to be redefined as DP → D , XP but head stays on left
+  - replacement of DP nodes by danya/da- 'one' works correctly:
+    > danya-ikan kagan kivo 'far too small ones'
+    > danya kivo 'small ones'
 
 => The stacked XP analysis is also preferable for nouns and adjectives with
    regards to adjectives preceding complements of nouns; ditto for verbs. This
@@ -314,9 +313,34 @@ Quantifier/Intensifier tests
           ,--+--,   |         ,--+--,    |
           |     |   |         |     |    |
          N₁'   AdjP |        I₂'   AdvP  |
-          |     |   |         |     |    |
         ,-+-,   |   |       ,-+-,   |    |
         |   |   |   |       |   |   |    |
         N₁  ɛ  Adj  N₂      I₂  ɛ  Adv  ...
             ·       ↑           ·        ↑
             '·······'           '········'
+
+* The complements are extraposed here (that's what the arrows are for).
+* Not quite sure if this doesn't violate annotation rules in Bresnan et al.
+  (2016: 106–107), however, since a phrase adjoined to a phrase is not an
+  argument function (leaves TOP, FOC, ADJ). But as a complement of N₁, NP₂ is
+  an argument of N₁, or not?
+* From (12) we also get (14) instead of (5a) for consistency:
+
+(14)                  DP
+                 ,----+-----,
+                 |          |
+                 DP         D
+            ,----+----,     |
+            |         |     |
+            NP        D     |
+         ,--+--,      |     |
+         |     |      |     |
+         N     AP     |     |
+         |     |      |     |
+         |    Adj     |     |
+         |     |      |     |
+       nanga  kivo  diring  nā
+       house  small several my
+
+* Since DP's head can be on either side of its complement this way, DP needs 
+  to be redefined with  D' → D⁰ , XP.
