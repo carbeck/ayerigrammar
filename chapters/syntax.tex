@@ -7,12 +7,12 @@
 \label{ch:phrasestruct}
 
 While the previous chapter dealt largely with the various parts of speech and
-their distributive and inflectional properties, the present chapter will
-elaborate on how these words combine into syntactic phrases.\footnote{It should
-be noted that, since trees and tableaus are large, a larger number of regularly
-numbered examples than in the previous chapters will appear not in place but
-floated in this chapter.} Since Ayeri is a verb-initial language, it is
-probably rather comfortably analyzed in terms of Lexical-Functional Grammar
+their inflectional properties, the present chapter will elaborate on how these
+words combine into syntactic phrases.\footnote{It should be noted that, since
+trees and tableaus are large, a larger number of regularly numbered examples
+than in the previous chapters will appear not in place but floated in this
+chapter.} Since Ayeri is a verb-initial language, it is probably rather
+comfortably analyzed in terms of Lexical-Functional Grammar
 (\cite{bresnan1982}~ff.; more recently, \cite{bresnan2016};
 \cite{dalrymple2001}; \cite{falk2001}), since \Lfg{} does not require
 complicated derivations behind the surface structure of
@@ -316,31 +316,26 @@ below.
 
 \begin{figure}
 \pex\label{ex:npstruct}
-\a NP → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{CP}
-% \a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
+\a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
+\a \anno*{\xbar{N}} \anno*[\pass{\Compl}]{CP}
 \a\label{ex:npstruct_Adj}%
 	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP}
-\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{XP}
+\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{YP}
 \xe
 \end{figure}
 
 \begin{figure}
 \ex\label{ex:npcstruct}
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\DF} | \pass{\GF}\}]{NP}}
-%	[\anno{\xbar{N}}
+[{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
+	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
-%			[\anno{\xbar{N}}
-				[\anno{\xbar{N}}
-					[\anno{\xhead{N}}]
-					[{\anno[\pass{\Compl}]{XP}}]
-				]
-				[{\anno[\elem{\Adjc}]{AP}}]
-			]
-%			[{\anno[\pass{\Possr}]{XP}}]
-%		]
-		[{\anno[\elem{\Adjc}]{CP}}]
-%	]
+			[\anno{\xhead{N}}]
+			[{\anno[\pass{\Compl}]{YP}}]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}]
+	]
+	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -349,15 +344,17 @@ below.
 The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which
 is on the left side, followed optionally by modifiers which may have various
 relationships to the noun: complement (instrumental nominal, NP/DP; complement
-clause, CP), adjunct (adjective phrase, AP), and relative clause (CP). This can
-be represented as a constituent-structure tree in the way described in
-(\ref{ex:npcstruct}). The maximal projection of \xhead{N} (that is, NP) is
-annotated very generally for the function of the NP---basically, an NP can act
-as either a discourse function (\DF{}) or a grammatical function (\GF{}).
-Besides, nouns may be modified by possessors and quantifiers. These, however,
-may better be analyzed as forming DPs which embed the NP as a complement.
-(\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is
-no grammatical context given, NP is unmarked for function in these examples.
+clause, CP), and adjunct (adjective phrase, AP; relative clause, CP).
+Furthermore, there can be a possessor expressed as a the specifier of NP (NP or
+DP). Altogether, these rules can be represented as a constituent-structure tree
+as described in (\ref{ex:npcstruct}). The maximal projection of
+\xhead{N} (that is, NP) is annotated very generally for the function of the
+NP---basically, an NP can act as either a discourse function (\DF{}) or a
+grammatical function (\GF{}). Besides, nouns may be modified by possessors and
+quantifiers. These, however, may better be analyzed as forming DPs which embed
+the NP as a complement. (\ref{ex:nounmods}) gives an example of each kind of
+modifier. Since there is no grammatical context given, NP is unmarked for
+function in these examples.
 
 \begin{figure}
 \pex\label{ex:nounmods}
@@ -522,11 +519,11 @@ related is also arranged in close proximity.'), and also grammatical weight
 \citep{wasow1997}:
 
 \begin{enumerate}[noitemsep]
-	\item APs and other NPs describing attributes,
-	\item complementary NPs and CPs,
+	\item APs and other NPs describing attributes
+	\item complementary NPs and CPs
 	\item quantifiers and cardinal numerals
-	\item possessive genitive NPs and DPs,
-	\item relative clauses.
+	\item possessive genitive NPs and DPs
+	\item relative clauses
 \end{enumerate}
 
 \citet{wasow1997} writes that \textcquote[102]{wasow1997}{[i]t is very hard to
@@ -624,7 +621,7 @@ shows: \xbar{X} branches can be replaced by \fw{pro}-forms such as `one' or
 `so'. This, however, produces an odd-sounding result when replacing
 \xayr{limu hiro}{limu hiro}{new shirt} with
 \xayr{dnY}{danya}{one}.\footnote{\citet{carnie2013} notes that replacing a
-nominal complement with \fw{one} in English is acceptable at least to some
+nominal head with \fw{one} in English is acceptable at least to some
 speakers \citep[181]{carnie2013}. Let us assume that Ayeri speakers consider it
 odd, however.}
 
@@ -765,7 +762,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 		[\anno{\xhead{N}}
 			[nangās]
 		]
-		[{\anno[\elem{\Adjc}]{Cl}}
+		[\anno{Cl}
 			[-ikan]
 		]
 	]
@@ -865,10 +862,10 @@ as adding to the noun's \Adjc{} feature (\ref{ex:nounqadj}).
 					\Pred	&	`child' \\
 					\Anim	&	$+$ \\
 					\Case	&	\Aarg \\
+					\Quant	&	\[
+						\Pred	&	`all' \\
+					\]\\
 					\Adjc	&	\{
-									\[
-										\Pred	&	`all' \\
-									\] \\
 									\[
 										\Pred	&	`happy' \\
 									\] \\
@@ -1163,8 +1160,8 @@ Romanian (\cite[75]{lyons1999}):\medskip\\ %
 While in modern Standard German an article and a demonstrative pronoun, or also
 a possessive pronoun, cannot co-occur, this appears not to be a problem in
 Ayeri. As argued in \autoref{subsec:clitics}, both case markers and
-deictic/demonstrative prefixes in Ayeri are clitics; the similarity between
-possessive pronouns and adjectives has also been noted in
+deictic/demonstrative prefixes in Ayeri are clitics; superficial similarity
+between possessive pronouns and adjectives has also been noted in
 \autoref{phsec:possadj} (p.~\pageref{phsec:possadj}). Furthermore, the preposed
 case markers of nouns are an exception compared to the much more frequent
 occurrence of case-marking suffixes on generic nouns. It thus does not seem
@@ -1392,37 +1389,45 @@ case. The same is also true of generic nouns, as shown in
 \xe
 \end{figure}
 
+\index{cases|)}
+
 While it has been argued that Ayeri does not possess articles, it does possess
 a large variety of pronouns. These, as pro-forms, appear in complementary
 distribution with NPs. Since they encode morphosyntactic functions rather than
 semantic content, they are ideal candidates for heads of DP. DPs can be
 modified by APs and CPs, collectively referred to as XP in (\ref{ex:dpstruct}),
-which gives the phrase structure of DPs. The constituent structure resulting
-from this phrase structure definition is given in (\ref{ex:dpcstruct}). The XP
-constituent occurs optionally, that is, it is an adjunct rather than a
-complement. The functional annotation identifies it as such.
+which gives the phrase structure of DPs. Furthermore, \xhead{D} may consist of
+a quantifier which  be further specified by an intensifier in Spec,DP.
+\xhead{D} may also be complemented by an NP or another DP, however, since the
+determiner is a modifier in this case, the embedded nominal phrase precedes
+\xhead{D} rather than following it. The constituent structure resulting from
+the phrase structure definition in (\ref{ex:dpstruct}) is given in
+(\ref{ex:dpcstruct}).
 
 \begin{figure}[h]
-\ex\label{ex:dpstruct}
-DP → \anno*{\xhead{D}} \anno*[{\elem{\Adjc}}]{XP}
+\pex\label{ex:dpstruct}
+\a DP → \anno*{\xbar{D}} \anno*[\pass{\Spec}]{\xhead{D}}
+\a \xbar{D} → \anno*{\xbar{D}} \anno*[{\elem{\Adjc}}]{XP}
+\a \xbar{D} → \anno*{YP} \anno*{\xhead{D}}
 \xe
 \end{figure}
 
 \begin{figure}[h]
 \ex\label{ex:dpcstruct}
 \begin{forest}
-[{\anno[\{\pass{\DF} | \pass{\GF}\}]{DP}}
-%	[\anno{\xbar{D}}
-		[\anno{\xhead{D}}]
-		[{\anno[{\elem{\Adjc}}]{XP}
-		}]
-%	]
+[{\anno[\pass{\DF} $\vee$ \pass{\GF}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{\xbar{D}}
+			[{\anno{YP}}]
+			[\anno{\xhead{D}}]
+		]
+		[{\anno[\elem{\Adjc}]{XP}}]
+	]
+	[{\anno[\pass{\Spec}]{\xhead{D}}}]
 ]
 \end{forest}
 \xe
 \end{figure}
-
-\index{cases|)}
 
 \subsubsection{Personal pronouns}
 \label{subsubsec:perspro}
@@ -1454,7 +1459,7 @@ reflexive.
 		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		( & \ups{\Prontype} & = & \Refl) & ) \\
+		( & \ups{\Prontype} & = & \Refl & ) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1469,36 +1474,24 @@ quantifier clitic is only possible for personal pronouns when they are free
 morphemes; pronominal clitics cannot be modified by quantifiers directly, as
 described in \autoref{subsec:reflrec}. The examples in (\ref{ex:nonounmods})
 illustrate key differences between nouns and personal pronouns regarding the
-distribution of modifiers.
+distribution of modifiers. As mentioned above, it is possible for pronouns to
+be modified by relative clauses, which is illustrated by
+(\ref{ex:nonounmods}d). In this example, the pronoun \xayr{yeNF}{yeng}{she} is
+modified by the relative clause \xayr{si mino}{si mino}{who is happy}.
 
 \begin{figure}[h]
-\pex\label{ex:nonounmods}
-\a%
-	\begin{minipage}[t]{.5\linewidth}
+\ex\labels\label{ex:nonounmods}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
 	\begingl
 		\glpreamble pronoun + adjective: //
 		\gla * @ yāng hiro //
 		\glb {} yāng hiro //
 		\glc {} \TsgM{}.\Aarg{} new //
 		\glft \hphantom{*}`new he' //
-	\endgl
-	\end{minipage}
-	% ~
-	% \begin{forest} shorter edges, italic leaves,
-	% [DP
-	% 	[\anno{\xbar{D}}
-	% 		[\anno{\xhead{D}}
-	% 			[{yāng}]
-	% 		]
-	% 		[{\anno[\elem{\Adjc}]{AP}}
-	% 			[hiro]
-	% 		]
-	% 	]
-	% ]
-	% \end{forest}
+	\endgl\smallskip\\
 
-\a%
-	\begin{minipage}[t]{.5\linewidth}
+\tl\quad%
 	\begingl
 		\glpreamble pronoun + possessor: //
 		\gla * @ reng ayonena //
@@ -1506,56 +1499,18 @@ distribution of modifiers.
 		\glc {} \TsgI{}.\Aarg{} man-\Gen{} //
 		\glft \hphantom{*}`the man's it' //
 	\endgl
-	\end{minipage}
-	% ~
-	% \begin{forest} shorter edges, italic leaves,
-	% [DP
-	% 	[\anno{\xbar{D}}
-	% 		[\anno{\xhead{D}}
-	% 			[{reng}]
-	% 		]
-	% 		[{\anno[\pass{\Possr}]{NP}}
-	% 			[ayonena]
-	% 		]
-	% 	]
-	% ]
-	% \end{forest}
-
-\a%
-	\begin{minipage}[t]{.5\linewidth}
+\end{minipage}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
 	\begingl
-		\glpreamble pronoun + instrumental complement: //
+		\glpreamble pronoun + nominal complement: //
 		\gla * @ nang bariri //
 		\glb {} nang bari-ri //
 		\glc {} \Fpl{}.\Aarg{} meat-\Ins{} //
 		\glft \hphantom{*}`we of meat' //
-	\endgl
-	\end{minipage}
-	% ~
-	% \begin{forest} shorter edges, italic leaves,
-	% [DP
-	% 	[\anno{\xbar{D}}
-	% 		[\anno{\xhead{D}}
-	% 			[{nang}]
-	% 		]
-	% 		[{\anno[\elem{\Adjc}]{NP}}
-	% 			[bariri]
-	% 		]
-	% 	]
-	% ]
-	% \end{forest}
+	\endgl\smallskip\\
 
-\xe
-\end{figure}
-
-As mentioned above, it is possible for pronouns to be modified by relative
-clauses, which is illustrated by (\ref{ex:pronounrelc}). In this example, the
-pronoun \xayr{yeNF}{yeng}{she} is modified by the relative clause \xayr{si
-mino}{si mino}{who is happy}.
-
-\begin{figure}[h]
-\ex\label{ex:pronounrelc} %
-	\begin{minipage}[t]{.5\linewidth}
+\tl\quad%
 	\begingl
 		\glpreamble pronoun + relative clause: //
 		\gla yeng si mino //
@@ -1563,24 +1518,172 @@ mino}{si mino}{who is happy}.
 		\glc \TsgF{}.\Aarg{} \Rel{} happy //
 		\glft `she who is happy' //
 	\endgl
-	\end{minipage}
-	% ~
-	% \begin{forest} shorter edges, italic leaves,
-	% [DP
-	% 	[\anno{\xbar{D}}
-	% 		[\anno{\xhead{D}}
-	% 			[{yeng}]
-	% 		]
-	% 		[{\anno[\elem{\Adjc}]{CP}}
-	% 			[{si mino}, roof]
-	% 		]
-	% 	]
-	% ]
-	% \end{forest}
+\end{minipage}
 \xe
 \end{figure}
 
 \index{pronouns!personal|)}
+
+\subsubsection{Possessive pronouns}
+\label{ex:subsubsec:possprosyn}
+\index{pronouns!possessive|(}
+
+The whole paradigm of possessive prononouns is listed in the genitive column of
+\autoref{tab:perspro}. Possessive pronouns distinguish the same morphological
+features as personal pronouns: person, number, gender, animacy, and
+reflexivity. Their case is fixed to gentive, however. Possessors are
+subcategorized for by nouns as a complement feeding the \Poss{} feature. The
+morpholexical specifications possible for possessive pronouns are given in
+(\ref{ex:posspromorphlex}). Reflexive possessive pronouns have the meaning
+`\textsc{pronoun's} own'.
+
+\begin{figure}[h]
+\begin{morphlex}
+\ex\label{ex:posspromorphlex}
+\adjustbox{valign=t}{%
+\begin{tabu} {\usetabu{morphlexnarrow}}
+...
+	& D
+	& \begin{tabular}[t]{l @{ } l l l @{ } l} 
+		  & \ups{\Pred} & = & `$pro$' \\
+		  & \ups{\Anim} & = & $\pm$ \\
+		  & \ups{\Case} & = & \Gen{} \\
+		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
+		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
+		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
+		( & \ups{\Prontype} & = & \Refl & ) \\
+	\end{tabular}
+\end{tabu}%
+}
+\xe
+\end{morphlex}
+\end{figure}
+
+Earlier treatments of possessive pronouns analyzed them as adjectives, however,
+this appears incorrect in that if they were adjectives, they should coordinate
+with other adjectives. As illustrated in (\ref{ex:possnoadj}a), this is not the
+case. If possessive pronouns were adjectives, it should also be possible for
+there to be more than one of them in a clause, just as \fw{new blue car} is
+possible, with two adjectives modifying \fw{car}. Example (\ref{ex:possnoadj}b)
+illustrates that there can only be one possessor, though.
+
+\begin{figure}[h]
+\ex\labels\label{ex:possnoadj}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\ljudge*\begingl
+	\gla nanga hiro nay nā //
+	\glb nanga hiro nay nā //
+	\glc house new and \Fsg{}.\Gen{} //
+	\glft `*my and new house' //
+\endgl
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\ljudge*\begingl
+	\gla nanga nā yena //
+	\glb nanga nā yena //
+	\glc house \Fsg{}.\Gen{} \TsgF{}.\Gen{} //
+	\glft `*her my house' //
+\endgl
+\end{minipage}
+\xe
+\end{figure}
+
+According to \citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and
+possessors have some properties in common}, which is why they are treated as
+specifiers of NP or DP throughout the book. In Ayeri, this works well enough
+when no quantifiers are involved, since Ayeri prefers to place possessors even
+after quantifiers. One might argue that quantifiers might be adjectives to keep
+them NP-internal along with the possessor following them. However, just like
+posessors, they do not share typical distributional and inflectional properties
+of adjectives. For one, quantifiers cannot be compared; second, quantifiers do
+not coordinate with adjectives since they are not APs, as in
+(\ref{ex:quantnoadj}a), and there cannot be more than one quantifier modifying
+the same noun as in (\ref{ex:quantnoadj}b), so quantifiers are probably not
+adjuncts either.
+
+\begin{figure}[h]
+\ex\labels\label{ex:quantnoadj}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\ljudge*\begingl
+	\gla nanga hiro nay sano //
+	\glb nanga hiro nay sano //
+	\glc house new and both //
+	\glft `*both and new house' //
+\endgl
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\ljudge*\begingl
+	\gla nanga sano diring //
+	\glb nanga sano diring //
+	\glc house both several //
+	\glft `*several both houses' //
+\endgl
+\end{minipage}
+\xe
+\end{figure}
+
+It makes sense to assume, thus, that quantifiers are determiners and that
+possessive pronouns are as well. The c-structure tree in
+(\ref{ex:posscstruct}a) is based on the assumption that possessors are
+specifiers of \xhead{N} and that quantifiers are determiners. This, however,
+results in the wrong order. Making possessive pronouns DP heads may thus be
+advantagous, since it allows to generate the correct order with regards to
+quantifiers, as (\ref{ex:posscstruct}b) illustrates. On the other hand, this
+means sacrificing the structural paralellism between subjects (as Spec,VP) and
+possessors (as Spec,NP) which is noted several times in \citet{bresnan2016}.
+
+\begin{figure}[h]
+\ex\labels\label{ex:posscstruct}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\ljudge*%
+\begin{forest} italic leaves, shorter edges,
+[DP
+	[\anno{NP}
+		[\anno{\xhead{N}}
+			[nanga]
+		]
+		[{\anno[\pass{\Possr}]{\xhead{D}}}
+			[nā]
+		]
+	]
+	[\anno{\xhead{D}}
+		[sano]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{forest} italic leaves, shorter edges,
+[DP
+	[\anno{DP}
+		[\anno{NP}
+			[nanga, roof]
+		]
+		[\anno{\xhead{D}}
+			[sano]
+		]
+	]
+	[\anno{\xhead{D}}
+		[nā]
+	]
+]
+\end{forest}
+\end{minipage}
+\xe
+\end{figure}
+
+As previously mentioned (\autoref{phsec:possadj}, p.~\pageref{phsec:possadj}),
+like adjectives, possessive pronouns cannot stand by themselves if treated as
+nominals rather than as modifiers of nominals. They need to be nominalized
+first as it were, that is, they need \rayr{d/}{da-} as support to form free
+possessive nominals such as \fw{mine} or \fw{yours}.
+
+...
+
+\index{pronouns!possessive|)}
 
 \subsubsection{Demonstrative pronouns}
 \label{subsubsec:demprosyn}
@@ -1854,76 +1957,76 @@ postulates that all semantic information is inherited upwards with an
 intersection operation applied at each node in a syntactic tree, DP will still
 contain all the relevant information in a consistent manner.
 
-Another question is where in the tree \rayr{d/}{da-} should appear as a clitic.
-A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
-{da-tuvoley} as a single unit in terms of syntax. The problem with this is,
-however, that \rayr{d/}{da-} encodes \ups{\Pred} = `$pro$' and the adjective
-encodes \ups{\Pred} = `red'. Now, if they were both dominated by the same node
-(\xhead{A} in (\ref{ex:daadjcase}a)), that node would have clashing values for
-\Pred{}. This in turn motivates the assumption that \rayr{d/}{da-} should be
-represented in the c-structure at a higher level than AP, that is, adjoined to
-\xbar{D}. Now it potentially violates lexical integrity, though. One has to
-wonder if it would be feasible instead to conceptualize \rayr{d/tuvolej}
-{da-tuvoley} as a portmanteau item with two \Pred{} values, like
-(\ref{ex:doublepred}).
+% Another question is where in the tree \rayr{d/}{da-} should appear as a
+% clitic. A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
+% {da-tuvoley} as a single unit in terms of syntax. The problem with this is,
+% however, that \rayr{d/}{da-} encodes \ups{\Pred} = `$pro$' and the adjective
+% encodes \ups{\Pred} = `red'. Now, if they were both dominated by the same
+% node (\xhead{A} in (\ref{ex:daadjcase}a)), that node would have clashing
+% values for \Pred{}. This in turn motivates the assumption that \rayr{d/}{da-}
+% should be represented in the c-structure at a higher level than AP, that is,
+% adjoined to \xbar{D}. Now it potentially violates lexical integrity, though.
+% One has to wonder if it would be feasible instead to conceptualize
+% \rayr{d/tuvolej} {da-tuvoley} as a portmanteau item with two \Pred{} values,
+% like (\ref{ex:doublepred}).
 
-\begin{figure}[h]
-\ex\label{ex:doublepred} *\begin{avm}
-\[\Obj{}	& \[
-				\Pred	&	\{
-								\normalfont{`$pro$'}\\
-								\normalfont{`red'}\\
-							\}\\
-				\Anim	& $-$ \\
-				\Case	& \Parg \\
-				\Deix	& $such$ \\
-			\]\\
-\]
-\end{avm}
-\xe
-\end{figure}
+% \begin{figure}[h]
+% \ex\label{ex:doublepred} *\begin{avm}
+% \[\Obj{}	& \[
+% 				\Pred	&	\{
+% 								\normalfont{`$pro$'}\\
+% 								\normalfont{`red'}\\
+% 							\}\\
+% 				\Anim	& $-$ \\
+% 				\Case	& \Parg \\
+% 				\Deix	& $such$ \\
+% 			\]\\
+% \]
+% \end{avm}
+% \xe
+% \end{figure}
 
-The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness condition, though:
-\textcquote[45]{bresnan2016}{Every attribute has a unique value}, that is, no
-attribute may have more than one value assigned to it, but we just did this for
-\Pred{} by assigning both `$pro$' and `red' to it. Thus, in order not to
-violate this principle, the question is whether a list of \Pred{} attributes of
-the kind seen in \Adjc{} lists or whenever coordination is involved, would be
-acceptable, compare (\ref{ex:demadjcomppred}).
+% The \Avm{} in (\ref{ex:doublepred}) violates the uniqueness condition,
+% though: \textcquote[45]{bresnan2016}{Every attribute has a unique value},
+% that is, no attribute may have more than one value assigned to it, but we
+% just did this for \Pred{} by assigning both `$pro$' and `red' to it. Thus, in
+% order not to violate this principle, the question is whether a list of
+% \Pred{} attributes of the kind seen in \Adjc{} lists or whenever coordination
+% is involved, would be acceptable, compare (\ref{ex:demadjcomppred}).
 
-\begin{figure}[h]
-\ex\label{ex:demadjcomppred}%
-\ques\begin{avm}
-\[\Obj{}	& \[\avmspan{%
-				\{
-					\[
-						\Pred	&	\normalfont{`$pro$'}\\
-						\Prontype	&	$dem$ \\
-					\]\\
-					\[
-						\Pred	&	\normalfont{`red'}\\
-					\]
-				\}}\\
-				\Anim	& $-$ \\
-				\Case	& \Parg \\
-			\]\\
-\]
-\end{avm}
-\xe
-\end{figure}
+% \begin{figure}[h]
+% \ex\label{ex:demadjcomppred}%
+% \ques\begin{avm}
+% \[\Obj{}	& \[\avmspan{%
+% 				\{
+% 					\[
+% 						\Pred	&	\normalfont{`$pro$'}\\
+% 						\Prontype	&	$dem$ \\
+% 					\]\\
+% 					\[
+% 						\Pred	&	\normalfont{`red'}\\
+% 					\]
+% 				\}}\\
+% 				\Anim	& $-$ \\
+% 				\Case	& \Parg \\
+% 			\]\\
+% \]
+% \end{avm}
+% \xe
+% \end{figure}
 
-Another way to look at this problem is to analyze \rayr{d/tuvolej}{da-tuvoley}
-by means of inside-out functional uncertainty.\footnote{To come back to our
-analogy with \textsc{html} et al., inside-out functional uncertainty is similar
-to traversing the \textsc{dom} tree upwards in jQuery with
+The most straightforward way to analyze \rayr{d/tuvolej}{da-tuvoley} is
+probably by means of inside-out functional uncertainty.\footnote{To come back
+to our analogy with \textsc{html} et al., inside-out functional uncertainty is
+similar to traversing the \textsc{dom} tree upwards in jQuery with
 \texttt{\$(this).parent($selector$).attr($key$)}.} \citet[144]{dalrymple2001}
 gives an example from Warlpiri which contains a noun with double case marking.
 This example may serve as a template for a solution to our question, since here
 as well one lexeme, \fw{pirli-ngka-rlu}, unites two instances of the same
 feature, compare (\ref{ex:warldblcase}). She explains that the stacked case
 marking in \fw{pirli-ngka-rlu} `rock-\Loc {}-\Erg{}', according to
-\citet{nordlinger1998}, can be represented in f-structure in the way described
-in (\ref{ex:warldblcaseavm}).
+\citet{nordlinger1998}, can be represented in f-structure as described in
+(\ref{ex:warldblcaseavm}).
 
 \begin{figure}[h]
 \ex\label{ex:warldblcase}
@@ -3603,7 +3706,7 @@ nominal head specifies.
 		& Cl
 		& \begin{tabular}[t]{l l l}
 			\ups{\Def} & = & $-$ \\
-			\ups{\Spec} & = & $-$ \\
+			\ups{\Specif} & = & $-$ \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -3617,8 +3720,8 @@ definite---and their reference is specific, too---the deictic proclitics
 complementary distribution with the inspecificity marker, as demonstrated by
 (\ref{ex:inspecdeix}): neither combination of \rayr{me/}{mə-} and \rayr{Ed/}
 {eda-} in (\ref{ex:inspecdeix}cd) results in an ungrammatical sentence because 
-\rayr{Ed/}{eda-} encodes [\Def{}~$+$, \Spec{}~$+$] while \rayr{me/}
-{mə-} encodes [\Def{}~$-$, \Spec{}~$-$]. Attempting to assign
+\rayr{Ed/}{eda-} encodes [\Def{}~$+$, \Specif{}~$+$] while \rayr{me/}
+{mə-} encodes [\Def{}~$-$, \Specif{}~$-$]. Attempting to assign
 opposing values to the same feature (\Def{} and \textsc{specific},
 respectively) must fail, since these cannot be unified at the functional level.
 
