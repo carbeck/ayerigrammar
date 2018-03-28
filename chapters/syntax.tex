@@ -1459,7 +1459,8 @@ reflexive.
 		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		( & \ups{\Prontype} & = & \Refl & ) \\
+		( & \ups{\Refl}	& = & $\pm$ & ) \\
+		( & \ups{\Prontype} & = & $refl$ & ) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1551,7 +1552,8 @@ morpholexical specifications possible for possessive pronouns are given in
 		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		( & \ups{\Prontype} & = & \Refl & ) \\
+		( & \ups{\Refl}	& = & $\pm$ & ) \\
+		  & \ups{\Prontype} & = & $poss$ \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1637,7 +1639,13 @@ possessors (as Spec,NP) which is noted several times in \citet{bresnan2016}.
 \begin{figure}[h]
 \ex\labels\label{ex:posscstruct}
 \begin{minipage}[t]{.5\remaining}
-\tl\quad\ljudge*%
+\tl\quad\ljudge*\begingl
+	\gla nanga nā sano //
+	\glb nanga nā sano //
+	\glc house \Fsg{}.\Gen{} both //
+	\glft `*my both houses' //
+\endgl\smallskip\\
+
 \begin{forest} italic leaves, shorter edges,
 [DP
 	[\anno{NP}
@@ -1656,7 +1664,14 @@ possessors (as Spec,NP) which is noted several times in \citet{bresnan2016}.
 \end{minipage}
 ~
 \begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest} italic leaves, shorter edges,
+\tl\quad\begingl
+	\gla nanga sano nā //
+	\glb nanga sano nā //
+	\glc house both \Fsg{}.\Gen{} //
+	\glft `*both my houses' //
+\endgl\smallskip\\
+
+\begin{forest} italic leaves, shorter edges,
 [DP
 	[\anno{DP}
 		[\anno{NP}
@@ -1898,64 +1913,64 @@ the assumption stands to reason that the function embodied by \rayr{dnY}{danya}
 still forms the head of the phrase, so we still have a DP. Since \rayr{d/}{da-}
 is no independent word, it cannot be the head of the phrase, so it must not be
 \xhead{D}. Since there is no other word material for nominal case marking to
-attach to, the adjective stem is inflected instead of the pronoun. A hypothesis
-about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
-(\ref{ex:daadjcase}). This is not unproblematic, though, as we will shortly
-see.
+attach to, the adjective stem is inflected instead of the pronoun.
+% A hypothesis about the structure of \rayr{d/tuvolej}{da-tuvoley} is given in
+% (\ref{ex:daadjcase}). This is not unproblematic, though, as we will shortly
+% see.
 
-\begin{figure}
-\ex\labels
-\begin{tabular}[t]{@{} l @{\quad} l}
-\tl\quad\label{ex:daadjcase}\ques%
-\begin{forest} shorter edges, narrower nodes, italic leaves,
-[{\anno[\pass{\Obj}]{DP}}
-%	[\anno{\xbar{D}}
-		[\anno{Cl}
-			[da-]
-		]
-		[{\anno[\elem{\Adjc}]{AP}}
-%			[\anno{\xbar{A}}
-				[\anno{\xhead{A}}, narrower nodes,
-					[\anno{A\tsub{stem}}
-						[tuvo]
-					]
-					[\anno{A\tsub{infl}}
-						[-ley]
-					]
-				]
-%			]
-		]
-%	]
-]
-\end{forest}
+% \begin{figure}
+% \ex\labels
+% \begin{tabular}[t]{@{} l @{\quad} l}
+% \tl\quad\label{ex:daadjcase}\ques%
+% \begin{forest} shorter edges, narrower nodes, italic leaves,
+% [{\anno[\pass{\Obj}]{DP}}
+% %	[\anno{\xbar{D}}
+% 		[\anno{Cl}
+% 			[da-]
+% 		]
+% 		[{\anno[\elem{\Adjc}]{AP}}
+% %			[\anno{\xbar{A}}
+% 				[\anno{\xhead{A}}, narrower nodes,
+% 					[\anno{A\tsub{stem}}
+% 						[tuvo]
+% 					]
+% 					[\anno{A\tsub{infl}}
+% 						[-ley]
+% 					]
+% 				]
+% %			]
+% 		]
+% %	]
+% ]
+% \end{forest}
 
-&
+% &
 
-\tl\quad\label{ex:daadjcaseavm} \ques\adjustbox{valign=t}{%
-\begin{avm}
-\[\Obj & \[
-			\Pred	& `$pro$' \\
-			\Prontype	& $dem$ \\
-			\Adjc	& \{\[
-						\Pred	& `red' \\
-						\Anim	& $-$ \\
-						\Case	& \Parg \\
-					\]\} \\
-		\] \\
-\]	
-\end{avm}}
-\end{tabular}
-\xe
-\end{figure}
+% \tl\quad\label{ex:daadjcaseavm} \ques\adjustbox{valign=t}{%
+% \begin{avm}
+% \[\Obj & \[
+% 			\Pred	& `$pro$' \\
+% 			\Prontype	& $dem$ \\
+% 			\Adjc	& \{\[
+% 						\Pred	& `red' \\
+% 						\Anim	& $-$ \\
+% 						\Case	& \Parg \\
+% 					\]\} \\
+% 		\] \\
+% \]	
+% \end{avm}}
+% \end{tabular}
+% \xe
+% \end{figure}
 
-One question with regards to this is, whether the \Avm{} in this case should
-look like the one in (\ref{ex:danyaastuvoavm}), since now it is the adjective
-which carries the nominal inflections. Strictly speaking, the functional
-annotation for the case marker should appear along with the adjective's \Pred{}
-under the \Adjc{} relation, as in (\ref{ex:daadjcaseavm}b). Since \Lfg{}
-postulates that all semantic information is inherited upwards with an
-intersection operation applied at each node in a syntactic tree, DP will still
-contain all the relevant information in a consistent manner.
+% One question with regards to this is, whether the \Avm{} in this case should
+% look like the one in (\ref{ex:danyaastuvoavm}), since now it is the adjective
+% which carries the nominal inflections. Strictly speaking, the functional
+% annotation for the case marker should appear along with the adjective's
+% \Pred{} under the \Adjc{} relation, as in (\ref{ex:daadjcaseavm}b). Since
+% \Lfg{} postulates that all semantic information is inherited upwards with an
+% intersection operation applied at each node in a syntactic tree, DP will
+% still contain all the relevant information in a consistent manner.
 
 % Another question is where in the tree \rayr{d/}{da-} should appear as a
 % clitic. A lexicalist approach like \Lfg{} favors would treat \rayr{d/tuvolej}
