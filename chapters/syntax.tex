@@ -257,7 +257,7 @@ in (\ref{ex:dpnpcasemap}).
 	& \makecell[tl]{%
 		\pass{\Oblq{ins}} \\
 		\quad$\vee$ \pass{\Oblq{manner}} \\
-		\quad$\vee$ \elem{\Adjc}%
+		\quad$\vee$ \pass{\Compl}%
 		}
 	\\
 \end{tabular}%
@@ -303,22 +303,24 @@ number of case-marked arguments of the verb is greater than one.
 
 Nouns are one of the main parts of speech of Ayeri and can be modified by a
 number of other free elements, as we have seen previously---adjectives,
-possessive adjectives, as well as relative clauses and nominal adjuncts. These
+possessive determiners, as well as relative clauses and nominal adjuncts. These
 typically follow nouns. It was also described before that Ayeri's nouns may
 host a number of clitics, among which are deictic prefixes and quantifiers, as
 well as proclitic case markers with proper nouns. These clitics, however, will
 not be treated as targets of syntactic operations, since \Lfg{} follows the
 approach of lexical integrity. Thus, bound elements like affixes and clitics
 are assumed not to be reflected or affected by syntax itself. The phrase
-structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
+structure of NPs should thus generally look like depicted in
+(\ref{ex:npstruct}), however, there are some caveats which will be described
+below.
 
 \begin{figure}
 \pex\label{ex:npstruct}
 \a NP → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{CP}
-\a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
-\a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Compl}]{NP}
+% \a \xbar{N} → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
 \a\label{ex:npstruct_Adj}%
-	\xbar{N} → \anno*{\xhead{N}} \anno*[{\elem{\Adjc}}]{AP}
+	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP}
+\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{XP}
 \xe
 \end{figure}
 
@@ -328,15 +330,15 @@ structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
 [{\anno[\{\pass{\DF} | \pass{\GF}\}]{NP}}
 %	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
-			[\anno{\xbar{N}}
+%			[\anno{\xbar{N}}
 				[\anno{\xbar{N}}
 					[\anno{\xhead{N}}]
-					[{\anno[\elem{\Adjc}]{AP}}]
+					[{\anno[\pass{\Compl}]{XP}}]
 				]
-				[{\anno[\pass{\Compl}]{XP}}]
+				[{\anno[\elem{\Adjc}]{AP}}]
 			]
-			[{\anno[\pass{\Possr}]{XP}}]
-		]
+%			[{\anno[\pass{\Possr}]{XP}}]
+%		]
 		[{\anno[\elem{\Adjc}]{CP}}]
 %	]
 ]
@@ -346,15 +348,16 @@ structure of NPs should thus look like depicted in (\ref{ex:npstruct}).
 
 The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which
 is on the left side, followed optionally by modifiers which may have various
-relationships to the noun: complement (instrumental nominal, NP/DP), adjunct
-(adjective phrase, AP), possessor (genitive NP/DP), relative clause (forming a
-complementizer phrase, CP). This can be represented as a constituent-structure
-tree in the way described in (\ref{ex:npcstruct}). The maximal projection of
-\xhead{N} (that is, NP) is annotated very generally for the function of the
-NP---basically, an NP can act as either a discourse function (\DF{}) or a
-grammatical function (\GF{}). (\ref{ex:nounmods}) gives an example of each kind
-of modifier. Since there is no grammatical context given, NP is unmarked for
-function in these examples.
+relationships to the noun: complement (instrumental nominal, NP/DP; complement
+clause, CP), adjunct (adjective phrase, AP), and relative clause (CP). This can
+be represented as a constituent-structure tree in the way described in
+(\ref{ex:npcstruct}). The maximal projection of \xhead{N} (that is, NP) is
+annotated very generally for the function of the NP---basically, an NP can act
+as either a discourse function (\DF{}) or a grammatical function (\GF{}).
+Besides, nouns may be modified by possessors and quantifiers. These, however,
+may better be analyzed as forming DPs which embed the NP as a complement.
+(\ref{ex:nounmods}) gives an example of each kind of modifier. Since there is
+no grammatical context given, NP is unmarked for function in these examples.
 
 \begin{figure}
 \pex\label{ex:nounmods}
@@ -387,39 +390,6 @@ function in these examples.
 		\Adjc	&	\{\[
 			\Pred	&	`new' \\
 		\]\} \\
-	\]
-	\end{avm}
-
-\a %
-	\begin{minipage}[t]{.5\remaining}
-	\begingl
-		\glpreamble noun + possessor: //
-		\gla kegan ayonena //
-		\glb kegan ayon-ena //
-		\glc hat man-\Gen{} //
-		\glft `the man's hat' //
-	\endgl
-	\end{minipage}
-	~
-% 	\begin{forest} shorter edges, italic leaves,
-% 	[NP
-% %		[\anno{\xbar{N}}
-% 			[\anno{\xhead{N}}
-% 				[{kegan}]
-% 			]
-% 			[{\anno[\pass{\Possr}]{NP}}
-% 				[ayonena]
-% 			]
-% %		]
-% 	]
-% 	\end{forest}
-	\begin{avm}
-	\[
-		\Pred	&	\astruct{hat}{\ups{\Possr}} \\
-		\Possr	&	\[
-			\Pred	&	`man' \\
-			\Case	&	\Gen \\
-		\] \\
 	\]
 	\end{avm}
 
@@ -488,6 +458,58 @@ function in these examples.
 	\]
 	\end{avm}
 
+\a %
+	\begin{minipage}[t]{.5\remaining}
+	\begingl
+		\glpreamble noun + possessor: //
+		\gla kegan ayonena //
+		\glb kegan ayon-ena //
+		\glc hat man-\Gen{} //
+		\glft `the man's hat' //
+	\endgl
+	\end{minipage}
+	~
+% 	\begin{forest} shorter edges, italic leaves,
+% 	[NP
+% %		[\anno{\xbar{N}}
+% 			[\anno{\xhead{N}}
+% 				[{kegan}]
+% 			]
+% 			[{\anno[\pass{\Possr}]{NP}}
+% 				[ayonena]
+% 			]
+% %		]
+% 	]
+% 	\end{forest}
+	\begin{avm}
+	\[
+		\Pred	&	\astruct{hat}{\ups{\Possr}} \\
+		\Possr	&	\[
+			\Pred	&	`man' \\
+			\Case	&	\Gen \\
+		\] \\
+	\]
+	\end{avm}
+
+\a %
+	\begin{minipage}[t]{.5\remaining}
+	\begingl
+		\glpreamble noun + quantifier: //
+		\gla nanga diring //
+		\glb nanga diring //
+		\glc house several //
+		\glft `several houses' //
+	\endgl
+	\end{minipage}
+	~
+	\begin{avm}
+	\[
+		\Pred	&	`house' \\
+		\Quant	&	\[
+			\Pred	&	`several' \\
+		\] \\
+	\]
+	\end{avm}
 \xe
 \end{figure}
 
@@ -500,9 +522,10 @@ related is also arranged in close proximity.'), and also grammatical weight
 \citep{wasow1997}:
 
 \begin{enumerate}[noitemsep]
-	\item APs (also cardinals) and other NPs describing attributes,
-	\item instrumental NP indicating what the head consists of,
-	\item possessive genitive NPs,
+	\item APs and other NPs describing attributes,
+	\item complementary NPs and CPs,
+	\item quantifiers and cardinal numerals
+	\item possessive genitive NPs and DPs,
 	\item relative clauses.
 \end{enumerate}
 
@@ -514,47 +537,172 @@ phrase. However, for instance, relative clauses trail whenever possible
 presumably since they tend to contain whole subclauses and thus a lot of
 information. It seems advisable not to put an element with much less
 information content after them, especially when it refers to a different head
-than all the things inside the relative clause. The following example
-(\ref{ex:nounmodord}) illustrates the unmarked order of several different modifiers.
+than all the things inside the relative clause.
 
-\begin{figure}
-\pex\label{ex:nounmodord}
-\a\begingl
-	\gla diranang caban nā si ang @ mica ya @ Kārvisam //
-	\glb diran-ang caban nā si ang= mit=ya.Ø ya= Kārvisam //
-	\glc uncle-\Aarg{} favorite \Fsg{}.\Gen{} \Rel{} \AgtT{}= 
-		live=\TsgM{}.\Top{} \Loc{}= Kārvisam //
-	\glft `my favorite uncle who lives in Kārvisam' //
+The order of NP modifiers seems somewhat jumbled up with regards to the
+c-structure tree in (\ref{ex:npcstruct}) which, for instance, gives noun
+complements as following \xhead{N} before adjectives, while the list above
+indicates the reversed order. Furthermore, the c-structure tree indicates that
+relative clauses precede DPs embedding the NP, like possessive NPs and DPs.
+This is no mistake, however, but part of the caveat mentioned earlier with
+regards to the phrase structure rules for NPs. That is, due to information
+structure and modifier scope, Ayeri makes good use of extraposition. For
+instance, (\ref{ex:adjscope}a) is theoretically ambiguous as to whether the
+shirt is new or the wool its is made of---in practice, it would be assumed that
+the shirt is made of new wool. The problem of ambiguity is solved in
+(\ref{ex:adjscope}b) by inverting the order of complement and adjective: the
+shirt is now unmistakeably characterized as new, and being made of wool. The
+sentence in (\ref{ex:adjscope}a) theoretically allows both c-structure
+interpretations given in (\ref{ex:adjscopecstruct}), however, as mentioned
+above, the second one is actually the preferred one in such cases.
+
+\begin{figure}[h]
+\ex\labels\label{ex:adjscope}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:adjscope_1}\ljudge\excl%
+\begingl
+	\gla limu sapaeri hiro //
+	\glb limu sapa-eri hiro //
+	\glc shirt wool-\Ins{} new //
+	\glft `shirt of new wool'\\
+		\textit{Intended:} `new shirt of wool' //
 \endgl
-\medskip
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:adjscope_2}%
+\begin{minipage}[t]{\linewidth}
+	\fw{limu hiro sapaeri} \\
+	`new shirt of wool'
+\end{minipage}
+\end{minipage}
+\xe
+\end{figure}
 
-\a\begin{forest} shorter edges, narrower nodes, italic leaves,
-[{\anno[\pass{\Subj}]{NP}}
-%	[\anno{\xbar{N}}
-		[\anno{\xbar{N}}
-			[\anno{\xbar{N}}
-				[\anno{\xhead{N}}
-					[{diranang}]
-				]
-				[{\anno[\elem{\Adj}]{AP}}
-					[caban]
-				]
-			]
-			[{\anno[\pass{\Possr}]{DP}}
-				[nā]
-			]
+\begin{figure}[h]
+\ex\labels\label{ex:adjscopecstruct}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{forest} italic leaves, shorter edges,
+[NP
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[limu]
 		]
-		[{\anno[\elem{\Adjc}]{CP}}
-			[{si ang mica ...}, roof]
+		[{\anno[\pass{\Compl}]{NP}}
+			[sapaeri, roof]
 		]
-%	]
+	]
+	[{\anno[\elem{\Adjc}]{AP}}
+		[hiro, roof]
+	]
+]
+\end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{forest} italic leaves, shorter edges,
+[NP
+	[\anno{\xhead{N}}
+		[limu]
+	]
+	[{\anno[\pass{\Compl}]{NP}}
+		[\anno{\xhead{N}}
+			[sapaeri]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[hiro, roof]
+		]
+	]
+]
+\end{forest}
+\end{minipage}
+\xe
+\end{figure}
+
+The complement does not become an adjunct, however, as (\ref{ex:complnoadjc})
+shows: \xbar{X} branches can be replaced by \fw{pro}-forms such as `one' or
+`so'. This, however, produces an odd-sounding result when replacing
+\xayr{limu hiro}{limu hiro}{new shirt} with
+\xayr{dnY}{danya}{one}.\footnote{\citet{carnie2013} notes that replacing a
+nominal complement with \fw{one} in English is acceptable at least to some
+speakers \citep[181]{carnie2013}. Let us assume that Ayeri speakers consider it
+odd, however.}
+
+\begin{figure}[h]
+\ex\label{ex:complnoadjc}
+\ljudge*\begin{minipage}[t]{.5\remaining}%
+\begingl
+	\gla danya sapaeri //
+	\glb danya sapa-eri //
+	\glc one wool-\Ins{} //
+	\glft `one of wool' //
+\endgl
+\end{minipage}
+~
+\begin{forest} italic leaves, shorter edges,
+[NP
+	[\anno{\xbar{N}}, name=nbar
+		[\anno{\xhead{N}}
+			[limu]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[hiro]
+		]
+	]
+	[{\anno[\elem{\Adjc}]{NP}}
+		[sapaeri, roof]
+	]
+]
+%
+\draw [latex-] (nbar) -- ++(-3em,+3em) coordinate (nbarlabel);
+\node () at (nbarlabel) [anchor=south east] {\emph{one}};
+\end{forest}
+\xe
+\end{figure}
+
+What should the structure for (\ref{ex:adjscope}b) look like to produce both a
+correct c-structure tree and correct f-structure annotations, though?
+Functional projections may embed lexical ones of the same type
+\citep[104]{bresnan2016}. It should thus be possible to analyze the complement
+NP, \rayr{spEri}{sapaeri}, as modifying an NP which jointly holds the nominal
+head, \rayr{limu}{limu} as well as its adjunct adjective, \rayr{hiro}{hiro}.
+Regarding functional annotation, there is a problem, however, since
+\citet{bresnan2016} requires that if a phrase is adjoined to a phrasal
+constituent, this phrase must either not be annotated or not embody an argument
+function \citep(compare (\ref{ex:functions}))[100, 107]{bresnan2016}. \Compl{}
+is an argument function, though. A possibility for lexocentric specification of
+an argument function is left open, however. Due to Ayeri's consistent use of
+case marking, I see no problem to invoke a lexocentric specification for \Ins{}
+as given in (\ref{ex:dpnpcasemap}g): \Ins{} specifies in this case that the
+head of this NP, \xayr{sp}{sapa}{wool}, is a complement of its co-head in DP,
+\xayr{limu}{limu}{shirt}. Extraposed relative clauses are less problematic,
+since they are adjuncts, and \Adjc{} is by itself not an argument function.
+
+\begin{figure}[h]
+\ex\label{ex:complextrapos}
+\begin{forest} italic leaves, shorter edges,
+[DP
+	[\anno{NP}
+		[\anno{\xhead{N}}
+			[limu]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[hiro, roof]
+		]
+	]
+	[NP
+		[{sapaeri\\
+		\textup{\downs{\Case} = \Ins{}}\\
+		\textup{$\implies$ \pass{\Compl}}%
+		}, roof]
+	]
 ]
 \end{forest}
 \xe
 \end{figure}
 
-The c-structure tree in (\ref{ex:nounmodord}) shows that Ayeri prefers
-head--dependent word order with exceeding consistency. As illustrated by
+The c-structure tree in (\ref{ex:npstruct}) shows that Ayeri prefers
+consistent head--dependent word order at least for its NPs. As illustrated by
 previous examples, both adjuncts and complements are, for the most part,
 consistently appended to the right of their heads, which means that Ayeri may
 be classified as a rather consistently right-branching language. However, a
@@ -843,7 +991,7 @@ case-marking proclitic, as illustrated by (\ref{ex:animcaseagrname}).
 
 Furthermore, example (\ref{ex:nounqadj}) already showed that nouns may be
 modified by quantifiers, whether these are clitic suffixes
-(\autoref{subsec:quantifiers}) or numerals (\autoref{sec:numerals}). In these
+(\autoref{sec:quantifiers}) or numerals (\autoref{sec:numerals}). In these
 cases, plural marking on the noun is suppressed by the presence of the modifier
 which supplies the information by itself so that further morphological plural
 marking by the suffix \rayr{/ye}{-ye} on the noun stem itself would be
@@ -3524,7 +3672,7 @@ in (\ref{ex:meinter}).
 \subsubsection{Quantifying clitics}
 
 As described in \autoref{clitics_quant} (p.~\pageref{clitics_quant}~ff.) and 
-\autoref{subsec:quantifiers}, Ayeri has a number of suffixed---that is,
+\autoref{sec:quantifiers}, Ayeri has a number of suffixed---that is,
 enclitic---quantifiers which can attach to inflected nouns. These, along with
 their non-clitic counterparts, are modifiers and are thus part of an NP's list
 of adjuncts, \Adjc{}, along with adjectives and nominal adjuncts. An example of
@@ -4221,7 +4369,7 @@ meaning `rather, more' (\rayr{/ENF}{-eng}) and `most' (\rayr{/vaa}{-vā}) as
 lexical quantifiers. With adjectives, there is no clear-cut line between their
 functional and their lexical use. I have analyzed them here as functional,
 since they may be interpreted as such, depending on context. As we have
-observed before (\autoref{subsec:quantifiers}), quantifier clitics may modify
+observed before (\autoref{sec:quantifiers}), quantifier clitics may modify
 adjectives like any other adverbial modifiers, except that their surface form
 is clitic rather than free. Quantifying adverbs, both enclitic and free, thus
 also find themselves in \Adjc{}. An example of this is given in
@@ -5813,7 +5961,7 @@ indicated place.
 
 Like adjectives, adpositions may be modified by adverbs, for instance, for
 intensification. This means that items from the class of adverbs categorized as
-quantifiers (\autoref{subsec:quantifiers}) are likely to occur. As we have seen
+quantifiers (\autoref{sec:quantifiers}) are likely to occur. As we have seen
 previously, the most common such expressions are enclitic, that is, they merge
 with \xhead{P} rather than be adjuncts at \xbar{P}. An analysis of the c- and
 f-structure of adpositional phrases with adverbial modifiers is shown in 
@@ -7915,7 +8063,7 @@ are marked as the subject this time. Of course, it is equally possible in
 English to say \fw{The letters are all written by the children}, where \fw{the
 letters} is the subject that the floated \fw{all} refers to.
 
-As pointed out in \autoref{subsec:quantifiers}, a lot of clitic quantifiers in
+As pointed out in \autoref{sec:quantifiers}, a lot of clitic quantifiers in
 Ayeri have a double meaning as intensifiers. For instance, \rayr{/IknF}{-ikan}
 can refer to both quantities and qualities, meaning `much, many' or `very'
 depending on context. Thus, many of the suffixed quantifiers, if appended to
