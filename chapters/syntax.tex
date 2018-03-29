@@ -1696,7 +1696,105 @@ nominals rather than as modifiers of nominals. They need to be nominalized
 first, as it were. That is, they need the proclitic \rayr{d/}{da-} or full
 \xayr{dnY}{danya}{one} as support to form free possessive nominal expressions
 such as \fw{mine} or \fw{yours}, except if used as initial predicative
-nominals.
+nominals. This is illustrated by (\ref{ex:genpred2}).
+
+\begin{figure}[h]
+\ex\labels\label{ex:genpred2}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begingl
+	\gla Ada-nangāng da-nā. //
+	\glb ada=nanga-ang da-nā //
+	\glc that=house-\Aarg{} one=\Fsg{}.\Gen{} //
+	\glft `That house is mine.' //
+\endgl
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begingl
+	\gla Nā ada-nangāng. //
+	\glb Nā ada=nanga-ang //
+	\glc \Fsg{}.\Gen{} that=house-\Aarg{} //
+	\glft `Mine is that house.' //
+\endgl
+\end{minipage}
+\xe
+\end{figure}
+
+Since such independent possessive pronominals already express possession, there
+is no need to mark them with genitive case additionally. As
+(\ref{ex:nomzposs}) shows, these forms may be case marked---\xayr{d/naa}
+{da-nā}{mine} is the nominal corresponding to the topic marker \rayr{le}{le}.
+This parallels the use of \rayr{d/}{da-} with adjectives, compare
+\autoref{subsec:dempro}.
+
+\begin{figure}[h]
+\ex\label{ex:nomzposs}%
+\begingl
+	\glpreamble \textsc{context}: \xayr{ddNF}{dadang}{pen} (\Inan) //
+	\gla Le @ ming @ eryavang da-nā. //
+	\glb le= ming= ery=vāng da=nā-Ø //
+	\glc \PatTI{}= can= use=\Second{}.\Aarg{} one=\Fsg{}.\Gen{}-\Top{} //
+	\glft `You can use mine.' //
+\endgl
+\xe
+\end{figure}
+
+Nominalized possessive pronouns are anaphora to a third person form, while they
+additionally refer to a possessor: \rayr{da/naa}{da-nā} in (\ref{ex:nomzposs})
+refers to a pen belonging to the person offering the other to use theirs.
+The \Avm{} in (\ref{ex:mypen}a) spells out the full functional definition for 
+\xayr{ddNFlej naa}{dadangley nā}{my pen}; (\ref{ex:mypen}b) attempts to model
+the anaphoric reference, \xayr{d/naalej}{da-nāley}{mine}.
+
+\begin{figure}[h]
+\ex\labels\label{ex:mypen}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{avm}
+\[
+	\Pred	&	\astruct{pen}{\ups{\Possr}} \\
+	\Pers	&	\Third \\
+	\Num	&	\Sg \\
+	\Gend	&	\Inan \\
+	\Anim	&	$-$ \\
+	\Case	&	\Parg \\
+
+	\Possr	&	\[
+		\Pred	&	`$pro$' \\
+		\Pers	&	\First \\
+		\Num	&	\Sg \\
+		\Case	&	\Gen \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\begin{avm}
+\[
+	\Pred	&	\astruct{$pro$}{\ups{\Possr}} \\
+	\Pers	&	\Third \\
+	\Gend	&	\Inan \\
+	\Anim	&	$-$ \\
+	\Case	&	\Parg \\
+
+	\Possr	&	\[
+		\Pred	&	`$pro$' \\
+		\Pers	&	\First \\
+		\Num	&	\Sg \\
+		\Case	&	\Gen \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+\xe
+\end{figure}
+
+The information about the third-person reference is preserved in 
+(\ref{ex:mypen}b): the anaphoric reference is indicated by a $pro$ requiring a
+genitive complement which is the same as that of (\ref{ex:mypen}a).
+Demonstratives distinguish fewer features than full pronouns, which is why the
+feature definitions referring to the possessed are less specific; compare the
+next section on demonstrative pronouns (p.~\pageref{subsubsec:demprosyn}).
 
 ...
 
@@ -2144,8 +2242,9 @@ Essentially, we can generate the same f-structure as in
 (\ref{ex:danyaastuvoavm}) above this way, since \rayr{d/tuvolej}{da-tuvoley}
 and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent in
 spite of their differences in morphology. The approach with functional
-uncertainty permits us, for one, not to violate lexical integrity as in
-(\ref{ex:daadjcase}a), so the c-structure should more correctly look like in
+uncertainty permits us, for one, not to violate lexical integrity,
+% as in (\ref{ex:daadjcase}a),
+so the c-structure should more correctly look like in
 (\ref{ex:datuvoleycstr}). Secondly, we do not have to assume that the adjective
 itself untypically inflects for case, at least not at a functional level. The
 case marker just happens to be stuck on it because it is the next best lexical
