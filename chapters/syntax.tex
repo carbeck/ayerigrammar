@@ -1397,17 +1397,15 @@ distribution with NPs. Since they encode morphosyntactic functions rather than
 semantic content, they are ideal candidates for heads of DP. DPs can be
 modified by APs and CPs, collectively referred to as XP in (\ref{ex:dpstruct}),
 which gives the phrase structure of DPs. Furthermore, \xhead{D} may consist of
-a quantifier which  be further specified by an intensifier in Spec,DP.
-\xhead{D} may also be complemented by an NP or another DP, however, since the
-determiner is a modifier in this case, the embedded nominal phrase precedes
-\xhead{D} rather than following it. The constituent structure resulting from
-the phrase structure definition in (\ref{ex:dpstruct}) is given in
-(\ref{ex:dpcstruct}).
+a quantifier which  be further specified by an intensifier. \xhead{D} may also
+be complemented by an NP or another DP, however, since the determiner is a
+modifier in this case, the embedded nominal phrase precedes \xhead{D} rather
+than following it. The constituent structure resulting from the phrase
+structure definition in (\ref{ex:dpstruct}) is given in (\ref{ex:dpcstruct}).
 
 \begin{figure}[h]
 \pex\label{ex:dpstruct}
-\a DP → \anno*{\xbar{D}} \anno*[\pass{\Spec}]{DP}
-\a \xbar{D} → \anno*{\xbar{D}} \anno*[{\elem{\Adjc}}]{XP}
+\a DP → \anno*{\xbar{D}} \anno*[{\elem{\Adjc}}]{XP}
 \a \xbar{D} → \anno*{YP} \anno*{\xhead{D}}
 \xe
 \end{figure}
@@ -1417,13 +1415,10 @@ the phrase structure definition in (\ref{ex:dpstruct}) is given in
 \begin{forest}
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{DP}}
 	[\anno{\xbar{D}}
-		[\anno{\xbar{D}}
-			[{\anno{YP}}]
-			[\anno{\xhead{D}}]
-		]
-		[{\anno[\elem{\Adjc}]{XP}}]
+		[{\anno{YP}}]
+		[\anno{\xhead{D}}]
 	]
-	[{\anno[\pass{\Spec}]{DP}}]
+	[{\anno[\elem{\Adjc}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -3367,13 +3362,14 @@ As described in \autoref{sec:quantifiers}, Ayeri's morphemes expressing
 quantity and degree come in two varieties: free morphemes, such as
 \xayr{sno}{sano}{both} or \xayr{EkeNF}{ekeng}{over-, overly, too}, and clitic
 morphemes, such as \xayr{/IknF}{-ikan}{much, many, very} or \rayr{/nYm}{-nyama}
-{even}.
+{even}. In this section, we will first consider nominal quantifiers and then
+give the morphologically similar intensifiers a closer look.
 
-Quantifiers proper fall under the determiner rubric; they are not adjuncts. If
-they were, it should be possible for there to be more than one quantifier
-modifying a noun, as in (\ref{ex:quantnoadj2}a). Moreover, if quantifiers were
-adjectives, they would also have to coordinate with them. Example 
-(\ref{ex:quantnoadj2}b) shows that they do not.
+Nominal quantifiers proper fall under the determiner rubric; they are not
+adjuncts. If they were, it should be possible for there to be more than one
+quantifier modifying a noun, as in (\ref{ex:quantnoadj2}a). Moreover, if
+quantifiers were adjectives, they would also have to coordinate with them.
+Example (\ref{ex:quantnoadj2}b) shows that they do not.
 
 \begin{figure}[h]
 \ex\labels\label{ex:quantnoadj2}
@@ -3397,6 +3393,8 @@ adjectives, they would also have to coordinate with them. Example
 \xe
 \end{figure}
 
+% THIS IS NOT COMPLETELY CERTAIN??? IF INTENSIFIERS MODIFYING QUANTIFIERS *ARE*
+% NON-PROJECTING WORDS, WOULDN'T SPEC,NP BE FREE FOR QUANTIFIERS?
 Quantifiers can be modified by intensifiers, so it makes sense to treat them as
 phrasal heads. However, exceptionally, independent quantifiers happen not to be
 semantically compatible with modification by intensifiers like \xayr{EkeNF}
@@ -3495,9 +3493,11 @@ an intensifier as mentioned above, \xayr{EkeNF}{ekeng}{too, over-, overly} has
 been added. This intensifier modifies not the head of NP,
 \xayr{ErFsy}{ersaya}{cook}, but the head of the DP, which is an empty node
 here whose information content is, however, provided functionally by the clitic
-\rayr{/IknF}{-ikan} on the noun. Intensifiers like \rayr{EkeNF}{ekeng} need a
-rule which specifies that they only operate within their immediate head's
-functional domain.
+\rayr{/IknF}{-ikan} on the noun. Since \Lfg{} restricts specifiers of
+functional categories to the grammaticalized discourse functions
+\citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot be analyzed as a
+specifier of \xhead{D}. Instead, it has been analyzed here as a non-projecting
+word \citep[116--117]{bresnan2016} for lack of a better understanding.
 
 \begin{figure}
 \ex\label{ex:nounquantavm}
@@ -3517,35 +3517,32 @@ functional domain.
 		\Case	&	\Parg \\
 		\Num	&	\Pl \\
 		\Quant	&	$g$: \[
-			\Pred	&	`many' \\
-			\Spec	&	$h$: \[
-				\Pred	&	`too' \\
-			\] \\
+			\Pred	&	`too-many' \\
 		\] \\
-	\] \tikzmark{nounquantavm_top} \\
+	\] \\
 \]
 \end{avm}
 \end{minipage}
 \hfill
 \begin{forest} italic leaves, shorter edges, narrower nodes,
 [{\anno[\pass{\Obj}]{DP}}
-	[\anno{\xbar{D}}
-		[\anno{NP}
+	[\anno{NP}
+		[\anno{\xhead{N}}
 			[\anno{\xhead{N}}
-				[\anno{\xhead{N}}
-					[ersaya]
-				]
-				[\anno{Cl}
-					[-ikan]
-				]
+				[ersaya]
+			]
+			[\anno{Cl}
+				[-ikan]
 			]
 		]
+	]
+	[\anno{\xhead{D}}
 		[\anno{\xhead{D}}
 			[$\epsilon$]
 		]
-	]
-	[{\anno[\pass{\Spec}]{DP}}
-		[ekeng, roof]
+		[\anno{D̂}
+			[ekeng]
+		]
 	]
 ]
 \end{forest}
