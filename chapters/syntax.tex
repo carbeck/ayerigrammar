@@ -1763,6 +1763,7 @@ the anaphoric reference, \xayr{d/naalej}{da-nāley}{mine}.
 		\Pers	&	\First \\
 		\Num	&	\Sg \\
 		\Case	&	\Gen \\
+		\Prontype	&	$poss$ \\
 	\] \\
 \]
 \end{avm}
@@ -1776,12 +1777,14 @@ the anaphoric reference, \xayr{d/naalej}{da-nāley}{mine}.
 	\Gend	&	\Inan \\
 	\Anim	&	$-$ \\
 	\Case	&	\Parg \\
+	\Prontype	&	$dem$ \\
 
 	\Possr	&	\[
 		\Pred	&	`$pro$' \\
 		\Pers	&	\First \\
 		\Num	&	\Sg \\
 		\Case	&	\Gen \\
+		\Prontype	&	$poss$ \\
 	\] \\
 \]
 \end{avm}
@@ -2242,16 +2245,16 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 
 Essentially, we can generate the same f-structure as in
 (\ref{ex:danyaastuvoavm}) above this way, since \rayr{d/tuvolej}{da-tuvoley}
-and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent in
-spite of their differences in morphology. The approach with functional
-uncertainty permits us, for one, not to violate lexical integrity,
+and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent. The
+approach with functional uncertainty permits us not to violate lexical
+integrity,
 % as in (\ref{ex:daadjcase}a),
-so the c-structure should more correctly look like in
-(\ref{ex:datuvoleycstr}). Secondly, we do not have to assume that the adjective
-itself untypically inflects for case, at least not at a functional level. The
-case marker just happens to be stuck on it because it is the next best lexical
-base to attach it to, which is represented in the accompanying c-structure
-(non-branching bar levels and the empty \xhead{D} have been pruned).
+so the c-structure should more correctly look like in (\ref{ex:datuvoleycstr}).
+Secondly, we do not have to assume that the adjective itself untypically
+inflects for case, at least not at a functional level. The case marker just
+happens to be stuck on it because it is the next best lexical base to attach it
+to, which is represented in the accompanying c-structure (non-branching bar
+levels and the empty \xhead{D} have been pruned).
 
 \begin{figure}
 \ex\label{ex:datuvoleycstr}
@@ -2553,14 +2556,12 @@ in the previous example.
 
 An exemplary feature set for an interrogative pronoun has already been spelled
 out for \rayr{sinYaaNF}{sinyāng} above. More generally, interrogative pronouns
-have the possible values spelled out in (\ref{ex:interpromorphlex}). That is,
-interrogative pronouns do not encode person and number, though at least 
-\rayr{sinY}{sinya} inflects for case and thus also encodes animacy for agents
-and patients. Other pronouns like \xayr{siynF}{siyan} {where} or
-\xayr{siknF}{sikan}{how many} are invariant, as described in
-\autoref{subsec:interpro}. Which morphological surface form of
-\rayr{sinY}{sinya} is picked for \Q{} if case is not specified basically
-depends on the \GF{} it is linked to.
+have the possible values in (\ref{ex:interpromorphlex}). That is, they do not
+encode person and number, though at least \rayr{sinY}{sinya} inflects for case
+and thus also encodes animacy for agents and patients. Other pronouns like
+\xayr{siynF}{siyan}{where} or \xayr{siknF}{sikan}{how many} are invariant, as
+described in \autoref{subsec:interpro}. If case is not specified, the correct
+form of \rayr{sinY}{sinya} depends on the \GF{} it is linked to.
 
 \begin{figure}[h]
 \begin{morphlex}
@@ -3363,10 +3364,10 @@ spoken.}
 \index{intensifiers|(}
 
 As described in \autoref{sec:quantifiers}, Ayeri's morphemes expressing
-quantity and degree---here collectively referred to as `quantifiers'---come in
-two varieties: free morphemes, such as \xayr{sno}{sano}{both} or
-\xayr{EkeNF}{ekeng}{over-, overly, too}, and clitic morphemes, such as
-\xayr{/IknF}{-ikan}{much, many, very} or \rayr{/nYm}{-nyama}{even}.
+quantity and degree come in two varieties: free morphemes, such as
+\xayr{sno}{sano}{both} or \xayr{EkeNF}{ekeng}{over-, overly, too}, and clitic
+morphemes, such as \xayr{/IknF}{-ikan}{much, many, very} or \rayr{/nYm}{-nyama}
+{even}.
 
 Quantifiers proper fall under the determiner rubric; they are not adjuncts. If
 they were, it should be possible for there to be more than one quantifier
@@ -3394,6 +3395,94 @@ adjectives, they would also have to coordinate with them. Example
 \endgl
 \end{minipage}
 \xe
+\end{figure}
+
+Quantifiers can be modified by intensifiers, so it makes sense to treat them as
+phrasal heads---however, the independent quantifiers are not semantically
+compatible to be further modified by \xayr{EkeNF}{ekeng}{over-, overly, too} or
+\xayr{kgnF}{kagan}{excessively, far too}. Considering the clitic quantifiers,
+however, such an approach may be preferable, as we will see further on.
+Otherwise we would have to treat the likes of \xayr{heNsF}{hengas}{almost all},
+\xayr{menikneNF}{menikaneng}{another, one more}, or \xayr{sno}{sano}{both}
+as structurally separate from \xayr{/henF}{-hen}{all, every, each} or
+\xayr{/kj}{-kay}{few}. The example in (\ref{ex:freequantstruct}) illustrates
+the structural properties of an NP modified by a free quantifier.
+
+\begin{figure}[h]
+\ex\label{ex:freequantstruct}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla nangās hiro diring //
+	\glb nanga-as hiro diring //
+	\glc house-\Parg{} new several //
+	\glft `several new houses' //
+\endgl\medskip
+
+\begin{avm}
+\[
+	\Obj	&	$f$: \[
+		\Pred	&	`house' \\
+%		\Pers	&	\Third \\
+		\Anim	&	$+$ \\
+		\Num	&	\Pl \\
+		\Case	&	\Parg \\
+		\Quant	&	$g$: \[
+			\Pred	&	`several' \\
+		\] \\
+	\] \\
+\]
+\end{avm}
+\end{minipage}
+~
+\begin{forest} italic leaves, shorter edges,
+[{\anno[\pass{\Obj}]{DP}}
+	[\anno{NP}
+%		[\anno{\xbar{N}}
+			[\anno{\xhead{N}}
+				[nangās]
+			]
+			[{\anno[\elem{\Adjc}]{AP}}
+				[hiro, roof]
+			]
+%		]
+	]
+	[\anno{\xhead{D}}
+		[diring]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+Another property of quantifiers we have to take into account is that nouns
+modified by quantifiers do not additionally mark plural, since the quantifier
+adds the \Pl{} value to an NP's \Num{} feature, as the previous examples
+indicate. The morpholexical specification for quantifiers should thus look like
+in (\ref{ex:quantmorphlex}). According to the analysis pursued here,
+quantifiers are co-heads of \xhead{N}, and thus place their information in the
+same functional core as \xhead{N}. However, since quantifiers are heads, they
+need to have their own \Pred{}, so that the value of the \Quant{} feature
+appears as an embedded f-structure within the f-structure core of \xhead{N}, as
+with adjuncts and possessors. Since quantifiers manipulate the value of a
+superordinate f-structure, we invoke the functional uncertainty principle again
+here.
+
+\begin{figure}[h]
+\begin{morphlex}
+\ex\label{ex:quantmorphlex}
+	\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlex}}
+	...
+		& D
+		& \begin{tabular}[t]{l l l}
+			\ups{\Pred} & = & `...' \\
+			\uncertain{\GF}{\Num} & = & \Pl \\
+			(\GF{} \Quant{} ↑) \\
+		\end{tabular}
+	\end{tabu}%
+	}
+\xe
+\end{morphlex}
 \end{figure}
 
 ...
