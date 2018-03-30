@@ -1406,7 +1406,7 @@ the phrase structure definition in (\ref{ex:dpstruct}) is given in
 
 \begin{figure}[h]
 \pex\label{ex:dpstruct}
-\a DP → \anno*{\xbar{D}} \anno*[\pass{\Spec}]{\xhead{D}}
+\a DP → \anno*{\xbar{D}} \anno*[\pass{\Spec}]{DP}
 \a \xbar{D} → \anno*{\xbar{D}} \anno*[{\elem{\Adjc}}]{XP}
 \a \xbar{D} → \anno*{YP} \anno*{\xhead{D}}
 \xe
@@ -1423,7 +1423,7 @@ the phrase structure definition in (\ref{ex:dpstruct}) is given in
 		]
 		[{\anno[\elem{\Adjc}]{XP}}]
 	]
-	[{\anno[\pass{\Spec}]{\xhead{D}}}]
+	[{\anno[\pass{\Spec}]{DP}}]
 ]
 \end{forest}
 \xe
@@ -3398,11 +3398,12 @@ adjectives, they would also have to coordinate with them. Example
 \end{figure}
 
 Quantifiers can be modified by intensifiers, so it makes sense to treat them as
-phrasal heads---however, the independent quantifiers are not semantically
-compatible to be further modified by \xayr{EkeNF}{ekeng}{over-, overly, too} or
-\xayr{kgnF}{kagan}{excessively, far too}. Considering the clitic quantifiers,
-however, such an approach may be preferable, as we will see further on.
-Otherwise we would have to treat the likes of \xayr{heNsF}{hengas}{almost all},
+phrasal heads. However, exceptionally, independent quantifiers happen not to be
+semantically compatible with modification by intensifiers like \xayr{EkeNF}
+{ekeng}{over-, overly, too} or \xayr{kgnF}{kagan}{excessively, far too}.
+Considering the clitic quantifiers, however, such an approach may be
+preferable, as we will see further on. Otherwise, we would have to treat the
+likes of \xayr{heNsF}{hengas}{almost all},
 \xayr{menikneNF}{menikaneng}{another, one more}, or \xayr{sno}{sano}{both}
 as structurally separate from \xayr{/henF}{-hen}{all, every, each} or
 \xayr{/kj}{-kay}{few}. The example in (\ref{ex:freequantstruct}) illustrates
@@ -3454,24 +3455,24 @@ the structural properties of an NP modified by a free quantifier.
 \xe
 \end{figure}
 
-Another property of quantifiers we have to take into account is that nouns
-modified by quantifiers do not additionally mark plural, since the quantifier
-adds the \Pl{} value to an NP's \Num{} feature, as the previous examples
-indicate. The morpholexical specification for quantifiers should thus look like
-in (\ref{ex:quantmorphlex}). According to the analysis pursued here,
-quantifiers are co-heads of \xhead{N}, and thus place their information in the
-same functional core as \xhead{N}. However, since quantifiers are heads, they
-need to have their own \Pred{}, so that the value of the \Quant{} feature
-appears as an embedded f-structure within the f-structure core of \xhead{N}, as
-with adjuncts and possessors. Since quantifiers manipulate the value of a
-superordinate f-structure, we invoke the functional uncertainty principle again
-here.
+An important property of quantifiers in Ayeri which we have to take into
+account is that nouns modified by quantifiers do not additionally mark plural,
+since the quantifier adds the \Pl{} value to an NP's \Num{} feature, as the
+previous examples indicate. The morpholexical specification for quantifiers
+should thus look like in (\ref{ex:quantmorphlex}). According to the analysis
+pursued here, quantifiers are co-heads of \xhead{N}, and thus place their
+information in the same functional core as \xhead{N}. However, since
+quantifiers are heads, they need to have their own \Pred{}, so that the value
+of the \Quant{} feature appears as an embedded f-structure within the
+f-structure core of \xhead{N}, as with adjuncts and possessors. Since
+quantifiers manipulate the value of a superordinate f-structure, we invoke the
+functional uncertainty principle again here.
 
 \begin{figure}[h]
 \begin{morphlex}
 \ex\label{ex:quantmorphlex}
 	\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlex}}
+	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& D
 		& \begin{tabular}[t]{l l l}
@@ -3485,59 +3486,73 @@ here.
 \end{morphlex}
 \end{figure}
 
-...
-
-Section \ref{clitics_quant} (p.~\pageref{clitics_quant}~ff.) already described
-enclitic quantifiers from a morphological point of view. An example of this is
-given in (\ref{ex:nounquantavm}), using the clitic quantifier
-\xayr{/iknF}{-ikan}{much, many; very}.
+Besides independent quantifying morphemes, there are also enclitic ones, as
+described earlier in \autoref{clitics_quant} (p.~\pageref{clitics_quant}~ff.),
+but from a morphological point of view. An example of this pattern is given in
+(\ref{ex:nounquantavm}), using the enclitic quantifier
+\xayr{/IknF}{-ikan}{much, many; very}. In order to illustrate modification by
+an intensifier as mentioned above, \xayr{EkeNF}{ekeng}{too, over-, overly} has
+been added. This intensifier modifies not the head of NP,
+\xayr{ErFsy}{ersaya}{cook}, but the head of the DP, which is an empty node
+here whose information content is, however, provided functionally by the clitic
+\rayr{/IknF}{-ikan} on the noun. Intensifiers like \rayr{EkeNF}{ekeng} need a
+rule which specifies that they only operate within their immediate head's
+functional domain.
 
 \begin{figure}
-\pex\label{ex:nounquantavm}
-\a\label{ex:nounquantavm_1}\begingl
-	\gla Sa @ tahayeng bisuay-ikan ban. //
-	\glb sa= taha=yeng bisuay.Ø=ikan ban //
-	\glc \PatT{}= have=\TsgF{}.\Aarg{} idea.\Top{}=many good //
-	\glft `She has many good ideas.' //
-\endgl
+\ex\label{ex:nounquantavm}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla ersayās-ikan ekeng //
+	\glb ersaya-as=ikan ekeng //
+	\glc cook-\Parg=many too //
+	\glft `too many cooks' //
+\endgl\medskip
 
-\a\label{ex:nounquantavm_2}
 \begin{avm}
 \[
-%	\Pred	&	\astruct{have}{\ups{\Subj}, \ups{\Obj}} \\
-	\Top	&	\[
-					\Pred	&	`idea' \\
-					\Anim	&	$+$ \\
-					\Case	&	\Parg \\
-					\Num	&	\Pl \\
-					\Quant	&	\[
-						\Pred	&	`many' \\
-					\] \\
-					\Adjc	&	\{\[
-						\Pred	&	`good' \\
-					\]\}
-				\] \tikzmark{nounquantavm_top} \\
-
-	% \Subj	&	\[
-	% 				\Pred	&	`pro' \\
-	% 				\Anim	&	$+$ \\
-	% 				\Case	&	\Aarg \\
-	% 				\Gend	&	\F \\
-	% 				\Num	&	\Sg \\
-	% 				\Pers	&	\Third \\
-	% 			\] \\
-
-	\Obj	&	\tikzmark{nounquantavm_obj} \\
+	\Obj	&	$f$: \[
+		\Pred	&	`idea' \\
+		\Anim	&	$+$ \\
+		\Case	&	\Parg \\
+		\Num	&	\Pl \\
+		\Quant	&	$g$: \[
+			\Pred	&	`many' \\
+			\Spec	&	$h$: \[
+				\Pred	&	`too' \\
+			\] \\
+		\] \\
+	\] \tikzmark{nounquantavm_top} \\
 \]
 \end{avm}
-
-\begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:nounquantavm_top})
-	-- ++(east:1em) |- ([yshift=1ex]{pic cs:nounquantavm_obj}););
-\end{tikzpicture}
-
+\end{minipage}
+\hfill
+\begin{forest} italic leaves, shorter edges, narrower nodes,
+[{\anno[\pass{\Obj}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{NP}
+			[\anno{\xhead{N}}
+				[\anno{\xhead{N}}
+					[ersaya]
+				]
+				[\anno{Cl}
+					[-ikan]
+				]
+			]
+		]
+		[\anno{\xhead{D}}
+			[$\epsilon$]
+		]
+	]
+	[{\anno[\pass{\Spec}]{DP}}
+		[ekeng, roof]
+	]
+]
+\end{forest}
 \xe
 \end{figure}
+
+...
 
 Clitic quantifiers as well can combine at least with independent personal
 pronouns especially in the plural, and demonstrative pronouns. A clitic
