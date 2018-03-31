@@ -3393,19 +3393,13 @@ Example (\ref{ex:quantnoadj2}b) shows that they do not.
 \xe
 \end{figure}
 
-% THIS IS NOT COMPLETELY CERTAIN??? IF INTENSIFIERS MODIFYING QUANTIFIERS *ARE*
-% NON-PROJECTING WORDS, WOULDN'T SPEC,NP BE FREE FOR QUANTIFIERS?
-Quantifiers can be modified by intensifiers, so it makes sense to treat them as
-phrasal heads. However, exceptionally, independent quantifiers happen not to be
-semantically compatible with modification by intensifiers like \xayr{EkeNF}
-{ekeng}{over-, overly, too} or \xayr{kgnF}{kagan}{excessively, far too}.
-Considering the clitic quantifiers, however, such an approach may be
-preferable, as we will see further on. Otherwise, we would have to treat the
-likes of \xayr{heNsF}{hengas}{almost all},
-\xayr{menikneNF}{menikaneng}{another, one more}, or \xayr{sno}{sano}{both}
-as structurally separate from \xayr{/henF}{-hen}{all, every, each} or
-\xayr{/kj}{-kay}{few}. The example in (\ref{ex:freequantstruct}) illustrates
-the structural properties of an NP modified by a free quantifier.
+Quantifiers can be modified by intensifiers and degree adverbs. However,
+exceptionally, independent quantifiers happen not to be semantically compatible
+with intensifiers such as \xayr{EkeNF}{ekeng}{over-, overly, too} or
+\xayr{kgnF}{kagan}{excessively, far too}, but they may occur with adverbs like
+\xayr{yomiNF}{yoming}{maybe} or \xayr{nilj}{nilay}{probably}, which express a
+degree of certainty. The example in (\ref{ex:freequantstruct}) illustrates the
+structural properties of an NP modified by a free quantifier.
 
 \begin{figure}[h]
 \ex\label{ex:freequantstruct}
@@ -3496,8 +3490,13 @@ here whose information content is, however, provided functionally by the clitic
 \rayr{/IknF}{-ikan} on the noun. Since \Lfg{} restricts specifiers of
 functional categories to the grammaticalized discourse functions
 \citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot be analyzed as a
-specifier of \xhead{D}. Instead, it has been analyzed here as a non-projecting
-word \citep[116--117]{bresnan2016} for lack of a better understanding.
+specifier of \xhead{D}. Instead, it has been analyzed here as an adverb for
+lack of a better understanding. A question resulting from this
+analysis---assuming that it is accurate---is how to ensure that \xhead{A} is
+understood as modifying \xhead{D} rather than \xhead{N}, since \xhead{D} and
+\xhead{N} share a functional core. An analysis whereby the quantifier is a head
+subcategorizing for a nominal complement, for instance, like \astruct{many}
+{\ups{\Compl}}, is probaly not desirable.
 
 \begin{figure}
 \ex\label{ex:nounquantavm}
@@ -3512,12 +3511,15 @@ word \citep[116--117]{bresnan2016} for lack of a better understanding.
 \begin{avm}
 \[
 	\Obj	&	$f$: \[
-		\Pred	&	`idea' \\
+		\Pred	&	`cook' \\
 		\Anim	&	$+$ \\
 		\Case	&	\Parg \\
 		\Num	&	\Pl \\
 		\Quant	&	$g$: \[
-			\Pred	&	`too-many' \\
+			\Pred	&	`many' \\
+			\Adjc	&	\{\[
+				\Pred	&	`overly' \\
+			\]\}
 		\] \\
 	\] \\
 \]
@@ -3526,40 +3528,38 @@ word \citep[116--117]{bresnan2016} for lack of a better understanding.
 \hfill
 \begin{forest} italic leaves, shorter edges, narrower nodes,
 [{\anno[\pass{\Obj}]{DP}}
-	[\anno{NP}
-		[\anno{\xhead{N}}
+	[\anno{\xbar{D}}
+		[\anno{NP}
 			[\anno{\xhead{N}}
-				[ersaya]
-			]
-			[\anno{Cl}
-				[-ikan]
+				[\anno{\xhead{N}}
+					[ersayās]
+				]
+				[\anno{Cl}
+					[-ikan]
+				]
 			]
 		]
-	]
-	[\anno{\xhead{D}}
 		[\anno{\xhead{D}}
 			[$\epsilon$]
 		]
-		[\anno{D̂}
-			[ekeng]
-		]
+	]
+	[{\anno[\elem{\Adjc}]{AP}}
+		[ekeng, roof]
 	]
 ]
 \end{forest}
 \xe
 \end{figure}
 
-...
-
-Clitic quantifiers as well can combine at least with independent personal
-pronouns especially in the plural, and demonstrative pronouns. A clitic
-quantifier can also still be recognized in the interrogative pronoun 
-\xayr{siknF}{sikan}{how many}, although here it is incorporated into the
-pronoun itself, that is, there is no productive combination of interrogative
-pronouns and quantifiers, with the exception of \xayr{sinY}{sinya}{who}. With
-indefinite pronouns, quantifiers are somewhat redundant in some combinations,
-though it is feasible to use them for emphasis. Combinations of pronouns and
-quantifying clitics are illustrated in (\ref{ex:proquant}).
+Quantifiers as well can combine with independent personal pronouns especially
+in the plural, and demonstrative pronouns. A clitic quantifier can also still
+be recognized in the interrogative pronoun \xayr{siknF}{sikan}{how many},
+although here it is incorporated into the pronoun itself. That is, there is no
+productive combination of interrogative pronouns and quantifiers, with the
+exception of \xayr{sinY}{sinya}{who}. With indefinite pronouns, quantifiers are
+somewhat redundant in some combinations, though it is feasible to use them for
+emphasis. Combinations of pronouns and quantifying clitics are illustrated in
+(\ref{ex:proquant}).
 
 \begin{figure}
 \pex\label{ex:proquant}
@@ -3585,11 +3585,11 @@ quantifying clitics are illustrated in (\ref{ex:proquant}).
 \endgl
 
 \a\label{ex:proquant_indefpro_1}\begingl
-	\gla Ang @ ilye {} @ Pada enyaley-kay cam. //
-	\glb ang= il-ye Ø= Pada enya-ley=kay cam //
+	\gla Ang @ ilye {} @ Pada enyaley-kay cam sano. //
+	\glb ang= il-ye Ø= Pada enya-ley=kay cam sano //
 	\glc \Aarg{}= give-\TsgF{} \Top{}= Pada everything-\PargI{}=a.little 
-		\TplM{}.\Dat{} //
-	\glft `Pada gave them a little of everything.' //
+		\TplM{}.\Dat{} both //
+	\glft `Pada gave both of them a little of everything.' //
 \endgl
 
 \a\label{ex:proquant_indefpro_2}\begingl
@@ -3618,6 +3618,18 @@ relative-clause internal case, however, may be modified by a quantifier:
 \xayr{sinaa}{sinā}{of which} + \xayr{/IknF}{-ikan}{many} results in
 \xayr{sinaa/IknF}{sinā-ikan}{many of which}. Alternatively, a resumptive
 pronoun carrying the quantifier may occur in the relative clause.
+
+Besides nouns, adjectives and adverbs as well may be modified by the likes of
+\xayr{/IknF}{-ikan}{much, many; very} or \xayr{/NsF}{-ngas}{almost}, only that
+instead of referring to quantity, the enclitics' meaning in this context is
+related to quality or degree in such a way as to emphasize the head. An
+overview of correspondences between basic quantifiers and intensifiers is given
+in \autoref{tab:quantifiers}. Besides enclitic intensifiers, there are also
+independent morphemes which can act as intensifiers, like
+\xayr{IknF/IknF}{ikan-ikan}{altogether, totally}, or \xayr{IpnF}{ipan}
+{extremely}.
+
+...
 
 \index{intensifiers|(}
 \index{quantifiers|(}
