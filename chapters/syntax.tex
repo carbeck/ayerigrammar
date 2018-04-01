@@ -316,10 +316,9 @@ below.
 
 \begin{figure}
 \pex\label{ex:npstruct}
-\a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
-\a \anno*{\xbar{N}} \anno*[\pass{\Compl}]{CP}
+% \a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
 \a\label{ex:npstruct_Adj}%
-	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP}
+	NP → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP}
 \a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{YP}
 \xe
 \end{figure}
@@ -328,14 +327,14 @@ below.
 \ex\label{ex:npcstruct}
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}]
 			[{\anno[\pass{\Compl}]{YP}}]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}]
-	]
-	[{\anno[\pass{\Possr}]{XP}}]
+%	]
+%	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -671,14 +670,14 @@ is an argument function, though. A possibility for lexocentric specification of
 an argument function is left open, however. Due to Ayeri's consistent use of
 case marking, I see no problem to invoke a lexocentric specification for \Ins{}
 as given in (\ref{ex:dpnpcasemap}g): \Ins{} specifies in this case that the
-head of this NP, \xayr{sp}{sapa}{wool}, is a complement of its co-head in DP,
+head of this NP, \xayr{sp}{sapa}{wool}, is a complement of its co-head,
 \xayr{limu}{limu}{shirt}. Extraposed relative clauses are less problematic,
 since they are adjuncts, and \Adjc{} is by itself not an argument function.
 
 \begin{figure}[h]
 \ex\label{ex:complextrapos}
 \begin{forest} italic leaves, shorter edges,
-[DP
+[NP
 	[\anno{NP}
 		[\anno{\xhead{N}}
 			[limu]
@@ -687,11 +686,8 @@ since they are adjuncts, and \Adjc{} is by itself not an argument function.
 			[hiro, roof]
 		]
 	]
-	[NP
-		[{sapaeri\\
-		\textup{\downs{\Case} = \Ins{}}\\
-		\textup{$\implies$ \pass{\Compl}}%
-		}, roof]
+	[{\anno[\downs{\Case} = \Ins{} $\implies$ \pass{\Compl}]{NP}}
+		[sapaeri, roof]
 	]
 ]
 \end{forest}
