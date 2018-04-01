@@ -13,7 +13,12 @@ Currently working on
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time, since there are still some typos, inattentive gibberish, and odd-looking page breaks in need of fixing here and there:
 
 * Phrase structures (`chapters/syntax.tex`)
-  * Noun and determiner phrases
+  * Adjective and adverb phrases
+* Proofreading resulted in the realization that a number of additional content-related changes need to be made besides changes in phrasing and spelling corrections:
+  * AP subchapter: Possessive pronouns are not adjectives but determiners.
+  * PP subchapter: ku- serves as a preposition with case-unmarked nouns: 'as a X'.
+  * CP subchapter: ku-/-ku serves as a conjunction with case-marked nouns: 'like X (does)'.
+  * IP subchapter: modifiers of I⁰ should be in a separate IP so that S can remain a complement. An analysis of S as Spec make no sense at all.
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome.
 
