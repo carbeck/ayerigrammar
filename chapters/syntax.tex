@@ -11,7 +11,10 @@ their inflectional properties, the present chapter will elaborate on how these
 words combine into syntactic phrases.\footnote{It should be noted that, since
 trees and tableaus are large, a larger number of regularly numbered examples
 than in the previous chapters will appear not in place but floated in this
-chapter.} Since Ayeri is a verb-initial language, it is probably rather
+chapter. Furthermore, this is a first attempt to formally analyze Ayeri's
+syntax and my first time attempting to learn more about and to apply a
+syntactic formalism. The present analyses thus do not claim to be complete or
+flawless.} Since Ayeri is a verb-initial language, it is probably rather
 comfortably analyzed in terms of Lexical-Functional Grammar
 (\cite{bresnan1982}~ff.; more recently, \cite{bresnan2016};
 \cite{dalrymple2001}; \cite{falk2001}), since \Lfg{} does not require
@@ -671,9 +674,8 @@ specification of an argument function is left open, however. Due to Ayeri's
 consistent use of case marking, I see no problem to invoke a lexocentric
 specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g): \Ins{} specifies
 in this case that the head of this NP, \xayr{sp}{sapa}{wool}, is a complement
-of its co-head, \xayr{limu}{limu}{shirt}. Extraposed relative clauses are less
-problematic, since they are adjuncts, and \Adjc{} is by itself not an argument
-function.
+of \xayr{limu}{limu}{shirt}. Extraposed relative clauses are less problematic,
+since they are adjuncts, and \Adjc{} is by itself not an argument function.
 
 \begin{figure}[h]
 \ex\label{ex:complextrapos}
@@ -2578,9 +2580,8 @@ form of \rayr{sinY}{sinya} depends on the \GF{} it is linked to.
 Since question pronouns stay \fw{in situ}, it is not necessary to devise an
 outside-in functional uncertainty rule; the interrogative pronoun is already in
 the place the argument it stands in for would normally occupy. The
-interrogative pronoun as such wholly replaces an NP, so it is not possible to
-join modifiers to \xbar{D}, like with personal pronouns, compare
-(\ref{ex:itradj}).
+interrogative pronoun as such wholly replaces an NP, and it is not possible to
+join modifiers to \xbar{D}, compare (\ref{ex:itradj}).
 
 \begin{figure}[h]
 \pex\label{ex:itradj}
@@ -2588,26 +2589,34 @@ join modifiers to \xbar{D}, like with personal pronouns, compare
 	\gla Ang @ pengalye sinyās denisa? //
 	\glb ang= pengal=ye.Ø sinya-as denisa //
 	\glc \AgtT{}= meet=\TsgF{}.\Top{} who-\Parg{} famous //
-	\glft `Whom famous did she meet?' //
+	\glft `*Whom famous did she meet?' //
 \endgl
 
 \a\ljudge*\begingl
 	\gla Ang @ sarava siyan veno? //
 	\glb ang= sara=va.Ø siyan veno //
 	\glc \Aarg{}= go=\Second{}.\Top{} where beautiful //
-	\glft `Where beautiful did you go?' //
+	\glft `*Where beautiful did you go?' //
 \endgl
 \xe
 \end{figure}
 
-\rayr{sinY}{sinya}'s other function as an adjective may come into play here
-together with a generic noun, however. In these cases, \rayr{sinY}{sinya}
-occupies the final position in the NP, that is, the first adjunct to \xbar{N},
-as modelled in (\ref{ex:sinyaadj2}). The interrogative pronoun asking for
-quantity, \xayr{siknF}{sikan}{how much, how many}, likewise acts like a nominal
-modifier, and only ever does---that is, unlike \rayr{sinY}{sinya} it does not
-have a double role. It may combine with any countable or quantifiable noun, as
-shown in (\ref{ex:sikanadj}).
+\rayr{sinY}{sinya}'s ability to take a nominal complement may come into play
+instead, however. This analysis is illustrated by (\ref{ex:sinyaadj2}).%
+\footnote{I could not find any information about how to analyze \fw{which} and
+\fw{how} in terms of \Lfg{}, so I am assuming here that \fw{which}'s function,
+as a determiner, is to mark a noun as being questioned about, with the noun as
+the lexical head and the interrogative pronoun a co-head. The consulted
+literature \parencites{dalrymple2001}{falk2001} sometimes includes a rule for
+interrogative pronouns to change the sentence type to \fw{wh-question} or
+similar. Since I am not using such a feature here, I am simply connecting the
+focus NP with the \Q{} attribute to mark that the clause is supposed to be a
+question. The problem then is, however, what to do with the \Prontype{}
+feature.} The interrogative pronoun asking for quantity,
+\xayr{siknF}{sikan}{how much, how many}, likewise acts like a nominal modifier,
+and only ever does---that is, unlike \rayr{sinY}{sinya} it does not have a
+double role. It may combine with any countable or quantifiable noun, as shown
+in (\ref{ex:sikanadj}), to query about this noun.
 
 \begin{figure}
 \pex\label{ex:sinyaadj2}
@@ -2621,22 +2630,18 @@ shown in (\ref{ex:sikanadj}).
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
-[NP
-%	[\xbar{N}
-		[\xbar{N}
-			[\xhead{N}
-				[nyānas]
-			]
-			[AP
-				[denisa]
-			]
+[DP
+	[NP
+		[\xhead{N}
+			[nyānas]
 		]
-		[DP
-			[\xhead{D}
-				[sinya]
-			]
+		[AP
+			[denisa]
 		]
-%	]
+	]
+	[\xhead{D}
+		[sinya]
+	]
 ]
 \end{forest}
 
@@ -2653,20 +2658,15 @@ shown in (\ref{ex:sikanadj}).
 	% 				\Case	&	\Aarg \\
 	% 			\] \tikzmark{sinyaadj1_top} \\
 	\Foc	&	\[
-					\Pred	&	`person' \\
-					\Case	&	\Parg \\
-					\Anim	&	$+$ \\
-					\Num	&	\Sg \\
-					\Adjc	&	\{
-									\[
-										\Pred	&	`famous' \\
-									\] \\
-									\[
-										\Pred		&	`$pro$' \\
-										\Prontype	&	$wh$ \\
-									\] \tikzmark{sinyaadj1_wh} \\
-								\} \\
-				\] \tikzmark{sinyaadj1_foc} \\
+%		\Prontype	&	$wh$ \\
+		\Pred	&	`person' \\
+		\Case	&	\Parg \\
+		\Anim	&	$+$ \\
+		\Num	&	\Sg \\
+		\Adjc	&	\{\[
+			\Pred	&	`famous' \\
+		\]\} \\
+	\] \tikzmark{sinyaadj1_foc} \\ % \tikzmark{sinyaadj1_wh} \\
 	\Q		&	\tikzmark{sinyaadj1_q} \\
 
 	% \Pred	&	\astruct{meet}{\ups{\Subj}, \ups{\Obj}} \\
@@ -2675,8 +2675,9 @@ shown in (\ref{ex:sikanadj}).
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj1_wh})
-	-- ++(east:2em) |- ([yshift=1ex]{pic cs:sinyaadj1_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj1_foc})
+	% {pic cs:sinyaadj1_wh})
+	-- ++(east:1.5em) |- ([yshift=1ex]{pic cs:sinyaadj1_q});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj1_foc})
 	-- ++(east:1.5em) |- ([yshift=1ex]{pic cs:sinyaadj1_obj});
 \end{tikzpicture}
@@ -2692,22 +2693,18 @@ shown in (\ref{ex:sikanadj}).
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
 \begin{forest} shorter edges, narrower nodes, italic leaves,
-[NP
-%	[\xbar{N}
-		[\xbar{N}
-			[\xhead{N}
-				[yanoya]
-			]
-			[AP
-				[veno]
-			]
+[DP
+	[NP
+		[\xhead{N}
+			[yanoya]
 		]
-		[DP
-			[\xhead{D}
-				[sinya]
-			]
+		[AP
+			[veno]
 		]
-%	]
+	]
+	[\xhead{D}
+		[sinya]
+	]
 ]
 \end{forest}
 
@@ -2723,6 +2720,7 @@ shown in (\ref{ex:sikanadj}).
 	% 				\Case	&	\Aarg \\
 	% 			\] \tikzmark{sinyaadj2_top} \\
 	\Foc	&	\[
+%					\Prontype	&	$wh$ \\
 					\Pred	&	`place' \\
 					\Case	&	\Loc \\
 					\Num	&	\Sg \\
@@ -2730,12 +2728,8 @@ shown in (\ref{ex:sikanadj}).
 									\[
 										\Pred	&	`beautiful' \\
 									\] \\
-									\[
-										\Pred		&	`$pro$' \\
-										\Prontype	&	$wh$ \\
-									\] \tikzmark{sinyaadj2_wh} \\
 								\} \\
-				\] \tikzmark{sinyaadj2_foc} \\
+				\] \tikzmark{sinyaadj2_foc} \\ % \tikzmark{sinyaadj2_wh} \\
 	\Q		&	\tikzmark{sinyaadj2_q} \\
 
 	% \Pred	&	\astruct{go}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
@@ -2744,8 +2738,9 @@ shown in (\ref{ex:sikanadj}).
 \]
 \end{avm}
 \begin{tikzpicture}[remember picture, overlay]
-\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj2_wh})
-	-- ++(east:2.5em) |- ([yshift=1ex]{pic cs:sinyaadj2_q});
+\draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj2_foc}) 
+	% {pic cs:sinyaadj2_wh})
+	-- ++(east:1.5em) |- ([yshift=1ex]{pic cs:sinyaadj2_q});
 \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:sinyaadj2_foc})
 	-- ++(east:1.5em) |- ([yshift=1ex]{pic cs:sinyaadj2_oblloc});
 \end{tikzpicture}
