@@ -317,10 +317,10 @@ below.
 
 \begin{figure}
 \pex\label{ex:npstruct}
-% \a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
+\a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
 \a\label{ex:npstruct_Adj}%
-	NP → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{AP}
-\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{YP}
+	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{YP}
+\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{ZP}
 \xe
 \end{figure}
 
@@ -328,14 +328,14 @@ below.
 \ex\label{ex:npcstruct}
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
-%	[\anno{\xbar{N}}
+	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}]
 			[{\anno[\pass{\Compl}]{YP}}]
 		]
-		[{\anno[\elem{\Adjc}]{AP}}]
-%	]
-%	[{\anno[\pass{\Possr}]{XP}}]
+		[{\anno[\elem{\Adjc}]{XP}}]
+	]
+	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -344,17 +344,17 @@ below.
 The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which
 is on the left side, followed optionally by modifiers which may have various
 relationships to the noun: complement (instrumental nominal, NP/DP; complement
-clause, CP), and adjunct (adjective phrase, AP; relative clause, CP).
-Furthermore, there can be a possessor expressed as a the specifier of NP (NP or
-DP). Altogether, these rules can be represented as a constituent-structure tree
-as described in (\ref{ex:npcstruct}). The maximal projection of
-\xhead{N} (that is, NP) is annotated very generally for the function of the
-NP---basically, an NP can act as either a discourse function (\DF{}) or a
-grammatical function (\GF{}). Besides, nouns may be modified by possessors and
-quantifiers. These, however, may better be analyzed as forming DPs which embed
-the NP as a complement. (\ref{ex:nounmods}) gives an example of each kind of
-modifier. Since there is no grammatical context given, NP is unmarked for
-function in these examples.
+clause, CP), and adjunct (adjective phrase, AP; relative clause, CP;
+quantifier, DP). Furthermore, there can be a possessor expressed as a the
+specifier of NP (NP or DP). Altogether, these rules can be represented as a
+constituent-structure tree as described in (\ref{ex:npcstruct}). The maximal
+projection of \xhead{N} (that is, NP) is annotated very generally for the
+function of the NP---basically, an NP can act as either a discourse function
+(\DF{}) or a grammatical function (\GF{}). Besides, nouns may be modified by
+possessors and quantifiers. These, however, may better be analyzed as forming
+DPs which embed the NP as a complement. (\ref{ex:nounmods}) gives an example of
+each kind of modifier. Since there is no grammatical context given, NP is
+unmarked for function in these examples.
 
 \begin{figure}
 \pex\label{ex:nounmods}
@@ -1559,7 +1559,11 @@ with other adjectives. As illustrated in (\ref{ex:possnoadj}a), this is not the
 case. If possessive pronouns were adjectives, it should also be possible for
 there to be more than one of them in a clause, just as \fw{new blue car} is
 possible, with two adjectives modifying \fw{car}. Example (\ref{ex:possnoadj}b)
-illustrates that there can only be one possessor, though.
+illustrates that there can only be one possessor, though. According to
+\citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and possessors
+have some properties in common}, though they are variably treated as specifiers
+of NP or heads of DP with an NP complement throughout the book. Let us assume
+here that possessors are specifiers of NP.
 
 \begin{figure}[h]
 \ex\labels\label{ex:possnoadj}
@@ -1579,105 +1583,6 @@ illustrates that there can only be one possessor, though.
 	\glc house \Fsg{}.\Gen{} \TsgF{}.\Gen{} //
 	\glft `*her my house' //
 \endgl
-\end{minipage}
-\xe
-\end{figure}
-
-According to \citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and
-possessors have some properties in common}, which is why they are variably
-treated as specifiers of NP or DP throughout the book. In Ayeri, treating
-possessors as specifiers may work well enough as long as no quantifiers are
-involved, since Ayeri prefers to place possessors even after quantifiers. Just
-like posessors, quantifiers do not share typical distributional and
-inflectional properties of adjectives---they rather appear to constitute a
-separate category. For one, quantifiers cannot be compared; second, quantifiers
-do not coordinate with adjectives since they are not APs, as in
-(\ref{ex:quantnoadj}a), and there cannot be more than one quantifier modifying
-the same noun as in (\ref{ex:quantnoadj}b), so quantifiers are probably not
-adjuncts either.
-
-\begin{figure}[h]
-\ex\labels\label{ex:quantnoadj}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\ljudge*\begingl
-	\gla nanga hiro nay sano //
-	\glb nanga hiro nay sano //
-	\glc house new and both //
-	\glft `*both and new house' //
-\endgl
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\ljudge*\begingl
-	\gla nanga sano diring //
-	\glb nanga sano diring //
-	\glc house both several //
-	\glft `*several both houses' //
-\endgl
-\end{minipage}
-\xe
-\end{figure}
-
-It makes sense to assume, thus, that quantifiers are determiners and that
-possessive pronouns are as well. The c-structure tree in
-(\ref{ex:posscstruct}a) is based on the assumption that possessors are
-specifiers of \xhead{N} and that quantifiers are determiners. This, however,
-results in the wrong order. Making possessive pronouns DP heads may thus be
-advantagous, since it allows to generate the correct order with regards to
-quantifiers, as (\ref{ex:posscstruct}b) illustrates. On the other hand, this
-means sacrificing the structural paralellism between subjects (as Spec,VP) and
-possessors (as Spec,NP) which is noted several times in \citet{bresnan2016}.
-
-\begin{figure}[h]
-\ex\labels\label{ex:posscstruct}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\ljudge*\begingl
-	\gla nanga nā sano //
-	\glb nanga nā sano //
-	\glc house \Fsg{}.\Gen{} both //
-	\glft `*my both houses' //
-\endgl\smallskip\\
-
-\begin{forest} italic leaves, shorter edges,
-[DP
-	[\anno{NP}
-		[\anno{\xhead{N}}
-			[nanga]
-		]
-		[{\anno[\pass{\Possr}]{\xhead{D}}}
-			[nā]
-		]
-	]
-	[\anno{\xhead{D}}
-		[sano]
-	]
-]
-\end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begingl
-	\gla nanga sano nā //
-	\glb nanga sano nā //
-	\glc house both \Fsg{}.\Gen{} //
-	\glft `*both my houses' //
-\endgl\smallskip\\
-
-\begin{forest} italic leaves, shorter edges,
-[DP
-	[\anno{DP}
-		[\anno{NP}
-			[nanga]
-		]
-		[\anno{\xhead{D}}
-			[sano]
-		]
-	]
-	[\anno{\xhead{D}}
-		[nā]
-	]
-]
-\end{forest}
 \end{minipage}
 \xe
 \end{figure}
@@ -2604,7 +2509,7 @@ instead, however. This analysis is illustrated by (\ref{ex:sinyaadj2}).%
 \footnote{I could not find any information about how to analyze \fw{which} and
 \fw{how} in terms of \Lfg{}, so I am assuming here that \fw{which}'s function,
 as a determiner, is to mark a noun as being questioned about, with the noun as
-the lexical head and the interrogative pronoun a co-head. The consulted
+the lexical head and the interrogative pronoun as a determiner. The consulted
 literature sometimes includes a rule for interrogative pronouns to change the
 sentence type to \fw{wh-question} or similar. Since I am not using such a
 feature here, I am simply connecting the focus NP with the \Q{} attribute to
@@ -2627,9 +2532,9 @@ this noun.
 
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
-\begin{forest} shorter edges, narrower nodes, italic leaves,
-[DP
-	[NP
+\begin{forest} shorter edges, italic leaves,
+[NP
+	[\xbar{N}
 		[\xhead{N}
 			[nyānas]
 		]
@@ -2658,9 +2563,9 @@ this noun.
 	\Foc	&	\[
 %		\Prontype	&	$wh$ \\
 		\Pred	&	`person' \\
-		\Case	&	\Parg \\
-		\Anim	&	$+$ \\
-		\Num	&	\Sg \\
+		% \Case	&	\Parg \\
+		% \Anim	&	$+$ \\
+		% \Num	&	\Sg \\
 		\Adjc	&	\{\[
 			\Pred	&	`famous' \\
 		\]\} \\
@@ -2690,9 +2595,9 @@ this noun.
 
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
-\begin{forest} shorter edges, narrower nodes, italic leaves,
-[DP
-	[NP
+\begin{forest} shorter edges, italic leaves,
+[NP
+	[\xbar{N}
 		[\xhead{N}
 			[yanoya]
 		]
@@ -2720,8 +2625,8 @@ this noun.
 	\Foc	&	\[
 %					\Prontype	&	$wh$ \\
 					\Pred	&	`place' \\
-					\Case	&	\Loc \\
-					\Num	&	\Sg \\
+					% \Case	&	\Loc \\
+					% \Num	&	\Sg \\
 					\Adjc	&	\{
 									\[
 										\Pred	&	`beautiful' \\
@@ -3418,18 +3323,16 @@ structural properties of an NP modified by a free quantifier.
 \end{minipage}
 ~
 \begin{forest} italic leaves, shorter edges,
-[{\anno[\pass{\Obj}]{DP}}
-	[\anno{NP}
-%		[\anno{\xbar{N}}
-			[\anno{\xhead{N}}
-				[nangās]
-			]
-			[{\anno[\elem{\Adjc}]{AP}}
-				[hiro]
-			]
-%		]
+[{\anno[\pass{\Obj}]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
+			[nangās]
+		]
+		[{\anno[\elem{\Adjc}]{AP}}
+			[hiro]
+		]
 	]
-	[\anno{\xhead{D}}
+	[\anno{DP}
 		[diring]
 	]
 ]
@@ -3440,19 +3343,14 @@ structural properties of an NP modified by a free quantifier.
 An important property of quantifiers in Ayeri which we have to take into
 account is that nouns modified by quantifiers do not additionally mark plural,
 since the quantifier adds the \Pl{} value to an NP's \Num{} feature, as the
-previous examples indicate. The morpholexical specification for quantifiers
-should thus look like in (\ref{ex:quantmorphlex}). According to the analysis
-pursued here, quantifiers are co-heads of \xhead{N}, and thus place their
-information in the same functional core as \xhead{N}. However, since
-quantifiers are heads, they need to have their own \Pred{}, so that the value
-of the \Quant{} feature appears as an embedded f-structure within the
-f-structure core of \xhead{N}, as with adjuncts and possessors. Since
+previous examples indicate. The morpholexical specification for independent
+quantifiers should thus look like in (\ref{ex:frquantmorphlex}). Since
 quantifiers manipulate the value of a superordinate f-structure, we invoke the
 functional uncertainty principle again here.
 
 \begin{figure}[h]
 \begin{morphlex}
-\ex\label{ex:quantmorphlex}
+\ex\label{ex:frquantmorphlex}
 	\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
@@ -3474,30 +3372,35 @@ but from a morphological point of view. An example of this pattern is given in
 (\ref{ex:nounquantavm}), using the enclitic quantifier
 \xayr{/IknF}{-ikan}{much, many; very}. In order to illustrate modification by
 an intensifier as mentioned above, \xayr{EkeNF}{ekeng}{too, over-, overly} has
-been added. This intensifier modifies not the head of NP,
-\xayr{ErFsy}{ersaya}{cook}, but the head of the DP, which is an empty node
-here whose information content is, however, provided functionally by the clitic
-\rayr{/IknF}{-ikan} on the noun. Since \Lfg{} restricts specifiers of
-functional categories to the grammaticalized discourse functions
-\citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot be analyzed as a
-specifier of \xhead{D}. Instead, it has been analyzed here as an adverb for
-lack of a better understanding. A question resulting from this
-analysis---assuming that it is accurate---is how to ensure that \xhead{A} is
-understood as modifying \xhead{D} rather than \xhead{N}, since \xhead{D} and
-\xhead{N} share a functional core. An analysis whereby the quantifier is a head
-subcategorizing for a nominal complement, for instance, like \astruct{many}
-{\ups{\Compl}}, is probaly not desirable.
+been added. Even though quantifiers are not adjectives, they have been analyzed
+here as adjuncts of NP, since modifiers of quantifiers are values of \Quant{}'s
+\Adjc{}. If quantifiers were treated as heads of DP with NP as a complement of
+\xhead{D}, due to \xhead{D} being a co-head of \xhead{N}, both adjectives
+pertaining to \xhead{N} and adverbs pertaining to \xhead{D} would write into
+the \Adjc{} list of the f-structure predicated by \xhead{N}. Thus, in order for
+DP not to be a co-head of NP, and to have its own modifiers, it must be
+subordinated to NP. This way, also, the quantifier DP and other modifiers of
+nouns, like APs, can switch places as required.
+
+For (\ref{ex:nounquantavm}), this means that it needs to be ensured that
+\rayr{ekeNF}{ekeng}, as a part of $g$, does not modify not the head of NP, 
+\xayr{ErFsy}{ersaya}{cook}, which is part of $f$, but the head of the DP. This
+head is an empty node here, whose information content is provided functionally
+by the clitic \rayr{/IknF}{-ikan} on the noun. Moreover, since
+\Lfg{} restricts specifiers of functional categories to the grammaticalized
+discourse functions \citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot
+be analyzed as a specifier of \xhead{D}. Instead, it has been analyzed here as
+an adverb for lack of a better understanding.
 
 \begin{figure}
 \ex\label{ex:nounquantavm}
-\begin{minipage}[t]{.5\remaining}
+\begin{minipage}[t]{.4\remaining}
 \begingl
-	\gla ersayās-ikan ekeng //
-	\glb ersaya-as=ikan ekeng //
-	\glc cook-\Parg=many too //
-	\glft `too many cooks' //
+	\gla ersayās-ikan ekeng puti //
+	\glb ersaya-as=ikan ekeng puti //
+	\glc cook-\Parg=many too zealous //
+	\glft `too many zealous cooks' //
 \endgl\medskip
-
 \begin{avm}
 \[
 	\Obj	&	$f$: \[
@@ -3511,34 +3414,65 @@ subcategorizing for a nominal complement, for instance, like \astruct{many}
 				\Pred	&	`overly' \\
 			\]\}
 		\] \\
+		\Adjc	&	\{\[
+			\Pred	&	`zealous' \\
+		\]\}
 	\] \\
 \]
 \end{avm}
 \end{minipage}
 \hfill
-\begin{forest} italic leaves, shorter edges, narrower nodes,
-[{\anno[\pass{\Obj}]{DP}}
-	[\anno{\xbar{D}}
-		[\anno{NP}
+\begin{forest} italic leaves, shorter edges, for tree={s sep-=1.5em,s=0}
+[{\anno[\pass{\Obj}]{NP$_f$}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
 			[\anno{\xhead{N}}
-				[\anno{\xhead{N}}
-					[ersayās]
-				]
-				[\anno{Cl}
-					[-ikan]
-				]
+				[ersayās]
+			]
+			[\anno{Cl}
+				[-ikan]
 			]
 		]
-		[\anno{\xhead{D}}
-			[$\epsilon$]
+		[\anno{DP$_g$}
+			[\anno{\xhead{D}}
+				[$\epsilon$]
+			]
+			[{\anno[\elem{\Adjc}]{AdvP}}
+				[ekeng]
+			]
 		]
 	]
 	[{\anno[\elem{\Adjc}]{AP}}
-		[ekeng]
+		[puti]
 	]
 ]
 \end{forest}
 \xe
+\end{figure}
+
+Since enclitic quantifiers sit in a different position than their independent
+counterparts, their morpholexical definition differs. For one, we need to
+provide for a way to place the quantifier clitic's \Pred{} value in \Quant{}.
+Secondly, since the quantifier is part of \xhead{N} for syntactic purposes, we
+do not need inside-out uncertainty to add the \Pl{} value to the f-structure
+predicated by \xhead{N}. The definitions for enclitic quantifiers are shown in 
+(\ref{ex:clquantmorphlex}) accordingly.
+
+\begin{figure}[h]
+\begin{morphlex}
+\ex\label{ex:clquantmorphlex}
+	\adjustbox{valign=t}{%
+	\begin{tabu} {\usetabu{morphlexnarrow}}
+	...
+		& D
+		& \begin{tabular}[t]{l l l}
+			\ups{\Quant{} \Pred} & = & `...' \\
+			\ups{\Num} & = & \Pl \\
+		\end{tabular}
+	\end{tabu}%
+	}
+\xe
+\end{morphlex}
 \end{figure}
 
 Quantifiers as well can combine with independent personal pronouns especially
@@ -4794,57 +4728,12 @@ p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated.
 
 \begin{figure}[h]
 \ex\label{ex:clitics_55_short}%
-%\begin{minipage}[t]{.667\remaining}%
 \begingl
 	\gla keynam @ -ikan kagan //
 	\glb keynam-Ø =ikan kagan //
 	\glc people-\Top{} =many far.too //
 	\glft `far too many people' //
-\endgl%~\\
-
-% \begin{avm}
-% \[
-% 	\Top	&	\[
-% 					\Pred	&	`people' \\
-% 					\Anim	&	$+$ \\
-% 					\Case	&	\Aarg{} \\
-% 					\Num	&	\Pl \\
-% 					\Pers	&	\Third \\
-
-% 					\Adjc	&	\{\[
-% 									\Pred	&	`many' \\
-% 									\Adjc	&	\[
-% 										\Pred	&	`far too' \\
-% 									\] \\
-% 								\]\} \\
-% 				\] \tikzmark{clitics_55_short_Top} \\
-
-% 	\Subj	&	~\tikzmark{clitics_55_short_subj} \\
-% \]
-% \end{avm}
-% \begin{tikzpicture}[remember picture, overlay]
-% \draw [rounded corners=1ex] ([yshift=1ex]{pic cs:clitics_55_short_Top})
-% 	-- ++(east:1em) |- ([yshift=1ex]{pic cs:clitics_55_short_subj});
-% \end{tikzpicture}
-% \end{minipage}
-% ~
-% \ques\begin{forest} shorter edges, italic leaves,
-% [{\anno[\pass{\Top{}}]{NP}}
-% %	[\anno{\xbar{N}}
-% 		[\anno{\xhead{N}}
-% 			[\anno{\xhead{N}}
-% 				[keynam]
-% 			]
-% 			[{\anno[\Adjc]{Cl}}
-% 				[-ikan]
-% 				[{\anno[\elem{\Adjc}]{Cl}}
-% 					[kagan]
-% 				]
-% 			]
-% 		]
-% %	]
-% ]
-% \end{forest}
+\endgl
 \xe
 \end{figure}
 
@@ -4934,7 +4823,7 @@ well to add further adjuncts to the AdvP, for instance,
 					[kagan]
 				]
 			]
-			[{\anno[\elem{\Adjc}]{Adv}}
+			[{\anno[\elem{\Adjc}]{AdvP}}
 				[patu]
 			]
 		]
@@ -4978,19 +4867,17 @@ well to add further adjuncts to the AdvP, for instance,
 
 \a\label{ex:kgnrev_cstruct}%
 \begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Top}]{DP}}
-	[\anno{DP}
-		[\anno{NP}
+[{\anno[\pass{\Top}]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{\xhead{N}}
 			[\anno{\xhead{N}}
-				[\anno{\xhead{N}}
-					[keynam]
-				]
-				[\anno{Cl}
-					[-ikan]
-				]
+				[keynam]
+			]
+			[\anno{Cl}
+				[-ikan]
 			]
 		]
-		[\anno{\xbar{D}}
+		[\anno{DP}
 			[\anno{\xbar{D}}
 				[\anno{\xhead{D}}
 					[$\epsilon$]
