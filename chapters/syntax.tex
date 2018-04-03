@@ -4047,10 +4047,11 @@ in (\ref{ex:meinter}).
 
 Adjectives and adverbs in Ayeri are largely similar in that they can both be
 modified by adverbs like \fw{very}, and they both modify heads: adjectives
-modify nouns, adverbs modify everything else. \citet[51]{carnie2013} urges his
+modify nouns, adverbs modify everything else. \citet{carnie2013} thus urges his
 readers to think about whether it is sensible to distinguish between the two
-categories, so let us focus in this section on structural similarities and
-dissimilarities between the two, as well as their distribution as morphemes.
+categories \citep[51]{carnie2013}, so let us focus in this section on
+structural similarities and dissimilarities between the two, as well as their
+distribution as morphemes.
 
 \subsection{Adjective phrases}
 \label{subsec:adjps}
@@ -4059,32 +4060,27 @@ As described in the previous section, APs usually constitute adjuncts of NPs or
 certain kinds of DPs (demonstratives, notably), where they describe properties
 of these nominal elements. Adjectives are likewise commonly found as
 predicative complements (\Plink{}) in copula clauses, compare
-\autoref{subsec:eqs}. Possessive pronouns can be used as adjective-like
-modifiers as well, though they are probably still better classified as DP
-heads, since they are functional morphemes. Possessive adjectives thus also do
-not share all the morphological properties of adjectives, for instance, they
-cannot be compared (see \autoref{phsec:possadj}, p.~\pageref{phsec:possadj}).
-They also can only be instanced once, so it is not possible to modify the same
-noun with multiple possessive morphemes, which means that they are not part of
-\Adjc{}. The phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure
-tree in (\ref{ex:adjpcstruct}) show how an AP is constructed.
+\autoref{subsec:eqs}. Possessive pronouns can be used as modifiers as well,
+though they are probably still better classified as DP heads. The
+phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
+(\ref{ex:adjpcstruct}) show how an AP is constructed.
 
 \begin{figure}[h]
 \pex\label{ex:adjpstruct}
-\a AP → \anno*{\xbar{A}} \anno*[\pass{\GF}]{XP}
-\a \xbar{A} → \anno*{\xhead{A}} \anno*[\elem{\Adjc}]{AdvP}
+\a AP → \anno*{\xbar{A}} \anno*[\elem{\Adjc}]{AdvP}
+\a \xbar{A} → \anno*{\xhead{A}} \anno*[\pass{\GF}]{XP}
 \xe
 \end{figure}
 
 \begin{figure}[h]
 \ex~\label{ex:adjpcstruct}
 \begin{forest}
-[{\anno[\{\elem{\Adjc} | \pass{\Plink}\}]{AP}}
+[{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
 	[\anno{\xbar{A}}
 		[\anno{\xhead{A}}]
-		[{\anno[\elem{\Adjc}]{AdvP}}]
+		[{\anno[\pass{\GF}]{XP}}]
 	]
-	[{\anno[\pass{\GF}]{XP}}]
+	[{\anno[\elem{\Adjc}]{AdvP}}]
 ]
 \end{forest}
 \xe
@@ -4093,9 +4089,9 @@ tree in (\ref{ex:adjpcstruct}) show how an AP is constructed.
 Adjective phrases have an adjective as their lexical head. This head may be
 extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunction
 of multiple modifiers. Since modifiers follow their heads here as well, APs are
-also a right-branching constituent. Modifiers of adjectives are subsumed under
-the label XP in the phrase structure rules, which here stands for NP, DP, and
-CP. An example of each phrase type modifying an adjective is given in
+also a right-branching constituent. Complements of adjectives are subsumed
+under the label XP in the phrase structure rules, which here stands for NP, DP,
+and CP. An example of each phrase type modifying an adjective is given in
 (\ref{ex:adjmod}) and (\ref{ex:adjmod2}).
 
 \begin{figure}
@@ -4161,10 +4157,10 @@ CP. An example of each phrase type modifying an adjective is given in
 	\[
 		\Plink	&	\[
 			\Pred		&	\astruct{happy}{\ups{\Oblq{theme}}} \\
-			\Oblq{src}	&	\[
-				\Pred	&	`son' \\
+			\Oblq{theme}	&	\[
+				\Pred	&	\astruct{son}{\ups{\Possr}} \\
 				\Case	&	\Gen \\
-				\Poss	&	\[
+				\Possr	&	\[
 					% \Pred	&	`$pro$' \\
 					% \Case	&	\Gen \\
 					% \Num	&	\Sg \\
@@ -4281,56 +4277,102 @@ adjective--adverb combination can be complemented by an NP, as shown in
 (\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases with
 complements where English would use prepositions. Thus, in
 (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
-the genitive case: the NP complement expresses oblique theme about which the
+the genitive case: the NP complement expresses an oblique theme about which the
 experiencing subject becomes happy. This, however, should not be conflated with
 a possessor, \Possr{}, but should be labeled separately as an oblique
 complement, \Oblq{theme}. Similarly, the recipient of the subject's happiness
 appears as an NP complement in the (ethical) dative in (\ref{ex:adjmod_dp}).
-Instrumental and causative NP complements instead of PPs may be found as well 
+Instrumental and causative NP complements instead of PPs may be found as well
 (compare \autoref{subsubsec:valincr}, p.~\pageref{subsubsec:valincr}).
+Moreover, according to \citet{carnie2013}, quantifiers or intensifiers of
+adjectives are adverbs, so they should find themselves in \Adjc{}. An example
+of this is given in (\ref{ex:adjquant3}).
 
-Since in \Lfg{}, empty \xbar{X} nodes are collapsed, trees in \Lfg{} do not
-strictly distinguish between complements and adjuncts \citep[127, footnote
-52]{bresnan2016}; the functional annotation provides information about whether
-a sister node to \xhead{X} is a complement or an adjunct instead. How do we
-know that the extensions to the adjective in (\ref{ex:adjmod}) are complements
-rather than adjuncts? X-bar theory\index{X-bar theory} posits that complements
-and adjuncts are on different \xbar{X} branches---a complement is a sister to
-the head whereas an adjunct is its aunt, so to speak; compare
-(\ref{ex:xbartree}).
+\begin{figure}[h]
+\pex\label{ex:adjquant3}
+\a
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla luyu-mas //
+	\glb luyu=mas //
+	\glc strange=kind.of //
+	\glft `kind of strange' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	`strange' \\
+	\Adjc	&	\{\[
+					\Pred	&	`kind of' \\
+				\]\} \\
+\]
+\end{avm}
 
-\begin{figure}
-\ex\label{ex:xbartree}
-\begin{forest}
-[XP, for tree={s sep=2em}%, l sep=2em}
-	[\xbar{X}
-		[\xbar{X}
-			[\xhead{X}, name=head]
-			[ZP, name=complement]
-		]
-		[YP, name=adjunct]
-	]
-	[WP, name=spec]
-]
-%
-\node [right=1em of spec, font=\itshape]
-	(spec_label) {specifier};
-\draw [-latex] (spec_label) -- (spec);
-%
-\node [right=1em of complement, font=\itshape]
-	(complement_label) {complement};
-\draw [-latex] (complement_label) -- (complement);
-%
-\node [right=1em of adjunct, font=\itshape]
-	(adjunct_label) {adjunct};
-\draw [-latex] (adjunct_label) -- (adjunct);
-%
-\node [left=1em of head, font=\itshape]
-	(head_label) {head};
-\draw [-latex] (head_label) -- (head);
-\end{forest}
+\a\label{ex:adjadvconv}
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla valuy ipan. //
+	\glb valuy ipan //
+	\glc glad extremely //
+	\glft `extremely glad' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	`glad' \\
+	\Adjc	&	\{\[
+					\Pred	&	`extremely' \\
+				\]\} \\
+\]
+\end{avm}
+
 \xe
 \end{figure}
+
+% Since in \Lfg{}, empty \xbar{X} nodes are collapsed, trees in \Lfg{} do not
+% strictly distinguish between complements and adjuncts \citep[127, footnote
+% 52]{bresnan2016}; the functional annotation provides information about
+% whether a sister node to \xhead{X} is a complement or an adjunct instead. How
+% do we know that the extensions to the adjective in (\ref{ex:adjmod}) are
+% complements rather than adjuncts? X-bar theory\index{X-bar theory} posits
+% that complements and adjuncts are on different \xbar{X} branches---a
+% complement is a sister to the head whereas an adjunct is its aunt, so to
+% speak.
+
+% \begin{figure}
+% \ex\label{ex:xbartree}
+% \begin{forest}
+% [XP, for tree={s sep=2em}%, l sep=2em}
+% 	[\xbar{X}
+% 		[\xbar{X}
+% 			[\xhead{X}, name=head]
+% 			[ZP, name=complement]
+% 		]
+% 		[YP, name=adjunct]
+% 	]
+% 	[WP, name=spec]
+% ]
+% %
+% \node [right=1em of spec, font=\itshape]
+% 	(spec_label) {specifier};
+% \draw [-latex] (spec_label) -- (spec);
+% %
+% \node [right=1em of complement, font=\itshape]
+% 	(complement_label) {complement};
+% \draw [-latex] (complement_label) -- (complement);
+% %
+% \node [right=1em of adjunct, font=\itshape]
+% 	(adjunct_label) {adjunct};
+% \draw [-latex] (adjunct_label) -- (adjunct);
+% %
+% \node [left=1em of head, font=\itshape]
+% 	(head_label) {head};
+% \draw [-latex] (head_label) -- (head);
+% \end{forest}
+% \xe
+% \end{figure}
 
 With regards to complements and adjuncts to NP, \citet{carnie2013} explains,
 \textcquote[182]{carnie2013}{Since complements are sisters to X and not Xʹ,
@@ -4363,14 +4405,14 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 % Superfluous bar levels here are on purpose!
 [NP
 	[\xbar{N}
-		[\xbar{N}
+%		[\xbar{N}
 			[\xhead{N}
 				[bisuayas]
 			]
-		]
+%		]
 		[AP
-			[\xbar{A}
-				[\xbar{A}, draw, circle
+%			[\xbar{A}
+				[\xbar{A}, name=abar
 					[\xhead{A}
 						[sadayo]
 					]
@@ -4384,10 +4426,13 @@ adjuncts, it is possible to replace the adjective \xayr{sdyo}{sadayo}{crazy} in
 					% 	]
 					% ]
 				]
-			]
+%			]
 		]
 	]
 ]
+%
+\draw [latex-] (abar) -- ++(-3em,-3em) coordinate (abarlabel);
+\node () at (abarlabel) [anchor=north east] {\emph{so}};
 \end{forest}
 \xe
 \end{figure}
@@ -4408,21 +4453,21 @@ to an Ayeri speaker.
 	\glb yang da=yan-ena nā //
 	\glc \Fsg{}.\Aarg{} so=son-\Gen{} \Fsg{}.\Gen{} //
 	\glft `I am so about my son.'\\
-		\textit{Literally:} `I am my son's so.' //
+		\textit{Literally:} `*I am my son's so.' //
 \endgl
 \a\label{ex:soreplacement_2_2}\ljudge*\begingl
 	\gla Yang da-yayam. //
 	\glb yang da=yayam //
 	\glc \Fsg{}.\Aarg{} so=\TsgM{}.\Dat{} //
 	\glft `I am so for him.' \\
-		\textit{Literally:} `I am him so.' //
+		\textit{Literally:} `*I am him so.' //
 \endgl
 
 \a\label{ex:soreplacement_2_3}\ljudge*\begingl
 	\gla Yang da-yomavāng edaya. //
 	\glb Yang da=yoma=vāng edaya //
 	\glc \Fsg{}.\Aarg{} so=exist=\Second{}.\Aarg{} here //
-	\glft `I am so that you are here.' //
+	\glft `*I am so that you are here.' //
 \endgl
 \xe
 \end{figure}
@@ -4431,11 +4476,15 @@ to an Ayeri speaker.
 % Would the conjunct be interpreted as an adjunct in this case? Why?
 
 Further complications arise with regards to complementation in that non-clitic
-quantifiers like \xayr{AMkYu}{ankyu}{really} usurp the complement position so
-that an adjective's complement XP seems to appear in the position of an
-adjunct. This is possibly due to syntactic weight \citep{wechsler2009}. Example
-(\ref{ex:intrusivequant}) attempts to illustrate the c-structure for a
-displaced CP; the arrow shows the apparent movement from complement to adjunct.
+quantifiers like \xayr{AMkYu}{ankyu}{really} cause a complement of an adjective
+to be pushed further to the right. This may be treated as extraposition of the
+complement, and is possibly due to syntactic weight \citep{wechsler2009}.
+Example (\ref{ex:intrusivequant}) attempts to illustrate the c-structure for a
+displaced CP. Following the annotation rules in \citet[107]{bresnan2016}, such
+an analysis is probably not unproblematic since it is required for the adjoined
+phrasal node to be either unannotated or not to embody an argument function,
+while \Comp{} is an argument function. Using lexocentric feature annotation is
+not possible here, since CPs cannot be marked for case.
 
 \begin{figure}
 \ex\label{ex:intrusivequant}%
@@ -4455,7 +4504,7 @@ cs:intrusivequant2_2});
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Plink}]{AP}}
 %	[\anno{\xbar{A}}
-		[\anno{\xbar{A}}
+		[\anno{AP}
 			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
 					[valuy]
@@ -4472,23 +4521,10 @@ cs:intrusivequant2_2});
 %	]
 ]
 %
-\draw [-latex, dashed] (CP_orig) to [out=south, in=south, "?" {midway, below}] 
-(CP);
+\draw [-latex, dashed] (CP_orig) to [out=south, in=south] (CP);
 \end{forest}
 \xe
 \end{figure}
-
-In \Lfg{}, however, there are no transformations by design; instead,
-c-structure is taken to be base-generated while acknowledging that different
-languages may have different phrase-structure plans, and the functional
-structure is what creates a sense of cohesion. Thus, even though the CP
-in (\ref{ex:intrusivequant}) appears dislocated, the information is still found
-in the `right' place in f-structure independent of the diverging c-structure,
-compare the \Avm{} in (\ref{ex:intrusivequant_fstruct}), where the adjective
-is given as having an oblique nominal complement. What surfaces as the CP
-adjunct is annotated accordingly as \Compl{}, not as \Adjc{}, even though in
-c-structure it appears in the position of an adjunct.
-% FIXME: Gahd, I *hope* this paragraph makes sense ...
 
 \begin{figure}
 \ex\label{ex:intrusivequant_fstruct}
@@ -4496,15 +4532,15 @@ c-structure it appears in the position of an adjunct.
 \[
 	\Plink	&	\[
 		\Pred	&	\astruct{glad}{\ups{\Compl}} \\
-		\Adjc	&	\[
+		\Adjc	&	\{\[
 			\Pred	&	`really' \\
-		\]\\
+		\]\}\\
 		\Compl	&	\[
 			\Pred	&	\astruct{exist}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
 			\Subj	&	\[
 				\Pred	&	`$pro$' \\
-				\Case	&	\Aarg \\
 				\Pers	&	\Second \\
+				\Case	&	\Aarg \\
 			\] \\
 
 			\Oblq{loc}	&	\[
@@ -4537,11 +4573,12 @@ their respective representation as an \Avm{} are given in (\ref{ex:adjmorph}).
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& A
-		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `...' \\
-			(\ups{\Deg} & = & \{\Pos, \Comp, \Supl\}) \\
-			(\ups{\Degdim} & = & \{$equative$, $negative$, $positive$\}) \\
-			(\ups{\Neg} & = & $\pm$) \\
+		& \begin{tabular}[t]{l @{ } l l l @{ } l}
+			  & \ups{\Pred} & = & `...' \\
+			( & \ups{\Deg} & = & \{\Pos, \Comp, \Supl\} & ) \\
+			( & \ups{\Degdim} & = & \{$equative$, $negative$, $positive$\} 
+				& )	\\
+			( & \ups{\Neg} & = & $\pm$ & ) \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -4611,55 +4648,7 @@ for synthetic comparison of adjectives are grammaticalized clitics literally
 meaning `rather, more' (\rayr{/ENF}{-eng}) and `most' (\rayr{/vaa}{-vā}) as
 lexical quantifiers. With adjectives, there is no clear-cut line between their
 functional and their lexical use. I have analyzed them here as functional,
-since they may be interpreted as such, depending on context. As we have
-observed before (\autoref{sec:quantifiers}), quantifier clitics may modify
-adjectives like any other adverbial modifiers, except that their surface form
-is clitic rather than free. Quantifying adverbs, both enclitic and free, thus
-also find themselves in \Adjc{}. An example of this is given in
-(\ref{ex:adjquant3}).
-
-\begin{figure}[h]
-\pex\label{ex:adjquant3}
-\a
-\begin{minipage}[t]{.5\remaining}
-\begingl
-	\gla luyu-mas //
-	\glb luyu=mas //
-	\glc strange=kind.of //
-	\glft `kind of strange' //
-\endgl
-\end{minipage}
-~
-\begin{avm}
-\[
-	\Pred	&	`strange' \\
-	\Adjc	&	\{\[
-					\Pred	&	`kind of' \\
-				\]\} \\
-\]
-\end{avm}
-
-\a\label{ex:adjadvconv}
-\begin{minipage}[t]{.5\remaining}
-\begingl
-	\gla valuy ipan. //
-	\glb valuy ipan //
-	\glc glad extremely //
-	\glft `extremely glad' //
-\endgl
-\end{minipage}
-~
-\begin{avm}
-\[
-	\Pred	&	`glad' \\
-	\Adjc	&	\{\[
-					\Pred	&	`extremely' \\
-				\]\} \\
-\]
-\end{avm}
-
-\xe
-\end{figure}
+since they may be interpreted as such, depending on context.
 
 \subsection{Adverb phrases}
 \label{subsec:advps}
