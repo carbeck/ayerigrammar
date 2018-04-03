@@ -586,11 +586,11 @@ above, the second one is actually the preferred one in such cases.
 			[limu]
 		]
 		[{\anno[\pass{\Compl}]{NP}}
-			[sapaeri, roof]
+			[sapaeri]
 		]
 	]
 	[{\anno[\elem{\Adjc}]{AP}}
-		[hiro, roof]
+		[hiro]
 	]
 ]
 \end{forest}
@@ -607,7 +607,7 @@ above, the second one is actually the preferred one in such cases.
 			[sapaeri]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}
-			[hiro, roof]
+			[hiro]
 		]
 	]
 ]
@@ -647,7 +647,7 @@ odd, however.}
 		]
 	]
 	[{\anno[\elem{\Adjc}]{NP}}
-		[sapaeri, roof]
+		[sapaeri]
 	]
 ]
 %
@@ -684,11 +684,11 @@ since they are adjuncts, and \Adjc{} is by itself not an argument function.
 			[limu]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}
-			[hiro, roof]
+			[hiro]
 		]
 	]
 	[{\anno[\downs{\Case} = \Ins{} $\implies$ \pass{\Compl}]{NP}}
-		[sapaeri, roof]
+		[sapaeri]
 	]
 ]
 \end{forest}
@@ -1667,7 +1667,7 @@ possessors (as Spec,NP) which is noted several times in \citet{bresnan2016}.
 [DP
 	[\anno{DP}
 		[\anno{NP}
-			[nanga, roof]
+			[nanga]
 		]
 		[\anno{\xhead{D}}
 			[sano]
@@ -3425,7 +3425,7 @@ structural properties of an NP modified by a free quantifier.
 				[nangās]
 			]
 			[{\anno[\elem{\Adjc}]{AP}}
-				[hiro, roof]
+				[hiro]
 			]
 %		]
 	]
@@ -3534,7 +3534,7 @@ subcategorizing for a nominal complement, for instance, like \astruct{many}
 		]
 	]
 	[{\anno[\elem{\Adjc}]{AP}}
-		[ekeng, roof]
+		[ekeng]
 	]
 ]
 \end{forest}
@@ -3638,7 +3638,7 @@ adverbs in the fashion of (\ref{ex:adjadvquant}).
 		[pray]
 	]
 	[{\anno[\elem{\Adjc}]{AdvP}}
-		[ankyu, roof]
+		[ankyu]
 	]
 ]
 \end{forest}
@@ -3659,7 +3659,7 @@ adverbs in the fashion of (\ref{ex:adjadvquant}).
 		[para]
 	]
 	[{\anno[\elem{\Adjc}]{AdvP}}
-		[ankyu, roof]
+		[ankyu]
 	]
 ]
 \end{forest}
@@ -3991,7 +3991,7 @@ complementary distribution with the inspecificity marker, as demonstrated by
 \rayr{Ed/}{eda-} encodes [\Def{}~$+$, \Specif{}~$+$] while \rayr{me/}
 {mə-} encodes [\Def{}~$-$, \Specif{}~$-$]. Attempting to assign
 opposing values to the same feature (\Def{} and \textsc{specific},
-respectively) must fail, since these cannot be unified at the functional level.
+respectively) must fail.
 
 \begin{figure}
 \pex\label{ex:inspecdeix}
@@ -4233,10 +4233,10 @@ and CP. An example of each phrase type modifying an adjective is given in
 	\begin{minipage}[t]{.5\remaining}
 	\begingl
 		\glpreamble adjective + CP complement: //
-		\gla Yang valuy yomavāng edaya. //
+		\gla Yang valuy, yomavāng edaya. //
 		\glb yang valuy yoma=vāng edaya //
 		\glc \Fsg{}.\Aarg{} glad exist=\Second.\Aarg{} here //
-		\glft `I am glad you are here.' //
+		\glft `I am glad that you are here.' //
 	\endgl\medskip
 
 	\begin{avm}
@@ -4244,9 +4244,10 @@ and CP. An example of each phrase type modifying an adjective is given in
 		\Plink	&	\[
 			\Pred	&	\astruct{glad}{\ups{\Compl}} \\
 			\Compl	&	\[
-				\Pred		&	\astruct{exist}{...} \\
-				\Subj		&	\[...\] \\
-				\Oblq{loc}	&	\[...\] \\
+			% 	\Pred		&	\astruct{exist}{...} \\
+			% 	\Subj		&	\[...\] \\
+			% 	\Oblq{loc}	&	\[...\] \\
+				\avmspan{``you are here''} \\
 			\] \\
 		\] \\
 	\]
@@ -4330,49 +4331,6 @@ of this is given in (\ref{ex:adjquant3}).
 
 \xe
 \end{figure}
-
-% Since in \Lfg{}, empty \xbar{X} nodes are collapsed, trees in \Lfg{} do not
-% strictly distinguish between complements and adjuncts \citep[127, footnote
-% 52]{bresnan2016}; the functional annotation provides information about
-% whether a sister node to \xhead{X} is a complement or an adjunct instead. How
-% do we know that the extensions to the adjective in (\ref{ex:adjmod}) are
-% complements rather than adjuncts? X-bar theory\index{X-bar theory} posits
-% that complements and adjuncts are on different \xbar{X} branches---a
-% complement is a sister to the head whereas an adjunct is its aunt, so to
-% speak.
-
-% \begin{figure}
-% \ex\label{ex:xbartree}
-% \begin{forest}
-% [XP, for tree={s sep=2em}%, l sep=2em}
-% 	[\xbar{X}
-% 		[\xbar{X}
-% 			[\xhead{X}, name=head]
-% 			[ZP, name=complement]
-% 		]
-% 		[YP, name=adjunct]
-% 	]
-% 	[WP, name=spec]
-% ]
-% %
-% \node [right=1em of spec, font=\itshape]
-% 	(spec_label) {specifier};
-% \draw [-latex] (spec_label) -- (spec);
-% %
-% \node [right=1em of complement, font=\itshape]
-% 	(complement_label) {complement};
-% \draw [-latex] (complement_label) -- (complement);
-% %
-% \node [right=1em of adjunct, font=\itshape]
-% 	(adjunct_label) {adjunct};
-% \draw [-latex] (adjunct_label) -- (adjunct);
-% %
-% \node [left=1em of head, font=\itshape]
-% 	(head_label) {head};
-% \draw [-latex] (head_label) -- (head);
-% \end{forest}
-% \xe
-% \end{figure}
 
 With regards to complements and adjuncts to NP, \citet{carnie2013} explains,
 \textcquote[182]{carnie2013}{Since complements are sisters to X and not Xʹ,
@@ -4665,11 +4623,11 @@ is used there in an adverbial way, meaning `extremely'. The word stays the
 same, however: \rayr{IpnF}{ipan}, without a derivative affix akin to English
 \fw{-ly} or French \fw{-ment}. Since adverbs and adjectives are largely similar
 in that they provide additional information about the nature or circumstance of
-a noun or another part of speech, \citet{carnie2013} poses the question whether
-adjectives and adverbs should rather be analyzed as being part of the same
-category. He reasons that
+a phrasal head, \citet{carnie2013} poses the question whether adjectives and
+adverbs should rather be analyzed as being part of the same category. He
+reasons that
 
-\blockcquote[51]{carnie2013}{Both Adj and Adv can be modified by the word
+\blockcquote[51]{carnie2013}{[b]oth Adj and Adv can be modified by the word
 \fw{very}, and they both have the same basic function in the grammar---to
 attribute properties to the items they modify. In fact, the only major
 distinction between them is syntactic: Adjectives appear inside NPs, while
@@ -4695,10 +4653,10 @@ in (\ref{ex:advmorphlex}) appear equal.
 	\begin{tabu} {\usetabu{morphlexnarrow}}
 	...
 		& A
-		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & `...' \\
-			(\ups{\Deg} & = & \{\Comp, \Supl\}) \\
-			(\ups{\Neg} & = & $+$) \\
+		& \begin{tabular}[t]{l @{ } l l l @{ } l}
+			  & \ups{\Pred} & = & `...' \\
+			( & \ups{\Deg} & = & \{\Comp, \Supl\} & ) \\
+			( & \ups{\Neg} & = & $+$ & ) \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -4709,12 +4667,12 @@ in (\ref{ex:advmorphlex}) appear equal.
 If we look at the phrase structure (\ref{ex:advpstruct}) and the c-structure
 (\ref{ex:advpcstruct}) for adverbs, however, there is a slight difference in
 that adverbs cannot serve as \XCompl{} in equative statements; they also can
-only be modified by other adverbs, but not by  NP, DP, or CP.\footnote{For
-adjectives, compare (\ref{ex:adjpstruct}), (\ref{ex:adjpcstruct}), and
-(\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.} On the other hand,
-adjectives are restricted to nominal contexts whereas adverbs may modify any
-other lexical category: verbs, adjectives, prepositions, as well as other
-adverbs.
+only be modified by other adverbs, and they cannot take complements.%
+\footnote{For adjectives, compare (\ref{ex:adjpstruct}),
+(\ref{ex:adjpcstruct}), and (\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.}
+On the other hand, adjectives are restricted to nominal contexts whereas
+adverbs may modify any other lexical category: verbs, adjectives, prepositions,
+as well as other adverbs.
 
 \begin{figure}[h]
 \ex\label{ex:advpstruct}
@@ -4735,9 +4693,9 @@ AdvP → \anno*{\xhead{Adv}} \anno*[{\elem{\Adjc}}]{AdvP}
 \xe
 \end{figure}
 
-Example (\ref{ex:advmod}) gives examples of modifiers of adverbs. These
-modifiers are often quantifying adverbs, whether clitic ones or free ones. 
-Since adjectives and adverbs are not distinguished by morphology, 
+Example (\ref{ex:advmod}) illustrates various modifiers of adverbs. These
+modifiers are often quantifying/intensifying adverbs, whether clitic ones or
+free ones. Since adjectives and adverbs are not distinguished by morphology,
 the heads of both phrases, \xayr{vkis}{vakisa}{careful} and \xayr{bit}{bita}
 {ordinary, normal}, may be interpreted as adjectives as well, depending on
 context.
@@ -4821,20 +4779,18 @@ context.
 \xe
 \end{figure}
 
-For the clitic \xayr{ku}{ku}{like} described above (\ref{ex:postkumorphlex}),
-it was necessary to make a separate rule for the prefixed and suffixed version.
-This, however, is not necessary for clitic quantifiers, since they attach
-immediately to the head they modify rather than to the last word of the AdvP.
-Besides the diverging morphological distribution of quantifiers, it may thus be
-assumed that the functional scheme given in (\ref{ex:advmorphlex}) also holds
-for them. Quantifiers appear to be able to be modified in turn, as illustrated
-by (\ref{ex:clitics_55}) from \autoref{clitics_quant} (compare
-p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated;
-\xayr{/IknF}{ikan}{much, many, very} seems to be modified in this case by
-\xayr{kgnF}{kagan}{far too} to convey the meaning `far too many'---or does
-\rayr{kgnF}{kagan} modify \rayr{kejnmF/IknF}{keynam-ikan} as a unit?
-% FIXME: % CAN YOU EVEN HAVE A HIERARCHICAL STRUCTURE OF MODIFICATION AMONG
-% CLITICS, LIKE ONE CLITIC MODIFYING ANOTHER?
+Clitic quantifiers, as in (\ref{ex:advmod_clitic}), attach immediately to the
+head they modify rather than to the last word of the AdvP. It may be assumed
+that the functional scheme given in (\ref{ex:advmorphlex}) also holds for them.
+\citet{carnie2013} at least treats all modifiers of adjectives and adverbs as
+adverbs. Even though these usually refer to the extent of the adjective or
+adverb, they differ from quantifiers of nouns, which were analyzed above as
+determiners encoding the \Quant{} feature rather than being plain adjectives.
+Quantifiers of adjectives and adverbs are also able to be modified in turn, as
+illustrated by (\ref{ex:clitics_55}) from \autoref{clitics_quant} (compare
+p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated.
+\xayr{/IknF}{ikan}{much, many, very} is modified in this case by
+\xayr{kgnF}{kagan}{far too} to convey the meaning `far too many'.
 
 \begin{figure}[h]
 \ex\label{ex:clitics_55_short}%
@@ -4893,13 +4849,13 @@ p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated;
 \end{figure}
 
 Besides the parenthetical insertion tests on \rayr{kgnF}{kagan} in
-\autoref{clitics_quant}, the following examples show that \rayr{kgnF}{kagan}
-also cannot swap places with other nominal modifiers without a change in
-meaning (\ref{ex:quantadvcomptest_1}), that \rayr{kgnF}{kagan} does not work
-when the rest of the NP is replaced by an anaphora
+\autoref{clitics_quant}, the examples in (\ref{ex:quantadvcomptest}) show that
+\rayr{kgnF}{kagan} also cannot swap places with other nominal modifiers without
+a change in meaning (\ref{ex:quantadvcomptest_1}), that \rayr{kgnF}{kagan} does
+not work when the rest of the NP is replaced by an anaphora
 (\ref{ex:quantadvcomptest_2}), and that \rayr{/IknF}{-ikan} cannot be replaced
-by an anaphora either (\ref{ex:quantadvcomptest_3}). It should be
-clear that \rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that 
+by an anaphora either (\ref{ex:quantadvcomptest_3}). It appears that
+\rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that
 \rayr{/IknF}{-ikan} has head-like qualities with regards to modification by
 \rayr{kgnF}{kagan}.
 
@@ -4917,14 +4873,14 @@ clear that \rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that
 	\gla tas kagan //
 	\glb tas kagan //
 	\glc \TplM{}.\Parg{} far.too //
-	\glft `far too of them' //
+	\glft `*far too of them' //
 \endgl
 
 \a\ljudge*\label{ex:quantadvcomptest_3}\begingl
 	\gla keynam da-kagan //
 	\glb keynam da=kagan //
 	\glc people so=far.too //
-	\glft `far too so people' //
+	\glft `*far too so people' //
 \endgl
 
 \xe
@@ -4933,35 +4889,28 @@ clear that \rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that
 As (\ref{ex:quantadvcomptest_1}) shows, \rayr{kgnF}{kagan} and, alternatively,
 \rayr{EkeNF}{ekeng} also work with regular adjectives, and it is possible as
 well to add further adjuncts to the AdvP, for instance,
-\xayr{ptu}{patu}{surprisingly} in (\ref{ex:kgnadj}). \xayr{kgnF ptu}{kagan
-patu}{surprisingly too}, thus, has to form a phrase which acts as a modifier to
-\xayr{gino}{gino}{drunk}. Likewise, it is not ungrammatical to say
-\xayr{kejnmF/IknF kgnF ptu} {keynam-ikan kagan patu}{surprisingly too many
-people}. Since \rayr{kgnF}{kagan} apparently projects an AdvP (as it can be
-modified), it cannot be a clitic, because clitics do not project phrases by
-their very nature. Thus, the c-structure in (\ref{ex:kgnrev_cstruct}) is
-possibly actually more correct, in that it is constructed in analogy to the one
-for an adjective modified by
-\rayr{kgnF}{kagan} in (\ref{ex:kgnadj_cstruct}).
+\xayr{ptu}{patu}{surprisingly} in (\ref{ex:kgnadj}). ...
 
 \begin{figure}
 \pex\label{ex:kgnadj}
 \a\label{ex:kgnadj_avm}\begin{avm}
 \[
+	\Pred	&	`people' \\
+	... \\
+	\Quant	&	\[
+		\Pred	&	`many' \\
+	\]\\
 	\Adjc	&	\{
-					\[
-						\Pred	&	`many' \\
-					\]\\
-					\[
-						\Pred	&	`drunk' \\
-						\Adjc	&	\{\[
-							\Pred	&	`far too' \\
-							\Adjc	&	\{\[
-											\Pred	&	`surprisingly' \\
-										\]\} \\
-									\]\} \\
-					\]\\
-				\} \\
+		\[
+			\Pred	&	`drunk' \\
+			\Adjc	&	\{\[
+				\Pred	&	`far too' \\
+			\] \\
+			\[
+				\Pred	&	`surprisingly' \\
+			\]\} \\
+		\]\\
+	\} \\
 \]
 \end{avm}
 
@@ -4972,30 +4921,22 @@ for an adjective modified by
 			[\anno{\xhead{N}}
 				[keynam]
 			]
-			[{\anno[\elem{\Adjc}]{Cl}}
+			[\anno{Cl}
 				[-ikan]
 			]
 		]
 		[{\anno[\elem{\Adjc}]{AP}}
-%			[\anno{\xbar{A}}
+			[\anno{\xbar{A}}
 				[\anno{\xhead{A}}
 					[gino]
 				]
 				[{\anno[\elem{\Adjc}]{AdvP}}
-%					[\anno{\xbar{Adv}}
-						[\anno{\xhead{Adv}}
-							[kagan]
-						]
-						[{\anno[\elem{\Adjc}]{Adv}}
-%							[\anno{\xbar{Adv}}
-%								[\anno{\xhead{Adv}}
-									[patu]
-%								]
-%							]
-						]
-%					]
+					[kagan]
 				]
-%			]
+			]
+			[{\anno[\elem{\Adjc}]{Adv}}
+				[patu]
+			]
 		]
 %	]
 ]
@@ -5017,386 +4958,61 @@ for an adjective modified by
 	\Top	&	\[
 		\Pred	&	`people' \\
 		... \\
-		\Adjc	&	\{\[
+		\Quant	&	\[
 			\Pred	&	`many' \\
-			\Adjc	&	\{\[
-				\Pred	&	`far too' \\
-				\Adjc	&	\{\[
+			\Adjc	&	\{
+				\[
+					\Pred	&	`far too' \\
+				\]\\
+				\[
 					\Pred	&	`surprisingly' \\
-				\]\} \\
-			\]\} \\
+				\]\\
+			\} \\
 		\]\\
-		\[
+		\Adjc	&	\{\[
 			\Pred	&	`drunk' \\
 		\]\} \\
 	\] \\
 \]
 \end{avm}
 
-\a\label{ex:kgnrev_cstruct}\begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Top}]{NP}}
-%	[\anno{\xbar{N}}
-		[\anno{\xbar{N}}
+\a\label{ex:kgnrev_cstruct}%
+\begin{forest} shorter edges, italic leaves,
+[{\anno[\pass{\Top}]{DP}}
+	[\anno{DP}
+		[\anno{NP}
 			[\anno{\xhead{N}}
 				[\anno{\xhead{N}}
 					[keynam]
 				]
-				[{\anno[\elem{\Adjc}]{Cl}}
-					[-ikan, name=ikan]
+				[\anno{Cl}
+					[-ikan]
+				]
+			]
+		]
+		[\anno{\xbar{D}}
+			[\anno{\xbar{D}}
+				[\anno{\xhead{D}}
+					[$\epsilon$]
+				]
+				[{\anno[\elem{\Adjc}]{AdvP}}
+					[kagan]
 				]
 			]
 			[{\anno[\elem{\Adjc}]{AdvP}}
-				[\anno{\xbar{Adv}}
-					[\anno{\xhead{Adv}}
-						[$\epsilon$, name=empty]
-					]
-					[{\anno[\elem{\Adjc}]{AdvP}}
-%						[\anno{\xbar{Adv}}
-							[\anno{\xhead{Adv}}
-								[kagan]
-							]
-							[{\anno[\elem{\Adjc}]{AdvP}}
-%								[\anno{\xbar{Adv}}
-%									[\anno{\xhead{Adv}}
-										[patu]
-%									]
-%								]
-							]
-%						]
-					]
-				]
-			]
-		]
-		[{\anno[\elem{\Adjc}]{AP}}
-%			[\anno{\xbar{A}}
-%				[\anno{\xhead{A}}
-					[gino]
-%				]
-%			]
-		]
-%	]
-]
-%
-\draw [-latex] (empty) to ["identified with", font=\itshape, midway, out=west,
-in=south] (ikan);
-\end{forest}
-\xe
-\end{figure}
-
-The c-structure in (\ref{ex:kgnrev_cstruct}) assumes that the head of the NP
-has an AdvP sister which has no head, but only an adjunct which is the AdvP
-headed by \rayr{kgnF}{kagan}. The head position left empty here is where one
-would find the adjective in (\ref{ex:kgnadj_cstruct}). It is also the position
-where one would expect a free quantifier, except that the quantifier in this
-example is clitic and found merged with the noun.
-
-In the functional representation, a clitic quantifier also logically places its
-information in the same spot a free quantifier would, by the distributed
-exponence principle: the \Adjc{} of the maximal projection, that is, the topic
-NP's \Adjc{} in (\ref{ex:kgnrev}). Since word order matters with regards to
-quantification, however, we know that \rayr{kgnF ptu}{kagan patu} modifies its
-antecedent adjective or adverb, which is \rayr{/IknF}{-ikan} rather than
-\rayr{gino}{gino}. Furthermore, since empty terminals and non-branching bar
-levels are supposed to be pruned, the tree in (\ref{ex:kgnadj_cstruct}) should
-have the structure depicted in (\ref{ex:kgnrev_cstruct_pruned}).
-
-\begin{figure}
-\ex\label{ex:kgnrev_cstruct_pruned}
-\begin{forest} shorter edges,
-[...
-	[\xbar{N}
-		[...]
-		[AdvP
-			[AdvP
-				[\xbar{Adv}
-					[\xhead{Adv}
-						[...]
-					]
-					[AdvP
-						[...]
-					]
-				]
+				[patu]
 			]
 		]
 	]
-]	
-\end{forest}
-\xe
-\end{figure}
-
-Building the tree this way, it is assumed that there is a hidden AdvP, which is
-a little unintuitive. However, if the AdvP headed by 
-\xayr{kgnF}{kagan}{far too} were attached directly to \xbar{N}, the
-constituency would be wrong: \rayr{kgnF}{kagan} would modify the noun,
-\xayr{kejnmF/IknF}{keynam-ikan}{many people} as a unit, compare
-(\ref{ex:kgn_directattachment}). \xayr{/IknF}{-ikan}{many} would also wrongly
-appear at the same level as \rayr{kgnF}{kagan} instead of subordinated to it,
-unless one were to give \rayr{kgnF}{kagan}'s maximal projection an annotation
-like \elem{\Adjc{} \Adjc{}}, again assuming that \rayr{kgnF}{kagan} is
-identified as modifying \rayr{/IknF}{-ikan} on the grounds of word order.
-
-\begin{figure}[h]
-\ex\label{ex:kgn_directattachment}
-\ljudge*\begin{avm}
-\[
-	\Top	&	\[
-		\Pred	&	`people' \\
-		\Adjc	&	\{
-			\[
-				\Pred	&	`many' \\
-			\]\\
-			\[
-				\Pred	&	`far too' \\
-			\]\\
-			\[
-				\Pred	&	`drunk' \\
-			\]
-		\} \\
-	\] \\
-\]
-\end{avm}
-\xe
-\end{figure}
-
-Based on the observation above that \rayr{/IknF}{-ikan} acts like a head, it
-might also be the case that both \rayr{/IknF}{-ikan} and its opposite
-\xayr{/kj}{-kay}{few, little} are acting as free morphemes in such
-contexts, thus eradicating the need for an empty slot in the c-structure in
-(\ref{ex:kgnrev_cstruct}). That is, these two forms would be simple clitics
-which appear in their full form in this context, the full form happening to be
-homonymous with the clitic form at this stage, as illustrated by
-(\ref{ex:kgnfull_cstruct}).
-
-\begin{figure}[h]
-\ex\label{ex:kgnfull_cstruct}\begin{forest} shorter edges, italic leaves,
-[NP
-%	[\xbar{N}
-		[\xhead{N}
-			[keynam]
-		]
-		[AdvP
-%			[\xbar{Adv}
-				[\xhead{Adv}
-					[ikan]
-				]
-				[AdvP
-%					[\xbar{Adv}
-						[\xhead{Adv}
-							[kagan]
-						]
-%					]
-				]
-%			]
-		]
-%	]
-]
-\end{forest}
-\xe
-\end{figure}
-
-On the other hand, when using other combinations, like \xayr{/m nilj}{-ma
-nilay}{probably enough} in (\ref{ex:mapatu}, the dilemma starts anew, since
-\rayr{/m}{-ma} is even more likely a clitic than \rayr{/IknF}{-ikan} and
-\rayr{/kj}{-kay}, which---untypically of clitics---carry stress even though
-they do not interact in stress assignment with their hosts, whereas
-\rayr{/m}{-ma} does not.
-
-\begin{figure}[h]
-\pex\label{ex:mapatu}
-\a\begingl
-	\gla keynam-ma nilay //
-	\glb keynam-Ø=ma nilay //
-	\glc people-\Top{}=enough probably //
-	\glft `probably enough people' //
-\endgl
-
-\a\begingl
-	\gla Adareng-ma nilay. //
-	\glb ada-reng=ma nilay //
-	\glc that-\AargI{}=enough probably //
-	\glft `That is probably enough.' //
-\endgl
-
-\xe
-\end{figure}
-
-Ayeri is different from English, but since English is often used as a model for
-generative grammar, let us also try to see what the `canonical' case for
-modification of APs is for the sake of exploring possibilities.
-\citet[110]{sobin2011} likens intensifiers of adjectives like \fw{very} (which
-I have subsumed under the label `quantifier' and classified as adverbs) to
-prepositions. He analyzes both, intensifiers and prepositions, as specifiers 
-(\ref{ex:sobinadj}).
-
-\begin{figure}
-\pex\label{ex:sobinadj}
-\a \begin{forest} shorter edges, italic leaves,
-[, phantom, s sep=0pt
-	[{Jane is ...}, tier=words]
-	[AjP, baseline
-		[Specifier
-			[very, tier=words]
-		]
-		[\xbar{Aj}
-			[Aj
-				[fond, tier=words]
-			]
-			[PP
-				[{of Cheetah}, roof, tier=words]
-			]
-		]
-	]
-]
-\end{forest}
-
-\a\begin{forest} shorter edges, italic leaves,
-[, phantom, s sep=0pt
-	[{Put the suitcase ...}, tier=words]
-	[PP, baseline
-		[Specifier
-			[over, tier=words]
-		]
-		[\xbar{P}
-			[Adj
-				[by, tier=words]
-			]
-			[PP
-				[{the closet}, roof, tier=words]
-			]
-		]
+	[{\anno[\elem{\Adjc}]{AP}}
+		[gino]
 	]
 ]
 \end{forest}
 \xe
 \end{figure}
 
-This, however, does not seem to be how Ayeri works, if we assume that there are
-no transformations and that Ayeri is consistently right-branching. An approach
-like \citet{sobin2011} delineates for English, thus, generates the wrong word
-order for free intensifying adverbs like \xayr{AMkYu}{anyku}{really}, whether
-one assumes that an adverb in Spec,AP is the first element in the phrase or the
-last. In fact, it consistently follows its head, as we have seen before,
-see (\ref{ex:ankyuwrongorder}).
-
-\begin{figure}
-\pex\label{ex:ankyuwrongorder}
-\a\ljudge*\begingl
-	\gla Yāng \textbf{ankyu} mingoy sibunana //
-	\glb yāng ankyu mingoy sibunana //
-	\glc \TsgM{}.\Aarg{} really incapable syntax-\Gen{} //
-\endgl
-
-\a\ljudge*\begingl
-	\gla Yāng mingoy sibunana \textbf{ankyu} //
-	\glb yāng mingoy sibunana ankyu //
-	\glc \TsgM{}.\Aarg{} incapable syntax-\Gen{} really //
-\endgl
-
-\a\begingl
-	\gla Yāng mingoy \textbf{ankyu} sibunana //
-	\glb yāng mingoy ankyu sibunana //
-	\glc \TsgM{}.\Aarg{} incapable really syntax-\Gen{} //
-	\glft `He is really incapable of syntax.' //
-\endgl
-
-\xe
-\end{figure}
-
-It is also incompatible with our analysis of the most common quantifying and
-degree adverbs as clitics, since clitics, at least in \Lfg{}, cannot exist
-disembodied from their hosts due to lexical integrity, compare
-(\ref{ex:adjpclit}). Since Spec also cannot branch recursively
-\citep[184]{carnie2013}, examples like (\ref{ex:clitics_55_short}) would not be
-grammatical either if \rayr{/IknF}{-ikan} were in the position of a specifier.
-As a clitic, \rayr{/IknF}{-ikan} cannot be a head either as a logical
-consequence of lexical integrity.
-
-\begin{figure}
-\ex\label{ex:adjpclit}\ljudge\excl
-\begin{minipage}[t]{.667\remaining}%
-\begingl
-	\gla mino yanena-ikan //
-	\glb mino yan-ena=ikan //
-	\glc happy boy-\Gen{}=very/many //
-	\glft `happy about the many boys' \\
-		\textit{Intended:} `very happy about the boy' //
-\endgl
-\end{minipage}
-~
-*\begin{forest} shorter edges, italic leaves,
-% Superfluous bar levels are on purpose here?
-[AP
-	[\xbar{A}
-		[\xbar{A}
-			[\xhead{A}
-				[mino]
-			]
-			[NP
-				[yanena]
-			]
-		]
-%		[...]
-	]
-	[D
-		[-ikan]
-	]
-]
-\end{forest}
-\xe
-\end{figure}
-
-\begin{figure}
-\ex
-*\begin{forest} shorter edges, italic leaves,
-% Superfluous bar levels are on purpose here
-[NP
-	[\xbar{N}
-		[\xbar{N}
-			[\xhead{N}
-				[keynam]
-			]
-%			[...]
-		]
-%		[...]
-	]
-	[AdvP
-		[\xbar{Adv}
-			[\xbar{Adv}
-				[\xhead{Adv}
-					[-ikan]
-				]
-%				[...]
-			]
-			[AdvP
-				[\xbar{Adv}
-					[\xbar{Adv}
-						[\xhead{Adv}
-							[kagan]
-						]
-					]
-				]
-			]
-		]
-	]
-]
-\end{forest}
-\xe
-\end{figure}
-
-In conclusion, Ayeri probably does not follow the way of English with regards
-to quantifiers and intensifiers of adjectives in that assuming these elements
-are in Spec results in wrong predictions about word order. It is more likely
-that quantifiers are treated as adjuncts with a constraint that quantifiers
-cannot be iterated---if a quantifier is present, no other quantifier may modify
-the same head unless it is coordinated with the first, if this is semantically
-plausible at all. There also needs to be a constraint which says that
-quantifiers always need to be adjacent to their modification target.
-Quantifiers, however, are optional elements, that is, they are not required to
-complete their head's argument structure in the way a preposition or a verb
-require an NP complement. It is tempting to treat clitic quantifiers the same
-way as free ones, just with an empty head position; the quantifying adverb
-instead finds itself cliticized to the preceding head, compare
-(\ref{ex:kgnrev_cstruct}) and (\ref{ex:kgnrev_cstruct_pruned}).
+In (\ref{ex:kgnrev}) ...
 
 \section{Prepositional phrases}
 \label{sec:pps}
