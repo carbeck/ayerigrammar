@@ -1841,7 +1841,7 @@ unincorporated adjective looks like, respectively.
 
 \begin{figure}[h]
 \ex\label{ex:danyaastuvo}\labels %
-\begin{tabular}[t]{@{} l @{\quad} l}
+\begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
 %	[\anno{\xbar{D}}
@@ -1854,10 +1854,10 @@ unincorporated adjective looks like, respectively.
 %	]
 ]
 \end{forest}
-
-&
-
-\tl\quad\label{ex:danyaastuvoavm} \adjustbox{valign=t}{%
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad\label{ex:danyaastuvoavm}
 \begin{avm}
 \[\Obj & \[
 			\Pred	& `$pro$' \\
@@ -1869,9 +1869,8 @@ unincorporated adjective looks like, respectively.
 					\]\} \\
 		\] \\
 \]	
-\end{avm}}
-
-\end{tabular}
+\end{avm}
+\end{minipage}
 \xe
 \end{figure}
 
@@ -1966,7 +1965,7 @@ attach to, the adjective stem is inflected instead of the pronoun.
 % \end{figure}
 
 % One question with regards to this is, whether the \Avm{} in this case should
-% look like the one in (\ref{ex:danyaastuvoavm}), since now it is the adjective
+% look like the one in (\ref{ex:danyaastuvo}b), since now it is the adjective
 % which carries the nominal inflections. Strictly speaking, the functional
 % annotation for the case marker should appear along with the adjective's
 % \Pred{} under the \Adjc{} relation, as in (\ref{ex:daadjcaseavm}b). Since
@@ -2141,7 +2140,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 \end{figure}
 
 Essentially, we can generate the same f-structure as in
-(\ref{ex:danyaastuvoavm}) above this way, since \rayr{d/tuvolej}{da-tuvoley}
+(\ref{ex:danyaastuvo}b) above this way, since \rayr{d/tuvolej}{da-tuvoley}
 and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent. The
 approach with functional uncertainty permits us not to violate lexical
 integrity,
@@ -4388,9 +4387,9 @@ not possible here, since CPs cannot be marked for case.
 \ex\label{ex:intrusivequant}%
 \begingl[aboveglbskip=1em]
 	\gla Yang valuy {\_\tikzmark{intrusivequant2_1}} ankyu, 
-	{$[$yomavāng edaya\tikzmark{intrusivequant2_2}$]$}. //
-	\glb yang valuy {} ankyu yoma=vāng edaya //
-	\glc \Fsg{}.\Aarg{} glad {} really exist=\Second{}.\Aarg{} here //
+	\textup{[ } @ yomavāng edaya\tikzmark{intrusivequant2_2} @ \textup{ ]}. //
+	\glb yang valuy {} ankyu {} yoma=vāng edaya {} //
+	\glc \Fsg{}.\Aarg{} glad {} really {} exist=\Second{}.\Aarg{} here {} //
 	\glft `I am really glad you are here.' //
 \endgl
 \begin{tikzpicture}[remember picture, overlay]
@@ -4436,9 +4435,10 @@ cs:intrusivequant2_2});
 		\Compl	&	\[
 			\Pred	&	\astruct{exist}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
 			\Subj	&	\[
-				\Pred	&	`$pro$' \\
-				\Pers	&	\Second \\
-				\Case	&	\Aarg \\
+				% \Pred	&	`$pro$' \\
+				% \Pers	&	\Second \\
+				% \Case	&	\Aarg \\
+				\avmspan{``you''} \\
 			\] \\
 
 			\Oblq{loc}	&	\[
