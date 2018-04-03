@@ -13,10 +13,9 @@ Currently working on
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time, since there are still some typos, inattentive gibberish, and odd-looking page breaks in need of fixing here and there:
 
 * Phrase structures (`chapters/syntax.tex`)
-  * Adjective and adverb phrases
+  * Adpositional phrases
 
 Proofreading also resulted in the realization that a number of additional content-related changes need to be made as listed, besides changes in phrasing and spelling corrections. These changes will be made as I am reviewing the respective sections for spelling etc.
-  * AP subchapter: Possessive pronouns are not adjectives but determiners.
   * PP subchapter: *ku-* serves as a preposition with case-unmarked nouns: 'as a X'/'like X (is)'.
   * CP subchapter: *ku-*/*-ku* serves as a conjunction with case-marked nouns: 'like X (does)'.
   * IP subchapter: modifiers of I⁰ might rather be placed in a separate IP so that S can remain a complement. An analysis of S as Spec makes no sense at all, anyway.
