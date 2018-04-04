@@ -2431,12 +2431,12 @@ sharing information. In order to give an example, let us reconsider
 
 Example (\ref{ex:ayrqcstruct}) is an attempt to chart the c-strcuture and the
 accompanying \Avm{} for the sentence, \xayr{le tiMky sinFyaaNF kunNF?}{Le
-tinkaya sinyāng kunang?}{The door, who opened it?}. I assumed that Ayeri, being
-verb-initial, shares the structure of the Welsh examples given in
-\textcites[66]{dalrymple2001}[130--135]{bresnan2016}, where the existence of a
-VP is presumed, though with an empty head position and the verb instead
-appearing as the head of IP (compare \autoref{sec:verbtypo}). Arrows between
-the c-structure tree and the \Avm{} are analogous to the ones in
+tinkaya sinyāng kunang?}{The door, who opened it?}.
+% I assumed that Ayeri, being verb-initial, shares the structure of the Welsh
+% examples given in \textcites[66]{dalrymple2001}[130--135]{bresnan2016}, where
+% the existence of a VP is presumed, though with an empty head position and the
+% verb instead appearing as the head of IP (compare \autoref{sec:verbtypo}).
+Arrows between the c-structure tree and the \Avm{} are analogous to the ones in
 (\ref{ex:engqcstruct}) for easy orientation. I labeled the phrase containing
 the interrogative pronoun DP, however, for consistency with the discussion of
 pronouns above, which were characterized as being nominal, though rather
@@ -2454,10 +2454,10 @@ An exemplary feature set for an interrogative pronoun has already been spelled
 out for \rayr{sinYaaNF}{sinyāng} above. More generally, interrogative pronouns
 have the possible values in (\ref{ex:interpromorphlex}). That is, they do not
 encode person and number, though at least \rayr{sinY}{sinya} inflects for case
-and thus also encodes animacy for agents and patients. Other pronouns like
-\xayr{siynF}{siyan}{where} or \xayr{siknF}{sikan}{how many} are invariant, as
+and thus also encodes animacy for agents and patients. Other pronouns, like
+\xayr{siynF}{siyan}{where} or \xayr{siknF}{sikan}{how many}, are invariant, as
 described in \autoref{subsec:interpro}. If case is not specified, the correct
-form of \rayr{sinY}{sinya} depends on the \GF{} it is linked to.
+form of \rayr{sinY}{sinya} depends on the \GF{} it is anaphorically linked to.
 
 \begin{figure}[h]
 \begin{morphlex}
@@ -2483,7 +2483,8 @@ Since question pronouns stay \fw{in situ}, it is not necessary to devise an
 outside-in functional uncertainty rule; the interrogative pronoun is already in
 the place the argument it stands in for would normally occupy. The
 interrogative pronoun as such wholly replaces an NP, and it is not possible to
-join modifiers to \xbar{D}, compare (\ref{ex:itradj}).
+join modifiers like adjectives or relative clauses to \xbar{D}, compare 
+(\ref{ex:itradj}).
 
 \begin{figure}[h]
 \pex\label{ex:itradj}
@@ -2954,9 +2955,8 @@ same features for \Gend{}, since \rayr{knF}{Kan} is a male name and
 \rayr{mh}{Maha} is a female name; the verb form \xayr{silFvFynF}
 {silvyan}{sees} resolves the conflicting values to masculine. Furthermore,
 number is resolved to plural from two singular entities being combined.
-Resolution in verb agreement will be discussed in more detail in
-\autoref{sec:ips-vps}.
-
+Gender resolution of conjuncts with different gender is discussed in more
+detail in the next section.
 \index{pronouns!reciprocal|)}
 
 \subsubsection{Resolution in third-person pronouns}
@@ -3366,30 +3366,33 @@ functional uncertainty principle again here.
 \end{figure}
 
 Besides independent quantifying morphemes, there are also enclitic ones, as
-described earlier in \autoref{clitics_quant} (p.~\pageref{clitics_quant}~ff.),
-but from a morphological point of view. An example of this pattern is given in
-(\ref{ex:nounquantavm}), using the enclitic quantifier
-\xayr{/IknF}{-ikan}{much, many; very}. In order to illustrate modification by
-an intensifier as mentioned above, \xayr{EkeNF}{ekeng}{too, over-, overly} has
-been added. Even though quantifiers are not adjectives, they have been analyzed
-here as adjuncts of NP, since modifiers of quantifiers are values of \Quant{}'s
-\Adjc{}. If quantifiers were treated as heads of DP with NP as a complement of
-\xhead{D}, due to \xhead{D} being a co-head of \xhead{N}, both adjectives
-pertaining to \xhead{N} and adverbs pertaining to \xhead{D} would write into
-the \Adjc{} list of the f-structure predicated by \xhead{N}. Thus, in order for
-DP not to be a co-head of NP, and to have its own modifiers, it must be
-subordinated to NP. This way, also, the quantifier DP and other modifiers of
-nouns, like APs, can switch places as required.
+described earlier in \autoref{sec:quantifiers} from a morphological point of
+view. An example of this pattern is given in (\ref{ex:nounquantavm}), using the
+enclitic quantifier \xayr{/IknF}{-ikan}{much, many; very}. In order to
+illustrate modification by an intensifier as mentioned above, \xayr{EkeNF}
+{ekeng}{too, over-, overly} has been added. Even though quantifiers are not
+adjectives, they have been analyzed here as adjuncts of NP, since modifiers of
+quantifiers are values of \Quant{}'s \Adjc{} list. That is, if quantifiers were
+treated as heads of DP with NP as a complement of \xhead{D}, due to \xhead{D}
+being a co-head of \xhead{N}, both adjectives pertaining to \xhead{N} and
+adverbs pertaining to \xhead{D} would write into the \Adjc{} list of the
+f-structure predicated by \xhead{N}, not into separate lists \citep[106]
+{bresnan2016}. Thus, in order for DP not to be a co-head of NP, and to have its
+own modifiers, it must be subordinated to NP. This way, also, the quantifier DP
+and other modifiers of nouns, like APs, can switch places as required.
 
-For (\ref{ex:nounquantavm}), this means that it needs to be ensured that
-\rayr{ekeNF}{ekeng}, as a part of $g$, does not modify not the head of NP, 
+For (\ref{ex:nounquantavm}), this means that we need to make sure that
+\rayr{ekeNF}{ekeng}, as a part of $g$, does not modify the head of NP, 
 \xayr{ErFsy}{ersaya}{cook}, which is part of $f$, but the head of the DP. This
-head is an empty node here, whose information content is provided functionally
-by the clitic \rayr{/IknF}{-ikan} on the noun. Moreover, since
-\Lfg{} restricts specifiers of functional categories to the grammaticalized
-discourse functions \citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot
-be analyzed as a specifier of \xhead{D}. Instead, it has been analyzed here as
-an adverb for lack of a better understanding.
+head is an empty node $\epsilon$ here whose information content is provided
+functionally by the clitic \rayr{/IknF}{-ikan} on the noun.\footnote{Empty
+nodes are normally omitted from c-structure trees (economy of expression
+principle, \cite [119--124]{bresnan2016}), but I have included the empty node
+here nonetheless for illustration.} Moreover, since \Lfg{} restricts specifiers
+of functional categories to the grammaticalized discourse functions
+\citep[106--107]{bresnan2016}, \rayr{EkeNF}{ekeng} cannot be analyzed as a
+specifier of \xhead{D} within its DP. Instead, it has been analyzed here as an
+adverb.
 
 \begin{figure}
 \ex\label{ex:nounquantavm}
@@ -3454,7 +3457,7 @@ counterparts, their morpholexical definition differs. For one, we need to
 provide for a way to place the quantifier clitic's \Pred{} value in \Quant{}.
 Secondly, since the quantifier is part of \xhead{N} for syntactic purposes, we
 do not need inside-out uncertainty to add the \Pl{} value to the f-structure
-predicated by \xhead{N}. The definitions for enclitic quantifiers are shown in 
+predicated by \xhead{N}. The definitions for enclitic quantifiers are shown in
 (\ref{ex:clquantmorphlex}) accordingly.
 
 \begin{figure}[h]
@@ -3617,7 +3620,7 @@ for those clitics which can interact with more than this one part of speech.
 
 For one, there is the series of demonstrative prefixes---or rather, deictic
 proclitics: \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}
-{such}. In section \autoref{nounprefixes} (p.~\pageref{nounprefixes}), it was
+{such}. In \autoref{nounprefixes} (p.~\pageref{nounprefixes}), it was
 reasoned that in Ayeri, to capture all three clitics, a feature \Deix{} with
 values $this$, $that$, and $such$ should be assumed in the place of \Prox{},
 since [\Prox{} $\pm$] does not apply to \rayr{d/}{da-}, as (\ref{ex:deixavm})
@@ -4277,7 +4280,7 @@ AdvP.\footnote{Since in \Lfg{}, non-branching \xbar{X} nodes are omitted for
 brevity, c-structure trees do not strictly distinguish between complements and
 adjuncts \citep[127, fn. 52]{bresnan2016}; functional annotations provide
 information about the status of a node instead. The tree in
-(\ref{ex:soreplacement}), however, keeps those \xbar{A} nodes which would
+(\ref{ex:soreplacement}), however, keeps those \xbar{X} nodes which would
 otherwise be omitted.}
 
 \begin{figure}
