@@ -4878,45 +4878,41 @@ locative or dative case:
 
 	\item[Dative:] Indicates motion along a path towards the direction the
 	adposition indicates (\textsc{goal}, \textsc{direction}). It usually
-	corresponds to English `to', `for'.
+	corresponds to English `to', `for'. NPs may be marked with dative case
+	freely to indicate direction without being goverened by an adposition.
+
+	\item[Genitive:] Indicates motion along a path from somewhere 
+	(\textsc{source}). NPs may be marked with genitive case freely to indicate
+	direction without being goverened by an adposition. Genitive case usually
+	corresponds to English `from' or `of' in those cases. Genitive case also
+	marks secondary themes, corresponding to English `about'.
 \end{description}
 
 \begin{figure}
 \ex\label{ex:talkcstruct}%
-\fw{John talks to Mary.} \\
+English:\\
+% \fw{John talks to Mary.} \\
 
 \begin{forest} shorter edges, italic leaves,
 [IP
 	[{\anno[\pass{\Subj}]{NP}}
-%		[\anno{\xbar{N}}
-%			[\anno{\xhead{N}}
-				[John]
-%			]
-%		]
+		[John]
 	]
-%	[\anno{\xbar{I}}
-		[\anno{VP}
-%			[\anno{\xbar{V}}
-				[\anno{\xhead{V}}
-					[talks]
-				]
-				[{\anno[\ups{\downs{\PCase}}]{PP}}
-%					[\anno{\xbar{P}}
-						[\anno{\xhead{P}}
-							[to]
-						]
-						[\anno{NP}
-%							[\anno{\xbar{N}}
-%								[\anno{\xhead{N}}
-									[Mary]
-%								]
-%							]
-						]
-%					]
-				]
-%			]
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[talks]
 		]
-%	]
+		[\anno{VP}
+			[{\anno[\ups{\downs{\PCase}}]{PP}}
+				[\anno{\xhead{P}}
+					[to]
+				]
+				[\anno{NP}
+					[Mary]
+				]
+			]
+		]
+	]
 ]
 \end{forest}
 \hfill
@@ -4966,9 +4962,9 @@ Pilaya} with additional locative marking on the noun.
 \begin{figure}
 \ex\label{ex:naracstruct}%
 \begingl
-\gla Ang @ naraya {} Ajān ya Pila. //
-\glb ang= nara-ya Ø Ajān ya Pila //
-\glc \AgtT{}= talk-\TsgM{} \Top{} Ajān \Loc{} Pila //
+\gla Ang @ naraya {} @ Ajān ya @ Pila. //
+\glb ang= nara-ya Ø= Ajān ya= Pila //
+\glc \AgtT{}= talk-\TsgM{} \Top{}= Ajān \Loc{}= Pila //
 \glft `Ajān talks to Pila.' //
 \endgl\medskip
 
@@ -5048,10 +5044,9 @@ adposition.
 \begin{figure}[h]
 \pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}} \anno*[\elem{\Adjc}]{AdvP}
-\a \xbar{P} → \anno*{\xhead{P}}, \anno*[\{%
-	\pass{\Obj{}}
-	| \pass{\Compl{}}%
-	\}]{XP}
+\a \xbar{P} → \anno*{\xhead{P}}, \anno*[%
+	\pass{\Obj{}} $\vee$ \pass{\Compl{}}%
+	]{XP}
 \xe
 \end{figure}
 
@@ -5060,80 +5055,57 @@ The same as in (\ref{ex:pppstruct}) is spelled out again in c-tree form in
 verb, are optional information and thus not governed by the verb; the
 respective PP is thus part of the set of adjuncts. Some verbs, like
 \xayr{tpY/}{tapy-}{put}, may take PP complements headed by an adposition, for
-instance, in cases like \fw{Mary puts the book {\normalfont [\tsub{PP}~[
+instance, in cases like \fw{Mary puts the book {\normalfont [\tsub{PP}~[%
 \tsub{P}} on {\normalfont]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP
 \fw{on the pile} is not an adjunct here because \fw{She does so on the pile}
 makes no sense; the PP must be an argument of the verb in this case, not
 additional, optional information (again, compare \autoref{subsec:comptr}).
 Ayeri behaves the same way in this regard. These governed PPs are categorized
 as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
-(\textit{loc}, \textit{src} or \textit{goal}).
+(\textit{loc}, \textit{goal}, or \textit{src}).
 
 \begin{figure}
 \ex\label{ex:ppcstruct}\labels
-\begin{minipage}[t]{.5\remaining}
-\tl\quad Prepositions:\medskip
-
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
+[{\anno[\pass{\downs{\PCase}} $\vee$ \elem{\Adjc} $\vee$ \pass{\Plink}]{PP}}
 %	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
 			[\anno{\xhead{P}}]
-			[{\anno[{\{%
-					\pass{\Obj{}}\\
-					| \pass{\Compl{}}%
-				\}}]{XP}
-			}]
-		]
-		[{\anno[\elem{\Adjc}]{AdvP}}]
-%	]
-]
-\end{forest}\medskip
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad Postpositions:\medskip
-
-\begin{forest} shorter edges,
-[{\anno[\{\pass{\downs{\PCase}}\\ |~\elem{\Adjc}\\ |~\pass{\Plink}\}]{PP}}
-%	[\anno{\xbar{P}}
-		[\anno{\xbar{P}}
-			[{\anno[{\{%
-					\pass{\Obj{}}\\
-					| \pass{\Compl{}}%
-				\}}]{XP}
-			}]
-			[\anno{\xhead{P}}]
+			[{,}, no edge]
+			[{\anno[{\pass{\Obj{}} $\vee$ \pass{\Compl{}}}]{XP}}]
 		]
 		[{\anno[\elem{\Adjc}]{AdvP}}]
 %	]
 ]
 \end{forest}
-\end{minipage}
 \xe
 \end{figure}
 
-With regards to functional structure, the difference between preposition and
-postposition does not matter, so the \Avm{} in (\ref{ex:adpmorphlex}) does not
-make a formal distinction between prepositions and postpositions. As described
-in \autoref{clitics_prep_dyn} (p.~\pageref{clitics_prep_dyn}) and 
-\autoref{sec:adpositions}, there is a particle \rayr{mN}{manga} which has been
-analyzed as a clitic. This particle indicates that an adposition has a
-directional reading (specifically, into the direction of the preposition). This
-is encoded by the feature \PSem{}, which is represented morphologically by said
-particle and hence not generally present.
+Regarding functional structure, the difference between preposition and
+postposition is meaningless, so the morpholexical definitions in
+(\ref{ex:adpmorphlex}) do not distinguish formally between pre- and
+postpositions. As described in \autoref{clitics_prep_dyn}
+(p.~\pageref{clitics_prep_dyn}) and \autoref{sec:adpositions}, there is a
+particle \rayr{mN}{manga} which has been analyzed as a clitic. This particle
+indicates that an adposition has a directional reading (specifically, into the
+direction of the preposition). This is encoded by the feature \PSem{}, which is
+represented morphologically by said particle and hence not generally present.
+The rule on the adpositional object's case in (\ref{ex:adpmorphlex_1}) excludes
+\rayr{liNF}{ling} and \rayr{AvnF}{avan}, which require special treatment with
+regards to case marking, as described below.
 
 \begin{figure}[h]
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
-\a\adjustbox{valign=t}{%
+\a\label{ex:adpmorphlex_1}\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlex}}
 	...
 		& P
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
 			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\} \\
-			\ups{\Obj{} \Case{}} & \req & \Loc{}\footnotemark
+			\ups{\PSem} & = & $loc$ \\
+			\ups{\Obj{} \Case{}} & \req & \Loc{}
 		\end{tabular}
 	\end{tabu}%
 }
@@ -5152,15 +5124,11 @@ particle and hence not generally present.
 \end{morphlex}
 \end{figure}
 
-\footnotetext{This lexical rule goes for all adpositions except \rayr{liNF}
-{ling} and \rayr{AvnF}{avan}, which require special treatment with regards to
-case marking; see below.}
-
-German, for one, encodes the difference between locational and directional of a
-group of prepositions uses as well, but by an alternation in the prepositional
+German, for one, encodes the difference between locational and directional uses
+of a group of prepositions as well, but by an alternation in the prepositional
 object's case between \Dat{} (locational) and \Acc{} (directional). Thus,
-\fw{auf dem Tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
-whereas \fw{auf den Tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
+\fw{auf dem tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
+whereas \fw{auf den tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
 table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
 \fw{an} `at') as in (\ref{ex:gercasealt}).
 
@@ -5174,8 +5142,8 @@ German \citep{butt2005}:\medskip\\
 \xe
 \end{figure}
 
-The \PSem{} attribute thus governs the case of the prepositional object by a
-requirement that its case be either \Acc{} or \Dat{}, depending on its value.
+The \PSem{} feature thus determines the reading of the prepositional object by
+a requirement that its case be either \Acc{} or \Dat{}, respectively.
 Since nouns in German always carry case, the \PSem{} attribute needs to be
 present in the lexical rules for all prepositions which show the \Acc{}/\Dat{}
 alternation. %\footnote{These are: 
@@ -5190,19 +5158,17 @@ alternation. %\footnote{These are:
 %\fw{zwischen}%
 %}
 In Ayeri, however, the particle \rayr{mN} {manga} alternates with nothing, so
-the absence of marking $dir$ indicates a locational reading. Since the \PSem{}
-attribute finds no overt realization in the absence of the morphological
-marker, however, we may prefer to simply omit it. Different than in German, the
-presence or absence of directionality marking also does not influence the case
-of the adpositional object.
+the absence of marking $dir$ indicates a locational reading $loc$ as the
+default. Different than in German, the presence or absence of directionality
+marking also does not influence the case of the adpositional object.
 
 Example (\ref{ex:mangaaltern}) illustrates the alternation in annotation
 between a bare adposition and one modified by \rayr{mN}{manga}:
-\rayr{mN}{manga} adds the feature--value pair [\PSem{} $dir$] to the \Adjc{} 
-(or \Oblique{} if the PP is governed by a verb) of the partial f-structure in 
-(\ref{ex:mangaaltern_marked}), which is how the difference between locational
-`in' and directional `into' is represented. The case of the \Obj{} is \Loc{} in
-both cases.
+\rayr{mN}{manga} changes the value of the \PSem{} feature of the f-structure
+predicated by the adposition to $dir$ and the \PCase{} feature to \Oblq{goal},
+as illustrated in (\ref{ex:mangaaltern_marked}). This is how the difference
+between locational `in' and directioanl `into' is represented here. The case of
+the prepositional object is \Loc{} in both versions of the sentence.
 
 \begin{figure}
 \pex\label{ex:mangaaltern}
@@ -5219,6 +5185,8 @@ both cases.
 \begin{avm}
 \[\Adjc	&	\{\[
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
+		\PCase	&	\Oblq{loc} \\
+		\PSem	&	$loc$ \\
 		\Obj	&	\[
 			\Pred	&	`house' \\
 			\Case	&	\Loc \\
@@ -5261,21 +5229,19 @@ bottom'. The directional variants of these prepositions mean `to the top, onto'
 and `to the bottom'. These are essentially telic in that they express the
 possibility of arriving at the destination specified by the adpositional
 object. However, Ayeri does not possess separate adpositions to express `up'
-and `down' as atelic concepts, that is, without referring to arriving at a
-destination.\footnote{I concede that the chosen terminology is slightly
-problematic since, strictly speaking, `up' and `down' are also directions
-rather than locations. Moreover, whether `up to' and `down from' qualify as
-`atelic' is probably debatable, since they as well suggest arriving at a
-destination eventually.} Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan}
-double for `up' and `down' with dative complements, respectively, to mark the
-difference, compare \autoref{tab:updowncompl} and \autoref{fig:updowncompl}.
-Note, however, that Ayeri does not possess intransitive adpositions, with the
-exception of a few verbs where the adposition is a lexicalized part of the
-expression, for instance, \xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with
-the fossilized, now defunct preposition \xayr{djrinF}{dayrin}{beside, next to}
-(modern \rayr{kjvo} {kayvo}). `Up' and `down' thus refer to their transitive
-uses as in \fw{up the stairs} and \fw{down the hill}, respectively.
-(\ref{ex:dirtel}) provides example sentences for all configurations.
+and `down' as `atelic' concepts, that is, without referring to arriving at a
+destination.\footnote{The chosen terminology is possibly slightly problematic
+since, strictly speaking, `up' and `down' are also directions rather than
+locations.} Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up'
+and `down' with dative complements, respectively, to mark the difference,
+compare \autoref{tab:updowncompl} and \autoref{fig:updowncompl}. Note, however,
+that Ayeri does not possess intransitive adpositions, with the exception of a
+few verbs where the adposition is a lexicalized part of the expression, for
+instance, \xayr{tpY/ djrinF}{tapy- dayrin}{save (assets)}, with the fossilized,
+now defunct preposition \xayr{djrinF}{dayrin}{beside, next to} (modern
+\rayr{kjvo} {kayvo}). `Up' and `down' thus refer to their transitive uses as in
+\fw{up the stairs} and \fw{down the hill}, respectively. (\ref{ex:dirtel})
+provides example sentences for all configurations.
 
 \begin{table}\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
@@ -5534,7 +5500,7 @@ prepositional object is to be put in the dative case.
 	\rayr{\larger liNF}{ling}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & \astruct{on}{\ups{\Obj}} \\
+			\ups{\Pred} & = & \astruct{top of}{\ups{\Obj}} \\
 			\ups{\Tel}	& = & $\pm$ \\
 		\end{tabular} \medskip
 
@@ -5550,7 +5516,7 @@ prepositional object is to be put in the dative case.
 	\rayr{\larger AvnF}{avan}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & \astruct{bottom}{\ups{\Obj}} \\
+			\ups{\Pred} & = & \astruct{bottom of}{\ups{\Obj}} \\
 			\ups{\Tel}	& = & $\pm$ \\
 		\end{tabular} \medskip
 
@@ -5562,8 +5528,8 @@ prepositional object is to be put in the dative case.
 }
 
 \a\label{ex:telcaserule}%
-	\ups{\Tel} = $-$ $\implies$ \ups{\Obj{} \Case{}} \req{}
-\Dat{}
+	\ups{\Tel} = $+$ $\implies$ \ups{\Obj{} \Case{}} \req{} \Loc{} \\
+	\ups{\Tel} = $-$ $\implies$ \ups{\Obj{} \Case{}} \req{} \Dat{}
 \xe
 \end{morphlex}
 \end{figure}
@@ -5598,13 +5564,13 @@ the beginning of the clause shows that there is a corresponding dative NP.
 Strictly speaking, \rayr{AgonnF}{agonan} is not even necessary, since the first
 NP complement already indicates a motion from somewhere.\footnote{A
 grammaticalization process similar to that of \fw{inside of the X} to
-\fw{inside the X} may be a logical next step from here. What would be possible
-moreover as a result is the functionalization of the triad
-\Loc{}--\Dat{}--\Gen{} to indicate $loc$, $goal$, and $src$ also with
-adpositions in general, either with \rayr{mN}{manga} grammaticalizing further
-to then solely marking direction, necessitating an obligatory \Dat{}/\Gen{}
-complement to indicate which way around, or with \rayr{mN}{manga} withering to
-zero, since the cases are already enough to mark direction.
+\fw{inside the X} may be a logical next step. What would be possible
+moreover is the functionalization of the triad \Loc{}--\Dat{}--\Gen{} to
+indicate $loc$, $goal$, and $src$ also with adpositions in general, either with
+\rayr{mN}{manga} grammaticalizing further to solely marking direction,
+necessitating an obligatory \Dat{}/\Gen{} complement to indicate which way
+around, or with \rayr{mN}{manga} becoming zero, since the cases are already
+enough to mark direction.
 %
 % \ex[lingstyle=fnex]
 % \begingl
@@ -5655,9 +5621,9 @@ f-structure of adpositional phrases with adverbial modifiers is shown in
 \pex\label{ex:adpadv}
 \a\label{ex:adpadv_pre}
 \begingl
-	\gla Ang @ nimpya {} Tapan manga @ kong nangaya sirimang. //
-	\glb ang= nimp-ya Ø Tapan manga= kong nangaya sirimang //
-	\glc \AgtT{}= run-\TsgM{} \Top{} Tapan \Dir{}= inside house-\Loc{} 
+	\gla Ang @ nimpya {} @ Tapan manga @ kong nangaya sirimang. //
+	\glb ang= nimp-ya Ø= Tapan manga= kong nangaya sirimang //
+	\glc \AgtT{}= run-\TsgM{} \Top{}= Tapan \Dir{}= inside house-\Loc{} 
 		straight //
 	\glft `Tapan is running straight into the house.' //
 \endgl\medskip\\
@@ -5863,9 +5829,9 @@ English.
 
 \begin{figure}[h]
 \ex\label{ex:adptime}\begingl
-	\gla Gamaryang marin sa-sahaye ang Sipra. //
-	\glb gamar=yang marin sa\til{}saha-ye ang Sipra //
-	\glc manage=\Fsg{}.\Aarg{} before \Iter{}\til{}come-\TsgF{} \Aarg{} 
+	\gla Gamaryang marin sa-sahaye ang @ Sipra. //
+	\glb gamar=yang marin sa\til{}saha-ye ang= Sipra //
+	\glc manage=\Fsg{}.\Aarg{} before \Iter{}\til{}come-\TsgF{} \Aarg{}= 
 		Sipra //
 	\glft `I'll get it done before Sipra returns.' //
 \endgl\xe
@@ -5914,21 +5880,20 @@ clause. The corresponding constituent structure of the PP is shown in
 \end{figure}
 
 In cases like (\ref{ex:adptimecstruct}), a free adverbial modifier in the
-fashion
-of (\ref{ex:adpadv}) would attach in the adjunct position, following
+fashion of (\ref{ex:adpadv}) would attach in the adjunct position, following
 the clausal complement. For the example above, this is not very awkward,
 because the embedded clause is very short and does not branch too deeply. For
 cases where the length or depth of the CP does produce an awkward result,
-however, it is possible to extrapose it with \rayr{d/}{da-} on the preposition
-representing the missing complement, altogether structurally similar to 
-(\ref{ex:intrusivequant}). An example of this strategy is given in 
+however, it is possible to extrapose it with the preposition optionally marked
+by \rayr{d/}{da-} to represent the missing complement, altogether structurally
+similar to (\ref{ex:intrusivequant}). An example of this strategy is given in
 (\ref{ex:cpextrapos}).
 
 \begin{figure}
 \ex\label{ex:cpextrapos}
 \begin{minipage}[t]{.5\remaining}
 \begingl
-	\gla Gamaryāng da-marin sirimang sa-sahaye ang @ Sipra. //
+	\gla Gamaryāng (da-)marin sirimang sa-sahaye ang @ Sipra. //
 	\glb gamar=yāng da=marin sirimang sa\til{}saha-ye ang= Sipra //
 	\glc manage=\Fsg{}.\Aarg{} such=before straight \Iter{}\til{}come-\TsgF{} 
 		\Aarg{}= Sipra //
@@ -5938,38 +5903,17 @@ representing the missing complement, altogether structurally similar to
 ~
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
-%	[\anno{\xbar{P}}
-		[\anno{\xbar{P}}
-			[\anno{\xbar{P}}
-				[\anno{\xhead{P}}
-					[da-marin]
-				]
-				[$\epsilon$]
-			]
-			[{\anno[\elem{\Adjc}]{AdvP}}
-				[sirimang]
-			]
+	[\anno{PP}
+		[\anno{\xhead{P}}
+			[(da-)marin]
 		]
-		[{\anno[\pass{\Compl}]{CP}}
-% 			[\anno{IP}
-% %				[\anno{\xbar{I}}
-% 					[\anno{\xhead{I}}
-% 						[sa-sahaye]
-% 					]
-% %				]
-% 				[\anno{S}
-% 					[{\anno[\pass{\Subj}]{NP}}
-% %						[\anno{\xbar{N}}
-% 							[\anno{\xhead{N}}
-% 								[{ang Sipra}, roof]
-% 							]
-% %						]
-% 					]
-% 				]
-% 			]
-			[{sa-sahaye\\ ang Sipra}, roof]
+		[{\anno[\elem{\Adjc}]{AdvP}}
+			[sirimang]
 		]
-%	]
+	]
+	[{\anno[\pass{\Compl}]{CP}}
+		[{sa-sahaye\\ ang Sipra}, roof]
+	]
 ]
 \end{forest}
 \xe
