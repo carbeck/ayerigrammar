@@ -22,14 +22,14 @@ Noun phrases (NPs), and determiner phrases (DPs) as their functional
 counterpart, fulfill the functions of subject (\Subj{}), object (\Obj{}),
 secondary object (\SObj{}), as well as various oblique constituents (\Oblique;
 see (\ref{ex:dpnpcasemap})). They can also form adjuncts (\Adjc{}), as well as
-constitute topics (\Top{}). Which DP or NP receives which function is
-controlled by the a-structure of the verb---this also has repercussions on
-case- and topic marking, compare \autoref{subsec:comptr}. Even though Ayeri is
-configurational\index{configurationality} and case is in part assigned on the
-grounds of constituent structure, semantics also play a part in case
-assignment. Taking the opposite perspective, we may also say that case marking
-provides information on both the semantics and function of NPs/DPs, as depicted
-in (\ref{ex:dpnpcasemap}).
+constitute topic and focus (\Top{}, \Foc{}). Which DP or NP receives which
+function is controlled by the a-structure of the verb---this also has
+repercussions on case- and topic marking, compare \autoref{subsec:comptr}. Even
+though Ayeri is configurational\index{configurationality} and case is in part
+assigned on the grounds of constituent structure, semantics also play a part in
+case assignment. Taking the opposite perspective, we may also say that case
+marking provides information on both the semantics and function of NPs/DPs, as
+depicted in (\ref{ex:dpnpcasemap}).
 
 \begin{figure}
 \ex\labels\label{ex:dpnpcasemap}
@@ -98,38 +98,39 @@ The rules in (\ref{ex:dpnpcasemap}) illustrate the typical mappings between
 case marking and grammatical functions, which are not always unambiguous. As
 explained above (compare \autoref{subsec:case}), the dative case does not only
 indicate that something is given to this referent or done to their benefit, but
-it may also indicate motion towards this referent. Likewise, the genitive case
-does not only indicate possession, but also origin, and motion from this
-referent. Nominal adjuncts to nouns which specify what the noun consists of
-also appear in the instrumental case, besides the instrumental being used to
-indicate the means or the circumstance by which an action comes about.
-Moreover, DPs or NPs may also lack case marking, which indicates that the
-respective phrase is (a part of) the topic function of the verb, which is what
-(\ref{ex:topicrule}) describes.
+also indicates motion towards this referent. Likewise, the genitive case does
+not only indicate possession, but also origin, and motion from this referent.
+Nominal adjuncts of nouns which specify what the noun consists of appear in the
+instrumental case, besides the instrumental being used to indicate the means or
+the circumstance by which an action comes about. Nominals may also lack case
+marking, which indicates that the respective phrase is (a part of) the topic
+function of the verb, which is what (\ref{ex:topicrule}) describes.
 
+\begin{figure}[h]
 \ex\label{ex:topicrule}
 ¬\,\downs{\Case} $\implies$ \pass{\Top} $\vee$ \elem{\Top}
 \xe
+\end{figure}
 
-Instead of case marking on the DP or NP, there is a marker in front of the verb
+Instead of case marking on the DP or NP, there is a marker before the verb
 which provides information on the case and, if \AgtT{} or \PatT{}, also about
-the animacy of the topicalized phrase. This means that grammatical information
-about the topic of a phrase is spread over two discontinuous sites. This issue
-does not pose a problem to an \Lfg{}-based analysis, however, since both
-grammatical sites unify their information content in the f-structure feature
-\Top{}. I will mostly be using the annotation `\pass{\Top}' for topics in the
-following; `\elem{\Top}' only finds application with relative clauses, since
-these may have secondary topics in addition to the relativized NP. Note that
-otherwise, only one NP among the arguments of a verb may be the topic of the
-clause. Moreover, a topic can only be marked if the verb is finite and the
-number of case-marked arguments of the verb is greater than one.
+the animacy of the topicalized phrase. Grammatical information about the topic
+of a phrase is spread over two discontinuous sites this way. This issue does
+not pose a problem to an \Lfg{}-based analysis, however, since both grammatical
+sites unify their information content in the f-structure feature \Top{}. I will
+mostly be using the annotation `\pass{\Top}' for topics in the following;
+`\elem{\Top}' only finds application with relative clauses, since these may
+have secondary topics in addition to the relativized NP. Note that otherwise,
+only one NP among the arguments of a verb may be the topic of the clause.
+Moreover, a topic can only be marked if the verb is finite and the number of
+case-marked arguments of the verb is greater than one.
 
 \subsection{Noun phrases}
 \label{subsec:nps}
 \index{phrase types!noun phrases|(}
 \index{nouns|(}
 
-\subsubsection{Constituent order within noun phrases}
+% \subsubsection{Constituent order within noun phrases}
 
 Nouns are one of the main parts of speech of Ayeri and can be modified by a
 number of other free elements, as we have seen previously---adjectives,
@@ -620,14 +621,13 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 \xe
 \end{figure}
 
-More important to \Lfg{} than c-structure trees, however, are
-function-structure matrices which represent all information in a given
-utterance and gather potentially disparate information into semantically
-coherent units within the matrix.\footnote{Essentially, c-structure is similar
-to the tree hierarchy of paragraphs, images, tables etc.\ in an \textsc{html}
-file, while f-structure describes semantic properties of elements in the tree
-similar to how \textsc{css} defines the layout properties of these elements.}
-In the following, I will thus give a list of morpholexic specifications in
+More important to \Lfg{} than c-structure trees, however, is f-structure to
+gather potentially disparate information into semantically coherent functional
+units.\footnote{Essentially, c-structure is similar to the tree hierarchy of
+paragraphs, images, tables etc.\ in an \textsc{html} file, while f-structure
+describes semantic properties of elements in the tree similar to how
+\textsc{css} defines the layout properties of these elements.} In the
+following, I will thus give a list of morpholexic specifications in
 (\ref{ex:nounmorphlex}) which give an overview of the different semantic and
 morphological features nouns basically provide (also compare
 \autoref{sec:nouns}). These also form the basis for f-structure matrices of the
@@ -704,7 +704,7 @@ as adding to the noun's \Adjc{} feature (\ref{ex:nounqadj}).
 \xe
 \end{figure}
 
-\subsubsection{Morphosyntactic operations within the noun phrase}
+% \subsubsection{Morphosyntactic operations within the noun phrase}
 
 It has been pointed out above that nouns intrinsically encode animacy. This has
 repercussions in the choice of case markers of the agent and patient cases,
@@ -858,7 +858,7 @@ suffixed case markers look superficially similar to suffixed articles in
 Romanian (\ref{ex:artcasesimilsfx}) or the Scandinavian languages. The presence
 or absence of case markers in Ayeri is moreover morphosyntactically controlled
 by topicalization and thus also interacts with definiteness (compare
-\autoref{subsubsec:topic}, p.~\pageref{subsubsec:topic}). However, as we will
+\autoref{subsec:topic}). However, as we will
 see below, the distribution of these case markers differs from that of
 articles in languages like English or German.
 
@@ -1705,12 +1705,12 @@ unincorporated adjective looks like, respectively.
 \end{figure}
 
 The difference between \rayr{d/}{da-} combined with a noun and the same
-combined with an adjective is, however, that with a noun, the meaning is `such
-a \textsc{noun}', while with an adjective the meaning is not `such an
+combined with an adjective is that with a noun, the meaning is `such a
+\textsc{noun}', while with an adjective the meaning is not `such an
 \textsc{adjective} one', but `the \textsc{adjective} one'. Thus, the
 deictic/anaphoric meaning remains, strictly speaking, which is manifest in the
-fact that the gender of the compound depends on that of the referred-to entity,
-as illustrated by (\ref{ex:danoungender}). For cases where the noun and the
+fact that the gender of the compound depends on that of the antecedent, as
+illustrated by (\ref{ex:danoungender}). For cases where the noun and the
 adjective are homophones---like \xayr{tuvo} {tuvo}{red}---the correct
 interpretation is dependent on context.
 
@@ -2055,8 +2055,8 @@ adjectives either. Instead, questions like `how large' or `how common' must be
 phrased using (generic) nouns; see (\ref{ex:hownoun}). What the question word
 queries for is both the implied object of the question and also new
 information. That is, what it asks for is the sentence's focus (compare
-\autoref{subsubsec:focus}, p.~\pageref{subsubsec:focus}). For English,
-\citet{dalrymple2001} gives the example in (\ref{ex:engq}).
+\autoref{subsec:focus}). For English, \citet{dalrymple2001} gives the example
+in (\ref{ex:engq}).
 
 \begin{figure}[h]
 \pex\label{ex:hownoun}
@@ -3527,7 +3527,8 @@ straightforwardly, given in (\ref{ex:deixproclmorphlex}). Demonstrative clitics
 cannot be combined with pronouns of any kind, only with nouns; the combination
 of \rayr{d/}{da-} with a possessive pronoun does not result in the meaning of
 *\fw{such my}, *\fw{such your}, etc., but it derives independent possessive
-pronouns such as \fw{mine}, \fw{yours}, etc.
+pronouns such as \fw{mine}, \fw{yours}, etc. which do not act as mere modifiers
+of nouns.
 
 \begin{figure}[h]
 \begin{morphlex}
@@ -6735,9 +6736,8 @@ eligible for topic marking as well. Another limitation to topic marking is that
 a matrix verb cannot topic-mark arguments of a subordinate verb if the
 subordinate verb occurs in the VP complement after the subject NP. Raising is
 required to make an embedded argument part of the matrix verb's argument
-structure. However, as described in \autoref{subsubsec:raising}
-(p.~\pageref{subsubsec:raising}), only to-subject raising is permitted in
-Ayeri.
+structure. However, as described in \autoref{subsec:raising}, only to-subject
+raising is permitted in Ayeri.
 
 \begin{figure}
 \pex\label{ex:topmkg}
@@ -7472,17 +7472,15 @@ this proposal as a c-structure tree.
 \subsubsection{Control verbs}
 \label{subsubsec:ctrlvb}
 
-Control verbs have already been touched on in \autoref{subsubsec:control}
-(p.~\pageref{subsubsec:control}) in order to compare Ayeri to Tagalog in terms
-of syntactic alignment. In this section, I want to elaborate on their
-structural and functional properties. Since \Lfg{} does not assume empty nodes
-to carry semantic or functional value, there is no \textsc{pro} element in
-c-structure trees. VP complements of control verbs are simply treated as
-\XCompl{}s, that is, open complements. These \XCompl{}s lack f-structure
-subjects and are thus dependent on the superordinate verb: control verbs share
-their semantic subject or object with the semantic subject of a (non-finite)
-subordinate verb \citep[289\psqq]{bresnan2016}.
-% , also compare the English examples in (\ref{ex:engctrlstruct})
+Control verbs have already been touched on in \autoref{subsec:control} in order
+to compare Ayeri to Tagalog in terms of syntactic alignment. In this section, I
+want to elaborate on their structural and functional properties. Since \Lfg{}
+does not assume empty nodes to carry semantic or functional value, there is no
+\textsc{pro} element in c-structure trees. VP complements of control verbs are
+simply treated as \XCompl{}s, that is, open complements. These \XCompl{}s lack
+f-structure subjects and are thus dependent on the superordinate verb: control
+verbs share their semantic subject or object with the semantic subject of a
+(non-finite) subordinate verb \citep[289\psqq]{bresnan2016}.% , also compare the English examples in (\ref{ex:engctrlstruct})
 Typical S-control verbs in Ayeri are
 \xayr{Ep/}{epa-}{refuse},
 \xayr{liMk/}{linka-}{try},
@@ -7856,33 +7854,32 @@ an attribute of the f-structure containing \XCompl{}. An example is given in
 
 Raising verbs, like control verbs, are verbs which take a VP complement whose
 subject is shared with the subject or the object of the matrix verb. They as
-well have already been dealt with briefly in \autoref{subsubsec:raising}
-(p.~\pageref{subsubsec:raising}) with regards to questions of syntactic
-alignment. In contrast to control verbs, the syntactic subject of the matrix
-verb is not semantically an argument of it, but of the subordinate verb. The
-subject of the matrix verb may thus also be a dummy \fw{it} or \fw{there} in
-English. Ayeri seems to only have \xayr{surFpF/}{surp-}{seem} as a raising
-verb.\footnote{This is likely an artefact of working mostly in English, since
-\fw{seem} is a very common verb there. Since it is interesting for Ayeri to
-have only one verb which works this way, apparently, I decided to leave it in
-for now. Alternatively, it would be a reasonable next step in
-grammaticalization for the verb to turn into a modal particle, \rayr{surFp}
-{surpa}. The dictionary also lists \xayr{kFr/}{kra-}{tend} with no further
-comment, entered on \DTMdate{2005-11-22}, and possibly intended to be used as a
-raising verb meaning `have a tendency' rather than `look after, care for'.
-There is also \xayr{rmYF/}{ramy-}{let, let go of} which was intended as a
-raising causative verb and which was entered early on as well
-(\DTMdate{2006-05-24}). Ayeri can express causative relationships by case
-marking, though (see \autoref{subsubsec:valincr}). If need be, \rayr{rmYF/}
-{ramy-} can be used with a complement clause instead of a verbal complement.}
-Instead of using verbal expressions like \fw{happen}, \fw{tend}, and \fw{be
-likely}, one may rather use adverbials or adverbs like \xayr{mmNeri}{mamangeri}
-{by coincidence}, \xayr{kFraaneri}{krāneri}{by tendency} and \xayr{nilj}{nilay}
-{probably}. English has raising verbs like \fw{expect}, \fw{order} or
-\fw{want}, which may take an object and a verbal complement, but whose
-syntactic object is the semantic subject of the subordinate verb. Ayeri,
-however, lacks the raising-to-object mechanism and instead requires a
-complement clause.
+well have already been dealt with briefly in \autoref{subsec:raising} with
+regards to questions of syntactic alignment. In contrast to control verbs, the
+syntactic subject of the matrix verb is not semantically an argument of it, but
+of the subordinate verb. The subject of the matrix verb may thus also be a
+dummy \fw{it} or \fw{there} in English. Ayeri seems to only have
+\xayr{surFpF/}{surp-}{seem} as a raising verb.\footnote{This is likely an
+artefact of working mostly in English, since \fw{seem} is a very common verb
+there. Since it is interesting for Ayeri to have only one verb which works this
+way, apparently, I decided to leave it in for now. Alternatively, it would be a
+reasonable next step in grammaticalization for the verb to turn into a modal
+particle, \rayr{surFp} {surpa}. The dictionary also lists
+\xayr{kFr/}{kra-}{tend} with no further comment, entered on
+\DTMdate{2005-11-22}, and possibly intended to be used as a raising verb
+meaning `have a tendency' rather than `look after, care for'. There is also
+\xayr{rmYF/}{ramy-}{let, let go of} which was intended as a raising causative
+verb and which was entered early on as well (\DTMdate{2006-05-24}). Ayeri can
+express causative relationships by case marking, though (see
+\autoref{subsubsec:valincr}). If need be, \rayr{rmYF/} {ramy-} can be used with
+a complement clause instead of a verbal complement.} Instead of using verbal
+expressions like \fw{happen}, \fw{tend}, and \fw{be likely}, one may rather use
+adverbials or adverbs like \xayr{mmNeri}{mamangeri} {by coincidence},
+\xayr{kFraaneri}{krāneri}{by tendency} and \xayr{nilj}{nilay} {probably}.
+English has raising verbs like \fw{expect}, \fw{order} or \fw{want}, which may
+take an object and a verbal complement, but whose syntactic object is the
+semantic subject of the subordinate verb. Ayeri, however, lacks the
+raising-to-object mechanism and instead requires a complement clause.
 
 \begin{figure}
 \pex\label{ex:raisestruct}
@@ -8161,17 +8158,16 @@ uncertainty is used to indicate that \rayr{UmNF}{umang} feeds into the \Top{}
 function of the superior f-structure which specifies \XCompl{}.
 
 \subsubsection{Expletive \emph{sitang}}
-\label{subsubsec:expsitang}
+\label{subsec:expsitang}
 
 It has been mentioned before that \xayr{sitNF}{sitang}{self} can also be used
 as an expletive pronoun in such a way that quantifiers can be attributed to
 subject pronouns which are realized as pronominal clitics, compare 
-\autoref{subsec:reflrec} and \autoref{subsubsec:quantfloat}
-(p.~\pageref{subsubsec:quantfloat}). The quantifier cannot follow the
-pronominal clitic directly due to the double function of many quantifiers as
-intensifiers which modify the verb. Ayeri otherwise uses the demonstratives 
-\xayr{AdnY}{adanya}{that one} or \xayr{dnY}{danya}{(such) one} as dummy
-pronouns, but these encode a third person reference (see
+\autoref{subsec:reflrec} and \autoref{subsec:quantfloat}. The quantifier cannot
+follow the pronominal clitic directly due to the double function of many
+quantifiers as intensifiers which modify the verb. Ayeri otherwise uses the
+demonstratives \xayr{AdnY}{adanya}{that one} or \xayr{dnY}{danya}{(such) one}
+as dummy pronouns, but these encode a third person reference (see
 \autoref{subsubsec:demprosyn}, p.~\pageref{subsubsec:demprosyn}). As 
 (\ref{ex:expsitang}) shows, it is also possible, however, to quantify personal
 pronouns of persons other than the third. Thus, \rayr{sitNF}{sitang} is used in
@@ -8886,7 +8882,7 @@ meaning `raw') can describe either the subject or the object, but semantically,
 it makes most sense for it to refer to the object, \xayr{InunF}{inun}{fish}. It
 may be noted again here that topicalization has no impact on the argument of
 the verb the secondary predicate refers to (compare 
-\autoref{subsubsec:secpred}, p.~\pageref{subsubsec:secpred}).
+\autoref{subsec:secpredctrl}).
 
 \begin{figure}
 \pex\label{ex:depict}

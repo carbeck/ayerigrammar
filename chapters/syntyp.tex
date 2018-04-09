@@ -29,7 +29,7 @@ is configurational\index{configurationality} in that there is a VP which
 c-commands a number of other constituents as complements and adjuncts in
 transitive sentences.
 
-\subchapter{Lexical-functional grammar}
+\section{Lexical-functional grammar}
 \index{Lexical-functional grammar!principles of|(}
 
 In principle, \Lfg{} assumes that grammar operates on different structural
@@ -70,20 +70,20 @@ as an argument-value matrix (\Avm{}) which maps the relations between `subject'
 (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
 abstractions of NP, VP, \xhead{V}, etc.\ \citep[42]{bresnan2016}.
 Complement-taking predicators, such as verbs or adpositions, are also presented
-with their \fw{a-structure} spelled out. That is, the arguments a verb governs
+with their \fw{a-structure} spelled out. That is, subcategorized-for arguments
 are formally stated \citep[15]{bresnan2016}. The f-structure collates semantic
 features associated with heads of grammatical functions (\GF{}s), such as case
 (\Case{}), person (\Pers{}), number (\Num{}), which are abstract features and
-as such need not have morphological realization \citep[43]{bresnan2016}.
+need not have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is
 simply not the same in all languages [...]\ In \Lfg{} the correspondence
 mapping between internal and external structures does not preserve sameness of
 form. Instead, \emph{it is designed to preserve inclusion relations between the
 information expressed by the external structure and the content of the internal
-structure}}. Due to the principle of monorepresentation, information
-distributed over different morphemes which logically belongs to a single
-grammatical function is presented in the f-structure as unified.
+structure}}. Due to the monorepresentation principle, information distributed
+over different morphemes which logically belongs to a single grammatical
+function is unified in f-structure.
 
 \end{description}
 
@@ -189,7 +189,7 @@ information on notational formalisms of \Lfg{} can be found, for instance, in
 
 \index{Lexical-functional grammar!principles of|)}
 
-\subsection{Typological considerations}
+\section{Typological considerations}
 \label{sec:verbtypo}
 
 Verbs govern the relations of the various phrase types to each other and they
@@ -523,22 +523,23 @@ and structural traits usually associated with subjects, as we will see further
 on.
 
 \citet[129--138]{bresnan2016} inform that the phenomenon of the verb ending up
-in a different head position (\xhead{V} apparently moves to \xhead{I}) in
-(\ref{ex:welshcstruct}) is commonly known as `head movement', except that
-\Lfg{} is built specifically without any movement. Since \Lfg{} is based
-on the assumption that all nodes in a syntactic structure are base-generated,
-that is, that there are no transformational rules generating the surface
-structure from a deeper layer of representation underneath it, there cannot be
-a trace of \xhead{V} left behind in VP. \Lfg{} thus avoids empty categories on
-the assumption that there is no information contained in an empty node. The
-functional information provided by the verb is not lost; however, it is merely
-now provided by the verb in \xhead{I}. Essentially, the Welsh example does not
-violate endocentricity, since the finite verb in \xhead{I} still forms the
-verbal head in the functional structure representation of the clause. With
-regards to constituent structure, \xhead{V}, if present, c-commands its NP
-sister; both \xhead{V} and the object NP are dominated by VP:
+in a different head position in (\ref{ex:welshcstruct}) is commonly known as
+`head movement'. Since \Lfg{} is based on the assumption that all nodes in a
+syntactic structure are base-generated, that is, that there are no
+transformational rules generating the surface structure from a deeper layer of
+representation underneath it, there cannot be a trace of \xhead{V} left behind
+in VP. \Lfg{} thus avoids empty categories on the assumption that there is no
+information contained in an empty node. The functional information provided by
+the verb is not lost; however, it is merely now provided by the verb in
+\xhead{I}. Essentially, the Welsh example does not violate endocentricity,
+since the finite verb in \xhead{I} still forms the verbal head in the
+functional structure representation of the clause. With regards to constituent
+structure, \xhead{V}, if present, c-commands its NP sister; both \xhead{V} and
+the object NP are dominated by VP---compare the definitions in
+(\ref{ex:domcomdef}).
 
-\pex
+\begin{figure}[h]
+\pex\label{ex:domcomdef}
 \a Exhaustive domination \citep[121]{carnie2013}:\smallskip
 
 	``Node A exhaustively dominates a set of terminal nodes \{B, C, ..., D\},
@@ -551,6 +552,7 @@ sister; both \xhead{V} and the object NP are dominated by VP:
 	``Node A c-commands node B if every node dominating A also dominates B, and
 	neither A nor B dominates the other.''
 \xe
+\end{figure}
 
 The \Avm{} in (\ref{ex:welshcstruct}) shows that the contents normally found in
 \xhead{V} are provided by the head of its equivalent functional category,
@@ -572,7 +574,7 @@ lacking a VP if the notion of extended heads is accepted. In any case, tests
 need to be performed to see whether one of the analyses presented in
 (\ref{ex:vsocstructs}) holds true for Ayeri as well.
 
-\subsection[‘Trigger languages’]{`Trigger languages'}
+\section[‘Trigger languages’]{`Trigger languages'}
 
 The notorious term `trigger language' comes up in discussions on
 \citetitle{conlangl} as early as 1995, where it may well have originated as an
@@ -697,7 +699,7 @@ number of tests which are specific to the grammar of Tagalog and thus have no
 application in Ayeri.} First of all, it will be helpful, however, to define
 some terms which will be used in the discussion below.
 
-\subsection{Definition of terms}
+\section{Definition of terms}
 
 The terms `subject', `topic', and `focus' were already used a number of times
 above, but it seems advisable to sketch out working definitions in order to
@@ -712,7 +714,7 @@ other hand, must be identified with a corresponding argument function
 (\cite[99--100]{bresnan2016}; also compare (\ref{ex:functions}) above,
 p.~\pageref{ex:functions}).
 
-\subsubsection{Subject}
+\subsection{Subject}
 
 The subject can be defined in a variety of ways, and maybe especially because
 the notion of a subject is so basic, \citet{comrie1989} notes that if
@@ -985,8 +987,8 @@ theory assumes that all languages have subjects, which goes counter to
 \textcites{schachter1976}{schachter2015}'s claim that subjects are possibly not
 universal \citep[330--331]{bresnan2016}.
 
-\subsubsection{Topic}
-\label{subsubsec:topic}
+\subsection{Topic}
+\label{subsec:topic}
 
 The notion of topic refers essentially to who or what a longer stretch of
 conversation is about. \citet{givon1983} defines the topic of a `thematic
@@ -1019,8 +1021,8 @@ discourse item persistent in the highly topical subject position even if it
 would otherwise be the object of the clause. This is related in turn to the
 notion of syntactic pivot in clause coordination \citep[172]{dixon2010a}.
 
-\subsubsection{Focus}
-\label{subsubsec:focus}
+\subsection{Focus}
+\label{subsec:focus}
 
 Regarding the definition of focus, \citet[174]{dixon2010a} only mentions
 contrastive focus, which basically raises the prominence of a certain NP within
@@ -1044,7 +1046,7 @@ left-dislocation in languages with rigid SVO word order such as English is
 typically associated with low topic continuity, and left-dislocated NPs can be
 found most often as initiating a topic chain \citep[32]{givon1983}.
 
-\subsection{Tests on subjecthood}
+\section{Tests on subjecthood}
 \label{subsec:subjecthood}
 
 As initially mentioned, Ayeri was originally conceived under an impression of
@@ -1166,8 +1168,8 @@ Ayeri, on the other hand, non-topic animate agents are marked on NPs by
 \rayr{/ANF}{-ang} or \rayr{ANF}{ang}, and animate agent-topics are marked on
 the verb by \rayr{ANF}{ang} as well.
 
-\subsubsection{Verb agreement}
-\label{subsubsec:verbagr}
+\subsection{Verb agreement}
+\label{subsec:verbagr}
 
 One of the most prominent features of Ayeri with regards to verbs and their
 relation to subjects is verb agreement with 3rd-person NPs. This was already
@@ -1236,20 +1238,19 @@ Tagalog (adapted from \cite[24--25]{kroeger1991}, from
 \xe
 \end{figure}
 
-As described before, person agreement in Ayeri is essentially fixed to the
-agent NP in canonical cases, whether it is the topic of the clause or not. In
-(\ref{ex:ayragr_1}), we can see the verb determine that the agent argument is
-also the topic, with the verb agreeing itself in person with the agent:
-\rayr{AgYaanF}{Ajān} is a male name; the verb corresponds with masculine
-agreement. In (\ref{ex:ayragr_2}), however, the relation is asymmetric in that
-the marking on the verb shows that the patient argument is the topic, while the
-verb still displays masculine person agreement. We know that the verb agrees
-with \rayr{AgYaanF}{Ajān} rather than with \rayr{pil}{Pila} because the latter
-is a female name, so the verb should have feminine agreement if it were to
-agree with the patient NP. However, as the example shows, the verb continues to
-agree with the agent NP in spite of not being the topic of the clause.
-Topicalization appears to have no influence on the distribution of person
-agreement on the verb; the agent NP remains the subject. This is a very
+Person agreement in Ayeri is fixed to the agent NP in canonical cases, whether
+it is the topic of the clause or not. In (\ref{ex:ayragr_1}), we can see the
+verb determine that the agent argument is also the topic, with the verb
+agreeing itself in person with the agent: \rayr{AgYaanF}{Ajān} is a male name;
+the verb corresponds with masculine agreement. In (\ref{ex:ayragr_2}), however,
+the relation is asymmetric in that the marking on the verb shows that the
+patient argument is the topic, while the verb still displays masculine person
+agreement. We know that the verb agrees with \rayr{AgYaanF}{Ajān} rather than
+with \rayr{pil}{Pila} because the latter is a female name, so the verb should
+have feminine agreement if it were to agree with the patient NP. The verb
+instead continues to agree with the agent NP in spite of not being the topic of
+the clause. Topicalization appears to have no influence on the distribution of
+person agreement on the verb; the agent NP remains the subject. This is a very
 \Nom{}--\Acc{} trait.
 
 \begin{figure}
@@ -1352,7 +1353,7 @@ fine.
 \xe
 \end{figure}
 
-\subsubsection{Syntactic pivot}
+\subsection{Syntactic pivot}
 \label{subsubsec:pivot}
 
 Since we have just dealt with aspects of syntactic alignment and found that
@@ -1906,8 +1907,8 @@ being male, since \rayr{kumNF}{Kumang} is female. Hence, in
 (\ref{ex:ayrpivot5_2}) the verb of the intransitive conjunct, \xayr{sryeNF}
 {sarayeng}{she leaves}, finds its controller only in \rayr{kumNF}{Kumang}.
 
-\subsubsection{Quantifier float}
-\label{subsubsec:quantfloat}
+\subsection{Quantifier float}
+\label{subsec:quantfloat}
 
 Another property usually associated with subjects is the ability of quantifiers
 referring to the subject NP to `float' into the VP. This is possible also in
@@ -2099,12 +2100,11 @@ carries inflection for case, as (\ref{ex:pronquant_2}) shows. An analysis of
 Moreover, \rayr{/tNF sitNF/henF}{-tang sitang-hen} does not constitute a clitic
 cluster, because it is possible to place word material between the verb and
 \rayr{sitNF/henF}{sitang-hen}, as (\ref{ex:pronquant}) shows. See
-\autoref{subsubsec:expsitang} (p.~\pageref{subsubsec:expsitang}) for an
-analysis of dummy \rayr{sitNF}{sitang} in terms of constituent and functional
-structure.
+\autoref{subsec:expsitang} for an analysis of dummy \rayr{sitNF}{sitang} in
+terms of constituent and functional structure.
 
-\subsubsection{Relativization}
-\label{subsubsec:relz}
+\subsection{Relativization}
+\label{subsec:relz}
 
 \citet{kroeger1991} observes that in Tagalog, only nominative arguments may be
 relativized. He refers to \citet{keenancomrie1977}'s accessibility hierarchy of
@@ -2204,8 +2204,8 @@ cases, there is no case-marked noun or topic contained in the relative clause.
 \endgl\xe
 \end{figure}
 
-\subsubsection{Control of secondary predicates}
-\label{subsubsec:secpred}
+\subsection{Control of secondary predicates}
+\label{subsec:secpredctrl}
 
 Secondary predicates in Tagalog are interesting insofar as depictive adjectives
 which occur after the verb always modify the nominative argument according to
@@ -2417,10 +2417,9 @@ the topic of the clause. By structure alone, \rayr{niysF}{Niyas} could also be
 the one who is cold, rather than the milk, however, this would be unlikely
 considering context and extralinguistic experience. Equally unlikely is the
 possible interpretation of the milk becoming cold by \rayr{niysF}{Niyas}'
-drinking it---this would be reading \xayr{sti}{sati}{cold} as a resultative,
-however.
+drinking it.
 
-Different than in Tagalog, thus, it is not morphology but the meaning of the
+In difference to Tagalog, thus, it is not morphology but the meaning of the
 verb which determines whether the postverbal predicative adjective refers to
 the agent or the patient.\footnote{Unfortunately, \citet{kroeger1991} does not
 provide any examples of object predicatives in Tagalog, and neither does
@@ -2434,8 +2433,8 @@ manipulating grammatical relations in this context, unlike in Tagalog.
 Depictives and resultatives are dealt with in more detail in
 \autoref{subsec:secpred}.
 
-\subsubsection{Raising}
-\label{subsubsec:raising}
+\subsection{Raising}
+\label{subsec:raising}
 
 Raising verbs involve the sharing of the subject of an embedded clause with the
 structural subject or object position of its matrix clause; the complement
@@ -2686,14 +2685,16 @@ intransitive matrix clause, which means that topicalizing the only argument of
 the verb is blocked, as illustrated by the ungrammaticality of
 (\ref{ex:ayrrais1_3}). The verb in (\ref{ex:ayrrais1_2}) also becomes
 non-finite, like in English. Unlike in Tagalog, it cannot carry any marking for
-grammatical relations. Furthermore, it is possible in Ayeri to form a complex
-predicate like \rayr{surFpF/ koronYmF}{surp- koronyam} in (\ref{ex:ayrrais2}),
-literally `seems knowing', with all of the arguments of the embedded clause
-becoming available as pseudo-arguments of the matrix clause, that is, the
-matrix verb is interpreted as a transitive clause and may carry topic marking
-for any of the following NPs arguments, even though they are not licensed by
-the semantics of the verb---compare \autoref{subsubsec:raisvb} 
-(p.~\pageref{subsubsec:raisvb}) for a more detailed structural analysis.
+grammatical relations, that is, there is no voice or agreement morphology
+available which could manipulate or indicate the grammatical context.
+Furthermore, it is possible in Ayeri to form a complex predicate like
+\rayr{surFpF/ koronYmF}{surp- koronyam} in (\ref{ex:ayrrais2}), literally
+`seems knowing', with all of the arguments of the embedded clause becoming
+available as pseudo-arguments of the matrix clause, that is, the matrix verb is
+interpreted as a transitive clause and may carry topic marking for any of the
+following NPs arguments, even though they are not licensed by the semantics of
+the verb---compare \autoref{subsubsec:raisvb} (p.~\pageref{subsubsec:raisvb})
+for a more detailed structural analysis.
 
 \begin{figure}
 \ex\label{ex:ayrrais2}\begingl[aboveglcskip=1.5em, aboveglftskip=2.5em]
@@ -3076,8 +3077,8 @@ to-object raising with verbs of perception and verbs of cognition either.
 \xe
 \end{figure}
 
-\subsubsection{Control}
-\label{subsubsec:control}
+\subsection{Control}
+\label{subsec:control}
 
 Control verbs behave basically in the opposite way of raising verbs: the
 subject of the subordinate verb is also an argument of the verb in the matrix
@@ -3883,7 +3884,8 @@ equally unfavorable. A whole clause would end up center-embedded between the
 matrix verb and its core arguments this way, which becomes the more awkward the
 longer clause is. It is possible, however, to use the VP adjunction strategy
 with intransitive complement clauses, as illustrated by (\ref{ex:ayrctrl5}),
-since there are no objects in the adjoined VP to become problematic.
+since there are no objects in the adjoined VP to become problematic in terms of
+doubled case roles or syntactic functions.
 
 \begin{figure}
 \ex\label{ex:ayrctrl4}\ljudge\ques*%
@@ -4040,7 +4042,7 @@ since there are no objects in the adjoined VP to become problematic.
 \xe
 \end{figure}
 
-\subsubsection{Conclusion}
+\subsection{Conclusion}
 
 As \autoref{tab:tagayrcomp} shows, Tagalog and Ayeri are not really similar in
 syntax despite superficial similarities in morphology. According to
@@ -4183,8 +4185,8 @@ syntactically behaving rather consistently like a \Nom{}--\Acc{} language,
 misses the point completely if `trigger language' is understood to also entail
 syntactic characteristics of Philippine languages.
 
-\subsection{Establishing configurationality}
-\label{subsec:config}
+\section{Establishing configurationality}
+\label{sec:config}
 
 As mentioned above, Ayeri's unmarked word order is VSO, and unlike Tagalog, it
 mostly displays correlations between the agent and syntactic traits usually
@@ -4218,7 +4220,7 @@ us that the first NP is the object. The other test which cannot be performed
 concerns noun incorporation, since Ayeri does not make use of noun
 incorporation.
 
-\subsubsection{V\,+\,O as a surface constituent}
+\subsection{V\,+\,O as a surface constituent}
 
 Even though Ayeri does not group V and O together the way English does, it
 might still be interesting to see what happens if we try to delete or
@@ -4404,7 +4406,7 @@ and thus would again render the test futile. And while a second conjunct with
 grammatical outcome, there is no pro-verb in this clause, but the missing
 elements are simply supplemented by consistency with the context.
 
-\subsubsection{Assymetric influence on thematic roles}
+\subsection{Assymetric influence on thematic roles}
 
 According to \citet[129]{speas1990}, the semantic role of the subject is
 determined by the object, but not vice versa. Hence, for instance, someone who
@@ -4445,7 +4447,7 @@ event, or admitting something? In a similar way, is the captain in
 verb and its complement form a semantic unit in Ayeri, even though they are not
 adjacent in main clauses of declarative statements.
 
-\subsubsection{Idioms}
+\subsection{Idioms}
 
 Similar to the previous point, there are no idioms involving just a verb and a
 subject NP, while there are idioms consisting of a set combination of a verb
@@ -4474,7 +4476,7 @@ Just stating a subject and a verb like, for instance, \xayr{sikYFy ANF tpnF}
 idiomatic meaning of showing off (second-hand) knowledge in an annoying way
 depends on the object, \xayr{koyyelej}{koyayeley}{books}.
 
-\subsubsection{Obligatoriness of subjects}
+\subsection{Obligatoriness of subjects}
 
 While Ayeri allows for intransitive verbs like \xayr{nib/}{niba-}{rest} or for
 transitive verbs to be used intransitively, like \xayr{koMdF/}{kond-}{eat},
@@ -4507,8 +4509,7 @@ an inanimate third-person pronominal of some kind.
 \endgl\xe
 \end{figure}
 
-As we have seen above (\autoref{subsubsec:raising},
-p.~\pageref{subsubsec:raising}, and \autoref{subsubsec:raisvb},
+As we have seen above (\autoref{subsec:raising}, and \autoref{subsubsec:raisvb},
 p.~\pageref{subsubsec:raisvb}), Ayeri has verbs like \xayr{surFpF/}{surp-}
 {seem}, which can make a subordinate verb's subject their own
 (\ref{ex:subjrais_1})---though \xayr{surFpF/}{surp-}{seem} may be Ayeri's only
@@ -4554,8 +4555,8 @@ inflection is not grammatical (\ref{ex:subjrais_4}).
 \xe
 \end{figure}
 
-Conversely, in subject control (\autoref{subsubsec:control}, 
-p.~\pageref{subsubsec:control}), where the matrix verb's subject is shared with
+Conversely, in subject control (\autoref{subsec:control}, 
+p.~\pageref{subsec:control}), where the matrix verb's subject is shared with
 the subject of the subordinate verb, the subordinate verb's subject cannot
 be a dummy pronoun (\ref{ex:subjctrl_2}), and neither can the matrix verb's
 subject be (\ref{ex:subjctrl_3}).
@@ -4586,7 +4587,7 @@ subject be (\ref{ex:subjctrl_3}).
 \xe
 \end{figure}
 
-\subsubsection{Binding}
+\subsection{Binding}
 
 According to \citep{speas1990}, coreference of pronouns in English can be
 explained by the subject being higher in a clause's structure than the object.
