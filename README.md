@@ -12,6 +12,8 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time, since there are still some typos, inattentive gibberish, and odd-looking page breaks in need of fixing here and there:
 
+* Syntactic typology (`chapters/syntyp.tex`)
+  * Establishing configurationality
 * Phrase structures (`chapters/syntax.tex`)
   * Inflectional and verb phrases
 
@@ -50,7 +52,14 @@ The table of contents encompasses the following topics so far; the LaTeX source 
    6. Adverbs
    7. Numerals
    8. Conjunctions
-5. Phrase structures (`chapters/syntax.tex`)
+5. Syntactic typology (`chapters/syntyp.tex`)
+   1. Lexical-functional grammar
+   2. Typological considerations
+   3. ‘Trigger languages’
+   4. Definition of terms
+   5. Tests on subjecthood
+   6. Establishing configurationality
+6. Phrase structures (`chapters/syntax.tex`)
    1. Noun and determiner phrases
    2. Adjective and adverb phrases
    3. Prepositional phrases
