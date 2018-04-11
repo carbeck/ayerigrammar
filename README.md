@@ -12,8 +12,6 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time, since there are still some typos, inattentive gibberish, and odd-looking page breaks in need of fixing here and there:
 
-* Syntactic typology (`chapters/syntyp.tex`)
-  * Establishing configurationality
 * Phrase structures (`chapters/syntax.tex`)
   * Inflectional and verb phrases
 
