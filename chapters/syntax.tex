@@ -11808,7 +11808,7 @@ strategies in (\ref{ex:derargpass_2}) and (\ref{ex:derargpass_3}).
 \a\label{ex:derargpass_1}%
 \begin{minipage}[t]{.4\remaining}
 \begingl
-	\gla Ang @ paye {} Misan tehasyeley selesena. //
+	\gla Ang @ paye {} @ Misan tehasyeley selesena. //
 	\glb ang= pa-ye Ø= Misan tehas-ye-ley seles-ena //
 	\glc \AgtT{}= take-\TsgF{} \Top{}= Misan cup-\Pl{}-\PargI{} shelf-\Gen{} //
 	\glft `Misan takes cups from the shelf.' //
@@ -12163,7 +12163,7 @@ CP → \anno*{\xhead{C}} \anno*{XP}
 \begin{figure}[h]
 \ex\label{ex:cpcstruct}
 \begin{forest} shorter edges,
-[{\anno[\{\pass{\Compl} | \pass{\Adjc}\}]{CP}}
+[{\anno[\pass{\Compl} $\vee$ \pass{\Adjc}]{CP}}
 %	[\anno{\xbar{C}}
 		[\anno{\xhead{C}}]
 		[\anno{XP}]
@@ -12191,12 +12191,12 @@ CP → \anno*{\xhead{C}} \anno*{XP}
 
 As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
 complementizer phrase is formed by a conjunction, \xhead{C}, which also can be
-empty and is for some basic purposes in Ayeri. At least in Ayeri, conjunctions
-cannot be modified, so neither phrase-structure diagram includes a \xbar{C} to
-attach an adjunct to. The complement of a \xhead{C} is formed by a verbal
-phrase type---IP or VP, but also plain S in the case of a copula clause. This
-means that the complement clause may be finite or infinite. The CP itself may
-fulfill different grammatical functions: closed complement as well as
+empty and is indeed so for some basic purposes in Ayeri. At least in Ayeri,
+conjunctions cannot be modified, so neither phrase-structure diagram includes a
+\xbar{C} to attach an adjunct to. The complement of a \xhead{C} is formed by a
+verbal phrase type---IP or VP, but also plain S in the case of a copula clause.
+This means that the complement clause may be finite or infinite. The CP itself
+may fulfill different grammatical functions: closed complement as well as
 adjunct.
 
 \begin{figure}
@@ -12211,9 +12211,9 @@ adjunct.
 
 \a\label{ex:complcls_2}\begingl
 	\glpreamble non-finite complement clause: //
-	\gla Korontang briyyam. //
-	\glb koron=tang briy-yam //
-	\glc know=\TplM{}.\Aarg{} celebrate-\Ptcp{} //
+	\gla Korontang briyyam simin. //
+	\glb koron=tang briy-yam simin //
+	\glc know=\TplM{}.\Aarg{} celebrate-\Ptcp{} how //
 	\glft `They know how to celebrate.' //
 \endgl
 
@@ -12248,7 +12248,7 @@ Since conjunctions do not inflect, the morpholexical specification in
 (\ref{ex:cmorphlex}) simply lists a \Conj{} feature which takes the conjunction
 as a value, for instance, $and$, $or$, $if$, etc. Relativizers form an
 exception to this rule, however, so for additional rules for relative pronouns,
-see below. Ayeri is rather sparse about different conjunction types, however,
+see below. Ayeri is rather sparse about different conjunction types, however;
 compare \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The
 conjunction corresponding to English \fw{that} is zero, so that simple
 complement clauses are simply juxtaposed. Examples of complement clauses are
@@ -12281,13 +12281,21 @@ superordinate clause $f$ in its a-structure.
 	[\anno{\xhead{I}}
 		[Tunyang]
 	]
-	[{\anno[\pass{\Compl}]{CP}}
-		[\anno{IP$_g$}
-			[\anno{\xhead{I}}
-				[yomongyeng]
-			]
-			[{\anno[\pass{\Oblq{loc}}]{AdvP}}
-				[edaya]
+	[\anno{S}
+		[\anno{VP}
+			[{\anno[\pass{\Compl}]{CP}}
+				[\anno{IP$_g$}
+					[\anno{\xhead{I}}
+						[yomongyeng]
+					]
+					[\anno{S}
+						[\anno{VP}
+							[{\anno[\pass{\Oblq{loc}}]{AdvP}}
+								[edaya]
+							]
+						]
+					]
+				]
 			]
 		]
 	]
@@ -12380,9 +12388,18 @@ arguments and adjuncts otherwise, compare \autoref{subsec:vps}.
 	[\anno{\xhead{I}}
 		[Korontang]
 	]
-	[{\anno[\pass{\Compl}]{CP}}
-		[\anno{VP$_g$}
-			[briyyam]
+	[\anno{S}
+		[\anno{VP}
+			[{\anno[\pass{\Compl}]{CP}}
+				[\anno{VP$_g$}
+					[\anno{\xhead{V}}
+						[briyyam]
+					]
+					[{\anno[\elem{\Adjc}]{DP}}
+						[simin]
+					]
+				]
+			]
 		]
 	]
 ]
@@ -12397,6 +12414,9 @@ $f$: \[
 	\] \\
 	\Compl	&	$g:$ \[
 		\Pred	&	\astruct{celebrate}{$null$} \\
+		\Adjc	&	\{\[
+			\Pred	&	`how' \\
+		\]\} \\
 	\] \\
 \]
 \end{avm}
@@ -12436,7 +12456,8 @@ given in (\ref{ex:relpromorphlex}).
 
 		( & \uncertain{\GF{} \Adjc}{\Case} & \req & \{\Aarg{}, \Parg{}, 
 			\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} & ) \\
-		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & )\smallskip \\
+		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & ) \\
+		( & \ups{\GF{} \Adjc{}} & & & )\smallskip \\
 		
 		( & \ups{\Case} & = & \{\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} 
 			& ) \\
@@ -12454,7 +12475,7 @@ constraining equation where the relative pronoun requires being included in the
 \Adjc{} of a \GF{} which contains \Case{} and \Anim{} features which equal the
 values the relative pronoun specifies. Any roles which the relative pronoun
 receives from an \emph{internal} predicator are realized by the \Case{} and
-\Anim{} feature. Internal additional case marking is limited to those
+\Anim{} features. Internal additional case marking is limited to those
 grammatical functions which are not subject or object.
 
 \begin{figure}
@@ -12528,13 +12549,13 @@ grammatical functions which are not subject or object.
 			[\anno{\xhead{I}}
 				[{ang telbāy}, roof]
 			]
-%			[\anno{S}
-%				[\anno{VP}
+			[\anno{S}
+				[\anno{VP}
 					[{\anno[\pass{\SObjc{ben}}]{DP}}
 						[vayam]
 					]
-%				]
-%			]
+				]
+			]
 		]
 	]
 ]
@@ -12626,13 +12647,13 @@ relative clause.
 			[\anno{\xhead{I}}
 				[{ang ningay}, roof]
 			]
-%			[\anno{S}
-%				[\anno{VP}
+			[\anno{S}
+				[\anno{VP}
 					[{\anno[\pass{\SObjc{ben}}]{DP}}
 						[vayam]
 					]
-%				]
-%			]
+				]
+			]
 		]
 	]
 ]
@@ -12795,8 +12816,8 @@ topic in (\ref{ex:relc_cop}) is not given as a list of attributes.
 			[\anno{\xhead{I}}
 				[{na layayang}, roof]
 			]
-%			[\anno{S}
-%				[\anno{VP}
+			[\anno{S}
+				[\anno{VP}
 					[{\anno[\pass{\Obj}]{NP}}
 						[\anno{\xhead{N}}
 							[koyās]
@@ -12805,8 +12826,8 @@ topic in (\ref{ex:relc_cop}) is not given as a list of attributes.
 							[ya]
 						]
 					]
-%				]
-%			]
+				]
+			]
 		]
 	]
 ]
@@ -12818,14 +12839,14 @@ The example in (\ref{ex:relc_poss}) shows a case where it may be preferrable to
 use a resumptive pronoun. The relativizer's controller is \xayr{AyonsF}
 {ayonas}{man}, which is a possessor in the relative clause. This position is
 occupied by a resumptive pronoun in addition, however, which appears as
-topicalized in the example. As we have seen previously, it is grammatical in
-Ayeri to make a possessor the topic of its superior f-structure, so a
-construction using \xayr{sinaa}{sinā}{whose} as in (\ref{ex:relc_siintcase})
-should not be a problem. However, since the genitive case may mark both
-possessors and oblique themes, and the latter is is well within the scope of
-possible arguments of \xayr{ly/}{laya-}{read}, the construction with the
-resumptive pronoun may be used as a way to disambiguate between reading
-someone's book and reading a book about someone.
+topicalized in the example. As discussed previously, it is grammatical in Ayeri
+to make a possessor the topic of its superior f-structure, so a construction
+using \xayr{sinaa}{sinā}{whose} as in (\ref{ex:relc_siintcase}) should not be a
+problem. However, since the genitive case may mark both possessors and oblique
+themes with the latter being well within the scope of possible arguments of
+\xayr{ly/}{laya-}{read}, the construction with the resumptive pronoun may be
+used to disambiguate between reading someone's book and reading a book about
+someone.
 
 All of the relative clauses exemplified here so far have been externally
 headed, however, English at least also allows headless relative clauses. These
