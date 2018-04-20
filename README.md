@@ -12,17 +12,18 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! The following part(s) are currently being proofread for a second time, since there are still some typos, inattentive gibberish, and odd-looking page breaks in need of fixing here and there:
 
-* Phrase structures (`chapters/syntax.tex`)
-  * Complementizer phrases
+* Indexing
+  * Syntactic typology (`chapters/syntyp.tex`)
+  * Phrase structures (`chapters/syntax.tex`)
 
-The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least once, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
+
+The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least twice, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
 
 I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Complete means that the finished manuscript contains information on the phonology, morphology and syntax of the language which provides a consistent description and analysis of the most frequently occurring structures and constructions of the language. The finished manuscript is also supposed to be on par with professional literature in both language and style with regards to good readability.
 
 Roadmap
 =======
 
-* proofread and correct *whole* thing again
 * maybe extend name list with etymologies
 * make index
 * look into print-on-demand options
