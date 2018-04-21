@@ -155,7 +155,9 @@ below.
 \end{figure}
 
 \begin{figure}
-\ex\label{ex:npcstruct}
+\ex\labels\label{ex:npcstruct}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
 	[\anno{\xbar{N}}
@@ -168,6 +170,24 @@ below.
 	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
+\begin{forest} shorter edges,
+[{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
+	[\anno{\xbar{N}}
+		[\anno{NP}
+			[\anno{\xhead{N}}]
+			[{\anno[\elem{\Adjc}]{XP}}]
+		]
+		[{\anno[\pass{\Compl}]{YP}}]
+	]
+	[{\anno[\pass{\Possr}]{XP}}]
+]
+\end{forest}
+\end{minipage}
+~
 \xe
 \end{figure}
 
@@ -367,7 +387,7 @@ information content after them, especially when it refers to a different head
 than all the things inside the relative clause.
 
 The order of NP modifiers seems somewhat jumbled up with regards to the
-c-structure tree in (\ref{ex:npcstruct}) which, for instance, gives noun
+c-structure tree in (\ref{ex:npcstruct}a) which, for instance, gives noun
 complements as following \xhead{N} before adjectives, while the list above
 indicates the reversed order. Furthermore, the c-structure tree indicates that
 relative clauses precede DPs embedding the NP, like possessive NPs and DPs.
@@ -3832,7 +3852,9 @@ phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 \end{figure}
 
 \begin{figure}[h]
-\ex~\label{ex:adjpcstruct}
+\ex\labels\label{ex:adjpcstruct}
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
 \begin{forest}
 [{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
 	[\anno{\xbar{A}}
@@ -3842,6 +3864,20 @@ phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 	[{\anno[\elem{\Adjc}]{AdvP}}]
 ]
 \end{forest}
+\end{minipage}
+~
+\begin{minipage}[t]{.5\remaining}
+\tl\quad%
+\begin{forest}
+[{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
+	[\anno{AP}
+		[\anno{\xhead{A}}]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
+	]
+	[{\anno[\pass{\GF}]{XP}}]
+]
+\end{forest}
+\end{minipage}
 \xe
 \end{figure}
 
@@ -4885,8 +4921,8 @@ as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
 (\textit{loc}, \textit{goal}, or \textit{src}).
 
 \begin{figure}
-\ex\label{ex:ppcstruct}\labels
-\begin{forest} shorter edges,
+\pex\label{ex:ppcstruct}
+\a\begin{forest} shorter edges,
 [{\anno[\pass{\downs{\PCase}} $\vee$ \elem{\Adjc} $\vee$ \pass{\Plink}]{PP}}
 %	[\anno{\xbar{P}}
 		[\anno{\xbar{P}}
@@ -4896,6 +4932,16 @@ as \Oblique{} with $\theta$ replaced by the proper semantic macrorole
 		]
 		[{\anno[\elem{\Adjc}]{AdvP}}]
 %	]
+]
+\end{forest}
+
+\a\begin{forest} shorter edges,
+[{\anno[\pass{\downs{\PCase}} $\vee$ \elem{\Adjc} $\vee$ \pass{\Plink}]{PP}}
+	[\anno{PP}
+		[\anno{\xhead{P}}]
+		[{\anno[\elem{\Adjc}]{AdvP}}]
+	]
+	[{\anno[{\pass{\Obj{}} $\vee$ \pass{\Compl{}}}]{XP}}]
 ]
 \end{forest}
 \xe
@@ -4909,7 +4955,7 @@ postpositions. As described in \autoref{clitics_prep_dyn}
 particle \rayr{mN}{manga} which has been analyzed as a clitic. This particle
 indicates that an adposition has a directional reading (specifically, into the
 direction of the preposition) instead of a locational one. The rule on the
-adpositional object's case in ( \ref{ex:adpmorphlex_1}) excludes
+adpositional object's case in (\ref{ex:adpmorphlex_1}) excludes
 \rayr{liNF}{ling} and \rayr{AvnF}{avan}, which require special treatment with
 regards to case marking, as described below.
 
@@ -6371,22 +6417,22 @@ so that the phrase structure of IPs is maybe better modelled as in
 \end{figure}
 
 As discussed in \autoref{sec:verbs}, verbs can mark a large number of features
-through morphology. Ayeri distinguishes an unmarked present tense
-from three degrees of past and future tense each (\autoref{subsec:tense}).
-Moreover, it marks a range of grammatical aspects, that is, progressive,
-habitative, and iterative (\autoref{subsec:aspect}), as well as various moods,
-namely, irrealis, negative, imperative, and hortative (\autoref{subsec:mood}).
-Modal particles can also be listed in terms of a feature \Mod\textsc{ality}
-(\autoref{subsec:modals}). Besides this, transitive finite verbs are
-obligatorily marked for the case and animacy of the clause's topic. Ayeri's
-system of verb agreement moreover alternates between agreement with full
-third-person NPs and pronominal clitics. For this reason, the feature
-\ups{\Subj{} \Pred} appears in brackets in (\ref{ex:inflmorphlex}): it is only
-defined for pronominal clitics (sections \ref{clitics_postverb_person},
-p.~\pageref{clitics_postverb_person}, and \ref{subsec:persnumagr}). Absence of
-tense, mood, and aspect marking specifies that the verb is in the contextually
-appropriate tense (compare \autoref{subsec:tense}), indicative mood, and simple
-aspect.
+by means of morphology. Ayeri distinguishes an unmarked present tense from
+three degrees of past and future tense each (\autoref{subsec:tense}).
+Furthermore, it marks a range of grammatical aspects, that is, progressive,
+habitative, and iterative aspect (\autoref{subsec:aspect}), as well as various
+moods, namely, irrealis, negative, imperative, and hortative mood
+(\autoref{subsec:mood}). Modal particles can also be captured in terms of a
+functional feature \Mod\textsc{ality} (\autoref{subsec:modals}). Besides this,
+transitive finite verbs are obligatorily marked for the case and animacy of the
+clause's topic. Ayeri's system of verb agreement moreover alternates between
+agreement with full third-person NPs and pronominal clitics. For this reason,
+the feature \ups{\Subj{} \Pred} appears in brackets in (\ref{ex:inflmorphlex}):
+it is only defined for pronominal clitics (sections
+\ref{clitics_postverb_person}, p.~\pageref{clitics_postverb_person}, and
+\ref{subsec:persnumagr}). Absence of tense, mood, and aspect marking specifies
+that the verb is in the contextually appropriate tense (compare
+\autoref{subsec:tense}), indicative mood, and simple aspect.
 
 Regarding phrase structure, the explanation about YP in the definition of S
 given in (\ref{ex:copstruct}) stated that there may also be a VP complement of
@@ -8649,57 +8695,20 @@ thus, to generate the adjective as a complement of \xhead{I}.
 In order to form clauses of the kind \fw{John is a better doctor than Bill},
 with the quality composed of an NP--AP combination, it is necessary to use a
 relative clause: \fw{John is a doctor who is better than Bill}. Ayeri only
-allows for \xhead{A} to be extracted if it does not modify a predicative
-nominal. The sentences in (\ref{ex:comppredn}) are therefore
-ungrammatical.
-% \footnote{In the past, I have tried to use the comparison verbs also in a
-% subordinating manner to compare an \emph{adverb}, attempting to render a
-% phrase like \fw{Alice runs faster than Bob} as
-% \ques{}\AgtT{}=be.more-\TsgF{} run-\Ptcp{} fast \Top{}=Alice \Parg{}=Bob.
-% This has always felt extremely awkward, though. A much more straightforward
-% way is to use comparison clitics, see \autoref{sec:adverbs}.}
+allows for \xhead{A} to be fronted if it does not modify a predicative nominal.
+The sentence in (\ref{ex:comppredn_1}) is thus ungrammatical because the
+adjective, \xayr{bnF}{ban}{good}, modifies a predicative noun,
+\xayr{kromyaasF}{karomayās}{doctor}. Since the adjective itself has a
+complement, \rayr{s hiro}{sa Hiro}, there are two patient arguments following
+each other, which is not permissible. Example (\ref{ex:comppredn_2}), on the
+other hand, shows the grammatical solution with the relative clause. Here, the
+term under comparison---being a \xayr{kromyaasF}{karomayās}{doctor}---is
+constructed as a copula clause while the comparison in quality between
+\rayr{ApitYnF}{Apican} and \rayr{hiro}{Hiro} is moved into the relative clause.
 
 \begin{figure}
 \pex\label{ex:comppredn}
-\a\ljudge*%
-\begin{minipage}[t]{.5\remaining}
-\begingl
-	\gla Engya ang @ Apican karomayās ban sa @ Hiro. //
-	\glb eng-ya ang= Apican karomaya-as ban sa= Hiro //
-	\glc be.more-\TsgM{} \Aarg{}= Apican doctor-\Parg{} good \Parg{}= Hiro //
-	\glft \textit{Intended:} `Apican is a doctor better than Hiro.' //
-\endgl
-\end{minipage}
-\hfill
-\begin{forest} shorter edges, italic leaves,
-[IP
-	[\xhead{I}
-		[Engya]
-	]
-	[S
-		[NP
-			[{ang Apican}, roof]
-		]
-		[VP
-			[NP
-				[\xhead{N}
-					[karomayās]
-				]
-				[AP
-					[\xhead{A}
-						[ban]
-					]
-					[NP
-						[{sa Hiro}, roof]
-					]
-				]
-			]
-		]
-	]
-]
-\end{forest}
-
-\a\ljudge*%
+\a\label{ex:comppredn_1}\ljudge*%
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\gla Engya ban ang @ Apican karomayās sa @ Hiro. //
@@ -8734,6 +8743,33 @@ ungrammatical.
 					]
 				]
 			]
+		]
+	]
+]
+\end{forest}
+
+\a\label{ex:comppredn_2}%
+\begin{minipage}[t]{.5\remaining}
+\begingl
+	\gla Ang @ Apican karomayās si ang @ engya ban sa @ Hiro. //
+	\glb ang= Apican karomaya-as si ang= eng-ya.Ø ban sa= Hiro //
+	\glc \Aarg{}= Apican doctor-\Parg{} \Rel{} \AgtT{}= be.more=\TsgM{}.\Top{}
+		good \Parg{}= Hiro //
+	\glft `Apican is a doctor who is better than Hiro.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, italic leaves,
+[S
+	[{\anno[\pass{\Subj}]{NP}}
+		[{Ang Apican}, roof]
+	]
+	[{\anno[\pass{\Plink}]{NP}}
+		[\anno{\xhead{N}}
+			[karomayās]
+		]
+		[{\anno[\elem{\Adjc}]{CP}}
+			[{si ang engya ...}, roof]
 		]
 	]
 ]
@@ -9111,27 +9147,27 @@ end of the phrase as a result of being modified by a relative clause.
 
 \citet{simpson1983} comes to the conlusion that resultatives always modify
 objects, whether they are surface objects or `underlying objects' (like the
-subjects of passives or of verbs like \fw{shatter} when used intransitively),
-and that verbs may be analyzed as being subcategorized for them in analogy to
-control and raising verbs. She proposes, thus, that there is a lexical rule
-which adds an \XCompl{} to a verb's subcategorization frame whose subject is
-the verb's logical object. This observation is squared with the argument
-structure of verbs in terms of the semantic role of the subject function:
-according to \citet{perlmutter1978}, intransitive verbs can be grouped into
-unergative and unaccusative depending on whether their syntactic subject is
-also their logical subject, or their logical object, compare
-(\ref{ex:verbtyp}).\footnote{The terms \citet{perlmutter1978} introduces,
-however, appear to be not completely unproblematic today. As \citet{dixon2010b}
-writes, \textcquote[156]{dixon2010b}{the labels \enquote{unaccusative} and
-\enquote{unergative} are used for such a wide variety of phenomena as to be
-essentially imprecise and unclear. [...]\ Their employment provides the false
-sense of a universal semantic basis for varied grammatical properties. They are
-best avoided}. In the literature consulted as a theoretical background for this
-section, `unaccusative' and `unergative' are used in their basic definition as
-provided by \citet{perlmutter1978} and summarized in (\ref{ex:verbtyp}), and I
-will stick to this definition here as well. Also compare
-\citet[334--336]{bresnan2016}.} \citet{mueller2002} seems to argue along
-similar lines, but from an \textsc{hpsg} perspective.
+subjects of passives or of verbs like \fw{shatter} when used intransitively).
+Furthermore, according to her, verbs may be analyzed as being subcategorized
+for resultatives in analogy to control and raising verbs. She proposes, thus,
+that there is a lexical rule which adds an \XCompl{} to a verb's
+subcategorization frame whose subject is the verb's logical object. This
+observation is squared with the argument structure of verbs in terms of the
+semantic role of the subject function: according to \citet{perlmutter1978},
+intransitive verbs can be grouped into unergative and unaccusative depending on
+whether their syntactic subject is also their logical subject, or their logical
+object, compare (\ref{ex:verbtyp}).\footnote{The terms \citet{perlmutter1978}
+introduces, however, appear to be not completely unproblematic today. As
+\citet{dixon2010b} writes, \textcquote[156]{dixon2010b}{the labels
+\enquote{unaccusative} and \enquote{unergative} are used for such a wide
+variety of phenomena as to be essentially imprecise and unclear. [...]\ Their
+employment provides the false sense of a universal semantic basis for varied
+grammatical properties. They are best avoided}. In the literature consulted as
+a theoretical background for this section, `unaccusative' and `unergative' are
+used in their basic definition as provided by \citet{perlmutter1978} and
+summarized in (\ref{ex:verbtyp}), and I will stick to this definition here as
+well. Also compare \citet[334--336]{bresnan2016}.} \citet{mueller2002} seems to
+argue along similar lines, but from an \textsc{hpsg} perspective.
 
 \begin{figure}
 \pex\label{ex:verbtyp}%
@@ -9834,7 +9870,11 @@ case expressing what is spoken about. Two examples are given in
 by a listener and a theme, while in (\ref{ex:multigen_2}), there are two
 optional genitive NPs, one for the theme and another as a locative adverbial.
 In both cases, a combination with \xayr{nj}{nay}{and} is possible in principle,
-but the reading again becomes zeugmatic.
+but the reading again becomes zeugmatic. At last, (\ref{ex:multiins_1})
+attempts to coordinate an instrumental DP with an instrumental NP to express
+both authorship and material use. These phrases can be coordinated with each
+other, and coordination with an adverb as in (\ref{ex:multiins_2}) is possible
+as well.
 
 \begin{figure}[h]
 \pex\label{ex:multigen}
@@ -9856,11 +9896,6 @@ but the reading again becomes zeugmatic.
 \endgl
 \xe
 \end{figure}
-
-At last, (\ref{ex:multiins_1}) attempts to coordinate an instrumental DP with
-a likewise instrumental NP to express both authorship and material use. These
-phrases can be coordinated with each other, and coordination with an adverb as
-in (\ref{ex:multiins_2}) is possible as well.
 
 \begin{figure}
 \pex\label{ex:multiins}%
@@ -10260,17 +10295,15 @@ patientlike roles are mapped to [–\,o], thus embody the \Oblique{} function.
 \subsection{Passivization}
 \label{subsubsec:valdecr}
 
-Passivization is a valency-decreasing operation in that, according to \Lfg{}
-theory, the lexical entry of a verb is manipulated in a way to lose its agent
-argument so that the patient becomes the syntactic subject. In English,
-passivization is a way to keep a topic in the subject slot, for one. This
-function is basically acted out by Ayeri's topic marking, however. Still, there
-may be contexts in which one does not want to explicitly state an agent.
-Furthermore, we may want to test whether Ayeri allows recipients in
+Passivization is a valency-decreasing operation in that a transitive verb loses
+its agent argument. In English, passivization is a way to keep a topic in the
+subject slot, for one. This function is acted out by Ayeri's topic marking,
+however. Still, there may be contexts in which not stating an agent may be
+useful. Moreover, we may want to test whether Ayeri allows recipients in
 ditransitive constructions to be passivized. Another question is how Ayeri
-fares with regards to passivizing the objects of subordinate verbs. Lastly, we
-need to check whether Ayeri can passivize derived arguments of complex
-transitive verbs such as those which were surveyed in the previous section 
+fares regarding passivizing the objects of subordinate verbs. Lastly, we need
+to check whether Ayeri can passivize derived arguments of complex transitive
+verbs such as those which were surveyed in the previous section
 (\autoref{subsec:comptr}).
 
 According to \Lfg{}'s lexical mapping theory
@@ -11804,9 +11837,10 @@ strategies in (\ref{ex:derargpass_2}) and (\ref{ex:derargpass_3}).
 % marking on the verb.}
 
 \begin{figure}
+\setlength{\tabcolsep}{.5ex}
 \pex\label{ex:derargpass}
 \a\label{ex:derargpass_1}%
-\begin{minipage}[t]{.4\remaining}
+\begin{minipage}[t]{.55\remaining}
 \begingl
 	\gla Ang @ paye {} @ Misan tehasyeley selesena. //
 	\glb ang= pa-ye Ø= Misan tehas-ye-ley seles-ena //
@@ -11865,7 +11899,7 @@ take₁
 \end{tabular}
 
 \a\label{ex:derargpass_2}\ljudge*%
-\begin{minipage}[t]{.4\remaining}%
+\begin{minipage}[t]{.55\remaining}%
 \begingl
 	\gla Na @ pāra tehasyeley seles. //
 	\glb na= pa-ara tehas-ye-ley seles-Ø //
@@ -11924,7 +11958,7 @@ take₂
 \end{tabular}
 
 \a\label{ex:derargpass_3}%
-\begin{minipage}[t]{.4\remaining}
+\begin{minipage}[t]{.55\remaining}
 \begingl
 	\gla Na @ pāran tehasyeley seles. //
 	\glb na= pa-aran tehas-ye-ley seles-Ø //
@@ -12005,9 +12039,10 @@ to express the sense of `Z makes X \textsc{verb} Y'. An example is provided
 by (\ref{ex:causstruct}).
 
 \begin{figure}
+\setlength{\tabcolsep}{.5ex}
 \pex\label{ex:causstruct}
 \a\label{ex:causstruct_1}%
-\begin{minipage}[t]{.4\remaining}%
+\begin{minipage}[t]{.55\remaining}%
 \begingl
 	\gla Ang @ nimpyan pralanye hakasley miye. //
 	\glb ang= nimp-yan pralan-ye-Ø hakas-ley miye //
@@ -12060,7 +12095,7 @@ verb
 \end{tabular}
 
 \a\label{ex:causstruct_2}%
-\begin{minipage}[t]{.4\remaining}%
+\begin{minipage}[t]{.55\remaining}%
 \begingl
 	\gla Sā @ nimpyan pralanjang hakasley miye nosāya. //
 	\glb sā= nimp-yan pralan-ye-ang hakas-ley miye nosāya-Ø //
