@@ -282,6 +282,11 @@
 	skip=.25\baselineskip
 ]{caption}
 
+% Increase rubber between a float and text. Otherwise, we may get up to a
+% line's worth of whitespace between paragraphs when a float is at the top.
+% (https://tex.stackexchange.com/a/26522)
+\setlength{\textfloatsep}{20pt plus 8pt minus 4pt}
+
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \setlength{\columnsep}{2\baselineskip}
