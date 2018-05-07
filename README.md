@@ -10,7 +10,7 @@ I hope that by using LaTeX and GitHub, the whole process of editing will be more
 Currently working on
 ====================
 
-**WARNING**: This is work heavily in progress! Currently preparing a keyword index for the backmatter, mainly working the following chapter:
+**WARNING**: This is work heavily in progress! Currently preparing a keyword index for the backmatter, mainly working on the following chapter(s):
 
 * Grammatical categories (`chapters/gramcat.tex`)
 
