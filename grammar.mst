@@ -1,0 +1,4 @@
+% Additional specifications for index formatting
+% cf. https://tex.stackexchange.com/a/58261/
+suffix_2p "\\nohyperpage{\\,f.}"
+suffix_3p "\\nohyperpage{\\,ff.}"
