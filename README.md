@@ -12,7 +12,7 @@ Currently working on
 
 **WARNING**: This is work heavily in progress! Currently preparing a keyword index for the backmatter, mainly working on the following chapter(s):
 
-* Grammatical categories (`chapters/gramcat.tex`)
+* Morphological typology (`chapters/morphtyp.tex`)
 
 The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least twice, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
 
