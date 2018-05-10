@@ -545,6 +545,10 @@
 
 % Keyword index
 \usepackage{imakeidx}
+\indexsetup{
+	level=\chapter,
+	toclevel=chapter,
+}
 \makeindex[intoc]
 
 % Smaller font in block quotes
@@ -826,14 +830,13 @@
 %% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \printbibliography
+\cleartorecto
 
 %% BACK MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter
 \printindex
-\pagebreak
-\pagestyle{empty}
-\phantom{x}
+\cleartorecto
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
