@@ -257,11 +257,11 @@
 % Clickable links in footnotes, TOC, etc.
 \usepackage[
 	xetex,
-	bookmarks=true,
-	colorlinks=false,
-	linktoc=section,
-	hidelinks,
 	pdfusetitle,
+	bookmarks,
+	linktoc=section,
+	colorlinks=false,
+	hidelinks,
 ]{hyperref}
 
 % Write "section" instead of "subsection", "subsubsection" etc.
@@ -653,6 +653,8 @@
 
 %% HALF TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\frontmatter
+
 \begin{titlingpage}
 \begin{center}
 {\Huge A Grammar of Ayeri}
@@ -669,7 +671,6 @@
 
 %% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\frontmatter
 \begin{KeepFromToc}
   \tableofcontents
 \end{KeepFromToc}
