@@ -21,8 +21,9 @@ I will tag a release (basically "first edition") only when everything is as comp
 Roadmap
 =======
 
-* maybe extend name list with etymologies
 * make index
+* add info on syntax of verbs with predicative complements (like _tav-_ 'become')
+* ask native English speakers to proofread?
 * look into print-on-demand options
 
 Table of Contents
