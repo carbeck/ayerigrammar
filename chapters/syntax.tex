@@ -8831,28 +8831,190 @@ constructed as a copular clause\index{copular clause} while the comparison\index
 
 \index{verbs!comparative|)}
 
-% \subsection{Semi-copula verbs}
-% \label{subsec:semicop}
+\subsection{Semi-copula verbs}
+\label{subsec:semicop}
+\index{grammatical function!predicative complement|(}
 
-% ... Verbs like
-% \xayr{my/}{maya-}{feel},
-% \xayr{surFpF/}{surp-}{seem}, and
-% \xayr{tvF/}{tav-}{become}
-% which can take predicative complements (APs and NPs) ...
+\hyperref[subsec:eqs]{Section~\ref*{subsec:eqs}} only dealt with predicative
+adjectives and nominals over the subject in order to illustrate a very common
+basic type of statement, that is, copula clauses. Moreover, it was mentioned
+before that finite verbs in \xhead{I} may have a sister node\index{constituent
+order} which is a complement. This is not only the position raised and
+controlled predicates may appear in, but it is also the typical position of
+predicative complements of verbs like
+\xayr{my/}{maya-}{feel},
+\xayr{surFpF/}{surp-}{seem}, and
+\xayr{tvF/}{tav-}{become}.
+These verbs are not copulas in the strict sense, but they nonetheless attribute
+a property to their subject, for instance, as in (\ref{ex:semicoppred}). For
+this reason, they are termed `semi-copula verbs' here.
+
+\begin{figure}
+\pex\label{ex:semicoppred}
+\a\label{ex:semicoppred_1}%
+\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Mayaye mino ang @ Kemis. //
+	\glb maya-ye mino ang= Kemis //
+	\glc feel-\TsgF{} happy \Aarg{}= Kemis //
+	\glft `Kemis feels happy.' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{feel}{\ups{\Subj} \ups{\Plink}} \\
+	\Subj	&	\[
+		\avmspan{``Kemis''} \\
+	\] \\
+	\Plink	&	\[
+		\avmspan{``happy''} \\
+	\] \\
+\]
+\end{avm}
+
+\a\label{ex:semicoppred_2}%
+\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Ang @ tavya sobayās {} @ Prano. //
+	\glb ang= tav-ya sobaya-as Ø= Prano //
+	\glc \AgtT{}= become-\TsgM{} teacher-\Parg{} \Top{}= Prano //
+	\glft `Prano becomes a teacher.' //
+\endgl
+\end{minipage}
+~
+\begin{avm}
+\[
+	\Pred	&	\astruct{become}{\ups{\Subj} \ups{\Plink}} \\
+	\Top	&	\[
+		\avmspan{``Prano''} \\
+	\]\tikzmark{semicopred2_top} \\
+	\Subj	& \tikzmark{semicopred2_subj} \\
+	\Plink	&	\[
+		\avmspan{``teacher''} \\
+	\] \\
+\]
+\end{avm}
+\begin{tikzpicture}[remember picture, overlay]
+\draw [rounded corners=1ex]
+	([yshift=1ex]{pic cs:semicopred2_top})
+	-- ++(east:1em) |-
+	([yshift=1ex]{pic cs:semicopred2_subj});
+\end{tikzpicture}
+
+\xe
+\end{figure}
+
+The position of the predicative adjective in (\ref{ex:semicoppred_1}) is the
+normal one. Since there are predicative nominals as well, however, this position
+is also available to NPs, though less typically so. Predicative NPs of
+semi-copula verbs are otherwise treated like regular objects with regards to
+constituent order\index{constituent order}. This also means that, as with
+predicative nominals in copula clauses, complements of semi-copula verbs appear
+in the patient case\index{case!patient}. Example (\ref{ex:semicoppred_2})
+illustrates the first possibility, where a predicative NP appears between the
+finite verb and the subject NP.
+
+How do we know, however, that in (\ref{ex:semicoppred_2}), the subject NP and
+the VP carrying the object have not simply been inverted?\index{constituent
+order} While this is a grammatically valid possibility, another possible
+constituent-order pattern emerges if we include adjuncts. Both variants are
+illustarted in (\ref{ex:semicopvp}).
+
+\begin{figure}
+\pex\label{ex:semicopvp}%
+\a\label{ex:semicopvp_1}%
+\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Ang @ tavya sobayās pericanya sarisa {} @ Prano. //
+	\glb ang= tav-ya sobaya-as perican-ya sarisa Ø= Prano //
+	\glc \AgtT{}= become-\TsgM{} teacher-\Parg{} year-\Loc{} next \Top{}= 
+		Prano //
+	\glft `Prano becomes a teacher next year.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} italic leaves, shorter edges, narrower nodes
+[IP
+	[\anno{\xhead{I}}
+		[{Ang tavya}, roof]
+	]
+	[\anno{S}
+		[\anno{VP}
+			[{\anno[\pass{\Plink}]{NP}}
+				[sobayās]
+			]
+			[{\anno[\elem{\Adjc}]{NP}}
+				[{pericanya sarisa}, roof]
+			]
+		]
+		[{\anno[\pass{\Subj}]{NP}}
+			[Prano]
+		]
+	]
+]
+\end{forest}
+
+\a\label{ex:semicopvp_2}%
+\begin{minipage}[t]{.4\remaining}
+\begingl
+	\gla Ang @ tavya sobayās {} @ Prano pericanya sarisa. //
+	\glb ang= tav-ya sobaya-as Ø= Prano perican-ya sarisa //
+	\glc \AgtT{}= become-\TsgM{} teacher-\Parg{} \Top{}= Prano year-\Loc{}
+		next //
+	\glft `Prano becomes a teacher next year.' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} italic leaves, shorter edges, for tree={s sep-=1.5em,s=0}
+[IP
+	[\anno{\xbar{I}}
+		[\anno{\xhead{I}}
+			[{Ang tavya}, roof]
+		]
+		[{\anno[\pass{\Plink}]{NP}}
+			[sobayās]
+		]
+	]
+	[\anno{S}
+		[{\anno[\pass{\Subj}]{NP}}
+			[Prano]
+		]
+		[\anno{VP}
+			[{\anno[\elem{\Adjc}]{NP}}
+				[{pericanya sarisa}, roof]
+			]
+		]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+The sentence in (\ref{ex:semicopvp_1}) is rendered according to the strategy of
+inverting the order of subject NP and VP, with the latter containing both the
+predicative complement and the adjunct: \xayr{sobyaasF perikYnFy sris}{sobayās
+pericanya sarisa}{a teacher next year} as a whole precedes the subject,
+\rayr{pFrno}{Prano}. In (\ref{ex:semicopvp_2}), on the other hand, the
+predicative nominal, \rayr{sobyaasF}{sobayās}, has been fronted to appear right
+after the finite verb, \xayr{ANF tvFy}{ang tavya}{(he) becomes}, while the
+adjunct, \rayr{perikYnFy sris}{pericanya sarisa}, still follows the subject.
+
+\index{grammatical function!predicative complement|)}
 
 \subsection{Secondary Predicates}
 \label{subsec:secpred}
 
-\hyperref[subsec:eqs]{Section~\ref*{subsec:eqs}} has only dealt with
-predicative adjectives and nominals over the subject in order to illustrate a
-very common basic type of statement. There are also secondary predicates,
-however, which can be subdivided further into depictive and resultative
-secondary predicates. A depictive\index{adjectives!depictive} secondary predicate, on the one hand,
-\textcquote[173]{mueller2002}{provides information about the state of the
-entity it refers to. This state holds at the time of the event described by the
-verb}. A resultative\index{adjectives!resultative} secondary predicate, on the other hand, refers to
-\textcquote[173]{mueller2002}{the result of an event [...]\ specified by the
-adjective\index{adjectives}}. This difference is illustrated in (\ref{ex:engsecpred}).
+Besides verbs taking predicative adjectives and nominals as complements, there
+are also verbs taking secondary predicates as complements. These predicative
+complements can be subdivided further into depictive and resultative secondary
+predicates. A depictive\index{adjectives!depictive} secondary predicate, on the
+one hand, \textcquote[173]{mueller2002}{provides information about the state of
+the entity it refers to. This state holds at the time of the event described by
+the verb}. A resultative\index{adjectives!resultative} secondary predicate, on
+the other hand, refers to \textcquote[173]{mueller2002}{the result of an event
+[...]\ specified by the adjective\index{adjectives}}. This difference is
+illustrated in (\ref{ex:engsecpred}).
 
 \begin{figure}[h]
 \pex\label{ex:engsecpred}
