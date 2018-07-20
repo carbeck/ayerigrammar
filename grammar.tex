@@ -214,6 +214,39 @@
 	sequentes = {ff.},
 }
 
+% Possessive citations like "Doe's (1992)"
+% https://tex.stackexchange.com/a/307461
+\DeclareNameFormat{labelname:poss}{% Based on labelname from biblatex.def
+  \nameparts{#1}% Not needed if using Biblatex 3.4
+  \ifcase\value{uniquename}%
+    \usebibmacro{name:family}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}%
+  \or
+    \ifuseprefix
+      {\usebibmacro{name:first-last}{\namepartfamily}{\namepartgiveni}{\namepartprefix}{\namepartsuffixi}}
+      {\usebibmacro{name:first-last}{\namepartfamily}{\namepartgiveni}{\namepartprefixi}{\namepartsuffixi}}%
+  \or
+    \usebibmacro{name:first-last}{\namepartfamily}{\namepartgiven}{\namepartprefix}{\namepartsuffix}%
+  \fi
+  \usebibmacro{name:andothers}%
+  \ifnumequal{\value{listcount}}{\value{liststop}}{'s}{}}
+\DeclareFieldFormat{shorthand:poss}{%
+  \ifnameundef{labelname}{#1's}{#1}}
+\DeclareFieldFormat{citetitle:poss}{\mkbibemph{#1}'s}
+\DeclareFieldFormat{label:poss}{#1's}
+\newrobustcmd*{\posscitealias}{%
+  \AtNextCite{%
+    \DeclareNameAlias{labelname}{labelname:poss}%
+    \DeclareFieldAlias{shorthand}{shorthand:poss}%
+    \DeclareFieldAlias{citetitle}{citetitle:poss}%
+    \DeclareFieldAlias{label}{label:poss}}}
+\newrobustcmd*{\posscite}{%
+  \posscitealias%
+  \textcite}
+\newrobustcmd*{\Posscite}{\bibsentence\posscite}
+\newrobustcmd*{\posscites}{%
+  \posscitealias%
+  \textcites}
+
 % Things for tables; needs to be loaded *before* hyperref if footnotes in
 % tables are supposed to work (bug in tabu where they still don't?)
 \usepackage{longtable}
@@ -364,7 +397,6 @@
 \usepackage{glossary-inline}%
 
 \newglossarystyle{mysuper}{%
-	\glossarystyle{super}% based on super
 	\renewenvironment{theglossary}{%
 		\begin{glossdefs}%
 	}{%
@@ -382,7 +414,7 @@
 % Formatting of glosses
 \usepackage{expex}
 \pretocmd{\chapter}{\excnt=1}{}{}
-\lingset{Everyex=\smaller\citereset}
+\lingset{Everyex=\smaller\citereset,aboveglftskip=0pt}
 
 % Third-level enumeration for expex examples,
 % cf. http://tex.stackexchange.com/a/77941
