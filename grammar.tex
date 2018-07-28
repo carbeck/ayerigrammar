@@ -320,6 +320,13 @@
 % (https://tex.stackexchange.com/a/26522)
 \setlength{\textfloatsep}{20pt plus 8pt minus 4pt}
 
+% Throughout the book, examples are wrapped in floats to dynamically position 
+% them. By default, LaTeX tries to put floats at the top of pages, disrupting 
+% the reading flow. For examples especially, thus, we want them to be placed 
+% 'here', if possible, or at the top of the next page (cf. 'memoir' package 
+% manual, p. 177f.)
+\setfloatlocations{figure}{htbp}
+
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \setlength{\columnsep}{2\baselineskip}
