@@ -99,7 +99,7 @@ The rules in (\ref{ex:dpnpcasemap}) illustrate the typical mappings between
 case\index{case} marking and grammatical functions, which are not always unambiguous\index{ambiguity}. As
 explained above (compare \autoref{subsec:case}), the dative case\index{case!dative} does not only
 indicate that something is given to this referent or done to their benefit, but
-also indicates motion towards this referent. Likewise, the genitive case\index{case!genitive} does
+also indicates motion towards them. Likewise, the genitive case\index{case!genitive} does
 not only indicate possession\index{semantic role!possessor}, but also origin, and motion from this referent.
 Nominal complements\index{grammatical function!closed complement} of nouns which specify what the noun consists of appear in the
 instrumental case\index{case!instrumental}, besides the instrumental\index{case!instrumental} being used to indicate the means or
@@ -107,7 +107,7 @@ the circumstance by which an action comes about. Nominals may also lack case\ind
 marking, which indicates that the respective phrase is (a part of) the topic\index{grammatical function!topic}
 function of the verb\index{verbs}, which is what the supplementary lexical rule in (\ref{ex:topicrule}) describes.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:topicrule}
 ¬\,\downs{\Case} $\implies$ \pass{\Top} $\vee$ \elem{\Top}
 \xe
@@ -116,7 +116,7 @@ function of the verb\index{verbs}, which is what the supplementary lexical rule 
 Instead of case\index{case} marking on the DP\index{phrase types!determiner phrase} or NP, there is a marker before\index{word order} the verb\index{verbs}
 which provides information on the case\index{case} and, if \AgtT{} or \PatT{}, also about
 the animacy\index{animacy} of the topicalized\index{grammatical function!topic} phrase. Grammatical information about the topic\index{grammatical function!topic}
-of a phrase is spread over two discontinuous sites this way. This issue does
+of a clause is spread over two discontinuous sites this way. This issue does
 not pose a problem to an \Lfg{}-based\index{Lexical-functional grammar} analysis, however, since both grammatical
 sites unify their information content in the f-structure feature \Top{}. I will
 mostly be using the annotation `\pass{\Top}' for topics\index{grammatical function!topic} in the following;
@@ -140,7 +140,7 @@ number of other free elements, as we have seen previously---adjectives,
 possessive determiners, as well as relative clauses and nominal complements. These
 typically follow nouns. It was also described before how Ayeri's nouns may
 host a number of clitics, among which are deictic prefixes and quantifiers, as
-well as proclitic case markers with proper nouns. These clitics, however, will
+well as proclitic case markers of proper nouns. These clitics, however, will
 not be treated as targets of syntactic operations, since \Lfg{} follows the
 approach of lexical integrity. Thus, bound elements like affixes and clitics
 are assumed not to be reflected or affected by syntax itself. The phrase
@@ -205,7 +205,7 @@ projection of \xhead{N} (that is, NP) is annotated very generally for the
 function of the NP---basically, an NP can act as either a discourse function
 (\DF{}) or a grammatical function (\GF{}). Besides, nouns may be modified by
 possessors\index{pronouns!possessive} and quantifiers\index{quantifiers}. These, however, may better be analyzed as forming
-DPs\index{phrase types!determiner phrase} which embed the NP as a complement. (\ref{ex:nounmods}) gives an example of
+DPs\index{phrase types!determiner phrase} which embed the NP as a complement. Example (\ref{ex:nounmods}) provides an instance of
 each kind of modifier. Since there is no grammatical context given, NP is
 unmarked for function in these examples.
 
@@ -383,8 +383,8 @@ related is also arranged in close proximity.'), and also grammatical weight
 distinguish among various structural weight measures as predictors of weight
 effects. Counting words, nodes, or phrasal nodes all work well}, which means
 that no single metric can be used to describe the order of constituents in a
-phrase. However, for instance, relative clauses\index{relative clause} trail whenever possible
-presumably since they tend to contain whole subclauses and thus a lot of
+phrase. However, for instance, relative clauses\index{relative clause} trail whenever possible,
+presumably since they tend to contain whole subclauses and therefore a lot of
 information. It seems advisable not to put an element with much less
 information content after them, especially when it refers to a different head
 than all the things inside the relative clause\index{relative clause}.
@@ -406,7 +406,7 @@ sentence in (\ref{ex:adjscope}a) theoretically allows both c-structure
 interpretations given in (\ref{ex:adjscopecstruct}), however, as mentioned
 above, the second one is actually the preferred one in such cases.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:adjscope}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\label{ex:adjscope_1}\ljudge\excl%
@@ -429,7 +429,7 @@ above, the second one is actually the preferred one in such cases.
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:adjscopecstruct}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest} italic leaves, shorter edges,
@@ -478,7 +478,7 @@ nominal head with \fw{one} in English is acceptable at least to some
 speakers \citep[181]{carnie2013}. Let us assume that Ayeri speakers consider it
 odd, however.}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:complnoadjc}
 \ljudge*\begin{minipage}[t]{.5\remaining}%
 \begingl
@@ -489,7 +489,7 @@ odd, however.}
 \endgl
 \end{minipage}
 ~
-\begin{forest} italic leaves, shorter edges,
+*~\begin{forest} italic leaves, shorter edges,
 [NP
 	[\anno{\xbar{N}}, name=nbar
 		[\anno{\xhead{N}}
@@ -514,21 +514,21 @@ What should the structure for (\ref{ex:adjscope}b) look like to produce both a
 correct c-structure tree and correct f-structure annotations, though?
 It should be possible to analyze the complement NP, \rayr{sp\_eri}{sapaeri}, as modifying an NP which jointly holds the nominal
 head, \rayr{limu}{limu} as well as its adjunct\index{grammatical function!adjunct} adjective\index{adjectives}, \rayr{hiro}{hiro}.
-The NP has thus been `extended' in a way, so that one NP is nested within another.
+The NP has thus been `extended' in a way, so that one NP is nested within another, as indicated in (\ref{ex:npcstruct}b).
 Regarding functional annotation, such an analysis creates a problem, however, since
-\citet{bresnan2016} requires that if a phrase is adjoined to a phrasal
+\citet{bresnan2016} require that if a phrase is adjoined to a phrasal
 constituent, this phrase must either not be annotated or not embody an argument
 function (\cite[100, 107]{bresnan2016}, compare (\ref{ex:functions}) of
 \autoref{ch:syntyp}). \Compl{}\index{grammatical function!closed complement} is an argument function, though. A possibility
 for lexocentric specification of an argument function is left open, however.
-Due to Ayeri's consistent use of case\index{case} marking, I see no problem to invoke a
+Due to Ayeri's consistent use of case\index{case} marking, I see no problem in invoking a
 lexocentric specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g):
 \Ins{} specifies in this case that the head of this NP, \xayr{sp}{sapa}{wool},
-is a complement of \xayr{limu}{limu}{shirt}. Extraposed relative clauses\index{relative clause} are
-less problematic, since they are adjuncts\index{grammatical function!adjunct}, and \Adjc{} is by itself not an
+is a complement of \xayr{limu}{limu}{shirt}; see an example in (\ref{ex:complextrapos}). Extraposed relative clauses\index{relative clause} are
+less problematic, since they are adjuncts\index{grammatical function!adjunct}, and \Adjc{} is not an
 argument function.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:complextrapos}
 \begin{forest} italic leaves, shorter edges,
 [NP
@@ -548,17 +548,18 @@ argument function.
 \xe
 \end{figure}
 
-The c-structure tree in (\ref{ex:npstruct}) shows that Ayeri prefers
-consistent head--dependent word order\index{word order} at least for its NPs. As illustrated by
-previous examples, both adjuncts\index{grammatical function!adjunct} and complements are, for the most part,
-consistently appended to the right of their heads, which means that Ayeri may
-be classified as a rather consistently right-branching language.
+The c-structure tree in (\ref{ex:npcstruct}) shows that Ayeri prefers consistent
+head--dependent word order\index{word order} at least for its NPs. As
+illustrated by previous examples, both adjuncts\index{grammatical
+function!adjunct} and complements are mostly appended to the right of their
+heads, which means that Ayeri may be classified as a rather consistently
+right-branching language.
 % However, a certain number of postpositions form an exception to this
 % classification (compare \autoref{subsec:postpos}).
-In light of word order\index{word order} typology\index{typology} we can
-state the generalizations listed in (\ref{ex:nptyp}).
+Regaring word order\index{word order} typology\index{typology}, we can state
+the generalizations in (\ref{ex:nptyp}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:nptyp}
 \a Order of noun and adjective\index{adjectives}: N Adj
 \a Order of noun and genitive\index{case!genitive}: N Gen
@@ -647,7 +648,7 @@ to. Hence, \xhead{N} is given in (\ref{ex:nouncltree}) as split into `Cl' and
 More important to \Lfg{}\index{Lexical-functional grammar} than c-structure trees, however, is f-structure to
 gather potentially disparate information into semantically coherent functional
 units.\footnote{Essentially, c-structure is similar to the tree hierarchy of
-paragraphs, images, tables etc.\ in an \textsc{html} file, while f-structure
+paragraphs, images, tables, etc.\ in an \textsc{html} file, while f-structure
 describes semantic properties of elements in the tree similar to how
 \textsc{css} defines the layout properties of these elements.} In the
 following, I will thus give a list of morpholexic specifications in
@@ -658,10 +659,10 @@ kind already shown in (\ref{ex:clitics_43}),
 \autoref{clitics_postverb_person} (p.~\pageref{ex:clitics_43}). Nouns generally
 imply a third-person\index{person} reference; they distinguish number\index{number}, gender\index{gender} and animacy\index{animacy}, as
 well as case\index{case}. Clitics\index{clitics}, however, may also add information about deixis\index{deixis}
-(\ref{ex:deixisfeat}); likeness and quantity might be interpreted conveniently
-as adding to the noun's \Adjc{}\index{grammatical function!adjunct} feature (\ref{ex:nounqadj}).
+(\ref{ex:deixisfeat}); likeness can be conveniently dealt with as forming a
+complex \Pred{}, and quantity feeds the \Quant{} feature, see (\ref{ex:nounqadj}).
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \pex\label{ex:nounmorphlex}%
 \a\adjustbox{valign=t}{%
@@ -846,7 +847,7 @@ redundant. As shown in \autoref{sec:numerals} (p.~\pageref{hundreds}), however,
 there are very limited occasions where a noun may be marked for plurality\index{number!plural} in
 spite of the presence of a numeral\index{numerals}, for instance as in (\ref{ex:plovermkg}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:plovermkg}\begingl
 	\gla Ang @ bengyon keynamye menang kanānya {desay iray}. //
 	\glb ang= beng-yon keynam-ye-Ø menang kanān-ya {desay iray} //
@@ -1085,30 +1086,32 @@ German:\medskip\\
 \xe
 \end{figure}
 
-The German\index{German} examples in (\ref{ex:germandetdist}) show that determining elements
-such as a definite article (\fw{der} `the'), a demonstrative pronoun
-(\fw{dieser} `this') and a possessive pronoun (\fw{mein} `my') are in
-complementary distribution for most combinations. The only exception to this is
-the combination of demonstrative and possessive in (\ref{ex:germandetdist}g),
-which is grammatically marked, however.\footnote{Example
-(\ref{ex:germandetdist}f) differs from (\ref{ex:germandetdist}g) in the
-declension paradigm of the possessive: (\ref{ex:germandetdist}f) uses the
-`weak' (\Wk) adjective declension regularly, since a determiner with strong
-(\St) declension precedes. (\ref{ex:germandetdist}g) appears to be an exception
-in permitting two determiners of the strong declension. \citet[160--161,
-203--205]{demske2001} notes that, according to \citet{plank1992}, possessive
-pronouns may apparently still act as modifiers, not only determiners, under
-certain circumstances. In modern Standard German\index{German}, this construction is strongly
-marked, however. It is probably a remnant of earlier stages of German\index{German} where
-there was no such restriction on the co-ocurrence of demonstrative and
+The German\index{German} examples in (\ref{ex:germandetdist}) show that
+determining elements 
+% such as a definite article (\fw{der} `the'), a demonstrative pronoun
+% (\fw{dieser} `this'), and a possessive pronoun (\fw{mein} `my')
+are in complementary distribution for most combinations with each other. The
+only exception to this is the combination of demonstrative and possessive in
+(\ref{ex:germandetdist}g), which is grammatically marked,
+however.\footnote{Example (\ref{ex:germandetdist}f) differs from
+(\ref{ex:germandetdist}g) in the declension paradigm of the possessive:
+(\ref{ex:germandetdist}f) uses the `weak' (\Wk) adjective declension regularly,
+since a determiner with strong (\St) declension precedes. Example
+(\ref{ex:germandetdist}g) appears to be an exception in permitting two
+determiners of the strong declension. \citet[160--161, 203--205]{demske2001}
+notes that, according to \citet{plank1992}, possessive pronouns may apparently
+still act as modifiers, not only determiners, under certain circumstances. In
+modern Standard German\index{German}, this construction is strongly marked,
+however. It is probably a remnant of earlier stages of German\index{German}
+where there was no such restriction on the co-ocurrence of demonstrative and
 possessive pronouns yet \citep[173]{demske2001}.} On this phenomenon of
 complementary distribution of determiners---which also holds true for
 English---\citet{carnie2013} writes, \textcquote[208]{carnie2013}{One thing to
 note about determiners is that they are typically heads. Normally, there can
-only be one of them in an NP\index{phrase types!noun phrase}}, at least in English (and German\index{German}).
-\citet[9--22]{demske2001} elaborates on this point for German\index{German} as well.
-Regarding the examples of suffixed definite articles in (\ref{ex:romdecl}),
-\citet{dindelegan2013} states that
+only be one of them in an NP\index{phrase types!noun phrase}}, at least in
+English. \citet[9--22]{demske2001} discusses this point for German\index{German}
+as well. Regarding the examples of suffixed definite articles in
+(\ref{ex:romdecl}), \citet{dindelegan2013} states that
 
 \blockcquote[297]{dindelegan2013}{Prenominal demonstrative \sic{} take a
 determinerless (articleless) head-noun complement [...]\ while postnominal
@@ -1123,7 +1126,7 @@ the cases as `$\Nom{}\equiv\Acc{}$' and `$\Dat{}\equiv\Gen{}$' where
 \citet{lyons1999} uses \Pri{} and \Obl{}. I will follow the latter convention
 in glossing here.}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:romdef}%
 	Romanian \citep[adapted from][297]{dindelegan2013}:\medskip\\
 	\begin{minipage}[t]{.5\remaining}
@@ -1150,14 +1153,14 @@ in glossing here.}
 Ayeri, however, behaves different from either German\index{German} or Romanian\index{Romanian} in treating
 case markers and demonstrative elements as clitics\index{clitics}. The case
 marker is always present for untopicalized\index{grammatical function!topic} NPs\index{phrase types!noun phrase}, whether a demonstrative clitic\index{clitics}
-is present as a modifier or not. The demonstrative clitic\index{clitics} merges with the head
+is also present as a modifier or not. The demonstrative clitic\index{clitics} merges with the head
 noun to the point where it is not certain whether it is still a clitic\index{clitics} or
 already an inflectional prefix\index{prefixes} (\autoref{clitics_prenoun_dem}), that is, they
 do not have phrasal status like the postnominal determiners of Romanian\index{Romanian}, but
 they are not heads of DP like the prenominal determiners of Romanian\index{Romanian} either
 \citep[299]{dindelegan2013}, due to their status as clitics\index{clitics}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:ayericasenoart}%
 \begin{minipage}[t]{.5\remaining}%
 	\tl\quad\begingl
@@ -1200,10 +1203,10 @@ pronoun/adjective in Ayeri mark case, while they do in German\index{German}. The
 thus cannot simply be left out, because the information it provides is not
 redundant, strictly speaking. Where it \emph{is} left out, it marks the NP\index{phrase types!noun phrase} as
 topicalized\index{grammatical function!topic} and it is required, then, that the verb\index{verbs} mark the topicalized\index{grammatical function!topic} NP's\index{phrase types!noun phrase}
-case. The same is also true of generic nouns, as shown in
+case. The same is also true of common nouns, as shown in
 (\ref{ex:suffixcase}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:suffixcase}%
 \begin{minipage}[t]{.5\remaining}%
 	\tl\quad\begingl
@@ -1253,14 +1256,14 @@ modifier in this case, the embedded nominal phrase precedes\index{constituent or
 than following\index{constituent order} it. The constituent structure resulting from the phrase
 structure definition in (\ref{ex:dpstruct}) is given in (\ref{ex:dpcstruct}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:dpstruct}
 \a DP → \anno*{\xbar{D}} \anno*[{\elem{\Adjc}}]{XP}
 \a \xbar{D} → \anno*{YP} \anno*{\xhead{D}}
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:dpcstruct}
 \begin{forest}
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{DP}}
@@ -1287,10 +1290,10 @@ have lexical content for a predicator, but only `$pro$'. Pronouns distinguish
 all grammatical categories of nouns---number\index{number}, gender\index{gender}, animacy\index{animacy}, and case\index{case}; they
 agree\index{agreement} with their antecedents in number\index{number}, gender\index{gender}, and animacy\index{animacy}. In addition to
 these person features, pronouns also encode person as a deictic\index{deixis} category. The
-reflexive clitic\index{clitics} \rayr{sitNF/}{sitang-} also defines the personal pronoun as
+reflexive clitic\index{clitics} \rayr{sitNF/}{sitang-} additionally defines the personal pronoun as
 reflexive\index{pronouns!reflexive}.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:perspromorphlex}
 \adjustbox{valign=t}{%
@@ -1305,8 +1308,8 @@ reflexive\index{pronouns!reflexive}.
 		  & \ups{\Gend} & = & \{\M{}, \F{}, \N{}, \Inan{}\} \\
 		  & \ups{\Num} & = & \{\Sg{}, \Pl{}\} \\
 		  & \ups{\Pers} & = & \{\First{}, \Second{}, \Third{}\} \\
-		( & \ups{\Refl}	& = & $\pm$ & ) \\
 		( & \ups{\Prontype} & = & $refl$ & ) \\
+		( & \ups{\Refl}	& = & $\pm$ & ) \\
 	\end{tabular}
 \end{tabu}%
 }
@@ -1326,7 +1329,7 @@ be modified by relative clauses\index{relative clause}, which is illustrated by
 (\ref{ex:nonounmods}d). In this example, the pronoun \xayr{yeNF}{yeng}{she} is
 modified by the relative clause\index{relative clause} \xayr{si mino}{si mino}{who is happy}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:nonounmods}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad%
@@ -1376,7 +1379,7 @@ modified by the relative clause\index{relative clause} \xayr{si mino}{si mino}{w
 \label{ex:subsubsec:possprosyn}
 \index{pronouns!possessive|(}
 
-The whole paradigm of possessive prononouns is listed in the genitive\index{case!genitive} column of
+The whole paradigm of possessive pronouns is listed in the genitive\index{case!genitive} column of
 \autoref{tab:perspro}. Possessive pronouns distinguish the same morphological
 features as personal pronouns\index{pronouns!personal}: person\index{person}, number\index{number}, gender\index{gender}, animacy\index{animacy}, and
 reflexivity. Their case\index{case} is fixed to gentive, however. Possessors\index{semantic role!possessor} are
@@ -1385,7 +1388,7 @@ morpholexical specifications possible for possessive pronouns are given in
 (\ref{ex:posspromorphlex}). Reflexive possessive pronouns\index{pronouns!reflexive} have the meaning
 `\textsc{pronoun's} own'.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:posspromorphlex}
 \adjustbox{valign=t}{%
@@ -1409,7 +1412,7 @@ morpholexical specifications possible for possessive pronouns are given in
 \end{figure}
 
 Earlier treatments of possessive pronouns analyzed them as adjectives\index{adjectives}, however,
-this appears incorrect in that if they were adjectives\index{adjectives}, they should coordinate\index{coordination}
+this appears incorrect in that, if they were adjectives\index{adjectives}, they should coordinate\index{coordination}
 with other adjectives. As illustrated in (\ref{ex:possnoadj}a), this is not the
 case. If possessive pronouns were adjectives\index{adjectives}, it should also be possible for
 there to be more than one of them in a clause, just as \fw{new blue car} is
@@ -1418,10 +1421,12 @@ illustrates that there can only be one possessor\index{semantic role!possessor},
 \citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and possessors\index{semantic role!possessor}
 have some properties in common}, though they are variably treated as specifiers
 of NP\index{phrase types!noun phrase} or heads of DP with an NP\index{phrase types!noun phrase} complement throughout the book. Let us assume
-here that possessors\index{semantic role!possessor} are specifiers of NP\index{phrase types!noun phrase}
-(they can alternatively be analyzed as heads of DP, which is possibly more consistent, in fact).
+here that, like Welsh\index{Welsh}, there is a parametric choice not to use the
+specifier position \parencite[130]{bresnan2016}. Thus, possessors and other 
+determiners have to be analyzed as heads of DP which take an NP complement as a
+co-head.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:possnoadj}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\ljudge*\begingl
@@ -1451,7 +1456,7 @@ first, as it were. That is, they need the proclitic\index{clitics} \rayr{d/}{da-
 such as \fw{mine} or \fw{yours}, except if used as initial predicative\index{grammatical function!predicative complement}
 nominals. This is illustrated by (\ref{ex:genpred2}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:genpred2}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begingl
@@ -1480,7 +1485,7 @@ is no need to mark them with genitive case\index{case!genitive} additionally. As
 This parallels the use of \rayr{d/}{da-} with adjectives, compare
 \autoref{subsec:dempro}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:nomzposs}%
 \begingl
 	\glpreamble \textsc{context}: \xayr{ddNF}{dadang}{pen} (\Inan): //
@@ -1493,13 +1498,13 @@ This parallels the use of \rayr{d/}{da-} with adjectives, compare
 \end{figure}
 
 Nominalized\index{nominalization} possessive pronouns are anaphora to a third-person\index{person} form, while they
-additionally refer to a possessor\index{semantic role!possessor}: \rayr{da/naa}{da-nā} in (\ref{ex:nomzposs})
+additionally refer to a possessor\index{semantic role!possessor}: \rayr{d/naa}{da-nā} in (\ref{ex:nomzposs})
 refers to a pen belonging to the person offering the other to use theirs.
 The \Avm{} in (\ref{ex:mypen}a) spells out the full functional definition for 
 \xayr{ddNFlej naa}{dadangley nā}{my pen}; (\ref{ex:mypen}b) attempts to model
 the an\-a\-pho\-ric reference, \xayr{d/naalej}{da-nāley}{mine}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:mypen}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{avm}
@@ -1510,6 +1515,7 @@ the an\-a\-pho\-ric reference, \xayr{d/naalej}{da-nāley}{mine}.
 	\Gend	&	\Inan \\
 	\Anim	&	$-$ \\
 	\Case	&	\Parg \\
+	\\
 
 	\Possr	&	\[
 		\Pred	&	`$pro$' \\
@@ -1527,6 +1533,7 @@ the an\-a\-pho\-ric reference, \xayr{d/naalej}{da-nāley}{mine}.
 \[
 	\Pred	&	\astruct{$pro$}{\ups{\Possr}} \\
 	\Pers	&	\Third \\
+	\\
 	\Gend	&	\Inan \\
 	\Anim	&	$-$ \\
 	\Case	&	\Parg \\
@@ -1569,7 +1576,7 @@ why the feature definitions in (\ref{ex:dempromorphlex}) list a \Deix{} feature
 encoding $this$, $that$, and $such$, rather than a binary \Prox{} or \Dist{}
 feature.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:dempromorphlex}
 \adjustbox{valign=t}{%
@@ -1632,7 +1639,7 @@ possible to form complex demonstratives which incorporate an adjective\index{adj
 generic and possessive. For illustration, (\ref{ex:redone}) from
 \autoref{subsec:dempro} is repeated here as (\ref{ex:redone2}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:redone2}\begingl
 	\gla Sa @ noyang da-tuvo. //
 	\glb sa= no=yang da=tuvo.Ø //
@@ -1641,7 +1648,7 @@ generic and possessive. For illustration, (\ref{ex:redone}) from
 \endgl\xe
 \end{figure}
 
-It has been argued in \autoref{clitics_preadj_da} that \rayr{d/}{da-} in this
+It has been argued in \autoref{clitics_preadj_da} (p.~\pageref{clitics_preadj_da}) that \rayr{d/}{da-} in this
 case is a simple clitic\index{clitics}, as it appears in the same position as the full form
 \rayr{dnY}{danya}; the result is a complex demonstrative form which is
 inflectable for case. How to represent this in terms of a feature matrix,
@@ -1690,15 +1697,15 @@ example, in German\index{German} to form the deadjectival nouns \fw{das große} 
 big/great' (for instance, \fw{im großen} `on a large scale') and \fw{das
 größte} `the greatest thing' from the adjective\index{adjectives} \fw{groß} `big, large, great'
 and its superlative form \fw{größt-} `biggest, greatest', the superlative
-suffix being \fw{-(e)st}. Both c- and f-structure should thus look different
+suffix being \fw{-(e)st}. Both c- and f-structure should therefore look different
 for the unincorporated and the incorporated adjective\index{adjectives}, respectively. Example
 (\ref{ex:danyaastuvo}) illustrates what the c- and f-structure for the
 unincorporated adjective\index{adjectives} looks like, respectively.
 
-\begin{figure}[h]
-\ex\label{ex:danyaastuvo}\labels %
+\begin{figure}
+\ex\label{ex:danyaastuvo}
 \begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest} shorter edges, italic leaves,
+\begin{forest} shorter edges, italic leaves,
 [{\anno[\pass{\Obj}]{DP}}
 %	[\anno{\xbar{D}}
 		[\anno{\xhead{D}}
@@ -1713,7 +1720,6 @@ unincorporated adjective\index{adjectives} looks like, respectively.
 \end{minipage}
 ~
 \begin{minipage}[t]{.5\remaining}
-\tl\quad\label{ex:danyaastuvoavm}
 \begin{avm}
 \[\Obj & \[
 			\Pred	& `$pro$' \\
@@ -1842,7 +1848,7 @@ attach to, the adjective\index{adjectives} stem is inflected instead of the pron
 % \rayr{d/tuvolej} {da-tuvoley} as a portmanteau item with two \Pred{} values,
 % like (\ref{ex:doublepred}).
 
-% \begin{figure}[h]
+% \begin{figure}
 % \ex\label{ex:doublepred} *\begin{avm}
 % \[\Obj{}	& \[
 % 				\Pred	&	\{
@@ -1866,7 +1872,7 @@ attach to, the adjective\index{adjectives} stem is inflected instead of the pron
 % \Pred{} attributes of the kind seen in \Adjc{} lists or whenever coordination
 % is involved, would be acceptable, compare (\ref{ex:demadjcomppred}).
 
-% \begin{figure}[h]
+% \begin{figure}
 % \ex\label{ex:demadjcomppred}%
 % \ques\begin{avm}
 % \[\Obj{}	& \[\avmspan{%
@@ -1900,7 +1906,7 @@ marking in \fw{pirli-ngka-rlu} `rock-\Loc {}-\Erg{}', according to
 \citet{nordlinger1998}, can be represented in f-structure as described in
 (\ref{ex:warldblcaseavm}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:warldblcase}
 \begingl
 	\glpreamble Warlpiri (\cite[136]{nordlinger1998}, from 
@@ -1956,7 +1962,7 @@ the NP as the subject.
 So how can we transfer this to our composite demonstrative \xayr{d/tuvolej}
 {da-tuvoley}{a/the red one}? We know that there is a lexical base which is an
 adjective\index{adjectives} \rayr{tuvo}{tuvo} which has `red' for a \Pred{}. This is embedded as
-the \Adjc{}\index{grammatical function!adjunct} off a functional head with deictic\index{deixis} features (formerly \rayr{dnYlej}
+the \Adjc{}\index{grammatical function!adjunct} of a functional head with deictic\index{deixis} features (formerly \rayr{dnYlej}
 {danyaley}, now reduced to a simple clitic\index{clitics} \rayr{d/}{da-}). The whole compound
 is marked for patient case, which identifies it as an object. Thus, I propose
 the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
@@ -1981,7 +1987,7 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 	\begin{morphlex}
 	\begin{tabu} {\usetabu{morphlex}}
 	\rayr{d/tuvolej}{da-tuvoley}
-		& N
+		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `red' \\
 			\uncertain{\Obj{}}{\Pred} & = & `$pro$' \\
@@ -2001,12 +2007,11 @@ and \rayr{dnYlej tuvo}{danyaley tuvo} should be functionally equivalent. The
 approach with functional uncertainty permits us not to violate lexical
 integrity,
 % as in (\ref{ex:daadjcase}a),
-so the c-structure should more correctly look like in (\ref{ex:datuvoleycstr}).
+so the c-structure should look like in (\ref{ex:datuvoleycstr}).
 Secondly, we do not have to assume that the adjective\index{adjectives} itself untypically
 inflects for case\index{case}, at least not at a functional level. The case\index{case} marker just
 happens to be stuck on it because it is the next best lexical base to attach it
-to, which is represented in the accompanying c-structure (non-branching bar
-levels and the empty \xhead{D} have been pruned).
+to.
 
 \begin{figure}
 \ex\label{ex:datuvoleycstr}
@@ -2053,7 +2058,7 @@ it differs from the way the majority of interrogative pronouns work. A more
 canonical example of \rayr{sinY}{sinya} in which it acts as a pronoun proper is
 given in (\ref{ex:sinyapro}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex
 \a\label{ex:sinyaadj}%
 \begingl
@@ -2079,12 +2084,12 @@ ask about the extent of an attributive property. \xayr{siknF}{sikan}{how much,
 how many} is only used for quantity questions\index{questions} and cannot combine with
 adjectives\index{adjectives} either. Instead, questions\index{questions} like `how large' or `how common' must be
 phrased using (generic) nouns\index{nouns!generic}; see (\ref{ex:hownoun}). What the question word\index{pronouns!interrogative}
-queries for is both the implied object\index{grammatical function!primary object} of the question and also new
-information. That is, what it asks for is the sentence's focus\index{grammatical function!focus} (compare
+queries for is both the implied object\index{grammatical function!primary object} of the question and new
+information---the sentence's focus\index{grammatical function!focus} (compare
 \autoref{subsec:focus}). For English, \citet{dalrymple2001} gives the example
 in (\ref{ex:engq}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:hownoun}
 \a\begingl
 	\gla Nahungreng mavayena sinyaley? //
@@ -2188,7 +2193,7 @@ and the \Obj{} of the clause. That is, \Q{} is replacing the \Obj{} as a
 pronoun, and as such, embodies the \Foc{} function with the respective
 properties. The phrase structure in (\ref{ex:engqstruct}), then, tries to give
 a formula as general as possible for all question words in English, hence we
-see XP instead of NP like in example (\ref{ex:engqcstruct}), which is an
+see XP instead of NP as in example (\ref{ex:engqcstruct}), which is an
 example of a specific sentence containing the interrogative pronoun \fw{who}.
 XP corresponds to any phrase type which can contain a question word,\index{pronouns!interrogative} that is,
 NP\index{phrase types!noun phrase}, adpositional phrase (PP)\index{phrase types!prepositional phrase}, adverb phrase (AdvP)\index{phrase types!adverb phrase}, and AP\index{phrase types!adjective phrase} \citep[407] {dalrymple2001}. The rather intricate
@@ -2199,7 +2204,7 @@ the clause and specifies that the corresponding information must be found in a
 location accessible to the \fw{wh}-word (that is, the \fw{wh}-word must
 c-command it), and there is a requirement that a \fw{wh}-word exist. Since
 Ayeri does not front\index{constituent order} interrogative pronouns\index{pronouns!interrogative} like English does, the functional
-annotations of the phrase structure rule should look a whole lot easier. Yet,
+annotations of the phrase structure rule should look significantly easier. Yet,
 however, we still need to account for \Q{}, \Foc{} and its associated \GF{}
 sharing information. In order to give an example, let us reconsider
 (\ref{ex:sinyapro}), see (\ref{ex:ayrqcstruct}).
@@ -2261,7 +2266,7 @@ sharing information. In order to give an example, let us reconsider
 					\Prontype	&	$wh$ \\
 				\] \tikzmark{ayrqcstruct_Foc} \\
 	\Q		&	~\tikzmark{ayrqcstruct_q} \\
-	\Pred	&	~\astruct{open}{\ups{\Subj}, \ups{\Obj}} \\
+	\Pred	&	~\astruct{open}{\ups{\Subj} \ups{\Obj}} \\
 	\Subj	&	~\tikzmark{ayrqcstruct_subj} \\
 	\Obj	&	~\tikzmark{ayrqcstruct_obj} \\
 \]
@@ -2301,8 +2306,8 @@ functional than lexical in nature. This also applies to interrogative pronouns.
 In difference to the English example (\ref{ex:engqcstruct}), the interrogative
 pronoun is marked for case\index{case}, and thus also encodes animacy\index{animacy} for agents\index{case!agent} and
 patients\index{case!patient}. A full line connects the \Foc{} value to both the value of \Q{} and
-\Subj{} to indicate correspondences between \DF{}s and \GF{}s; the connection
-between \Foc{} and \Subj{} is also contrary to the English example above, since
+\Subj{} to indicate correspondences between \DF{}s and \GF{}s. The connection
+between \Foc{} and \Subj{} also differs from the English example above, since
 we are asking for the subject/agent in this case, not for the object/patient as
 in the previous example.
 
@@ -2315,7 +2320,7 @@ and thus also encodes animacy\index{animacy} for agents\index{case!agent} and pa
 described in \autoref{subsec:interpro}. If case\index{case} is not specified, the correct
 form of \rayr{sinY}{sinya} depends on the \GF{} it is anaphorically linked to.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:interpromorphlex}
 \adjustbox{valign=t}{%
@@ -2342,7 +2347,7 @@ interrogative pronoun as such wholly replaces an NP\index{phrase types!noun phra
 join modifiers like adjectives\index{adjectives} or relative clauses\index{relative clause} to \xbar{D}, compare 
 (\ref{ex:itradj}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:itradj}
 \a\ljudge*\begingl
 	\gla Ang @ pengalye sinyās denisa? //
@@ -2525,10 +2530,10 @@ this noun.
 
 Indefinite pronouns (\autoref{tab:indeftab}) cover a range of both syntactic
 phrases and semantic roles: they may substitute NPs\index{phrase types!noun phrase}, but also PPs\index{phrase types!prepositional phrase}. They may
-also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}) as well as
+also form various core arguments (\Subj{}, \Obj{}, \SObjc{recip}), as well as
 various oblique\index{grammatical function!oblique} arguments (\Possr{}\index{semantic role!possessor}, \Oblq{loc}\index{semantic role!location}, \Oblq{ins}\index{semantic role!instrument}, \Oblq{caus}\index{semantic role!causer}).
 Those indefinite pronouns substituting \textsc{person} and \textsc{thing}
-decline while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
+decline, while those encoding \textsc{place}, \textsc{time}, \textsc{manner},
 and \textsc{reason} are invariant. Thus, \xayr{EnY}{enya}{everyone/%
 \mbox{-thing}}, \xayr{ArilinY}{arilinya}{somebody/\mbox{-thing}}, and
 \xayr{rnY}{ranya} {nobody/\mbox{-thing}} can be declined for all cases\index{case}, while
@@ -2540,7 +2545,7 @@ the groups around \xayr{ynenF}{yanen}{everywhere} and \xayr{tdyenF}{tadayen}
 Regarding the functional definition of indefinite pronouns, at least
 \citet{dalrymple2001} treats them as lexical items proper, that is, she does
 not transcribe them as \ups{\Pred{}}~=~`$pro$' with additional functional
-annotations from which the surface form arises, but simply like
+annotations which encode the lexical content, but simply like
 \ups{\Pred{}}~=~`somebody'. Since indefinite pronouns are not composed in a
 systematic way, I will treat them as lexical items proper here as well. For a
 discussion of a few regularities in word composition that nonetheless exist,
@@ -2567,9 +2572,9 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 	[\anno{S},
 		[\anno{VP}
 			[{\anno[\pass{\Oblq{loc}}]{DP}}
-				[\anno{\xhead{D}}
+			%	[\anno{\xhead{D}}
 					[yanen]
-				]
+			%	]
 			]
 		]
 		[{\anno[\pass{\Subj}]{NP}}
@@ -2583,7 +2588,7 @@ sentence containing an indefinite pronoun indicating place, \xayr{ynenF}
 
 \begin{avm}
 \[
-	\Pred		&	\astruct{search}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
+	\Pred		&	\astruct{search}{\ups{\Subj} \ups{\Oblq{loc}}} \\
 
 	\Oblq{loc}	&	\[
 						\Pred	&	`everywhere' \\
@@ -2607,14 +2612,15 @@ The annotation in example (\ref{ex:indefprostruct}) assumes that by its lexical
 meaning alone, \xayr{ynenF}{yanen}{everywhere} is identified as the locative
 adverbial stated in the verb's a-structure (a possible \Obj{} has been dropped
 from the example). \rayr{ANF AmaanF}{ang Amān} itself does not mark
-third person singular masculine, but the \Subj{} relation receives this information through unification
-with the respective marking on the verb with which the subject\index{grammatical function!subject} NP proper
-coheres. The relevant information is implicitly contained in the NP's \Index{}
+third person singular masculine, but the \Subj{} relation receives this
+information through functional unification with the verb which the 
+subject\index{grammatical function!subject} NP proper controls in terms of
+agreement. The relevant information is implicitly contained in the NP's \Index{}
 feature \citep[186--192]{bresnan2016}, which is not shown in the example above.
 Example (\ref{ex:indefpromorphlex}) gives a generalized list of features which
 indefinite pronouns may encode.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:indefpromorphlex}
 	\adjustbox{valign=t}{%
@@ -2665,9 +2671,9 @@ this is not the intended reading.}
 \end{figure}
 
 Instead, it is necessary to modify the indefinite pronoun with a relative
-clause\index{relative clause} as illustrated by (\ref{ex:indefproadjpc}). Alternatively, it is
+clause\index{relative clause}, as illustrated by (\ref{ex:indefproadjpc}). Alternatively, it is
 possible to use a generic noun instead of the indefinite pronoun, like
-\xayr{linY}{linya}{thing} instead of \xayr{EnY}{enya}{everyone} and \xayr{yno}
+\xayr{linY}{linya}{thing} instead of \xayr{EnY}{enya}{everything} and \xayr{yno}
 {yano}{place} instead of \xayr{yaarilF}{yāril}{somewhere} in
 (\ref{ex:indefproadjgennoun}).
 
@@ -2719,7 +2725,7 @@ no problems arise in finding the correct form for antecedents with differing
 person\index{person} features. Example (\ref{ex:recpromorphlex}) shows the functional
 properties of the reciprocal pronoun.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:recpromorphlex}
 	\adjustbox{valign=t}{%
@@ -2757,7 +2763,7 @@ reciprocal pronoun could look like.
 
 \begin{avm}
 \[
-	\Pred	&	\astruct{see}{\ups{\Subj{}}, \ups{\Obj}} \\
+	\Pred	&	\astruct{see}{\ups{\Subj{}} \ups{\Obj}} \\
 
 	\Top	&	\[
 					\Conj	&	$and$ \\
@@ -2824,7 +2830,7 @@ detail in the next section.
 \index{gender|(}
 
 As alluded to above, it may happen occasionally that a pronominal reference is
-to third persons\index{person} of mixed genders. English has no problem here since it does
+to third persons\index{person} of mixed genders. English has no problem here, since it does
 not distinguish gender in plural, so both `John' and `Mary' in
 (\ref{ex:mfengl}) can simply be referred to by the pronoun \fw{them}, which is
 indifferent to gender (number\index{number} resolution occurs). Since Ayeri's personal
@@ -2832,10 +2838,10 @@ pronouns\index{pronouns!personal} distinguish gender in the plural as well as in
 there needs to be a way to deal with groups whose person\index{person} features cannot easily
 be unified, which an example is given of in (\ref{ex:mfayeri}). In addition to
 this, Ayeri has a two-tier system where three genders\index{gender}---masculine, feminine,
-neuter---are grouped together as animate\index{animacy}, which is in opposition to inanimate\index{animacy}
+neuter---are grouped together as animate\index{animacy}, in opposition to inanimate\index{animacy}
 gender, compare (\ref{ex:gramgend2}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex
 \a\label{ex:mfengl}%
 	\textsc{context:} John and Mary \medskip \\
@@ -2854,7 +2860,7 @@ gender, compare (\ref{ex:gramgend2}).
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:gramgend2}
 \begin{forest}
 [{[\Gend{}]}
@@ -2921,7 +2927,7 @@ part motivated by phonology, since /a/ is by far the most common vowel in Ayeri
 in all positions (\autoref{sec:phonotactics}). Thus, it is also the least
 marked one, so that pronominal forms with /a/ are preferred over those with
 more marked vowels. \citet{corbett1983} makes an observation on Slovene\index{Slovene},
-Polish\index{Polish}, and, to a lesser extent, French\index{French} that in these languages the first
+Polish\index{Polish}, and, to a lesser extent, French\index{French} that in these languages, the first
 strategy in gender resolution is to resolve towards a semantically justified
 gender. If this fails, the second strategy is to resolve towards the form which
 least ambiguously marks plural. Both strategies are described as a general
@@ -2957,10 +2963,9 @@ social standing (\textsc{ohg} \fw{frouwa}, \textsc{mhg} \fw{vrouwe}), began to d
 first half of the 20th century. \fw{Weib} is now derogatory.} Moreover, French\index{French}
 \fw{sentinelle} (quoted by \cite{wechsler2009} as an example) is a feminine
 noun, but often refers to a male person. English common nouns do not
-morphologically distinguish gender, but for instance, \fw{child} may refer to
+distinguish grammatical gender, but for instance, \fw{child} may refer to
 both boys and girls, potentially triggering masculine \fw{he} or feminine
-\fw{she} rather than the syntactically required neutral \fw{it} in anaphoric
-recourse.
+\fw{she} rather than \fw{it} in anaphoric recourse.
 
 Ayeri's nouns are mainly distinguished by animacy\index{animacy}; masculine\index{gender} and feminine\index{gender} only
 plays a role for those nouns which refer to beings, such as humans, animals,
@@ -2986,7 +2991,7 @@ Of nouns referring to living beings of both sexes, there are \xayr{bjhi}{bayhi}
 animate\index{animacy} neuters\index{gender}, factually, however, agreement is usually semantic in these
 cases, if justified---compare (\ref{ex:childsem}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:childsem}\begingl
 	\gla Yam @ il-ilya badanang gan$_i$ ajamley yena$_i$. //
 	\glb yam= il\til{}il-ya badan-ang gan-Ø ajam-ley yena //
@@ -2997,7 +3002,7 @@ cases, if justified---compare (\ref{ex:childsem}).
 \endgl\xe
 \end{figure}
 
-The English translation of this example is slightly odd in that `child' is
+The English translation of this example is maybe slightly odd in that `child' is
 resumed by `her', but in Ayeri \xayr{gnF}{gan}{child} is permissible as the
 referent of \xayr{yen}{yena}{her}. Since \xayr{bdnF}{badan}{father} denotes a
 male person, it would be odd for the feminine\index{gender} pronoun to be covariant with
@@ -3033,7 +3038,7 @@ denoted by the word as such is taken as the unit of reference. This is
 illustrated by (\ref{ex:ayrcommitteenoun}). The canonical gender\index{gender} of the words
 is thus also animate\index{animacy} neuter\index{gender}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrcommitteenoun}\begingl
 	\gla Ang @ menuyo pandaha pandāpanas yona. //
 	\glb ang= menu-yo pandaha-Ø pandāpan-as yona //
@@ -3046,12 +3051,12 @@ is thus also animate\index{animacy} neuter\index{gender}.
 Example (\ref{ex:ayrcommitteenoun}) displays animate neuter singular agreement
 on the verb, as well as on the possessive pronoun: both agree syntactically
 with \xayr{pMdh}{pandaha}{family} as expected. However, \citet{corbett2006}
-points out that cross-linguistically, there is a likelihood of semantic
+points out that cross-linguistically there is a likelihood of semantic
 agreement to creep in, and that different constituents are differently affected
 by this, so that he arrives with the gradient described in
 (\ref{ex:agrhier})---the agreement hierarchy\index{hierarchy}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:agrhier}%
 	Agreement hierarchy\index{hierarchy} \citep[206\psqq]{corbett2006}:\medskip\\
 	attribute $>$ predicate $>$ relative pronoun $>$ personal pronoun
@@ -3075,7 +3080,7 @@ hierarchy\index{hierarchy}, especially so for personal pronouns\index{pronouns!p
 subsection. Thus, (\ref{ex:ayrcommitteenoun}) might be followed up with the
 sentence in (\ref{ex:ayrcommitteenoun_2}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrcommitteenoun_2}\begingl
 	\gla Tang mino tadayya si girendtang panca. //
 	\glb tang mino taday-ya si girend=tang panca //
@@ -3093,7 +3098,7 @@ thus occur. The pronoun of choice is masculine\index{gender}, since this is the 
 gender\index{gender} for mixed-gender\index{gender} groups of living beings, and plural, since
 \rayr{pMdh}{pandaha} denotes a group of people. However, no statistics for
 Ayeri have been compiled on this issue to date, and least of all across a
-variety of literary genres and across different (simulated) historical stages
+variety of literary genres and across different historical stages
 of the language.\footnote{Another difficulty in this regard is that all
 existing texts in Ayeri are translations from English or German, and conceived
 as more or less carefully crafted written texts. Any statistics on the effect
@@ -3124,7 +3129,7 @@ in (\ref{ex:quantnoadj2}a). Moreover, if quantifiers were adjectives, they would
 also have to coordinate\index{coordination} with them. Example
 (\ref{ex:quantnoadj2}b) shows that they do not.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:quantnoadj2}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\label{ex:quantnoadj2_2}\ljudge*\begingl
@@ -3154,7 +3159,7 @@ intensifiers such as \xayr{EkeNF}{ekeng}{over-, overly, too} or
 degree of certainty. The example in (\ref{ex:freequantstruct}) illustrates the
 structural properties of an NP\index{phrase types!noun phrase} modified by a free quantifier.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:freequantstruct}
 \begin{minipage}[t]{.5\remaining}
 \begingl
@@ -3209,7 +3214,7 @@ quantifiers should thus look like in (\ref{ex:frquantmorphlex}). Since
 quantifiers manipulate the value of a superordinate f-structure, we invoke the
 functional uncertainty principle again here.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:frquantmorphlex}
 	\adjustbox{valign=t}{%
@@ -3240,7 +3245,7 @@ being a co-head of \xhead{N}, both adjectives pertaining to \xhead{N} and
 adverbs\index{adverbs} pertaining to \xhead{D} would write into the \Adjc{}\index{grammatical function!adjunct} list of the
 f-structure predicated by \xhead{N}, not into separate lists \citep[106]
 {bresnan2016}. Thus, in order for DP not to be a co-head of NP\index{phrase types!noun phrase}, and to have its
-own modifiers, it must be subordinated to NP\index{phrase types!noun phrase}. This way, also, the quantifier DP
+own modifiers, it must be subordinate to NP\index{phrase types!noun phrase}. This way, also, the quantifier DP
 and other modifiers of nouns, like APs\index{phrase types!adjective phrase}, can switch places as required.
 
 For (\ref{ex:nounquantavm}), thus, it needs to be ensured that
@@ -3322,7 +3327,7 @@ do not need inside-out uncertainty to add the \Pl{} value to the f-structure
 predicated by \xhead{N}. The definitions for enclitic\index{clitics} quantifiers are shown in
 (\ref{ex:clquantmorphlex}) accordingly.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:clquantmorphlex}
 	\adjustbox{valign=t}{%
@@ -3342,7 +3347,7 @@ predicated by \xhead{N}. The definitions for enclitic\index{clitics} quantifiers
 Quantifiers as well can combine with independent personal pronouns\index{pronouns!personal} especially
 in the plural\index{number!plural}, and demonstrative pronouns\index{pronouns!demonstrative}. A clitic\index{clitics} quantifier can also still
 be recognized in the interrogative pronoun\index{pronouns!interrogative} \xayr{siknF}{sikan}{how many},
-although here it is incorporated into the pronoun itself. That is, there is no
+although here it is incorporated into the pronoun itself. There is no
 productive combination of interrogative pronouns\index{pronouns!interrogative} and quantifiers, with the
 exception of \xayr{sinY}{sinya}{who}. With indefinite pronouns\index{pronouns!indefinite}, quantifiers are
 somewhat redundant in some combinations, though it is feasible to use them for
@@ -3418,7 +3423,7 @@ intensifiers, there are also independent morphemes which can act this way, like
 \xayr{IpnF}{ipan}{extremely}. \citet{carnie2013} at least treats these all as
 adverbs\index{adverbs} in the fashion of (\ref{ex:adjadvquant}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:adjadvquant}
 \a\label{ex:adjadvquant_1}
 \begin{minipage}[t]{.5\remaining}
@@ -3477,8 +3482,8 @@ For nominal clitics, we have already seen how preposed case\index{case} markers 
 nominal clitics are also described in \autoref{subsec:clitics} in a way to
 establish why they are clitics rather than affixes or words. In the following
 subsections, we will have a closer look at the morphosyntax of each group of
-clitics which can interact with nouns, and with regards to nouns specifically
-for those clitics which can interact with more than this one part of speech.
+clitics which can interact with nouns, and with regards to nouns, specifically
+at those clitics which can interact with more than this one part of speech.
 
 \subsubsection{Demonstrative prefixes}
 \label{subsubsec:deixprocl}
@@ -3562,10 +3567,10 @@ straightforwardly, given in (\ref{ex:deixproclmorphlex}). Demonstrative clitics
 cannot be combined with pronouns of any kind, only with nouns; the combination
 of \rayr{d/}{da-} with a possessive pronoun does not result in the meaning of
 *\fw{such my}, *\fw{such your}, etc., but it derives independent possessive
-pronouns such as \fw{mine}, \fw{yours}, etc. which do not act as mere modifiers
+pronouns such as \fw{mine}, \fw{yours}, etc.\ which do not act as mere modifiers
 of nouns.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:deixproclmorphlex}%
 \adjustbox{valign=t}{%
@@ -3664,63 +3669,63 @@ puti} with \xayr{dnYaaNF}{danyāng}{such one} and to still modify that by
 \xe
 \end{figure}
 
-\begin{figure}
-\ex~\label{ex:postkucstruct}%
-% \begingl
-% 	\gla ang @ Apitu puti-ku //
-% 	\glb ang= Apitu puti=ku //
-% 	\glc \Aarg{}= Apitu diligent=like //
-% 	\glft `like diligent Apitu' //
-% \endgl\medskip
-%
-\begin{minipage}[t]{.5\remaining}
-\begin{forest} narrower nodes, shorter edges, italic leaves
-[{\anno[\pass{\Compl}]{CP}}
-	[{\anno[\pass{\Subj}]{NP}}
-		[\anno{\xhead{N}}
-			[\anno{Cl}
-				[ang]
-			]
-			[\anno{\xhead{N}}
-				[Apitu]
-			]
-		]
-		[{\anno[\elem{\Adjc}]{AP}}
-			[\anno{\xhead{A}}
-				[\anno{\xhead{A}}
-					[puti]
-				]
-				[{\anno{Cl}}
-					[{%
-						-ku\\
-						\textup{\uncertain{\GF{} \Conj}{\Pred}}%
-					}]
-				]
-			]
-		]
-	]
-]
-\end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\begin{avm}
-\[
-	\Conj	&	`like' \\
-	\Pred	&	\astruct{...}{\ups{\Subj}} \\
-	\Subj	&	\[
-		\Pred	&	`Apitu' \\
-		\Anim	&	$+$ \\
-		\Case	&	\Aarg \\
-		\Adjc	&	\{\[
-			\Pred	&	`diligent' \\
-		\]\} \\
-	\] \\
-\]
-\end{avm}
-\end{minipage}
-\xe
-\end{figure}
+% \begin{figure}
+% \ex~\label{ex:postkucstruct}%
+% % \begingl
+% % 	\gla ang @ Apitu puti-ku //
+% % 	\glb ang= Apitu puti=ku //
+% % 	\glc \Aarg{}= Apitu diligent=like //
+% % 	\glft `like diligent Apitu' //
+% % \endgl\medskip
+% %
+% \begin{minipage}[t]{.5\remaining}
+% \begin{forest} narrower nodes, shorter edges, italic leaves
+% [{\anno[\pass{\Compl}]{CP}}
+% 	[{\anno[\pass{\Subj}]{NP}}
+% 		[\anno{\xhead{N}}
+% 			[\anno{Cl}
+% 				[ang]
+% 			]
+% 			[\anno{\xhead{N}}
+% 				[Apitu]
+% 			]
+% 		]
+% 		[{\anno[\elem{\Adjc}]{AP}}
+% 			[\anno{\xhead{A}}
+% 				[\anno{\xhead{A}}
+% 					[puti]
+% 				]
+% 				[{\anno{Cl}}
+% 					[{%
+% 						-ku\\
+% 						\textup{\uncertain{\GF{} \Conj}{\Pred}}%
+% 					}]
+% 				]
+% 			]
+% 		]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% ~
+% \begin{minipage}[t]{.5\remaining}
+% \begin{avm}
+% \[
+% 	\Conj	&	`like' \\
+% 	\Pred	&	\astruct{...}{\ups{\Subj}} \\
+% 	\Subj	&	\[
+% 		\Pred	&	`Apitu' \\
+% 		\Anim	&	$+$ \\
+% 		\Case	&	\Aarg \\
+% 		\Adjc	&	\{\[
+% 			\Pred	&	`diligent' \\
+% 		\]\} \\
+% 	\] \\
+% \]
+% \end{avm}
+% \end{minipage}
+% \xe
+% \end{figure}
 
 \subsubsection{Inspecificity prefix \fw{mə-}}
 
@@ -3733,7 +3738,7 @@ definition for \rayr{me/}{mə-} should thus look as given in
 specific reference, the speaker means just any representative of the kind the
 nominal head specifies.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:thiswhichever}\adjustbox{valign=t}{
 	\begin{tikzpicture}
 		\node (ellipse)	at (3,2)	{};
@@ -3759,7 +3764,7 @@ nominal head specifies.
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:memorphlex}%
 \adjustbox{valign=t}{%
@@ -3776,15 +3781,15 @@ nominal head specifies.
 \end{morphlex}
 \end{figure}
 
-Since according to \citet[152]{lyons1999}, demonstratives are inherently
+Since according to \citet[152]{lyons1999} demonstratives are inherently
 definite---and their reference is specific, too---the deictic proclitics
 \xayr{Ed/}{eda-}{this}, \xayr{Ad/}{ada-}{that}, and \xayr{d/}{da-}{such} are in
 complementary distribution\index{complementary distribution} with the inspecificity marker, as demonstrated by
-(\ref{ex:inspecdeix}): neither combination of \rayr{me/}{mə-} and \rayr{Ed/}
-{eda-} in (\ref{ex:inspecdeix}cd) results in an ungrammatical sentence because 
+(\ref{ex:inspecdeix}): both combinations of \rayr{me/}{mə-} and \rayr{Ed/}
+{eda-} in (\ref{ex:inspecdeix}cd) result in an ungrammatical sentence because 
 \rayr{Ed/}{eda-} encodes [\Def{}~$+$, \Specif{}~$+$] while \rayr{me/}
 {mə-} encodes [\Def{}~$-$, \Specif{}~$-$]. Attempting to assign
-opposing values to the same feature (\Def{} and \textsc{specific},
+opposing values to the same feature (\Def{} and \Specif{},
 respectively) must fail.
 
 \begin{figure}
@@ -3825,7 +3830,7 @@ redundant. With interrogative pronouns\index{pronouns!interrogative} it is feasi
 an intensifier\index{intensifiers}, though without the vulgar tone of the English translation given
 in (\ref{ex:meinter}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:meinter}\begingl
 	\gla Amangreng mə-simin? //
 	\glb amang=reng mə=simin //
@@ -3862,14 +3867,14 @@ though they are probably still better classified as DP\index{phrase types!determ
 phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 (\ref{ex:adjpcstruct}) show how an AP is constructed.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:adjpstruct}
 \a AP → \anno*{\xbar{A}} \anno*[\elem{\Adjc}]{AdvP}
 \a \xbar{A} → \anno*{\xhead{A}} \anno*[\pass{\GF}]{XP}
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\labels\label{ex:adjpcstruct}
 \begin{minipage}[t]{.5\remaining}
 \tl\quad%
@@ -4102,7 +4107,7 @@ Moreover, according to \citet{carnie2013}, quantifiers\index{quantifiers} or int
 adjectives are adverbs\index{adverbs}, so they should find themselves in \Adjc{}\index{grammatical function!adjunct}. An example
 of this is given in (\ref{ex:adjquant3}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:adjquant3}
 \a
 \begin{minipage}[t]{.5\remaining}
@@ -4344,7 +4349,7 @@ adjective with the regular negative suffix \rayr{/Oj}{-oy}. Examples of the
 different ways an adjective may be morphologically marked and their respective
 representation as an \Avm{} are given in (\ref{ex:adjmorph}).
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:adjmorphlex}%
 \adjustbox{valign=t}{%
@@ -4463,7 +4468,7 @@ attributive adverbs take in Ayeri is comparison\index{comparison} morphology and
 is the same as with adjectives\index{adjectives} indeed, hence the morpholexic specifications
 in (\ref{ex:advmorphlex}) appear equal.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:advmorphlex}%
 \adjustbox{valign=t}{%
@@ -4491,13 +4496,13 @@ On the other hand, adjectives\index{adjectives} are restricted to nominal contex
 adverbs may modify any other lexical category: verbs\index{verbs}, adjectives\index{adjectives}, prepositions\index{adpositions!prepositions},
 as well as other adverbs.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:advpstruct}
 AdvP → \anno*{\xhead{Adv}} \anno*[{\elem{\Adjc}}]{AdvP}
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex~\label{ex:advpcstruct}\labels
 \begin{forest}
 [{\anno[\elem{\Adjc}]{AdvP}}
@@ -4609,7 +4614,7 @@ p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated.
 \xayr{/IknF}{ikan}{much, many, very} is modified in this case by
 \xayr{kgnF}{kagan}{far too} to convey the meaning `far too many'.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:clitics_55_short}%
 \begingl
 	\gla keynam @ -ikan kagan //
@@ -4925,7 +4930,7 @@ postposition\index{adpositions!postpositions} \xayr{pesnF}{pesan}{until} may als
 a whole complement clause\index{complement clause}. The nominal complements are objects\index{grammatical function!adpositional object} governed by the
 adposition.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:pppstruct}
 \a PP → \anno*{\xbar{P}} \anno*[\elem{\Adjc}]{AdvP}
 \a \xbar{P} → \anno*{\xhead{P}}, \anno*[%
@@ -4987,7 +4992,7 @@ adpositional object's\index{grammatical function!adpositional object} case\index
 \rayr{liNF}{ling} and \rayr{AvnF}{avan}, which require special treatment with
 regards to case\index{case} marking, as described below.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \pex\label{ex:adpmorphlex}%
 \a\label{ex:adpmorphlex_1}\adjustbox{valign=t}{%
@@ -5025,7 +5030,7 @@ whereas \fw{auf den tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
 table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
 \fw{an} `at') as in (\ref{ex:gercasealt}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:gercasealt}%
 German \citep{butt2005}:\medskip\\
 \begin{tabular}[t]{@{} l @{ $\implies$ } l}
@@ -5492,7 +5497,7 @@ indicated place.
 % \xe
 }
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:nostackprep}\begingl
 	\gla Yam @ cacang $($agonan$)$ eyranena prihinena. //
 	\glb yam= cat-yang agonan eyran-ena prihin-ena //
@@ -5728,7 +5733,7 @@ state which serves as the background for the matrix
 clause. The corresponding constituent structure of the PP is shown in
 (\ref{ex:adptimecstruct}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:adptime}\begingl
 	\gla Gamaryang marin sa-sahaye ang @ Sipra. //
 	\glb gamar=yang marin sa\til{}saha-ye ang= Sipra //
@@ -5738,7 +5743,7 @@ clause. The corresponding constituent structure of the PP is shown in
 \endgl\xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:adptimecstruct}
 \begin{forest} shorter edges, italic leaves,
 [{\anno[\elem{\Adjc}]{PP}}
@@ -5781,7 +5786,7 @@ by \rayr{d/}{da-} to represent the missing complement, altogether structurally
 similar to (\ref{ex:intrusivequant}). An example of this strategy is given in
 (\ref{ex:cpextrapos}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:cpextrapos}
 \begin{minipage}[t]{.5\remaining}
 \begingl
@@ -5842,7 +5847,7 @@ While English\index{English} connects the predicative\index{grammatical function
 Ayeri does not possess an overt copula\index{copula} in basic equative statements. Instead,
 subject\index{grammatical function!subject} and quality are simply juxtaposed, as (\ref{ex:ayreqstmt}) illustrates.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayreqstmt}
 \a\label{ex:ayreqstmt_1}\begingl
 	\gla Ang @ Yān mino. //
@@ -5879,7 +5884,7 @@ existential statements in more formal language use the existential verb
 locations, as in (\ref{ex:ayrexstmt}). We will have a closer look at
 existential statements in \autoref{subsec:exs}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrexstmt}\begingl
 	\gla Ang @ yomayan ganye kardangya. //
 	\glb ang= yoma-yan gan-ye-Ø kardang-ya //
@@ -5934,7 +5939,7 @@ side. The phrase structure rule in (\ref{ex:copstruct}) results in the
 c-structures in (\ref{ex:copcstruct}) and corresponds to the f-structure in
 (\ref{ex:copfstruct}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\labels\label{ex:copcstruct}%
 \begin{minipage}[t]{.5\remaining}
 \tl\quad\begin{forest} narrower nodes, shorter edges,
@@ -5956,7 +5961,7 @@ c-structures in (\ref{ex:copcstruct}) and corresponds to the f-structure in
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:copfstruct}
 \a\begin{avm}
 \[
@@ -6251,7 +6256,7 @@ perform the role of a copula\index{copula}. It is rather more similar to a cliti
 nature, binding to the left edge of a phrase. As previously, we can test its
 status as a word by trying to place words between it and the word it follows (\ref{ex:copemphclit}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:copemphclit}\ljudge*\begingl
 	\gla Ang @ Apan māy, naratang, nimpayās ban. //
 	\glb ang= Apan māy nara=tang nimpaya-as ban //
@@ -6370,7 +6375,7 @@ structure rules for IPs are listed in (\ref{ex:ippstruct}), the corresponding
 c-structure is given in (\ref{ex:ipcstruct}a), and the general morpholexical
 rule set for finite verbs\index{verbs!finite} is given in (\ref{ex:inflmorphlex}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ippstruct}%
 \a IP → \anno*{\xbar{I}} \anno*[\elem{\Adjc}]{XP}
 \a \xbar{I} → \anno*{\xhead{I}} \anno*{S}
@@ -6549,7 +6554,7 @@ full NP\index{phrase types!noun phrase} (then the subject\index{grammatical func
 \Subj{} consists of a pronominal clitic\index{clitics} on the verb in \xhead{I} (then the
 complement(s) of the verb will take this place).
 
-% \begin{figure}[h]
+% \begin{figure}
 % \ex\label{ex:welshvpfr}\begingl
 % 	\glpreamble Welsh (\cite[131]{bresnan2016}, from
 % 		\cite[245]{tallerman1998}): //
@@ -6901,7 +6906,7 @@ as shown in (\ref{ex:topmorphlex}). Unmarkedness for case\index{case} of a nomin
 correspondingly identifies the NP\index{phrase types!noun phrase}/DP\index{phrase types!determiner phrase} as the clause's topic, which the rule in
 (\ref{ex:nptopcorr}) tries to capture.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \pex
 \a\label{ex:topmorphlex}%
@@ -6941,7 +6946,7 @@ than possessive, relationship of the complement is expressed by a difference in
 case\index{case} marking: instrumental\index{case!instrumental} instead of genitive\index{case!genitive}. An example is given in
 (\ref{ex:transnoun}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:transnoun}
 \a\label{transnoun_poss}
 	\begin{minipage}[t]{.4\remaining}
@@ -6986,7 +6991,7 @@ case\index{case} marking: instrumental\index{case!instrumental} instead of genit
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:npembedfull}
 \a\label{ex:npembedfull_1}
 \begin{minipage}[t]{.4\remaining}%
@@ -7084,7 +7089,7 @@ information on the mood\index{mood}, as illustrated by the set of morpholexical 
 in (\ref{ex:impfeat}). Imperative verbs may also be inflected for other moods\index{mood}
 and aspects\index{aspect} in addition.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:impfeat}%
 \adjustbox{valign=t}{%
@@ -8511,7 +8516,7 @@ the comparee, and the object\index{grammatical function!primary object} the stan
 (\ref{ex:ayrexceed}). More generally, the structure in Ayeri is as stated in
 (\ref{ex:ayrexceedscheme}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrexceed}\begingl
 	\gla Eng @ engaran nake rivanye vana danyaley nana. //
 	\glb eng= eng-aran nake rivan-ye-Ø vana danya-ley nana //
@@ -8522,7 +8527,7 @@ the comparee, and the object\index{grammatical function!primary object} the stan
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex~\label{ex:ayrexceedscheme}%
 	exceeds \textsc{quality} \textsc{comparee} \textsc{standard}
 \xe
@@ -8537,7 +8542,7 @@ would receive the same annotation because it is functionally equivalent. The
 adjective\index{adjectives} itself is analyzed as subcategorizing for a complement which holds
 the standard of comparison\index{comparison}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:lfgpredcomp}%
 English \parencite[adapted from][122]{butt1999}: \medskip
 
@@ -9020,7 +9025,7 @@ the other hand, refers to \textcquote[173]{mueller2002}{the result of an event
 [...]\ specified by the adjective\index{adjectives}}. This difference is
 illustrated in (\ref{ex:engsecpred}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engsecpred}
 \a\label{ex:engsecpred1_subj}%
 	\fw{Suzy came to work \textbf{sick}.} (depictive, S)
@@ -9833,7 +9838,7 @@ argument is a complement or an adjunct\index{grammatical function!adjunct}, noti
 `in-between' category, which they refer to as \emph{derived arguments}. The
 verbs listed in (\ref{ex:comptr}) will be exemplarily tested for this purpose.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:comptr}
 \a\label{ex:comptr_1}%
 	\xayr{\larger sr/}{sara-}{go}
@@ -9873,7 +9878,7 @@ restriction (or its lack) to a certain semantic role. In the following, the
 different semantic features will be referred to by a singleton feature rather
 than a pair; the abbreviations are given in (\ref{ex:argfunctfeat_2}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:argfunctfeat}
 \a\label{ex:argfunctfeat_1}%
 	\begin{tabu}[t]{>{\bfseries}l c c}
@@ -9916,7 +9921,7 @@ annotated with [–\,o] as well. The synactic functions in
 (\ref{ex:argfunctfeat}) map to the closest available role in the thematic
 hierarchy\index{hierarchy} (\ref{ex:themhier2}) \citep[329]{bresnan2016}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:themhier2}%
 	agent > beneficiary > experiencer/goal > instrument > patient/theme >
 	locative
@@ -9929,7 +9934,7 @@ is [–\,o]. If initial in a-structure, [–\,o] is mapped onto the \Subj{}
 function. The object of John's eating, \fw{a sandwich}, is assigned [–\,r], and
 thus maps to the \Obj{} function. This is shown in (\ref{ex:engactive}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:engactive}
 \begin{tabular}[t]{l >{\itshape}l l c c r}
 a-structure:
@@ -10078,7 +10083,7 @@ zeugmatic expression at best.
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:multiplace_5}%
 \a\label{ex:multiplace_5_1}%
 \begingl
@@ -10111,7 +10116,7 @@ both authorship and material use. These phrases can be coordinated with each
 other, and coordination with an adverb as in (\ref{ex:multiins_2}) is possible
 as well.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:multigen}
 \a\label{ex:multigen_1}%
 \begingl
@@ -10555,7 +10560,7 @@ then assigned to the next available semantic role, that is, [–\,r]. Example
 (\ref{ex:engpassive}) shows an English verb in active voice and its passive
 counterpart.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engpassive}%
 English:
 \a \textsc{agent} \fw{eats} \textsc{patient}.\medskip
@@ -10899,7 +10904,7 @@ the order \Obj{}---\SObj{}. However, Ayeri differs from English in its mapping
 of semantic roles according to the [±\,o, ±\,r] scheme introduced above. An
 example of an active\index{voice!active} ditransitive sentence is given in (\ref{ex:ditrorder}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ditrorder}
 \begin{minipage}[t]{.4\remaining}
 \begingl
@@ -11964,7 +11969,7 @@ experiencer\index{semantic role!experiencer} as an oblique\index{grammatical fun
 as a dative\index{case!dative} NP\index{phrase types!noun phrase} in Ayeri. Since open complements\index{grammatical function!open complement} (labeled \textsc{proposition} here)
 are an `other' function as well, they also receive [–\,o] annotation.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:engseemastruct}
 \begin{tabular}[t]{@{} >{\itshape}l c l c c r}
 seem
@@ -12053,7 +12058,7 @@ yet it appears in the agent case\index{case!agent}. The closest grammatically pe
 to express the intended statement in (\ref{ex:passraise}bc) is to topicalize\index{grammatical function!topic}
 the patient argument of the subordinate verb, as shown in (\ref{ex:raisept}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:raisept}\begingl
 	\gla Le @ surptang valyyam umang. //
 	\glb le= surp=tang valy-yam umang-Ø //
@@ -12449,13 +12454,13 @@ clause. Most notably, these are complement clauses and relative clauses.
 Another common type of dependent clause is the conditional clause. As before,
 this section will describe their structure and function.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:cpstruct}%
 CP → \anno*{\xhead{C}} \anno*{XP}
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:cpcstruct}
 \begin{forest} shorter edges,
 [{\anno[\pass{\Compl} $\vee$ \pass{\Adjc}]{CP}}
@@ -12479,7 +12484,7 @@ may fulfill different grammatical functions: it may be a closed complement\index
 it acts as a complement clause, as well as adjunct\index{grammatical function!adjunct} when it acts as a relative
 clause.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{morphlex}
 \ex\label{ex:cmorphlex}%
 \adjustbox{valign=t}{%
@@ -13162,7 +13167,7 @@ This way, the relative clause is provided with a head in the way of `that
 which'. Also note that Ayeri does not distinguish between restricted and
 unrestricted relative clauses the way English does.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:relcheadless}%
 \ljudge\ques\begingl
 	\gla Si ang @ sungyan prihinya, bituayley disaeri. //
@@ -13226,7 +13231,7 @@ to express a counterfactual conditional, the irrealis mood\index{mood!irrealis} 
 (\ref{ex:condcntfact}). Ayeri does not distinguish between subjunctive and
 conditional moods\index{mood}; irrealis\index{mood!irrealis} covers both.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:condcntfact}\begingl
 	\gla Yomongyang adaya, sa @ nelongyang va. //
 	\glb yoma-ong=yang adaya sa= nel-ong=yang va.Ø //
@@ -13241,7 +13246,7 @@ conditions containing a copular clause\index{copular clause}. An adverb\index{ad
 like \xayr{yomiNF}{yoming}{maybe, perhaps} may be used in these cases, or
 no marker at all. Both options are illustrated in (\ref{ex:copcond}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:copcond}\begingl
 	\gla Yang ijan \textup{(}yoming\textup{)}, sa @ intongyang koya-hen si
 		vacyang. //
@@ -13259,7 +13264,7 @@ dedicated conjunction\index{conjunctions} expressing `unless', however, it has \
 as a general-purpose negative conjunction\index{conjunctions}. It may also use negation\index{negation} as a
 morphological means to mark a negative condition.
 
-\begin{figure}[h]
+\begin{figure}
 \pex
 \a\label{ex:unlessnaarya}\begingl
 	\gla Sa-sahoyyang, nārya bengyāng, simalyāng. //
