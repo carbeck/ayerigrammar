@@ -17,7 +17,7 @@ steps.} Since Ayeri is a verb-initial language\index{constituent order}, it is p
 comfortably analyzed in terms of Lexical-Functional Grammar
 (\cite{bresnan1982}~ff.; more recently, \cite{bresnan2016};
 \cite{dalrymple2001}; \cite{falk2001}), since
-\Lfg{}\index{Lexical-functional grammar} does not require complicated derivations behind the surface structure of
+\Lfg{}\index{Lexical-functional grammar} does not require complicated derivations below the surface structure of
 sentences.\footnote{Passivization, for instance, is assumed to be a lexically
 motivated alternation in predicate structure (\Subj{} is blocked, so the
 nominative is assigned to \Obj{}, and the original \Subj{} is expressed by an
@@ -53,14 +53,11 @@ theory\index{X-bar theory} are observed:
 \item \xbar{X} → \xhead{X}, WP (complement rule)
 \end{enumerate}
 
-The principle of economy of expression furthermore dictates that essentially,
-trees be pruned of empty terminal nodes and non-branching preterminal nodes,
-since these do not provide structurally or semantically relevant information
-\citep[119--128]{bresnan2016}. Thus, for instance, in a rule like XP →
-\xhead{X} YP, YP does not necesssarily appear as XP's complement in the tree if
-one were to follow plain X-bar theory\index{X-bar theory} rules. Rather, nodes
-are defined in their status by functional annotations than by their position in
-the tree alone.}
+The principle of economy of expression furthermore dictates that, trees be
+pruned of empty terminal nodes and non-branching preterminal nodes, since these
+do not provide structurally or semantically relevant information
+\citep[119--128]{bresnan2016}. Nodes are defined in their status by functional
+annotations rather than by their position in the tree alone.}
 
 \item[Universality:] \textcquote[42]{bresnan2016}{The principle of universality
 states that \emph{internal structures are largely invariant across languages}.
@@ -68,7 +65,7 @@ The formal model of internal structure in \Lfg{} is the \emph{f-structure},
 which stands for \enquote{functional structure}}. The f-structure is depicted
 as an argument-value matrix (\Avm{}) which maps the relations between `subject'
 (\Subj{}), `object' (\Obj{}), `predicator' (\Pred{}), etc.\ as functional
-abstractions of noun phrase (NP), VP, \xhead{V}, etc.\ \citep[42]{bresnan2016}.
+abstractions of noun phrase (NP), verb phrase (VP), verb (\xhead{V}), etc.\ \citep[42]{bresnan2016}.
 Complement-taking predicators, such as verbs or adpositions, are also presented
 with their \fw{a-structure} spelled out. That is, subcategorized-for arguments
 are formally stated \citep[15]{bresnan2016}. The f-structure collates semantic
@@ -77,7 +74,7 @@ features associated with heads of grammatical functions (\GF{}s), such as case
 need not have morphological realization \citep[43]{bresnan2016}.
 
 \item[Monotonicity:] \textcquote[43]{bresnan2016}{Constituent structure form is
-simply not the same in all languages [...]\ In \Lfg{} the correspondence
+simply not the same in all languages [...]. In \Lfg{} the correspondence
 mapping between internal and external structures does not preserve sameness of
 form. Instead, \emph{it is designed to preserve inclusion relations between the
 information expressed by the external structure and the content of the internal
@@ -87,10 +84,10 @@ function is unified in f-structure.
 
 \end{description}
 
-\begin{figure}[t]\centering
+\begin{figure}\centering
 \begin{tabular}[t]{l @{\quad\quad} c}
 argument (a-)structure:
-& \astruct{\tikzmark{verb}verb}{\tikzmark{x}x, \tikzmark{y}y}\bigskip \\
+& \astruct{\tikzmark{verb}verb}{\tikzmark{x}x, \tikzmark{y}y}\medskip \\
 
 functional (f-)strucutre:
 & \tikzmark{fstruct}{\smaller\begin{avm}
@@ -103,10 +100,10 @@ functional (f-)strucutre:
 	\] \tikzmark{objval}{\quad} \\
 	\quad \tikzmark{pred} \Pred{} & \dots \tikzmark{predval} \\
 \]
-\end{avm}}\bigskip\\
+\end{avm}}\medskip\\
 
 constituent (c-)structure:
-& \begin{forest} baseline
+& \begin{forest} baseline, shorter edges,
 [\xbar{V}
 	[\subnode{V}{V}]
 	[NP \tikzmark{NP}
@@ -149,16 +146,11 @@ constituent (c-)structure:
 To illustrate the different parallel structures in operation,
 \citet[15]{bresnan2016} give the schema in \autoref{fig:phimap} to demonstrate
 which part of the a- and c-structure respectively corresponds (`links', `maps')
-to which part of the f-structure.
-% \footnote{\citet{bresnan2016} use \textsc{`subj'} for `subject'. ; for
-% consistency with the above I will use `\Subj{}' in the following. I will also
-% divergently use \Compl{} and \XCompl{} for \textsc{(x)comp}, since
-% \textsc{comp} has already been used for `comparative' above.}
-Regarding the different functions distinguished, \Lfg{} assumes the functional
-hierarchies given in (\ref{ex:functions}) of \autoref{ch:syntyp}, following
-\citet[97, 100]{bresnan2016}.
+to which part of the f-structure. Regarding the different functions
+distinguished, \Lfg{} assumes the functional hierarchies given in
+(\ref{ex:functions}), following \citet[97, 100]{bresnan2016}.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:functions}
 \a\label{ex:gfs} Grammatical functions (\GF{}s):\\
 	$\overbrace{\Subj{} > \Obj{} > \SObj{}}^{\text{core}} > 
@@ -179,9 +171,9 @@ hierarchies given in (\ref{ex:functions}) of \autoref{ch:syntyp}, following
 \end{figure}
 
 The functions listed in (\ref{ex:functions}) will also appear in
-phrase-structure rules and c-structure trees together with arrows. These arrows
+phrase-structure rules and c-structure trees together with arrows which
 symbolize inheritance of feature information from the current level (↓) of the
-tree to the next (↑), so for instance, `\pass{\Subj}' means that the
+tree to the next (↑). For instance, `\pass{\Subj}' means that the
 information subsumed by the current node (`down') is passed on as part of the
 subject function of the next higher level (`up') in the tree. Concise
 information on notational formalisms of \Lfg{} can be found, for instance, in
@@ -212,7 +204,7 @@ language of the Malayo-Polynesian branch, spoken mainly in the Philippines
 \parencites{glottolog:tgl}{schachterotanes1972}, usually serves as the
 academic poster child in descriptions of this system. Ayeri departs from
 Tagalog's system in a number of ways, though, and very probably towards the
-more conventional. Austronesian alignment is thus not necessarily the best
+more conventional. Austronesian alignment is therefore not necessarily the best
 model to liken Ayeri's syntax to. It will nonetheless be informative to compare
 both systems based on the work of \textcites{kroeger1991}{kroeger1993a}, who
 provides an analysis of Tagalog's syntactic alignment at least roughly in terms
@@ -260,7 +252,7 @@ the modifier. The head is here represented by the verb\index{verbs}, the modifie
 object\index{grammatical function!primary object}---like English\index{English}, thus, Ayeri is a VO language. In addition to this,
 however, Ayeri regularly places the verb as the head of the clause itself first.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:constordertypo}%
 \a Order of subject, object, and verb: VSO
 \a Order of verb and object: VO
@@ -366,7 +358,7 @@ supposed to command. A very first stab at diagramming would probably be to come
 up with a flat, non-configurational\index{configurationality} structure, all but lacking a VP\index{phrase types!verb phrase}, as shown
 in (\ref{ex:ayrtreefirsthypo}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrtreefirsthypo}\ljudge\ques
 \begin{forest}
 [S
@@ -384,7 +376,7 @@ in (\ref{ex:ayrtreefirsthypo}).
 \xe
 \end{figure}
 
-Such a structure, though, does not do Ayeri justice in that, if S, O, and V
+Such a structure does not do Ayeri justice in that, if S, O, and V
 were all at the same level structurally, it should not be possible, for
 instance, to replace V and O together by an anphora like `do so'. Ayeri,
 however, allows precisely this. In spite of not being adjacent, V and O must
@@ -514,7 +506,7 @@ structure for Celtic languages.
 
 What all of these c-structures have in common is that the inflected verb
 appears in \xhead{I}, which is a sister of S. S, in turn, is a small clause\index{phrase types!small clause}
-containing the arguments of the verb. In the cases of Irish\index{Irish} and Welsh\index{Welsh}, however,
+containing the arguments of the verb. In the case of Irish\index{Irish} and Welsh\index{Welsh}, however,
 there is a VP\index{phrase types!verb phrase} sister of the subject\index{grammatical function!subject} NP\index{phrase types!noun phrase} which itself does not have a head, but
 contains the object\index{grammatical function!primary object} NP\index{phrase types!noun phrase} as a complement. In the case of Tagalog\index{Tagalog}, S is
 non-configurational\index{configurationality}, that is, while XP may contain an infinite verb, the
@@ -530,7 +522,7 @@ transformational rules generating the surface structure from a deeper layer of
 representation underneath it, there cannot be a trace of \xhead{V} left behind
 in VP\index{phrase types!verb phrase}. \Lfg{}\index{Lexical-functional grammar} thus avoids empty categories on the assumption that there is no
 information contained in an empty node. The functional information provided by
-the verb\index{verbs} is not lost; however, it is merely now provided by the verb\index{verbs} in
+the verb\index{verbs} is not lost; it is merely now provided by the verb\index{verbs} in
 \xhead{I}. Essentially, the Welsh\index{Welsh} example does not violate endocentricity,
 since the finite verb\index{verbs!finite} in \xhead{I} still forms the verbal head in the
 functional structure representation of the clause. With regards to constituent
@@ -538,7 +530,7 @@ structure, \xhead{V}, if present, c-commands its NP\index{phrase types!noun phra
 the object\index{grammatical function!primary object} NP\index{phrase types!noun phrase} are dominated by VP\index{phrase types!verb phrase}.
 Compare the formal definitions in (\ref{ex:domcomdef}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:domcomdef}
 \a Exhaustive domination \citep[121]{carnie2013}:\smallskip
 
@@ -612,7 +604,7 @@ the noun case markers) that tells the true case of the trigger.
 This involves changing the name of \enquote{nominative} and
 \enquote{accusative} to \enquote{actor} and \enquote{patent} \sic{}, since
 there is no longer a \enquote{subject} or \enquote{object} as such. Of course,
-word order is free [...].
+word order is free
 % , so:
 % 
 % \begin{enumerate}[start=4, nosep, label={\arabic*)}]
@@ -637,7 +629,7 @@ adds that some
 argument in question as the \emph{topic} and some as the \emph{subject}.
 However, as will become clear below, each of these labels appears to carry some
 inappropriate connotation, making a netural term like \emph{Trigger} seem
-preferable [...]\ There also seems to be good reason to reject the term
+preferable. [...] There also seems to be good reason to reject the term
 \emph{focus}.}
 
 It may be noted that term `focus'\index{grammatical function!focus} is used in \citet{schachterotanes1972}, the
@@ -655,7 +647,7 @@ subject,\footnote{\posscite{cowan1995} sketch may be based on
 \citet{kroeger1991} at all, nor does he refer to any other research more recent
 than 1985. The reason may be that Schachter retired in the early 1990s, as the
 UCLA linguistics department's \citet{uclalingdepthist} suggests. Furthermore,
-note that this handbook article was published posthumously.}
+note that the handbook article quoted from here was published posthumously.}
 \citet{kroeger1991} reaches the opposite conclusion by performing further tests
 and taking a functionalist rather than purely structuralist perspective. Thus,
 he reasons:
@@ -707,7 +699,7 @@ some terms which will be used in the discussion below.
 The terms `subject', `topic', and `focus' were already used a number of times
 above, but it seems advisable to sketch out working definitions in order to
 preclude confusion before continuing to look at how Ayeri fares with regards to
-these notions. As we will see, all of subject, topic, and focus relate to
+these notions in more detail. As we will see, all of subject, topic, and focus relate to
 different ways in which the relative prominence of certain NPs is raised;
 subject and topic are also closely related to each other. It ought to be noted
 that while \Lfg{} treats topic and focus as grammaticalized discourse functions
@@ -730,7 +722,26 @@ correspondingly less energy to trying to find an explicit definition of
 subject. However, it turns out that, in a wide range of cases, this
 inter-subjective agreement is lacking.}
 
-\begin{figure}[t]
+\citet{dixon2010a} defines a subject as \textcquote[76]{dixon2010a}{the entity
+about which something is affirmed or denied}. He goes on to explain that,
+ignoring copular clauses like \fw{We are tired and thirsty}, every language has
+two varieties of clauses: intransitive\index{verbs!intransitive} ones, where the verb has just one core
+argument, and transitive\index{verbs!transitive} ones, where the verb has two core arguments. A basic
+definition based on this is given by the chart in (\ref{ex:subject}). It shows
+the definition of the notion of subject for both nominative--accusative
+languages and ergative--absolutive languages. Languages of the world differ
+based on how they prefer to treat the two nominal relations of a transitive
+verb\index{verbs!transitive} in relation to intransitive verbs\index{verbs!intransitive}: they may have a strong preference to
+either treat the agent\index{semantic role!agent} (A)---the entity that prototypically acts in some
+way---or the patient\index{semantic role!patient}/undergoer/theme\index{semantic role!theme} (P)---the entity which is prototypically
+affected or handled by the action in some way---the same as S, the sole
+argument of an intransitive verb\index{verbs!intransitive}. In the former case, the language is said to
+have \Nom{}--\Acc{} alignment (\ref{ex:subject_nomacc}) with S/A being the
+nominative subject, whereas in the latter case (\ref{ex:subject_ergabs}), the
+language is said to have \Erg{}--\Abs{} alignment with S/P being the absolutive
+subject.
+
+\begin{figure}
 \pex\label{ex:subject}
 \a\label{ex:subject_nomacc}%
 nominative--accusative alignment (S/A---P):\medskip
@@ -759,30 +770,22 @@ ergative--absolutive alignment (S/P---A):\medskip
 \xe
 \end{figure}
 
-\citet{dixon2010a} defines a subject as \textcquote[76]{dixon2010a}{the entity
-about which something is affirmed or denied}. He goes on to explain that,
-ignoring copular clauses like \fw{We are tired and thirsty}, every language has
-two varieties of clauses, intransitive\index{verbs!intransitive} ones, where the verb has just one core
-argument, and transitive\index{verbs!transitive} ones, where the verb has two core arguments. A basic
-definition based on this is given by the chart in (\ref{ex:subject}). It shows
-the definition of the notion of subject for both nominative--accusative
-languages and ergative--absolutive languages. Languages of the world differ
-based on how they prefer to treat the two nominal relations of a transitive
-verb\index{verbs!transitive} in relation to intransitive verbs\index{verbs!intransitive}: they may have a strong preference to
-either treat the agent\index{semantic role!agent} (A)---the entity that prototypically acts in some
-way---or the patient\index{semantic role!patient}/undergoer/theme\index{semantic role!theme} (P)---the entity which is prototypically
-affected or handled by the action in some way---the same as S, the sole
-argument of an intransitive verb\index{verbs!intransitive}. In the former case, the language is said to
-have \Nom{}--\Acc{} alignment (\ref{ex:subject_nomacc}) with S/A being the
-nominative subject, whereas in the latter case (\ref{ex:subject_ergabs}), the
-language is said to have \Erg{}--\Abs{} alignment with S/P being the absolutive
-subject. \citet{comrie1989} illustrates this difference with an example from
-Chukchi, which we will here contrast with English\index{English}:\footnote{In English\index{English},
+\citet{comrie1989} illustrates this difference with an example from
+Chukchi, which we will here contrast with English\index{English}.\footnote{In English\index{English},
 \fw{you} is the same for both singular and plural as well as subjective and
 objective case, which is why I replaced it with the less ambiguous
-\fw{her} in (\ref{ex:engchuk_eng}).}
+\fw{her} in (\ref{ex:engchuk_eng}).} While English\index{English} treats the
+actor of the intransitive sentence (\ref{ex:engchuk_eng1}) the same as that of
+the transitive one (\ref{ex:engchuk_eng2})---both sentences use \fw{I} in the
+nominative---Chukchi appears to use a different pronoun for the actor of the
+intransitive sentence (\ref{ex:engchuk_chuk1}) than for the actor of the
+transitive one (\ref{ex:engchuk_chuk2})---absolutive \fw{ɣəm} versus ergative
+\fw{ɣəmnan}, respectively. At least in Standard English\index{English}, it would
+be ungrammatical to use the pronoun \fw{me} in place of \fw{I} in
+(\ref{ex:engchuk_eng2}), since \fw{me} can only be used for first-person objects
+of the verb, but not for subjects of transitive clauses.
 
-\begin{figure}[h]
+\begin{figure}
 %\needspace{5\baselineskip}%
 \pex\label{ex:engchuk_eng}
 \a\label{ex:engchuk_eng1}\begingl
@@ -802,7 +805,7 @@ objective case, which is why I replaced it with the less ambiguous
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 %\needspace{5\baselineskip}%
 \pex~\label{ex:engchuk_chuk}%
 Chukchi \parencite[adapted from][104]{comrie1989}:
@@ -824,24 +827,13 @@ Chukchi \parencite[adapted from][104]{comrie1989}:
 \xe
 \end{figure}
 
-While English\index{English} treats the actor of the intransitive sentence
-(\ref{ex:engchuk_eng1}) the same as that of the transitive one
-(\ref{ex:engchuk_eng2})---both sentences use \fw{I} in the nominative---Chukchi
-appears to use a different pronoun for the actor of the intransitive sentence
-(\ref{ex:engchuk_chuk1}) than for the actor of the transitive one
-(\ref{ex:engchuk_chuk2})---absolutive \fw{ɣəm} versus ergative \fw{ɣəmnan},
-respectively. At least in Standard English\index{English}, it would be ungrammatical to use
-the pronoun \fw{me} in place of \fw{I} in (\ref{ex:engchuk_eng2}), since
-\fw{me} can only be used for first-person objects of the verb, but not for
-subjects of transitive clauses.
-
 However, \citet{comrie1989} also urges to consider that grammatical relations
 and their representation in morphology are not always as clear-cut as in the
 example above. While he characterizes the prototypical subject as the
 intersection of agent\index{semantic role!agent} and topic\index{grammatical function!topic} as far as cross-linguistic evidence is
 concerned \citep[107]{comrie1989}, he also points out that subjects do not
 necessarily have to unite all the properties typically associated with them
-\citep[110]{comrie1989}. This seems to be the case, with Tagalog\index{Tagalog}, for instance,
+\citep[110]{comrie1989}. This seems to be the case with Tagalog\index{Tagalog}, for instance,
 as observed by both \citet{schachter1976} and \citet{kroeger1991}, and may
 considerably complicate making a definitive statement.
 
@@ -907,11 +899,14 @@ focus on the argument in control of the action \citep[95--96]{bresnan2016}. The
 mapping between grammatical functions like \Subj{} and the lexical components
 that make it up also does not need to be a one-to-one correspondence, since
 \Lfg{}\index{Lexical-functional grammar} allows for the distributed exponence of grammatical features like in the
-example of Warlpiri\index{Warlpiri} in (\ref{ex:warlastruct}). The only condition is that
-grammatical functions be uniquely defined within their minimal f-structure
-\citep[45]{bresnan2016}. As (\ref{ex:warlastruct}) shows, multiple NPs in
-different positions in the constituent structure may feed semantic information
-to a single function defined by the argument structure of the verb.
+example of Warlpiri\index{Warlpiri} in (\ref{ex:warlastruct}). The only
+condition is that grammatical functions be uniquely defined within their minimal
+f-structure \citep[45]{bresnan2016}.\footnote{The functional bundle of a
+predicator and its arguments \citep[230, 250]{bresnan2016}. This is
+essentially \Lfg{}'s equivalent of the logical form (\textsc{lf}).} As
+(\ref{ex:warlastruct}) shows, multiple NPs in different positions in the
+constituent structure may feed semantic information to a single function defined
+by the argument structure of the verb.
 
 \begin{figure}
 \ex\label{ex:warlastruct}
@@ -982,7 +977,7 @@ The subject role \thetaroof{} is defined as \textcquote[330]{bresnan2016} {the
 most prominent semantic role of a predicator}, thus signifies the logical
 subject. Furthermore, \citet{bresnan2016} devise two a-structure features,
 [±\,o] (objective) and [±\,r] (restrictive). According to this classification,
-\Subj{} is assigned the features [–\,r, –\,o], since the subject is not
+\Subj{} is assigned the features [–\,r, \mbox{–\,o}], since the subject is not
 restricted to a certain semantic role, nor needs to have a semantic
 role.\footnote{This ought to make \posscite{kroeger1991} analysis compatible to
 \Lfg{}\index{Lexical-functional grammar} as well.} Also, subjects do not complement transitive predicators like
@@ -1001,7 +996,7 @@ The notion of topic refers essentially to who or what a longer stretch of
 conversation is about. \citet{givon1983} defines the topic of a `thematic
 paragraph'---as he calls a coherent unit of discourse above the level of a
 single sentence---as \textcquote[8]{givon1983}{the continuity marker, the
-\fw{leitmotif}}. The topic is thus
+\fw{leitmotif}}. Thus, the topic is
 
 \blockcquote[8]{givon1983}{the participant \emph{most crucially involved} in
 the action sequence running through the paragraph; it is the participant most
@@ -1035,7 +1030,7 @@ notion of syntactic pivot in clause coordination \citep[172]{dixon2010a}.
 \index{grammatical function!focus|(}
 
 Regarding the definition of focus, \citet[174]{dixon2010a} only mentions
-contrastive focus, which basically raises the prominence of a certain NP within
+contrastive focus, which raises the prominence of a certain NP within
 a single clause. It is not necessary for the focused NP to be coordinated with
 another NP by `or'. \citet{dixon2010a} also warns that focus is often confused
 with topic\index{grammatical function!topic}. Perhaps this is in part also, as \citet{bresnan2016} mention, due
@@ -1189,10 +1184,10 @@ the verb by \rayr{ANF}{ang} as well.
 One of the most prominent features of Ayeri with regards to verbs and their
 relation to subjects\index{grammatical function!subject} is verb agreement with third-person\index{person} NPs\index{phrase types!noun phrase}. This was already
 discussed at length in \autoref{clitics_postverb_person} 
-(p.~\pageref{clitics_postverb_person}\,ff.) and \autoref{sec:verbs}. Hence, I
-will only give basic information here.
+(p.~\pageref{clitics_postverb_person}\,ff.) and \autoref{sec:verbs}.
+% Hence, I will only give basic information here.
 
-\citet{kroeger1991} mentions that Tagalog\index{Tagalog} has optional plural agreement of
+\citet{kroeger1991} mentions that Tagalog\index{Tagalog} has optional number agreement of
 predicates with the nominative NP if the nominative argument of the clause is
 plural. This is independent of whether the nominative argument is also the
 actor of the clause or not \citep[24--25]{kroeger1991}, compare
@@ -1419,6 +1414,17 @@ English\index{English} thus has \Nom{}--\Acc{} alignment, since it typically tre
 alike. In an \Erg{}--\Abs{} language, then, we would expect the opposite case:
 S and P should be treated alike.
 
+This is indeed the case in the examples of Dyirbal\index{Dyirbal} in (\ref{ex:dyirpivot}),
+where we find that \fw{balan dʸugumbil} `the woman' is coreferential in
+(\ref{ex:dyirpivot_4}). This is the S of (\ref{ex:dyirpivot_3}), and the P of
+(\ref{ex:dyirpivot_1}). Dyirbal\index{Dyirbal}, thus, treats S and P alike, as predicted for
+an \Erg{}--\Abs{} language---at least in this case, since
+\citet[113]{comrie1989} also explains that \Fsg{} and \Ssg{} pronouns in
+Dyirbal\index{Dyirbal} behave in terms of \Nom{}--\Acc{}. \citet{comrie1989} also notes that
+some languages do not show a clear preference for whether the A or P of the
+transitive clause in the first conjunct is the preferred reference of the S of
+the intransitive clause in the second conjunct.
+
 \begin{figure}
 \pex\label{ex:dyirpivot}%
 Dyirbal \parencite[adapted from][112]{comrie1989}:
@@ -1463,17 +1469,6 @@ Dyirbal \parencite[adapted from][112]{comrie1989}:
 \end{tikzpicture}
 \xe
 \end{figure}
-
-This is indeed the case in the examples of Dyirbal\index{Dyirbal} in (\ref{ex:dyirpivot}),
-where we find that \fw{balan dʸugumbil} `the woman' is coreferential in
-(\ref{ex:dyirpivot_4}). This is the S of (\ref{ex:dyirpivot_3}), and the P of
-(\ref{ex:dyirpivot_1}). Dyirbal\index{Dyirbal}, thus, treats S and P alike, as predicted for
-an \Erg{}--\Abs{} language---at least in this case, since
-\citet[113]{comrie1989} also explains that \Fsg{} and \Ssg{} pronouns in
-Dyirbal\index{Dyirbal} behave in terms of \Nom{}--\Acc{}. \citet{comrie1989} also notes that
-some languages do not show a clear preference for whether the A or P of the
-transitive clause in the first conjunct is the preferred reference of the S of
-the intransitive clause in the second conjunct.
 
 For Tagalog\index{Tagalog}, as \citet{kroeger1991} explains, \textcquote[30]{kroeger1991}{the
 deletion is not obligatory but null nominative arguments are always interpreted
@@ -1566,8 +1561,8 @@ is also he who leaves; the verb in the first conjunct clause is marked for
 actor voice according to the asker as the actor (A) being the subject.
 
 In order to now investigate what the situation is in Ayeri, let us return to
-our initial set of examples. These examples featured two animals which in Ayeri
-are treated both as animate neuters. Anaphoric reference is thus potentially
+our initial set of examples. These examples featured two animals which
+are treated both as animate neuters. Anaphoric reference is therefore potentially
 ambiguous between \xayr{prlF}{paral}{cat} and \xayr{pFrbr}{prabara}{mouse} in
 (\ref{ex:ayrpivot}).
 
@@ -1634,7 +1629,7 @@ is coreferential with the subject\index{grammatical function!subject} in the fir
 altering the voice marking on the verb, it is certainly illustrative to check
 how Ayeri fares if the topic is swapped to \xayr{pFrbr}{prabara}{mouse}.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrpivot2}
 \begingl[aboveglftskip=1em]
 	\gla Sa @ kimbyo paralang prabara nay sahayong edaya. //
@@ -1734,7 +1729,7 @@ slightly different, however, if the reference of the verb is unambiguous\index{a
 instance, because the topicalized\index{grammatical function!topic} argument cannot logically be the agent\index{semantic role!agent} of the
 coordinated\index{coordination} clause, as shown in (\ref{ex:ayrpivot4}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrpivot4}\begingl[aboveglcskip=1.5em, aboveglftskip=2.5em]
 	\gla {Le ilya} {ang Akan} ilon {yam Maran} nay sarayāng. //
 	\glb {le=il-ya} {ang=Akan} ilon-Ø {\Dat{}=Maran} nay sara=yāng //
@@ -1822,19 +1817,23 @@ conjugated so as to require an animate masculine controller, whereas
 \end{morphlex}
 \end{figure}
 
-As before, there are two masculine NPs in the first conjunct which form
-suitable antecedents on behalf of being animate masculine as required: the
-agent (A) \rayr{AknF}{Akan} and the recipient (R) \rayr{mrnF}{Maran}. Of the
-remaining non-topic\index{grammatical function!topic} NPs\index{phrase types!noun phrase}, Ayeri considers the agent\index{semantic role!agent} to rank higher as a
-secondary topic\index{grammatical function!topic} on the thematic hierarchy\index{hierarchy} than the recipient\index{semantic role!recipient}, compare 
-(\ref{ex:themhier}). The agent\index{semantic role!agent} hence forms the preferred controller for
-\rayr{sryaaNF}{sarayāng}. In cases where the topic\index{grammatical function!topic} in the first conjunct can
-safely be ruled out as the controller of the pronominal in the second conjunct,
-the syntactic pivot, thus, defaults\index{default} to the highest-ranking semantically
-coherent NP\index{phrase types!noun phrase}. In most cases, Ayeri will therefore group the intransitive\index{verbs!intransitive} subject\index{grammatical function!subject}
-and the transitive agent\index{semantic role!agent} together.
+As before, there are two masculine NPs in the first conjunct which form suitable
+antecedents on behalf of being animate masculine as required: the agent (A)
+\rayr{AknF}{Akan} and the recipient (R) \rayr{mrnF}{Maran}. Of the remaining
+non-topic\index{grammatical function!topic} NPs\index{phrase types!noun phrase},
+Ayeri considers the agent\index{semantic role!agent} to rank higher as a
+secondary topic\index{grammatical function!topic} on the thematic
+hierarchy\index{hierarchy} than the recipient\index{semantic role!recipient},
+compare (\ref{ex:themhier}). The agent\index{semantic role!agent} hence forms
+the preferred controller for \rayr{sryaaNF}{sarayāng}. In cases where the
+topic\index{grammatical function!topic} in the first conjunct can safely be
+ruled out as the controller of the pronominal in the second conjunct, the
+syntactic pivot defaults\index{default} to the highest-ranking semantically
+coherent NP\index{phrase types!noun phrase}. Ayeri therefore mostly groups the
+intransitive\index{verbs!intransitive} subject\index{grammatical
+function!subject} and the transitive agent\index{semantic role!agent} together.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:themhier}%
 	Thematic hierarchy\index{hierarchy} \citep[329]{bresnan2016}:\medskip \\
 	agent > beneficiary > experiencer/goal > instrument > patient/theme >
@@ -1843,20 +1842,23 @@ and the transitive agent\index{semantic role!agent} together.
 \end{figure}
 
 For most verbs\index{verbs}, this is also reflected by case marking, as we have
-seen above in (\ref{ex:ayrpivot}): the S of an intransitive clause\index{verbs!intransitive} receives the
-same case marker as the A of a transitive clause:
-\rayr{/ANF}{-ang}/\rayr{ANF}{ang} for animate\index{animacy} referents, and
-\rayr{/reNF}{reng}/\rayr{ENF}{eng} for inanimate\index{animacy} referents (compare
-\autoref{subsubsec:agent}). The case described initially, where the topic\index{grammatical function!topic}
-marking basically determines the controller of the coordinated\index{coordination} intransitive
-clause\index{verbs!intransitive}, which is reminiscent of Tagalog's\index{Tagalog} syntax, is essentially a strategy to
-disambiguate\index{ambiguity} between two possible controllers for the same target. When only
-one of the referents in the transitive conjunct is eligible as the controller
-of the subject\index{grammatical function!subject} of the intransitive\index{verbs!intransitive} conjunct at the same time, A and P are
-regularly indicated by person agreement\index{agreement}, since Ayeri requires a resumptive
-pronominal clitic\index{clitics} in the intransitive clause\index{verbs!intransitive}, as indicated above. The affix on
-the verb thus has the status of a pronominal predicator, compare
-(\ref{ex:ayrpivot5}).
+seen above in (\ref{ex:ayrpivot}): the S of an intransitive
+clause\index{verbs!intransitive} receives the same case marker as the A of a
+transitive clause: \rayr{/ANF}{-ang}/\rayr{ANF}{ang} for animate\index{animacy}
+referents, and \rayr{/reNF}{reng}/\rayr{ENF}{eng} for inanimate\index{animacy}
+referents (compare \autoref{subsubsec:agent}). The case described initially,
+where the topic\index{grammatical function!topic} marking determines the
+controller of the coordinated\index{coordination} intransitive
+clause\index{verbs!intransitive}, is essentially a strategy to
+disambiguate\index{ambiguity} between two possible controllers for the same
+target. This is broadly reminiscent of Tagalog's\index{Tagalog} syntax. On the
+other hand, when only one of the referents in the transitive conjunct is
+eligible as the controller of the subject\index{grammatical function!subject} of
+the intransitive\index{verbs!intransitive} conjunct at the same time, A and P
+are regularly indicated by person agreement\index{agreement}, since Ayeri
+requires a resumptive pronominal clitic\index{clitics} in the intransitive
+clause\index{verbs!intransitive}, as indicated above. The affix on the verb thus
+has the status of a pronominal predicator, compare (\ref{ex:ayrpivot5}).
 
 \begin{figure}
 \pex\label{ex:ayrpivot5}
@@ -1935,9 +1937,9 @@ being male, since \rayr{kumNF}{Kumang} is female. Hence, in
 
 Another property usually associated with subjects\index{grammatical function!subject} is the ability of quantifiers
 referring to the subject\index{grammatical function!subject} NP\index{phrase types!noun phrase} to `float' into the VP. This is possible also in
-English\index{English}, consider, for instance, (\ref{ex:engqfloat}).
+English\index{English}, consider, for instance, example (\ref{ex:engqfloat}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engqfloat}%
 English:
 \a\label{ex:engqfloat_1}%
@@ -1949,7 +1951,7 @@ English:
 
 Both of these sentences are equal in meaning: for all children in the set,
 every child is writing an unspecified amount of letters. It is not the case in
-(\ref{ex:engqfloat_2}) that for an unspecified amount of children, together
+(\ref{ex:engqfloat_2}) that, for an unspecified amount of children, together
 they write the total amount of letters. \fw{All} refers to \fw{the children} in
 both cases, even though \fw{all} is not placed in the subject\index{grammatical function!subject} NP, \fw{the
 children}, in (\ref{ex:engqfloat_2}). \citet{kroeger1991} mentions an example
@@ -1980,11 +1982,12 @@ Tagalog (adapted from \cite[22]{kroeger1991}, from
 \end{figure}
 
 In (\ref{ex:tagqfloat_1}), \fw{lahat} `all' refers to the children, which
-constitute the subject NP according to voice and case marking, while we get the
-opposite case in (\ref{ex:tagqfloat_2}), where it refers to the letters, which
-are marked as the subject this time. Of course, it is equally possible in
-English\index{English} to say \fw{The letters are all written by the children}, where \fw{the
-letters} is the subject that the floated \fw{all} refers to.
+constitute the subject NP according to voice and case marking. Example
+(\ref{ex:tagqfloat_2}), then, represents the opposite case, where it refers to
+the letters, which are marked as the subject this time. Of course, it is equally
+possible in English\index{English} to say \fw{The letters are all written by the
+children}, where \fw{the letters} is the subject that the floated \fw{all}
+refers to.
 
 As pointed out in \autoref{sec:quantifiers}, a lot of clitic\index{clitics} quantifiers in
 Ayeri have a double meaning as intensifiers\index{intensifiers}. For instance, \rayr{/IknF}{-ikan}
@@ -1999,7 +2002,7 @@ floating of \rayr{/ArilF}{-aril} is avoided as well. Example
 into the IP\index{phrase types!inflectional phrase}, resulting in a meaning different from the sentence with the
 unfloated particle for the reasons just stated above.
 
-\begin{figure}[t]
+\begin{figure}
 \pex\label{ex:ayrqfloat1}
 \a\label{ex:ayrqfloat1_1}\begingl
 	\gla Ang @ tahanyan ganye-hen tamanyeley. //
@@ -2027,7 +2030,7 @@ intensifying one. They are thus suitable for floating, since they do not produce
 ambiguities with regards to what is being modified, unlike their enclitic
 counterparts.
 
-\begin{figure}[t]
+\begin{figure}
 \pex\label{ex:ayrqfloat2}
 \a\label{ex:ayrqfloat2_1}\begingl
 	\gla Ang @ apayan yan sano layjya. //
@@ -2058,7 +2061,7 @@ redundant. We would expect the forms \rayr{ynFye\_aNF}{yanjang} and \rayr{lj}
 {lay} if \rayr{sno}{sano} were to refer to `the girls' rather than `the boys',
 as in (\ref{ex:ayrqfloat3_2}).
 
-\begin{figure}[t]
+\begin{figure}
 \pex\label{ex:ayrqfloat3}
 \a\label{ex:ayrqfloat3_1}\begingl
 	\gla Ya @ apayan sano yanang layye. //
@@ -2086,7 +2089,7 @@ finite verb. Ambiguity\index{ambiguity} may be in the phrase structure of the cl
 not at a functional level, as it is clear that the quantifier modifies the
 subject\index{grammatical function!subject} pronoun\index{pronouns} due to semantic coherence.
 
-\begin{figure}[t]
+\begin{figure}
 \ex\label{ex:freequantplcmt}
 \begingl
 	\gla Ang @ girenjan sano bahalanya. //
@@ -2103,7 +2106,16 @@ so as to avoid ambiguity created by floating the clitic\index{clitics} right aft
 verb. This is also possible for the purpose of quantification of pronouns\index{pronouns!personal} with
 clitic\index{clitics} quantifiers.
 
-\begin{figure}[h]
+Since \rayr{sitNF}{sitang} is indeclinable, it is the pronominal clitic\index{clitics} which
+carries inflection for case, as (\ref{ex:pronquant_2}) shows. An analysis of
+\rayr{sitNF/henF}{sitang-hen} as `self.\Top{}=all' is therefore not possible.
+Moreover, \rayr{/tNF sitNF/henF}{-tang sitang-hen} does not constitute a clitic\index{clitics}
+cluster, because it is possible to place word material between the verb and
+\rayr{sitNF/henF}{sitang-hen} in both examples in (\ref{ex:pronquant}). See
+\autoref{subsec:expsitang} for an analysis of dummy \rayr{sitNF}{sitang} in
+terms of constituent and functional structure.
+
+\begin{figure}
 \pex\label{ex:pronquant}
 \a\label{ex:pronquant_1}\begingl
 	\gla Ang @ girenjan panca sitang-hen bahalanya. //
@@ -2121,15 +2133,6 @@ clitic\index{clitics} quantifiers.
 \xe
 \end{figure}
 
-Since \rayr{sitNF}{sitang} is indeclinable, it is the pronominal clitic\index{clitics} which
-carries inflection for case, as (\ref{ex:pronquant_2}) shows. An analysis of
-\rayr{sitNF/henF}{sitang-hen} as `self.\Top{}=all' is therefore not possible.
-Moreover, \rayr{/tNF sitNF/henF}{-tang sitang-hen} does not constitute a clitic\index{clitics}
-cluster, because it is possible to place word material between the verb and
-\rayr{sitNF/henF}{sitang-hen}, as (\ref{ex:pronquant}) shows. See
-\autoref{subsec:expsitang} for an analysis of dummy \rayr{sitNF}{sitang} in
-terms of constituent and functional structure.
-
 \index{floating|)}
 \index{quantifiers|)}
 
@@ -2137,7 +2140,7 @@ terms of constituent and functional structure.
 \label{subsec:relz}
 \index{relative clause|(}
 
-\citet{kroeger1991} observes that in Tagalog\index{Tagalog}, only nominative arguments may be
+\citet{kroeger1991} observes that in Tagalog\index{Tagalog} only nominative arguments may be
 relativized. He refers to \posscite{keenancomrie1977} accessibility hierarchy\index{hierarchy} of
 NPs, according to which, he reports, \textcquote[24]{kroeger1991}{if only a
 single argument of any clause can be relativized, that argument must be the
@@ -2148,7 +2151,7 @@ relative clause carries inflection for the role of the relativized argument in
 the relative clause. Thus, (\ref{ex:tagrel_1}) is grammatical, while 
 (\ref{ex:tagrel_2}) is not.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:tagrel}%
 Tagalog (\cite[24]{kroeger1991}, from \cite[141--142]{foleyvanvalin1984}):
 \a\label{ex:tagrel_1}\begingl
@@ -2164,14 +2167,18 @@ Tagalog (\cite[24]{kroeger1991}, from \cite[141--142]{foleyvanvalin1984}):
 \xe
 \end{figure}
 
-Ayeri, however, has no such restrictions. Non-topic\index{grammatical function!topic} NPs\index{phrase types!noun phrase} may be relativized, and
-relative clauses not uncommonly contain their own agent\index{semantic role!agent} NP\index{phrase types!noun phrase}. The relativized NP\index{phrase types!noun phrase}
-may even be referred to in the relative clause by a resumptive pronoun\index{pronouns!resumptive} or
-pronominal clitic\index{clitics}, since verbs\index{verbs} must not go uninflected. Since all NPs\index{phrase types!noun phrase} are
-accessible for relativization, it is not a suitable criterion for testing
-subjecthood.
+Ayeri, however, has no such restrictions, so accessibility for relativization is
+not a good criterion for testing subjecthood, strictly speaking. The following
+discussion thus serves the purpose only of illustrating how Ayeri handles
+relative clauses. As shown below, non-topic\index{grammatical function!topic}
+NPs\index{phrase types!noun phrase} may be relativized, and relative clauses not
+uncommonly contain their own agent\index{semantic role!agent} NP\index{phrase
+types!noun phrase}. The relativized NP\index{phrase types!noun phrase} may even
+be referred to in the relative clause by a resumptive
+pronoun\index{pronouns!resumptive} or pronominal clitic\index{clitics}, since
+verbs\index{verbs} must not go uninflected. First consider (\ref{ex:ayrrel}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrrel}\begingl
 	\gla Ang @ ilya inunley ganyam inunaya si gumasayāng edaya. //
 	\glb ang= il-ya inun-ley gan-yam inunaya-Ø si gum-asa=yāng edaya //
@@ -2181,13 +2188,14 @@ subjecthood.
 \endgl\xe
 \end{figure}
 
-In (\ref{ex:ayrrel}), \xayr{Inuny}{inunaya}{the fisherman}, is both the topic\index{grammatical function!topic}
-of the clause and modified by a relative clause. He is referenced anaphorically
-by the \TsgM{}.\Aarg{} suffix \rayr{/yaaNF}{\mbox{-yāng}} on the verb in the
-relative clause, since he is the actor in both. However, as the examples in 
-(\ref{ex:ayrrel2}) show, these circumstances are not requirements for grammatical statements.
+In (\ref{ex:ayrrel}), \xayr{Inuny}{inunaya}{the fisherman}, is both the
+topic\index{grammatical function!topic} of the clause and modified by a relative
+clause. He is referenced anaphorically by the \TsgM{}.\Aarg{} suffix
+\rayr{/yaaNF}{\mbox{-yāng}} on the verb in the relative clause, since he is the
+actor in both. However, as the examples in (\ref{ex:ayrrel2}) show, these
+circumstances are not requirements for grammatical statements.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayrrel2}
 \a\label{ex:ayrrel2_1}\begingl
 	\gla Ang @ ilya inunaya inunley ganyam si ang @ pyabasaye benanya-hen. //
@@ -2227,7 +2235,7 @@ clauses in Ayeri may even just consist of a predicative adjective\index{adjectiv
 cases, no case-marked noun or topic\index{grammatical function!topic}
 is contained in the relative clause.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrrel3}\begingl
 	\gla Ang @ ilya inunaya ganyam inunley si hiro nay lepan. //
 	\glb ang= il-ya inunaya-Ø gan-yam inun-ley si hiro nay lepan //
@@ -2243,11 +2251,11 @@ is contained in the relative clause.
 \subsection{Control of secondary predicates}
 \label{subsec:secpredctrl}
 
-Secondary predicates in Tagalog\index{Tagalog} are interesting insofar as depictive adjectives
-which occur after the verb always modify the nominative argument according to
-\citet{kroeger1991}; compare the example in (\ref{ex:tagsecpred}).
+Secondary predicates in Tagalog\index{Tagalog} are interesting in that depictive
+adjectives always modify the nominative argument according to
+\citet{kroeger1991}; compare (\ref{ex:tagsecpred}).
 
-\begin{figure}[h]
+\begin{figure}
 %\needspace{5\baselineskip}
 \pex\label{ex:tagsecpred}
 Tagalog \parencite[adapted from][29--30]{kroeger1991}:
@@ -2338,9 +2346,10 @@ Tagalog \parencite[adapted from][29--30]{kroeger1991}:
 since the subject is indicated as \fw{ang isda} `the fish', however,
 \fw{lasing} `drunk' is not a property usually associated with fish---it would
 fit better with `Maria'. However, this interpretation would be ungrammatical
-since `Maria' is not the subject of the clause.
+since `Maria' is not the subject of the clause. Examples of structurally
+equivalent phrases in Ayeri can be found in (\ref{ex:ayrsecpred1}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayrsecpred1}
 \a\label{ex:ayrsecpred1_1}\begingl[aboveglcskip=1.5em, aboveglftskip=1.75em]
 	\gla {Ang kongaye} gino Migray sangalya. //
@@ -2401,11 +2410,11 @@ since `Maria' is not the subject of the clause.
 
 Secondary predicates in Ayeri also follow the finite verb, and they may refer
 to the agent\index{semantic role!agent}. If what was identified as the topic\index{grammatical function!topic} would be the subject\index{grammatical function!subject} like in
-Tagalog\index{Tagalog}, thus, the reference of the adjective\index{adjectives} should change in the way shown in
+Tagalog\index{Tagalog}, the reference of the adjective\index{adjectives} should change in the way shown in
 (\ref{ex:tagsecpred}). This is not the case, however. Thus, in
 (\ref{ex:ayrsecpred1_1}), the topic\index{grammatical function!topic} NP, \rayr{migFrj}{Migray}, happens to be
 the same NP that is modified by the secondary predicate, \xayr{gino}{gino}
-{drunk}: Migray is drunk. However, (\ref{ex:ayrsecpred1_2}) generates the same
+{drunk}: \rayr{migFrj}{Migray} is drunk. What is more, (\ref{ex:ayrsecpred1_2}) generates the same
 reading even though this time, \xayr{sNlF}{sangal}{the room} is marked as the
 topic\index{grammatical function!topic} of the clause. A reading in which the room is drunk cannot be forced by
 morphological means, although it needs to be pointed out that predicative
@@ -2414,6 +2423,15 @@ Considering structure alone, the sentence in (\ref{ex:ayrsecpred1_2}) is
 ambiguous, though context certainly favors the reading provided in the
 translation of (\ref{ex:ayrsecpred1_2}), since `drunk' is not typically a
 property of rooms.
+
+Different than in (\ref{ex:ayrsecpred1}), the adjective in
+(\ref{ex:ayrsecpred2}), \xayr{sti}{sati}{cold}, refers to the object of the
+clause, \xayr{kNlej}{kangaley}{milk}, even though \rayr{kNlej}{kangaley} is not
+the topic of the clause. By structure alone, \rayr{niysF}{Niyas} could also be
+the one who is cold, rather than the milk, however, this would be unlikely
+considering context and extralinguistic experience. Equally unlikely is the
+possible interpretation of the milk becoming cold by \rayr{niysF}{Niyas}'
+drinking it.
 
 \begin{figure}
 \ex\label{ex:ayrsecpred2}
@@ -2446,15 +2464,6 @@ property of rooms.
 \xe
 \end{figure}
 
-Different than in (\ref{ex:ayrsecpred1}), the adjective in
-(\ref{ex:ayrsecpred2}), \xayr{sti}{sati}{cold}, refers to the object of the
-clause, \xayr{kNlej}{kangaley}{milk}, even though \rayr{kNlej}{kangaley} is not
-the topic of the clause. By structure alone, \rayr{niysF}{Niyas} could also be
-the one who is cold, rather than the milk, however, this would be unlikely
-considering context and extralinguistic experience. Equally unlikely is the
-possible interpretation of the milk becoming cold by \rayr{niysF}{Niyas}'
-drinking it.
-
 In difference to Tagalog\index{Tagalog}, thus, it is not morphology but the meaning of the
 verb which determines whether the postverbal predicative adjective refers to
 the agent or the patient.\footnote{Unfortunately, \citet{kroeger1991} does not
@@ -2463,8 +2472,8 @@ provide any examples of object predicatives in Tagalog\index{Tagalog}, and neith
 since in Ayeri, the depictive secondary predicate following the verb can refer
 to either the agent or the patient depending on context, this test does not
 have a very clear outcome. At least we could establish here that alternations
-in the morphological marking of the privileged NP has no impact on the relation
-between adjective and noun. The marking on the verb is thus not used for
+in the morphological marking of the privileged NP have no impact on the relation
+between adjective and noun. The marking on the verb is therefore not used for
 manipulating grammatical relations in this context, unlike in Tagalog\index{Tagalog}.
 Depictives and resultatives are dealt with in more detail in
 \autoref{subsec:secpred}.
@@ -2481,7 +2490,7 @@ subject\index{grammatical function!subject} may also be a dummy `it' or `there' 
 and (\ref{ex:engrais2}). Raising verbs are dealt with in more detail in 
 \autoref{subsubsec:raisvb} (p.~\pageref{subsubsec:raisvb}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engrais}
 	\a It seemed that John$_i$ knows the answer.
 	\a John$_i$ seemed \_$_i$ to know the answer.
@@ -2489,7 +2498,7 @@ and (\ref{ex:engrais2}). Raising verbs are dealt with in more detail in
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engrais2}
 	\a I expected that Linda$_i$ sings the national anthem.
 	\a I expected Linda \_$_i$ to sing the national anthem.
@@ -2517,7 +2526,7 @@ realized as a resumptive pronoun, \fw{niya}, co-indexed with the raised NP.
 Example (\ref{ex:tagrais2_2}) shows that it would be ungrammatical to have a
 gap in its stead.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:tagrais1}%
 Tagalog \parencite[adapted from][26]{kroeger1991}:\medskip \\
 \begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
@@ -2557,7 +2566,7 @@ Tagalog \parencite[adapted from][26]{kroeger1991}:\medskip \\
 \xe
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:tagrais2}
 Tagalog \parencite[adpated from][28]{kroeger1991}:
 \a\label{ex:tagrais2_1}\begingl[aboveglbskip=1.5em, aboveglftskip=1.75em]
@@ -2786,7 +2795,7 @@ for a more detailed structural analysis.
 \xe
 \end{figure}
 
-If the topic\index{grammatical function!topic} is actually the subject\index{grammatical function!subject}, it should be possible in Ayeri to raise
+If the topic\index{grammatical function!topic} is actually the subject\index{grammatical function!subject}, it should be possible to raise
 non-actor topics\index{grammatical function!topic} into the matrix clause easily. Of course, this is possible in
 Tagalog\index{Tagalog}, according to \citet{kroeger1991}. In (\ref{ex:tagrais3_1}), thus, \fw{Manuel} is the one arrested, so he
 is the patient of the subordinate clause which acts as the subject of the
@@ -3031,7 +3040,7 @@ accusative/objective case to the raised subject \citep[439--442, 445, 451]
 {carnie2013}. The raised subject is not semantically an object of the matrix
 verb, however, but an external agent; see (\ref{ex:engraisxmps}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engraisxmps}
 \a \fw{Mother wants them to study tonight} ≠ \fw{Mother wants them}
 \a \fw{Mary expects him to tidy the room} ≠ \fw{Mary expects him}
@@ -3039,13 +3048,13 @@ verb, however, but an external agent; see (\ref{ex:engraisxmps}).
 \xe
 \end{figure}
 
-Ayeri avoids this kind of construction. The reason for this is probably that
+Ayeri avoids this kind of construction. The reason for this is probably that,
 even though it treats agent\index{semantic role!agent} and patient\index{semantic role!patient} as semantic metaroles rather
 permissively, case\index{case} marking is nonetheless based on semantic roles rather than
 purely based on syntactic function. Due to the uniqueness condition, a verb in
 Ayeri cannot have two agent\index{semantic role!agent} arguments, yet the raised object\index{grammatical function!primary object} is an agent\index{semantic role!agent},
 albeit an external one. It is still salient enough as an agent\index{semantic role!agent} to preclude
-assigning it patient case\index{case!patient}, though.
+assigning it patient case\index{case!patient}, though, compare (\ref{ex:ayrrais5}).
 
 \begin{figure}
 \pex\label{ex:ayrrais5}
@@ -3123,14 +3132,14 @@ to-object raising\index{verbs!ECM@\textsc{ecm}} with verbs of perception and ver
 Control verbs behave basically in the opposite way of raising verbs\index{verbs!raising}: the
 subject\index{grammatical function!subject} of the subordinate verb is also an argument of the verb in the matrix
 clause---subject\index{grammatical function!subject} or object\index{grammatical function!primary object}---and this argument acts as a controller for the
-subject\index{grammatical function!subject} of the subordinate verb. The main clause predicate thus is thought to
+subject\index{grammatical function!subject} of the subordinate verb. The main clause predicate is thus thought to
 assign two thematic roles. In \textsc{gg} it is assumed that the subject\index{grammatical function!subject} of the
 lower clause is a silent \textsc{pro} element which is co-indexed with the
 controller \citep[442--445, 451]{carnie2013}. An example is given in
 (\ref{ex:engctrl1}). For a more detailed analysis of control verbs\index{verbs!control}, see
 \autoref{subsubsec:ctrlvb} (p.~\pageref{subsubsec:ctrlvb}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engctrl1}
 \a Subject control:\medskip \\
 	\fw{John$_i$ tries \textup{[}that John$_i$ gets a job\textup]}\\
@@ -3146,15 +3155,15 @@ controller \citep[442--445, 451]{carnie2013}. An example is given in
 
 \citet{kroeger1991} refers to subject\index{grammatical function!subject} control as `Equi' and reports that
 according to \citet[505]{schachter1976}, it is typically the actor of the
-subordinate verb that is the target of deletion. At first sight this would be a
+subordinate verb that is the target of deletion. At first sight, this would be a
 strong argument in favor of defining the actor NP as the subject\index{grammatical function!subject}, however, he
 notes that under certain circumstances, \textcquote[37]{kroeger1991}{the
 controllee in a transitive complement clause [is allowed] to be either the
 Actor (regardless of case marking) or the argument which bears nominative
 case}. This is the case, for instance, with \fw{himukin} `persuade' and
 \fw{magpilit} `insist on'. Subordinate verbs marked for non-volitive
-mood form an exception as well \parencites[36--37]{kroeger1991}[96--97]
-{kroeger1991}. \citet{kroeger1991} illustrates the main pattern of control in
+mood form an exception as well \parencite[36--37, 96--97]{kroeger1991}. 
+\citet{kroeger1991} illustrates the main pattern of control in
 Tagalog\index{Tagalog} with the set of example sentences in (\ref{ex:tagctrl1}).
 
 \begin{figure}
@@ -3447,13 +3456,15 @@ a further complication to acceptability, but these details do not need to
 preoccupy us for the purpose of comparison to Ayeri, which lacks this
 distinction.
 
-As previously with raising verbs, it is possible in Ayeri to combine a
-subordinating verb with a full complement clause\index{complement clause}, as in (\ref{ex:ayrctrl1_1}),
-a VP\index{phrase types!verb phrase} niece of the subject\index{grammatical function!subject} NP (\ref{ex:ayrctrl1_2}), or a VP\index{phrase types!verb phrase} sister of \xhead{I}
-(\ref{ex:ayrctrl1_3}). In both (\ref{ex:ayrctrl1_1}) and (\ref{ex:ayrctrl1_2})
-cases, it is necessarily the actor which is coreferened, as the bottom arrow
-shows. In (\ref{ex:ayrctrl1_3}), the bottom arrow does not show coreference,
-but the relation of verb agreement\index{agreement}. The arrow on top, as before, shows what the
+As previously with raising verbs, it is possible to combine a subordinating verb
+with a full complement clause\index{complement clause}, as in
+(\ref{ex:ayrctrl1_1}), a VP\index{phrase types!verb phrase} niece of the
+subject\index{grammatical function!subject} NP (\ref{ex:ayrctrl1_2}), or a
+VP\index{phrase types!verb phrase} sister of \xhead{I} (\ref{ex:ayrctrl1_3}). In
+both (\ref{ex:ayrctrl1_1}) and (\ref{ex:ayrctrl1_2}), it is necessarily the
+actor which is coreferenced, as the bottom arrow shows. In
+(\ref{ex:ayrctrl1_3}), the bottom arrow instead shows the relation of verb
+agreement\index{agreement}. The arrow on top, as before, shows what the
 respective verb picks as the clause's topic for all example sentences.
 
 \begin{figure}
@@ -3571,7 +3582,7 @@ respective verb picks as the clause's topic for all example sentences.
 \xe
 \end{figure}
 
-As with raising verbs, the complement\index{complement clause} verbs appear in an infinite form, the
+As with raising verbs, verbal complements\index{complement clause} appear in an infinite form, the
 participle\index{participle}. For (\ref{ex:ayrctrl1_2}) the reason may be that there is no overt
 agent\index{case!agent} in the clause to agree with, and agreement\index{agreement} with the patient\index{case!patient} does not make
 sense here because the clause does not express a passive either. In
@@ -3675,7 +3686,20 @@ English\index{English} has them.
 \xe
 \end{figure}
 
-\begin{figure}[h]
+In object\index{grammatical function!primary object}-control constructions, the object\index{grammatical function!primary object} of the matrix clause's verb is an
+actual argument of it, as shown in (\ref{ex:engctrl2}). This argument becomes
+the subject of the embedded clause, and there is no change in the meaning of
+the verb between both versions of the sentences. We have seen above that Ayeri does
+not allow to-object raising, since it is not possible to assign patient case\index{case!patient} to
+an external agent\index{semantic role!agent} because Ayeri's case marking is not purely based on
+grammatical functions, but there is still also some semantic motivation. Ayeri
+does, however, allow object\index{grammatical function!primary object} control, so it seems to be possible at least to
+implicitly convert the matrix clause's patient\index{semantic role!patient} or theme\index{semantic role!theme} to the agent\index{semantic role!agent} of the
+embedded clause, while the opposite is apparently not possible. Whether
+syntactic precedence or some kind of accessibility hierarchy\index{hierarchy} is involved here
+still needs to be investigated\index{desiderata}.
+
+\begin{figure}
 \pex\label{ex:engctrl2}
 \a \fw{John asked \textup{[}Mary to give Peter the book\textup{]}}\\
 	= \fw{John asked Mary}
@@ -3687,29 +3711,19 @@ English\index{English} has them.
 \xe
 \end{figure}
 
-In object\index{grammatical function!primary object}-control constructions, the object\index{grammatical function!primary object} of the matrix clause's verb is an
-actual argument of it, as shown in (\ref{ex:engctrl2}). This argument becomes
-the subject of the embedded clause, and there is no change in the meaning of
-the verb between both versions of sentences. We have seen above that Ayeri does
-not allow to-object raising, since it is not possible to assign patient case\index{case!patient} to
-an external agent\index{semantic role!agent} because Ayeri's case marking is not purely based on
-grammatical functions but there is still also some semantic motivation. Ayeri
-does, however, allow object\index{grammatical function!primary object} control, so it seems to be possible at least to
-implicitly convert the matrix clause's patient\index{semantic role!patient} or theme\index{semantic role!theme} to the agent\index{semantic role!agent} of the
-embedded clause, while the opposite is apparently not possible. Whether
-syntactic precedence or some kind of accessibility hierarchy\index{hierarchy} is involved here
-still needs to be investigated\index{desiderata}.
-
 The example sentences in (\ref{ex:ayrctrl3}) follow the format of those
 preceding. Again, it is generally possible to use a complement clause as in
-(\ref{ex:ayrctrl3}ab), as well as to complement\index{complement clause} the verb in the matrix clause
-with an infinite clause with object control (\ref{ex:ayrctrl3_3}). However,
-the strategy of adjoining a VP\index{phrase types!verb phrase} to IP\index{phrase types!inflectional phrase} in order to make the subordinate verb's
-arguments available for topicalization\index{grammatical function!topic} by the matrix clause's verb is not
-available here because this would cause a doubling of case roles and alike
-grammatical functions, which is unacceptable in Ayeri (\ref{ex:ayrctrl3_4}).
-As we will see below, however, this is not an issue for intransitive complement
-clauses\index{complement clause}.
+(\ref{ex:ayrctrl3}ab), as well as to complement\index{complement clause} the
+verb in the matrix clause with an infinite clause with object control
+(\ref{ex:ayrctrl3_3}). However, the strategy of adjoining a VP\index{phrase
+types!verb phrase} to IP\index{phrase types!inflectional phrase} in order to
+make the subordinate verb's arguments available for
+topicalization\index{grammatical function!topic} by the matrix clause's verb is
+not available here because this would cause a doubling of case roles and alike
+grammatical functions. Such a configuration is considered ungrammatical in
+Ayeri, compare (\ref{ex:ayrctrl3_4}). As we will see below, however,
+this is not an issue for intransitive complement clauses\index{complement
+clause}.
 
 \begin{figure}
 \pex\label{ex:ayrctrl3}
@@ -4086,20 +4100,21 @@ doubled case roles or syntactic functions.
 
 \subsection{Conclusion}
 
-As \autoref{tab:tagayrcomp} shows, Tagalog\index{Tagalog} and Ayeri are not really similar in
-syntax despite superficial similarities in morphology. According to
-\posscite{kroeger1991} thesis---which critically reviews and updates
-\posscite{schachter1976} survey by leaning on \Lfg{} theory---Tagalog\index{Tagalog} prefers
-the argument which corresponds to the marking on the verb for most of the
-traits usually associated with subjects. According to \posscite{kroeger1991}
-analysis, this NP is the nominative argument, thus. \citet{schachterotanes1972}
-refer to it as `focus', \citet{schachter1976} as `topic', and
-\citet{schachter2015} as `trigger'---`trigger' is also the term often seen in
-descriptions of constructed languages in this respect. \citet{kroeger1991}
-finds in his survey that the nominative argument is largely independent from
-the actor, so that the logical subject is not necessarily the syntactic
-subject; what \citet{schachter1976} calls `topic' also does not behave like a
-pragmatic topic in terms of statistics.
+As \autoref{tab:tagayrcomp} shows, Tagalog\index{Tagalog} and Ayeri are not
+really similar in syntax despite superficial similarities in morphology.
+According to \posscite{kroeger1991} thesis---which critically reviews and
+updates \posscite{schachter1976} survey by leaning on \Lfg{}
+theory---Tagalog\index{Tagalog} prefers the argument which corresponds to the
+marking on the verb for most of the traits usually associated with subjects.
+According to \posscite{kroeger1991} analysis, this NP is the nominative
+argument, thus. \citet{schachterotanes1972} refer to it as `focus',
+\citet{schachter1976} as `topic', and \citet{schachter2015} as
+`trigger'.\footnote{`Trigger' is also the term often seen in descriptions of
+constructed languages in this respect.} \citet{kroeger1991} finds in his survey
+that the nominative argument is largely independent from the actor, so that the
+logical subject is not necessarily the syntactic subject; what
+\citet{schachter1976} calls `topic' also does not behave like a pragmatic topic
+in terms of statistics.
 
 \begin{table} \centering
 \caption[Comparison between Tagalog and Ayeri]{Comparison between Tagalog
@@ -4183,7 +4198,7 @@ approaches, such as \Lfg{} (recently, \cite{bresnan2016}) or \textsc{hpsg}
 \citep{pollardsag1994} pursue, may be able to explain things more succinctly
 than structuralist ones. In any case, \citet{kroeger1991} avoids the terms
 `active' or `passive' possibly for this reason, and instead uses `actor voice'
-(\Av{}), `objective voice' (\Ov{}), `dative/locative voice' (\Dv{}) etc.
+(\Av{}), `objective voice' (\Ov{}), `dative/locative voice' (\Dv{}), etc.
 \citep[14--15]{kroeger1991}.
 
 Ayeri, in contrast to Tagalog\index{Tagalog}, very much prefers the actor argument (called
@@ -4214,35 +4229,42 @@ Dyirbal\index{Dyirbal}, where \textcquote[54]{kroeger1991}{ergative (or instrume
 agents are relatively inert, playing almost no role in the syntax, and have
 been analyzed as oblique arguments}.
 
-In conclusion, is Ayeri a so-called `trigger language'?\index{grammatical function!trigger@`trigger'} Yes and no. It seems to
-me that what conlangers call `trigger language'\index{grammatical function!trigger@`trigger'} mostly refers to just the
-distinct morphological characteristic of languages like Tagalog\index{Tagalog} by which a
-certain NP is marked on the verb with a vague notion that this NP is in some
-way important in terms of information structure. Ayeri incorporates this
-morphological feature and may thus be counted among `trigger languages'\index{grammatical function!trigger@`trigger'} by this
-very broad definition. However, the real-world Austronesian alignment as a
-syntactic phenomenon is more extensive than that according to the discussion of
-the various effects described in \posscite{kroeger1991} survey. Ayeri, in
-syntactically behaving rather consistently like a \Nom{}--\Acc{} language,
-misses the point completely if `trigger language'\index{grammatical function!trigger@`trigger'} is understood to also entail
-syntactic characteristics of Philippine languages.
+In conclusion, is Ayeri a so-called `trigger language'?\index{grammatical
+function!trigger@`trigger'} Yes and no. Ayeri incorporates the morphological
+feature of marking a certain privileged argument of the verb (the topic) on the
+verb and may therefore be counted among `trigger languages'\index{grammatical
+function!trigger@`trigger'} by a very broad definition.\footnote{It seems to me
+that what conlangers call `trigger language'\index{grammatical
+function!trigger@`trigger'} mostly refers to just the distinct morphological
+characteristic of languages like Tagalog\index{Tagalog} by which a certain NP is
+marked on the verb with a vague notion that this NP is in some way important in
+terms of information structure.} However, the real-world Austronesian alignment
+as a syntactic phenomenon is more extensive than that according to the
+discussion of the various effects described in \posscite{kroeger1991} survey.
+Ayeri, in syntactically behaving rather consistently like a \Nom{}--\Acc{}
+language, misses the point completely if `trigger language'\index{grammatical
+function!trigger@`trigger'} is understood to also entail syntactic
+characteristics of Philippine languages.
 
 \section{Establishing configurationality}
 \label{sec:config}
 \index{configurationality|(}
 
-As mentioned above, Ayeri's unmarked constituent order is VSO, and unlike Tagalog\index{Tagalog}, it
-mostly displays correlations between the agent and syntactic traits usually
-associated with subjects. I will assume, therefore, that the agent\index{semantic role!agent} argument is,
-in fact, the syntactic subject\index{grammatical function!subject} for all intents and purposes. It was also
-pointed out above that not grouping V and O together does not automatically
-result in non-configurationality at the sentence level. \citet[128]{speas1990}
-also points out that free word order\index{word order} alone is not sufficient evidence to claim
-non-configurationality. While Ayeri canonically marks case overtly on NPs\index{phrase types!noun phrase} and NPs\index{phrase types!noun phrase} have
-a certain degree of freedom with regards to their ordering, it does not mean
-that any order is always acceptable, much like *\fw{the yellow American big
-school bus} is not acceptable in English\index{English} even though all adjectives equally
-describe \fw{school bus} with no apparent ranking implied.
+As mentioned above, Ayeri's unmarked constituent order is VSO, and unlike
+Tagalog\index{Tagalog}, it mostly displays correlations between the agent and
+syntactic traits usually associated with subjects. I will assume, therefore,
+that the agent\index{semantic role!agent} argument is, in fact, the syntactic
+subject\index{grammatical function!subject} for all intents and purposes. It was
+also pointed out above that not grouping V and O together does not automatically
+result in non-configurationality at the sentence level. Moreover,
+\citet[128]{speas1990} points out that free word order\index{word order} alone
+is not sufficient evidence to claim non-configurationality either. While Ayeri
+canonically marks case overtly on NPs\index{phrase types!noun phrase}, and
+NPs\index{phrase types!noun phrase} have a certain degree of freedom with
+regards to their ordering, it does not mean that any order is always acceptable,
+much like *\fw{the yellow American big school bus} is not acceptable in
+English\index{English} even though all adjectives equally describe \fw{school
+bus} with no apparent ranking implied.
 
 In his discussion of the status of Tagalog\index{Tagalog} with regards to configurationality,
 \citet{kroeger1991} refers to a number of criteria devised in
@@ -4274,7 +4296,7 @@ pronominalize either of them. In English\index{English} it is possible for V and
 together (as VP), as well as to replace \xbar{V} with `so' or `did (so)'
 (\ref{ex:engvconst}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:engvconst}
 English:
 \a\label{ex:engvconst_1} \fw{She said she would \textbf{read the book}, and
@@ -4294,7 +4316,7 @@ layongye koyās, nay layayeng cuyam}{She said she would read the book, and she
 read (it) indeed} in Ayeri.} However, it is possible to reproduce 
 (\ref{ex:engvconst}bc) in Ayeri, as illustrated in (\ref{ex:ayrvconst1}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayrvconst1}
 \a\label{ex:ayrvconst1_1}\begingl
 	\gla Sa @ layaye ang @ Mali koya, naynay da-miraya ang @ Yan. //
@@ -4322,7 +4344,7 @@ underlying, though it should also be possible to analyze this in terms of
 f-structure. Ayeri also allows to drop the repeated part completely, as
 (\ref{ex:ayrvconst2}) shows.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrvconst2}\begingl
 	\gla Sa @ layaye ang @ Mali koya, naynay ang @ Yan. //
 	\glb sa= laya-ye ang= Mali koya-Ø naynay ang= Yan //
@@ -4343,7 +4365,7 @@ directly adjacent in Ayeri, the pro-verb \xayr{mir/}{mira-}{do} may still stand
 in for the first conjunct's verb. The argument structure of the first
 conjunct's verb as well as its object\index{grammatical function!primary object} are copied to the second conjunct, with
 the object\index{grammatical function!primary object}/topic of the first conjunct being dropped in order to avoid
-repetition. Replacement by a pro-form and dropping are thus not good measures
+repetition. Replacement by a pro-form and dropping are therefore not good measures
 to establish Ayeri's surface constituent structure with regards to VP.
 
 \begin{figure}
@@ -4427,7 +4449,7 @@ However, we can exclude that the subject\index{grammatical function!subject} NP 
 sentences where \xayr{mir/}{mira-}{do} is supposed to replace the subject\index{grammatical function!subject} and
 the verb are ungrammatical, as illustrated by (\ref{ex:ayrvconst4}).
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:ayrvconst4}%
 \ljudge*\begingl
 \gla Ang @ keca {} @ Mandan nikaley naynay miraya disuley. //
@@ -4460,12 +4482,12 @@ determined by the object\index{grammatical function!primary object}, but not vic
 \fw{throws a party} does not hurl it through the air, as someone who
 \fw{throws a stone} would, and someone who \fw{kills time} is not guilty of
 murder. This also reaches into the idiomatic use of certain verbs. Basically,
-this criterion suggests that in a truly non-configurational language, there
+this criterion suggests that, in a truly non-configurational language, there
 ought to be cases where the role of the subject\index{grammatical function!subject} is determined by the actor.
 This is not the case in Ayeri, though, and a few examples (to varying degrees
 of idiom-ness) are listed in (\ref{ex:ayrvbidm1}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayrvbidm1}%
 \xayr{\larger triNy}{taringaya}{the minister}
 \a \xayr{\larger ANF beNFy — sNlFy}{ang bengya ... sangalya}
@@ -4474,16 +4496,6 @@ of idiom-ness) are listed in (\ref{ex:ayrvbidm1}).
 	{... attends a wedding}
 \a \xayr{\larger ANF beNFy — tesaanFlej}{ang bengya ... tesānley}
 	{... admits a lie}
-\xe
-\end{figure}
-
-\begin{figure}[h]
-\pex\label{ex:ayrvbidm2}%
-\xayr{\larger devy}{devaya}{the captain}
-\a \xayr{\larger ANF phFy — telbaanFlej}{ang pahya ... telbānley}
-	{... removes a sign}
-\a \xayr{\larger ANF phFy — pegmyaasF}{ang pahya ... pegamayās}
-	{... arrests a thief}
 \xe
 \end{figure}
 
@@ -4499,6 +4511,16 @@ event, or admitting something? In a similar way, is the captain in
 verb\index{verbs} and its complement form a semantic unit in Ayeri, even though they are not
 adjacent in main clauses of declarative statements.
 
+\begin{figure}
+\pex\label{ex:ayrvbidm2}%
+\xayr{\larger devy}{devaya}{the captain}
+\a \xayr{\larger ANF phFy — telbaanFlej}{ang pahya ... telbānley}
+	{... removes a sign}
+\a \xayr{\larger ANF phFy — pegmyaasF}{ang pahya ... pegamayās}
+	{... arrests a thief}
+\xe
+\end{figure}
+
 \subsection{Idioms}
 \index{idioms|(}
 
@@ -4506,7 +4528,7 @@ Similar to the previous point, there are no idioms involving just a verb and a
 subject\index{grammatical function!subject} NP, while there are idioms consisting of a set combination of a verb
 and a complement which is attributed to a subject\index{grammatical function!subject} as a unit (\ref{ex:ayridms}).
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:ayridms}
 \a \xayr{\larger bFrsF/ tihNFy}{bras- tihangya}{bathe in knives} \\
 	(be in terrible distress)
@@ -4534,15 +4556,19 @@ depends on the object\index{grammatical function!primary object}, \xayr{koyyelej
 \subsection{Obligatoriness of subjects}
 \index{grammatical function!subject|(}
 
-While Ayeri allows for intransitive verbs\index{verbs!intransitive} like \xayr{nib/}{niba-}{rest} or for
-transitive verbs\index{verbs!transitive} to be used intransitively, like \xayr{koMdF/}{kond-}{eat},
-there are no verbs which require an object\index{grammatical function!primary object} but do not optionally or
-obligatorily require a subject. While the agent\index{case!agent} of a transitive verb\index{verbs!transitive} may be
-dropped, the patient\index{case!patient} argument triggers verb agreement\index{agreement} which is canonically with
-the agent\index{semantic role!agent} subject---compare example (\ref{ex:ayragr2_2}) above, which is
-repeated in (\ref{ex:passnosubj}) for convenience.
+Ayeri allows, for one, for intransitive verbs\index{verbs!intransitive}, like
+\xayr{nib/}{niba-}{rest}. Secondly, it allows for transitive
+verbs\index{verbs!transitive}, like \xayr{koMdF/}{kond-}{eat}, to be used
+intransitively. There are no verbs, however, which require an
+object\index{grammatical function!primary object} but do not optionally or
+obligatorily require a subject. While the agent\index{case!agent} of a
+transitive verb\index{verbs!transitive} may be dropped, the
+patient\index{case!patient} argument triggers verb agreement\index{agreement}
+which is canonically with the agent\index{semantic role!agent} subject---compare
+example (\ref{ex:ayragr2_2}) above, which is repeated in (\ref{ex:passnosubj})
+for convenience.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:passnosubj}\begingl
 	\gla Manye sa @ Pila. //
 	\glb man-ye Ø= Pila //
@@ -4555,7 +4581,7 @@ Even for verbs\index{verbs} expressing impersonal actions, like the weather verb
 (\ref{ex:weatherverb}), a dummy subject conventionally appears in the form of
 an inanimate\index{animacy} third-person\index{person} pronominal of some kind.
 
-\begin{figure}[h]
+\begin{figure}
 \ex\label{ex:weatherverb}
 \begingl
 	\gla Seyarreng. //
@@ -4654,10 +4680,10 @@ the subject c-commands the object\index{grammatical function!primary object}. Fr
 subject and object will c-command each other, and so it is possible for the
 object to bind the subject}. Examples of this are given in (\ref{ex:flatbind}),
 with the indicated outcome regarding the expected acceptability. In all of
-these sentences, the pronoun\index{pronouns} is supposed to bind the NP\index{phrase types!noun phrase} containing the name in
-addition to being bound by the name.
+these sentences, the pronoun\index{pronouns} and the NP\index{phrase types!noun phrase} containing the name 
+are supposed to bind each other.
 
-\begin{figure}[h]
+\begin{figure}
 \pex\label{ex:flatbind}
 	\a\label{ex:flatbind_1} \fw{Mary$_i$ likes her$_i$ father.}
 	\a\label{ex:flatbind_2} \ljudge* \fw{Mary$_i$'s father likes her$_i$.}
@@ -4667,8 +4693,9 @@ addition to being bound by the name.
 \end{figure}
 
 In Government and Binding theory, there are three binding principles posited,
-referring to the grammaticality of coreference between reflexive pronouns\index{pronouns!reflexive}
-(`ana\-phora'), personal pronouns\index{pronouns!personal}, and R-expressions (references to
+referring to the grammaticality of coreference between reflexive
+pronouns\index{pronouns!reflexive} (`ana\-phora'), personal
+pronouns\index{pronouns!personal}, and R-expressions (references to
 extralingusitic reality, like names\index{nouns!proper}):
 
 \pex\label{ex:gbprinciples}
@@ -4786,20 +4813,31 @@ commanded by \fw{Mary}, Principle B is not violated. Lastly,
 be bound by \fw{Mary}, but \fw{Mary} is c-commanded by \fw{she}.
 % Also compare the diagrams in (\ref{ex:flatbindchart}).
 
-In \Lfg{}\index{Lexical-functional grammar}, however, due to its being based primarily on functional structure,
-the condition for binding is not based on the c-structure of a clause. Rather,
-a pronoun\index{pronouns} is required to have an antecedent in the minimal f-structure of the
-predicator, that is, \textquote{the \Pred{} element and all of the elements
-whose attributes are functions designated by the \Pred{}}
-\parencites[230]{bresnan2016}[250]{bresnan2016}. For the examples above, this
-means that functionally, a reversal of dependency relations is not possible,
-unless one were to assume that an \Obj{} could syntactically outrank a
-\Subj{}. Due to \Lfg{}'s\index{Lexical-functional grammar} design, even if the structure of the clause were flat,
-it is assumed that every language has grammatical functions, so that what
-functions as an object\index{grammatical function!primary object} NP\index{phrase types!noun phrase} cannot normally outrank what functions as a subject
-NP\index{phrase types!noun phrase}. Besides, Ayeri does fulfill the requirements based on constituent structure
-sketched out above as well as the functional requirements; compare examples
+In \Lfg{}\index{Lexical-functional grammar}, however, due to its being based
+primarily on functional structure, the condition for binding is not based on the
+c-structure of a clause. Rather, a pronoun\index{pronouns} is required to have
+an antecedent in the minimal f-structure of the predicator, that is,
+\textquote{the \Pred{} element and all of the elements whose attributes are
+functions designated by the \Pred{}} \parencites[230, 250]{bresnan2016}. For the
+examples above, this means that a reversal of dependency relations is not
+possible, unless one were to assume that an \Obj{} could syntactically outrank a
+\Subj{}. Due to \Lfg{}'s\index{Lexical-functional grammar} design, even if the
+structure of the clause were flat, it is assumed that every language has
+grammatical functions, so that what functions as an object\index{grammatical
+function!primary object} NP\index{phrase types!noun phrase} cannot normally
+outrank what functions as a subject NP\index{phrase types!noun phrase}. Besides,
+Ayeri does fulfill the requirements based on constituent structure sketched out
+above as well as the functional requirements; compare examples
 (\ref{ex:ayrbind_1}) to (\ref{ex:ayrbind_4}).
+
+In (\ref{ex:ayrbind_1}), \rayr{mli}{Mali} is free in c-structure since it is
+not c-commanded in its domain, whereas the possessive pronoun, \xayr{yen}{yena}
+{her}, is free in its domain even though it is c-commanded by \rayr{mli}{Mali}.
+Similarly, in f-structure, \rayr{mli}{Mali} inhabits the top of the functional
+hierarchy by being the \Subj{} of the f-structure core designated by $f$;
+\xayr{yen}{yena} {her} is free in its f-structure core $g$ and is outranked by
+\rayr{mli} {Mali} since \Subj{} outranks \Obj{} and its contents. The clause is
+thus well-formed by either set of criteria.
 
 \begin{figure}
 \ex\label{ex:ayrbind_1}
@@ -4810,7 +4848,7 @@ sketched out above as well as the functional requirements; compare examples
 	\glft `Mali$_i$ likes her$_i$ father.' //
 \endgl\medskip
 
-\begin{forest} shorter edges, italic leaves,
+\begin{forest} shorter edges, italic leaves, for tree={l=0},
 [IP
 %	[\xbar{I}
 		[\xhead{I}
@@ -4879,6 +4917,15 @@ $f$: \[
 \end{tikzpicture}
 \xe
 \end{figure}
+
+In (\ref{ex:ayrbind_2}), then, \rayr{mli}{Mali} does not c-command the pronoun\index{pronouns}
+with which it is co-indexed, \xayr{yesF}{yes}{her}. This pronoun\index{pronouns} is also free
+in its domain. The pronoun\index{pronouns} also cannot c-command the nominal, so that
+\rayr{mli} {Mali} is completely free. In functional terms as well, both
+\rayr{mli}{Mali} and \xayr{yesF} {yes}{her} are free within their respective
+core f-structures, $g$ and $f$. The object\index{grammatical function!primary object} pronoun\index{pronouns}, \xayr{yesF}{yes}{her}, is
+also outranked by a subject NP\index{phrase types!noun phrase} containing its antecedent. Again, the clause is
+well-formed.
 
 \begin{figure}
 \ex\label{ex:ayrbind_2}
@@ -4962,6 +5009,17 @@ $f$: \[
 \end{tikzpicture}
 \xe
 \end{figure}
+
+In (\ref{ex:ayrbind_3}), the possessive pronoun, \xayr{yen}{yena}{her}, is
+again free since \rayr{mli}{Mali} cannot c-command it. Vice versa, \rayr{mli}
+{Mali} cannot be c-commanded by \xayr{yen}{yena}{her}, so it as well is totally
+free, as required. Regarding their grammatical functions, both phrases are free
+in their respective core f-structures, $g$ and $f$, again. Well-formedness
+should theoretically be given in both cases, thus. The sentence still sounds
+awkward, however, because in terms of \Lfg{}\index{Lexical-functional grammar}, the pronominal f-precedes its
+binder, which is a further obstacle to binding \citep[213]{bresnan2016}. An
+acceptable reading can only be achieved if \xayr{yen}{yena}{her} does not refer
+to \rayr{mli}{Mali}, but to a third person.
 
 \begin{figure}
 \ex\label{ex:ayrbind_3}
@@ -5047,6 +5105,18 @@ $f$: \[
 \xe
 \end{figure}
 
+At last, (\ref{ex:ayrbind_4}) is not well-formed if the subject pronominal
+suffix \xayr{/ye}{-ye}{she} is supposed to be co-indexed with \rayr{mli}{Mali},
+since \rayr{mli}{Mali} is c-commanded by \rayr{ANF vtYye}{ang vacye} or its
+trace, if one assumes the pronominal clitic to leave behind a trace in a
+superficially empty subject NP\index{phrase types!noun phrase} to the left of VP. Either way, the object\index{grammatical function!primary object} NP\index{phrase types!noun phrase}
+containing \rayr{mli} {Mali} is c-commanded, which violates binding principle
+C. In a functional analysis, the phrase is ungrammatical because the pronominal
+suffix, as an instance of the subject function, outranks its supposed nominal
+antecedent, which is a possessor inside an object\index{grammatical function!primary object} NP\index{phrase types!noun phrase}. In order to reach a
+grammatically sound interpretation, the liker and \rayr{mli}{Mali} again
+must be different people.
+
 \begin{figure}
 \ex\label{ex:ayrbind_4}
 \ljudge*\begingl
@@ -5127,48 +5197,7 @@ $f$: \[
 \xe
 \end{figure}
 
-In (\ref{ex:ayrbind_1}), \rayr{mli}{Mali} is free in c-structure since it is
-not c-commanded in its domain, whereas the possessive pronoun, \xayr{yen}{yena}
-{her}, is free in its domain even though it is c-commanded by \rayr{mli}{Mali}.
-Similarly, in f-structure, \rayr{mli}{Mali} inhabits the top of the functional
-hierarchy by being the \Subj{} of the f-structure core designated by $f$;
-\xayr{yen}{yena} {her} is free in its f-structure core $g$ and is outranked by
-\rayr{mli} {Mali} since \Subj{} outranks \Obj{} and its contents. The clause is
-thus well-formed by either set of criteria.
-
-In (\ref{ex:ayrbind_2}), then, \rayr{mli}{Mali} does not c-command the pronoun\index{pronouns}
-with which it is co-indexed, \xayr{yesF}{yes}{her}. This pronoun\index{pronouns} is also free
-in its domain. The pronoun\index{pronouns} also cannot c-command the nominal, so that
-\rayr{mli} {Mali} is completely free. In functional terms as well, both
-\rayr{mli}{Mali} and \xayr{yesF} {yes}{her} are free within their respective
-core f-structures, $g$ and $f$. The object\index{grammatical function!primary object} pronoun\index{pronouns}, \xayr{yesF}{yes}{her}, is
-also outranked by a subject NP\index{phrase types!noun phrase} containing its antecedent. Again, the clause is
-well-formed.
-
-In (\ref{ex:ayrbind_3}), the possessive pronoun, \xayr{yen}{yena}{her}, is
-again free since \rayr{mli}{Mali} cannot c-command it. Vice versa, \rayr{mli}
-{Mali} cannot be c-commanded by \xayr{yen}{yena}{her}, so it as well is totally
-free, as required. Regarding their grammatical functions, both phrases are free
-in their respective core f-structures, $g$ and $f$, again. Well-formedness
-should theoretically be given in both cases, thus. The sentence still sounds
-awkward, however, because in terms of \Lfg{}\index{Lexical-functional grammar}, the pronominal f-precedes its
-binder, which is a further obstacle to binding \citep[213]{bresnan2016}. An
-acceptable reading can only be achieved if \xayr{yen}{yena}{her} does not refer
-to \rayr{mli}{Mali}, but to a third person.
-
-At last, (\ref{ex:ayrbind_4}) is not well-formed if the subject pronominal
-suffix \xayr{/ye}{-ye}{she} is supposed to be co-indexed with \rayr{mli}{Mali},
-since \rayr{mli}{Mali} is c-commanded by \rayr{ANF vtYye}{ang vacye} or its
-trace, if one assumes the pronominal clitic to leave behind a trace in a
-superficially empty subject NP\index{phrase types!noun phrase} to the left of VP. Either way, the object\index{grammatical function!primary object} NP\index{phrase types!noun phrase}
-containing \rayr{mli} {Mali} is c-commanded, which violates binding principle
-C. In a functional analysis, the phrase is ungrammatical because the pronominal
-suffix as an instance of the subject function outranks its supposed nominal
-antecedent, which is a possessor inside an object\index{grammatical function!primary object} NP\index{phrase types!noun phrase}. In order to reach a
-grammatically sound interpretation, the liker and \rayr{mli}{Mali} again
-must be different people.
-
-Taking the above into account looking only at the consituent structure, Ayeri
+Taking the above into account and looking only at the consituent structure, Ayeri
 behaves like English\index{English} in that its equivalent to (\ref{ex:flatbind_2}), that is
 (\ref{ex:ayrbind_2}), is grammatical. If Ayeri had a flat structure and
 c-command were the only condition of binding, we would expect it to be
