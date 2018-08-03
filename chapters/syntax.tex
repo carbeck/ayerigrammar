@@ -1453,7 +1453,7 @@ throughout the book. Let us assume here that, like Welsh\index{Welsh}, there is
 a parametric choice not to use the specifier position
 \parencite[130]{bresnan2016}. Thus, possessors and other determiners have to be
 analyzed as heads of DP which take an NP complement as a co-head; genitive case
-identifies them as such.
+identifies them as such, see (\ref{ex:dpnpcasemap}d).
 
 \begin{figure}
 \pex\label{ex:possnoadj}
@@ -2234,11 +2234,12 @@ pronouns\index{pronouns!interrogative} like English does, the functional
 annotations of the phrase structure rule should look significantly easier. Yet,
 however, we still need to account for \Q{}, \Foc{} and its associated \GF{}
 sharing information. In order to give an example, let us reconsider
-(\ref{ex:sinyapro}), see (\ref{ex:ayrqcstruct}).
+(\ref{ex:sinyapro}) in (\ref{ex:ayrqcstruct}).
 
 \begin{figure}
 \ex\label{ex:ayrqcstruct}%
-\fw{Le tinkaya sinyāng kunang?} \medskip
+\fw{Le tinkaya sinyāng kunang?}\\
+`Who opened the door?' \medskip
 
 \begin{tabu} to \linewidth [t] {@{} X X}
 
@@ -4827,28 +4828,48 @@ for each adposition.
 \Lfg{}\index{Lexical-functional grammar} categorizes PPs as oblique\index{grammatical function!oblique} functions 
 \Oblique{}, where $\theta$ stands for the thematic role of the phrase
 \citep[9--10]{dalrymple2001}. As we have seen in the previous chapter,
-adpositions in Ayeri usually allow adpositional objects\index{grammatical function!adpositional object} to be either marked for
-locative\index{case!locative} or dative case\index{case!dative}:
+adpositions in Ayeri usually take adpositional objects\index{grammatical
+function!adpositional object} in the locative\index{case!locative} case.
+Free nominal adjuncts in the dative case\index{case!dative} and genitive cases
+with a directional meaning may also occur.
 
 \begin{description}
-	\item[Locative:] Standard case\index{case} for adpositional objects\index{grammatical function!adpositional object}, indicates a
-	location (\textsc{location}). It usually corresponds to English `at', `in'.
-	It is also used for the goal\index{semantic role!goal} (\textsc{goal}) of verbs of motion when they
-	are directed, such as \xayr{sr/}{sara-}{go}, and for the addressee of verbs
-	of speaking like \xayr{nr/}{nara}{speak}. Thus, limitedly, it may also
-	express `to'.
+	\item[Locative:] Standard case\index{case} for adpositional
+	objects\index{grammatical function!adpositional object}, indicates a
+	\textsc{location}. It usually corresponds to English `at', `in'. It is also
+	used for the \textsc{goal}\index{semantic role!goal} of verbs of motion when
+	they are directed, such as \xayr{sr/}{sara-}{go}, and for the addressee of
+	verbs of speaking like \xayr{nr/}{nara}{speak}. Thus, very limitedly, it may
+	also express `to'.
 
 	\item[Dative:] Indicates motion along a path towards the direction the
-	adposition indicates (\textsc{goal}\index{semantic role!goal}, \textsc{direction}). It usually
-	corresponds to English `to', `for'. NPs\index{phrase types!noun phrase} may be marked with dative case\index{case!dative}
-	freely to indicate direction without being goverened by an adposition.
+	adposition indicates (\textsc{goal}\index{semantic role!goal},
+	\textsc{direction}). It usually corresponds to English `to', `for'.
+	NPs\index{phrase types!noun phrase} may be marked with dative
+	case\index{case!dative} freely to indicate direction without being goverened
+	by an adposition. Adpositional objects in the dative case are limited to the
+	prepositions \xayr{AvnF}{avan}{at the bottom of} and \xayr{liNF}{ling}{on
+	top of}.
 
-	\item[Genitive:] Indicates motion along a path from somewhere 
-	(\textsc{source}\index{semantic role!source}). NPs\index{phrase types!noun phrase} may be marked with genitive case\index{case!genitive} freely to indicate
-	direction without being goverened by an adposition. Genitive case\index{case!genitive} usually
-	corresponds to English `from' or `of' in those cases\index{case}. Genitive case\index{case!genitive} also
-	marks secondary themes\index{semantic role!theme}, corresponding to English `about'.
+	\item[Genitive:] Indicates motion along a path from somewhere
+	(\textsc{source}\index{semantic role!source}). NPs\index{phrase types!noun
+	phrase} may be marked with genitive case\index{case!genitive} freely to
+	indicate direction without being goverened by an adposition. Genitive
+	case\index{case!genitive} usually corresponds to English `from' or `of' in
+	those cases\index{case}. Genitive case\index{case!genitive} also marks
+	secondary themes\index{semantic role!theme}, corresponding to English
+	`about'.
 \end{description}
+
+Where English uses a preposition together with the verb to mark an oblique\index{grammatical function!oblique}
+argument, Ayeri usually uses case\index{case}. The case\index{case}
+for English is illustrated by (\ref{ex:talkcstruct}). Ayeri, in contrast to
+English, often uses an NP\index{phrase types!noun phrase} complement marked with one of the cases\index{case} in the list
+above, compare (\ref{ex:naracstruct}). In the case of \xayr{nr/}{nara-}{speak,
+talk}, the complement appears in the locative case\index{case!locative}, but as an NP\index{phrase types!noun phrase}, not as a PP.
+Thus, there is no \PCase{} attribute necessary here, since there is no
+preposition to indicate the relation of the complement to the verb because case\index{case}
+marking accomplishes this function.
 
 \begin{figure}
 \ex\label{ex:talkcstruct}%
@@ -4881,7 +4902,7 @@ English:\\
 \begin{avm}
 \[
 	\Pred	&	\astruct{talk}{%
-		\ups{\Subj},
+		\ups{\Subj}
 		\ups{\Oblq{goal}}
 	} \\
 
@@ -4899,19 +4920,9 @@ English:\\
 \xe
 \end{figure}
 
-Where English uses a preposition together with the verb to mark an oblique\index{grammatical function!oblique}
-argument, Ayeri usually uses case\index{case}. The case\index{case}
-for English is illustrated by (\ref{ex:talkcstruct}). Ayeri, in contrast to
-English, often uses an NP\index{phrase types!noun phrase} complement marked with one of the cases\index{case} in the list
-above, compare (\ref{ex:naracstruct}). In the case of \xayr{nr/}{nara-}{speak,
-talk}, the complement appears in the locative case\index{case!locative}, but as an NP\index{phrase types!noun phrase}, not as a PP.
-Thus, there is no \PCase{} attribute necessary here, since there is no
-preposition to indicate the relation of the complement to the verb because case\index{case}
-marking accomplishes this function.
-
 Which oblique\index{grammatical function!oblique} case\index{case} the complement appears in is determined by the a-structure
 of the verb\index{verbs}, not by the semantics of the complement (compare 
-\autoref{subsec:comptr}). Since the dative\index{case!dative} is also used for the
+\autoref{subsec:comptr}). Since dative case\index{case!dative} is also used for the
 \textsc{beneficiary}\index{semantic role!beneficiary} role, the argument expressing the direction of the talking
 appears exceptionally in the locative\index{case!locative} here. In (\ref{ex:naracstruct}) it may
 seem as though \rayr{y}{ya} is a preposition---which is a reasonable assumption
@@ -4955,7 +4966,7 @@ Pilaya} with additional locative\index{case!locative} marking on the noun.
 \begin{avm}
 \[
 	\Pred	&	\astruct{talk}{%
-		\ups{\Subj},
+		\ups{\Subj}
 		\ups{\Oblq{loc}}%
 	} \\
 
@@ -4982,26 +4993,47 @@ Pilaya} with additional locative\index{case!locative} marking on the noun.
 \xe
 \end{figure}
 
-In Ayeri, PPs proper may either be locative\index{case!locative} complements of the verb\index{verbs} as in
-(\ref{ex:naracstruct}) or free locative adverbials, ungoverned by the verb\index{verbs},
-though the number of verbs\index{verbs} taking PP complements is smaller than in English due
-to case\index{case} marking, as described above. As mentioned initially, Ayeri possesses
-prepositions as well as postpositions\index{adpositions!postpositions}. With regards to word order\index{word order} typology\index{typology}, we
-can thus note:
+In Ayeri, PPs proper may either be locative\index{case!locative} complements of
+the verb\index{verbs}, as in (\ref{ex:naracstruct}), or free locative
+adverbials, ungoverned by the verb\index{verbs}. The number of
+verbs\index{verbs} taking PP complements is smaller than in English due to
+case\index{case} marking, though, as described above. As mentioned initially,
+Ayeri possesses prepositions as well as
+postpositions\index{adpositions!postpositions}. With regards to word
+order\index{word order} typology\index{typology}, we can generalize therefore:
 
 \ex
 Order of noun and adposition: Adp N, N Adp
 \xe
 
-The fact that Ayeri has both prepositions and postpositions\index{adpositions!postpositions} is also reflected
-in the phrase structure rules given in (\ref{ex:pppstruct}). Here, the comma
-indicates that the two phrases joined by it can occur in either order. Since
-there are no circumpositions in Ayeri, only ever one site is occupied. XP is
-used again as a catch-all term for various phrase types which form complements
-of semantic adpositions in the form of NPs\index{phrase types!noun phrase} and DPs\index{phrase types!determiner phrase}, but especially the
-postposition\index{adpositions!postpositions} \xayr{pesnF}{pesan}{until} may also have a CP\index{phrase types!complementizer phrase} complement, that is,
-a whole complement clause\index{complement clause}. The nominal complements are objects\index{grammatical function!adpositional object} governed by the
-adposition.
+The fact that Ayeri has both prepositions and
+postpositions\index{adpositions!postpositions} is also reflected in the phrase
+structure rules given in (\ref{ex:pppstruct}). Here, the comma indicates that
+the two phrases joined by it can occur in either order. Since there are no
+circumpositions in Ayeri, only ever one site is occupied. XP is used again as a
+catch-all term for various phrase types which form complements of semantic
+adpositions in the form of NPs\index{phrase types!noun phrase} and
+DPs\index{phrase types!determiner phrase}, but especially the
+postposition\index{adpositions!postpositions} \xayr{pesnF}{pesan}{until} may
+also have a CP\index{phrase types!complementizer phrase} complement, that is, a
+whole complement clause\index{complement clause}. These complements are governed
+by the adposition.
+
+The same as in (\ref{ex:pppstruct}) is spelled out in c-tree form in
+(\ref{ex:ppcstruct}). PPs, if not subcategorized for by the verb\index{verbs},
+are optional information and thus not governed by the verb\index{verbs}; the PP
+is part of the set of adjuncts\index{grammatical function!adjunct}, then. Some
+verbs, like \xayr{tpY/}{tapy-}{put}, may take PP complements headed by an
+adposition, for instance, in cases like \fw{Mary puts the book {\normalfont
+[\tsub{PP}~[\tsub{P}} on {\normalfont]~[\tsub{NP}} the pile {\normalfont ]]}}.
+The PP \fw{on the pile} is not an adjunct here because \fw{She does so on the
+pile} makes no sense: the PP must be an argument of the verb here, not
+additional, optional information (again, compare \autoref{subsec:comptr}). Ayeri
+behaves the same way in this regard. These governed PPs are categorized as
+\Oblique{}\index{grammatical function!oblique} with $\theta$ replaced by the
+proper semantic role (\textit{loc}\index{semantic role!location},
+\textit{goal}\index{semantic role!goal}, or \textit{src}\index{semantic
+role!source}).
 
 \begin{figure}
 \pex\label{ex:pppstruct}
@@ -5011,20 +5043,6 @@ adposition.
 	]{XP}
 \xe
 \end{figure}
-
-The same as in (\ref{ex:pppstruct}) is spelled out again in c-tree form in
-(\ref{ex:ppcstruct}). PPs, if not subcategorized for by the
-verb\index{verbs}, are optional information and thus not governed by the verb\index{verbs}; the
-respective PP is thus part of the set of adjuncts\index{grammatical function!adjunct}. Some verbs, like
-\xayr{tpY/}{tapy-}{put}, may take PP complements headed by an adposition, for
-instance, in cases like \fw{Mary puts the book {\normalfont [\tsub{PP}~[%
-\tsub{P}} on {\normalfont]~[\tsub{NP}} the pile {\normalfont ]]}}. The PP
-\fw{on the pile} is not an adjunct here because \fw{She does so on the pile}
-makes no sense; the PP must be an argument of the verb in this case, not
-additional, optional information (again, compare \autoref{subsec:comptr}).
-Ayeri behaves the same way in this regard. These governed PPs are categorized
-as \Oblique{}\index{grammatical function!oblique} with $\theta$ replaced by the proper semantic role
-(\textit{loc}\index{semantic role!location}, \textit{goal}\index{semantic role!goal}, or \textit{src}\index{semantic role!source}).
 
 \begin{figure}
 \pex\label{ex:ppcstruct}
@@ -5074,7 +5092,7 @@ regards to case\index{case} marking, as described below.
 		& P
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
-			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}, \Oblq{src}\} \\
+			\ups{\PCase} & = & \Oblq{loc} \\
 			\ups{\PSem} & = & $loc$ \\
 			\ups{\Obj{} \Case{}} & \req & \Loc{}
 		\end{tabular}
@@ -5096,7 +5114,7 @@ regards to case\index{case} marking, as described below.
 \end{figure}
 
 German\index{German}, for one, encodes the difference between locational and directional uses
-of a group of prepositions as well, but by an alternation in the prepositional
+of a group of prepositions as well, but with an alternation in the prepositional
 object's case\index{case} between \Dat{} (locational) and \Acc{} (directional). Thus,
 \fw{auf dem tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
 whereas \fw{auf den tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
@@ -5213,7 +5231,7 @@ instance, \xayr{tpYF/ djrinF}{tapy- dayrin}{save (assets)}, with the
 fossilized, now defunct preposition \xayr{djrinF}{dayrin}{beside, next to}
 (modern \rayr{kjvo} {kayvo}). `Up' and `down' thus refer to their transitive
 uses as in \fw{up the stairs} and \fw{down the hill}, respectively. 
-(\ref{ex:dirtel}) provides example sentences for all configurations.
+Example sentences for all configurations are provided in (\ref{ex:dirtel}).
 
 \begin{table}\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
@@ -5451,18 +5469,23 @@ uses as in \fw{up the stairs} and \fw{down the hill}, respectively.
 \xe
 \end{figure}
 
-As we can see from these examples, there is an alternation in case\index{case} similar to
-the one in German\index{German} described above. The distinction in Ayeri is not between
-location\index{semantic role!location} and direction, however, but rather between the emphasis on the
-location\index{semantic role!location} or destination as a goal\index{semantic role!goal} (hence `telic'\index{telicity}) and the path as a non-goal\index{semantic role!goal}
-(hence `atelic'\index{telicity}). For \rayr{liNF}{ling} and \rayr{AvnF}{avan} we can thus
-define the lexical rules given in (\ref{ex:lingavanmorphlex}). Compared to the
-rules given for adpositions more generally in (\ref{ex:adpmorphlex}), there is
-an additional feature \Tel{}, which may be positive or negative depending on
-context, and an accompanying rule which determines the case\index{case} of the complement
-for `atelic'\index{telicity} uses of the preposition. An addtional rule is operating for both
-prepositions which determines that if the preposition is `atelic'\index{telicity}, the
-prepositional object\index{grammatical function!adpositional object} is to be put in the dative case\index{case!dative}.
+These examples show that there is an alternation in case\index{case} similar to
+the one described above for German\index{German}. The distinction in Ayeri is
+not between location\index{semantic role!location} and direction, however, but
+rather between emphasis on the location\index{semantic role!location} or
+destination as a goal\index{semantic role!goal} (hence `telic'\index{telicity})
+and the path as a non-goal\index{semantic role!goal} (hence
+`atelic'\index{telicity}). Lexical rules for \rayr{liNF}{ling} and
+\rayr{AvnF}{avan} can therefore be defined as  given in
+(\ref{ex:lingavanmorphlex}). Compared to the rules given for adpositions more
+generally in (\ref{ex:adpmorphlex}), there is an additional feature \Tel{},
+which may be positive or negative depending on context, and an accompanying rule
+which determines the case\index{case} of the complement for
+`atelic'\index{telicity} uses of the preposition. An addtional rule is operating
+for both prepositions which determines that if the preposition is
+`atelic'\index{telicity}, the prepositional object\index{grammatical
+function!adpositional object} is to be put in the dative
+case\index{case!dative}.
 
 \begin{figure}
 \begin{morphlex}
@@ -5472,8 +5495,9 @@ prepositional object\index{grammatical function!adpositional object} is to be pu
 	\rayr{\larger liNF}{ling}
 		& P
 		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & \astruct{top of}{\ups{\Obj}} \\
-			\ups{\Tel}	& = & $\pm$ \\
+			\ups{\Pred}  & = & \astruct{top of}{\ups{\Obj}} \\
+			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}\} \\
+			\ups{\Tel} 	 & = & $\pm$ \\
 		\end{tabular} \medskip
 
 % 		\begin{tabular}[t]{l l l}
@@ -5489,6 +5513,7 @@ prepositional object\index{grammatical function!adpositional object} is to be pu
 		& P
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & \astruct{bottom of}{\ups{\Obj}} \\
+			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}\} \\
 			\ups{\Tel}	& = & $\pm$ \\
 		\end{tabular} \medskip
 
