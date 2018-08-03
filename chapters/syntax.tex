@@ -169,10 +169,11 @@ below.
 
 \begin{figure}
 \pex\label{ex:npstruct}
-\a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
+% \a NP → \anno*{\xbar{N}} \anno*[\pass{\Possr}]{XP}
 \a\label{ex:npstruct_Adj}%
-	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{YP}
-\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{ZP}
+% 	\xbar{N} → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{YP}
+	NP → \anno*{\xbar{N}} \anno*[{\elem{\Adjc}}]{XP}
+\a \xbar{N} → \anno*{\xhead{N}} \anno*[\pass{\Compl}]{YP}
 \xe
 \end{figure}
 
@@ -182,14 +183,14 @@ below.
 \tl\quad%
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{\xbar{N}}
 			[\anno{\xhead{N}}]
 			[{\anno[\pass{\Compl}]{YP}}]
 		]
 		[{\anno[\elem{\Adjc}]{XP}}]
-	]
-	[{\anno[\pass{\Possr}]{XP}}]
+%	]
+%	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
 \end{minipage}
@@ -198,14 +199,14 @@ below.
 \tl\quad%
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
-	[\anno{\xbar{N}}
+%	[\anno{\xbar{N}}
 		[\anno{NP}
 			[\anno{\xhead{N}}]
 			[{\anno[\elem{\Adjc}]{XP}}]
 		]
 		[{\anno[\pass{\Compl}]{YP}}]
-	]
-	[{\anno[\pass{\Possr}]{XP}}]
+%	]
+%	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
 \end{minipage}
@@ -213,20 +214,27 @@ below.
 \xe
 \end{figure}
 
-The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which
-is on the left side, followed\index{word order} optionally by modifiers which may have various
-relationships to the noun: complement (instrumental\index{case!instrumental} nominal, NP/DP\index{phrase types!determiner phrase}; complement
-clause, CP\index{phrase types!complementizer phrase}), and adjunct\index{grammatical function!adjunct} (adjective phrase, AP\index{phrase types!adjective phrase}; relative clause\index{relative clause}, CP\index{phrase types!complementizer phrase};
-quantifier\index{quantifiers}, DP\index{phrase types!determiner phrase}). Furthermore, there can be a possessor\index{semantic role!possessor} expressed as a the
-specifier of NP (NP or DP\index{phrase types!determiner phrase}). Altogether, these rules can be represented as a
-constituent-structure tree as described in (\ref{ex:npcstruct}). The maximal
-projection of \xhead{N} (that is, NP) is annotated very generally for the
-function of the NP---basically, an NP can act as either a discourse function
-(\DF{}) or a grammatical function (\GF{}). Besides, nouns may be modified by
-possessors\index{pronouns!possessive} and quantifiers\index{quantifiers}. These, however, may better be analyzed as forming
-DPs\index{phrase types!determiner phrase} which embed the NP as a complement. Example (\ref{ex:nounmods}) provides an instance of
-each kind of modifier. Since there is no grammatical context given, NP is
-unmarked for function in these examples.
+The ruleset in (\ref{ex:npstruct}) defines that NPs have a lexical head which is
+on the left side, followed\index{word order} optionally by modifiers which may
+have various relationships to the noun: complement
+(instrumental\index{case!instrumental} nominal, NP/DP\index{phrase
+types!determiner phrase}; complement clause, CP\index{phrase
+types!complementizer phrase}), and adjunct\index{grammatical function!adjunct}
+(adjective phrase, AP\index{phrase types!adjective phrase}; relative
+clause\index{relative clause}, CP\index{phrase types!complementizer phrase};
+quantifier\index{quantifiers}, DP\index{phrase types!determiner phrase}).
+% Furthermore, there can be a possessor\index{semantic role!possessor} expressed
+% as a the specifier of NP (NP or DP\index{phrase types!determiner phrase}).
+Altogether, these rules can be represented as a constituent-structure tree as
+described in (\ref{ex:npcstruct}). The maximal projection of \xhead{N} (that is,
+NP) is annotated very generally for the function of the NP---basically, an NP
+can act as either a discourse function (\DF{}) or a grammatical function
+(\GF{}). Besides, nouns may be modified by possessors\index{pronouns!possessive}
+and quantifiers\index{quantifiers}. These, however, may better be analyzed as
+forming DPs\index{phrase types!determiner phrase} which embed the NP as a
+complement. Example (\ref{ex:nounmods}) provides an instance of each kind of
+modifier. Since there is no grammatical context given, NP is unmarked for
+function in these examples.
 
 \begin{figure}
 \pex\label{ex:nounmods}
@@ -525,23 +533,25 @@ odd, however.}
 \xe
 \end{figure}
 
-What should the structure for (\ref{ex:adjscope}b) look like to produce both a
-correct c-structure tree and correct f-structure annotations, though?
-It should be possible to analyze the complement NP, \rayr{sp\_eri}{sapaeri}, as modifying an NP which jointly holds the nominal
-head, \rayr{limu}{limu} as well as its adjunct\index{grammatical function!adjunct} adjective\index{adjectives}, \rayr{hiro}{hiro}.
-The NP has thus been `extended' in a way, so that one NP is nested within another, as indicated in (\ref{ex:npcstruct}b).
-Regarding functional annotation, such an analysis creates a problem, however, since
-\citet{bresnan2016} require that if a phrase is adjoined to a phrasal
-constituent, this phrase must either not be annotated or not embody an argument
-function (\cite[100, 107]{bresnan2016}; also compare (\ref{ex:functions}) of
-\autoref{ch:syntyp}). \Compl{}\index{grammatical function!closed complement} is an argument function, though. A possibility
-for lexocentric specification of an argument function is left open, however.
-Due to Ayeri's consistent use of case\index{case} marking, I see no problem in invoking a
-lexocentric specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g):
+In order to produce correct c- and f-structures for (\ref{ex:adjscope}b), we may
+want to analyze the complement NP, \rayr{sp\_eri}{sapaeri}, as modifying an NP
+which jointly holds the nominal head, \rayr{limu}{limu} as well as its
+adjunct\index{grammatical function!adjunct} adjective\index{adjectives},
+\rayr{hiro}{hiro}. The NP has thus been `extended' so that one NP is nested
+within another, as indicated in (\ref{ex:npcstruct}b). Regarding functional
+annotation, such an analysis creates a problem, since \citet{bresnan2016}
+require a phrase adjoined to a phrasal constituent to be either unannotated or
+to not embody an argument function (\cite[100, 107]{bresnan2016}; also compare
+(\ref{ex:functions}) of \autoref{ch:syntyp}). \Compl{}\index{grammatical
+function!closed complement} is an argument function, though. The possibility of
+lexocentric specification of an argument function remains open, however. Due to
+Ayeri's consistent use of case\index{case} marking, I see no problem in invoking
+a lexocentric specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g):
 \Ins{} specifies in this case that the head of this NP, \xayr{sp}{sapa}{wool},
-is a complement of \xayr{limu}{limu}{shirt}; see an example in (\ref{ex:complextrapos}). Extraposed relative clauses\index{relative clause} are
-less problematic, since they are adjuncts\index{grammatical function!adjunct}, and \Adjc{} is not an
-argument function.
+is a complement of \xayr{limu}{limu}{shirt}; see an example in
+(\ref{ex:complextrapos}). Extraposed relative clauses\index{relative clause} are
+less problematic since they are adjuncts\index{grammatical function!adjunct},
+and \Adjc{} is not an argument function.
 
 \begin{figure}
 \ex\label{ex:complextrapos}
@@ -568,9 +578,8 @@ head--dependent word order\index{word order} at least for its NPs. As
 illustrated by previous examples, both adjuncts\index{grammatical
 function!adjunct} and complements are mostly appended to the right of their
 heads, which means that Ayeri may be classified as a rather consistently
-right-branching language.
-% However, a certain number of postpositions form an exception to this
-% classification (compare \autoref{subsec:postpos}).
+right-branching language.\footnote{A small number of postpositions form an 
+exception to this classification (compare \autoref{subsec:postpos}).}
 Regaring word order\index{word order} typology\index{typology}, we can state
 the generalizations in (\ref{ex:nptyp}).
 
@@ -872,11 +881,12 @@ spite of the presence of a numeral\index{numerals}, for instance as in (\ref{ex:
 \endgl\xe
 \end{figure}
 
-Here, the noun \xayr{kejnmF}{keynam}{people} is marked additionally for plural\index{number!plural}
-by the nominal plural\index{number!plural} suffix \rayr{/ye}{-ye} in spite of being a \fw{plurale
-tantum} and in spite of the presence of the numeral\index{numerals} \xayr{menNF}{menang}
-{hundred}. Without plural\index{number!plural} morphology, the meaning of \rayr{kejnmF menNF}{keynam
-menang} would be `a hundred people', not generic `hundreds'.
+Here, the noun \xayr{kejnmF}{keynam}{people} marks plural\index{number!plural}
+additionally with the suffix \rayr{/ye}{-ye} in spite of being a \fw{plurale
+tantum} and in spite of the presence of the numeral\index{numerals}
+\xayr{menNF}{menang}{hundred}. Without plural\index{number!plural} marking,
+the meaning of \rayr{kejnmF menNF}{keynam menang} would be `a hundred people',
+not generic `hundreds'.
 
 \index{nouns|)}
 \index{phrase types!noun phrase|)}
@@ -1426,20 +1436,24 @@ morpholexical specifications possible for possessive pronouns are given in
 \end{morphlex}
 \end{figure}
 
-Earlier treatments of possessive pronouns analyzed them as adjectives\index{adjectives}, however,
-this appears incorrect in that, if they were adjectives\index{adjectives}, they should coordinate\index{coordination}
+Earlier treatments of possessive pronouns analyzed them as
+adjectives\index{adjectives}, however, this appears incorrect in that, if they
+were adjectives\index{adjectives}, they should coordinate\index{coordination}
 with other adjectives. As illustrated in (\ref{ex:possnoadj}a), this is not the
-case. If possessive pronouns were adjectives\index{adjectives}, it should also be possible for
-there to be more than one of them in a clause, just as \fw{new blue car} is
-possible, with two adjectives modifying \fw{car}. Example (\ref{ex:possnoadj}b)
-illustrates that there can only be one possessor\index{semantic role!possessor}, though. According to
-\citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and possessors\index{semantic role!possessor}
-have some properties in common}, though they are variably treated as specifiers
-of NP\index{phrase types!noun phrase} or heads of DP with an NP\index{phrase types!noun phrase} complement throughout the book. Let us assume
-here that, like Welsh\index{Welsh}, there is a parametric choice not to use the
-specifier position \parencite[130]{bresnan2016}. Thus, possessors and other 
-determiners have to be analyzed as heads of DP which take an NP complement as a
-co-head.
+case. If possessive pronouns were adjectives\index{adjectives}, it should also
+be possible for there to be more than one of them in a clause, just as \fw{new
+blue car} is possible, with two adjectives modifying \fw{car}. Example
+(\ref{ex:possnoadj}b) illustrates that there can only be one
+possessor\index{semantic role!possessor}, though. According to
+\citet{bresnan2016}, \textcquote[100]{bresnan2016}{[s]ubjects and
+possessors\index{semantic role!possessor} have some properties in common},
+though they are variably treated as specifiers of NP\index{phrase types!noun
+phrase} or heads of DP with an NP\index{phrase types!noun phrase} complement
+throughout the book. Let us assume here that, like Welsh\index{Welsh}, there is
+a parametric choice not to use the specifier position
+\parencite[130]{bresnan2016}. Thus, possessors and other determiners have to be
+analyzed as heads of DP which take an NP complement as a co-head; genitive case
+identifies them as such.
 
 \begin{figure}
 \pex\label{ex:possnoadj}
@@ -1504,12 +1518,15 @@ This parallels the use of \rayr{d/}{da-} with adjectives, compare
 \xe
 \end{figure}
 
-Nominalized\index{nominalization} possessive pronouns are anaphora to a third-person\index{person} form, while they
-additionally refer to a possessor\index{semantic role!possessor}: \rayr{d/naa}{da-nā} in (\ref{ex:nomzposs})
-refers to a pen belonging to the person offering the other to use theirs.
-The \Avm{} in (\ref{ex:mypen}a) spells out the full functional definition for 
-\xayr{ddNFlej naa}{dadangley nā}{my pen}; (\ref{ex:mypen}b) attempts to model
-the an\-a\-pho\-ric reference, \xayr{d/naalej}{da-nāley}{mine}.
+Nominalized\index{nominalization} possessive pronouns are anaphora to a
+third-person\index{person} form, while they additionally refer to a
+possessor\index{semantic role!possessor}: \rayr{d/naa}{da-nā} in
+(\ref{ex:nomzposs}) refers to a pen belonging to the person offering the other
+to use theirs. An attempt to model this process is made in (\ref{ex:mypen}): the
+\Avm{} in (\ref{ex:mypen}a) spells out the full functional definition for
+\xayr{ddNFlej naa}{dadangley nā}{my pen}; example (\ref{ex:mypen}b)
+shows the corresponding expression with an\-a\-pho\-ric reference,
+\xayr{d/naalej}{da-nāley}{mine}.
 
 \begin{figure}
 \ex\labels\label{ex:mypen}
