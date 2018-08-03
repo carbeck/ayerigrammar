@@ -3854,7 +3854,7 @@ of these nominal elements. Adjectives are likewise commonly found as
 predicative complements (\Plink{}\index{grammatical function!predicative complement}) in copular clauses\index{copular clause}, compare
 \autoref{subsec:eqs}. Possessive pronouns can be used as modifiers as well,
 though they are probably still better classified as DP\index{phrase types!determiner phrase} heads. The
-phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
+phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure trees in
 (\ref{ex:adjpcstruct}) show how an AP is constructed.
 
 \begin{figure}
@@ -3894,13 +3894,16 @@ phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure tree in
 \xe
 \end{figure}
 
-APs have an adjective as their lexical head. This head may be
-extended by modifiers adjoined to \xbar{A}; \xbar{A} repeats for the adjunct\index{grammatical function!adjunct}ion
-of multiple modifiers. Since modifiers follow\index{word order} their heads here as well, APs are
-also a right-branching constituent. Complements of adjectives are subsumed
-under the label XP in the phrase structure rules, which here stands for NP\index{phrase types!noun phrase}, DP\index{phrase types!determiner phrase},
-and CP\index{phrase types!complementizer phrase}. An example of each phrase type modifying an adjective is given in
-(\ref{ex:adjmod}) and (\ref{ex:adjmod2}).
+APs have an adjective as their lexical head. This head may be extended by
+modifiers adjoined to \xbar{A}; \xbar{A} repeats for the
+adjunct\index{grammatical function!adjunct}ion of multiple modifiers. Since
+modifiers follow\index{word order} their heads here as well, APs are also a
+right-branching constituent. Complements of adjectives are subsumed under the
+label XP in the phrase structure rules, which here stands for NP\index{phrase
+types!noun phrase}, DP\index{phrase types!determiner phrase}, PP\index{phrase
+types!adpositional phrase}, and CP\index{phrase types!complementizer phrase}. An
+example of each phrase type modifying an adjective is given in (\ref{ex:adjmod})
+and (\ref{ex:adjmod2}).
 
 \begin{figure}
 \pex\label{ex:adjmod}
@@ -3993,11 +3996,7 @@ and CP\index{phrase types!complementizer phrase}. An example of each phrase type
 %		]
 	]
 	\end{forest}
-\xe
-\end{figure}
 
-\begin{figure}
-\pex\label{ex:adjmod2}
 \a\label{ex:adjmod_dp}%
 	\begin{minipage}[t]{.5\remaining}
 	\begingl
@@ -4032,6 +4031,45 @@ and CP\index{phrase types!complementizer phrase}. An example of each phrase type
 			]
 			[{\anno[\pass{\Oblq{ben}}]{DP}}
 				[yayam]
+			]
+%		]
+	]
+	\end{forest}
+\xe
+\end{figure}
+
+\begin{figure}
+\pex\label{ex:adjmod2}
+\a\label{ex:adjmod_pp}%
+	\begin{minipage}[t]{.5\remaining}
+	\begingl
+		\glpreamble adjective + PP complement: //
+		\gla Adareng vihay kong similya. //
+		\glb ada-reng vihay kong simil-ya //
+		\glc that-\AargI{} common inside country-\Loc{} //
+		\glft `It is common within the country.' //
+	\endgl\medskip
+
+	\begin{avm}
+	\[
+		\Plink	&	\[
+			\Pred	&	\astruct{common}{\ups{\Oblq{loc}}} \\
+			\Oblq{loc}	&	\[
+				\avmspan{``within the country''} \\
+			\] \\
+		\] \\
+	\]
+	\end{avm}
+	\end{minipage}
+	\hfill
+	\begin{forest} narrower nodes, shorter edges, italic leaves,
+	[{\anno[\pass{\Plink}]{AP}}
+%		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[vihay]
+			]
+			[{\anno[\pass{\Oblq{loc}}]{PP}}
+				[{kong similya}]
 			]
 %		]
 	]
@@ -4078,24 +4116,31 @@ and CP\index{phrase types!complementizer phrase}. An example of each phrase type
 \xe
 \end{figure}
 
-Example (\ref{ex:adjmod_adv}) gives the f- and c-structures for the AP
-to show that \Adjc{}\index{grammatical function!adjunct} may be recursive: an adjective which serves as one
-of many modifiers to a noun can itself be modified by adverbs\index{adverbs}. Likewise, an
-adjective--adverb\index{adverbs} combination can be complemented by an NP\index{phrase types!noun phrase}, as shown in
+Example (\ref{ex:adjmod_adv}) gives the f- and c-structures for the AP to show
+that \Adjc{}\index{grammatical function!adjunct} may be recursive: an adjective
+which serves as a modifiers of a noun can itself be modified by an
+adverb\index{adverbs}. Likewise, an adjective--adverb\index{adverbs} combination
+can be complemented by an NP\index{phrase types!noun phrase}, as shown in
 (\ref{ex:adjmod_dp}). Especially in (\ref{ex:adjmod_np}) and
-(\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases\index{case} with
-complements where English would use prepositions. Thus, in
+(\ref{ex:adjmod_dp}) we can see Ayeri's propensity for using cases\index{case}
+with complements where English would use prepositions. Thus, in
 (\ref{ex:adjmod_np}), `about' is expressed by putting the nominal complement in
-the genitive case\index{case!genitive}: the NP\index{phrase types!noun phrase} complement expresses an oblique\index{grammatical function!oblique} theme\index{semantic role!theme} about which the
-experiencing subject becomes happy. This, however, should not be conflated with
-a possessor\index{semantic role!possessor}, \Possr{}, but should be labeled separately as an oblique\index{grammatical function!oblique}
-complement, \Oblq{theme}\index{semantic role!theme}. Similarly, the recipient\index{semantic role!recipient} of the subject's happiness
-appears as an NP\index{phrase types!noun phrase} complement in the (ethical) dative\index{case!dative} in (\ref{ex:adjmod_dp}).
-Instrumental and causative NP\index{phrase types!noun phrase} complements instead of PPs may be found as well
-(compare \autoref{subsubsec:valincr}, p.~\pageref{subsubsec:valincr}).
-Moreover, according to \citet{carnie2013}, quantifiers\index{quantifiers} or intensifiers\index{intensifiers} of
-adjectives are adverbs\index{adverbs}, so they should find themselves in \Adjc{}\index{grammatical function!adjunct}. An example
-of this is given in (\ref{ex:adjquant3}).
+the genitive case\index{case!genitive}: the NP\index{phrase types!noun phrase}
+complement expresses an oblique\index{grammatical function!oblique}
+theme\index{semantic role!theme} about which the experiencing subject becomes
+happy. This, however, should not be conflated with a possessor\index{semantic
+role!possessor}, \Possr{}, but should be labeled separately as an
+oblique\index{grammatical function!oblique} complement,
+\Oblq{theme}\index{semantic role!theme}. Similarly, the recipient\index{semantic
+role!recipient} of the subject's happiness appears as an NP\index{phrase
+types!noun phrase} complement in the (ethical) dative\index{case!dative} in
+(\ref{ex:adjmod_dp}). Instrumental and causative NP\index{phrase types!noun
+phrase} complements instead of PPs may be found as well (compare
+\autoref{subsubsec:valincr}, p.~\pageref{subsubsec:valincr}). Moreover,
+according to \citet{carnie2013}, quantifiers\index{quantifiers} or
+intensifiers\index{intensifiers} of adjectives are adverbs\index{adverbs}, so
+they should find themselves in \Adjc{}\index{grammatical function!adjunct}. An
+example of this is given in (\ref{ex:adjquant3}).
 
 \begin{figure}
 \pex\label{ex:adjquant3}
@@ -4150,7 +4195,7 @@ adjuncts\index{grammatical function!adjunct}, it is possible to replace the adje
 \xbar{A} in (\ref{ex:soreplacement}a) being targeted is the sister to
 AdvP\index{phrase types!adverb phrase}.\footnote{Since in \Lfg{}\index{Lexical-functional grammar}, non-branching \xbar{X} nodes are omitted for
 brevity, c-structure trees do not strictly distinguish between complements and
-adjuncts\index{grammatical function!adjunct} \citep[127, fn. 52]{bresnan2016}; functional annotations provide
+adjuncts\index{grammatical function!adjunct} \citep[127, fn.~52]{bresnan2016}; functional annotations provide
 information about the status of a node instead. The tree in
 (\ref{ex:soreplacement}), however, keeps those \xbar{X} nodes which would
 otherwise be omitted.}
@@ -4248,19 +4293,24 @@ to an Ayeri speaker.
 % Would the conjunct be interpreted as an adjunct in this case? Why?
 
 Further complications arise with regards to complementation in that non-clitic
-quantifiers\index{quantifiers} like \xayr{AMkYu}{ankyu}{really} cause a complement of an adjective
-to be pushed further to the right. This may be treated as extraposition\index{constituent order} of the
-complement, and is possibly due to syntactic weight \citep{wechsler2009}.
-Example (\ref{ex:intrusivequant}) attempts to illustrate the c-structure for a
-displaced CP\index{phrase types!complementizer phrase}. Following the annotation rules in \citet[107]{bresnan2016}, such
-an analysis is probably not unproblematic since it is required for the adjoined
-phrasal node to be either unannotated or not to embody an argument function,
-while \Comp{} is an argument function. Using lexocentric feature annotation is
-not possible here, since CPs\index{phrase types!complementizer phrase} cannot be marked for case\index{case}.
+quantifiers\index{quantifiers} like \xayr{AMkYu}{ankyu}{really} cause a
+complement of an adjective to be extraposed\index{constituent order}, due to
+syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant_cstruct})
+attempts to illustrate the c-structure for a displaced CP\index{phrase
+types!complementizer phrase}. The corresponding f-structure in
+(\ref{ex:intrusivequant_fstruct}) shows that, even though the CP is generated in
+a position different from where it should occur as a complement, the f-structure
+remains the same: the CP $g$ is a complement of \textit{f}'s predicator.
+Following the annotation rules in \citet[107]{bresnan2016}, an analysis as in
+(\ref{ex:intrusivequant_cstruct}) is not unproblematic since they require for
+the adjoined phrasal node to be either unannotated (\updown{}) or not to embody
+an argument function, while \Comp{} is an argument function. Using lexocentric
+feature annotation as with NPs is not possible here, since CPs\index{phrase
+types!complementizer phrase} cannot be marked for case\index{case}.
 
 \begin{figure}
-\ex\label{ex:intrusivequant}%
-\begingl[aboveglbskip=1em]
+\pex\label{ex:intrusivequant}%
+\a\label{ex:intrusivequant_cstruct}\begingl[aboveglbskip=1em]
 	\gla Yang valuy {\_\tikzmark{intrusivequant2_1}} ankyu, 
 	\textup{[ } @ yomavāng edaya\tikzmark{intrusivequant2_2} @ \textup{ ]}. //
 	\glb yang valuy {} ankyu {} yoma=vāng edaya {} //
@@ -4274,7 +4324,7 @@ cs:intrusivequant2_2});
 \end{tikzpicture}
 
 \begin{forest} shorter edges, italic leaves,
-[{\anno[\pass{\Plink}]{AP}}
+[{\anno[\pass{\Plink}]{AP$_f$}}
 %	[\anno{\xbar{A}}
 		[\anno{AP}
 			[\anno{\xbar{A}}
@@ -4287,28 +4337,25 @@ cs:intrusivequant2_2});
 				[ankyu]
 			]
 		]
-		[{\anno[\pass{\Compl}]{CP}}
-			[{yomavāng edaya}, roof, name=CP]
+		[{\anno[\pass{\Compl}]{CP$_g$}}
+			[{yomavāng\\ edaya}, roof, name=CP]
 		]
 %	]
 ]
 %
 \draw [-latex, dashed] (CP_orig) to [out=south, in=south] (CP);
 \end{forest}
-\xe
-\end{figure}
 
-\begin{figure}
-\ex\label{ex:intrusivequant_fstruct}
+\a\label{ex:intrusivequant_fstruct}
 \begin{avm}
 \[
-	\Plink	&	\[
+	\Plink	&	$f$: \[
 		\Pred	&	\astruct{glad}{\ups{\Compl}} \\
 		\Adjc	&	\{\[
 			\Pred	&	`really' \\
 		\]\}\\
-		\Compl	&	\[
-			\Pred	&	\astruct{exist}{\ups{\Subj}, \ups{\Oblq{loc}}} \\
+		\Compl	&	$g$: \[
+			\Pred	&	\astruct{exist}{\ups{\Subj} \ups{\Oblq{loc}}} \\
 			\Subj	&	\[
 				% \Pred	&	`$pro$' \\
 				% \Pers	&	\Second \\
@@ -4478,13 +4525,15 @@ in (\ref{ex:advmorphlex}) appear equal.
 
 If we look at the phrase structure (\ref{ex:advpstruct}) and the c-structure
 (\ref{ex:advpcstruct}) for adverbs, however, there is a slight difference in
-that adverbs\index{adverbs} cannot serve as \Plink{}\index{grammatical function!predicative complement} in equative statements; they also can
-only be modified by other adverbs, and they cannot take complements.%
-\footnote{For adjectives\index{adjectives}, compare (\ref{ex:adjpstruct}),
-(\ref{ex:adjpcstruct}), and (\ref{ex:adjmorphlex}) in \autoref{subsec:adjps}.}
-On the other hand, adjectives\index{adjectives} are restricted to nominal contexts whereas
-adverbs may modify any other lexical category: verbs\index{verbs}, adjectives\index{adjectives}, prepositions\index{adpositions!prepositions},
-as well as other adverbs.
+that descriptive adverbs\index{adverbs} at least cannot serve as
+\Plink{}\index{grammatical function!predicative complement} in equative
+statements; they also can only be modified by other adverbs, and they cannot
+take complements.\footnote{For adjectives\index{adjectives}, compare
+(\ref{ex:adjpstruct}), (\ref{ex:adjpcstruct}), and (\ref{ex:adjmorphlex}) in
+\autoref{subsec:adjps}.} On the other hand, adjectives\index{adjectives} are
+restricted to nominal contexts, whereas adverbs may modify any other lexical
+category: verbs\index{verbs}, adjectives\index{adjectives},
+prepositions\index{adpositions!prepositions}, as well as other adverbs.
 
 \begin{figure}
 \ex\label{ex:advpstruct}
@@ -4591,17 +4640,19 @@ context.
 \xe
 \end{figure}
 
-Clitic\index{clitics} quantifiers\index{quantifiers}, as in (\ref{ex:advmod_clitic}), attach immediately to the
-head they modify rather than to the last word of the AdvP. It may be assumed
-that the functional scheme given in (\ref{ex:advmorphlex}) also holds for them.
-\citet{carnie2013} at least treats all modifiers of adjectives\index{adjectives} and adverbs as
-adverbs. Even though these usually refer to the extent of the adjective\index{adjectives} or
-adverb, they differ from quantifiers\index{quantifiers} of nouns, which were analyzed above as
-determiners encoding the \Quant{} feature rather than being plain adjectives\index{adjectives}.
-Quantifiers\index{quantifiers} of adjectives\index{adjectives} and adverbs are also able to be modified in turn, as
-illustrated by (\ref{ex:clitics_55}) from \autoref{clitics_quant} (compare
-p.~\pageref{ex:clitics_55}), which is repeated again here, abbreviated.
-\xayr{/IknF}{ikan}{much, many, very} is modified in this case by
+Clitic\index{clitics} quantifiers\index{quantifiers}, as in
+(\ref{ex:advmod_clitic}), attach immediately to the head they modify rather than
+to the last word of the AdvP. It may be assumed that the functional scheme given
+in (\ref{ex:advmorphlex}) also holds for them. \citet{carnie2013} at least
+treats all modifiers of adjectives\index{adjectives} and adverbs as adverbs.
+Even though these usually refer to the extent of the adjective\index{adjectives}
+or adverb, they differ from quantifiers\index{quantifiers} of nouns, which were
+analyzed above as determiners encoding the \Quant{} feature rather than being
+plain adjectives\index{adjectives}. Quantifiers\index{quantifiers} of
+adjectives\index{adjectives} and adverbs are also able to be modified in turn,
+as illustrated by (\ref{ex:clitics_55}) of \autoref{clitics_quant}
+(p.~\pageref{ex:clitics_55}), which is repeated in (\ref{ex:clitics_55_short}),
+abbreviated. \xayr{/IknF}{ikan}{much, many, very} is modified in this case by
 \xayr{kgnF}{kagan}{far too} to convey the meaning `far too many'.
 
 \begin{figure}
@@ -4622,7 +4673,7 @@ a change in meaning (\ref{ex:quantadvcomptest_1}), that \rayr{kgnF}{kagan} does
 not work when the rest of the NP\index{phrase types!noun phrase} is replaced by an anaphora
 (\ref{ex:quantadvcomptest_2}), and that \rayr{/IknF}{-ikan} cannot be replaced
 by an anaphora either (\ref{ex:quantadvcomptest_3}). It appears that
-\rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{ikan}, and that
+\rayr{kgnF}{kagan} is dependent on \rayr{/IknF}{-ikan}, and that
 \rayr{/IknF}{-ikan} has head-like qualities with regards to modification by
 \rayr{kgnF}{kagan}.
 
