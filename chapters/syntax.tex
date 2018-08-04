@@ -5072,16 +5072,16 @@ role!source}).
 \end{figure}
 
 Regarding functional structure, the difference between preposition and
-postposition\index{adpositions!postpositions} is meaningless, so the morpholexical definitions in
-(\ref{ex:adpmorphlex}) do not distinguish formally between pre- and
-postpositions\index{adpositions!postpositions}. As described in \autoref{clitics_prep_dyn}
-(p.~\pageref{clitics_prep_dyn}) and \autoref{sec:adpositions}, there is a
-particle \rayr{mN}{manga} which has been analyzed as a clitic\index{clitics}. This particle
-indicates that an adposition has a directional reading (specifically, into the
-direction of the preposition) instead of a locational one. The rule on the
-adpositional object's\index{grammatical function!adpositional object} case\index{case} in (\ref{ex:adpmorphlex_1}) excludes
-\rayr{liNF}{ling} and \rayr{AvnF}{avan}, which require special treatment with
-regards to case\index{case} marking, as described below.
+postposition\index{adpositions!postpositions} is meaningless, so the
+morpholexical definitions in (\ref{ex:adpmorphlex}) do not distinguish formally
+between pre- and postpositions\index{adpositions!postpositions}. The
+\Tel{}\textsf{icity}\index{telicity} feature only matters for the prepositions
+\xayr{AvnF}{avan}{bottom of} and \xayr{liNF}{ling}{top of}, and will be
+discussed below. Suffice it to say, position does not imply a goal, hence
+adpositions are atelic\index{telicity} by default. This default is overridden by
+the proclitic \rayr{mN}{manga}. This particle indicates that a PP has a
+directional reading: towards the location indicated by the prepositional object,
+along the path indicated by the adposition.
 
 \begin{figure}
 \begin{morphlex}
@@ -5090,11 +5090,9 @@ regards to case\index{case} marking, as described below.
 	\begin{tabu} {\usetabu{morphlex}}
 	...
 		& P
-		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & \astruct{...}{\ups{\Obj}} \\
-			\ups{\PCase} & = & \Oblq{loc} \\
-			\ups{\PSem} & = & $loc$ \\
-			\ups{\Obj{} \Case{}} & \req & \Loc{}
+		& \begin{tabular}[t]{l l l l l}
+			  & \ups{\Pred} & = & \astruct{...}{\ups{\Obj}} & \\
+			( & \ups{\Tel} & = & $-$ & ) \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -5105,7 +5103,7 @@ regards to case\index{case} marking, as described below.
 		& Cl
 		& \begin{tabular}[t]{l l l}
 			\ups{\PSem} & = & $dir$ \\
-			\ups{\PCase} & = & \Oblq{goal} \\
+			\ups{\Tel} & = & $+$ \\
 		\end{tabular}
 	\end{tabu}%
 }
@@ -5113,13 +5111,14 @@ regards to case\index{case} marking, as described below.
 \end{morphlex}
 \end{figure}
 
-German\index{German}, for one, encodes the difference between locational and directional uses
-of a group of prepositions as well, but with an alternation in the prepositional
-object's case\index{case} between \Dat{} (locational) and \Acc{} (directional). Thus,
-\fw{auf dem tisch} (on \Def{}.\Dat{}.\M{}.\Sg{} table) means `on the table',
-whereas \fw{auf den tisch} (on \Def{}.\Acc{}.\M {}.\Sg{} table) means `onto the
-table'. \citet{butt2005} defines this alternation (albeit for \fw{in} `in' and
-\fw{an} `at') as in (\ref{ex:gercasealt}).
+German\index{German}, for one, encodes the difference between locational and
+directional uses of a group of prepositions as well, but with an alternation
+in the prepositional object's case\index{case} between \Dat{} (locational) and
+\Acc{} (directional). Thus, \fw{auf dem tisch} (on \Def{}.\Dat{}.\M{}.\Sg{}
+table) means `on the table', whereas \fw{auf den tisch} (on
+\Def{}.\Acc{}.\M{}.\Sg{} table) means `onto the table'. \citet{butt2005}
+defines this alternation (albeit for \fw{in} `in' and \fw{an} `at') as in
+(\ref{ex:gercasealt}).
 
 \begin{figure}
 \ex\label{ex:gercasealt}%
@@ -5132,32 +5131,38 @@ German \citep{butt2005}:\medskip\\
 \end{figure}
 
 The \PSem{} feature thus determines the reading of the prepositional object by
-a requirement that its case\index{case} be either \Acc{} or \Dat{}, respectively.
-Since nouns in German\index{German} always carry case\index{case}, the \PSem{} attribute needs to be
-present in the lexical rules for all prepositions which show the \Acc{}/\Dat{}
-alternation. %\footnote{These are: 
-%\fw{an},
-%\fw{auf},
-%\fw{hinter},
-%\fw{in},
-%\fw{neben},
-%\fw{über},
-%\fw{unter},
-%\fw{vor},
-%\fw{zwischen}%
-%}
-In Ayeri, however, the particle \rayr{mN} {manga} alternates with nothing, so
-the absence of marking $dir$ indicates a locational reading $loc$\index{semantic role!location} as the
-default\index{default}. Different than in German\index{German}, the presence or absence of directionality
-marking also does not influence the case\index{case} of the adpositional object\index{grammatical function!adpositional object}.
+a requirement that its case\index{case} be either \Acc{} or \Dat{},
+respectively. Since nouns in German\index{German} always carry
+case\index{case}, the \PSem{} attribute needs to be present in the lexical
+rules for all prepositions which show the \Acc{}/\Dat{} alternation.
+% \footnote{These are: 
+% \fw{an},
+% \fw{auf},
+% \fw{hinter},
+% \fw{in},
+% \fw{neben},
+% \fw{über},
+% \fw{unter},
+% \fw{vor},
+% \fw{zwischen}%
+% }
+In Ayeri, however, the particle \rayr{mN}{manga} alternates with nothing, so the
+absence of marking $dir$ can be interpreted as indicating a locational reading
+$loc$\index{semantic role!location} as the default\index{default} for
+adpositional objects in the locative. Different than in German\index{German},
+the presence or absence of directionality marking also does not influence the
+case\index{case} of the adpositional object\index{grammatical
+function!adpositional object}.
 
-Example (\ref{ex:mangaaltern}) illustrates the alternation in annotation
-between a bare adposition and one modified by \rayr{mN}{manga}:
-\rayr{mN}{manga} changes the value of the \PSem{} feature of the f-structure
-predicated by the adposition to $dir$ and the \PCase{} feature to \Oblq{goal}\index{semantic role!goal},
-as illustrated in (\ref{ex:mangaaltern_marked}). This is how the difference
-between locational `in' and directional `into' is represented here. The case\index{case} of
-the prepositional object\index{grammatical function!adpositional object} is \Loc{} in both versions of the sentence.
+Example (\ref{ex:mangaaltern}) illustrates the alternation in annotation between
+a bare adposition and one modified by \rayr{mN}{manga}. In an attempt to model
+the difference between locational `in' and directional `into', \rayr{mN}{manga}
+is analyzed there as changing the value of the \PSem{} feature of the
+f-structure predicated by the adposition to $dir$ and the \Tel{}\index{telicity}
+feature to $+$, as illustrated in (\ref{ex:mangaaltern_marked}). The
+case\index{case} of the prepositional object\index{grammatical
+function!adpositional object} is \Loc{} in both versions of the sentence, which
+specifies that its superior f-structure's \PCase{} value is \Oblq{loc}.
 
 \begin{figure}
 \pex\label{ex:mangaaltern}
@@ -5176,6 +5181,7 @@ the prepositional object\index{grammatical function!adpositional object} is \Loc
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
 		\PCase	&	\Oblq{loc} \\
 		\PSem	&	$loc$ \\
+		\Tel	&	$-$ \\
 		\Obj	&	\[
 			\Pred	&	`house' \\
 			\Case	&	\Loc \\
@@ -5187,9 +5193,9 @@ the prepositional object\index{grammatical function!adpositional object} is \Loc
 \a\label{ex:mangaaltern_marked}
 \begin{minipage}[t]{.5\remaining}
 \begingl
-	\gla manga kong nangaya //
-	\glb manga kong nanga-ya //
-	\glc \Dir{} inside house-\Loc{} //
+	\gla manga @ kong nangaya //
+	\glb manga= kong nanga-ya //
+	\glc \Dir{}= inside house-\Loc{} //
 	\glft `into the house' //
 \endgl
 \end{minipage}
@@ -5197,8 +5203,9 @@ the prepositional object\index{grammatical function!adpositional object} is \Loc
 \begin{avm}
 \[\Adjc	&	\{\[
 		\Pred	&	\astruct{inside}{\ups{\Obj}} \\
-		\PCase	&	\Oblq{goal} \\
+		\PCase	&	\Oblq{loc} \\
 		\PSem	&	$dir$ \\
+		\Tel	&	$+$ \\
 		\Obj	&	\[
 			\Pred	&	`house' \\
 			\Case	&	\Loc \\
@@ -5212,26 +5219,25 @@ the prepositional object\index{grammatical function!adpositional object} is \Loc
 
 \phantomsection\label{phsec:lingavandat}
 With the prepositions \xayr{liNF}{ling}{on top of} and \xayr{AvnF}{avan}{at the
-bottom of} there is another alternation, based on case\index{case}, for verbs\index{verbs} which do not
-encode direction. This is rooted in the etymology of these words:
-\rayr{liNF}{ling} as a noun means `top', \rayr{AvnF}{avan} means `ground,
-bottom'. The directional variants of these prepositions mean `to the top, onto'
-and `to the bottom'. These are essentially telic\index{telicity} in that they express the
-possibility of arriving at the destination specified by the adpositional
-object\index{grammatical function!adpositional object}. However, Ayeri does not possess separate adpositions to express `up'
-and `down' as `atelic'\index{telicity} concepts, that is, without referring to arriving at a
-destination.\footnote{The chosen terminology is possibly slightly problematic
-since, strictly speaking, `up' and `down' are also directions rather than
-locations.} Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up'
-and `down' with dative\index{case!dative} complements, respectively, to mark the difference,
+bottom of} there is another alternation, based on case\index{case}, for
+verbs\index{verbs} which do not encode direction. This is rooted in the
+etymology of these words: \rayr{liNF}{ling} as a noun means `top',
+\rayr{AvnF}{avan} means `ground, bottom'. The directional variants of these
+prepositions mean `to the top, onto' and `to the bottom'. These readings are
+telic\index{telicity} in that they express the possibility of arriving at the
+destination specified by the adpositional object\index{grammatical
+function!adpositional object}. However, Ayeri does not possess separate
+adpositions to express `up' and `down' as atelic\index{telicity} concepts.
+Instead, \rayr{liNF}{ling} and \rayr{AvnF}{avan} double for `up' and `down' with
+dative\index{case!dative} complements, respectively, to mark the difference,
 compare \autoref{tab:updowncompl} and \autoref{fig:updowncompl}. Note, however,
 that Ayeri does not possess intransitive adpositions, with the exception of a
-few verbs\index{verbs} where the adposition is a lexicalized part of the expression, for
-instance, \xayr{tpYF/ djrinF}{tapy- dayrin}{save (assets)}, with the
-fossilized, now defunct preposition \xayr{djrinF}{dayrin}{beside, next to}
+few verbs\index{verbs} where the adposition is a lexicalized part of the
+expression, for instance, \xayr{tpYF/ djrinF}{tapy- dayrin}{save (assets)}, with
+the fossilized, now defunct preposition \xayr{djrinF}{dayrin}{beside, next to}
 (modern \rayr{kjvo} {kayvo}). `Up' and `down' thus refer to their transitive
-uses as in \fw{up the stairs} and \fw{down the hill}, respectively. 
-Example sentences for all configurations are provided in (\ref{ex:dirtel}).
+uses as in \fw{up the stairs} and \fw{down the hill}, respectively. Example
+sentences for all configurations are provided in (\ref{ex:dirtel}).
 
 \begin{table}\centering
 \caption{Case alternations of \rayr{liNF}{ling} and \rayr{AvnF}{avan}}
@@ -5410,7 +5416,7 @@ Example sentences for all configurations are provided in (\ref{ex:dirtel}).
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
-	\PCase	&	\Oblq{goal} \\
+	\PCase	&	\Oblq{loc} \\
 	\PSem	&	$dir$ \\
 	\Tel	&	$+$ \\
 	\Obj	&	\[
@@ -5433,8 +5439,8 @@ Example sentences for all configurations are provided in (\ref{ex:dirtel}).
 \begin{avm}
 \[
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
-	\PCase	&	\Oblq{loc} \\
-	\PSem	&	$loc$ \\
+	\PCase	&	\Oblq{goal} \\
+	\PSem	&	$dir$ \\
 	\Tel	&	$-$ \\
 	\Obj	&	\[
 		\Pred	&	`hill' \\
@@ -5458,7 +5464,7 @@ Example sentences for all configurations are provided in (\ref{ex:dirtel}).
 	\Pred	&	\astruct{top of}{\ups{\Obj}} \\
 	\PCase	&	\Oblq{goal} \\
 	\PSem	&	$dir$ \\
-	\Tel	&	$-$ \\
+	\Tel	&	$+$ \\
 	\Obj	&	\[
 		\Pred	&	`castle' \\
 		\Case	&	\Dat \\
@@ -5473,90 +5479,91 @@ These examples show that there is an alternation in case\index{case} similar to
 the one described above for German\index{German}. The distinction in Ayeri is
 not between location\index{semantic role!location} and direction, however, but
 rather between emphasis on the location\index{semantic role!location} or
-destination as a goal\index{semantic role!goal} (hence `telic'\index{telicity})
-and the path as a non-goal\index{semantic role!goal} (hence
-`atelic'\index{telicity}). Lexical rules for \rayr{liNF}{ling} and
-\rayr{AvnF}{avan} can therefore be defined as  given in
-(\ref{ex:lingavanmorphlex}). Compared to the rules given for adpositions more
-generally in (\ref{ex:adpmorphlex}), there is an additional feature \Tel{},
-which may be positive or negative depending on context, and an accompanying rule
-which determines the case\index{case} of the complement for
-`atelic'\index{telicity} uses of the preposition. An addtional rule is operating
-for both prepositions which determines that if the preposition is
-`atelic'\index{telicity}, the prepositional object\index{grammatical
-function!adpositional object} is to be put in the dative
-case\index{case!dative}.
+destination as a goal\index{semantic role!goal} (telic\index{telicity}) and the
+path as a non-goal\index{semantic role!goal} (atelic\index{telicity}).
+\citet{butt2005} interprets prepositions in German\index{German} to define
+\PSem{}, and to thereby govern the case of their complement. In contrast, it is
+easier in Ayeri to assume that case marking on the prepositional object
+determines \PSem{}, and thus also \PCase{}, for its superior f-structure.
+\rayr{mN}{manga} takes precedence over case marking with regards to the \PSem{}
+feature. An attempt to model this analysis in terms of lexical rules is
+presented in (\ref{ex:adpobjcaserule}).
 
 \begin{figure}
-\begin{morphlex}
-\pex\label{ex:lingavanmorphlex}%
-\a\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlex}}
-	\rayr{\larger liNF}{ling}
-		& P
-		& \begin{tabular}[t]{l l l}
-			\ups{\Pred}  & = & \astruct{top of}{\ups{\Obj}} \\
-			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}\} \\
-			\ups{\Tel} 	 & = & $\pm$ \\
-		\end{tabular} \medskip
+\ex\label{ex:adpobjcaserule}%
+	\begin{tabular}[t]{@{} l l l l l}
+	\ups{\Case} = \Loc{}
+		& $\implies$
+		& %
+		& \uncertain{$x$}{\PCase} = \Oblq{loc}
+		& %
+		\\
 
-% 		\begin{tabular}[t]{l l l}
-% %			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
-% 			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
-% 		\end{tabular}
-	\end{tabu}%
-}
+	%
+		& %
+		& (
+		& \uncertain{$x$}{\PSem} = $loc$
+		& )
+		\\
 
-\a\adjustbox{valign=t}{%
-	\begin{tabu} {\usetabu{morphlex}}
-	\rayr{\larger AvnF}{avan}
-		& P
-		& \begin{tabular}[t]{l l l}
-			\ups{\Pred} & = & \astruct{bottom of}{\ups{\Obj}} \\
-			\ups{\PCase} & = & \{\Oblq{loc}, \Oblq{goal}\} \\
-			\ups{\Tel}	& = & $\pm$ \\
-		\end{tabular} \medskip
+	%
+		& %
+		& %
+		& \uncertain{$x$}{\Obj}
+		& %
+		\medskip \\
 
-% 		\begin{tabular}[t]{l l l}
-% %			\ups{\Tel} = $+$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Loc \\
-% 			\ups{\Tel} = $-$ & $\implies$ & \ups{\Obj{} \Case{}} \req{} \Dat \\
-% 		\end{tabular}
-	\end{tabu}%
-}
+	\ups{\Case} = \Dat{}
+		& $\implies$
+		& %
+		& \uncertain{$x$}{\PCase} = \Oblq{goal}
+		& %
+		\\
 
-\a\label{ex:telcaserule}%
-	\ups{\Tel} = $+$ $\implies$ \ups{\Obj{} \Case{}} \req{} \Loc{} \\
-	\ups{\Tel} = $-$ $\implies$ \ups{\Obj{} \Case{}} \req{} \Dat{}
+	%
+		& %
+		& %
+		& \uncertain{$x$}{\PSem} = $dir$
+		& %
+		\\
+
+	%
+		& %
+		& %
+		& \uncertain{$x$}{\Obj}
+		& %
+		\\
+	\end{tabular}
 \xe
-\end{morphlex}
 \end{figure}
 
 English verbs use prepositions heavily, whether they are idiomatic and part of
 the lexical entry of the word (\fw{clean up}, \fw{give in}, \fw{come on}) or
-actually meaningful in connecting complements to the verb (\fw{come from}, 
+actually meaningful in connecting complements to the verb (\fw{come from},
 \fw{look at}, \fw{talk to}). As we have seen above, Ayeri behaves quite the
-opposite way in mostly using case\index{case} for marking verbal complements, and having
-very few verbs with adpositional particles---compare the list in
+opposite way in mostly using case\index{case} for marking verbal complements,
+and having very few verbs with adpositional particles---compare the list in
 (\ref{ex:particleverbs}) of \autoref{subsec:prepositions}
 (p.~\pageref{ex:particleverbs}). Different from English, Ayeri cannot stack
-prepositions as in \fw{crawl out from under the table} or \fw{get out from inside
-the room}. Instead, it uses nouns, which is no surprise, as most basic
+prepositions as in \fw{crawl out from under the table} or \fw{get out from
+inside the room}. Instead, it uses nouns, which is no surprise, as most basic
 prepositions are derived from nouns (compare \autoref{tab:prepos},
-p.~\pageref{tab:prepos}). A phrase like \fw{out from under} may thus be
-rendered as in (\ref{ex:nostackprep}). In this particular example,
+p.~\pageref{tab:prepos}). A phrase like \fw{out from under} may thus be rendered
+as in (\ref{ex:nostackprep}). In this particular example,
 \xayr{AgonnF} {agonan}{outside} is homonymous with the preposition
-\xayr{AgonnF}{agonan}{outside of}, however, the topic marker at the beginning
-of the clause shows that there is a corresponding dative NP. Strictly speaking,
+\xayr{AgonnF}{agonan}{outside of}, however, the topic marker at the beginning of
+the clause shows that there is a corresponding dative NP. Strictly speaking,
 \rayr{AgonnF}{agonan} is not even necessary, since the first NP complement
-already indicates a motion from somewhere.\footnote{A grammaticalization
-process similar to that of \fw{inside of the X} to
-\fw{inside the X} may be a logical next step. What would be possible
-moreover is the functionalization of the triad \Loc{}--\Dat{}--\Gen{} to
-indicate $loc$\index{semantic role!location}, $goal$\index{semantic role!goal}, and $src$\index{semantic role!source} also with adpositions in general, either with
+already indicates a motion from somewhere.\footnote{A grammaticalization process
+similar to that of \fw{inside of the X} to
+\fw{inside the X} may be a logical next step. What would be possible moreover is
+the functionalization of the triad \Loc{}--\Dat{}--\Gen{} to indicate
+$loc$\index{semantic role!location}, $goal$\index{semantic role!goal}, and
+$src$\index{semantic role!source} also with adpositions in general, either with
 \rayr{mN}{manga} grammaticalizing further to solely marking direction,
 necessitating an obligatory \Dat{}/\Gen{} complement to indicate which way
-around, or with \rayr{mN}{manga} becoming zero, since the cases\index{case} are already
-enough to mark direction.
+around, or with \rayr{mN}{manga} becoming zero, since the cases\index{case} are
+already enough to mark direction.
 %
 % \ex[lingstyle=fnex]
 % \begingl
