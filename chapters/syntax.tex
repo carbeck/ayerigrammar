@@ -6467,7 +6467,7 @@ intended grammatical functions.
 
 % \subsubsection{Phrase structure}
 
-copular clauses\index{copular clause} are probably the most basic kind of sentence possible to form in
+Copular clauses\index{copular clause} are probably the most basic kind of sentence possible to form in
 Ayeri. They do not contain a verb, but form a small clause\index{phrase types!small clause}. As we have seen
 above, Ayeri is very consistently verb-first apart from these small clauses\index{phrase types!small clause}. We
 have also seen above (\autoref{sec:verbtypo}) that in Welsh\index{Welsh}---which is also a
@@ -6514,15 +6514,15 @@ rule set for finite verbs\index{verbs!finite} is given in (\ref{ex:inflmorphlex}
 \xe
 \end{figure}
 
-In (\ref{ex:ippstruct}a), we can see that the first node branching off of IP on
+In (\ref{ex:ipcstruct}a), we can see that the first node branching off of IP on
 the right is an XP which contains an adjunct\index{grammatical function!adjunct}. That is, I am assuming here that
 there is no specifier in the IP, following \citet[130]{bresnan2016} for Welsh\index{Welsh}.
 The subject\index{grammatical function!subject} NP\index{phrase types!noun phrase} is instead treated as a daughter of S\index{phrase types!small clause}. As we will see, not only
 AdvP,\index{phrase types!adverb phrase} but also APs\index{phrase types!adjective phrase}, and even NPs\index{phrase types!noun phrase} may serve as adjuncts\index{grammatical function!adjunct} of the verb. As discussed previously, Ayeri
 generally places modifiers right after the head, before complements. This means
 that here as well, when adjuncts\index{grammatical function!adjunct} are involved, S\index{phrase types!small clause} actually shifts\index{constituent order} to the right
-so that the phrase structure of IPs is maybe better modelled as in 
-(\ref{ex:ippstruct}b) in those cases.
+so that the phrase structure of IPs is probably better modeled as in 
+(\ref{ex:ipcstruct}b) in those cases.
 
 \begin{figure}
 \begin{morphlex}
@@ -6545,15 +6545,17 @@ so that the phrase structure of IPs is maybe better modelled as in
 				& ) \bigskip
 				\\
 
-			& \ups{\Top{} \Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+			& \ups{\Top} & = & ↓ \\
+			& \quad\downs{\Case{}} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
-			& \ups{\Top{} \Anim{}} & = & $\pm$\bigskip \\
+			& \quad\downs{\Anim{}} & = & $\pm$\bigskip \\
 			
-			( & \ups{\Subj{} \Pred} & = & `$pro$' & ) \\
-			  & \ups{\Subj{} \Anim} & = & $\pm$ \\
-			  & \ups{\Subj{} \Gend} & = & \{\M, \F, \N, \Inan\} \\
-			  & \ups{\Subj{} \Num} & = & \{\Sg, \Pl\} \\
-			  & \ups{\Subj{} \Pers} & = & \{\First, \Second, \Third\} \\
+			  & \ups{\Subj} & = & ↓ \\
+			( & \quad\downs{\Pred} & = & `$pro$' & ) \\
+			  & \quad\downs{\Anim} & = & $\pm$ \\
+			  & \quad\downs{\Gend} & = & \{\M, \F, \N, \Inan\} \\
+			  & \quad\downs{\Num} & = & \{\Sg, \Pl\} \\
+			  & \quad\downs{\Pers} & = & \{\First, \Second, \Third\} \\
 		\end{tabu}
 	\end{tabu}%
 }
@@ -6648,15 +6650,18 @@ secondary-predicative AP\index{phrase types!adjective phrase} may as well appear
 \end{figure}
 
 I have so far simply assumed that Ayeri follows the same sentence structure as
-Welsh\index{Welsh} does according to existing analyses in the \Lfg{}\index{Lexical-functional grammar} framework, compare
-(\ref{ex:welshcstruct2}). According to \citet[130]{bresnan2016}, S\index{phrase types!small clause} is chosen as
-a governing category for the subject\index{grammatical function!subject} NP as well as VP\index{phrase types!verb phrase}, since in place of VP\index{phrase types!verb phrase}, one may
-also put a range of other categories---NP\index{phrase types!noun phrase}, AP\index{phrase types!adjective phrase}, or PP\index{phrase types!prepositional phrase}. As we have seen above in
-(\ref{ex:ipcstruct}), this is also permitted in Ayeri, though with the
-restriction that XP can only appear with intransitive verbs\index{verbs!intransitive} if \Subj{} is a
-full NP\index{phrase types!noun phrase} (then the subject\index{grammatical function!subject} NP\index{phrase types!noun phrase} will take this place) or with transitive verbs\index{verbs!transitive} if
-\Subj{} consists of a pronominal clitic\index{clitics} on the verb in \xhead{I} (then the
-complement(s) of the verb will take this place).
+Welsh\index{Welsh} does according to existing analyses in the
+\Lfg{}\index{Lexical-functional grammar} framework, compare
+(\ref{ex:welshcstruct2}). According to \citet[130]{bresnan2016}, S\index{phrase
+types!small clause} is chosen as a governing category for the
+subject\index{grammatical function!subject} NP and the VP\index{phrase
+types!verb phrase}. In place of VP\index{phrase types!verb phrase}, one may also
+put a range of other categories---NP\index{phrase types!noun phrase},
+AP\index{phrase types!adjective phrase}, or PP\index{phrase types!prepositional
+phrase}. As illustrated in (\ref{ex:ipcstruct}), Ayeri is thought to follow the
+same scheme. Since Ayeri uses clitic subject pronouns, a \Subj{} daughter of
+S (compare (\ref{copcstruct}a)) only appears if \Subj{} is a full
+NP\index{phrase types!noun phrase} or expletive \xayr{sitNF}{sitang}{self}.
 
 % \begin{figure}
 % \ex\label{ex:welshvpfr}\begingl
@@ -6812,8 +6817,8 @@ object \rayr{Agu\_asF}{aguas}.
 \xe
 \end{figure}
 
-As previously mentioned, the adverb\index{adverbs} `usurps'\index{word order} the structural position of the
-verb's complement in order to avoid ambiguity in its modification relationship:
+As previously mentioned, the adverb\index{adverbs} `usurps'\index{word order} the position of the
+verb's complement in order to avoid ambiguity in the scope of modification:
 in (\ref{ex:ayradvorder_1}) it would be absolutely possible as well for the
 adverb\index{adverbs} to be interpreted as an adjective modifying \rayr{ANF AmaanF}{ang Amān},
 since adverbs and adjectives are not strictly distinguished by means of
@@ -6900,10 +6905,10 @@ clause's topic by a clitic\index{clitics} corresponding to the NP's\index{phrase
 form (see \autoref{subsec:case}). Topic marking on the verb works in tandem
 with case\index{case} marking on the marked-for NP, which receives zero-marking
 for case\index{case}, compare (\ref{ex:topmkg}).\footnote{Topic marking on the verb is
-essentially \textcquote[20]{corbett2006}{displaced information}, since the
+\textcquote[20]{corbett2006}{displaced information}, since the
 morphological category encoded by topic marking---case\index{case}---is not a category of
-the verb, so one may want to treat it as a kind of agreement\index{agreement} relationship where
-the verb agrees in case\index{case} with the topicalized NP\index{phrase types!noun phrase}. Thus, on morphological
+the verb. It may therefore be treated as an agreement\index{agreement} relationship where
+the verb agrees in case\index{case} with the topicalized NP\index{phrase types!noun phrase}: on morphological
 grounds, the topicalized NP\index{phrase types!noun phrase} is a controller and the verb is its agreement\index{agreement}
 target. On the other hand, it is the verb which assigns syntactic roles and
 thus governs the functional relationships between the various phrases in a
@@ -6911,9 +6916,9 @@ clause, so at the level of syntax, the topicalized NP\index{phrase types!noun ph
 while the verb is a controller.} Personal pronouns\index{pronouns!personal} occur in an undeclined base
 form if topicalized (see \autoref{subsec:perspro}). Morphological topic marking
 is limited to finite verbs\index{verbs!finite} of clauses containing more than one NP\index{phrase types!noun phrase}. Thus, even
-though the verb in (\ref{ex:verbint}) is only specified for one argument
+though the verb in (\ref{ex:verbint}) specified to subcategorize only for one argument
 (\Aarg{}), topic can be marked. This is because the causative NP\index{phrase types!noun phrase}, even though
-it is no required argument of the verb, but simply an adjunct\index{grammatical function!adjunct}, is eligible for
+it is no required argument of the verb but simply an adjunct\index{grammatical function!adjunct}, is eligible for
 topic marking as well. Another limitation to topic marking is that a matrix
 verb cannot topic-mark arguments of a subordinate verb if the subordinate verb
 occurs in the VP\index{phrase types!verb phrase} complement after\index{constituent order} the subject\index{grammatical function!subject} NP\index{phrase types!noun phrase}. Raising\index{verbs!raising} is required to make
@@ -7019,9 +7024,10 @@ correspondingly identifies the NP\index{phrase types!noun phrase}/DP\index{phras
 	...
 		& Cl
 		& \begin{tabular}[t]{l l l}
-			\ups{\Top{} \Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
+			\ups{\Top{}} & = & ↓ \\
+			\quad\downs{\Case} & = & \{\Aarg{}, \Parg{}, \Dat{}, \Gen{}, 
 				\Loc{}, \Ins{}, \Caus{}\} \\
-			\ups{\Top{} \Anim} & = & $\pm$ \\
+			\quad\downs{\Anim} & = & $\pm$ \\
 		\end{tabular}
 	\end{tabu}
 }
@@ -7220,7 +7226,7 @@ and aspects\index{aspect} in addition.
 \label{subsec:vps}
 \index{phrase types!verb phrase|(}
 
-VPs in Ayeri are distinct from IPs in that they are
+VPs are distinct from IPs in that they are
 headed by an infinite verb\index{verbs!infinite}, if there is a head: since Ayeri is verb-intial,
 the inflected, finite verb is an extended head of the VP, compare
 \autoref{sec:verbtypo}. \xhead{V} is an empty node in this case and gets
@@ -7285,7 +7291,7 @@ be negated. However, they do not mark person\index{person} and topic\index{gramm
 a subject\index{grammatical function!subject} by inflection or clitics either. \rayr{IlF/IlFymF} {il-ilyam} in
 (\ref{ex:vpsent_2}) rather receives its subject\index{grammatical function!subject} from the matrix verb,
 \xayr{shyNF}{sahayang}{I went}; the example is thus an instance of subject\index{grammatical function!subject}
-control. The set in (\ref{ex:verbmorphlex}) gives the definitions of the
+control. The set in (\ref{ex:verbmorphlex}) gives definitions of the
 semantic features an infinite verb\index{verbs!infinite} marks. Subordinate, infinite verbs\index{verbs!infinite} are
 one of the possible complements of finite verbs\index{verbs!finite}, so (\ref{ex:vpcompl}) and
 (\ref{ex:vpcompl2}) give general examples of the different complements of a
@@ -7560,8 +7566,8 @@ of, for instance, animacy\index{animacy} differences between the arguments. Exam
 \end{figure}
 
 In (\ref{ex:doubleobj}), the primary object/theme is \rayr{koyaasF}{koyās}, and the secondary object/re\-cip\-i\-ent is \rayr{diy}{Diya}. Functionally, the verb
-subcategorizes three arguments: a subject\index{grammatical function!subject}, an object\index{grammatical function!primary object}, and a secondary object\index{grammatical function!secondary object},
-where the object\index{grammatical function!primary object} expresses the recipient\index{semantic role!recipient} and the secondary object\index{grammatical function!secondary object} expresses the
+subcategorizes for three arguments: a subject\index{grammatical function!subject}, an object\index{grammatical function!primary object}, and a secondary object\index{grammatical function!secondary object},
+where the primary object\index{grammatical function!primary object} expresses the recipient\index{semantic role!recipient} and the secondary object\index{grammatical function!secondary object} expresses the
 theme\index{semantic role!theme}, as shown in (\ref{ex:doubleobjfstruct}). The graphic in
 (\ref{ex:ditranscase}) extends that in (\ref{ex:subject_nomacc}) to show how
 Ayeri maps case\index{case} to the complements of ditransitive verbs in relation to
@@ -7632,20 +7638,20 @@ Ayeri is an indirective language, thus.
 Essentially, Ayeri follows the same order of NPs\index{phrase types!noun phrase} as English in the construction
 where the recipient\index{semantic role!recipient} appears as a PP headed by \fw{to},
 except that it is not expressed as a PP, but as an NP/DP.
-The recipient\index{semantic role!recipient} is also not an adjunct\index{grammatical function!adjunct}, but an argument. That is, it
+Since the secondary object\index{grammatical function!secondary object} is is an argument of the verb, it
 is not possible to have multiple recipient\index{semantic role!recipient} NPs\index{phrase types!noun phrase} (unless one coordinates\index{coordination} them),
 just as it is not possible to have multiple patients\index{semantic role!patient}
 with transitive verbs\index{verbs!transitive}.
 
-Moreover, it is not possible to link either the theme\index{semantic role!theme}
+Moreover, it is not possible to join either the theme\index{semantic role!theme}
 and the recipient\index{semantic role!recipient}, or the recipient\index{semantic role!recipient} and an adjunct\index{grammatical function!adjunct} with \xayr{nj}{nay}
 {and}---only non-arguments can be coordinated\index{coordination} this way \citep[181]{carnie2013}.
 Patient\index{semantic role!patient}, recipient\index{semantic role!recipient}, and adjuncts\index{grammatical function!adjunct}, like 
 \xayr{krFdNFy}{kardangya}{at school} in (\ref{ex:doubleobj}), also cannot randomly switch
 places with each other. Both the patient\index{semantic role!patient} and the recipient\index{semantic role!recipient} must be complements
-of the verb together. The recipient\index{semantic role!recipient} is more readily expendable than the
+of the verb. The recipient\index{semantic role!recipient} is more readily expendable than the
 theme\index{semantic role!theme}, however. Example (\ref{ex:doubleobjcstruct}) attempts to chart
-this proposal as a c-structure tree. % \vfill
+this analysis as a c-structure tree. % \vfill
 
 \begin{figure}
 \ex\label{ex:doubleobjcstruct}
@@ -7691,9 +7697,9 @@ does not assume empty nodes to carry semantic or functional value, there is no
 are simply treated as \XCompl{}s,\index{grammatical function!open complement} that is, open complements\index{grammatical function!open complement}. These \XCompl{}s\index{grammatical function!open complement}
 are dependent on the superordinate verb for the subject\index{grammatical function!subject} function: control verbs
 share their semantic subject\index{grammatical function!subject} or object\index{grammatical function!primary object} with the semantic subject\index{grammatical function!subject} of 
-a(n infinite\index{verbs!infinite}) subordinate verb \citep[289\psqq]{bresnan2016}.
+a subordinate verb \citep[289\psqq]{bresnan2016}.
 % , also compare the English examples in (\ref{ex:engctrlstruct})
-Typical S-control verbs in Ayeri are
+Typical subject-control verbs in Ayeri are
 \xayr{Ep/}{epa-}{refuse},
 \xayr{liMk/}{linka-}{try},
 \xayr{no/}{no-}{plan},\footnote{This is the same stem as the modal particle 
@@ -7702,7 +7708,7 @@ Typical S-control verbs in Ayeri are
 \xayr{sr/}{sara-}{go}, and
 \xayr{vtYF/}{vac-}{like},\footnote{This verb also exists as a modal particle
 \rayr{vtY}{vaca} with the same meaning.}
-among others. On the other hand, typical O-control verbs are, for instance,
+among others. On the other hand, typical object-control verbs are, for instance,
 \xayr{glmF/}{galam-}{expect},
 \xayr{kilisF/}{kilis-}{allow},
 \xayr{nelF/}{nel-}{help},
@@ -7711,15 +7717,16 @@ among others. On the other hand, typical O-control verbs are, for instance,
 \xayr{tonisF/}{tonis-}{convince}. Examples of the c- and f-structure of control
 verbs in Ayeri are provided in (\ref{ex:ctrlstruct}).
 
-Topicalization\index{grammatical function!topic} of NPs\index{phrase types!noun phrase} in subordinate VPs by matrix verbs is not possible in
-Ayeri if the subordinate verb stands in between\index{word order} the matrix verb and the
-subordinate verb's arguments. Thus, the \xayr{nyiNsF}{nayingas}{roof} in both
-(\ref{ex:ctrlstruct}ab) cannot be the topic\index{grammatical function!topic} of the verb in the respective
-matrix clauses, \xayr{liMky}{linkaya}{(he) tries} and
-\xayr{nelFye}{nelye}{(she) helps}. Since topicalization\index{grammatical function!topic} does not apply to
+Topicalization\index{grammatical function!topic} of subordinate VPs' arguments
+by matrix verbs is not possible if the subordinate verb stands in
+between\index{word order} the matrix verb's subject NP and its own arguments.
+Thus, the \xayr{nyiNsF}{nayingas}{roof} in both (\ref{ex:ctrlstruct}ab) cannot
+be the topic\index{grammatical function!topic} of the verb in the respective
+matrix clauses, \xayr{liMky}{linkaya}{(he) tries} and \xayr{nelFye}{nelye}{(she)
+helps}. Since topicalization\index{grammatical function!topic} does not apply to
 infinite verbs\index{verbs!infinite}, the subordinate verb in both sentences,
-\xayr{sidegYmF}{sidejam}{repairing}, cannot be marked for topic\index{grammatical function!topic} within its own
-f-structure core either.
+\xayr{sidegYmF}{sidejam}{repairing}, cannot be marked for
+topic\index{grammatical function!topic} within its own f-structure core either.
 
 % \begin{figure}
 % \pex\label{ex:engctrlstruct}
@@ -7978,21 +7985,26 @@ $f$: \[
 \xe
 \end{figure}
 
-Furthermore, the process which places the matrix verb in \xhead{I} seems to be
-applicable as well to the subordinate verb if this leads to no doubling of
-semantic roles in the linear order of constituents in the clause. That is,
-there must not be two patient\index{semantic role!patient} arguments after the verb, even if they are part
-of different f-structures. This means that fronting\index{word order} the verb as possibly a
-complement of \xhead{I} in order to be able to topicalize\index{grammatical function!topic} NPs\index{phrase types!noun phrase} subcategorized by
-the subordinate verb in (\ref{ex:ctrlstruct_1}) is possible, while it is not in
-(\ref{ex:ctrlstruct_2}). Example (\ref{ex:ctrlinc}) subsequently illustrates
-the raising\index{verbs!raising} of a subordinate verb. The topic\index{grammatical function!topic} particle, as usual, appears as a
-proclitic\index{clitics} before the verb, which here encodes an inanimate patient topic,
-referring to an argument of the subordinate verb, \xayr{nyiNF}{naying}{roof}.
-In order to adress the \Top{} function of the matrix verb in this case, we have
-to use inside-out functional uncertainty and annotate the topicalized\index{grammatical function!topic} NP\index{phrase types!noun phrase} with
-\uncertain{\XCompl}{\Top}~=~↓ to signal that \Top{} is an attribute of the
-f-structure containing \XCompl{}\index{grammatical function!open complement}. This is an extension to the rules stated in
+The rule by which the subordinate verb appears as a sister of \xhead{I} seems to
+resemble that which places the matrix verb in \xhead{I}. However, there is the
+restriction that subordinate verbs can only be fronted if this does not result
+in duplicates of semantic roles in the linear order of constituents in the
+clause. That is, there must not be two patient\index{semantic role!patient}
+arguments after the verb, even if they are part of different f-structures. This
+means that fronting\index{word order} the verb in order to be able to
+topicalize\index{grammatical function!topic} NPs\index{phrase types!noun phrase}
+subcategorized for by the subordinate verb in (\ref{ex:ctrlstruct_1}) is
+possible, while it is not in (\ref{ex:ctrlstruct_2}). Example (\ref{ex:ctrlinc})
+illustrates the successful fronting of a subordinate verb. The
+topic\index{grammatical function!topic} particle, as usual, appears as a
+proclitic\index{clitics} before the verb, which here encodes an inanimate
+patient topic, referring to an argument of the subordinate verb,
+\xayr{nyiNF}{naying}{roof}. In order to address the \Top{} function of the
+matrix verb in this case, we have to use inside-out functional uncertainty and
+annotate the topicalized\index{grammatical function!topic} NP\index{phrase
+types!noun phrase} with \uncertain{\XCompl}{\Top}~=~↓ to signal that \Top{} is
+an attribute of the f-structure containing \XCompl{}\index{grammatical
+function!open complement}. This is an extension to the rules stated in
 (\ref{ex:topmorphlex}).
 
 \begin{figure}
@@ -8067,8 +8079,8 @@ f-structure containing \XCompl{}\index{grammatical function!open complement}. Th
 
 Raising verbs, like control verbs, are verbs which take a VP complement whose
 subject\index{grammatical function!subject} is shared with the subject\index{grammatical function!subject} or the object\index{grammatical function!primary object} of the matrix verb. They as
-well have already been dealt with briefly in \autoref{subsec:raising} with
-regards to questions of syntactic alignment. In contrast to control verbs, the
+well have already been dealt with before briefly in \autoref{subsec:raising} with
+regards to questions of syntactic alignment. Here, in contrast to control verbs, the
 syntactic subject\index{grammatical function!subject} of the matrix verb is not semantically an argument of it, but
 of the subordinate verb. The subject\index{grammatical function!subject} of the matrix verb may thus also be a
 dummy \fw{it} or \fw{there} in English. Ayeri seems to only have
@@ -8352,14 +8364,14 @@ condition being that no argument functions are doubled here as well. Again, the
 subordinate verb and the VP with its dependent NPs\index{phrase types!noun phrase} both have to be annotated
 \pass{\XCompl}, and the topicalized\index{grammatical function!topic} NP\index{phrase types!noun phrase} has to be marked with
 \uncertain{\XCompl}{\Top}~=~↓ in accordance with the position of the topic\index{grammatical function!topic}
-marker as adjoined to the left edge of the matrix verb's f-structure. Again,
+marker as adjoined to the left edge of the matrix verb's f-structure. Here as well,
 the subordinate verb is infinite\index{verbs!infinite} and thus cannot carry topic\index{grammatical function!topic} marking.
 
 An example of this is given in (\ref{ex:raiseinc}). Here, the VP which would
 normally carry the subordinate \xhead{V}, \xayr{vlYFymF}{valyyam}{enjoying}, is
 headless, just as the VP which would normally contain \xhead{I},
 \xayr{le surFpFy}{le surpya}{(he) seems}. The subordinate verb is instead found
-as a sister node to the matrix verb. However, both verbs' complements are
+as a sister node of the matrix verb. However, both verbs' complements are
 generated in their usual position: the VP complementing the matrix verb is a
 daughter of the VP sister of the subject NP\index{phrase types!noun phrase}, \rayr{ANF AgYaanF}{ang Ajān}. This
 VP, in turn, has an NP\index{phrase types!noun phrase} complement carrying the object of the subordinate verb,
@@ -8376,7 +8388,7 @@ function of the superior f-structure which specifies \XCompl{}\index{grammatical
 \label{subsec:expsitang}
 
 It has been mentioned before that \xayr{sitNF}{sitang}{self} can also be used
-as an expletive pronoun in such a way that quantifiers\index{quantifiers} can be attributed to
+as an expletive pronoun in such a way that quantifiers\index{quantifiers} can be attributed indirectly to
 subject\index{grammatical function!subject} pronouns which are realized as pronominal clitics\index{clitics}, compare 
 \autoref{subsec:reflrec} and \autoref{subsec:quantfloat}. The quantifier\index{quantifiers} cannot
 follow\index{word order} the pronominal clitic\index{clitics} directly due to the double function of many
@@ -8388,7 +8400,7 @@ as dummy pronouns, but these encode a third-person\index{person} reference (see
 pronouns\index{pronouns!personal} of persons\index{person} other than the third. Thus, \rayr{sitNF}{sitang} is used in
 this context as a dummy pronoun since ordinarily, it does not encode person\index{person},
 but reflexivity. It is hence neutral to person\index{person} features while still
-establishing an anaphoric relationship to its binder. It also gives the clitic\index{clitics}
+establishing an anaphoric relationship to its binder. It also gives a clitic\index{clitics} quantifier\index{quantifiers}
 something to lean on which is not the verb or an adverb.
 
 \begin{figure}
@@ -8466,7 +8478,7 @@ something to lean on which is not the verb or an adverb.
 In spite of \rayr{sitNF}{sitang} being used as a reflexivizing prefix\index{prefixes}
 otherwise, it has not been analyzed as adding \ups{\Refl{}}~=~$+$ to the
 \Subj{} function in (\ref{ex:expsitang}). This is because of its use as a dummy
-here; essentially, it adds no meaning besides establishing an anaphoric
+in this context; essentially, it adds no meaning besides establishing an anaphoric
 relationship which is marked in the example as an index $i$. Since it cannot be
 declined either, all person\index{person} features rest in the pronominal clitic\index{clitics}, \xayr{/nNF}
 {nang}{we}. Distributed exponence maps both the pronominal clitic's\index{clitics} semantic
@@ -8497,17 +8509,17 @@ comparison\index{comparison} verbs \xayr{km/}{kama-}{be as} \xayr{ENF/}{eng-}{be
 \xayr{v/}{va-}{be most}. Obviously, the comparison\index{comparison} verbs are related to the
 enclitics\index{clitics} described in \autoref{subsec:adjcomp}. By extension, the verb
 meaning `give', \rayr{IlF/}{il-}, can also be used to mean `be less'.
-Theoretically, there is also \xayr{verY/}{varya-}{be least},\footnote{From
+Theoretically, there is also \xayr{vrY/}{varya-}{be least},\footnote{From
 \xayr{v/}{va-}{be most} + \rayr{/ArY}{-arya} (categorial negation\index{negation}).} but that
 has never seen much practical use, and neither has \rayr{IlF/}{il-} in its
 negative comparative meaning.
 
-In order to express \fw{there is}, Ayeri uses \rayr{yom/}{yoma-} with a dummy
+In order to express `there is', Ayeri uses \rayr{yom/}{yoma-} with a dummy
 subject\index{grammatical function!subject} pronoun: \xayr{yomreNF}{yomareng}{there is/are}, which is a set
-expression---literally, `it exists'. That is, \rayr{yomreNF}{yomareng} is even
-used with plural\index{number!plural} complements, and can be inflected for the usual morphological
+expression---literally, `it exists'. \rayr{yomreNF}{yomareng} can be inflected for the usual morphological
 features of verbs, as shown in (\ref{ex:yomareng}), where the verb carries
-negation\index{negation}. Apart from this, \rayr{yom/}{yoma-} is usually used with locations\index{semantic role!location},
+negation\index{negation}. Notably, the entity said to exist is treated as its object rather than its subject.
+Apart from this, \rayr{yom/}{yoma-} is usually used with locations\index{semantic role!location},
 that is, it frequently comes with a locative\index{case!locative} complement to express that someone
 or something exists in relation to a place. Less formally, however, a copulaic\index{copula}
 construction may as well be used for these purposes, compare the examples in
@@ -8755,7 +8767,7 @@ of \ups{\Plink{} \Deg{}} and \ups{\Plink{} \Degdim{}}.\index{grammatical functio
 
 \a\adjustbox{valign=t}{%
 	\begin{tabu} {\usetabu{morphlex}}
-	\rayr{\larger verY/}{varya-}
+	\rayr{\larger vrY/}{varya-}
 		& I
 		& \begin{tabu}[t]{@{} l @{ } l @{ } X[l]}
 			\ups{\Pred} & = & \astruct{be-least}{\ups{\Subj} \ups{\Plink}} \\
@@ -8794,7 +8806,7 @@ thus, to generate the adjective\index{adjectives} as a complement of \xhead{I}.
 \begin{minipage}[t]{.45\remaining}
 %\vspace{1\baselineskip}
 \lapbox[\width]{-\exoffset}{%
-\begin{forest} shorter edges, italic leaves, for tree={s sep-=1.5em,s=0}
+\begin{forest} italic leaves, for tree={s sep-=1.5em,s=0}
 [IP
 	[\anno{\xbar{I}}
 		[\anno{\xhead{I}}
@@ -8875,18 +8887,19 @@ constructed as a copular clause\index{copular clause} while the comparison\index
 \a\label{ex:comppredn_1}\ljudge*%
 \begin{minipage}[t]{.5\remaining}
 \begingl
-	\gla Engya ban ang @ Apican karomayās sa @ Hiro. //
-	\glb eng-ya ban ang= Apican karomaya-as sa= Hiro //
-	\glc be.more-\TsgM{} good \Aarg{}= Apican doctor-\Parg{} \Parg{}= Hiro //
+	\gla Ang @ engya ban {} @ Apican karomayās sa @ Hiro. //
+	\glb ang= eng-ya ban Ø= Apican karomaya-as sa= Hiro //
+	\glc \AgtT{}= be.more-\TsgM{} good \Top{}= Apican doctor-\Parg{}
+		\Parg{}= Hiro //
 	\glft \textit{Intended:} `Apican is a better doctor than Hiro.' //
 \endgl
 \end{minipage}
 \hfill
-\begin{forest} shorter edges, italic leaves,
+\begin{forest} italic leaves,
 [IP
 	[\xbar{I}, narrower nodes,
 		[\xhead{I}
-			[Engya]
+			[{Ang engya}, roof]
 		]
 		[AP
 			[ban]
@@ -8894,7 +8907,7 @@ constructed as a copular clause\index{copular clause} while the comparison\index
 	]
 	[S
 		[NP
-			[{ang Apican}, roof]
+			[Apican]
 		]
 		[VP
 			[NP, narrower nodes,
@@ -8916,14 +8929,14 @@ constructed as a copular clause\index{copular clause} while the comparison\index
 \begin{minipage}[t]{.5\remaining}
 \begingl
 	\gla Ang @ Apican karomayās si ang @ engya ban sa @ Hiro. //
-	\glb ang= Apican karomaya-as si ang= eng-ya.Ø ban sa= Hiro //
+	\glb ang= Apican karomaya-as si ang= eng=ya.Ø ban sa= Hiro //
 	\glc \Aarg{}= Apican doctor-\Parg{} \Rel{} \AgtT{}= be.more=\TsgM{}.\Top{}
 		good \Parg{}= Hiro //
 	\glft `Apican is a doctor who is better than Hiro.' //
 \endgl
 \end{minipage}
 \hfill
-\begin{forest} shorter edges, italic leaves,
+\begin{forest} italic leaves, narrower nodes,
 [S
 	[{\anno[\pass{\Subj}]{NP}}
 		[{Ang Apican}, roof]
@@ -9264,7 +9277,7 @@ verb with reference to one of the verb's arguments. Ayeri makes no formal
 distinction between adjectives and adverbs, but context should clarify under
 normal circumstances. An example of depictive secondary predicates in Ayeri is
 given in (\ref{ex:depict}). In (\ref{ex:depict_subj}), there is only a subject\index{grammatical function!subject},
-\rayr{gd}{Gada} to be described by the adjective, \xayr{pisu}{pisu}{tired}. In
+\rayr{gd}{Gada}, to be described by the adjective, \xayr{pisu}{pisu}{tired}. In
 (\ref{ex:depict_obj}), the adjective, \xayr{tuvo}{tuvo}{red} (here in the
 meaning `raw') can describe either the subject\index{grammatical function!subject} or the object\index{grammatical function!primary object}, but semantically,
 it makes most sense for it to refer to the object\index{grammatical function!primary object}, \xayr{InunF}{inun}{fish}. It
@@ -9735,7 +9748,7 @@ status of the subject\index{grammatical function!subject} as corresponding to th
 is more apparent here: unlike with unaccusative verbs, Ayeri retains the
 patient case\index{case!patient} marking for subjects\index{grammatical function!subject} of passive\index{voice!passive} verbs. The [–\,r] marking on the
 passive\index{voice!passive} subject\index{grammatical function!subject} refers to its role in the argument structure as thematically
-unrestricted \citep[324--348]{bresnan2016}.
+unrestricted \citep[324--348]{bresnan2016}; compare \autoref{subsec:comptr}.
 
 \begin{figure}
 \pex\label{ex:resitrns}
@@ -9961,7 +9974,7 @@ The verbs in (\ref{ex:comptr}a--d) permit a locative argument;
 (\ref{ex:comptr_4}) may also take an argument in the genitive to express the
 theme, that is, what is talked about; and (\ref{ex:comptr_5}) may indicate a
 tool or material as an instrument. The difficulty lies in the fact that
-\textcquote[405] {needhamtoivonen2011}{Time and place expressions [...]\ can be
+\textcquote[405]{needhamtoivonen2011}{[t]ime and place expressions [...]\ can be
 added to the description of any event; they are not tied to specific verb
 classes}. On the other hand, they are more central to the argument structure of
 certain verbs than others. \citet{needhamtoivonen2011} also caution that there
@@ -10124,9 +10137,10 @@ The following list discusses the verbs specified for testing in
 \citet{needhamtoivonen2011} state that \textcquote[405]{needhamtoivonen2011}
 {[t]he more semantically contentful the preposition is in the PP accompanying a
 certain verb, the more likely it is to mark an adjunct}. All of the verbs in
-(\ref{ex:comptr}) which can take PPs---specifically (\ref{ex:comptr}a--c)---do
-not require a certain adposition for the locational argument. The prepositions
-or locative marking are thus semantically contentful, while case marking for
+(\ref{ex:comptr}) which can take PPs---specifically \rayr{sr/}{sara-},
+\rayr{mitF/}{mit-}, and \rayr{tpYF/}{tapy-}---do not require a certain
+adposition for the locational argument. The prepositions or locative marking are
+thus semantically contentful, while case marking for
 \xayr{nr/}{nara-}{speak} and \xayr{tiy/}{tiya-}{make} in (\ref{ex:comptr}de) is
 less so.
 
@@ -10192,7 +10206,7 @@ zeugmatic expression at best.
 \a\label{ex:multiplace_5_1}%
 \begingl
 	\gla Ang @ vengaye yās lampyanya nay ranya. //
-	\glb ang= venga-ye.Ø yās lampyan-ya nay ran-ya //
+	\glb ang= venga=ye.Ø yās lampyan-ya nay ran-ya //
 	\glc \AgtT{}= kiss=\TsgF{}.Ø \TsgM{}.\Parg{} park-\Loc{} and home-\Loc{} //
 	\glft `She kissed him in the park and at home.' //
 \endgl
@@ -10200,7 +10214,7 @@ zeugmatic expression at best.
 \a\label{ex:multiplace_5_2}%
 \begingl
 	\gla Ang @ vengaye yās bantaya \textup{(\excl{}}nay\textup{)} ranya. //
-	\glb ang= venga-ye.Ø yās banta-ya nay ran-ya //
+	\glb ang= venga=ye.Ø yās banta-ya nay ran-ya //
 	\glc \AgtT{}= kiss=\TsgF{}.Ø \TsgM{}.\Parg{} mouth-\Loc{} and 
 		home-\Loc{}	//
 	\glft `She kissed him on the mouth (\excl{}and) at home.' //
@@ -10267,7 +10281,7 @@ The VP anaphora test is another standard test for determining the status of a
 verb's argument, based on the idea that
 \textcquote[407]{needhamtoivonen2011}{adjuncts may be added to \enquote{do so}
 clauses, but arguments may not}. Example (\ref{ex:dosovalid}) gives a valid
-example of such coordination\index{coordination} where both adverbials clearly are adjuncts\index{grammatical function!adjunct}. As
+instance of such coordination\index{coordination} where both adverbials clearly are adjuncts\index{grammatical function!adjunct}. As
 (\ref{ex:compltrdoso}) shows, Ayeri does not permit to place the additional
 arguments of the respective verbs in the `do so' part as though they were
 adjuncts\index{grammatical function!adjunct}. This means that even though they are optional, they behave like
@@ -10302,7 +10316,7 @@ arguments for the purpose of this test.
 	\glb ya= mit=yang Ø= Litoming nay ya= da=mira=yāng Ø= Vangareng //
 	\glc \LocT{}= live=\Fsg{}.\Aarg{} \Top{}= Litoming and \LocT{}=
 		so=do=\TsgM{}.\Aarg{} \Top{}= Vangareng //
-	\glft `*I live in Litoming and he does so in Vangareng.'//
+	\glft `\ques{}I live in Litoming and he does so in Vangareng.'//
 \endgl
 
 \a\label{ex:compltrdoso_3}%
@@ -10318,14 +10332,14 @@ arguments for the purpose of this test.
 
 \a\label{ex:compltrdoso_4}%
 \ljudge*\begingl
-	\gla Na @ naraya ang @ Sān yās vaham nay na @ da-miraya ang @ Bihān yes
+	\gla Na @ naraya ang @ Sān yā vaham nay na @ da-miraya ang @ Bihān yea
 		kimay. //
-	\glb na= nara-ya ang= Sān yās vaham-Ø nay na= da=mira-ya ang= Bihān yes
+	\glb na= nara-ya ang= Sān yā vaham-Ø nay na= da=mira-ya ang= Bihān yea
 		kimay-Ø //
-	\glc \GenT{}= speak-\TsgM{} \Aarg{}= Sān \Fsg{}.\Parg{} party-\Top{}
-		and \GenT{}= so=do-\TsgM{} \Aarg{}= Bihān \TsgF{}.\Parg{}
+	\glc \GenT{}= speak-\TsgM{} \Aarg{}= Sān \Fsg{}.\Loc{} party-\Top{}
+		and \GenT{}= so=do-\TsgM{} \Aarg{}= Bihān \TsgF{}.\Loc{}
 		baby-\Top{} //
-	\glft `Sān talks to me about the party and Bihān does so to her about the
+	\glft `\ques{}Sān talks to me about the party and Bihān does so to her about the
 		baby.'//
 \endgl
 
@@ -10335,7 +10349,7 @@ arguments for the purpose of this test.
 	\glb Ri= tiya=nang limu-ye-ley sapa-Ø nay ri= da=mira=tang gada-Ø //
 	\glc \InsT{}= make=\Fpl{}.\Aarg{} shirt-\Pl{}-\PargI{} wool-\Top{} and
 		\InsT{}= so=do=\TplM{}.\Aarg{} gada-\Top{} //
-	\glft `We make shirts from wool and they do so from silk.' //
+	\glft `\ques{}We make shirts from wool and they do so from silk.' //
 \endgl
 
 \xe
@@ -10596,19 +10610,19 @@ Moves with V\tsup{\cnum 0}
 
 For \xayr{sr/}{sara-}{go}, the direction or destination of going expressed by a
 PP is part of the verb's semantics, so it is core information, which makes it
-potentially a complement. However, like an adjunct, it appears optionally.
-As with typical adjuncts, \xhead{P} provides contentful information about
-the location and is not fixed. It is hard to construct a sentence where
-multiple locations can be interpreted as adding incidental information about
-the action. I thus decided to cautiously rule out iterability of the PP for
-this verb---another trait typical of complements. Furthermore, the PP is
-captured by the \fw{do-so} test, which is also typical of complements. Like a
-typical complement, the PP also has to move with its
-\xhead{V} in a pseudocleft structure. Unlike a typical complement, however, a
-question word relating to the PP is conjoinable with the question word for
-another adverbial expressing a different function. Just going by numbers of
-tests passed, the score for this verb is a tie between typical traits of
-complements and typical traits of adjuncts.
+potentially a complement. However, like an adjunct, it appears optionally. As
+with typical adjuncts, \xhead{P} provides contentful information about the
+location and is not fixed. It is hard to construct a sentence where multiple
+locations can be interpreted as adding incidental information about the action.
+I thus decided to cautiously rule out iterability of the PP for this
+verb---another trait typical of complements. Furthermore, the PP is captured by
+the \fw{do-so} test, which is typical of them as well. Like a typical
+complement, the PP also has to move with its \xhead{V} in a pseudocleft
+structure. Unlike a typical complement, however, a question word relating to the
+PP is conjoinable with the question word for another adverbial expressing a
+different function. Just going by numbers of tests passed, the score for this
+verb is a tie between typical traits of complements and typical traits of
+adjuncts.
 
 The case for both \xayr{mitF/}{mit-}{live} and \xayr{tpY/}{tapy-}{put} is
 similar, except that the PP is required in the way of a typical complement.
@@ -10747,7 +10761,7 @@ As noted initially, Ayeri permits transitive verbs to be detransitivized by
 making them passive. We have already seen how \Lfg{}\index{Lexical-functional grammar} handles passivization
 according to \citet{bresnan2016}. Example (\ref{ex:passzn_act}) shows a regular
 statement in active\index{voice!active} voice,\footnote{The topicalized\index{grammatical function!topic} argument is marked with an
-asterisk. This is non-standard, however.} (\ref{ex:passzn_pass}) shows the
+asterisk. This is non-standard, however.} Example (\ref{ex:passzn_pass}) shows the
 corresponding passive version of the sentence.
 
 \begin{figure}
@@ -11419,7 +11433,7 @@ German\index{German}, as mentioned above, works a little different from English\
 illustrated by the example sentences in (\ref{ex:gerditrpass}). In
 (\ref{ex:gerditrpass_act}), the agent is marked with the nominative case, the
 recipient with the dative case, and the theme with the accusative case. As in
-the English\index{English} example (\ref{ex:engditrpass_pass1}) above,
+the English\index{English} example (\ref{ex:engditrpass_pass1}),
 (\ref{ex:gerditrpass_pass1}) drops the agent. Passive voice is expressed by the
 auxiliary \fw{werden} `become' with the content verb appearing as a past
 participle. German\index{German} furthermore assigns the \Obj{} function to the theme and the
@@ -11608,7 +11622,7 @@ tell₂
 %
 	& %
 	& %
-	& \Obj*
+	& \SObj*
 	& \Subj
 	& %
 	\\
@@ -11741,7 +11755,7 @@ tell₂
 	& %
 	& %
 	& \Subj
-	& \Obj*
+	& \SObj*
 	& %
 	\\
 
@@ -11792,20 +11806,24 @@ having to resort to making radical structural changes, such as remodelling
 Ayeri as a secundative language.}
 
 According to \citet{bresnan2016}, \textcquote[339]{bresnan2016}{if we try to
-apply intransitivization to either the active ditransitive argument structure
-or the passive version, it will fail. Suppressions may apply only to unmarked
+apply intransitivization to either the active ditransitive argument structure or
+the passive version, it will fail. Suppressions may apply only to unmarked
 roles, i.e. those that are negatively specified}. The example sentences in
 (\ref{ex:intrnzn_act}) and (\ref{ex:intrnzn_pass}) accordingly try removing one
-of the objects in active voice\index{voice!active} (\ref{ex:intrnzn_act}) and in passive voice\index{voice!passive}
-(\ref{ex:intrnzn_pass}). Suppressing the recipient\index{semantic role!recipient} as a [+\,o] argument
-produces a grammatically correct result in spite of not being negatively
-specified; suppressing the theme as a \mbox{[–\,r]} argument yields a
-`questionable' and an ungrammatical result, respectively, in
-(\ref{ex:intrnzn_act_1}) and (\ref{ex:intrnzn_pass_1}). The sentence in
-(\ref{ex:intrnzn_act_1}) is not quite grammatical only in that the statement
-cannot be without context. If read as elliptical, it becomes acceptable. The
-ungrammatical example in (\ref{ex:intrnzn_pass_1}) is due to the rule against
-recipient\index{semantic role!recipient} subjects\index{grammatical function!subject}.
+of the objects in active voice\index{voice!active} (\ref{ex:intrnzn_act}) and in
+passive voice\index{voice!passive} (\ref{ex:intrnzn_pass}). Suppressing the
+recipient\index{semantic role!recipient} as a [+\,o] argument produces a
+grammatically correct result in spite of not being negatively
+specified;\footnote{This looks like a case of unspecified object deletion,
+though \citet{bresnan2016} also notes that this typically applies to patients
+and themes, with no mention of recipients \citep[333]{bresnan2016}.}
+suppressing the theme as a \mbox{[–\,r]} argument yields a `questionable' and an
+ungrammatical result, respectively, in (\ref{ex:intrnzn_act_1}) and
+(\ref{ex:intrnzn_pass_1}). The sentence in (\ref{ex:intrnzn_act_1}) is not quite
+grammatical only in that the statement cannot be without context. If read as
+elliptical, it becomes acceptable. The ungrammatical example in
+(\ref{ex:intrnzn_pass_1}) is due to the rule against recipient\index{semantic
+role!recipient} subjects\index{grammatical function!subject}.
 
 \begin{figure}
 \pex\label{ex:intrnzn_act}
@@ -12068,7 +12086,7 @@ passive voice. \citet{bresnan2016} give the a-structure for English
 appear in passive voice. As we have seen before, \rayr{surFpF/}{surp-}, like
 its English\index{English} counterpart, assigns \Subj{} to an external argument. That is, the
 syntactic subject\index{grammatical function!subject} of \fw{seem} is not its logical subject\index{grammatical function!subject}, hence this argument
-is given as [–\,r] instead of [–\,o]. This annotation is instead chosen for the
+is given as [–\,r] instead of [–\,o]. The \mbox{[–\,o]} annotation is instead chosen for the
 experiencer\index{semantic role!experiencer} as an oblique\index{grammatical function!oblique} function, which is realized in English\index{English} as a PP, and
 as a dative\index{case!dative} NP\index{phrase types!noun phrase} in Ayeri. Since open complements\index{grammatical function!open complement} (labeled \textsc{proposition} here)
 are an `other' function as well, they also receive [–\,o] annotation.
@@ -12113,8 +12131,8 @@ seem
 
 It makes no sense in English to put \fw{seem} into the passive voice with the
 experiencer becoming the subject (*\fw{I am seemed}). Since Ayeri does not
-permit dative\index{case!dative} NPs\index{phrase types!noun phrase} to be subjects\index{grammatical function!subject} of passive verbs, this is not possible in
-Ayeri either. The question is, however, whether it is possible to passivize the
+permit dative\index{case!dative} NPs\index{phrase types!noun phrase} to be subjects\index{grammatical function!subject} of passive verbs, this is not possible 
+there either. The question is, however, whether it is possible to passivize the
 subordinate verb in order to raise its passive subject\index{grammatical function!subject}. An attempt to construct
 such a statement is given in (\ref{ex:passraise}).
 
@@ -12233,7 +12251,7 @@ take₁
 
 %
 	& %
-	& \Subj
+	& \Subj*
 	& \Obj
 	& \Oblq{src}
 	& %
@@ -12294,7 +12312,7 @@ take₂
 	& %
 	& %
 	& \Obj
-	& \Subj
+	& \Subj*
 	& %
 	\\
 
@@ -12398,7 +12416,7 @@ added to the a-structure of a verb. The agent\index{semantic role!agent} remains
 \thetaroof{}, and is not demoted to an object\index{grammatical function!primary object} or oblique\index{grammatical function!oblique} function, and neither
 is the patient\index{semantic role!patient} demoted to a secondary object\index{grammatical function!secondary object}. Ayeri instead topicalize\index{grammatical function!topic}s causers\index{semantic role!causer}
 to express the sense of `Z makes X \textsc{verb} Y'. An example is provided
-by (\ref{ex:causstruct}).
+in (\ref{ex:causstruct}).
 
 \begin{figure}
 \setlength{\tabcolsep}{.5ex}
