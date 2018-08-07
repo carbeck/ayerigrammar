@@ -12584,6 +12584,17 @@ clause. Most notably, these are complement clauses and relative clauses.
 Another common type of dependent clause is the conditional clause. As before,
 this section will describe their structure and function.
 
+As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
+CP is formed by a conjunction\index{conjunctions}, \xhead{C}, which also can be
+empty and is indeed so for some basic purposes in Ayeri. At least in Ayeri,
+conjunctions\index{conjunctions} cannot be modified, so neither phrase-structure diagram includes a
+\xbar{C} to attach an adjunct\index{grammatical function!adjunct} to. The complement of a \xhead{C} is formed by a
+verbal phrase type---IP\index{phrase types!inflectional phrase} or VP\index{phrase types!verb phrase}, but also plain S\index{phrase types!small clause} in the case of a copular clause\index{copular clause}.
+This means that the complement clause may be finite\index{verbs!finite} or infinite\index{verbs!infinite}. The CP itself
+may fulfill different grammatical functions: it may be a closed complement\index{grammatical function!closed complement} when
+it acts as a complement clause, as well as adjunct\index{grammatical function!adjunct} when it acts as a relative
+clause.
+
 \begin{figure}
 \ex\label{ex:cpstruct}%
 CP → \anno*{\xhead{C}} \anno*{XP}
@@ -12603,16 +12614,15 @@ CP → \anno*{\xhead{C}} \anno*{XP}
 \xe
 \end{figure}
 
-As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
-CP is formed by a conjunction\index{conjunctions}, \xhead{C}, which also can be
-empty and is indeed so for some basic purposes in Ayeri. At least in Ayeri,
-conjunctions\index{conjunctions} cannot be modified, so neither phrase-structure diagram includes a
-\xbar{C} to attach an adjunct\index{grammatical function!adjunct} to. The complement of a \xhead{C} is formed by a
-verbal phrase type---IP\index{phrase types!inflectional phrase} or VP\index{phrase types!verb phrase}, but also plain S\index{phrase types!small clause} in the case of a copular clause\index{copular clause}.
-This means that the complement clause may be finite\index{verbs!finite} or infinite\index{verbs!infinite}. The CP itself
-may fulfill different grammatical functions: it may be a closed complement\index{grammatical function!closed complement} when
-it acts as a complement clause, as well as adjunct\index{grammatical function!adjunct} when it acts as a relative
-clause.
+Since conjunctions\index{conjunctions} do not inflect, the morpholexical specification in
+(\ref{ex:cmorphlex}) simply lists a \Conj{} feature which takes the conjunction\index{conjunctions}
+as a value, for instance, $and$, $or$, $if$, etc. Relativizers\index{pronouns!relative} form an
+exception to this rule, however, so about additional rules for relative pronouns,
+see below. Ayeri is rather sparse about different conjunction\index{conjunctions} types, however;
+compare \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The
+conjunction\index{conjunctions} corresponding to English \fw{that} is zero, so that simple
+complement clauses are simply juxtaposed. Examples of complement clauses are
+provided in (\ref{ex:complcls}).
 
 \begin{figure}
 \begin{morphlex}
@@ -12629,16 +12639,6 @@ clause.
 \xe
 \end{morphlex}
 \end{figure}
-
-Since conjunctions\index{conjunctions} do not inflect, the morpholexical specification in
-(\ref{ex:cmorphlex}) simply lists a \Conj{} feature which takes the conjunction\index{conjunctions}
-as a value, for instance, $and$, $or$, $if$, etc. Relativizers\index{pronouns!relative} form an
-exception to this rule, however, so about additional rules for relative pronouns,
-see below. Ayeri is rather sparse about different conjunction\index{conjunctions} types, however;
-compare \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The
-conjunction\index{conjunctions} corresponding to English \fw{that} is zero, so that simple
-complement clauses are simply juxtaposed. Examples of complement clauses are
-provided in (\ref{ex:complcls}).
 
 \begin{figure}
 \pex\label{ex:complcls}
@@ -12689,7 +12689,7 @@ provided in (\ref{ex:complcls}).
 \label{subsec:complcs}
 \index{complement clause|(}
 
-Complement clauses like those in (\ref{ex:complcls}a–c) are very commonly
+Complement clauses like those in (\ref{ex:complcls}a--c) are very commonly
 occurring clausal complements\index{complement clause} or adjuncts\index{grammatical function!adjunct} of verbs\index{verbs}. The respective c- and
 f-structures of the sentences in (\ref{ex:complcls_1}) and
 (\ref{ex:complcls_3}) are charted in (\ref{ex:fincclstruct}). Since
@@ -12913,6 +12913,15 @@ receives from an \emph{internal} predicator are realized by the \Case{} and
 \Anim{} features. Internal additional case\index{case} marking is limited to those
 grammatical functions which are not subject\index{grammatical function!subject} or object\index{grammatical function!primary object}.
 
+In example (\ref{ex:relc_si}), we see the plain relativizer\index{pronouns!relative} \rayr{si}{si} with
+no external or internal case\index{case} marking, since the relative clause is directly
+adjacent to its head and the relative pronoun has the role of a patient within
+the relative clause. The agent forms the secondary topic\index{grammatical function!topic} of the relative
+clause. Since we defined case\index{case} marking for the external head as an effect of
+agreement, the f-structure would not change if the relativizer were \rayr{ssF}
+{sas}, that is, marked for an animate-patient controller outside of the
+relative clause.
+
 \begin{figure}
 \ex\label{ex:relc_si}
 \begin{minipage}[t]{.5\remaining}
@@ -12998,14 +13007,14 @@ grammatical functions which are not subject\index{grammatical function!subject} 
 \xe
 \end{figure}
 
-In example (\ref{ex:relc_si}), we see the plain relativizer\index{pronouns!relative} \rayr{si}{si} with
-no external or internal case\index{case} marking, since the relative clause is directly
-adjacent to its head and the relative pronoun has the role of a patient within
-the relative clause. The agent forms the secondary topic\index{grammatical function!topic} of the relative
-clause. Since we defined case\index{case} marking for the external head as an effect of
-agreement, the f-structure would not change if the relativizer were \rayr{ssF}
-{sas}, that is, marked for an animate-patient controller outside of the
-relative clause.
+At first glance, the example in (\ref{ex:relc_siintcase}) is not much different
+from the previous one, however, the relativizer has been changed to
+\rayr{sinaa}{sinā} in order to mark that the controller of the relativizer is
+the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
+holds information about the relativizer\index{pronouns!relative} has gained a \Case{} feature with the
+attribute \Gen{} to reflect internal case\index{case} marking of the relativizer\index{pronouns!relative}.
+Essentially, the relative pronoun reflects the role of the internal grammatical
+function it links to as a topic\index{grammatical function!topic}.
 
 \begin{figure}
 \ex\label{ex:relc_siintcase}
@@ -13096,14 +13105,13 @@ relative clause.
 \xe
 \end{figure}
 
-At first glance, the example in (\ref{ex:relc_siintcase}) is not much different
-from the previous one, however, the relativizer has been changed to
-\rayr{sinaa}{sinā} in order to mark that the controller of the relativizer is
-the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
-holds information about the relativizer\index{pronouns!relative} has gained a \Case{} feature with the
-attribute \Gen{} to reflect internal case\index{case} marking of the relativizer\index{pronouns!relative}.
-Essentially, the relative pronoun reflects the role of the internal grammatical
-function it links to as a topic\index{grammatical function!topic}.
+It has been mentioned initially that complement clauses\index{complement clause} may also have S\index{phrase types!small clause}
+complements. This is the case with a copular clause\index{copular clause} complementing the relative
+pronoun, as in (\ref{ex:relc_cop}). Here, the relativizer\index{pronouns!relative} substitutes its
+external controller \xayr{koyaasF}{koyās}{book}, which is a patient form, as
+the copular clause's\index{copular clause} subject\index{grammatical function!subject} to which the quality \xayr{hginF}{hagin}{heavy} is
+attributed. Since there is no other NP which could be a secondary topic\index{grammatical function!topic}, the
+topic\index{grammatical function!topic} in (\ref{ex:relc_cop}) is not given as a list of attributes.
 
 \begin{figure}
 \ex\label{ex:relc_cop}
@@ -13166,13 +13174,18 @@ function it links to as a topic\index{grammatical function!topic}.
 \xe
 \end{figure}
 
-It has been mentioned initially that complement clauses\index{complement clause} may also have S\index{phrase types!small clause}
-complements. This is the case with a copular clause\index{copular clause} complementing the relative
-pronoun, as in (\ref{ex:relc_cop}). Here, the relativizer\index{pronouns!relative} substitutes its
-external controller \xayr{koyaasF}{koyās}{book}, which is a patient form, as
-the copular clause's\index{copular clause} subject\index{grammatical function!subject} to which the quality \xayr{hginF}{hagin}{heavy} is
-attributed. Since there is no other NP which could be a secondary topic\index{grammatical function!topic}, the
-topic\index{grammatical function!topic} in (\ref{ex:relc_cop}) is not given as a list of attributes.
+The example in (\ref{ex:relc_poss}) illustrates why it may be preferable to use
+a resumptive pronoun\index{pronouns!resumptive} in a relative clause. The relativizer's\index{pronouns!relative} controller is
+\xayr{AyonsF}{ayonas}{man}, which is a possessor\index{semantic role!possessor} in the relative clause. The
+position which the possessor\index{semantic role!possessor} would usually occupy is redundantly filled here
+with a resumptive pronoun\index{pronouns!resumptive} which appears as topicalized\index{grammatical function!topic}. As discussed
+previously, it is grammatical in Ayeri to make a possessor\index{semantic role!possessor} the topic\index{grammatical function!topic} of its
+superior f-structure, so a construction using \xayr{sinaa}{sinā}{whose} as in
+(\ref{ex:relc_siintcase}) should not be a problem. However, since genitive case\index{case!genitive}
+may mark both possessors\index{semantic role!possessor} and oblique\index{grammatical function!oblique} themes\index{semantic role!theme}, the construction
+with the resumptive pronoun\index{pronouns!resumptive} may be used to disambiguate\index{ambiguity} between reading
+someone's book and reading a book about someone. This distinction is
+obliterated by just using \rayr{sinaa}{sinā}.
 
 \begin{figure}
 \ex\label{ex:relc_poss}
@@ -13269,19 +13282,6 @@ topic\index{grammatical function!topic} in (\ref{ex:relc_cop}) is not given as a
 \end{forest}
 \xe
 \end{figure}
-
-The example in (\ref{ex:relc_poss}) illustrates why it may be preferable to use
-a resumptive pronoun\index{pronouns!resumptive} in a relative clause. The relativizer's\index{pronouns!relative} controller is
-\xayr{AyonsF}{ayonas}{man}, which is a possessor\index{semantic role!possessor} in the relative clause. The
-position which the possessor\index{semantic role!possessor} would usually occupy is redundantly filled here
-with a resumptive pronoun\index{pronouns!resumptive} which appears as topicalized\index{grammatical function!topic}. As discussed
-previously, it is grammatical in Ayeri to make a possessor\index{semantic role!possessor} the topic\index{grammatical function!topic} of its
-superior f-structure, so a construction using \xayr{sinaa}{sinā}{whose} as in
-(\ref{ex:relc_siintcase}) should not be a problem. However, since genitive case\index{case!genitive}
-may mark both possessors\index{semantic role!possessor} and oblique\index{grammatical function!oblique} themes\index{semantic role!theme}, the construction
-with the resumptive pronoun\index{pronouns!resumptive} may be used to disambiguate\index{ambiguity} between reading
-someone's book and reading a book about someone. This distinction is
-obliterated by just using \rayr{sinaa}{sinā}.
 
 All of the relative clauses exemplified here so far have been externally
 headed, however, English at least also allows headless relative clauses. These
@@ -13394,6 +13394,17 @@ dedicated conjunction\index{conjunctions} expressing `unless', however, it has \
 as a general-purpose negative conjunction\index{conjunctions}. It may also use negation\index{negation} as a
 morphological means to mark a negative condition.
 
+Example (\ref{ex:unlessnaarya}) displays the first strategy: the negative
+condition is indicated by the conjunction\index{conjunctions} \rayr{naarY}{nārya}. This conjunction\index{conjunctions}
+can mostly be translated as `but' in preverbal, clause-initial position. Here,
+however, it rather serves the purpose of `except' or `unless'. Example
+(\ref{ex:unlessneg}), on the other hand, is an extension to unintroduced
+conditional clauses as illustrated by (\ref{ex:condcs_3}). Here, the negative
+condition, \xayr{torojyaaNF}{toroyyāng}{(if) he is not sleeping}, is solely
+expressed by negation of the verb\index{negation} 
+and the juxtaposition of clauses. \rayr{bt}{bata} may also be used together
+with a verb in negative mood\index{mood!negative}.
+
 \begin{figure}
 \pex
 \a\label{ex:unlessnaarya}\begingl
@@ -13413,16 +13424,5 @@ morphological means to mark a negative condition.
 \endgl
 \xe
 \end{figure}
-
-Example (\ref{ex:unlessnaarya}) displays the first strategy: the negative
-condition is indicated by the conjunction\index{conjunctions} \rayr{naarY}{nārya}. This conjunction\index{conjunctions}
-can mostly be translated as `but' in preverbal, clause-initial position. Here,
-however, it rather serves the purpose of `except' or `unless'. Example
-(\ref{ex:unlessneg}), on the other hand, is an extension to unintroduced
-conditional clauses as illustrated by (\ref{ex:condcs_3}). Here, the negative
-condition, \xayr{torojyaaNF}{toroyyāng}{(if) he is not sleeping}, is solely
-expressed by negation of the verb\index{negation} 
-and the juxtaposition of clauses. \rayr{bt}{bata} may also be used together
-with a verb in negative mood\index{mood!negative}.
 
 \index{phrase types!complementizer phrase|)}
