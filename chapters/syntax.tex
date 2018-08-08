@@ -2013,9 +2013,9 @@ the f-structure and annotations in (\ref{ex:datuvoleyuncert}).
 		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `red' \\
-			\uncertain{\Obj{}}{\Pred} & = & `$pro$' \\
-			\uncertain{\Obj{}}{\Prontype} & = & $dem$ \\
-			\uncertain{\Obj{}}{\Case} & = & \Parg \\
+			\uncertain{\Adjc{}}{\Pred} & = & `$pro$' \\
+			\uncertain{\Adjc{}}{\Prontype} & = & $dem$ \\
+			\uncertain{\Adjc{}}{\Case} & = & \Parg \\
 			(\Obj{} \Adjc{}~↑) \\
 		\end{tabular}
 	\end{tabu}%
@@ -11823,7 +11823,7 @@ passive voice\index{voice!passive} (\ref{ex:intrnzn_pass}). Suppressing the
 recipient\index{semantic role!recipient} as a [+\,o] argument produces a
 grammatically correct result in spite of not being negatively
 specified;\footnote{This looks like a case of unspecified object deletion,
-though \citet{bresnan2016} notes that this typically applies to patients
+though \citet{bresnan2016} note that this typically applies to patients
 and themes, with no mention of recipients \citep[333]{bresnan2016}.}
 suppressing the theme as a \mbox{[–\,r]} argument yields a `questionable' and an
 ungrammatical result, respectively, in (\ref{ex:intrnzn_act_1}) and
@@ -12588,11 +12588,11 @@ As (\ref{ex:cpstruct}) and (\ref{ex:cpcstruct}) show, the head of a
 CP is formed by a conjunction\index{conjunctions}, \xhead{C}, which also can be
 empty and is indeed so for some basic purposes in Ayeri. At least in Ayeri,
 conjunctions\index{conjunctions} cannot be modified, so neither phrase-structure diagram includes a
-\xbar{C} to attach an adjunct\index{grammatical function!adjunct} to. The complement of a \xhead{C} is formed by a
+\xbar{C} to attach an adjunct\index{grammatical function!adjunct} to. The complement of \xhead{C} is formed by a
 verbal phrase type---IP\index{phrase types!inflectional phrase} or VP\index{phrase types!verb phrase}, but also plain S\index{phrase types!small clause} in the case of a copular clause\index{copular clause}.
 This means that the complement clause may be finite\index{verbs!finite} or infinite\index{verbs!infinite}. The CP itself
 may fulfill different grammatical functions: it may be a closed complement\index{grammatical function!closed complement} when
-it acts as a complement clause, as well as adjunct\index{grammatical function!adjunct} when it acts as a relative
+it acts as a complement clause, as well as an adjunct\index{grammatical function!adjunct} when it acts as a relative
 clause.
 
 \begin{figure}
@@ -12618,10 +12618,10 @@ Since conjunctions\index{conjunctions} do not inflect, the morpholexical specifi
 (\ref{ex:cmorphlex}) simply lists a \Conj{} feature which takes the conjunction\index{conjunctions}
 as a value, for instance, $and$, $or$, $if$, etc. Relativizers\index{pronouns!relative} form an
 exception to this rule, however, so about additional rules for relative pronouns,
-see below. Ayeri is rather sparse about different conjunction\index{conjunctions} types, however;
+see below. Ayeri is rather sparse about different conjunction\index{conjunctions} types,
 compare \autoref{subsubsec:conjadv} (p.~\pageref{subsubsec:conjadv}). The
 conjunction\index{conjunctions} corresponding to English \fw{that} is zero, so that simple
-complement clauses are simply juxtaposed. Examples of complement clauses are
+complement clauses are juxtaposed. Examples of complement clauses are
 provided in (\ref{ex:complcls}).
 
 \begin{figure}
@@ -12652,9 +12652,9 @@ provided in (\ref{ex:complcls}).
 
 \a\label{ex:complcls_2}\begingl
 	\glpreamble infinite complement clause: //
-	\gla Korontang briyyam simin. //
-	\glb koron=tang briy-yam simin //
-	\glc know=\TplM{}.\Aarg{} celebrate-\Ptcp{} how //
+	\gla Korontang briyyam. //
+	\glb koron=tang briy-yam //
+	\glc know=\TplM{}.\Aarg{} celebrate-\Ptcp{} //
 	\glft `They know how to celebrate.' //
 \endgl
 
@@ -12809,7 +12809,7 @@ construction is structurally and functionally different, as shown in
 subcategorized for by the verb in $f$; the predicator of the complement $g$,
 however, is an intransitive\index{verbs!intransitive} infinite\index{verbs!infinite} form and hence there is neither a
 subject\index{grammatical function!subject} nor an object\index{grammatical function!primary object}. The a-structure of the verb\index{verbs} is thus simply indicated as
-$null$ in this particular case. infinite verbs\index{verbs!infinite} are not precluded from having
+$null$ in this particular case. Infinite verbs\index{verbs!infinite} are not precluded from having
 arguments and adjuncts\index{grammatical function!adjunct} otherwise, compare \autoref{subsec:vps}.
 
 \begin{figure}
@@ -12826,9 +12826,6 @@ arguments and adjuncts\index{grammatical function!adjunct} otherwise, compare \a
 				[\anno{VP$_g$}
 					[\anno{\xhead{V}}
 						[briyyam]
-					]
-					[{\anno[\elem{\Adjc}]{DP}}
-						[simin]
 					]
 				]
 			]
@@ -12889,10 +12886,10 @@ given in (\ref{ex:relpromorphlex}).
 		  & \ups{\Pred} & = & `$pro$' \\
 		  & \ups{\Prontype} & = & $rel$\smallskip \\
 
-		( & \uncertain{\GF{} \Adjc}{\Case} & \req & \{\Aarg{}, \Parg{}, 
+		( & \uncertain{\Adjc}{\Case} & \req & \{\Aarg{}, \Parg{}, 
 			\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} & ) \\
-		( & \uncertain{\GF{} \Adjc}{\Anim} & \req & $\pm$ & ) \\
-		( & \ups{\GF{} \Adjc{}} & & & )\smallskip \\
+		( & \uncertain{\Adjc}{\Anim} & \req & $\pm$ & ) \\
+		( & (\GF{} \Adjc{}~↑) & & & )\smallskip \\
 		
 		( & \ups{\Case} & = & \{\Dat{}, \Gen{}, \Loc{}, \Ins{}, \Caus{}\} 
 			& ) \\
@@ -12953,7 +12950,7 @@ relative clause.
 				% \Num	&	\Sg \\
 				% \Anim	&	$+$ \\
 				% \Case	&	\Aarg \\
-				\avmspan{``I''} \\
+				\avmspan{\upshape{``I''}} \\
 			\] \tikzmark{relcsi_top2} \\
 		\} \\
 
@@ -13009,9 +13006,9 @@ relative clause.
 
 At first glance, the example in (\ref{ex:relc_siintcase}) is not much different
 from the previous one, however, the relativizer has been changed to
-\rayr{sinaa}{sinā} in order to mark that the controller of the relativizer is
-the \Oblq{theme} of the relative clause. Accordingly, the f-structure which
-holds information about the relativizer\index{pronouns!relative} has gained a \Case{} feature with the
+\rayr{sinaa}{sinā} to mark the controller of the relativizer as
+the relative clause's \Oblq{theme}. Accordingly, the f-structure holding
+information about the relativizer\index{pronouns!relative} has gained a \Case{} feature with the
 attribute \Gen{} to reflect internal case\index{case} marking of the relativizer\index{pronouns!relative}.
 Essentially, the relative pronoun reflects the role of the internal grammatical
 function it links to as a topic\index{grammatical function!topic}.
@@ -13027,7 +13024,7 @@ function it links to as a topic\index{grammatical function!topic}.
 	\glft `the book which I told you about' //
 \endgl
 \medskip
-\vspace{2em}
+\vspace{2.5em}
 \lapbox[\width]{-\exoffset}{%
 \begin{avm}
 \[
@@ -13049,7 +13046,7 @@ function it links to as a topic\index{grammatical function!topic}.
 				% \Num	&	\Sg \\
 				% \Anim	&	$+$ \\
 				% \Case	&	\Aarg \\
-				\avmspan{``I''} \\
+				\avmspan{\textup{``I''}} \\
 			\] \tikzmark{relcsiintcase_top2} \\
 		\} \\
 
@@ -13123,7 +13120,7 @@ topic\index{grammatical function!topic} in (\ref{ex:relc_cop}) is not given as a
 	\glft `the book which is heavy' //
 \endgl
 \medskip
-\vspace{2em}
+\vspace{2.5em}
 %\lapbox[\width]{-\exoffset}{%
 \begin{avm}
 \[
@@ -13178,14 +13175,14 @@ The example in (\ref{ex:relc_poss}) illustrates why it may be preferable to use
 a resumptive pronoun\index{pronouns!resumptive} in a relative clause. The relativizer's\index{pronouns!relative} controller is
 \xayr{AyonsF}{ayonas}{man}, which is a possessor\index{semantic role!possessor} in the relative clause. The
 position which the possessor\index{semantic role!possessor} would usually occupy is redundantly filled here
-with a resumptive pronoun\index{pronouns!resumptive} which appears as topicalized\index{grammatical function!topic}. As discussed
+with a resumptive pronoun\index{pronouns!resumptive} which is topicalized\index{grammatical function!topic}. As discussed
 previously, it is grammatical in Ayeri to make a possessor\index{semantic role!possessor} the topic\index{grammatical function!topic} of its
 superior f-structure, so a construction using \xayr{sinaa}{sinā}{whose} as in
 (\ref{ex:relc_siintcase}) should not be a problem. However, since genitive case\index{case!genitive}
 may mark both possessors\index{semantic role!possessor} and oblique\index{grammatical function!oblique} themes\index{semantic role!theme}, the construction
 with the resumptive pronoun\index{pronouns!resumptive} may be used to disambiguate\index{ambiguity} between reading
 someone's book and reading a book about someone. This distinction is
-obliterated by just using \rayr{sinaa}{sinā}.
+obliterated by using \rayr{sinaa}{sinā}.
 
 \begin{figure}
 \ex\label{ex:relc_poss}
@@ -13283,11 +13280,11 @@ obliterated by just using \rayr{sinaa}{sinā}.
 \xe
 \end{figure}
 
-All of the relative clauses exemplified here so far have been externally
+All of the relative clauses exemplified so far have been externally
 headed, however, English at least also allows headless relative clauses. These
 find use, for instance, in subject\index{grammatical function!subject} clauses, such as in \fw{What they found on
 the table was a bar of soap}, where \fw{What they found on the table} is a
-relative clause which has no nominal head which it modifies. Ayeri avoids this
+relative clause which has no nominal head to modify. Ayeri avoids this
 kind of construction and instead uses a generic noun or a dummy pronoun as a
 head instead, at least in more formal registers. An example with a headless
 relative clause is given in (\ref{ex:relcheadless}). The sentence in this
