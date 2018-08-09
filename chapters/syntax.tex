@@ -2423,13 +2423,15 @@ in (\ref{ex:sikanadj}), to query about it.
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
 \begin{forest} shorter edges, italic leaves, for tree={l=0},
-[NP
-	[\xbar{N}
-		[\xhead{N}
-			[nyānas]
-		]
-		[AP
-			[denisa]
+[DP
+	[NP
+		[\xbar{N}
+			[\xhead{N}
+				[nyānas]
+			]
+			[AP
+				[denisa]
+			]
 		]
 	]
 	[\xhead{D}
@@ -2486,13 +2488,15 @@ in (\ref{ex:sikanadj}), to query about it.
 \begin{tabu} to \linewidth [t] {@{} X[1] X[2]}
 
 \begin{forest} shorter edges, italic leaves, for tree={l=0},
-[NP
-	[\xbar{N}
-		[\xhead{N}
-			[yanoya]
-		]
-		[AP
-			[veno]
+[DP
+	[NP
+		[\xbar{N}
+			[\xhead{N}
+				[yanoya]
+			]
+			[AP
+				[veno]
+			]
 		]
 	]
 	[\xhead{D}
@@ -3082,10 +3086,13 @@ out that cross-linguistically there is a likelihood of semantic agreement to
 creep in, and that different constituents are differently affected by this, so
 that he arrives with the gradient described in (\ref{ex:agrhier})---the
 agreement hierarchy\index{hierarchy}.\footnote{\citet{wechslerzlatic2003} try to
-capture \posscite{corbett2006} agreement hierarchy in terms of constraints on the
-\Index{} (semantic) and \textsc{concord} (formal) features of NPs
-\citep[83--94]{wechslerzlatic2003}. A detailed survey on how Ayeri fares
-according to these categories has not been attempted yet.\index{desiderata}}
+capture \citeauthor{corbett2006}'s agreement hierarchy in terms of constraints
+on the \Index{} (semantic/referential) and \Concord{} (formal) features of
+NPs \parencites[83--94]{wechslerzlatic2003}[186--192]{bresnan2016}. Essentially,
+within an NP, \citet{wechslerzlatic2003} predict agreement according to
+\Concord{} while \Index{} or pragmatic agreement should be more common for
+anaphora beyond. A detailed survey on how Ayeri fares according to these
+categories has not been attempted yet.\index{desiderata}}
 
 \begin{figure}
 \ex\label{ex:agrhier}%
@@ -3102,7 +3109,7 @@ intervening decrease)}. That is, agreement of a target according to the
 syntactic features of its agreement controller becomes increasingly likely
 as we go from right to left, whereas agreement according to a controller's
 semantic features becomes increasingly likely as we go from left to right.
-\citet{fleischer2012} also finds that, at least with regards to agreement
+\citet{fleischer2012} finds that, at least with regards to agreement
 triggered by the German\index{German} lexical hybrid \fw{weib} `woman' as surveyed under a
 diachronic perspective, the distance between a controller and its target
 also plays some role in semantic agreement being triggered. This effect is also
@@ -3250,7 +3257,7 @@ functional uncertainty principle again here.
 		& D
 		& \begin{tabular}[t]{l l l}
 			\ups{\Pred} & = & `...' \\
-			\uncertain{\GF}{\Num} & = & \Pl \\
+			\uncertain{\Quant}{\Num} & = & \Pl \\
 			(\GF{} \Quant{} ↑) \\
 		\end{tabular}
 	\end{tabu}%
@@ -9206,17 +9213,21 @@ English examples of depictive adjectives were given in (\ref{ex:engsecpred}ab).
 Moreover, NPs can also be depictive predicates in English\index{English}, for instance in 
 \fw{John came out of the exam a nervous wreck}, where \fw{a nervous wreck}
 describes the state of John as he returns from the exam. According to
-\posscite{mueller2002} analysis, \textcquote[196]{mueller2002}{the subject\index{grammatical function!subject} of
+\posscite{mueller2002} analysis, \textcquote[196]{mueller2002}{the subject of
 the depictive secondary predicate is coindexed with an element of the argument
-structure of the primary predicate}. He suggests for \textsc{hpsg} \textquote{a
-lexical rule that recategorizes predicative adjectives and prepositions so that
-they can modify verbal elements} as a way to
-\textcquote[196]{mueller2002}{capture the adjunct\index{grammatical function!adjunct} properties of depictive
-secondary predicates}. I tried to cast this in (\ref{ex:depictfstruct}) as an
-f-structure in which the depictive secondary predicate is an adjunct\index{grammatical function!adjunct} of the
-verb. The anaphoric relationship between \Subj{} and the adjective is expressed
-by $i$ as an index which marks that they are co-indexed.
-% \footnote{Alternatively, one could maybe construct this as an f-structure
+structure of the primary predicate}.\footnote{According to
+\citet{wechslerzlatic2003}, as an adjunct, the depictive should inherit
+\xhead{N}'s \Concord{} rather than its \Index{} features if it showed agreement;
+I suppose we may still use $i$ to indicate restriction of the adjective to the
+noun it modifies.} He suggests for \textsc{hpsg} \textquote{a lexical rule that
+recategorizes predicative adjectives and prepositions so that they can modify
+verbal elements} as a way to \textcquote[196]{mueller2002}{capture the
+adjunct\index{grammatical function!adjunct} properties of depictive secondary
+predicates}. I tried to cast this in (\ref{ex:depictfstruct}) as an f-structure
+in which the depictive secondary predicate is an adjunct\index{grammatical
+function!adjunct} of the verb. The anaphoric relationship between \Subj{} and
+the adjective is expressed by $i$ as an index which marks that they are
+co-indexed.% \footnote{Alternatively, one could maybe construct this as an f-structure
 % embedded as an adjunct of the main verb. In this f-structure, the adjective
 % would be a \Plink{} complement of a \fw{null-be} predicate whose subject is
 % shared with an argument of the sentence's main verb. This would essentially
