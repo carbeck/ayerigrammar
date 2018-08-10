@@ -1,7 +1,7 @@
 A Grammar of Ayeri
 ==================
 
-This is a renewed effort, started in July 2016, to revise and to expand on earlier attempts of documenting Ayeri's grammar. A PDF of the [most recent version of the working draft](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf) is compiled regularly (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)). Ayeri is a fictional language (a "conlang") which I have been developing since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
+This is a renewed effort, started in July 2016, to revise and to expand on earlier attempts of documenting Ayeri's grammar. A *PDF of the [most recent version of the working draft](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)* is compiled regularly (see the [file's history](https://github.com/carbeck/ayerigrammar/commits/master/grammar.pdf)). Ayeri is a fictional language (a "conlang") which I have been developing since December 2003. Work on this project basically serves as a creative outlet to my ongoing interest in linguistics.
 
 I had been leaving the old grammar document ([PDF, January 2011](https://rawgit.com/carbeck/ayerigrammar/master/misc/ayeri_grammar_2011.pdf)) in a very sorry and unfinished state for over 5 years before finally returning to working on documentation, prompted by a [class on constructed languages](http://www.sfs.uni-tuebingen.de/~abuch/16ss/conlang.html) at the University of Tübingen in the summer semester of 2016 which used Ayeri as one of its objects of study. The work presented here is mostly a complete rewrite of the old grammar sketch from scratch, not merely an extension.
 
