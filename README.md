@@ -10,7 +10,7 @@ I hope that by using LaTeX and GitHub, the whole process of editing will be more
 Download
 ========
 
-[Download the most recent version](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
+[Download the most recent version in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
 
 Currently working on
 ====================
@@ -19,49 +19,9 @@ Currently working on
 
 * Proofreading the whole thing again (with additional support from [Greg Shuflin](https://github.com/neunenak) and [Joey Windsor](https://sites.google.com/view/joseph-windsor/))
 
-The [sections not currently worked on](https://github.com/carbeck/ayerigrammar#table-of-contents) have been proofread at least three times, by myself. They should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
+The document has been proofread at least three times, by myself. It should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
 
 I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Complete means that the finished manuscript contains information on the phonology, morphology and syntax of the language which provides a consistent description and analysis of the most frequently occurring structures and constructions of the language. The finished manuscript is also supposed to be on par with professional literature in both language and style with regards to good readability and accuracy of description.
-
-Roadmap
-=======
-
-* ask native English speakers to proofread?
-* look into print-on-demand options
-
-Table of Contents
-=================
-
-The table of contents encompasses the following topics so far; the LaTeX source files for each chapter are given in brackets.
-
-1. Phonology (`chapters/phonology.tex`)
-   1. Phoneme inventory
-   2. Phonotactics
-   3. Notes on prosody
-2. Writing system (`chapters/writing.tex`)
-3. Morphological typology (`chapters/morphtyp.tex`)
-4. Grammatical categories (`chapters/gramcat.tex`)
-   1. Nouns
-   2. Pronouns
-   3. Adjectives
-   4. Adpositions
-   5. Verbs
-   6. Adverbs
-   7. Numerals
-   8. Conjunctions
-5. Syntactic typology (`chapters/syntyp.tex`)
-   1. Lexical-functional grammar
-   2. Typological considerations
-   3. ‘Trigger languages’
-   4. Definition of terms
-   5. Tests on subjecthood
-   6. Establishing configurationality
-6. Phrase structures (`chapters/syntax.tex`)
-   1. Noun and determiner phrases
-   2. Adjective and adverb phrases
-   3. Prepositional phrases
-   4. Inflectional and verb phrases
-   5. Complementizer phrases
 
 Compiling
 =========
