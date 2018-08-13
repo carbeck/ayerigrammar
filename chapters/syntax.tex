@@ -2896,12 +2896,16 @@ gender, compare (\ref{ex:gramgend2}).
 \begin{forest}
 [{[\Gend{}]}
 	[{[\Anim{} $+$]}
-		[\M]
-		[\F]
-		[\N]
+		[{[\textsc{sexed} $+$]}
+			[\M, tier=end]
+			[\F, tier=end]
+		]
+		[{[\textsc{sexed} $-$]}
+			[\N, tier=end]
+		]
 	]
 	[{[\Anim{} $-$]}
-		[\Inan]
+		[\Inan, tier=end]
 	]
 ]
 \end{forest}
@@ -2918,7 +2922,7 @@ masculine\index{gender}, though not in all cases. The rules which operate are th
 
 \begin{enumerate}
 \item If the conjuncts are of the same grammatical gender, use that. No
-gender resolution is necessary, since the person\index{person} features of the conjuncts
+gender resolution is necessary, since the features of the conjuncts
 coincide.
 
 	\quad%
@@ -2929,20 +2933,20 @@ coincide.
 	\Inan{} & \Inan{} & \Inan{} \\
 	\end{tabular}
 
-\item If a conjunct referring to an animate\index{animacy} referent is present, use the
-masculine\index{gender} form as the default\index{default} for sexed entities; use neuter\index{gender} otherwise.
-Resolution to the animate\index{animacy} conjunct's gender more generally is also possible.
+\item If a conjunct referring to an animate\index{animacy} referent is present,
+use the masculine\index{gender} form as the default\index{default}. Resolution
+to the animate\index{animacy} conjunct's gender more generally is also possible.
 
 	\quad%
 	\begin{tabular}[t]{@{} c @{ \& } c @{ $\implies$ } c}
 	\M{} & \Inan{} & \M{} \\
 	\F{} & \Inan{} & \M{} $\lor$ \F{} \\
-	\N{} & \Inan{} & \N{} \\
+	\N{} & \Inan{} & \M{} $\lor$ \N{} \\
 	\end{tabular}
 
-\item For resolution of only animate\index{animacy} referents, again, use the masculine\index{gender} form
-as the default\index{default}. Resolution to the sexed conjunct's gender (\M{} and \F{} versus
-\N{}) is possible here as well.
+\item For resolution of only animate\index{animacy} referents, again, use the
+masculine\index{gender} form as the default\index{default}. Resolution to the
+sexed conjunct's gender (\M{} and \F{} versus \N{}) is possible here as well.
 
 	\quad%
 	\begin{tabular}[t]{@{} c @{ \& } c @{ $\implies$ } c}
@@ -2973,12 +2977,12 @@ moot.\footnote{\rayr{teNF}{teng} is used for both \TplF{}.\Aarg{} and
 % (mismatch between grammatical/syntactic apparent/semantic gender)
 % cf. Corbett (2006: 210--211, 213--218)
 
-While coordinated\index{coordination} NPs\index{phrase types!noun phrase} may be a very obvious case in which resolution occurs,
-there are even cases where simplex NPs\index{phrase types!noun phrase} trigger it. This is the case for lexical
-hybrids, for one. Hybrid nouns are nouns whose outward, morphological form
-encodes a gender different from the empirically observable gender of the
-denoted entity---there is a mismatch between form and meaning, grammatical and
-apparent gender.
+While coordinated\index{coordination} NPs\index{phrase types!noun phrase} may be
+a very obvious case in which resolution occurs, there are even cases where
+simplex NPs\index{phrase types!noun phrase} trigger it. This is the case for
+lexical hybrids, for one. Hybrid nouns are nouns whose outward, morphological
+form encodes a gender different from their empirically observable gender---there
+is a mismatch between form and meaning, grammatical and apparent gender.
 
 \citet{corbett2006} quotes the Russian\index{Russian} word {\FS врач}
 \fw{vrač} `(woman) doctor', which is masculine at the level of syntax, but can
@@ -2998,22 +3002,23 @@ distinguish grammatical gender, but for instance, \fw{child} may refer to
 both boys and girls, potentially triggering masculine \fw{he} or feminine
 \fw{she} rather than \fw{it} in anaphoric recourse.
 
-Ayeri's nouns are mainly distinguished by animacy\index{animacy}; masculine\index{gender} and feminine\index{gender} only
-plays a role for those nouns which refer to beings, such as humans, animals,
-and gods (compare \autoref{sec:nouns}). For \Gend{} there is no
-cross-categorization as such, however, there is for the \Anim{} feature. Thus,
-for instance, \xayr{subej} {subey}{slave} is listed in the dictionary as
+Ayeri's nouns are mainly distinguished by animacy\index{animacy};
+masculine\index{gender} and feminine\index{gender} only plays a role for those
+nouns which refer to beings (compare \autoref{sec:nouns}). For \Gend{} there is
+no cross-categorization as such, however, there is for the \Anim{} feature.
+Thus, for instance, \xayr{subej} {subey}{slave} is listed in the dictionary as
 inanimate\index{animacy} even though it denotes a person. Conversely,
 \xayr{mimaanF}{mimān}{opportunity}, \xayr{mYlFtnF} {myaltan}{debt},
 \xayr{ntFrN}{natranga}{temple}, \xayr{npkronF}{napakaron} {acid}, and
-\xayr{piyu}{piyu}{grain} are all listed as animate\index{animacy} in spite of not referring to
-beings, but to things, tangible or abstract. It may also be noted that it is a
-lot easier to find `miscategorized' semantic inanimates\index{animacy} than semantic animates\index{animacy}.
-However, as noted before, Ayeri is rather generous about what it allows to be
-categorized as animate\index{animacy}. Thus, not only beings count as animate\index{animacy}, but also things
-closely associated with living things, such as events, concepts, or activities
-executed or connected to them; likewise things giving some semblance of life
-by growing or moving are often animate\index{animacy}.
+\xayr{piyu}{piyu}{grain} are all listed as animate\index{animacy} in spite of
+not referring to beings, but to things, tangible or abstract. It may also be
+noted that it is a lot easier to find `miscategorized' semantic
+inanimates\index{animacy} than semantic animates\index{animacy}. However, as
+noted before, Ayeri is rather generous about what it allows to be categorized as
+animate\index{animacy}. Thus, not only beings count as animate\index{animacy},
+but also things closely associated with living things, such as events, concepts,
+or activities executed or connected to them; likewise things giving some
+semblance of life by growing or moving are often animate\index{animacy}.
 
 Of nouns referring to living beings of both sexes, there are \xayr{bjhi}{bayhi}
 {ruler}, \xayr{dplF}{dapal}{boss, chief, superior}, \xayr{gnF}{gan}{child},
@@ -3062,12 +3067,13 @@ preference for singular forms \citep[212--213]{corbett2006}. Other typical
 committee nouns in English are \fw{government}, \fw{team}, and \fw{family}.
 What these all have in common is that syntactically, they are singular forms,
 but semantically, they refer to a group of people. Examples of committee nouns
-in Ayeri are \xayr{bjhNF}{bayhang}{government}, \xayr{htj}{hatay}{police},
+in Ayeri are \xayr{bjhNF}{bayhang}{government}, % \xayr{htj}{hatay}{police},
 \xayr{kdNF}{kadang}{committee, coalition}, and \xayr{pMdh}{pandaha}{family}.
-For committee nouns in Ayeri, canonical agreement is singular\index{number!singular}, since the body
-denoted by the word as such is taken as the unit of reference. This is
-illustrated by (\ref{ex:ayrcommitteenoun}). The canonical gender\index{gender} of the words
-is thus also animate\index{animacy} neuter\index{gender}.
+For committee nouns in Ayeri, canonical agreement is
+singular\index{number!singular}, since the body denoted by the word as such is
+taken as the unit of reference. This is illustrated by
+(\ref{ex:ayrcommitteenoun}). The canonical gender\index{gender} of the words is
+thus also animate\index{animacy} neuter\index{gender}.
 
 \begin{figure}
 \ex\label{ex:ayrcommitteenoun}\begingl
