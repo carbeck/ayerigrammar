@@ -10,7 +10,7 @@ I hope that by using LaTeX and GitHub, the whole process of editing will be more
 Download
 ========
 
-[Download the most recent version in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
+[Download the most recent draft in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
 
 Currently working on
 ====================
@@ -18,6 +18,8 @@ Currently working on
 **WARNING**: This is work in progress! Currently working on:
 
 * Proofreading the whole thing again (with additional support from [Greg Shuflin](https://github.com/neunenak) and [Joey Windsor](https://sites.google.com/view/joseph-windsor/))
+* NPs and APs probably need to be reanalyzed slightly, [read why and how on Conlang-L](https://listserv.brown.edu/archives/cgi-bin/wa?A2=CONLANG;4e999f88.1808b)
+* I recently updated to TeXLive 2018 and now some of my LaTeX code is broken (notably, `\tikzmark` does not work in `forest` anymore)
 
 The document has been proofread at least three times, by myself. It should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
 
