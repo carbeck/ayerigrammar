@@ -107,8 +107,8 @@ constituent (c-)structure:
 & \begin{forest} baseline, shorter edges,
 [\xbar{V}
 	[\subnode{V}{V}]
-	[NP \tikzmark{NP}
-		[\xbar{N} \tikzmark{Nbar}]
+	[NP \mysn{NP}
+		[\xbar{N} \mysn{Nbar}]
 	]
 ]
 \end{forest}
@@ -433,15 +433,15 @@ structure for Celtic languages.
 \hfill
 \begin{forest} shorter edges,
 [IP
-	[\anno{\tikzmark{welshcstruct_IP} I}
-		[{\tikzmark{welshcstruct_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	[\anno{\mysn{welshcstruct_IP} I}
+		[{\mysn{welshcstruct_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
 	]
 	[\anno{S}
-		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct_S} NP}}
+		[{\anno[\pass{\Subj}]{\mysn{welshcstruct_S} NP}}
 			[{\textit{Siôn}\\ `John'}]
 		]
-		[\anno{\tikzmark{welshcstruct_VP} VP}
-			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct_O} NP}}
+		[\anno{\mysn{welshcstruct_VP} VP}
+			[{\anno[\pass{\Obj}]{\mysn{welshcstruct_O} NP}}
 				[{\textit{ddraig}\\ `dragon'}]
 			]
 		]
@@ -927,20 +927,20 @@ by the argument structure of the verb.
 
 \begin{forest}
 [IP
-	[{NP~\tikzmark{warlastruct_ERGNP1}}
+	[{NP~\mysn{warlastruct_ERGNP1}}
 		[{...-\Erg{}}, roof]
 	]
 	[\xbar{I}
 		[I, minimum width=5em]
 		[S, minimum width=5em
-			[{\tikzmark{warlastruct_V}~V}]
-			[{NP~\tikzmark{warlastruct_ABSNP1}}
+			[{\mysn{warlastruct_V}~V}]
+			[{NP~\mysn{warlastruct_ABSNP1}}
 				[{...-\Abs{}}, roof]
 			]
-			[{NP~\tikzmark{warlastruct_ERGNP2}}
+			[{NP~\mysn{warlastruct_ERGNP2}}
 				[{...-\Erg{}}, roof]
 			]
-			[{NP~\tikzmark{warlastruct_ABSNP2}}
+			[{NP~\mysn{warlastruct_ABSNP2}}
 				[{...-\Abs{}}, roof]
 			]
 		]

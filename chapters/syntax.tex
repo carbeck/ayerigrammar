@@ -2141,8 +2141,8 @@ English \citep[406]{dalrymple2001}:
 \begin{tabu} to \linewidth [t] {@{} X X}
 
 \begin{forest} italic leaves, shorter edges, for tree={l=0},
-[CP \tikzmark{engqcstruct_CP}
-	[NP \tikzmark{engqcstruct_NP}
+[CP \mysn{engqcstruct_CP}
+	[NP \mysn{engqcstruct_NP}
 		[\xhead{N}
 			[Who]
 		]
@@ -2244,7 +2244,7 @@ sharing information. In order to give an example, let us reconsider
 \begin{tabu} to \linewidth [t] {@{} X X}
 
 \begin{forest} italic leaves, shorter edges, for tree={l=0},
-[IP \tikzmark{ayrqcstruct_IP}
+[IP \mysn{ayrqcstruct_IP}
 %	[\xbar{I}
 		[\xhead{I}
 			[Cl
@@ -2256,7 +2256,7 @@ sharing information. In order to give an example, let us reconsider
 		]
 %	]
 	[S
-		[DP \tikzmark{ayrqcstruct_DP}
+		[DP \mysn{ayrqcstruct_DP}
 %			[\xbar{N}
 				[\xhead{D}
 					[sinyāng]
@@ -6657,15 +6657,15 @@ NP\index{phrase types!noun phrase} or expletive \xayr{sitNF}{sitang}{self}.
 \hfill
 \begin{forest} shorter edges,
 [IP
-	[\anno{\tikzmark{welshcstruct2_IP} I}
-		[{\tikzmark{welshcstruct2_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
+	[\anno{\mysn{welshcstruct2_IP} I}
+		[{\mysn{welshcstruct2_I} \textit{gwelodd}\\ `see-\Tsg{}.\Pst{}'}]
 	]
 	[\anno{S}
-		[{\anno[\pass{\Subj}]{\tikzmark{welshcstruct2_S} NP}}
+		[{\anno[\pass{\Subj}]{\mysn{welshcstruct2_S} NP}}
 			[{\textit{Siôn}\\ `John'}]
 		]
-		[\anno{\tikzmark{welshcstruct2_VP} VP}
-			[{\anno[\pass{\Obj}]{\tikzmark{welshcstruct2_O} NP}}
+		[\anno{\mysn{welshcstruct2_VP} VP}
+			[{\anno[\pass{\Obj}]{\mysn{welshcstruct2_O} NP}}
 				[{\textit{ddraig}\\ `dragon'}]
 			]
 		]
@@ -7765,15 +7765,15 @@ verbs in Ayeri are provided in (\ref{ex:ctrlstruct}).
 		[Linkaya]
 	]
 	[S
-		[NP \tikzmark{ctrlstruct1_mic}
+		[NP \mysn{ctrlstruct1_mic}
 			[{ang Mican}, roof]
 		]
 		[VP
-			[VP$_g$ \tikzmark{ctrlstruct1_sid}
+			[VP$_g$ \mysn{ctrlstruct1_sid}
 				[\xhead{V}
 					[sidejam]
 				]
-				[NP \tikzmark{ctrlstruct1_nay}
+				[NP \mysn{ctrlstruct1_nay}
 					[nayingley]
 				]
 			]
@@ -7826,18 +7826,18 @@ $f$: \[
 		[{Ang nelye}, roof]
 	]
 	[S
-		[NP \tikzmark{ctrlstruct2_pih}
+		[NP \mysn{ctrlstruct2_pih}
 			[Piha]
 		]
 		[VP
-			[NP \tikzmark{ctrlstruct2_mic}
+			[NP \mysn{ctrlstruct2_mic}
 				[{sa Mican}, roof]
 			]
-			[VP$_g$ \tikzmark{ctrlstruct2_sid}
+			[VP$_g$ \mysn{ctrlstruct2_sid}
 				[\xhead{V}
 					[sidejam]
 				]
-				[NP \tikzmark{ctrlstruct2_nay}
+				[NP \mysn{ctrlstruct2_nay}
 					[nayingley]
 				]
 			]
@@ -7904,18 +7904,18 @@ topic\index{grammatical function!topic} within its own f-structure core either.
 % \begin{minipage}[t]{.3\remaining}%\vspace{2\baselineskip}
 % \begin{forest} shorter edges, italic leaves,
 % [IP$_{f1}$
-% 	[DP \tikzmark{engctrlstruct1_sus}
+% 	[DP \mysn{engctrlstruct1_sus}
 % 		[Susan]
 % 	]
 % 	[VP
 % 		[V
 % 			[kept]
 % 		]
-% 		[VP$_{f2}$ \tikzmark{engctrlstruct1_eat}
+% 		[VP$_{f2}$ \mysn{engctrlstruct1_eat}
 % 			[V
 % 				[eating]
 % 			]
-% 			[DP \tikzmark{engctrlstruct1_mar}
+% 			[DP \mysn{engctrlstruct1_mar}
 % 				[marshmallows]
 % 			]
 % 		]
@@ -7957,21 +7957,21 @@ topic\index{grammatical function!topic} within its own f-structure core either.
 % \begin{minipage}[t]{.3\remaining}\vspace{1\baselineskip}
 % \begin{forest} for tree={s sep-=.5em,s=0}, shorter edges, italic leaves
 % [IP$_{f1}$
-% 	[DP \tikzmark{engctrlstruct2_sus}
+% 	[DP \mysn{engctrlstruct2_sus}
 % 		[Susan]
 % 	]
 % 	[VP
 % 		[V
 % 			[kept]
 % 		]
-% 		[DP \tikzmark{engctrlstruct2_joh}
+% 		[DP \mysn{engctrlstruct2_joh}
 % 			[John]
 % 		]
-% 		[VP$_{f2}$ \tikzmark{engctrlstruct2_dou}
+% 		[VP$_{f2}$ \mysn{engctrlstruct2_dou}
 % 			[V
 % 				[doubting]
 % 			]
-% 			[DP \tikzmark{engctrlstruct2_him}
+% 			[DP \mysn{engctrlstruct2_him}
 % 				[himself]
 % 			]
 % 		]
@@ -8165,15 +8165,15 @@ to the \Subj{} function in $g$ in both cases to indicate coherence.
 		[Surpya]
 	]
 	[S
-		[NP \tikzmark{raisestruct1_aja}
+		[NP \mysn{raisestruct1_aja}
 			[{ang Ajān}, roof]
 		]
 		[VP
-			[VP$_g$ \tikzmark{raisestruct1_val}
+			[VP$_g$ \mysn{raisestruct1_val}
 				[\xhead{V}
 					[valyyam]
 				]
-				[NP \tikzmark{raisestruct1_uma}
+				[NP \mysn{raisestruct1_uma}
 					[umangley]
 				]
 			]
@@ -8228,18 +8228,18 @@ $f$: \[
 		[{Ang paronye}, roof]
 	]
 	[S
-		[NP \tikzmark{raisestruct2_niv}
+		[NP \mysn{raisestruct2_niv}
 			[Niva]
 		]
 		[VP
-			[NP \tikzmark{raisestruct2_aja}
+			[NP \mysn{raisestruct2_aja}
 				[{sa Ajān}, roof]
 			]
-			[VP$_g$ \tikzmark{raisestruct2_val}
+			[VP$_g$ \mysn{raisestruct2_val}
 				[\xhead{V}
 					[valyyam]
 				]
-				[NP \tikzmark{raisestruct2_uma}
+				[NP \mysn{raisestruct2_uma}
 					[umangley]
 				]
 			]
@@ -8448,18 +8448,18 @@ something to lean on other than the verb or an adverb.
 		[\xhead{I} % \anno{\xhead{I}}
 			[{Le cān}, roof]
 		]
-		[Cl \tikzmark{expsitang_nan} % \anno{Cl}
+		[Cl \mysn{expsitang_nan} % \anno{Cl}
 			[-nang$_i$]
 		]
 	]
 	[S % \anno{S}
-		[DP\tikzmark{expsitang_DP} \tikzmark{expsitang_sit}
+		[DP\mysn{expsitang_DP} \mysn{expsitang_sit}
 			% {\anno[\pass{\Subj}]DP}
 			[\xhead{D} % \anno{\xhead{D}}
 				[\xhead{D} % \anno{\xhead{D}}
 					[sitang$_i$]
 				]
-				[Cl \tikzmark{expsitang_ika} % {\anno[\elem{\Adjc}]{Cl}}
+				[Cl \mysn{expsitang_ika} % {\anno[\elem{\Adjc}]{Cl}}
 					[-ikan]
 				]
 			]
@@ -8843,17 +8843,17 @@ thus, to generate the adjective\index{adjectives} as a complement of \xhead{I}.
 		[\anno{\xhead{I}}
 			[{Ang engye}, roof]
 		]
-		[{\anno[\pass{\Plink}]{AP}}% \tikzmark{compcstruct_par}
+		[{\anno[\pass{\Plink}]{AP}}% \mysn{compcstruct_par}
 			[para]
 		]
 	]
 	[\anno{S}
-		[{\anno[\pass{\Subj}]{NP}}% \tikzmark{compcstruct_cis}
+		[{\anno[\pass{\Subj}]{NP}}% \mysn{compcstruct_cis}
 			[Cisu]
 		]
 		[\anno{VP}
-			[{\anno[\pass{\Plink}]{AP}}% \tikzmark{compcstruct_ap}
-				[{\anno[\pass{\Compl}]{NP}}% \tikzmark{compcstruct_kam}
+			[{\anno[\pass{\Plink}]{AP}}% \mysn{compcstruct_ap}
+				[{\anno[\pass{\Compl}]{NP}}% \mysn{compcstruct_kam}
 					[{sa Kaman}, roof]
 				]
 			]
@@ -9711,14 +9711,14 @@ $f$: \[
 [IP$_f$
 	[\xbar{I}
 		[\xhead{I}]
-		[XP\tikzmark{restrnsstr_XP1}]
+		[XP\mysn{restrnsstr_XP1}]
 	]
 	[S
 		[NP]
 		[VP$_g$
-			[\tikzmark{restrnsstr_NP}NP]
-%			[\tikzmark{restrnsstr_S}S
-				[(XP)\tikzmark{restrnsstr_XP2}]
+			[\mysn{restrnsstr_NP}NP]
+%			[\mysn{restrnsstr_S}S
+				[(XP)\mysn{restrnsstr_XP2}]
 %			]
 		]
 	]

@@ -344,6 +344,10 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{tikzmark}
 
+% Alias for tikzmark's \subnode[]{}{} to spare lots of empty brackets for nodes
+% not containing any text anyway
+\newcommand{\mysn}[1]{\subnode{#1}{}}
+
 \forestset{shorter edges/.style={
 	for tree={l sep-=.5em}
 }}
@@ -507,6 +511,7 @@
 \newleipzig{Iv}{iv}{instrumental voice}
 \newleipzig{Vol}{vol}{volitive}
 \newleipzig{Nvol}{nvol}{non-volitive}
+\newleipzig{Impf}{impf}{imperfective}
 
 \newleipzig{Dir}{dir}{directional}
 \newleipzig{Hort}{hort}{hortative}
