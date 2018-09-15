@@ -18,8 +18,7 @@ Currently working on
 **WARNING**: This is work in progress! Currently working on:
 
 * Proofreading the whole thing again (with additional support from [Greg Shuflin](https://github.com/neunenak) and [Joey Windsor](https://sites.google.com/view/joseph-windsor/))
-* NPs and APs probably need to be reanalyzed slightly, [read why and how on Conlang-L](https://listserv.brown.edu/archives/cgi-bin/wa?A2=CONLANG;4e999f88.1808b)
-* I recently updated to TeXLive 2018 and now some of my LaTeX code is broken (notably, `\tikzmark` does not work in `forest` anymore)
+* NPs and APs probably need to be reanalyzed slightly, [read why and how on the blog](https://ayeri.de/archives/7104)
 
 The document has been proofread at least three times, by myself. It should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
 
@@ -28,7 +27,8 @@ I will tag a release (basically "first edition") only when everything is as comp
 Compiling
 =========
 
-Compile `grammar.tex` with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara grammar` to do all the required steps automatically. A standard TeXLive 2015 installation should bring all package dependencies, with the notable exception of the `avm` package, which you may have to download from [Christopher Manning's website](http://nlp.stanford.edu/manning/tex/) and unzip somewhere in LaTeX's `PATH` (e.g. `~/texmf/tex/latex`). Fonts used:
+Compile `grammar.tex` with `xelatex`, `biber`, `makeindex` and `makeglossaries`, or use `arara grammar` to do all the required steps automatically. 
+TeXLive 2018 should bring all package dependencies, with the notable exception of the `avm` package, which you may have to download from [Christopher Manning's website](http://nlp.stanford.edu/manning/tex/) and unzip somewhere in LaTeX's `PATH` (e.g. `~/texmf/tex/latex`). Fonts used:
 
 * Body text: [Junicode](http://junicode.sourceforge.net/)
 * Captions, Headings: [Fira Sans](https://carrois.com/typefaces/FiraSans/)
