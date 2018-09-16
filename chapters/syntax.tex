@@ -179,8 +179,8 @@ below.
 
 \begin{figure}
 \ex\labels\label{ex:npcstruct}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad%
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad%
 \begin{forest} shorter edges,
 [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
 %	[\anno{\xbar{N}}
@@ -193,24 +193,24 @@ below.
 %	[{\anno[\pass{\Possr}]{XP}}]
 ]
 \end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad%
-\begin{forest} shorter edges,
-[{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
-%	[\anno{\xbar{N}}
-		[\anno{NP}
-			[\anno{\xhead{N}}]
-			[{\anno[\elem{\Adjc}]{XP}}]
-		]
-		[{\anno[\pass{\Compl}]{YP}}]
-%	]
-%	[{\anno[\pass{\Possr}]{XP}}]
-]
-\end{forest}
-\end{minipage}
-~
+% \end{minipage}
+% ~
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad%
+% \begin{forest} shorter edges,
+% [{\anno[\pass{\DF} $\vee$ \pass{\GF}]{NP}}
+% %	[\anno{\xbar{N}}
+% 		[\anno{NP}
+% 			[\anno{\xhead{N}}]
+% 			[{\anno[\elem{\Adjc}]{XP}}]
+% 		]
+% 		[{\anno[\pass{\Compl}]{YP}}]
+% %	]
+% %	[{\anno[\pass{\Possr}]{XP}}]
+% ]
+% \end{forest}
+% \end{minipage}
+% ~
 \xe
 \end{figure}
 
@@ -410,28 +410,33 @@ related is also arranged in close proximity.'), and also grammatical weight
 distinguish among various structural weight measures as predictors of weight
 effects. Counting words, nodes, or phrasal nodes all work well}, which means
 that no single metric can be used to describe the order of constituents in a
-phrase. However, for instance, relative clauses\index{relative clause} trail whenever possible,
-presumably since they tend to contain whole subclauses and therefore a lot of
-information. It seems advisable not to put an element with much less
-information content after them, especially when it refers to a different head
-than all the things inside the relative clause\index{relative clause}.
+phrase. However, for instance, relative clauses\index{relative clause} trail
+whenever possible, presumably since they tend to contain whole subclauses and
+therefore a lot of information. It seems advisable not to put an element with
+much less information content after them, especially when it refers to a
+different head than all the things inside the relative clause\index{relative
+clause}.
 
 The order of NP modifiers seems somewhat jumbled up with regards to the
 c-structure tree in (\ref{ex:npcstruct}a) which, for instance, gives noun
-complements as following \xhead{N} before adjectives\index{adjectives}, while the list above
-indicates the reversed order\index{constituent order}. Furthermore, the c-structure tree indicates that
-relative clauses\index{relative clause} precede\index{constituent order} DPs\index{phrase types!determiner phrase} embedding the NP, like possessive NPs and DPs\index{phrase types!determiner phrase}.
-This is no mistake, however, but part of the caveat mentioned earlier with
-regards to the phrase structure rules for NPs. That is, due to information
-structure and modifier scope\index{scope}, Ayeri makes good use of extraposition. For
-instance, (\ref{ex:adjscope}a) is theoretically ambiguous as to whether the
-shirt is new or the wool its is made of---in practice, it would be assumed that
-the shirt is made of new wool. The problem of ambiguity is solved in
-(\ref{ex:adjscope}b) by inverting the order of complement and adjective\index{adjectives}: the
-shirt is now unmistakeably characterized as new, and being made of wool. The
-sentence in (\ref{ex:adjscope}a) theoretically allows both c-structure
-interpretations given in (\ref{ex:adjscopecstruct}), however, as mentioned
-above, the second one is actually the preferred one in such cases.
+complements as following \xhead{N} before adjectives\index{adjectives}, while
+the list above indicates the reversed order\index{constituent order}.
+Furthermore, the c-structure tree indicates that relative clauses\index{relative
+clause} precede\index{constituent order} DPs\index{phrase types!determiner
+phrase} embedding the NP, like possessive NPs and DPs\index{phrase
+types!determiner phrase}. This is no mistake, however, but part of the caveat
+mentioned earlier with regards to the phrase structure rules for NPs. That is,
+due to information structure and modifier scope\index{scope}, Ayeri makes good
+use of extraposition. For instance, (\ref{ex:adjscope}a) is theoretically
+ambiguous as to whether the shirt is new or the wool its is made of---in
+practice, it would be assumed that the shirt is made of new wool. The problem of
+ambiguity is solved in (\ref{ex:adjscope}b) by inverting the order of complement
+and adjective\index{adjectives}: the shirt is now unmistakeably characterized as
+new, and being made of wool.
+% The sentence in (\ref{ex:adjscope}a) theoretically
+% allows both c-structure interpretations given in (\ref{ex:adjscopecstruct}),
+% however, as mentioned above, the second one is actually the preferred one in
+% such cases.
 
 \begin{figure}
 \pex\label{ex:adjscope}
@@ -452,54 +457,56 @@ above, the second one is actually the preferred one in such cases.
 \xe
 \end{figure}
 
-\begin{figure}
-\ex\labels\label{ex:adjscopecstruct}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest} italic leaves, shorter edges,
-[NP
-	[\anno{\xbar{N}}
-		[\anno{\xhead{N}}
-			[limu]
-		]
-		[{\anno[\pass{\Compl}]{NP}}
-			[sapari]
-		]
-	]
-	[{\anno[\elem{\Adjc}]{AP}}
-		[hiro]
-	]
-]
-\end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad\begin{forest} italic leaves, shorter edges,
-[NP
-	[\anno{\xhead{N}}
-		[limu]
-	]
-	[{\anno[\pass{\Compl}]{NP}}
-		[\anno{\xhead{N}}
-			[sapari]
-		]
-		[{\anno[\elem{\Adjc}]{AP}}
-			[hiro]
-		]
-	]
-]
-\end{forest}
-\end{minipage}
-\xe
-\end{figure}
+% \begin{figure}
+% \ex\labels\label{ex:adjscopecstruct}
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad\begin{forest} italic leaves, shorter edges,
+% [NP
+% 	[\anno{\xbar{N}}
+% 		[\anno{\xhead{N}}
+% 			[limu]
+% 		]
+% 		[{\anno[\pass{\Compl}]{NP}}
+% 			[sapari]
+% 		]
+% 	]
+% 	[{\anno[\elem{\Adjc}]{AP}}
+% 		[hiro]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% ~
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad\begin{forest} italic leaves, shorter edges,
+% [NP
+% 	[\anno{\xhead{N}}
+% 		[limu]
+% 	]
+% 	[{\anno[\pass{\Compl}]{NP}}
+% 		[\anno{\xhead{N}}
+% 			[sapari]
+% 		]
+% 		[{\anno[\elem{\Adjc}]{AP}}
+% 			[hiro]
+% 		]
+% 	]
+% ]
+% \end{forest}
+% \end{minipage}
+% \xe
+% \end{figure}
 
-The complement does not become an adjunct\index{grammatical function!adjunct}, as (\ref{ex:complnoadjc})
-shows: \xbar{X} branches can be replaced by \fw{pro}-forms such as `one' or
-`so'. This, however, produces an odd-sounding result when replacing
-\xayr{limu hiro}{limu hiro}{new shirt} with
+The complement does not become an adjunct\index{grammatical function!adjunct},
+as (\ref{ex:complnoadjc}) shows: \xbar{X} branches can be replaced by
+\fw{pro}-forms such as `one' or `so'. This, however, produces an odd-sounding
+result when replacing \xayr{limu hiro}{limu hiro}{new shirt} with
 \xayr{dnY}{danya}{one}.\footnote{\citet{carnie2013} notes that replacing a
-nominal head with \fw{one} in English is acceptable at least to some
-speakers \citep[181]{carnie2013}. Let us assume that Ayeri speakers consider it
-odd, however.}
+nominal head with \fw{one} in English is acceptable at least to some speakers
+\citep[181]{carnie2013}. Let us assume that Ayeri speakers consider it odd,
+however.} An solution to the problem of how to analyse NPs including a
+complement NP in the `wrong' position will be proposed in the next section,
+\autoref{subsec:dps}.
 
 \begin{figure}
 \ex\label{ex:complnoadjc}
@@ -533,45 +540,45 @@ odd, however.}
 \xe
 \end{figure}
 
-In order to produce correct c- and f-structures for (\ref{ex:adjscope}b), we may
-want to analyze the complement NP, \rayr{spri}{sapari}, as modifying an NP
-which jointly holds the nominal head, \rayr{limu}{limu} as well as its
-adjunct\index{grammatical function!adjunct} adjective\index{adjectives},
-\rayr{hiro}{hiro}. The NP has thus been `extended' so that one NP is nested
-within another, as indicated in (\ref{ex:npcstruct}b). Regarding functional
-annotation, such an analysis creates a problem, since \citet{bresnan2016}
-require a phrase adjoined to a phrasal constituent to be either unannotated or
-to not embody an argument function (\cite[100, 107]{bresnan2016}; also compare
-(\ref{ex:functions}) of \autoref{ch:syntyp}). \Compl{}\index{grammatical
-function!closed complement} is an argument function, though. The possibility of
-lexocentric specification of an argument function remains open, however. Due to
-Ayeri's consistent use of case\index{case} marking, I see no problem in invoking
-a lexocentric specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g):
-\Ins{} specifies in this case that the head of this NP, \xayr{sp}{sapa}{wool},
-is a complement of \xayr{limu}{limu}{shirt}; see an example in
-(\ref{ex:complextrapos}). Extraposed relative clauses\index{relative clause} are
-less problematic since they are adjuncts\index{grammatical function!adjunct},
-and \Adjc{} is not an argument function.
+% In order to produce correct c- and f-structures for (\ref{ex:adjscope}b), we may
+% want to analyze the complement NP, \rayr{spri}{sapari}, as modifying an NP
+% which jointly holds the nominal head, \rayr{limu}{limu} as well as its
+% adjunct\index{grammatical function!adjunct} adjective\index{adjectives},
+% \rayr{hiro}{hiro}. The NP has thus been `extended' so that one NP is nested
+% within another, as indicated in (\ref{ex:npcstruct}b). Regarding functional
+% annotation, such an analysis creates a problem, since \citet{bresnan2016}
+% require a phrase adjoined to a phrasal constituent to be either unannotated or
+% to not embody an argument function (\cite[100, 107]{bresnan2016}; also compare
+% (\ref{ex:functions}) of \autoref{ch:syntyp}). \Compl{}\index{grammatical
+% function!closed complement} is an argument function, though. The possibility of
+% lexocentric specification of an argument function remains open, however. Due to
+% Ayeri's consistent use of case\index{case} marking, I see no problem in invoking
+% a lexocentric specification for \Ins{} as given in (\ref{ex:dpnpcasemap}g):
+% \Ins{} specifies in this case that the head of this NP, \xayr{sp}{sapa}{wool},
+% is a complement of \xayr{limu}{limu}{shirt}; see an example in
+% (\ref{ex:complextrapos}). Extraposed relative clauses\index{relative clause} are
+% less problematic since they are adjuncts\index{grammatical function!adjunct},
+% and \Adjc{} is not an argument function.
 
-\begin{figure}
-\ex\label{ex:complextrapos}
-\begin{forest} italic leaves, shorter edges,
-[NP
-	[\anno{NP}
-		[\anno{\xhead{N}}
-			[limu]
-		]
-		[{\anno[\elem{\Adjc}]{AP}}
-			[hiro]
-		]
-	]
-	[{\anno[\downs{\Case} = \Ins{} $\implies$ \pass{\Compl}]{NP}}
-		[sapari]
-	]
-]
-\end{forest}
-\xe
-\end{figure}
+% \begin{figure}
+% \ex\label{ex:complextrapos}
+% \begin{forest} italic leaves, shorter edges,
+% [NP
+% 	[\anno{NP}
+% 		[\anno{\xhead{N}}
+% 			[limu]
+% 		]
+% 		[{\anno[\elem{\Adjc}]{AP}}
+% 			[hiro]
+% 		]
+% 	]
+% 	[{\anno[\downs{\Case} = \Ins{} $\implies$ \pass{\Compl}]{NP}}
+% 		[sapari]
+% 	]
+% ]
+% \end{forest}
+% \xe
+% \end{figure}
 
 The c-structure tree in (\ref{ex:npcstruct}) shows that Ayeri prefers consistent
 head--dependent word order\index{word order} at least for its NPs. As
@@ -1299,6 +1306,121 @@ structure definition in (\ref{ex:dpstruct}) is given in (\ref{ex:dpcstruct}).
 	[{\anno[\elem{\Adjc}]{XP}}]
 ]
 \end{forest}
+\xe
+\end{figure}
+
+In the previous section, it was mentioned that analyzing NPs which contain both
+an adjective and a nominal complement are problematic in that the complement
+appears in the `wrong' position due to scope\index{scope} effects. In terms of
+\Lfg{}, this can probably best be explained with an extended head (\cite[136]
+{bresnan2016}; also compare \autoref{sec:verbtypo}). We analyzed transitive
+sentences earlier as having their content verb and its adjuncts as daugthers of 
+\xbar{I}, while \xhead{V} is an empty node, though the verb's complements are
+still found as daughters of VP. Similarly, we may want to analyze the heads of
+such NPs to actually reside in \xhead{D}, with adjuncts of the noun adjoined to
+\xbar{D}, and the complement remaining as a daugther of NP. The structure
+formula in (\ref{ex:dpstruct}) and the c-structure tree in (\ref{ex:dpcstruct})
+thus only describe the makeup of DP for the situation where \xhead{D} is a
+modifier of some \xhead{N}. As a supplement to the above rules, we can construe
+the respective structures for the situation of extended noun heads as in
+(\ref{ex:dpstruct2}) and (\ref{ex:dpcstruct2}).
+
+\begin{figure}
+\pex\label{ex:dpstruct2}
+\a DP → \anno*{\xbar{D}} \anno*{NP}
+\a \xbar{D} → \anno*{\xhead{D}} \anno*[\elem{\Adjc}]{AP}
+\a NP → \anno*[\pass{\Compl}]{NP}
+\xe
+\end{figure}
+
+\begin{figure}
+\ex\label{ex:dpcstruct2}
+\begin{forest}
+[{\anno[\pass{\DF} $\vee$ \pass{\GF}]{DP}}
+	[\anno{\xbar{D}}
+		[\anno{\xhead{D}}]
+		[{\anno[\elem{\Adjc}]{AP}}]
+	]
+	[\anno{NP}
+		[{\anno[\pass{\Compl}]{NP}}]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+As pointed out, (\ref{ex:dpstruct}) constructs \xhead{D} as following its
+complement even though Ayeri is overwhelmingly head-first. This is because this
+phrase structure rule describes the use of \xhead{D} as a modifier of some
+\xhead{N}. The rule in (\ref{ex:dpstruct2}) deviates from this in constructing 
+\xhead{D} as preceding its complement because it contains the functional head of
+the noun phrase. Example (\ref{ex:npext}) picks up (\ref{ex:adjscope}) to
+illustrate the analysis of `misplaced' nominal complements proposed above. As
+this example shows, both kinds of DP outlined above can be combined.
+
+\begin{figure}
+\ex\label{ex:npext}
+\begin{minipage}[t]{.33\remaining}
+\begingl
+	\gla limu hiro sapari nā //
+	\glb limu hiro sapa-ri nā //
+	\glc shirt new wool-\Ins{} \Fsg{}.\Gen{} //
+	\glft `my new shirt of wool' //
+\endgl
+\end{minipage}
+\hfill
+\begin{forest} shorter edges, narrower nodes, italic leaves,
+[DP
+	[\anno{DP}
+		[\anno{\xbar{D}}
+			[\anno{\xhead{D}}
+				[limu, level=0]
+			]
+			[{\anno[\elem{\Adjc}]{AP}}
+				[hiro]
+			]
+		]
+		[\anno{NP}
+			[{\anno[\pass{\Compl}]{NP}}
+				[sapari]
+			]
+		]
+	]
+	[{\anno[\pass{\Possr}]{\xhead{D}}}
+		[\textit{nā} [,phantom,level=0]]
+	]
+]
+\end{forest}
+\xe
+\end{figure}
+
+Since \textcquote[105]{bresnan2016}{complements of functional categories are
+f-structure coheads}, all of the heads in (\ref{ex:npext}) actually map into the
+same f-structure predicated by \xayr{limu}{limu}{shirt} as
+(\ref{ex:npextfstruct}) shows. Even though the analysis of (\ref{ex:npext})
+becomes rather elaborate in c-structure, \Lfg{} allows us to capture it in terms
+of f-structure in a very straightforward manner.
+
+\begin{figure}
+\ex\label{ex:npextfstruct}
+\begin{avm}
+\[
+	\Pred	&	\astruct{shirt}{\ups{\Compl} \ups{\Possr}} \\
+	\Compl	&	\[
+		\Pred	&	`wool' \\
+		\Case	&	\Ins \\
+	\] \\
+	\Possr	&	\[
+		\Pred	&	`$pro$' \\
+		\Pers	&	\First \\
+		\Num	&	\Sg \\
+		\Case	&	\Gen \\
+	\] \\
+	\Adjc	&	\{\[
+		\Pred	&	`new' \\
+	\]\} \\
+\]
+\end{avm}
 \xe
 \end{figure}
 
