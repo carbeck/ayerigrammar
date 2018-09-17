@@ -796,18 +796,25 @@ of this is given in (\ref{ex:animcaseagr}).
 	[\anno{N\tsub{$stem$}}
 		[{%
 			\textit{gan} \\
-			\ups{\Anim} = $+$ \\
+			\mysn{animclash_1}\ups{\Anim} = $+$ \\
 		}]
 	]
 	[\anno{N\tsub{$infl$}}
 		[{%
 			\textit{-reng} \\
-			\ups{\Anim} = $-$ \\
+			\ups{\Anim} = $-$\mysn{animclash_2} \\
 			\ups{\Case} = \Aarg{} \\
 		}]
 	]
 ]
 \end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\coordinate (1) at ([yshift=-0.5ex]{pic cs:animclash_1});
+\coordinate (2) at ([yshift=+1.5ex]{pic cs:animclash_2});
+\coordinate (judge) at ([xshift=3ex, yshift=1ex]{pic cs:animclash_2});
+\node[draw,fit=(1) (2)] {};
+\draw (judge) node {\faicon{bolt}};
+\end{tikzpicture}
 \end{minipage}
 \xe
 \end{figure}
@@ -852,18 +859,25 @@ case-marking\index{case} proclitic\index{clitics}, as illustrated by (\ref{ex:an
 	[\anno{Cl}
 		[{%
 			\textit{eng} \\
-			\ups{\Anim} = $-$ \\
+			\mysn{animclashname_1}\ups{\Anim} = $-$ \\
 			\ups{\Case} = \Aarg{} \\
 		}]
 	]
 	[\anno{\xhead{N}}
 		[{%
 			\textit{Dita} \\
-			\ups{\Anim} = $+$ \\
+			\ups{\Anim} = $+$\mysn{animclashname_2} \\
 		}]
 	]
 ]
 \end{forest}
+\begin{tikzpicture}[remember picture, overlay]
+\coordinate (1) at ([yshift=-0.5ex]{pic cs:animclashname_1});
+\coordinate (2) at ([yshift=+1.5ex]{pic cs:animclashname_2});
+\coordinate (judge) at ([xshift=3ex, yshift=1ex]{pic cs:animclashname_2});
+\node[draw,fit=(1) (2)] {};
+\draw (judge) node {\faicon{bolt}};
+\end{tikzpicture}
 \end{minipage}
 \xe
 \end{figure}
