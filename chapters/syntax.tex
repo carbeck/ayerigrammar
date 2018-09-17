@@ -1309,21 +1309,23 @@ structure definition in (\ref{ex:dpstruct}) is given in (\ref{ex:dpcstruct}).
 \xe
 \end{figure}
 
+\phantomsection\label{npcompinv}
 In the previous section, it was mentioned that analyzing NPs which contain both
 an adjective and a nominal complement are problematic in that the complement
-appears in the `wrong' position due to scope\index{scope} effects. In terms of
-\Lfg{}, this can probably best be explained with an extended head (\cite[136]
+appears in the `wrong' position\index{constituent order} due to scope
+\index{scope} effects. In terms of \Lfg{}\index{Lexical-functional grammar},
+this can probably best be explained with an extended head (\cite[136]
 {bresnan2016}; also compare \autoref{sec:verbtypo}). We analyzed transitive
-sentences earlier as having their content verb and its adjuncts as daugthers of 
+sentences earlier as having their content verb and its adjuncts as daugthers of
 \xbar{I}, while \xhead{V} is an empty node, though the verb's complements are
-still found as daughters of VP. Similarly, we may want to analyze the heads of
-such NPs to actually reside in \xhead{D}, with adjuncts of the noun adjoined to
-\xbar{D}, and the complement remaining as a daugther of NP. The structure
-formula in (\ref{ex:dpstruct}) and the c-structure tree in (\ref{ex:dpcstruct})
-thus only describe the makeup of DP for the situation where \xhead{D} is a
-modifier of some \xhead{N}. As a supplement to the above rules, we can construe
-the respective structures for the situation of extended noun heads as in
-(\ref{ex:dpstruct2}) and (\ref{ex:dpcstruct2}).
+still found as daughters of VP. Similarly, we may analyze the heads of such NPs
+to actually reside in \xhead{D}, with adjuncts of the noun adjoined to
+\xbar{D}, and the complement remaining as a daugther of NP; the head position
+of this NP remains empty. The structure formula in (\ref{ex:dpstruct}) and the
+c-structure tree in (\ref{ex:dpcstruct}) thus only describe the makeup of DP for
+the situation where \xhead{D} is a modifier of some \xhead{N}. As a supplement
+to the above rules, we can construct the respective structures for the situation
+of extended noun heads as in (\ref{ex:dpstruct2}) and (\ref{ex:dpcstruct2}).
 
 \begin{figure}
 \pex\label{ex:dpstruct2}
@@ -1354,23 +1356,23 @@ complement even though Ayeri is overwhelmingly head-first. This is because this
 phrase structure rule describes the use of \xhead{D} as a modifier of some
 \xhead{N}. The rule in (\ref{ex:dpstruct2}) deviates from this in constructing 
 \xhead{D} as preceding its complement because it contains the functional head of
-the noun phrase. Example (\ref{ex:npext}) picks up (\ref{ex:adjscope}) to
-illustrate the analysis of `misplaced' nominal complements proposed above. As
-this example shows, both kinds of DP outlined above can be combined.
+the noun phrase, thus warranting being placed first\index{constituent order}.
+Example (\ref{ex:npext}) picks up (\ref{ex:adjscope}) to illustrate the analysis
+of `misplaced' nominal complements proposed above.
 
 \begin{figure}
 \ex\label{ex:npext}
 \begin{minipage}[t]{.33\remaining}
 \begingl
-	\gla limu hiro sapari nā //
-	\glb limu hiro sapa-ri nā //
+	\gla limu hiro sapari //
+	\glb limu hiro sapa-ri //
 	\glc shirt new wool-\Ins{} \Fsg{}.\Gen{} //
-	\glft `my new shirt of wool' //
+	\glft `new shirt of wool' //
 \endgl
 \end{minipage}
 \hfill
 \begin{forest} shorter edges, narrower nodes, italic leaves,
-[DP
+% [DP
 	[\anno{DP}
 		[\anno{\xbar{D}}
 			[\anno{\xhead{D}}
@@ -1386,10 +1388,10 @@ this example shows, both kinds of DP outlined above can be combined.
 			]
 		]
 	]
-	[{\anno[\pass{\Possr}]{\xhead{D}}}
-		[\textit{nā} [,phantom,level=0]]
-	]
-]
+% 	[{\anno[\pass{\Possr}]{\xhead{D}}}
+% 		[\textit{nā} [,phantom,level=0]]
+% 	]
+% ]
 \end{forest}
 \xe
 \end{figure}
@@ -1398,24 +1400,26 @@ Since \textcquote[105]{bresnan2016}{complements of functional categories are
 f-structure coheads}, all of the heads in (\ref{ex:npext}) actually map into the
 same f-structure predicated by \xayr{limu}{limu}{shirt} as
 (\ref{ex:npextfstruct}) shows. Even though the analysis of (\ref{ex:npext})
-becomes rather elaborate in c-structure, \Lfg{} allows us to capture it in terms
-of f-structure in a very straightforward manner.
+becomes rather elaborate in c-structure, \Lfg{}\index{Lexical-functional
+grammar} allows us to capture it in terms of f-structure in a very
+straightforward manner.
 
 \begin{figure}
 \ex\label{ex:npextfstruct}
 \begin{avm}
 \[
-	\Pred	&	\astruct{shirt}{\ups{\Compl} \ups{\Possr}} \\
+	% \Pred	&	\astruct{shirt}{\ups{\Compl} \ups{\Possr}} \\
+	\Pred	&	\astruct{shirt}{\ups{\Compl}} \\
 	\Compl	&	\[
 		\Pred	&	`wool' \\
 		\Case	&	\Ins \\
 	\] \\
-	\Possr	&	\[
-		\Pred	&	`$pro$' \\
-		\Pers	&	\First \\
-		\Num	&	\Sg \\
-		\Case	&	\Gen \\
-	\] \\
+	% \Possr	&	\[
+	% 	\Pred	&	`$pro$' \\
+	% 	\Pers	&	\First \\
+	% 	\Num	&	\Sg \\
+	% 	\Case	&	\Gen \\
+	% \] \\
 	\Adjc	&	\{\[
 		\Pred	&	`new' \\
 	\]\} \\
@@ -4027,9 +4031,10 @@ certain kinds of DPs\index{phrase types!determiner phrase} (demonstratives\index
 of these nominal elements. Adjectives are likewise commonly found as
 predicative complements (\Plink{}\index{grammatical function!predicative complement}) in copular clauses\index{copular clause}, compare
 \autoref{subsec:eqs}. Possessive pronouns can be used as modifiers as well,
-though they are probably still better classified as DP\index{phrase types!determiner phrase} heads. The
-phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure trees in
-(\ref{ex:adjpcstruct}) show how an AP is constructed.
+though they are probably still better classified as DP\index{phrase
+types!determiner phrase} heads. The basic phrase-structure rule in
+(\ref{ex:adjpstruct}) and the c-structure trees in (\ref{ex:adjpcstruct}) show
+how an AP is constructed.
 
 \begin{figure}
 \pex\label{ex:adjpstruct}
@@ -4040,8 +4045,8 @@ phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure trees in
 
 \begin{figure}
 \ex\labels\label{ex:adjpcstruct}
-\begin{minipage}[t]{.5\remaining}
-\tl\quad%
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad%
 \begin{forest}
 [{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
 	[\anno{\xbar{A}}
@@ -4051,20 +4056,20 @@ phrase-structure rule in (\ref{ex:adjpstruct}) and the c-structure trees in
 	[{\anno[\elem{\Adjc}]{AdvP}}]
 ]
 \end{forest}
-\end{minipage}
-~
-\begin{minipage}[t]{.5\remaining}
-\tl\quad%
-\begin{forest}
-[{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
-	[\anno{AP}
-		[\anno{\xhead{A}}]
-		[{\anno[\elem{\Adjc}]{AdvP}}]
-	]
-	[{\anno[\pass{\GF}]{XP}}]
-]
-\end{forest}
-\end{minipage}
+% \end{minipage}
+% ~
+% \begin{minipage}[t]{.5\remaining}
+% \tl\quad%
+% \begin{forest}
+% [{\anno[\elem{\Adjc} $\vee$ \pass{\Plink}]{AP}}
+% 	[\anno{AP}
+% 		[\anno{\xhead{A}}]
+% 		[{\anno[\elem{\Adjc}]{AdvP}}]
+% 	]
+% 	[{\anno[\pass{\GF}]{XP}}]
+% ]
+% \end{forest}
+% \end{minipage}
 \xe
 \end{figure}
 
@@ -4466,21 +4471,37 @@ to an Ayeri speaker.
 % FIXME: Can this be mitigated by replacing "da-" with a full demonstrative?
 % Would the conjunct be interpreted as an adjunct in this case? Why?
 
+% Further complications arise with regards to complementation in that non-clitic
+% quantifiers\index{quantifiers} like \xayr{AMkYu}{ankyu}{really} cause a
+% complement of an adjective to be extraposed\index{constituent order}, due to
+% syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant_cstruct})
+% attempts to illustrate the c-structure for a displaced CP\index{phrase
+% types!complementizer phrase}. The corresponding f-structure in
+% (\ref{ex:intrusivequant_fstruct}) shows that even though the CP is generated in
+% a position different from where it should occur as a complement, the f-structure
+% remains the same: the CP $g$ is a complement of \textit{f}'s predicator.
+% Following the annotation rules in \citet[107]{bresnan2016}, an analysis as in
+% (\ref{ex:intrusivequant_cstruct}) is not unproblematic since they require for
+% the adjoined phrasal node to be either unannotated (\updown{}) or not to embody
+% an argument function, while \Comp{} is an argument function. Using lexocentric
+% feature annotation as with NPs is not possible here, since CPs\index{phrase
+% types!complementizer phrase} cannot be marked for case\index{case}.
+
 Further complications arise with regards to complementation in that non-clitic
-quantifiers\index{quantifiers} like \xayr{AMkYu}{ankyu}{really} cause a
-complement of an adjective to be extraposed\index{constituent order}, due to
-syntactic weight \citep{wechsler2009}. Example (\ref{ex:intrusivequant_cstruct})
-attempts to illustrate the c-structure for a displaced CP\index{phrase
-types!complementizer phrase}. The corresponding f-structure in
-(\ref{ex:intrusivequant_fstruct}) shows that even though the CP is generated in
-a position different from where it should occur as a complement, the f-structure
-remains the same: the CP $g$ is a complement of \textit{f}'s predicator.
-Following the annotation rules in \citet[107]{bresnan2016}, an analysis as in
-(\ref{ex:intrusivequant_cstruct}) is not unproblematic since they require for
-the adjoined phrasal node to be either unannotated (\updown{}) or not to embody
-an argument function, while \Comp{} is an argument function. Using lexocentric
-feature annotation as with NPs is not possible here, since CPs\index{phrase
-types!complementizer phrase} cannot be marked for case\index{case}.
+quantifiers\index{quantifiers} like \xayr{AMkYu}{ankyu}{really} cause itself and
+the complement of the adjective to swap places\index{constituent order},
+possibly due to due to syntactic weight \citep{wechsler2009}. We have already
+encountered this effect with nouns which are jointly modified by an adjective
+and a nominal complement (\autoref{npcompinv}, p.~\pageref{npcompinv}). The
+difference here is that there is no functional equivalent of AP, so I will
+assume AP as the governing category for the extended head as well. Example
+(\ref{ex:intrusivequant_cstruct}) attempts to illustrate the c-structure for an
+extended adjective head. The corresponding f-structure in 
+(\ref{ex:intrusivequant_fstruct}) shows that even though \xbar{A} is generated
+in a position different from where it should normally occur, the f-structure
+remains the same: the extended-head \xhead{A} predicates the f-structure $f$
+and the CP $g$ is a complement of \textit{f}'s predicator; the original AP's
+head position is empty.
 
 \begin{figure}
 \pex\label{ex:intrusivequant}%
@@ -4498,26 +4519,42 @@ cs:intrusivequant2_2});
 \end{tikzpicture}
 
 \begin{forest} shorter edges, italic leaves,
+% [{\anno[\pass{\Plink}]{AP$_f$}}
+% %	[\anno{\xbar{A}}
+% 		[\anno{AP}
+% 			[\anno{\xbar{A}}
+% 				[\anno{\xhead{A}}
+% 					[valuy]
+% 				]
+% 				[$\epsilon$, name=CP_orig]
+% 			]
+% 			[{\anno[\elem{\Adjc}]{AdvP}}
+% 				[ankyu]
+% 			]
+% 		]
+% 		[{\anno[\pass{\Compl}]{CP$_g$}}
+% 			[{yomavāng\\ edaya}, roof, name=CP]
+% 		]
+% %	]
+% ]
+%
 [{\anno[\pass{\Plink}]{AP$_f$}}
-%	[\anno{\xbar{A}}
-		[\anno{AP}
-			[\anno{\xbar{A}}
-				[\anno{\xhead{A}}
-					[valuy]
-				]
-				[$\epsilon$, name=CP_orig]
+		[\anno{\xbar{A}}
+			[\anno{\xhead{A}}
+				[valuy]
 			]
 			[{\anno[\elem{\Adjc}]{AdvP}}
 				[ankyu]
 			]
 		]
+	[\anno{AP}
 		[{\anno[\pass{\Compl}]{CP$_g$}}
-			[{yomavāng\\ edaya}, roof, name=CP]
+			[{yomavāng\\ edaya}, roof]
 		]
-%	]
+	]
 ]
 %
-\draw [-latex, dashed] (CP_orig) to [out=south, in=south] (CP);
+% \draw [-latex, dashed] (CP_orig) to [out=south, in=south] (CP);
 \end{forest}
 
 \a\label{ex:intrusivequant_fstruct}
