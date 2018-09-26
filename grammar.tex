@@ -46,9 +46,9 @@
 {\Huge A Grammar of Ayeri}\\[\baselineskip]
 {\Large\scshape Documenting a Fictional Language}\\[\baselineskip]
 \vfill
-{\large\itshape Benung.~The Ayeri Language Resource}\\
-\rule{0.5\textwidth}{0.4pt}\smallskip\\
-{Marburg · 2018}\par
+%{\large\itshape Benung.\ The Ayeri Language Resource}\\
+%\rule{0.5\textwidth}{0.4pt}\smallskip\\
+{Carsten Becker\\ Marburg · 2018}\par
 \vspace*{\drop}
 \endgroup}
 \makeatother
@@ -60,6 +60,11 @@
 \makeoddhead{sfheaders}{}{}{\sffamily{\itshape\rightmark}\quad\bfseries\thepage}
 % \makeheadrule{headings}{\textwidth}{0.3pt}
 \pagestyle{sfheaders}
+
+% Layout for Notes pages
+\copypagestyle{notes}{headings}
+\makeevenhead{notes}{}{\sffamily{\bfseries Notes}}{}
+\makeoddhead{notes}{}{\sffamily{\bfseries Notes}}{}
 
 % Layout for chapter headers
 \chapterstyle{southall}
@@ -701,6 +706,8 @@
 \begin{center}
 {\Huge A Grammar of Ayeri}
 \end{center}
+\clearpage
+{\Large Benung.\ The Ayeri Language Resource}
 \end{titlingpage*}
 
 %% TITLE PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -861,18 +868,18 @@
 \printindex
 \endgroup
 
-% \vfill
-% \begin{flushright}\smaller
-% \ayr{\larger ANF sryo tdoj thnYmnF/IknF koyyen, nj ri tvYo pisu
-% 	bitu\_ayNF sobisymnF/IknF.}\\
-% \fw{Ang sarayo tadoy tahanyaman-ikan koyayena, nay ri tavyo pisu
-% 	bituayang sobisayaman-ikan.}\\
-% `Of making many books there is no end, and much study wearies the body.'\\
-% --- Ecclesiastes 12:12 (\textsc{niv})
-% \end{flushright}
+%% EMPTY PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Lulu.com requires a completely empty last page
+% Lulu.com requires a completely empty last page; the total page number must be
+% divisible by 4; multiple blank pages must be labeled.
 \cleartorecto
+\pagestyle{notes}
+~{}
+\clearpage
+~{}
+\clearpage
+~{}
+\clearpage
 \pagestyle{empty}
 ~{}
 
