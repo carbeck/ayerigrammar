@@ -15,7 +15,7 @@ The book has been proofread fully at least three times by myself, and the first 
 Download
 ========
 
-* [Download the most recent **stable version** (v1.0) in PDF format](https://rawgit.com/carbeck/ayerigrammar/tag/v1.0/grammar.pdf)
+* [Download the most recent **stable version** (v1.0) in PDF format](https://github.com/carbeck/ayerigrammar/releases/download/v1.0/ayeri-grammar-20181001.pdf)
 * [Download the most recent **working draft** in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
 
 <!--
