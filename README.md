@@ -7,21 +7,23 @@ I had been leaving the old grammar document ([PDF, January 2011](https://rawgit.
 
 I hope that by using LaTeX and GitHub, the whole process of editing will be more easy to handle and more transparent than when I was trying to work with one big LibreOffice document before. If you feel inclined to do so, you can [report issues on GitHub](https://github.com/carbeck/ayerigrammar/issues).
 
-Download
-========
-
-[Download the most recent draft in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
-
 Currently working on
 ====================
 
-**WARNING**: This is work in progress! Currently working on:
+The book has been proofread fully at least three times by myself, and the first 2 chapters have also been read over for style and consistency by 2 other English speakers (thanks, guys!). Either way, I am not a native English speaker and especially small mistakes like missing or swapped letters are easy to overlook. Corrections are thus definitely still welcome, both regarding language and content. The latter especially regarding my analyses of Ayeri's syntax. There are also still some topics that the grammar admittedly does not cover yet, see the 'desiderata' keyword in the index and the pages referenced there. These are still open for future consideration (check out the [Blog](https://ayeri.de/blog)).
 
-* Proofreading the whole thing again (with additional support from [Greg Shuflin](https://github.com/neunenak) and [Joey Windsor](https://sites.google.com/view/joseph-windsor/))
+Download
+========
 
-The document has been proofread at least three times, by myself. It should already provide useful information, however, I may still make changes if I notice something to be wrong or information to be missing or inconsistent. Note that I am not a native English speaker; corrections are thus welcome, both regarding language and content. The latter especially regarding my analysis of Ayeri's syntax.
+* [Download the most recent **stable version** (v1.0) in PDF format](https://rawgit.com/carbeck/ayerigrammar/tag/v1.0/grammar.pdf)
+* [Download the most recent **working draft** in PDF format](https://rawgit.com/carbeck/ayerigrammar/master/grammar.pdf)
 
-I will tag a release (basically "first edition") only when everything is as complete as I can get it for the moment. Complete means that the finished manuscript contains information on the phonology, morphology and syntax of the language which provides a consistent description and analysis of the most frequently occurring structures and constructions of the language. The finished manuscript is also supposed to be on par with professional literature in both language and style with regards to good readability and accuracy of description.
+<!--
+Print on Demand
+===============
+
+* You can also [buy a full-fledged on-demand **print edition** of the book from Lulu.com]() or your favorite bookseller. This corresponds to v1.0 as hosted on GitHub.
+-->
 
 Compiling
 =========
@@ -31,7 +33,7 @@ TeXLive 2018 should bring all package dependencies, with the notable exception o
 
 * Body text: [Junicode](http://junicode.sourceforge.net/)
 * Captions, Headings: [Fira Sans](https://carrois.com/typefaces/FiraSans/)
-* Examples: [Tagati Book G](https://github.com/carbeck/tagatibookg)
+* Ayeri text: [Tagati Book G](https://github.com/carbeck/tagatibookg)
 * Other:
   * [DejaVu Sans Mono](http://dejavu-fonts.org/)
   * [Free Serif](https://www.gnu.org/software/freefont/)
